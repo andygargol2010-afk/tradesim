@@ -47,6 +47,7 @@ class AccountSpec:
     broker: str = "paper"
     description: str = ""
     enabled: bool = True
+    auto_stop: bool = True  # automatic trailing stop-loss (risk.stop_loss_atr) for unprotected positions
 
     def build_agent(self) -> Agent:
         if ":" in self.agent:
