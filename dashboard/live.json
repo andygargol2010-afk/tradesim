@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-25T20:21:21.119025+00:00",
+  "generated_at": "2026-10-25T21:21:36.252885+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -159,7 +159,7 @@
   },
   "schedule": [
    {
-    "cron": "45 14 * * *",
+    "cron": "40 15 * * *",
     "mode": "decide",
     "label": "Decisi\u00f3n diaria: 14:45 UTC (15 min tras la apertura de Nueva York en invierno, 75 min en verano)"
    },
@@ -183,15 +183,16 @@
    "max_position_pct": 30.0,
    "halt_drawdown_pct": 35.0,
    "max_orders_per_run": 60,
-   "stop_loss_atr": 2.5
+   "stop_loss_atr": 2.5,
+   "reactivate_after_days": 20
   },
   "crypto_exchange": "coinbase",
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-10-25T20:20:28.713436+00:00",
+  "started_at": "2026-10-25T21:20:42.098688+00:00",
   "mode": "research",
-  "duration_s": 52.41,
+  "duration_s": 54.15,
   "accounts": {
    "aprendiz": {
     "status": "synced",
@@ -228,6 +229,18 @@
     "message": "",
     "equity": 100.0,
     "fills_on_sync": 0
+   },
+   "combinador": {
+    "status": "synced",
+    "message": "",
+    "equity": 100.0,
+    "fills_on_sync": 0
+   },
+   "meta": {
+    "status": "synced",
+    "message": "",
+    "equity": 100.0,
+    "fills_on_sync": 0
    }
   },
   "data_errors": {}
@@ -239,7 +252,7 @@
    "ask": 759.969970703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:04.241205+00:00",
+   "time": "2026-10-25T21:21:17.437513+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -249,7 +262,7 @@
    "ask": 704.4000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:04.627552+00:00",
+   "time": "2026-10-25T21:21:17.860252+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -259,7 +272,7 @@
    "ask": 275.75,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:04.956234+00:00",
+   "time": "2026-10-25T21:21:18.254900+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -269,7 +282,7 @@
    "ask": 521.3699951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:05.346583+00:00",
+   "time": "2026-10-25T21:21:18.731063+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -279,7 +292,7 @@
    "ask": 366.6099853515625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:05.670028+00:00",
+   "time": "2026-10-25T21:21:19.221468+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -289,7 +302,7 @@
    "ask": 48.720001220703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:05.992216+00:00",
+   "time": "2026-10-25T21:21:19.595158+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -299,7 +312,7 @@
    "ask": 81.33999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:06.344822+00:00",
+   "time": "2026-10-25T21:21:20.004604+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -309,7 +322,7 @@
    "ask": 62.0099983215332,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:06.707401+00:00",
+   "time": "2026-10-25T21:21:20.407758+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -319,7 +332,7 @@
    "ask": 69.33000183105469,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:07.046897+00:00",
+   "time": "2026-10-25T21:21:20.864156+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -329,7 +342,7 @@
    "ask": 55.900001525878906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:07.389917+00:00",
+   "time": "2026-10-25T21:21:21.432016+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -339,7 +352,7 @@
    "ask": 347.7300109863281,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:07.739644+00:00",
+   "time": "2026-10-25T21:21:21.914817+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -349,7 +362,7 @@
    "ask": 524.510009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:08.067273+00:00",
+   "time": "2026-10-25T21:21:22.330361+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -359,7 +372,7 @@
    "ask": 210.9600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:08.414093+00:00",
+   "time": "2026-10-25T21:21:22.742710+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -369,7 +382,7 @@
    "ask": 248.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:08.805983+00:00",
+   "time": "2026-10-25T21:21:23.154614+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -379,7 +392,7 @@
    "ask": 320.2099914550781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:09.114124+00:00",
+   "time": "2026-10-25T21:21:23.539432+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -389,7 +402,7 @@
    "ask": 642.6199951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:09.440866+00:00",
+   "time": "2026-10-25T21:21:23.938683+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -399,7 +412,7 @@
    "ask": 372.2200012207031,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:09.821549+00:00",
+   "time": "2026-10-25T21:21:24.339824+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -409,7 +422,7 @@
    "ask": 321.67999267578125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:10.216099+00:00",
+   "time": "2026-10-25T21:21:24.747950+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -419,7 +432,7 @@
    "ask": 516.7899780273438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:10.550881+00:00",
+   "time": "2026-10-25T21:21:25.213244+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -429,7 +442,7 @@
    "ask": 65.8499984741211,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:10.926553+00:00",
+   "time": "2026-10-25T21:21:25.610375+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -439,7 +452,7 @@
    "ask": 126.16000366210938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:11.518584+00:00",
+   "time": "2026-10-25T21:21:26.039410+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -449,7 +462,7 @@
    "ask": 248.57000732421875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:11.945112+00:00",
+   "time": "2026-10-25T21:21:26.439697+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -459,7 +472,7 @@
    "ask": 331.5799865722656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:12.298891+00:00",
+   "time": "2026-10-25T21:21:26.857695+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -469,7 +482,7 @@
    "ask": 50.560001373291016,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:12.645400+00:00",
+   "time": "2026-10-25T21:21:27.274750+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -479,7 +492,7 @@
    "ask": 875.6799926757812,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:12.978157+00:00",
+   "time": "2026-10-25T21:21:27.724364+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -489,7 +502,7 @@
    "ask": 407.9200134277344,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:13.360548+00:00",
+   "time": "2026-10-25T21:21:28.131918+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -499,7 +512,7 @@
    "ask": 623.5999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:13.876576+00:00",
+   "time": "2026-10-25T21:21:28.527548+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -509,7 +522,7 @@
    "ask": 183.2100067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:14.369066+00:00",
+   "time": "2026-10-25T21:21:28.962912+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -519,7 +532,7 @@
    "ask": 233.2100067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:14.725200+00:00",
+   "time": "2026-10-25T21:21:29.409093+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -529,7 +542,7 @@
    "ask": 263.80999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:15.061784+00:00",
+   "time": "2026-10-25T21:21:29.863733+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -539,7 +552,7 @@
    "ask": 418.0899963378906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:15.461890+00:00",
+   "time": "2026-10-25T21:21:30.334482+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -549,7 +562,7 @@
    "ask": 1273.4599609375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:15.817617+00:00",
+   "time": "2026-10-25T21:21:30.765740+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -559,7 +572,7 @@
    "ask": 30.030000686645508,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:16.157531+00:00",
+   "time": "2026-10-25T21:21:31.201042+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -569,7 +582,7 @@
    "ask": 161.02000427246094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:16.506226+00:00",
+   "time": "2026-10-25T21:21:31.640632+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -579,7 +592,7 @@
    "ask": 92.70999908447266,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:16.890569+00:00",
+   "time": "2026-10-25T21:21:32.071884+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -589,7 +602,7 @@
    "ask": 135.77000427246094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:17.305855+00:00",
+   "time": "2026-10-25T21:21:32.568470+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -599,7 +612,7 @@
    "ask": 119.88999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:17.724056+00:00",
+   "time": "2026-10-25T21:21:33.069895+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -609,7 +622,7 @@
    "ask": 1003.3200073242188,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:18.176527+00:00",
+   "time": "2026-10-25T21:21:33.498917+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -619,7 +632,7 @@
    "ask": 319.8299865722656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:18.532686+00:00",
+   "time": "2026-10-25T21:21:34.018457+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -629,7 +642,7 @@
    "ask": 248.4600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:18.954783+00:00",
+   "time": "2026-10-25T21:21:34.545371+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -639,7 +652,7 @@
    "ask": 687.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:19.381410+00:00",
+   "time": "2026-10-25T21:21:34.980232+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -649,92 +662,98 @@
    "ask": 188.35000610351562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T20:21:19.797347+00:00",
+   "time": "2026-10-25T21:21:35.393483+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 80492.66,
-   "bid": 80492.65,
-   "ask": 80492.66,
+   "last": 80394.88,
+   "bid": 80394.88,
+   "ask": 80394.89,
    "spread_bps": 0.001,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:18.205000+00:00",
+   "time": "2026-10-25T21:21:34.461000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 2349.33,
-   "bid": 2349.32,
-   "ask": 2349.33,
-   "spread_bps": 0.043,
+   "last": 2341.85,
+   "bid": 2341.83,
+   "ask": 2341.85,
+   "spread_bps": 0.085,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:19.801000+00:00",
+   "time": "2026-10-25T21:21:34.671000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 101.7,
-   "bid": 101.69,
-   "ask": 101.7,
-   "spread_bps": 0.983,
+   "last": 101.5,
+   "bid": 101.48,
+   "ask": 101.49,
+   "spread_bps": 0.985,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:19.037000+00:00",
+   "time": "2026-10-25T21:21:33.442000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 1.2992,
-   "bid": 1.2991,
-   "ask": 1.2992,
+   "last": 1.2983,
+   "bid": 1.2982,
+   "ask": 1.2983,
    "spread_bps": 0.77,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:18.554000+00:00",
+   "time": "2026-10-25T21:21:33.410000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.20561,
-   "bid": 0.20564,
-   "ask": 0.20565,
-   "spread_bps": 0.486,
+   "last": 0.20505,
+   "bid": 0.20503,
+   "ask": 0.20504,
+   "spread_bps": 0.488,
    "modelled_spread": false,
-   "time": "2026-10-25T20:20:45.991000+00:00",
+   "time": "2026-10-25T21:21:33.414000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.07726,
-   "bid": 0.07723,
-   "ask": 0.07726,
-   "spread_bps": 3.884,
+   "last": 0.07706,
+   "bid": 0.07702,
+   "ask": 0.07705,
+   "spread_bps": 3.894,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:06.293000+00:00",
+   "time": "2026-10-25T21:21:33.348000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 11.487,
-   "bid": 11.484,
-   "ask": 11.486,
-   "spread_bps": 1.741,
+   "last": 11.462,
+   "bid": 11.46,
+   "ask": 11.462,
+   "spread_bps": 1.745,
    "modelled_spread": false,
-   "time": "2026-10-25T20:20:59.788000+00:00",
+   "time": "2026-10-25T21:21:33.410000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 57.081,
-   "bid": 57.075,
-   "ask": 57.079,
-   "spread_bps": 0.701,
+   "last": 56.87,
+   "bid": 56.852,
+   "ask": 56.861,
+   "spread_bps": 1.583,
    "modelled_spread": false,
-   "time": "2026-10-25T20:21:07.174000+00:00",
+   "time": "2026-10-25T21:21:33.486000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-10-25T21:20:42.098688+00:00",
+   "mode": "research",
+   "duration_s": 54.15,
+   "errors": 0
+  },
   {
    "started_at": "2026-10-25T20:20:28.713436+00:00",
    "mode": "research",
@@ -790,16 +809,19 @@
    "name": "Aprendiz lineal",
    "description": "Aprende cada d\u00eda qu\u00e9 patrones de precio preceden a las subidas (m\u00ednimos cuadrados recursivos con olvido) y compra los 6 activos con mejor predicci\u00f3n (m\u00e1x. 20% cada uno). Se pre-entrena con ~3 a\u00f1os de historia.",
    "agent": "OnlineLinearAgent",
+   "shadow_of": null,
    "params": {
     "top_k": 6,
-    "max_weight": 0.2
+    "max_weight": 0.2,
+    "horizon": 5,
+    "ic_gate": true
    },
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -841,9 +863,11 @@
      "2026-10-25T18:21:31.561903+00:00",
      "2026-10-25T19:09:17.212836+00:00",
      "2026-10-25T19:21:15.316902+00:00",
-     "2026-10-25T20:21:21.113310+00:00"
+     "2026-10-25T20:21:21.113310+00:00",
+     "2026-10-25T21:21:36.241944+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -866,12 +890,22 @@
     }
    ],
    "learning": {
-    "method": "Recursive least squares with forgetting (online)",
-    "horizon_bars": 1,
+    "method": "Online linear (RLS, forgetting per day) + gradient boosting, weighted by out-of-sample rank IC",
+    "target": "open-to-open return over the horizon, relative to the average asset (volatility units)",
+    "horizon_bars": 5,
+    "forgetting_per_day": 0.998,
+    "models": {
+     "linear": {
+      "weight": 1.0,
+      "rank_ic_mean": null,
+      "rank_ic_t": null
+     },
+     "gbm": null
+    },
     "samples_learned": 0,
     "pretrained_samples": 0,
     "trading_enabled": false,
-    "ic_gate": false,
+    "ic_gate": true,
     "rank_ic_mean": null,
     "rank_ic_t": null,
     "rank_ic_days": 0,
@@ -888,8 +922,30 @@
      "dist_sma50": 0.0,
      "breakout_20": 0.0,
      "trend_quality": 0.0,
-     "candle": 0.0
+     "candle": 0.0,
+     "volume_z": 0.0,
+     "volume_trend": 0.0,
+     "mkt_ret_5": 0.0,
+     "mkt_ret_20": 0.0,
+     "mkt_vol_regime": 0.0,
+     "breadth": 0.0,
+     "rel_mkt_20": 0.0,
+     "rel_group_20": 0.0,
+     "ret_5_x_regime": 0.0,
+     "ret_20_x_mkt": 0.0,
+     "regime_0": 0.0,
+     "regime_1": 0.0,
+     "regime_2": 0.0,
+     "ret_5_x_regime_0": 0.0,
+     "ret_5_x_regime_1": 0.0,
+     "ret_5_x_regime_2": 0.0,
+     "ret_20_x_regime_0": 0.0,
+     "ret_20_x_regime_1": 0.0,
+     "ret_20_x_regime_2": 0.0
     }
+   },
+   "significance": {
+    "days": 0
    }
   },
   {
@@ -897,13 +953,14 @@
    "name": "RSI adaptativo",
    "description": "Compra sobreventa (RSI bajo) y vende sobrecompra. Cada semana simula variantes en el \u00faltimo a\u00f1o con costes reales y adopta la mejor solo si mejora con claridad.",
    "agent": "WalkForwardRSIAgent",
+   "shadow_of": null,
    "params": {},
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -945,9 +1002,11 @@
      "2026-10-25T18:21:31.563165+00:00",
      "2026-10-25T19:09:17.214475+00:00",
      "2026-10-25T19:21:15.319771+00:00",
-     "2026-10-25T20:21:21.114580+00:00"
+     "2026-10-25T20:21:21.114580+00:00",
+     "2026-10-25T21:21:36.243858+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -970,7 +1029,7 @@
     }
    ],
    "learning": {
-    "method": "Walk-forward re-tuning in the simulator (Sharpe after costs)",
+    "method": "Walk-forward re-tuning in the simulator (median quarterly Sharpe after costs)",
     "params": {
      "period": 14,
      "oversold": 30.0,
@@ -979,6 +1038,9 @@
     "last_tune": null,
     "retune_every_days": 7,
     "recent_tunes": []
+   },
+   "significance": {
+    "days": 0
    }
   },
   {
@@ -986,6 +1048,7 @@
    "name": "Cruce de medias",
    "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 d\u00edas est\u00e1 sobre la de 50 (m\u00e1x. 15% por activo). Sirve de referencia.",
    "agent": "MovingAverageCrossAgent",
+   "shadow_of": null,
    "params": {
     "max_weight": 0.15
    },
@@ -994,7 +1057,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -1036,9 +1099,11 @@
      "2026-10-25T18:21:31.564249+00:00",
      "2026-10-25T19:09:17.215733+00:00",
      "2026-10-25T19:21:15.322069+00:00",
-     "2026-10-25T20:21:21.115605+00:00"
+     "2026-10-25T20:21:21.115605+00:00",
+     "2026-10-25T21:21:36.245449+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -1060,20 +1125,24 @@
      "equity": 100.0
     }
    ],
-   "learning": null
+   "learning": null,
+   "significance": {
+    "days": 0
+   }
   },
   {
    "id": "buy-hold",
    "name": "Buy & hold",
    "description": "Compra los 50 activos a partes iguales el primer d\u00eda y no hace nada m\u00e1s. Es la vara de medir: un agente que no lo supera no aporta valor.",
    "agent": "BuyAndHoldAgent",
+   "shadow_of": null,
    "params": {},
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -1115,9 +1184,11 @@
      "2026-10-25T18:21:31.565273+00:00",
      "2026-10-25T19:09:17.216942+00:00",
      "2026-10-25T19:21:15.324277+00:00",
-     "2026-10-25T20:21:21.116524+00:00"
+     "2026-10-25T20:21:21.116524+00:00",
+     "2026-10-25T21:21:36.246908+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -1139,13 +1210,17 @@
      "equity": 100.0
     }
    ],
-   "learning": null
+   "learning": null,
+   "significance": {
+    "days": 0
+   }
   },
   {
    "id": "analista",
    "name": "Analista discrecional",
    "description": "Sin reglas fijas: cada d\u00eda estudia los patrones t\u00e9cnicos de los 50 activos, los datos macro relevantes para cada tipo de activo, las noticias analizadas y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidaci\u00f3n por posici\u00f3n. Decide con IA gratuita (Gemini o Groq) si hay clave; si no, o si se agota el cupo, con el motor local gratuito que combina las mismas se\u00f1ales. Revisa sus decisiones pasadas y anota lecciones.",
    "agent": "DiscretionaryAgent",
+   "shadow_of": null,
    "params": {
     "engines": [
      "gemini",
@@ -1164,7 +1239,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -1206,9 +1281,11 @@
      "2026-10-25T18:21:31.566636+00:00",
      "2026-10-25T19:09:17.219767+00:00",
      "2026-10-25T19:21:15.332944+00:00",
-     "2026-10-25T20:21:21.117758+00:00"
+     "2026-10-25T20:21:21.117758+00:00",
+     "2026-10-25T21:21:36.248872+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -1246,7 +1323,88 @@
     "last_view": null,
     "recent_reviews": [],
     "llm_cost_usd_total": null,
+    "forecast_track_record": {
+     "n": 0
+    },
+    "signal_weights": {
+     "weights": {
+      "tech": 0.55,
+      "news": 0.3,
+      "trend": 0.15
+     },
+     "source": "fijos"
+    },
+    "signal_ic": {
+     "fixed": {
+      "rank_ic_mean": null,
+      "rank_ic_t": null,
+      "days": 0
+     },
+     "learned": {
+      "rank_ic_mean": null,
+      "rank_ic_t": null,
+      "days": 0
+     }
+    },
+    "signal_ic_by_horizon": {
+     "tech": {
+      "1": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "3": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "5": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      }
+     },
+     "news": {
+      "1": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "3": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "5": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      }
+     },
+     "trend": {
+      "1": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "3": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      },
+      "5": {
+       "rank_ic_mean": null,
+       "rank_ic_t": null,
+       "days": 0
+      }
+     }
+    },
+    "pattern_edges": [],
+    "case_memory_days": 0,
     "theses": {}
+   },
+   "significance": {
+    "days": 0
    }
   },
   {
@@ -1254,13 +1412,14 @@
    "name": "Inversor tradicional",
    "description": "No hace trading: mantiene una cartera diversificada (\u00edndices 43 % (m\u00e1x. 25 % por activo), bonos 15 %, oro 7 %, 8 acciones de calidad 28 %, cripto 5 %), revisa las acciones una vez al a\u00f1o y rebalancea cada trimestre o si una clase de activo se desv\u00eda de su banda. Sin stops ni market timing.",
    "agent": "TraditionalInvestorAgent",
+   "shadow_of": null,
    "params": {},
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T20:21:21.118540+00:00",
-    "last_run": "2026-10-25T20:20:28.713436+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
     "last_status": "synced"
    },
    "status": "synced",
@@ -1297,7 +1456,74 @@
    "equity_curve": {
     "t": [
      "2026-10-25T20:21:21.118519+00:00",
-     "2026-10-25T20:21:21.118556+00:00"
+     "2026-10-25T20:21:21.118556+00:00",
+     "2026-10-25T21:21:36.250395+00:00"
+    ],
+    "equity": [
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": null,
+   "significance": {
+    "days": 0
+   }
+  },
+  {
+   "id": "combinador",
+   "name": "Combinador de se\u00f1ales",
+   "description": "Modelo de segundo nivel: combina las se\u00f1ales de los dem\u00e1s agentes (predicci\u00f3n del aprendiz, t\u00e9cnico/noticias/tendencia del analista, RSI y medias), con pesos distintos en mercados de tensi\u00f3n, aprendiendo de los resultados cu\u00e1l conviene en cada situaci\u00f3n. Solo opera cuando su acierto (IC) es significativo.",
+   "agent": "SignalStackingAgent",
+   "shadow_of": null,
+   "params": {},
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 100,
+   "meta": {
+    "created_at": "2026-10-25T21:21:36.251622+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T21:21:36.251588+00:00",
+   "summary": {
+    "equity": 100.0,
+    "cash": 100.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T21:21:36.251588+00:00",
+     "2026-10-25T21:21:36.251645+00:00"
     ],
     "equity": [
      100.0,
@@ -1308,26 +1534,122 @@
    "closed_trades": [],
    "open_orders": [],
    "journal": [],
-   "learning": null
+   "learning": {
+    "method": "Stacking: online regression over the other agents' signals (with stress interactions)",
+    "samples_learned": 0,
+    "trading_enabled": false,
+    "rank_ic_mean": null,
+    "rank_ic_t": null,
+    "rank_ic_days": 0,
+    "weights": {
+     "bias": 0.0,
+     "learner_pred": 0.0,
+     "analyst_tech": 0.0,
+     "analyst_news": 0.0,
+     "analyst_trend": 0.0,
+     "rsi_dev": 0.0,
+     "ma_up": 0.0,
+     "learner_pred_x_stress": 0.0,
+     "analyst_tech_x_stress": 0.0,
+     "analyst_news_x_stress": 0.0,
+     "analyst_trend_x_stress": 0.0,
+     "rsi_dev_x_stress": 0.0,
+     "ma_up_x_stress": 0.0,
+     "stress": 0.0
+    }
+   },
+   "significance": {
+    "days": 0
+   }
+  },
+  {
+   "id": "meta",
+   "name": "Meta-agente (Hedge)",
+   "description": "Reparte su capital entre los dem\u00e1s agentes con pesos multiplicativos (algoritmo Hedge): cada d\u00eda gana peso quien m\u00e1s rinde y pierde quien menos. Copia la cartera combinada. Garant\u00eda formal: a largo plazo rinde casi como el mejor agente (arrepentimiento \u2264 \u221aT).",
+   "agent": "HedgeMetaAgent",
+   "shadow_of": null,
+   "params": {},
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 100,
+   "meta": {
+    "created_at": "2026-10-25T21:21:36.252268+00:00",
+    "last_run": "2026-10-25T21:20:42.098688+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T21:21:36.252241+00:00",
+   "summary": {
+    "equity": 100.0,
+    "cash": 100.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T21:21:36.252241+00:00",
+     "2026-10-25T21:21:36.252311+00:00"
+    ],
+    "equity": [
+     100.0,
+     100.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": {
+    "method": "Hedge (multiplicative weights) over the other agents; regret O(sqrt(T log N))",
+    "eta": 2.5,
+    "weights": {},
+    "recent": []
+   },
+   "significance": {
+    "days": 0
+   }
   }
  ],
  "research": {
   "status": {
-   "started_at": "2026-10-25T20:20:28.781148+00:00",
-   "duration_s": 35.0,
+   "started_at": "2026-10-25T21:20:42.184498+00:00",
+   "duration_s": 34.8,
    "llm": "local",
    "engines": [
     "local (gratis, sin IA)"
    ],
    "news_engines": {
-    "local": 57
+    "local": 64
    },
    "news": {
-    "fetched": 1126,
-    "new": 32,
-    "stored": 1332,
-    "triaged": 32,
-    "deep_analyses": 25,
+    "fetched": 1147,
+    "new": 47,
+    "stored": 1379,
+    "triaged": 47,
+    "deep_analyses": 17,
     "untriaged_backlog": 0
    },
    "macro": {
@@ -2427,7 +2749,7 @@
     "2026-10-18",
     "2026-11-24"
    ],
-   "generated_at": "2026-10-25T20:20:28.781148+00:00",
+   "generated_at": "2026-10-25T21:20:42.184498+00:00",
    "researched_at": null,
    "summary": null,
    "sources": {
@@ -2439,6 +2761,246 @@
   },
   "news": {
    "analyses": [
+    {
+     "id": "32f79f441601a6c2",
+     "title": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5SU1BEYTZ1UGc1VnR3S0lTR2JfMDU0dEVhUXIyOFVtNWxLZ0RwdjJnMFhjR1FGWDFOMEE3Qzd0Q3NzTWVFSm9wU091Z2JfQXBYNlBJVlVTOGRhUXAwdFhfaFFpaWkxSS04ZjZRWTV6cnZndTRQaHpra0tiZU1EQQ?oc=5",
+     "publisher": "Stocks Down Under",
+     "published": "2026-10-25T21:10:34+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "32f79f441601a6c2",
+      "headline": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+      "what_happened": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
+     "id": "103612a952b08481",
+     "title": "Week ahead: Central Bank decisions, inflation, and AI risks",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYU5zM2J6SEdSdmVUdzUzMV8ySFozR2ROZXYxc2IzWl9mWk9Ob0FpdWxZakdhUXZ6QWN0bXphckVtZ0ljYnJVRHQzdXF2dlRXMS0tZHZsemJBTFpmbG05T3NFQjdwY0pfMVJxUjNsdl9xZjd2N3pUVnVOekFCWFo4Tzg4Q3JFYkFSdkFQVlN6UTVoN0g0UzJEanNWT1Y?oc=5",
+     "publisher": "Equiti Global",
+     "published": "2026-10-25T21:10:12+00:00",
+     "triage": {
+      "relevance": 0.72,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "BAC"
+      ],
+      "named": [
+       "BAC"
+      ],
+      "summary": "Week ahead: Central Bank decisions, inflation, and AI risks",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "103612a952b08481",
+      "headline": "Week ahead: Central Bank decisions, inflation, and AI risks",
+      "what_happened": "Week ahead: Central Bank decisions, inflation, and AI risks",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "BAC",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Dato macro: tono negativo en el titular (-0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
+     "id": "6d1aedd990d1e723",
+     "title": "Stock Futures Set to Trade Ahead of Fed Decision",
+     "url": "https://finance.yahoo.com/m/6aa0a251-3626-3c5e-9bb0-32356c21ae2b/stock-futures-set-to-trade.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T19:44:00+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "AMZN",
+       "GOOGL",
+       "MSFT"
+      ],
+      "named": [
+       "AMZN",
+       "GOOGL",
+       "MSFT"
+      ],
+      "summary": "Stock Futures Set to Trade Ahead of Fed Decision. Traders expect the Fed will leave interest rates where they are when they meet this week.",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "6d1aedd990d1e723",
+      "headline": "Stock Futures Set to Trade Ahead of Fed Decision",
+      "what_happened": "Traders expect the Fed will leave interest rates where they are when they meet this week.",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "AMZN",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "GOOGL",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "MSFT",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
+     "id": "acebf6c21b210ae4",
+     "title": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week",
+     "url": "https://finance.yahoo.com/m/0d4242d7-b2c9-3bd4-9e03-715369986b85/the-fed%2C-inflation%2C-verizon%2C.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T19:12:00+00:00",
+     "triage": {
+      "relevance": 0.715,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "AMZN",
+       "GOOGL",
+       "KO",
+       "HD",
+       "BA"
+      ],
+      "named": [
+       "AMZN",
+       "GOOGL",
+       "KO",
+       "HD",
+       "BA"
+      ],
+      "summary": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week. In the busiest week of earnings this quarter, with Coca-Cola, Ford, Anheuser-Busch, Merck, and many more companies reporting. We\u2019ll also see economic data on GDP and new-home sales.",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "acebf6c21b210ae4",
+      "headline": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week",
+      "what_happened": "In the busiest week of earnings this quarter, with Coca-Cola, Ford, Anheuser-Busch, Merck, and many more companies reporting. We\u2019ll also see economic data on GDP and new-home sales.",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "AMZN",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "GOOGL",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "KO",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "HD",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "BA",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.32)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "a248654222b4",
+       "a36c3abcfb4d",
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
     {
      "id": "cedd5582b3d413f2",
      "title": "Goldman Sachs Cuts Its Price Target for South Korea\u2019s KOSPI",
@@ -2537,6 +3099,45 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T19:08:26.804780+00:00"
+     }
+    },
+    {
+     "id": "d566a6be747fe6dd",
+     "title": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
+     "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPZFJsdDhJcEt3WHNGZEdpZDItcEY4TDFUWWR1TXJIbGF2dTZUblVBRlVDMXhTWEwxMVdoQkg0ell2UFBuam1FVmVqV2FfR3pfUVVMbFFzX1gtVDFpMUZ1dkhDR3ZoY3loSlBLSzdhcEJRaEEtdFpBQVFfWFB5YjVydmlYVWhyZnVvMlpHc3JmMGRhM3VzVlhzamxEMENOcENyUzZHR2JMSnhkM2hwMG5CWmVRT084Wk8xbW1CdE1zLTVmRndJdmpOZjRXUnZ2TUU5bG5YR1hkaVFjOWpRaks3Q3dYcksxVDZOekV6emxheE0yWTlxQnp3ZXkwdHAwaGtnZ2p6b19KbjRzS2NmaTItWEdxYVpPcjZseHJxbGFRbFMzcXBaejFhanVkX1c?oc=5",
+     "publisher": "TradingView",
+     "published": "2026-10-25T18:27:00+00:00",
+     "triage": {
+      "relevance": 0.635,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [],
+      "named": [],
+      "summary": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "d566a6be747fe6dd",
+      "headline": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
+      "what_happened": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
      }
     },
     {
@@ -4773,6 +5374,42 @@
      }
     },
     {
+     "id": "75c14a1f6bc23280",
+     "title": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQNGhCTUpWdkZySFBxcWJwN1pIN2NVdG1TbmZDSTRCaF9CbzctVnY4Tnc5czVybGV6WTg3U0p1NkNJUWo4Q3JtaWROejYzN2k1NnhYRVlfV0pKT05hSWdQa0ZicElkN1NXaUtqR0xURkJ5T1FLM0haS3M2TWtqMHhwWmc5VThVSTRiRHlKQzhWbXdQWXpDa1dHQmt1TEY5Q1EwU04yNGhhQ1pLR0trNUpldnNNaWFXUExRb2pPb1NZNjJXNUZkMVZkQ2tKaw?oc=5",
+     "publisher": "ICIS",
+     "published": "2026-10-25T11:38:21+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "75c14a1f6bc23280",
+      "headline": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+      "what_happened": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
      "id": "39d17fc2e29a8a3c",
      "title": "Crude nears $120 as West Asia risks collide with Fed rate decision: Analysts",
      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZ9IB2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZw?oc=5",
@@ -5046,6 +5683,42 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:21:31.658750+00:00"
+     }
+    },
+    {
+     "id": "b913184ba477e782",
+     "title": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMVhtYmpfYTVyQ1dBVGF6Ulo1MWNvM0VtZlVmZDBGTS1DeGxJWDh1dm1QMlkyUW1LY3g2eFF3N0xaMWRHUlplNF8wcVZ4UXN6Ti1TUHJCZUc5TXluUWRxVEZWbHZqN251M1ItM3dPSnZPSjZKTkVsNjN3TDBGWmdXb1FBOTVJR3pSNVg3T3JmMHZvVTdmSFZHR1hldEVFbWlnTDVV?oc=5",
+     "publisher": "Informat.ro",
+     "published": "2026-10-25T10:14:23+00:00",
+     "triage": {
+      "relevance": 0.64,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "b913184ba477e782",
+      "headline": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
+      "what_happened": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
      }
     },
     {
@@ -5796,6 +6469,42 @@
      }
     },
     {
+     "id": "a48826c12967e7da",
+     "title": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNZUI5VFFsWGJmbE1ENFQyRXlkUG1Tc2ZtcU9LRlpMV21FczF3a283RlJiM2NyOUJ1WGgyMlY0N21QbHNpWll0QURUYkh0aFl4b1ZhYk5XOGtmTHdaVzJkRXZzT09BQUt4SU5SbnpWNTNHWjZzbk1UenBKOVp6TmJKbS1lc1U5bGNzTE9fYXc5ajA3Rjl1X29CdnZaX016ajVQeV9fZndPMXIzNFctVzdQM0dEblNKcnVhNFhDaTB6SjF3WWxnQ0V1UGo0UUtsenRoY2FRTWM4QkdjTktPVG80VWVIRFFIWWlza0gtS2ZpVFJMYUc1NjFvdktIdFRTZV8zcnNDdzYzYUNoRVZnekl2QdIBkAJBVV95cUxNZUI5VFFsWGJmbE1ENFQyRXlkUG1Tc2ZtcU9LRlpMV21FczF3a283RlJiM2NyOUJ1WGgyMlY0N21QbHNpWll0QURUYkh0aFl4b1ZhYk5XOGtmTHdaVzJkRXZzT09BQUt4SU5SbnpWNTNHWjZzbk1UenBKOVp6TmJKbS1lc1U5bGNzTE9fYXc5ajA3Rjl1X29CdnZaX016ajVQeV9fZndPMXIzNFctVzdQM0dEblNKcnVhNFhDaTB6SjF3WWxnQ0V1UGo0UUtsenRoY2FRTWM4QkdjTktPVG80VWVIRFFIWWlza0gtS2ZpVFJMYUc1NjFvdktIdFRTZV8zcnNDdzYzYUNoRVZnekl2QQ?oc=5",
+     "publisher": "The Sunday Guardian",
+     "published": "2026-10-25T06:31:01+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": 0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "a48826c12967e7da",
+      "headline": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+      "what_happened": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
      "id": "0e62a98269a8fda2",
      "title": "GM Just Announced a $20 Billion Buyback. Tesla Trades at 350 Times Earnings. Here's Which Auto Stock I'd Buy Today.",
      "url": "https://www.fool.com/investing/2026/10/25/gm-just-announced-a-20-billion-buyback-tesla-trade/?.tsrc=rss",
@@ -6216,6 +6925,42 @@
      }
     },
     {
+     "id": "7c2799f1e95f826c",
+     "title": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQTEhIa0t2aUtseldNYlVhb1ZsSEg2ZWZDclk3N2tyV2tFMkZPbEdNcnpkS3RwUDI0aHNha09hbWJsNjBhWHlTRW9YbENpSlVzM3BoaXlWRzVwZmlLMkxmM2JVVDZnZk5SbTNBNnJ2RWd3RlRUWEVENHVuS1ByaGJXa05wUUF4MWdCeExLS1hGQWd3cmRlTWNiSGpkS2NTOGJKaWdDNl9zTTYxa3BKQ1hhTHVzdXJ2Mk5DZGdlMDZZU3FqVmdXNTRWLUhGTzdMMkg2RGdLckxvMk5GaHpQTWUwM1RQZDRSYjNzLXRiTU81bDgwLWV3MVR2WXNPczRsQdIB_gFBVV95cUxQTEhIa0t2aUtseldNYlVhb1ZsSEg2ZWZDclk3N2tyV2tFMkZPbEdNcnpkS3RwUDI0aHNha09hbWJsNjBhWHlTRW9YbENpSlVzM3BoaXlWRzVwZmlLMkxmM2JVVDZnZk5SbTNBNnJ2RWd3RlRUWEVENHVuS1ByaGJXa05wUUF4MWdCeExLS1hGQWd3cmRlTWNiSGpkS2NTOGJKaWdDNl9zTTYxa3BKQ1hhTHVzdXJ2Mk5DZGdlMDZZU3FqVmdXNTRWLUhGTzdMMkg2RGdLckxvMk5GaHpQTWUwM1RQZDRSYjNzLXRiTU81bDgwLWV3MVR2WXNPczRsQQ?oc=5",
+     "publisher": "The Times of India",
+     "published": "2026-10-25T04:40:00+00:00",
+     "triage": {
+      "relevance": 0.6,
+      "sentiment": 0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     },
+     "analysis": {
+      "id": "7c2799f1e95f826c",
+      "headline": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
+      "what_happened": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T21:20:42.184498+00:00"
+     }
+    },
+    {
      "id": "a16d861da83077f1",
      "title": "Gulf economies accelerate diversification as recession looms over Iran war",
      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQXRqa2hOd3BtcDZNRDI4TDQxR0RjMmEySzlOdEZHZXRKLTBNWTE1NkNNLUJGQkEtdmJvYTBJQzJ5SkF1ZkVRb0lQem9qV0dYRnhJZFR3QUZHV0FnbTM5NGRqNEp6QlRfMndGV2I4dWZ5OTNZX1UyRnlfSHJCeGZwekcwY0o4aC1Mc25OTGMwdTFNQ0htMjJobzNJeEZWQXVqUS1uQkdGRWFfMmQ3dGQ2WnY1XzlHS2MyR1RseUJZQno3ZEZPUy1v0gHHAUFVX3lxTE1SVENhU2RSbjk4NDEzXzdXMEp6UXdnTjNrc1NtOHVfSlRoeFB0andYRHhkMVcteU5oWVk4bDdRZHFjNmN2bElRdzJSZXdpOHAxQ3NQODJ1Zkg1djNDWWVDa2dWUHdrcWxTdERGdkVvQ0VNRFJLUTZRMXdVWlR4R0xPaXZOUG9WZUh2Yk9QTldMcG1qam5yb2wxZ3Zydk9VUHk0Y1l5cXY2eXZlY293UG1vNXMxdVRtNl9iX2xhejd2b05tdGJIMkE?oc=5",
@@ -6361,465 +7106,77 @@
       "model": "local",
       "at": "2026-10-25T20:20:28.781148+00:00"
      }
-    },
-    {
-     "id": "4fe92508ae2ace3b",
-     "title": "US Fed expected to hold rates as inflation, energy costs weigh ahead of midterms",
-     "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPV1JicDg2NWJQMmptNFJkTHh4SUFWM213b0dOYk0yT3hXemFCNGExb25rellPRFVaajNDWmxNR09KMVVLSE92M3J6WXRyMk9wSlY4ZE5sODk0N3QyMlhQUkpFRVFfTEFCQThVYnhPcXZwUmFxQW5XYjN3Zm1IeTBnSkFLalJGMzZ5VjdBQnpaN0l2eXM3SUM2NE5SVzhVXzJjVmZodG91YmJoUTRTVFNiMEVRdGpmcnR5b1V1X2JhdVNuZzV1WmdVRW9waE5iYkYyNGFFWVZVeUtveVEzbXBmTVNKeTF0TlpKbVJXVktoNmV3a2xDVTRBRHdzV3VDbFFuZ3hB0gGIAkFVX3lxTE1xN1dqM0U0Q2R4RmVrNWt2ODhHYUVUZm1NRTRFZDhsYVVyQURLWEVHY3BCTDRQVWFaenloZ1BwWnAyc0habjNzZ0l5TzBfN0JjZDI5d2FlZzBmbXQtT0FpREVySkxhYTNlYVNhUnlvV1hpYUVRZHFwaHFLRlNkbm9iR20wRU5KdGUwU2ZSYWctVjRWRGpZdWVweVZ6VE5VSTdVbW5Lak9xU2FxWWVJbzNveGl5aVVBRU5HUVBKOGJlNDk2MlZzM0ZXTzhoR3FSbnNTUl9Yb0Y2ejNRQ2pnUXNUc1BYbjZLUWNGRnZtRGltanYwSGdIWWpSaTJ0TmZDWFdWN0lSLVdPdQ?oc=5",
-     "publisher": "The Times of India",
-     "published": "2026-10-25T02:28:00+00:00",
-     "triage": {
-      "relevance": 0.635,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "central_bank",
-      "symbols": [],
-      "named": [],
-      "summary": "US Fed expected to hold rates as inflation, energy costs weigh ahead of midterms",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "4fe92508ae2ace3b",
-      "headline": "US Fed expected to hold rates as inflation, energy costs weigh ahead of midterms",
-      "what_happened": "US Fed expected to hold rates as inflation, energy costs weigh ahead of midterms",
-      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-      "affected": [],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-      "related_events": [
-       "10b7f3fa2f5c",
-       "4674b428ccae",
-       "f48c0eb34f1f",
-       "d8629fd9fd55",
-       "aa90fbbb0aa1"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T19:08:26.804780+00:00"
-     }
-    },
-    {
-     "id": "e7edd7f73c372203",
-     "title": "How Investors May Respond To Qualcomm Stock Earnings Outlook Concerns",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-qualcomm-stock-011117867.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T01:11:17+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.0,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "AAPL",
-       "AMZN",
-       "TLT",
-       "XLF",
-       "QQQ"
-      ],
-      "named": [
-       "AAPL",
-       "AMZN"
-      ],
-      "summary": "How Investors May Respond To Qualcomm Stock Earnings Outlook Concerns. QUALCOMM affirmed a quarterly cash dividend of US$0.92 per share for December 2026 while reporting a 16.67% year on year decline in diluted EPS, a 20.00 P/E ratio and a 2.03% dividend yield, alongside weaker operating ma",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "e7edd7f73c372203",
-      "headline": "How Investors May Respond To Qualcomm Stock Earnings Outlook Concerns",
-      "what_happened": "QUALCOMM affirmed a quarterly cash dividend of US$0.92 per share for December 2026 while reporting a 16.67% year on year decline in diluted EPS, a 20.00 P/E ratio and a 2.03% dividend yield, alongside weaker operating margins. The business is cutting its global workforce and facing pressure in smartphones and Apple related revenue, at the same time it commits capital to data center chips, robotics and AI partnerships with Amazon and Apple. The focus now turns to how QUALCOMM's dividend...",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "AAPL",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       },
-       {
-        "symbol": "AMZN",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       },
-       {
-        "symbol": "TLT",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XLF",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "QQQ",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.2,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "1dca4259c999",
-       "5f09442521da",
-       "a9495d0a53d8"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     }
-    },
-    {
-     "id": "07fe09050b339bd2",
-     "title": "SpaceX\u2019s $1 Trillion Revenue Ambition: Can Elon Musk Deliver?",
-     "url": "https://www.fool.com/investing/2026/10/24/spacexs-1-trillion-revenue-ambition-can-elon-musk-deliver/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T00:20:02+00:00",
-     "triage": {
-      "relevance": 0.605,
-      "sentiment": 0.0,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "TSLA"
-      ],
-      "named": [
-       "TSLA"
-      ],
-      "summary": "SpaceX\u2019s $1 Trillion Revenue Ambition: Can Elon Musk Deliver?. Projecting a staggering $1 trillion annual revenue run rate by the end of 2027, SpaceX is transforming into an AI powerhouse.",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "07fe09050b339bd2",
-      "headline": "SpaceX\u2019s $1 Trillion Revenue Ambition: Can Elon Musk Deliver?",
-      "what_happened": "Projecting a staggering $1 trillion annual revenue run rate by the end of 2027, SpaceX is transforming into an AI powerhouse.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "TSLA",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.2,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T19:20:36.178286+00:00"
-     }
-    },
-    {
-     "id": "87693d1112bb29ab",
-     "title": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOOXNXYmg1R0NPdnd2cVZPMmNFM0NsNGJDOTFtRndQVjVYN1owZEpyUmpGamVjRWE2cFQ2dmVKZVJRaTZOalpVT1l3S18xX1BURnF0aTdrdFdZN2h5d0dCenpDY01JeE9JUk1XSmN6RGRWQUVzdjdjR3dwTUJGZDBUc2Vwc0NoTk5pRGdBdU1UQjlGS1lDZUlnSzY4Y3dkUEZnTHZ3WDJhaTU5Y3RfZm5qdVN3Y29jc09meUhYaHdjaVNGWkZhc25PQWVOQ29mWk94aGc4S1NoY1ZFR0I2dURTRFNFeGxQclpnZG5abV9nZ3hvcE9heXVOV0pQWWI3NDZtc3BmcE96c2JmQWd1WEFVaw?oc=5",
-     "publisher": "Stocktwits",
-     "published": "2026-10-25T00:13:34+00:00",
-     "triage": {
-      "relevance": 0.72,
-      "sentiment": 0.0,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "TSLA",
-       "ORCL"
-      ],
-      "named": [
-       "TSLA",
-       "ORCL"
-      ],
-      "summary": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "87693d1112bb29ab",
-      "headline": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-      "what_happened": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "TSLA",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono neutro en el titular (+0.00)."
-       },
-       {
-        "symbol": "ORCL",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono neutro en el titular (+0.00)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.2,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "888616539e84",
-       "b42cb75ef90c"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T17:21:31.658750+00:00"
-     }
-    },
-    {
-     "id": "ea0970353afb5bd6",
-     "title": "Netflix is losing ground to YouTube",
-     "url": "https://www.thestreet.com/investing/stocks/nflx-netflix-losing-ground-to-youtube-nielsen-streaming-share?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T00:03:00+00:00",
-     "triage": {
-      "relevance": 0.645,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "NFLX"
-      ],
-      "named": [
-       "NFLX"
-      ],
-      "summary": "Netflix is losing ground to YouTube. Netflix says its strategy is unchanged, but YouTube hit a record 14.2% of TV time in July. Here is what Nielsen data and Netflix\u2019s Q3 earnings call reveal.",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "ea0970353afb5bd6",
-      "headline": "Netflix is losing ground to YouTube",
-      "what_happened": "Netflix says its strategy is unchanged, but YouTube hit a record 14.2% of TV time in July. Here is what Nielsen data and Netflix\u2019s Q3 earnings call reveal.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "NFLX",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.32)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T18:20:35.552227+00:00"
-     }
-    },
-    {
-     "id": "fcbe8c19d808ba2c",
-     "title": "Anthropic Co-Founder Jack Clark Sees AI Driving US GDP Toward $44 Trillion, Delivering A Nearly 50% Surge By 2030 \u2014 \u2018The Singularity Is Here\u2019",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPU2ItcmpkWUQtR3pKVXRRaE9hQXdGb2RmYWpseVl2LUFNMkphWmp0VmE5TzBlOUJiWnhFVW5CbkFrSFUwMzZUdHJfYU1PR3Y5Z3FWRUFqZzl0NmYtM1FGMDRXYTV1bEp3TEtZa0VUUHQ3RHRLRE9ZdXB1RTdaNDhSSmNPaGZoRi1IalNnWHBQNjVZMFpGbDRTbnV6eWRubFpVdGVWMGkxYjdJODFDS0FkS2tBOXdIaGE5eDlV?oc=5",
-     "publisher": "Stocktwits",
-     "published": "2026-10-24T23:12:32+00:00",
-     "triage": {
-      "relevance": 0.6,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [],
-      "named": [],
-      "summary": "Anthropic Co-Founder Jack Clark Sees AI Driving US GDP Toward $44 Trillion, Delivering A Nearly 50% Surge By 2030 \u2014 \u2018The Singularity Is Here\u2019",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "fcbe8c19d808ba2c",
-      "headline": "Anthropic Co-Founder Jack Clark Sees AI Driving US GDP Toward $44 Trillion, Delivering A Nearly 50% Surge By 2030 \u2014 \u2018The Singularity Is Here\u2019",
-      "what_happened": "Anthropic Co-Founder Jack Clark Sees AI Driving US GDP Toward $44 Trillion, Delivering A Nearly 50% Surge By 2030 \u2014 \u2018The Singularity Is Here\u2019",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "888616539e84",
-       "b42cb75ef90c"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T20:20:28.781148+00:00"
-     }
-    },
-    {
-     "id": "79094037e9c18d2f",
-     "title": "Moody\u2019s Puts U.S. Recession Odds at 50%, and the Signals Are Hard to Ignore",
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQWFKU0hvVloxa1JIUmJobjdYNUZWZlJRZVBSYV9GX180WkFILXpHT2E4RVFEa0lFY3JDTmlDVFU4SWpFUDhtT3kyWUtuX2o0bmFBaXlkYXpKdkYyMkJTM1c2MDhMUGQ5SDBlbWxoMmNhVUVJNW85SXFxcDcyTFlDbUxsNW53V0ZDeTV2RTgzUVhIbTU4Y2lwakJDdFREMFUtVHVLQkhCTVotLTkyRFlXNjU2UQ?oc=5",
-     "publisher": "TradingKey",
-     "published": "2026-10-24T22:18:10+00:00",
-     "triage": {
-      "relevance": 0.6,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [],
-      "named": [],
-      "summary": "Moody\u2019s Puts U.S. Recession Odds at 50%, and the Signals Are Hard to Ignore",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "79094037e9c18d2f",
-      "headline": "Moody\u2019s Puts U.S. Recession Odds at 50%, and the Signals Are Hard to Ignore",
-      "what_happened": "Moody\u2019s Puts U.S. Recession Odds at 50%, and the Signals Are Hard to Ignore",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "888616539e84",
-       "b42cb75ef90c"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T20:20:28.781148+00:00"
-     }
-    },
-    {
-     "id": "2d57001bbd72f66c",
-     "title": "Is an AI Recession Coming? | The David Frum Show",
-     "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5IUDVaeFotU0ItQWRZX0hxRWtiMF9JQmd3VV9lVGNySWJ1RFYzQm1UaC1fbkF0cV83Q1Q4?oc=5",
-     "publisher": "Howl.Link",
-     "published": "2026-10-24T22:00:34+00:00",
-     "triage": {
-      "relevance": 0.6,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [],
-      "named": [],
-      "summary": "Is an AI Recession Coming? | The David Frum Show",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "2d57001bbd72f66c",
-      "headline": "Is an AI Recession Coming? | The David Frum Show",
-      "what_happened": "Is an AI Recession Coming? | The David Frum Show",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "888616539e84",
-       "b42cb75ef90c"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T20:20:28.781148+00:00"
-     }
-    },
-    {
-     "id": "672e0b56c9afb07f",
-     "title": "Bitcoin or Gold: Which Is the Better Inflation Hedge With Prices Up 3.7%?",
-     "url": "https://247wallst.com/investing/cryptocurrency/2026/10/24/bitcoin-or-gold-which-is-the-better-inflation-hedge-with-prices-up-3-7/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-24T21:48:40+00:00",
-     "triage": {
-      "relevance": 0.72,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "BTC-USD",
-       "ETH-USD",
-       "SOL-USD",
-       "XRP-USD",
-       "ADA-USD"
-      ],
-      "named": [
-       "BTC-USD"
-      ],
-      "summary": "Bitcoin or Gold: Which Is the Better Inflation Hedge With Prices Up 3.7%?. Gold and Bitcoin have both stumbled in 2026 even as consumer prices keep climbing, but the two assets tell very different stories about which one actually holds its value when inflation bites.",
-      "model": "local",
-      "at": "2026-10-25T17:14:47.988490+00:00"
-     },
-     "analysis": {
-      "id": "672e0b56c9afb07f",
-      "headline": "Bitcoin or Gold: Which Is the Better Inflation Hedge With Prices Up 3.7%?",
-      "what_happened": "Gold and Bitcoin have both stumbled in 2026 even as consumer prices keep climbing, but the two assets tell very different stories about which one actually holds its value when inflation bites.",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "BTC-USD",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono negativo en el titular (-0.58)."
-       },
-       {
-        "symbol": "ETH-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "SOL-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XRP-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "ADA-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "888616539e84",
-       "b42cb75ef90c"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-10-25T17:21:31.658750+00:00"
-     }
     }
    ],
    "feed": [
+    {
+     "id": "32f79f441601a6c2",
+     "title": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5SU1BEYTZ1UGc1VnR3S0lTR2JfMDU0dEVhUXIyOFVtNWxLZ0RwdjJnMFhjR1FGWDFOMEE3Qzd0Q3NzTWVFSm9wU091Z2JfQXBYNlBJVlVTOGRhUXAwdFhfaFFpaWkxSS04ZjZRWTV6cnZndTRQaHpra0tiZU1EQQ?oc=5",
+     "publisher": "Stocks Down Under",
+     "published": "2026-10-25T21:10:34+00:00",
+     "symbols": [],
+     "relevance": 0.68,
+     "sentiment": -0.583,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Why Could the US Stock Market Fall This Week? Inflation and GDP Data Raise New Risks",
+     "analysed": true
+    },
+    {
+     "id": "103612a952b08481",
+     "title": "Week ahead: Central Bank decisions, inflation, and AI risks",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYU5zM2J6SEdSdmVUdzUzMV8ySFozR2ROZXYxc2IzWl9mWk9Ob0FpdWxZakdhUXZ6QWN0bXphckVtZ0ljYnJVRHQzdXF2dlRXMS0tZHZsemJBTFpmbG05T3NFQjdwY0pfMVJxUjNsdl9xZjd2N3pUVnVOekFCWFo4Tzg4Q3JFYkFSdkFQVlN6UTVoN0g0UzJEanNWT1Y?oc=5",
+     "publisher": "Equiti Global",
+     "published": "2026-10-25T21:10:12+00:00",
+     "symbols": [
+      "BAC"
+     ],
+     "relevance": 0.72,
+     "sentiment": -0.583,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Week ahead: Central Bank decisions, inflation, and AI risks",
+     "analysed": true
+    },
+    {
+     "id": "6d1aedd990d1e723",
+     "title": "Stock Futures Set to Trade Ahead of Fed Decision",
+     "url": "https://finance.yahoo.com/m/6aa0a251-3626-3c5e-9bb0-32356c21ae2b/stock-futures-set-to-trade.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T19:44:00+00:00",
+     "symbols": [
+      "AMZN",
+      "GOOGL",
+      "MSFT"
+     ],
+     "relevance": 0.675,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Stock Futures Set to Trade Ahead of Fed Decision. Traders expect the Fed will leave interest rates where they are when they meet this week.",
+     "analysed": true
+    },
+    {
+     "id": "acebf6c21b210ae4",
+     "title": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week",
+     "url": "https://finance.yahoo.com/m/0d4242d7-b2c9-3bd4-9e03-715369986b85/the-fed%2C-inflation%2C-verizon%2C.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T19:12:00+00:00",
+     "symbols": [
+      "AMZN",
+      "GOOGL",
+      "KO",
+      "HD",
+      "BA"
+     ],
+     "relevance": 0.715,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "The Fed, Inflation, Verizon, Boeing, Alphabet, GE Vernova, Amazon, and Many More Stocks to Watch This Week. In the busiest week of earnings this quarter, with Coca-Cola, Ford, Anheuser-Busch, Merck, and many more companies reporting. We\u2019ll also see economic data on GDP and new-home sales.",
+     "analysed": true
+    },
     {
      "id": "cedd5582b3d413f2",
      "title": "Goldman Sachs Cuts Its Price Target for South Korea\u2019s KOSPI",
@@ -6850,6 +7207,20 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "U.S. rate traders swing between inflation data and Fed signals",
+     "analysed": true
+    },
+    {
+     "id": "d566a6be747fe6dd",
+     "title": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
+     "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPZFJsdDhJcEt3WHNGZEdpZDItcEY4TDFUWWR1TXJIbGF2dTZUblVBRlVDMXhTWEwxMVdoQkg0ell2UFBuam1FVmVqV2FfR3pfUVVMbFFzX1gtVDFpMUZ1dkhDR3ZoY3loSlBLSzdhcEJRaEEtdFpBQVFfWFB5YjVydmlYVWhyZnVvMlpHc3JmMGRhM3VzVlhzamxEMENOcENyUzZHR2JMSnhkM2hwMG5CWmVRT084Wk8xbW1CdE1zLTVmRndJdmpOZjRXUnZ2TUU5bG5YR1hkaVFjOWpRaks3Q3dYcksxVDZOekV6emxheE0yWTlxQnp3ZXkwdHAwaGtnZ2p6b19KbjRzS2NmaTItWEdxYVpPcjZseHJxbGFRbFMzcXBaejFhanVkX1c?oc=5",
+     "publisher": "TradingView",
+     "published": "2026-10-25T18:27:00+00:00",
+     "symbols": [],
+     "relevance": 0.635,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Japan Week Ahead: BOJ Set to Leave Rate at 1.25% as Mission Shifts from Normalizing Super-Low Rates to Keeping Inflation from Overshooting 2% Target",
      "analysed": true
     },
     {
@@ -7520,6 +7891,20 @@
      "analysed": true
     },
     {
+     "id": "75c14a1f6bc23280",
+     "title": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQNGhCTUpWdkZySFBxcWJwN1pIN2NVdG1TbmZDSTRCaF9CbzctVnY4Tnc5czVybGV6WTg3U0p1NkNJUWo4Q3JtaWROejYzN2k1NnhYRVlfV0pKT05hSWdQa0ZicElkN1NXaUtqR0xURkJ5T1FLM0haS3M2TWtqMHhwWmc5VThVSTRiRHlKQzhWbXdQWXpDa1dHQmt1TEY5Q1EwU04yNGhhQ1pLR0trNUpldnNNaWFXUExRb2pPb1NZNjJXNUZkMVZkQ2tKaw?oc=5",
+     "publisher": "ICIS",
+     "published": "2026-10-25T11:38:21+00:00",
+     "symbols": [],
+     "relevance": 0.68,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Aramco CEO warns of 2% GDP growth, >6% inflation, if Hormuz disruption continues \u2013 Chemicals and the Economy",
+     "analysed": true
+    },
+    {
      "id": "39d17fc2e29a8a3c",
      "title": "Crude nears $120 as West Asia risks collide with Fed rate decision: Analysts",
      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZ9IB2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZw?oc=5",
@@ -7601,6 +7986,20 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Crude Nears $120 Amid West Asia Risks & Fed Rate Decision",
+     "analysed": true
+    },
+    {
+     "id": "b913184ba477e782",
+     "title": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMVhtYmpfYTVyQ1dBVGF6Ulo1MWNvM0VtZlVmZDBGTS1DeGxJWDh1dm1QMlkyUW1LY3g2eFF3N0xaMWRHUlplNF8wcVZ4UXN6Ti1TUHJCZUc5TXluUWRxVEZWbHZqN251M1ItM3dPSnZPSjZKTkVsNjN3TDBGWmdXb1FBOTVJR3pSNVg3T3JmMHZvVTdmSFZHR1hldEVFbWlnTDVV?oc=5",
+     "publisher": "Informat.ro",
+     "published": "2026-10-25T10:14:23+00:00",
+     "symbols": [],
+     "relevance": 0.64,
+     "sentiment": -0.583,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Consumers in the euro area expect inflation of 3.1% over the next year and a weaker economy",
      "analysed": true
     },
     {
@@ -7832,6 +8231,20 @@
      "analysed": true
     },
     {
+     "id": "a48826c12967e7da",
+     "title": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNZUI5VFFsWGJmbE1ENFQyRXlkUG1Tc2ZtcU9LRlpMV21FczF3a283RlJiM2NyOUJ1WGgyMlY0N21QbHNpWll0QURUYkh0aFl4b1ZhYk5XOGtmTHdaVzJkRXZzT09BQUt4SU5SbnpWNTNHWjZzbk1UenBKOVp6TmJKbS1lc1U5bGNzTE9fYXc5ajA3Rjl1X29CdnZaX016ajVQeV9fZndPMXIzNFctVzdQM0dEblNKcnVhNFhDaTB6SjF3WWxnQ0V1UGo0UUtsenRoY2FRTWM4QkdjTktPVG80VWVIRFFIWWlza0gtS2ZpVFJMYUc1NjFvdktIdFRTZV8zcnNDdzYzYUNoRVZnekl2QdIBkAJBVV95cUxNZUI5VFFsWGJmbE1ENFQyRXlkUG1Tc2ZtcU9LRlpMV21FczF3a283RlJiM2NyOUJ1WGgyMlY0N21QbHNpWll0QURUYkh0aFl4b1ZhYk5XOGtmTHdaVzJkRXZzT09BQUt4SU5SbnpWNTNHWjZzbk1UenBKOVp6TmJKbS1lc1U5bGNzTE9fYXc5ajA3Rjl1X29CdnZaX016ajVQeV9fZndPMXIzNFctVzdQM0dEblNKcnVhNFhDaTB6SjF3WWxnQ0V1UGo0UUtsenRoY2FRTWM4QkdjTktPVG80VWVIRFFIWWlza0gtS2ZpVFJMYUc1NjFvdktIdFRTZV8zcnNDdzYzYUNoRVZnekl2QQ?oc=5",
+     "publisher": "The Sunday Guardian",
+     "published": "2026-10-25T06:31:01+00:00",
+     "symbols": [],
+     "relevance": 0.68,
+     "sentiment": 0.322,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Is Recession Looming? Gulf Economies Accelerate Diversification As Iran War Threatens Growth, Investment And Regional Economic Stability",
+     "analysed": true
+    },
+    {
      "id": "0e62a98269a8fda2",
      "title": "GM Just Announced a $20 Billion Buyback. Tesla Trades at 350 Times Earnings. Here's Which Auto Stock I'd Buy Today.",
      "url": "https://www.fool.com/investing/2026/10/25/gm-just-announced-a-20-billion-buyback-tesla-trade/?.tsrc=rss",
@@ -7949,6 +8362,20 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "US Fed set to lead G7 trio in hawkish rate pause",
+     "analysed": true
+    },
+    {
+     "id": "7c2799f1e95f826c",
+     "title": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQTEhIa0t2aUtseldNYlVhb1ZsSEg2ZWZDclk3N2tyV2tFMkZPbEdNcnpkS3RwUDI0aHNha09hbWJsNjBhWHlTRW9YbENpSlVzM3BoaXlWRzVwZmlLMkxmM2JVVDZnZk5SbTNBNnJ2RWd3RlRUWEVENHVuS1ByaGJXa05wUUF4MWdCeExLS1hGQWd3cmRlTWNiSGpkS2NTOGJKaWdDNl9zTTYxa3BKQ1hhTHVzdXJ2Mk5DZGdlMDZZU3FqVmdXNTRWLUhGTzdMMkg2RGdLckxvMk5GaHpQTWUwM1RQZDRSYjNzLXRiTU81bDgwLWV3MVR2WXNPczRsQdIB_gFBVV95cUxQTEhIa0t2aUtseldNYlVhb1ZsSEg2ZWZDclk3N2tyV2tFMkZPbEdNcnpkS3RwUDI0aHNha09hbWJsNjBhWHlTRW9YbENpSlVzM3BoaXlWRzVwZmlLMkxmM2JVVDZnZk5SbTNBNnJ2RWd3RlRUWEVENHVuS1ByaGJXa05wUUF4MWdCeExLS1hGQWd3cmRlTWNiSGpkS2NTOGJKaWdDNl9zTTYxa3BKQ1hhTHVzdXJ2Mk5DZGdlMDZZU3FqVmdXNTRWLUhGTzdMMkg2RGdLckxvMk5GaHpQTWUwM1RQZDRSYjNzLXRiTU81bDgwLWV3MVR2WXNPczRsQQ?oc=5",
+     "publisher": "The Times of India",
+     "published": "2026-10-25T04:40:00+00:00",
+     "symbols": [],
+     "relevance": 0.6,
+     "sentiment": 0.322,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "France\u2019s economic woes: Debt nears 122% of GDP, growth forecast at just 0.4%",
      "analysed": true
     },
     {
@@ -8279,6 +8706,20 @@
      "analysed": true
     },
     {
+     "id": "473e7dcfb9edbf54",
+     "title": "Fed Set to Lead G7 Trio in Hawkish Rate Pause: Eco Week Ahead",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbFg3ZkV4QzdBaTNjLTU0N3lHTUpMWEFETVhtYU9NS2l5QlhfMU0zeV9SLTd4ZTFwbnBGUGFOa29IQ25VMmQ3aXotU1hPRkZHR0szdFQ2RzRCemE4SzNVYS1GRG5oZjh0RHVIU2FiUzJLemdEdlk3TGF3SWdKQi1ZZGk5SFNwS2ZKTU1HNzJZSk85T0tiTlU4VXVVVlVsVkE2R2VlSGIxOVd1MUpjY1U2cA?oc=5",
+     "publisher": "Bloomberg.com",
+     "published": "2026-10-24T20:00:00+00:00",
+     "symbols": [],
+     "relevance": 0.635,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Fed Set to Lead G7 Trio in Hawkish Rate Pause: Eco Week Ahead",
+     "analysed": true
+    },
+    {
      "id": "4e9f0f6279680e96",
      "title": "Montgomery County Unemployment Rate Drops to 3.6% in September",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMlVoa1laVjdPc3dtbFJYR251MTFLLUJrNHJYZ2wzS1hhU2hKQ0lnbXhEM2tRY1VKcmNPTVZmbTFDZjNEWmp3a2hiZ0Y1TFhmaDNaMVJQOTR2ZTFWNUlfQWNwOVVXUnlZRDRsemZkb1l4WlhXWFh5Rlg3ZVV4TDkwSkt6NW9ZQmVSeV9VcnRvUkw5Z29SMGxMY1dmeDcyMHpxZFlqRXgtenI5d1k?oc=5",
@@ -8526,7 +8967,7 @@
      "impact": "low",
      "category": "regulation",
      "summary": "Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker. Some of the world's biggest companies objected to being listed on the first tokenized securities trading venue under the SEC's innovation exemption. But the early pushback may say more about issuer caution than about rej",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "d91c519efcb83ca5",
@@ -9118,7 +9559,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "U.S. GDP Growth Revised Up in both Q1 and Q2; Benchmark Revision Small",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "ced6b543a22c9182",
@@ -9148,7 +9589,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Lewis and Thurston county unemployment rates fall in September",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "f0089a8585874a00",
@@ -9162,7 +9603,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Taiwan\u2019s unemployment rate fell to 3.36% in September \u2014 Taipei Times",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "00b035a11b206c8c",
@@ -9265,7 +9706,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Are We in a Recession? 5 Threats to the Economy and Where the Money Is Moving",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "6e6ed7cc10a46844",
@@ -9279,7 +9720,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Forget 3% US Inflation. It\u2019s Heading for 4%: McGeever",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "30d47382b489af86",
@@ -9391,7 +9832,7 @@
      "impact": "low",
      "category": "geopolitics",
      "summary": "Oil Prices End the Week Higher on Fears of U.S.-Iran Escalation",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "26d55f8b5d945165",
@@ -9429,180 +9870,56 @@
      "analysed": true
     },
     {
-     "id": "62122bf3f294712e",
-     "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
-     "url": "https://www.marketwatch.com/story/this-hot-ai-fueled-stock-has-been-in-a-rut-it-just-beat-earnings-expectations-by-36-4a4188cb?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-23T21:13:00+00:00",
-     "symbols": [
-      "ORCL"
-     ],
-     "relevance": 0.685,
-     "sentiment": 0.583,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.. A company beating earnings expectations by 36% and revenue expectations by 15% would usually see a postresults bump. But not for Bloom Energy, the fuel-cell maker that has flourished due to data-center demand.",
-     "analysed": true
-    },
-    {
-     "id": "776a3e9f82eeb80d",
-     "title": "Tech concerns, oil prices, inflation weigh on stocks",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaWhPYlZ1Z1J6UDVielRndVhXSkNyUUNSeEpPczdTemEwN0JINzdvSktZX1oyazNqRS1NWUdiNWJGa1JaTEJldW9mZ0FpcF9Wd2ZpZEsxOXlQbXJIX3I2UGs4SVZtVi1Bd3NqcnpwdGp6ZVFxYzFLOG5JdlNEOTdkVGJ4OWw?oc=5",
-     "publisher": "Courthouse News",
-     "published": "2026-10-23T21:03:17+00:00",
+     "id": "bdd76cb819773489",
+     "title": "CENTCOM says helped Gulf nations export 1.5 billion barrels of oil via Hormuz",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9CRlB3LWo2MEh2cEl2dU10cmZRSjhVUGxhajlaYWhXYU9BeUZYcVpvQU9zSzZfRm9sWkM3ODRjbS0wdUIzbjdUMW9qQQ?oc=5",
+     "publisher": "The New Region",
+     "published": "2026-10-25T20:43:08+00:00",
      "symbols": [
       "XLE",
       "XOM",
       "CVX"
      ],
-     "relevance": 0.72,
-     "sentiment": -0.583,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Tech concerns, oil prices, inflation weigh on stocks",
-     "analysed": true
-    },
-    {
-     "id": "df8593520047f447",
-     "title": "Gold prices drop below key level amid inflation and Fed tightening, despite lower U.S. Treasury yields.",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVzJ5dXBKejdjV0VyM2hnUEliS3FkWGk5clFqSXNYakNDb1oyUDNSVVA2eWpTd3kxTHROTHpGZFBUbTVmSHhFVTB5enVOZFBwQ0tDaDdqbl82ZGFjSjBmTTdqUktuV21qdlE5SDdUTkhjOFZuVVE4cGFCVVVlMzNhaEtCa0x0QnJmMXlZVHZ6M2VXWlRMQnJvYllneGlOanNnYk1Hdw?oc=5",
-     "publisher": "Pluang",
-     "published": "2026-10-23T20:59:42+00:00",
-     "symbols": [
-      "TLT",
-      "XLF",
-      "QQQ",
-      "GLD"
-     ],
-     "relevance": 0.795,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "Gold prices drop below key level amid inflation and Fed tightening, despite lower U.S. Treasury yields.",
-     "analysed": true
-    },
-    {
-     "id": "0a18f53dd8e4298a",
-     "title": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
-     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQa1ZWLUxqWFYzZEZpcmM0YXVlTjNyNlpRRHBCc182eFdzMU4wUmU1UFZCRF95M29GRnhWeXhzQUpDdnd1UkdMeFlBLUFBM24wak5zWjhIYld6eFNHZHV0RHBaem5IUjd0dVdYMlVueFNSYzhFR1lwR3JEOC14SjRJcjd6aGxGZzgtTGRTZUh0OXhaUVl2UFZlQzhNMC1ySWZjRWV1Q3JpbkdsZDlYeFpubTRpb2N2RUtNV1FvLXotSlYxa1FTTTZrNkRDYkRsSGZfeWVoWWt0bw?oc=5",
-     "publisher": "www.tmgm.com",
-     "published": "2026-10-23T20:53:18+00:00",
-     "symbols": [
-      "GLD",
-      "EEM"
-     ],
-     "relevance": 0.68,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
-     "analysed": true
-    },
-    {
-     "id": "eda7d2212a898d04",
-     "title": "Oil Futures Post Weekly Gains on Middle East Escalation Fears",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUUprNnpxZE5idzlOR3htMEsyS0FmSHFfUi1EZ2dpZEVzNGd5ckRsQnVob0daYXdVMzZBbm9YdFBHQk5fV0NIeU5oZjZZdDdCY0FGbXRoUXNtblo4UmF2OUR6VG54LW95ekJ0eFNPbjBRUGp6R1F0S0xsdEc3MmZReXpCT0lIUmxyR1Npd2pYMlRFb3RndXBjU05OTXM0bFBmazFkY09lcnVJUG1LU3ItNlJpYnl5X01x?oc=5",
-     "publisher": "WSJ",
-     "published": "2026-10-23T20:47:00+00:00",
-     "symbols": [
-      "XLE",
-      "XOM",
-      "CVX"
-     ],
-     "relevance": 0.665,
+     "relevance": 0.465,
      "sentiment": 0.0,
      "impact": "low",
      "category": "commodities",
-     "summary": "Oil Futures Post Weekly Gains on Middle East Escalation Fears",
+     "summary": "CENTCOM says helped Gulf nations export 1.5 billion barrels of oil via Hormuz",
      "analysed": false
     },
     {
-     "id": "f93b95e4478de223",
-     "title": "Stock Market Today: Nasdaq Posts Back-To-Back Losses As Oil Surges; Samsara Breaks Out",
-     "url": "https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-nasdaq.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-23T20:38:53+00:00",
-     "symbols": [
-      "CVX",
-      "XLE",
-      "XOM"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Stock Market Today: Nasdaq Posts Back-To-Back Losses As Oil Surges; Samsara Breaks Out. The Dow Jones index drops 650 points Friday as oil prices rally. Bloom, MaxLinear and WDC are big earnings movers.",
-     "analysed": true
-    },
-    {
-     "id": "c8f299d5b1ec5752",
-     "title": "Uruguay Unemployment Rate Edged Lower in September",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNYnRISk82ME93NUdRZXgwSGNQYWZRMUNHaUs1QWl0bDVQV3VFSE13OEpIV3liN3hkRmw0UmJUWWhfMDZoSUhBelZVZExMYkRHQUtFOVVPb1ZDQ3ZoaUh3THJBd2VxNXBlalFtYm5MelV4dXhSeTZJYW1jUmZHNzlKeGNmYUIxeHBQNHBGWElIS1lvSF8zMnlucUtsazVFbDVEY1NF?oc=5",
-     "publisher": "TradingView",
-     "published": "2026-10-23T20:34:20+00:00",
+     "id": "3f8e25578cafea73",
+     "title": "agricultural export policy | US tariffs compel New Zealand dairy market optionality",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxON2pIeC1JSWZKRGpmdS1qTHNyTDJteTVxUTFDWmJheDI2Q24yZU11Z01hR1gwZlRzQ1MwTE5MbHc5XzBOSFI4bVd1aUhkWXdWUC1iT3RXTTBwTG5vMFZJUmRXVUpRbXg1bFRfUWhmSnExbUc5aXhFZmwtT1FHazFWX1EzTERDTVJ6?oc=5",
+     "publisher": "https://en.edairynews.com/",
+     "published": "2026-10-25T20:30:33+00:00",
      "symbols": [],
-     "relevance": 0.6,
+     "relevance": 0.46,
      "sentiment": -0.322,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Uruguay Unemployment Rate Edged Lower in September",
+     "impact": "low",
+     "category": "geopolitics",
+     "summary": "agricultural export policy | US tariffs compel New Zealand dairy market optionality",
      "analysed": false
     },
     {
-     "id": "9544ed4169298635",
-     "title": "U.S. Stocks Fall as Oil Prices Hit Five-Month High",
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdnFqcHZzUWtWdEtpVnRIZ1dmdERZRlV6dzJaMXpEQ0prY2lHZG9qSHQzTGR5bTFzRF82VXRlQVJXMDdPRkR6T2hPSjZGMm1CZVVXbGI1U2ItYnRFS3h3ejFuZVY2VkFSdy1ZNGh5VjJsNlphM0hMb2thbFhTQ0lvd1hCTl9uaDNhVG9MVUNFcXRSUGdaYXRJMA?oc=5",
-     "publisher": "WSJ",
-     "published": "2026-10-23T20:34:00+00:00",
+     "id": "1a25d2fd4bba3aa7",
+     "title": "Will Solana Ever Hit $1,000? What It Would Take From $100",
+     "url": "https://247wallst.com/investing/cryptocurrency/2026/10/25/will-solana-ever-hit-1000-what-it-would-take-from-100/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T20:30:29+00:00",
      "symbols": [
-      "XLE",
-      "XOM",
-      "CVX"
+      "SOL-USD",
+      "BTC-USD",
+      "ETH-USD",
+      "XRP-USD",
+      "ADA-USD"
      ],
-     "relevance": 0.625,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "commodities",
-     "summary": "U.S. Stocks Fall as Oil Prices Hit Five-Month High",
-     "analysed": true
-    },
-    {
-     "id": "73b6ada1e505b10d",
-     "title": "US Equity Indexes Fall, Treasury Yields Jump as Iran Tensions Send Crude Oil Sharply Higher",
-     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVEZjSVhIeER2TlhCeDhvTlJGMU5LUkMxSHpJdDJhclNLdUl0bHVUbi1DZmg3RjctMGxUb2xaMGpYSGNGSGYxelc0YWVRQWFCMGRVTFZCZ1dOWDgyMDhUUGo0VlhDa3Y1dmc4NTl5M2hiMWRwVnVyWkF5S0QtdTBaTWZKb1ZHY29sUlZfWnFjQVM1SV9JWTBlTmtOd0lfTTF4N19kOXlIQ2o2RUx1NmxJcmhlZkJfVm45SUsxVkMzNUVrUkFIOHhSWm1pRF9NRnJWRWJQTVMwUlFweVU?oc=5",
-     "publisher": "marketscreener.com",
-     "published": "2026-10-23T20:30:38+00:00",
-     "symbols": [
-      "XLE",
-      "XOM",
-      "CVX",
-      "TLT"
-     ],
-     "relevance": 0.62,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "geopolitics",
-     "summary": "US Equity Indexes Fall, Treasury Yields Jump as Iran Tensions Send Crude Oil Sharply Higher",
-     "analysed": true
-    },
-    {
-     "id": "f892fce636b304f6",
-     "title": "Update: US Equity Indexes Fall, Treasury Yields Jump as Iran Tensions Send Crude Oil Sharply Higher",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNWpmM3Y1cWMzQnM0REVNM0JTSHpXenJkbUxsSnBiUVVTZHBHOC1nXzlwS1JuWFpuV1F6Z3I1Nk5VTVRRZ1BsYkdUcUNFT2Vkd3BXczRhUEZ2NWtHUm1QZzJFenZqbVRpczliYmdWMjBqX21MbFF6bzAxS3NReG5XQlNGN24yMW5nMmVOOWtPcl9FT1k?oc=5",
-     "publisher": "Yahoo Finance",
-     "published": "2026-10-23T20:29:15+00:00",
-     "symbols": [
-      "XLE",
-      "XOM",
-      "CVX",
-      "TLT"
-     ],
-     "relevance": 0.62,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "geopolitics",
-     "summary": "Update: US Equity Indexes Fall, Treasury Yields Jump as Iran Tensions Send Crude Oil Sharply Higher",
-     "analysed": true
+     "relevance": 0.585,
+     "sentiment": 0.0,
+     "impact": "low",
+     "category": "crypto",
+     "summary": "Will Solana Ever Hit $1,000? What It Would Take From $100. Solana has surged over 14,700% since 2020, yet it currently sits 65% below its all-time high with ETF outflows mounting and supply expanding. The path to four digits is narrower than most bulls admit.",
+     "analysed": false
     },
     {
      "id": "5e1742a1ca842db6",
@@ -9851,6 +10168,24 @@
      "analysed": false
     },
     {
+     "id": "3f03f39c5b2eef4f",
+     "title": "Struggling to Afford Gas? At Least Big Oil Is Making Billions, Says Trump",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWFIweWFXaThLd2JxNUd0bXhRaXNHR1dyTVRTU1RIZk1xTW9DUzRaUVVLQzlYYlZzUmJWbDhOOVBLYkNxTVNqZk1uQVA2VXk5akk1M3pQXzJQN2gwcmlmUklOdEdpcDZCd0c0ZTlHbXctQ2ZaR2dBbDRaODg1Wm1ENGVLZVl5YlJOZENPa2c1Tkowd2ZLdndpYQ?oc=5",
+     "publisher": "Jezebel",
+     "published": "2026-10-25T18:50:32+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.465,
+     "sentiment": 0.0,
+     "impact": "low",
+     "category": "commodities",
+     "summary": "Struggling to Afford Gas? At Least Big Oil Is Making Billions, Says Trump",
+     "analysed": false
+    },
+    {
      "id": "3ae94d0ee460f14e",
      "title": "Realty Income Yields More Than Quintuple the S&P 500. Here's What a $10,000 Investment Produces in Yearly Dividends.",
      "url": "https://www.fool.com/investing/2026/10/25/realty-income-yields-more-than-quintuple-the-sp-50/?.tsrc=rss",
@@ -9889,6 +10224,24 @@
      "impact": "low",
      "category": "crypto",
      "summary": "JPMorgan Has Nearly $900 Million in Tokenized Funds on Ethereum and Solana. Which Chain Benefits More?. JPMorgan just parked nearly $900 million in tokenized funds across Ethereum and Solana, but the fine print reveals one chain got a much bigger piece of the deal than the headlines suggest.",
+     "analysed": false
+    },
+    {
+     "id": "9534e73cd9152a54",
+     "title": "Global Stocks Fall as AI Spending Concerns and Higher Oil Prices Weigh",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tSUU5UzBxQ2hSRmVHWHNLTlFsM0JKWXFHb1BsdGV5djRtbF9MSWZLS0djSXJnXzhhMlFHZlppN1FiTDc1ajBwUW0zQjRnclBDVnl2NEVXZFBvQQ?oc=5",
+     "publisher": "TOKENPOST",
+     "published": "2026-10-25T18:29:10+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.585,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "commodities",
+     "summary": "Global Stocks Fall as AI Spending Concerns and Higher Oil Prices Weigh",
      "analysed": false
     },
     {
@@ -9997,6 +10350,20 @@
      "analysed": false
     },
     {
+     "id": "08d5ba9109afba76",
+     "title": "Moody's rates France above Israel despite weaker economy, higher debt",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE56S1ZSRG5DYzV1TV8zYm5IMHJDdWFyM1dvMVE4cGtoUUNXWVlDcFdrTEpWUjJYNnN1OEs3YUs4N09sQTh1ZXh2Q0ZGLWV2UnFzM0lYWEhzYw?oc=5",
+     "publisher": "The Jerusalem Post",
+     "published": "2026-10-25T18:07:16+00:00",
+     "symbols": [],
+     "relevance": 0.5,
+     "sentiment": 0.0,
+     "impact": "low",
+     "category": "geopolitics",
+     "summary": "Moody's rates France above Israel despite weaker economy, higher debt",
+     "analysed": false
+    },
+    {
      "id": "42aad9163ef8c9c3",
      "title": "Bank of America sends SpaceX stock investors strong signal",
      "url": "https://www.thestreet.com/investing/stocks/bank-of-america-raises-spacex-price-target-stock-investors-strong-signal?.tsrc=rss",
@@ -10047,117 +10414,13 @@
      "category": "commodities",
      "summary": "Avg India oil prices hit 15-year high: Threaten OMC margins, strain Centre",
      "analysed": false
-    },
-    {
-     "id": "900ecd0b133944a3",
-     "title": "Monero (XMR) and Zcash (ZEC) Beat Bitcoin This Week. Can the Privacy Coins Keep It Up?",
-     "url": "https://247wallst.com/investing/cryptocurrency/2026/10/25/monero-xmr-and-zcash-zec-beat-bitcoin-this-week-can-the-privacy-coins-keep-it-up/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T17:38:56+00:00",
-     "symbols": [
-      "BTC-USD",
-      "ETH-USD",
-      "SOL-USD",
-      "XRP-USD",
-      "ADA-USD"
-     ],
-     "relevance": 0.545,
-     "sentiment": 0.583,
-     "impact": "medium",
-     "category": "crypto",
-     "summary": "Monero (XMR) and Zcash (ZEC) Beat Bitcoin This Week. Can the Privacy Coins Keep It Up?. Privacy coins Monero and Zcash just outpaced Bitcoin, but the reasons behind their gains reveal very different stories, and the outlook for each coin points in opposite directions.",
-     "analysed": false
-    },
-    {
-     "id": "2e4054961496a438",
-     "title": "How to Build $8,300 a Month in Dividend Income Without Owning a Single Bond",
-     "url": "https://247wallst.com/personal-finance/2026/10/25/how-to-build-8300-a-month-in-dividend-income-without-owning-a-single-bond/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T17:33:52+00:00",
-     "symbols": [
-      "CVX"
-     ],
-     "relevance": 0.55,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "corporate",
-     "summary": "How to Build $8,300 a Month in Dividend Income Without Owning a Single Bond. Generating nearly $100,000 a year in dividend income sounds impossible without a massive nest egg, but the capital you actually need swings wildly depending on where you invest and what risks you are willing to absorb.",
-     "analysed": false
-    },
-    {
-     "id": "b87a17e05eeef278",
-     "title": "Iran Hormuz Talks Stall as Oil Tops $116",
-     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FZEU0NnRUQmlMaXpjRko3NDk0Y1huQTNKT1ktVlNTeDRlVVdJeHk4d2xxRWdxTlhjd3JLbWJFQk92dnRNR2E4dUhSTENsT1NFbmY2eEthUjhSRG9hM2RzWi1QQXp3dldFQUhkS1lobmwxS1pm?oc=5",
-     "publisher": "Energi.Media",
-     "published": "2026-10-25T17:17:20+00:00",
-     "symbols": [
-      "XLE",
-      "XOM",
-      "CVX"
-     ],
-     "relevance": 0.5,
-     "sentiment": 0.0,
-     "impact": "low",
-     "category": "geopolitics",
-     "summary": "Iran Hormuz Talks Stall as Oil Tops $116",
-     "analysed": false
-    },
-    {
-     "id": "17012791fe3da989",
-     "title": "Hormuz Negotiations Between Iran and US Stall as Oil Remains Above $116",
-     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FZEU0NnRUQmlMaXpjRko3NDk0Y1huQTNKT1ktVlNTeDRlVVdJeHk4d2xxRWdxTlhjd3JLbWJFQk92dnRNR2E4dUhSTENsT1NFbmY2eEthUjhSRG9hM2RzWi1QQXp3dldFQUhkS1lobmwxS1pm?oc=5",
-     "publisher": "Energi.Media",
-     "published": "2026-10-25T17:17:20+00:00",
-     "symbols": [
-      "XLE",
-      "XOM",
-      "CVX"
-     ],
-     "relevance": 0.5,
-     "sentiment": 0.0,
-     "impact": "low",
-     "category": "geopolitics",
-     "summary": "Hormuz Negotiations Between Iran and US Stall as Oil Remains Above $116",
-     "analysed": false
-    },
-    {
-     "id": "ea5ed6c088f2ceeb",
-     "title": "Cathie Wood buys $24.5 million of tumbling tech stock",
-     "url": "https://www.thestreet.com/investing/stocks/cathie-wood-buys-24-5-million-meta-platforms-stock?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T17:07:00+00:00",
-     "symbols": [
-      "META"
-     ],
-     "relevance": 0.365,
-     "sentiment": -0.322,
-     "impact": "low",
-     "category": "markets",
-     "summary": "Cathie Wood buys $24.5 million of tumbling tech stock. Here are Cathie Wood\u2019s latest moves.",
-     "analysed": false
-    },
-    {
-     "id": "fd5bf4a51b2382e3",
-     "title": "Cathie Wood buys $24.5 million of tumbling megacap stock",
-     "url": "https://www.thestreet.com/investing/stocks/cathie-wood-buys-24-5-million-meta-platforms-stock?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T17:07:00+00:00",
-     "symbols": [
-      "META"
-     ],
-     "relevance": 0.365,
-     "sentiment": -0.322,
-     "impact": "low",
-     "category": "markets",
-     "summary": "Cathie Wood buys $24.5 million of tumbling megacap stock. Here are Cathie Wood\u2019s latest moves.",
-     "analysed": false
     }
    ],
-   "stored": 1332,
+   "stored": 1379,
    "untriaged": 0
   },
   "macro": {
-   "generated_at": "2026-10-25T20:20:28.781148+00:00",
+   "generated_at": "2026-10-25T21:20:42.184498+00:00",
    "indicators": {
     "fed_funds": {
      "id": "fed_funds",
@@ -10379,7 +10642,7 @@
      "series": "^VIX",
      "change_1m_pct": 24.12,
      "trend": "up",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "ust_10y_live": {
      "id": "ust_10y_live",
@@ -10393,7 +10656,7 @@
      "series": "^TNX",
      "change_1m_pct": -3.37,
      "trend": "down",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "ust_3m_live": {
      "id": "ust_3m_live",
@@ -10407,7 +10670,7 @@
      "series": "^IRX",
      "change_1m_pct": -0.88,
      "trend": "down",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "dxy": {
      "id": "dxy",
@@ -10421,7 +10684,7 @@
      "series": "DX-Y.NYB",
      "change_1m_pct": 0.51,
      "trend": "up",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "wti": {
      "id": "wti",
@@ -10435,7 +10698,7 @@
      "series": "CL=F",
      "change_1m_pct": 9.15,
      "trend": "up",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "gold": {
      "id": "gold",
@@ -10449,7 +10712,7 @@
      "series": "GC=F",
      "change_1m_pct": -6.75,
      "trend": "down",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     },
     "copper": {
      "id": "copper",
@@ -10463,7 +10726,7 @@
      "series": "HG=F",
      "change_1m_pct": -3.14,
      "trend": "down",
-     "fetched_at": "2026-10-25T20:20:28.781148+00:00"
+     "fetched_at": "2026-10-25T21:20:42.184498+00:00"
     }
    },
    "relevance": {
@@ -10676,7 +10939,7 @@
    }
   },
   "technicals": {
-   "generated_at": "2026-10-25T20:20:28.781148+00:00",
+   "generated_at": "2026-10-25T21:20:42.184498+00:00",
    "symbols": {
     "SPY": {
      "score": 0.0,
