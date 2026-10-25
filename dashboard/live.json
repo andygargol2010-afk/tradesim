@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-25T05:29:00.146665+00:00",
+  "generated_at": "2026-10-25T05:34:44.412806+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -62,9 +62,148 @@
   "crypto_exchange": "coinbase",
   "stocks_data": "auto"
  },
- "last_run": null,
- "prices": {},
- "runs": [],
+ "last_run": {
+  "started_at": "2026-10-25T05:34:40.595433+00:00",
+  "mode": "mark",
+  "duration_s": 3.82,
+  "accounts": {
+   "aprendiz": {
+    "status": "synced",
+    "message": "",
+    "equity": 10000.0,
+    "fills_on_sync": 0
+   },
+   "rsi-adaptativo": {
+    "status": "synced",
+    "message": "",
+    "equity": 10000.0,
+    "fills_on_sync": 0
+   },
+   "cruce-medias": {
+    "status": "synced",
+    "message": "",
+    "equity": 10000.0,
+    "fills_on_sync": 0
+   },
+   "buy-hold": {
+    "status": "synced",
+    "message": "",
+    "equity": 10000.0,
+    "fills_on_sync": 0
+   }
+  },
+  "data_errors": {}
+ },
+ "prices": {
+  "SPY": {
+   "last": 759.969970703125,
+   "bid": 759.78,
+   "ask": 761.0,
+   "spread_bps": 16.044,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:41.058162+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "QQQ": {
+   "last": 704.4000244140625,
+   "bid": 717.24,
+   "ask": 717.49,
+   "spread_bps": 3.485,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:41.344084+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "AAPL": {
+   "last": 347.7300109863281,
+   "bid": 345.02,
+   "ask": 350.91,
+   "spread_bps": 169.27,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:41.761988+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "MSFT": {
+   "last": 524.510009765625,
+   "bid": 522.02,
+   "ask": 525.4,
+   "spread_bps": 64.54,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:42.054916+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "NVDA": {
+   "last": 210.9600067138672,
+   "bid": 211.0,
+   "ask": 212.49,
+   "spread_bps": 70.368,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:42.327882+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "JPM": {
+   "last": 331.5799865722656,
+   "bid": 330.85,
+   "ask": 332.57,
+   "spread_bps": 51.853,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:42.655287+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "XOM": {
+   "last": 183.2100067138672,
+   "bid": 183.01,
+   "ask": 183.41,
+   "spread_bps": 21.833,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:43.018122+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "GLD": {
+   "last": 366.6099853515625,
+   "bid": 366.26,
+   "ask": 366.36,
+   "spread_bps": 2.73,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:43.265857+00:00",
+   "source": "yfinance",
+   "market_open": false
+  },
+  "BTC-USD": {
+   "last": 80611.87,
+   "bid": 80611.87,
+   "ask": 80611.88,
+   "spread_bps": 0.001,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:43.943000+00:00",
+   "source": "ccxt:coinbase",
+   "market_open": true
+  },
+  "ETH-USD": {
+   "last": 2356.3,
+   "bid": 2356.27,
+   "ask": 2356.28,
+   "spread_bps": 0.042,
+   "modelled_spread": false,
+   "time": "2026-10-25T05:34:40.866000+00:00",
+   "source": "ccxt:coinbase",
+   "market_open": true
+  }
+ },
+ "runs": [
+  {
+   "started_at": "2026-10-25T05:34:40.595433+00:00",
+   "mode": "mark",
+   "duration_s": 3.82,
+   "errors": 0
+  }
+ ],
  "accounts": [
   {
    "id": "aprendiz",
@@ -75,8 +214,75 @@
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 10000,
-   "meta": {},
-   "status": "not started"
+   "meta": {
+    "created_at": "2026-10-25T05:34:44.409370+00:00",
+    "last_run": "2026-10-25T05:34:40.595433+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T05:34:44.409286+00:00",
+   "summary": {
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T05:34:44.409286+00:00",
+     "2026-10-25T05:34:44.409385+00:00"
+    ],
+    "equity": [
+     10000.0,
+     10000.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": {
+    "method": "Recursive least squares with forgetting (online)",
+    "samples_learned": 0,
+    "pretrained_samples": 0,
+    "trading_enabled": false,
+    "information_coefficient_last250": null,
+    "direction_hit_rate_pct_last250": null,
+    "weights": {
+     "bias": 0.0,
+     "ret_1": 0.0,
+     "ret_5": 0.0,
+     "ret_20": 0.0,
+     "ret_60": 0.0,
+     "vol_ratio": 0.0,
+     "rsi_14": 0.0,
+     "dist_sma20": 0.0,
+     "dist_sma50": 0.0
+    }
+   }
   },
   {
    "id": "rsi-adaptativo",
@@ -87,8 +293,67 @@
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 10000,
-   "meta": {},
-   "status": "not started"
+   "meta": {
+    "created_at": "2026-10-25T05:34:44.410503+00:00",
+    "last_run": "2026-10-25T05:34:40.595433+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T05:34:44.410456+00:00",
+   "summary": {
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T05:34:44.410456+00:00",
+     "2026-10-25T05:34:44.410517+00:00"
+    ],
+    "equity": [
+     10000.0,
+     10000.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": {
+    "method": "Walk-forward re-tuning in the simulator (Sharpe after costs)",
+    "params": {
+     "period": 14,
+     "oversold": 30.0,
+     "overbought": 70.0
+    },
+    "last_tune": null,
+    "retune_every_days": 7,
+    "recent_tunes": []
+   }
   },
   {
    "id": "cruce-medias",
@@ -101,8 +366,57 @@
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 10000,
-   "meta": {},
-   "status": "not started"
+   "meta": {
+    "created_at": "2026-10-25T05:34:44.411357+00:00",
+    "last_run": "2026-10-25T05:34:40.595433+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T05:34:44.411313+00:00",
+   "summary": {
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T05:34:44.411313+00:00",
+     "2026-10-25T05:34:44.411370+00:00"
+    ],
+    "equity": [
+     10000.0,
+     10000.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": null
   },
   {
    "id": "buy-hold",
@@ -113,8 +427,57 @@
    "broker": "paper",
    "fees": "alpaca",
    "initial_cash": 10000,
-   "meta": {},
-   "status": "not started"
+   "meta": {
+    "created_at": "2026-10-25T05:34:44.412112+00:00",
+    "last_run": "2026-10-25T05:34:40.595433+00:00",
+    "last_status": "synced"
+   },
+   "status": "synced",
+   "started_at": "2026-10-25T05:34:44.412069+00:00",
+   "summary": {
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "invested": 0.0,
+    "invested_pct": 0.0,
+    "pnl": 0.0,
+    "pnl_pct": 0.0,
+    "day_pnl": 0.0,
+    "day_pnl_pct": 0.0,
+    "realized_pnl": 0.0,
+    "unrealized_pnl": 0.0,
+    "fees": 0.0,
+    "slippage_cost": 0.0,
+    "max_drawdown_pct": 0.0,
+    "current_drawdown_pct": 0.0,
+    "sharpe": null,
+    "sortino": null,
+    "volatility_annual_pct": null,
+    "days_live": 1,
+    "num_trades": 0,
+    "num_fills": 0,
+    "open_positions": 0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "avg_trade_pnl": null,
+    "best_trade": null,
+    "worst_trade": null,
+    "avg_days_held": null
+   },
+   "equity_curve": {
+    "t": [
+     "2026-10-25T05:34:44.412069+00:00",
+     "2026-10-25T05:34:44.412124+00:00"
+    ],
+    "equity": [
+     10000.0,
+     10000.0
+    ]
+   },
+   "positions": [],
+   "closed_trades": [],
+   "open_orders": [],
+   "journal": [],
+   "learning": null
   }
  ]
 }
