@@ -34,12 +34,13 @@
   "vol_lookback": 20,
   "scenario": null,
   "max_position_pct": 30.0,
+  "auto_stop_atr": 2.5,
   "risk_free_annual": 0.0,
   "log_dir": null
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "100",
+  "cash": "100.0000000000000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -65,11 +66,18 @@
     "100",
     "0",
     "0"
+   ],
+   [
+    "2026-10-25T17:53:30.228616+00:00",
+    "100.0000000000000000000000000000000",
+    "100.0000000000000000000000000000000",
+    "0",
+    "0"
    ]
   ],
   "total_fees": "0",
   "total_slippage": "0",
-  "total_financing": "0",
+  "total_financing": "0E-41",
   "peak_equity": "100",
   "max_drawdown": "0"
  },
@@ -86,7 +94,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-25T17:25:18.654515+00:00",
+ "last_sync": "2026-10-25T17:53:30.228616+00:00",
  "bankrupt": false,
  "path_checked": {}
 }

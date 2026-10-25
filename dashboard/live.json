@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-25T17:25:18.658714+00:00",
+  "generated_at": "2026-10-25T17:53:30.235968+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -182,43 +182,44 @@
   "risk": {
    "max_position_pct": 30.0,
    "halt_drawdown_pct": 35.0,
-   "max_orders_per_run": 60
+   "max_orders_per_run": 60,
+   "stop_loss_atr": 2.5
   },
   "crypto_exchange": "coinbase",
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-10-25T17:21:31.607091+00:00",
-  "mode": "research",
-  "duration_s": 227.05,
+  "started_at": "2026-10-25T17:52:53.098322+00:00",
+  "mode": "decide",
+  "duration_s": 37.14,
   "accounts": {
    "aprendiz": {
-    "status": "synced",
-    "message": "",
+    "status": "skipped",
+    "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
     "equity": 100.0,
     "fills_on_sync": 0
    },
    "rsi-adaptativo": {
-    "status": "synced",
-    "message": "",
+    "status": "skipped",
+    "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
     "equity": 100.0,
     "fills_on_sync": 0
    },
    "cruce-medias": {
-    "status": "synced",
-    "message": "",
+    "status": "skipped",
+    "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
     "equity": 100.0,
     "fills_on_sync": 0
    },
    "buy-hold": {
-    "status": "synced",
-    "message": "",
+    "status": "skipped",
+    "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
     "equity": 100.0,
     "fills_on_sync": 0
    },
    "analista": {
-    "status": "synced",
-    "message": "",
+    "status": "skipped",
+    "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
     "equity": 100.0,
     "fills_on_sync": 0
    }
@@ -232,7 +233,7 @@
    "ask": 759.969970703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:02.462343+00:00",
+   "time": "2026-10-25T17:53:18.570036+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -242,7 +243,7 @@
    "ask": 704.4000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:02.806099+00:00",
+   "time": "2026-10-25T17:53:18.817195+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -252,7 +253,7 @@
    "ask": 275.75,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:03.162352+00:00",
+   "time": "2026-10-25T17:53:19.072741+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -262,7 +263,7 @@
    "ask": 521.3699951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:03.570736+00:00",
+   "time": "2026-10-25T17:53:19.312545+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -272,7 +273,7 @@
    "ask": 366.6099853515625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:03.893805+00:00",
+   "time": "2026-10-25T17:53:19.536069+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -282,7 +283,7 @@
    "ask": 48.720001220703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:04.209778+00:00",
+   "time": "2026-10-25T17:53:19.755626+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -292,7 +293,7 @@
    "ask": 81.33999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:04.550852+00:00",
+   "time": "2026-10-25T17:53:19.992851+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -302,7 +303,7 @@
    "ask": 62.0099983215332,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:04.963610+00:00",
+   "time": "2026-10-25T17:53:20.276864+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -312,7 +313,7 @@
    "ask": 69.33000183105469,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:05.308276+00:00",
+   "time": "2026-10-25T17:53:20.578738+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -322,7 +323,7 @@
    "ask": 55.900001525878906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:05.706654+00:00",
+   "time": "2026-10-25T17:53:20.822877+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -332,7 +333,7 @@
    "ask": 347.7300109863281,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:06.110646+00:00",
+   "time": "2026-10-25T17:53:21.120808+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -342,7 +343,7 @@
    "ask": 524.510009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:06.444876+00:00",
+   "time": "2026-10-25T17:53:21.376045+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -352,7 +353,7 @@
    "ask": 210.9600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:06.898238+00:00",
+   "time": "2026-10-25T17:53:21.610527+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -362,7 +363,7 @@
    "ask": 248.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:07.283061+00:00",
+   "time": "2026-10-25T17:53:21.825917+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -372,7 +373,7 @@
    "ask": 320.2099914550781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:07.660229+00:00",
+   "time": "2026-10-25T17:53:22.076838+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -382,7 +383,7 @@
    "ask": 642.6199951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:07.976323+00:00",
+   "time": "2026-10-25T17:53:22.300368+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -392,7 +393,7 @@
    "ask": 372.2200012207031,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:08.395347+00:00",
+   "time": "2026-10-25T17:53:22.516438+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -402,7 +403,7 @@
    "ask": 321.67999267578125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:08.753555+00:00",
+   "time": "2026-10-25T17:53:22.803824+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -412,7 +413,7 @@
    "ask": 516.7899780273438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:09.137579+00:00",
+   "time": "2026-10-25T17:53:23.029189+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -422,7 +423,7 @@
    "ask": 65.8499984741211,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:09.446939+00:00",
+   "time": "2026-10-25T17:53:23.492322+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -432,7 +433,7 @@
    "ask": 126.16000366210938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:09.766464+00:00",
+   "time": "2026-10-25T17:53:23.730659+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -442,7 +443,7 @@
    "ask": 248.57000732421875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:10.154591+00:00",
+   "time": "2026-10-25T17:53:24.007963+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -452,7 +453,7 @@
    "ask": 331.5799865722656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:10.510896+00:00",
+   "time": "2026-10-25T17:53:24.309105+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -462,7 +463,7 @@
    "ask": 50.560001373291016,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:11.029826+00:00",
+   "time": "2026-10-25T17:53:24.563083+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -472,7 +473,7 @@
    "ask": 875.6799926757812,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:11.571470+00:00",
+   "time": "2026-10-25T17:53:24.798807+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -482,7 +483,7 @@
    "ask": 407.9200134277344,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:11.901322+00:00",
+   "time": "2026-10-25T17:53:25.032381+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -492,7 +493,7 @@
    "ask": 623.5999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:12.221912+00:00",
+   "time": "2026-10-25T17:53:25.270951+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -502,7 +503,7 @@
    "ask": 183.2100067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:12.596456+00:00",
+   "time": "2026-10-25T17:53:25.524267+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -512,7 +513,7 @@
    "ask": 233.2100067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:12.948905+00:00",
+   "time": "2026-10-25T17:53:25.890965+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -522,7 +523,7 @@
    "ask": 263.80999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:13.335217+00:00",
+   "time": "2026-10-25T17:53:26.150403+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -532,7 +533,7 @@
    "ask": 418.0899963378906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:13.692495+00:00",
+   "time": "2026-10-25T17:53:26.394601+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -542,7 +543,7 @@
    "ask": 1273.4599609375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:14.035882+00:00",
+   "time": "2026-10-25T17:53:26.705482+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -552,7 +553,7 @@
    "ask": 30.030000686645508,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:14.375899+00:00",
+   "time": "2026-10-25T17:53:26.958119+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -562,7 +563,7 @@
    "ask": 161.02000427246094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:14.785629+00:00",
+   "time": "2026-10-25T17:53:27.219293+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -572,7 +573,7 @@
    "ask": 92.70999908447266,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:15.140739+00:00",
+   "time": "2026-10-25T17:53:27.529701+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -582,7 +583,7 @@
    "ask": 135.77000427246094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:15.551030+00:00",
+   "time": "2026-10-25T17:53:27.830053+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -592,7 +593,7 @@
    "ask": 119.88999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:15.894442+00:00",
+   "time": "2026-10-25T17:53:28.133201+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -602,7 +603,7 @@
    "ask": 1003.3200073242188,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:16.352192+00:00",
+   "time": "2026-10-25T17:53:28.363916+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -612,7 +613,7 @@
    "ask": 319.8299865722656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:16.689064+00:00",
+   "time": "2026-10-25T17:53:28.609885+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -622,7 +623,7 @@
    "ask": 248.4600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:17.072224+00:00",
+   "time": "2026-10-25T17:53:28.857853+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -632,7 +633,7 @@
    "ask": 687.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:17.470807+00:00",
+   "time": "2026-10-25T17:53:29.118023+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -642,92 +643,98 @@
    "ask": 188.35000610351562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-10-25T17:25:17.810478+00:00",
+   "time": "2026-10-25T17:53:29.377205+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 80660.01,
-   "bid": 80660.0,
-   "ask": 80660.01,
+   "last": 80692.21,
+   "bid": 80692.2,
+   "ask": 80692.21,
    "spread_bps": 0.001,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:15.935000+00:00",
+   "time": "2026-10-25T17:53:26.975000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 2355.38,
-   "bid": 2355.37,
-   "ask": 2355.38,
+   "last": 2353.53,
+   "bid": 2353.52,
+   "ask": 2353.53,
    "spread_bps": 0.042,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:16.280000+00:00",
+   "time": "2026-10-25T17:53:26.795000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 101.82,
-   "bid": 101.81,
-   "ask": 101.82,
-   "spread_bps": 0.982,
+   "last": 101.73,
+   "bid": 101.72,
+   "ask": 101.73,
+   "spread_bps": 0.983,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:14.812000+00:00",
+   "time": "2026-10-25T17:53:28.354000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 1.3054,
-   "bid": 1.3053,
-   "ask": 1.3054,
-   "spread_bps": 0.766,
+   "last": 1.3037,
+   "bid": 1.3036,
+   "ask": 1.3037,
+   "spread_bps": 0.767,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:17.191000+00:00",
+   "time": "2026-10-25T17:53:27.766000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.2061,
-   "bid": 0.20608,
-   "ask": 0.20611,
-   "spread_bps": 1.456,
+   "last": 0.20583,
+   "bid": 0.20581,
+   "ask": 0.20583,
+   "spread_bps": 0.972,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:14.819000+00:00",
+   "time": "2026-10-25T17:53:24.024000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.07739,
-   "bid": 0.07737,
-   "ask": 0.0774,
-   "spread_bps": 3.877,
+   "last": 0.07728,
+   "bid": 0.07726,
+   "ask": 0.07728,
+   "spread_bps": 2.588,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:15.447000+00:00",
+   "time": "2026-10-25T17:53:13.057000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 11.488,
-   "bid": 11.486,
-   "ask": 11.488,
-   "spread_bps": 1.741,
+   "last": 11.497,
+   "bid": 11.497,
+   "ask": 11.498,
+   "spread_bps": 0.87,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:16.753000+00:00",
+   "time": "2026-10-25T17:53:27.936000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 57.15,
-   "bid": 57.141,
-   "ask": 57.152,
-   "spread_bps": 1.925,
+   "last": 56.994,
+   "bid": 56.992,
+   "ask": 56.996,
+   "spread_bps": 0.702,
    "modelled_spread": false,
-   "time": "2026-10-25T17:25:14.822000+00:00",
+   "time": "2026-10-25T17:53:29.185000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-10-25T17:52:53.098322+00:00",
+   "mode": "decide",
+   "duration_s": 37.14,
+   "errors": 0
+  },
   {
    "started_at": "2026-10-25T17:21:31.607091+00:00",
    "mode": "research",
@@ -762,10 +769,10 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-10-25T17:21:31.607091+00:00",
-    "last_status": "synced"
+    "last_run": "2026-10-25T17:52:53.098322+00:00",
+    "last_status": "skipped"
    },
-   "status": "synced",
+   "status": "skipped",
    "started_at": "2026-10-25T17:25:18.654424+00:00",
    "summary": {
     "equity": 100.0,
@@ -799,9 +806,11 @@
    "equity_curve": {
     "t": [
      "2026-10-25T17:25:18.654424+00:00",
-     "2026-10-25T17:25:18.654515+00:00"
+     "2026-10-25T17:25:18.654515+00:00",
+     "2026-10-25T17:53:30.228616+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0
     ]
@@ -809,7 +818,15 @@
    "positions": [],
    "closed_trades": [],
    "open_orders": [],
-   "journal": [],
+   "journal": [
+    {
+     "time": "2026-10-25T17:52:53.098322+00:00",
+     "mode": "decide",
+     "status": "skipped",
+     "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
+     "equity": 100.0
+    }
+   ],
    "learning": {
     "method": "Recursive least squares with forgetting (online)",
     "samples_learned": 0,
@@ -844,10 +861,10 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-10-25T17:21:31.607091+00:00",
-    "last_status": "synced"
+    "last_run": "2026-10-25T17:52:53.098322+00:00",
+    "last_status": "skipped"
    },
-   "status": "synced",
+   "status": "skipped",
    "started_at": "2026-10-25T17:25:18.655339+00:00",
    "summary": {
     "equity": 100.0,
@@ -881,9 +898,11 @@
    "equity_curve": {
     "t": [
      "2026-10-25T17:25:18.655339+00:00",
-     "2026-10-25T17:25:18.655436+00:00"
+     "2026-10-25T17:25:18.655436+00:00",
+     "2026-10-25T17:53:30.230422+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0
     ]
@@ -891,7 +910,15 @@
    "positions": [],
    "closed_trades": [],
    "open_orders": [],
-   "journal": [],
+   "journal": [
+    {
+     "time": "2026-10-25T17:52:53.098322+00:00",
+     "mode": "decide",
+     "status": "skipped",
+     "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
+     "equity": 100.0
+    }
+   ],
    "learning": {
     "method": "Walk-forward re-tuning in the simulator (Sharpe after costs)",
     "params": {
@@ -917,10 +944,10 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-10-25T17:21:31.607091+00:00",
-    "last_status": "synced"
+    "last_run": "2026-10-25T17:52:53.098322+00:00",
+    "last_status": "skipped"
    },
-   "status": "synced",
+   "status": "skipped",
    "started_at": "2026-10-25T17:25:18.656082+00:00",
    "summary": {
     "equity": 100.0,
@@ -954,9 +981,11 @@
    "equity_curve": {
     "t": [
      "2026-10-25T17:25:18.656082+00:00",
-     "2026-10-25T17:25:18.656149+00:00"
+     "2026-10-25T17:25:18.656149+00:00",
+     "2026-10-25T17:53:30.231789+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0
     ]
@@ -964,7 +993,15 @@
    "positions": [],
    "closed_trades": [],
    "open_orders": [],
-   "journal": [],
+   "journal": [
+    {
+     "time": "2026-10-25T17:52:53.098322+00:00",
+     "mode": "decide",
+     "status": "skipped",
+     "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
+     "equity": 100.0
+    }
+   ],
    "learning": null
   },
   {
@@ -978,10 +1015,10 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-10-25T17:21:31.607091+00:00",
-    "last_status": "synced"
+    "last_run": "2026-10-25T17:52:53.098322+00:00",
+    "last_status": "skipped"
    },
-   "status": "synced",
+   "status": "skipped",
    "started_at": "2026-10-25T17:25:18.657170+00:00",
    "summary": {
     "equity": 100.0,
@@ -1015,9 +1052,11 @@
    "equity_curve": {
     "t": [
      "2026-10-25T17:25:18.657170+00:00",
-     "2026-10-25T17:25:18.657237+00:00"
+     "2026-10-25T17:25:18.657237+00:00",
+     "2026-10-25T17:53:30.233088+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0
     ]
@@ -1025,7 +1064,15 @@
    "positions": [],
    "closed_trades": [],
    "open_orders": [],
-   "journal": [],
+   "journal": [
+    {
+     "time": "2026-10-25T17:52:53.098322+00:00",
+     "mode": "decide",
+     "status": "skipped",
+     "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
+     "equity": 100.0
+    }
+   ],
    "learning": null
   },
   {
@@ -1051,10 +1098,10 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-10-25T17:21:31.607091+00:00",
-    "last_status": "synced"
+    "last_run": "2026-10-25T17:52:53.098322+00:00",
+    "last_status": "skipped"
    },
-   "status": "synced",
+   "status": "skipped",
    "started_at": "2026-10-25T17:25:18.657897+00:00",
    "summary": {
     "equity": 100.0,
@@ -1088,9 +1135,11 @@
    "equity_curve": {
     "t": [
      "2026-10-25T17:25:18.657897+00:00",
-     "2026-10-25T17:25:18.657964+00:00"
+     "2026-10-25T17:25:18.657964+00:00",
+     "2026-10-25T17:53:30.234787+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0
     ]
@@ -1098,7 +1147,15 @@
    "positions": [],
    "closed_trades": [],
    "open_orders": [],
-   "journal": [],
+   "journal": [
+    {
+     "time": "2026-10-25T17:52:53.098322+00:00",
+     "mode": "decide",
+     "status": "skipped",
+     "message": "market closed for 42 symbols (e.g. SPY): no decisions today",
+     "equity": 100.0
+    }
+   ],
    "learning": {
     "method": "Discretionary analysis (technicals + macro + news + calendar) with memory",
     "engines": [
@@ -1121,20 +1178,20 @@
  ],
  "research": {
   "status": {
-   "started_at": "2026-10-25T17:21:31.658750+00:00",
-   "duration_s": 210.4,
+   "started_at": "2026-10-25T17:52:53.197452+00:00",
+   "duration_s": 25.1,
    "llm": "local",
    "engines": [
     "local (gratis, sin IA)"
    ],
    "news_engines": {
-    "local": 29
+    "local": 55
    },
    "news": {
-    "fetched": 675,
-    "new": 4,
-    "stored": 1190,
-    "triaged": 4,
+    "fetched": 1149,
+    "new": 30,
+    "stored": 1220,
+    "triaged": 30,
     "deep_analyses": 25,
     "untriaged_backlog": 0
    },
@@ -1150,18 +1207,7 @@
    },
    "calendar_research": null
   },
-  "errors": {
-   "news:google:fed": "https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+OR+Powell+rates+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+",
-   "news:google:inflation": "https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+United+States+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+",
-   "news:google:jobs": "https://news.google.com/rss/search?q=%22jobs+report%22+OR+payrolls+OR+unemployment+rate+OR+%22jobless+claims%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%",
-   "news:google:growth": "https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+OR+%22retail+sales%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+",
-   "news:google:yields": "https://news.google.com/rss/search?q=Treasury+yields+OR+bond+market+OR+%2210-year+yield%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=Treasury+yields+OR+bon",
-   "news:google:oil": "https://news.google.com/rss/search?q=oil+prices+OR+OPEC+OR+crude+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=oil+prices+OR+OPEC+OR+crude+when%3A2d&hl=en-US&g",
-   "news:google:trade": "https://news.google.com/rss/search?q=tariffs+OR+%22trade+war%22+OR+sanctions+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=tariffs+OR+%22trade+war%22+O",
-   "news:google:crypto_policy": "https://news.google.com/rss/search?q=SEC+crypto+OR+bitcoin+ETF+OR+stablecoin+regulation+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=SEC+crypto+OR+bitcoin+ETF",
-   "news:google:geopolitics": "https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+election+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+e",
-   "news:google:dollar": "https://news.google.com/rss/search?q=%22US+dollar%22+OR+%22dollar+index%22+currency+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%22US+dollar%22+OR+%2"
-  },
+  "errors": {},
   "llm_cost_usd_last": 0.0,
   "llm_cost_usd_total": 0.0,
   "models": {
@@ -2246,7 +2292,7 @@
     "2026-10-18",
     "2026-11-24"
    ],
-   "generated_at": "2026-10-25T17:21:31.658750+00:00",
+   "generated_at": "2026-10-25T17:52:53.197452+00:00",
    "researched_at": null,
    "summary": null,
    "sources": {
@@ -2258,6 +2304,55 @@
   },
   "news": {
    "analyses": [
+    {
+     "id": "8da3990acb2d79bf",
+     "title": "Inflation threatens 8% spike as cost pressures hit hard",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWEtvV1NqbndKaExDaVhFVkdZQVZyeHZiTkRzVDVWaEVmZ0hJR2tCQVBvbllHWHpiNjJMYkZrcDk0ZG8wbE92ZUJjWkJwYmw0NDNPM0pxREhWSW10R04yR0xmV182XzVRc1dkQjQ4OHYtWkEzcG9SbWZtNng0ejdPZ0V2NFhKd2tKcVNr?oc=5",
+     "publisher": "Manila Bulletin",
+     "published": "2026-10-25T16:34:44+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "COST"
+      ],
+      "named": [
+       "COST"
+      ],
+      "summary": "Inflation threatens 8% spike as cost pressures hit hard",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "8da3990acb2d79bf",
+      "headline": "Inflation threatens 8% spike as cost pressures hit hard",
+      "what_happened": "Inflation threatens 8% spike as cost pressures hit hard",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "COST",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Dato macro: tono negativo en el titular (-0.32)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c",
+       "beaa56a6df4a"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
     {
      "id": "87d5061147f7aaa9",
      "title": "Silver Price Forecast: $50 in View as Oil Fuels Fed Rate Hike Fears",
@@ -2332,6 +2427,83 @@
      }
     },
     {
+     "id": "7f2ecd79476fa270",
+     "title": "Jordi Visser Calls Chamath Palihapitiya\u2019s Bitcoin Going To Zero Tale \u2018Completely Just A Joke,\u2019 Says AI Sell-Off Could Bottom In Two Weeks",
+     "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/jordi-visser-calls-chamath-palihapitiya-s-bitcoin-going-to-zero-tale-completely-just-a-joke-says-ai-sell-off-could-bottom-in-two-weeks/cZUcyrbRBUq?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T15:46:19+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "BTC-USD",
+       "ETH-USD",
+       "SOL-USD",
+       "XRP-USD",
+       "ADA-USD"
+      ],
+      "named": [
+       "BTC-USD"
+      ],
+      "summary": "Jordi Visser Calls Chamath Palihapitiya\u2019s Bitcoin Going To Zero Tale \u2018Completely Just A Joke,\u2019 Says AI Sell-Off Could Bottom In Two Weeks. Visser said the low for the AI sell-off could come within two weeks, with cloud earnings, the midterms, and the Treasury\u2019s refunding as possible catalysts.",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "7f2ecd79476fa270",
+      "headline": "Jordi Visser Calls Chamath Palihapitiya\u2019s Bitcoin Going To Zero Tale \u2018Completely Just A Joke,\u2019 Says AI Sell-Off Could Bottom In Two Weeks",
+      "what_happened": "Visser said the low for the AI sell-off could come within two weeks, with cloud earnings, the midterms, and the Treasury\u2019s refunding as possible catalysts.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "BTC-USD",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "ETH-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "SOL-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XRP-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "ADA-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "ed4f2f7c405770f6",
      "title": "Mastercard Near All-Time Highs: 3 Crucial Metrics That Will Make or Break Q3 Earnings on Oct. 29",
      "url": "https://247wallst.com/investing/2026/10/25/mastercard-near-all-time-highs-3-crucial-metrics-that-will-make-or-break-q3-earnings-on-oct-29/?.tsrc=rss",
@@ -2376,6 +2548,53 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:14:47.988490+00:00"
+     }
+    },
+    {
+     "id": "f8b635b28deb386b",
+     "title": "Sundar Pichai Reported Alphabet's Cloud Revenue Grew 82% Last Quarter While the Gemini App Reached 950 Million Monthly Users. Is Google Cloud Becoming a Bigger Growth Driver Than Search?",
+     "url": "https://www.fool.com/investing/2026/10/25/sundar-pichai-alphabets-cloud-revenue-grew-82/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T15:29:00+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "GOOGL"
+      ],
+      "named": [
+       "GOOGL"
+      ],
+      "summary": "Sundar Pichai Reported Alphabet's Cloud Revenue Grew 82% Last Quarter While the Gemini App Reached 950 Million Monthly Users. Is Google Cloud Becoming a Bigger Growth Driver Than Search?. The numbers paint a clear picture for shareholders.",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "f8b635b28deb386b",
+      "headline": "Sundar Pichai Reported Alphabet's Cloud Revenue Grew 82% Last Quarter While the Gemini App Reached 950 Million Monthly Users. Is Google Cloud Becoming a Bigger Growth Driver Than Search?",
+      "what_happened": "The numbers paint a clear picture for shareholders.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "GOOGL",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "7f064105f6bf"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -2424,6 +2643,84 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:14:47.988490+00:00"
+     }
+    },
+    {
+     "id": "99fe1b34f7df20e9",
+     "title": "What To Expect In Markets This Week: GOOGL, MSFT, AMZN, INTC, HOOD, LLY Earnings, Fed Meeting And More",
+     "url": "https://stocktwits.com/news-articles/markets/equity/what-to-expect-markets-this-week-oct-25-2026/cZUcyBcRBUp?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T15:27:00+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "MSFT",
+       "AMZN",
+       "GOOGL",
+       "LLY"
+      ],
+      "named": [
+       "MSFT",
+       "AMZN",
+       "GOOGL",
+       "LLY"
+      ],
+      "summary": "What To Expect In Markets This Week: GOOGL, MSFT, AMZN, INTC, HOOD, LLY Earnings, Fed Meeting And More. The spotlight will be particularly intense as several of the biggest names in technology report quarterly results, while the Federal Reserve prepares to make its latest policy decision.",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "99fe1b34f7df20e9",
+      "headline": "What To Expect In Markets This Week: GOOGL, MSFT, AMZN, INTC, HOOD, LLY Earnings, Fed Meeting And More",
+      "what_happened": "The spotlight will be particularly intense as several of the biggest names in technology report quarterly results, while the Federal Reserve prepares to make its latest policy decision.",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "MSFT",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "AMZN",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "GOOGL",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "LLY",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -2621,6 +2918,71 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:14:47.988490+00:00"
+     }
+    },
+    {
+     "id": "fdbd1e84cc661be8",
+     "title": "Fed policy, Q2 earnings, crude oil prices among key market triggers next week - India Tribune",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQa04yWjBwb19mdG5JRzhrTFR3Wm8tdGZwTW51aGJ4YjBrTEk4WUNQenNXcFBxQmFaSWppZFFsZHZvRE9kU2Zyd1FuSnMxcUVIaXY1WFBGZU9FU1I1d3pKQmh2MG5pSE0yZ3FvTmV1LVdjdHVTeHMtaDJoYVRuMkxEWG5DX2lINU1semxLUGpUb1dmRWxTbS1oTHRtYVZfd25GX09qa2hwWVlBUFowNTAtRFg5SDQ1bG5UT0ZNa1VR?oc=5",
+     "publisher": "India Tribune - Chicago",
+     "published": "2026-10-25T14:53:54+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Fed policy, Q2 earnings, crude oil prices among key market triggers next week - India Tribune",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "fdbd1e84cc661be8",
+      "headline": "Fed policy, Q2 earnings, crude oil prices among key market triggers next week - India Tribune",
+      "what_happened": "Fed policy, Q2 earnings, crude oil prices among key market triggers next week - India Tribune",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -3213,6 +3575,79 @@
      }
     },
     {
+     "id": "707df5f3bcbc6804",
+     "title": "The Bond Market's Double Jeopardy: AI Cracks, Oil Burns and the Fed Blinks",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOclllZW1KV1Y3RkFFNVh2RnhPZXBiRlA4S2o3LWNFYXJLSHZZTDNBVm1uSk5ZeVN1U2lJOWF6emlPQUpGOE9nZlVYdDN1YlFrZ2FNSy04anZ0d21mcHdzd1lGUENPMmxHc2dZVVZMbUxVcEdRc21jeDJoa1NLTnl6TWh3?oc=5",
+     "publisher": "The Dark Side Of The Boom",
+     "published": "2026-10-25T12:01:04+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "TLT",
+       "XLF",
+       "QQQ",
+       "XLE"
+      ],
+      "named": [],
+      "summary": "The Bond Market's Double Jeopardy: AI Cracks, Oil Burns and the Fed Blinks",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "707df5f3bcbc6804",
+      "headline": "The Bond Market's Double Jeopardy: AI Cracks, Oil Burns and the Fed Blinks",
+      "what_happened": "The Bond Market's Double Jeopardy: AI Cracks, Oil Burns and the Fed Blinks",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "TLT",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLF",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "QQQ",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "1dca4259c999",
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "39d17fc2e29a8a3c",
      "title": "Crude nears $120 as West Asia risks collide with Fed rate decision: Analysts",
      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZ9IB2gFBVV95cUxNS0FmNzdqUk1VV3NaTERVLTBwMTZBQ3k4LXNYdUt6cjZFdWs4blVQNDFfOEZ0dVBBcm1KYU1tQUlnMlJSRjRycFBSYlk2OXNKOXVRbTJjUVJIcGZ6QVpEdER4X1FxNmFPMFhoellOdVBCM1VwYzRZNlppWnJTa3R4bU01TVVSYTlwSkxoWGpFYmdXX3pzZ29qSndDLTk2Y0RCYnMzUnIzeXF3QzRJV1FvbGtlbWpQa2Y1QjBYN0I3MG5WWmJ2eWRmYVZrdmRzRzZvb0RremkzMmlQZw?oc=5",
@@ -3432,6 +3867,550 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:21:31.658750+00:00"
+     }
+    },
+    {
+     "id": "1a4af53be3a29ab1",
+     "title": "Weekly Outlook | The Federal Reserve's decision, along with U.S. GDP and core PCE, are set to make a big splash! Google, Microsoft, and Amazon will release their earnings reports in quick succession, as U.S. stocks enter the peak of earnings season; Dong",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNV2hBV1h1elBmMG4yTmJFV3lNejlGV19LV3ZSWlY5eHp5Sk9JdUY2SF9ERkFuZVd0eVFpcWtvM2UyQzNya3ZWZkVUcVVEYWNwUnl5ZTlWWnVnS3BSS0RwaG1rcG04STlOX3FZNkRieEFNRWQ4UjZQNFpVaXhIQXhlNURSY1Yya2J5NDZHYlNzWF9SdFN2TE1JRkVmQWFUVWdGQ0xkVA?oc=5",
+     "publisher": "\u5bcc\u9014\u725b\u725b",
+     "published": "2026-10-25T08:49:00+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "MSFT",
+       "AMZN",
+       "GOOGL"
+      ],
+      "named": [
+       "MSFT",
+       "AMZN",
+       "GOOGL"
+      ],
+      "summary": "Weekly Outlook | The Federal Reserve's decision, along with U.S. GDP and core PCE, are set to make a big splash! Google, Microsoft, and Amazon will release their earnings reports in quick succession, as U.S. stocks enter the peak of earnings season; Dong",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "1a4af53be3a29ab1",
+      "headline": "Weekly Outlook | The Federal Reserve's decision, along with U.S. GDP and core PCE, are set to make a big splash! Google, Microsoft, and Amazon will release their earnings reports in quick succession, as U.S. stocks enter the peak of earnings season; Dong",
+      "what_happened": "Weekly Outlook | The Federal Reserve's decision, along with U.S. GDP and core PCE, are set to make a big splash! Google, Microsoft, and Amazon will release their earnings reports in quick succession, as U.S. stocks enter the peak of earnings season; Dong",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "MSFT",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "AMZN",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "GOOGL",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "9d9a3a71fc5f290d",
+     "title": "President Donald Trump Just Proclaimed, \"Tariffs Don't Cause Inflation, They Cause Wealth,\" but Data From Federal Reserve Economists Show Otherwise",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTkxLNVhEY2o3MVhmdGxiNHhzQ0VLbmJoOTJ2NzdPOGt4UHhNMGF2c3pnbXlMRUFydTRjZzVaVDRobEV1c1JxTHJKaEd6QVoyLUVKdE51bmdUeXRQY0Q1WHJMNmh0bDVjY28xekNvUmZ5Wkw3WmswRi1Odm9IMDJSQU1NOWhhVzMxMHhKVF83LU84M1Z3Yzl3M2p4NEN1eGZ1a1FOYXZ3?oc=5",
+     "publisher": "Yahoo Finance",
+     "published": "2026-10-25T08:26:01+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [],
+      "named": [],
+      "summary": "President Donald Trump Just Proclaimed, \"Tariffs Don't Cause Inflation, They Cause Wealth,\" but Data From Federal Reserve Economists Show Otherwise",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "9d9a3a71fc5f290d",
+      "headline": "President Donald Trump Just Proclaimed, \"Tariffs Don't Cause Inflation, They Cause Wealth,\" but Data From Federal Reserve Economists Show Otherwise",
+      "what_happened": "President Donald Trump Just Proclaimed, \"Tariffs Don't Cause Inflation, They Cause Wealth,\" but Data From Federal Reserve Economists Show Otherwise",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "bc0915db3e16a437",
+     "title": "US Fed rate decision, corporate earnings, crude oil to steer market sentiment",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUGdENzBwdWQxeTN5Q2J2MlZ5dWlVUUpxM0NvTnlXTjJPdVMzYTMtZ3JSdWNtcG13TTd6aG1pLVpjT2pXSllqMlJfczJZdlIyYkRIWk1jT0loWWdHYjhYSFMzNWlzNGVEUmNlNGxjelBYM29EVHBRMXhOR3FqcW1pOVY4b2FLekZqeW9MRGIzeWRjQVRxdEkxdE1iWGlMZTVlMXIwclhpanQ2SWUzbUFjZm9neGQxZFZ6cTZ2RnVISjdwTkk3QWY1a18xT25aOGRw0gHTAUFVX3lxTE9WMll4M2NNaUVPUEZXemE5WmNkbmtTMy1OWEhSV05ueW9yVkdUV3RGZ2tpdzZSSWNJM2drZlhhVEV5N0NUNFNHbkVidVJwbFVyRWRfeFpENXZXTmtMVFBGd01yX0VnUWN1c01oT2R1RFZHRml0R0tjTDIzRll3Q05tTUpuMzlwYzRhRnJNMk8tSkxhY3lzekhvX3lVMXd0ZExObk8takVtNmdfS3UtUWh0UFJxTTBMemRXX0Z3ZmtMZ1F4T2loZEtxbzJpclliZXNFUWc?oc=5",
+     "publisher": "Rediff",
+     "published": "2026-10-25T08:16:29+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "US Fed rate decision, corporate earnings, crude oil to steer market sentiment",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "bc0915db3e16a437",
+      "headline": "US Fed rate decision, corporate earnings, crude oil to steer market sentiment",
+      "what_happened": "US Fed rate decision, corporate earnings, crude oil to steer market sentiment",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "46d9e7765b066db7",
+     "title": "The Week Ahead: Earnings Season, Fed Policy Verdict And Crude Oil In Focus",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeURubTZrNGdCc3dlR3lhZ3V4RUU0cW9HMnlNNk81Z0NZQ2ZNRVJuX0tHM3Q3aTZKQ2hMNVd6TTF6aVZQMVZsQXZSV0JSaDdDSTE2aHcySno4WnNncnBiR2pSMVZySDlKZkpvTE9KOVN0emhUYVI4V1hZRHIyX1ZZZ2lFSks1N2N1eVFUVXozWC1kalc1WDUxZ3FGYUpnVVlZa0hJVGxOMnpldEV4Wm1YOTVUZ05fTFXSAb8BQVVfeXFMTm9TaTdYYkdHVlE2eGRKY3JhbjhucklEWUVCaDZPcFJBeVlrQ0dJc2c5NGZ1d0hyYU04M1J0Z1hGY2lWaHFsZERyNmlBblFkWEFlWkM0c2VRU2dEbXY2X3N0TVJiT1IxZzRTM1ZFSWVkdlRnR2pIU2RicmFTM0RVSVNuTlZsQ1UwOWFZNWZSYVZnNzRsR0Vaa2hMRVFkSHEtdHhVRFduTzR5LV9fNXc1bEJQOUVHOTlORTZCdlMwZE0?oc=5",
+     "publisher": "NDTV Profit",
+     "published": "2026-10-25T08:02:34+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "The Week Ahead: Earnings Season, Fed Policy Verdict And Crude Oil In Focus",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "46d9e7765b066db7",
+      "headline": "The Week Ahead: Earnings Season, Fed Policy Verdict And Crude Oil In Focus",
+      "what_happened": "The Week Ahead: Earnings Season, Fed Policy Verdict And Crude Oil In Focus",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "dda0f8b37b52d1a7",
+     "title": "Ringgit Strengthens as Fed Signals Shift in Rate Outlook",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUlhlQnRaNUYzWkt1STVRRS03VWxiTkd0dXNEYVY2WDhTTmtMRzV5M0k5T2NjUVM2N0FKdFYtenZ3OTFnaXhPc3QzSWlrSDJqLWdWbnV2clFfWlNob2xJb3Jkc2dyaVBVZW5UdXQ3UlhJcDZudUpoMFBMYlZOa2YtSXE2NDhoa05iV2laOQ?oc=5",
+     "publisher": "Vocal",
+     "published": "2026-10-25T07:31:43+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "GLD",
+       "EEM"
+      ],
+      "named": [],
+      "summary": "Ringgit Strengthens as Fed Signals Shift in Rate Outlook",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "dda0f8b37b52d1a7",
+      "headline": "Ringgit Strengthens as Fed Signals Shift in Rate Outlook",
+      "what_happened": "Ringgit Strengthens as Fed Signals Shift in Rate Outlook",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "GLD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "EEM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "03c4bb545a40a422",
+     "title": "US Fed, Earnings, Crude Oil to Drive Markets This Week",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUE5GNjQ4WURFNXc1TVAwM2FkSjM0SDI2c0k4OHhjUEctTDJDTC1GRHVKc0tPc1pkTDNiRG1fZkZiM3Q5ZElHRGxQZnU0NThyQmJtc1ZPUEVMZjZ1YzlXUWVkQnJLT0ZXX25mdGpiWHFtV1BubWt3ZWhlRVVMbjlMYzRzN2JWQ3NLVm9HaXlsSFNYQk5Va2RqVmVTeDVIdlpjem9rM1h3RdIBrAFBVV95cUxORFFmRHg0dlJsSnc2aTZYeWc0TGxja2dmQ2EtWjE2VFRNdmRBV0NMb01OZmRsN3ExWDM4bnk1dWt0NmNMYVZvLV9BZ3BlTTRxS2N1SzBzYnhfeC1pQ1NuUDdDVVZ5dUFqZEJuMzRzZFNKcVIxVjBhM0ZuczQyX3FYTEM3bG1lNGxpSTQxYlFPX0hyc3N6NWVRQy13R0t6NldTalE5VVNYWjY1aVhK?oc=5",
+     "publisher": "Rediff MoneyWiz",
+     "published": "2026-10-25T06:49:27+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "US Fed, Earnings, Crude Oil to Drive Markets This Week",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "03c4bb545a40a422",
+      "headline": "US Fed, Earnings, Crude Oil to Drive Markets This Week",
+      "what_happened": "US Fed, Earnings, Crude Oil to Drive Markets This Week",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "b8fe98b86adab941",
+     "title": "Earnings, US Fed interest rate decision, crude oil to drive markets this week: Analysts",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYkVXekM1VGw2LWM4aUJ4NnNCS0kxOVFTOVpYMlNQVWM4OC0yVzhwNnlSS05KTUZXR0R4NHRCdGxoRldycDREdFZab2pGVURjejlnb1puWWZGYy1kNWVYV1BCRVpqdUhRSnhoR1VUMXo4VURTZUVsbWt0UTFuR1hrXzlCZmZjVGFCS25fT09yOFhqQXNuekJVVzJhZGF2QVBEdjBKRkUwSWdwU3JLZVpDck5qcHdUMknSAbsBQVVfeXFMT1RCQnowNGI3eHJOekZnYW1UUXpvWjJyQV9wb3ZnSFFoR1VaRW9jeC1jdEpBZ0M2Y05ibjE0cVY3V1NyYWEtaDhyQjExTDZBQm9TcmJkMkZMTUFFaTdrVUI5SjdNaU9sR096cThTdktYdDBFdVdqVEZUTVVXWl9NLWpLc2lkeEYxNFRrY0F1d3V2ZVVzbnNXT3NHbzJqWEdWNC1Sa0xtQjFMZkM3Q2ZvV0E3alYtbjBELWEzZw?oc=5",
+     "publisher": "Daily Excelsior",
+     "published": "2026-10-25T06:44:47+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Earnings, US Fed interest rate decision, crude oil to drive markets this week: Analysts",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "b8fe98b86adab941",
+      "headline": "Earnings, US Fed interest rate decision, crude oil to drive markets this week: Analysts",
+      "what_happened": "Earnings, US Fed interest rate decision, crude oil to drive markets this week: Analysts",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "066c503ba90a83b2",
+     "title": "Bitcoin Price $80,853: The Fed Statement Comes at 7 p.m. German Time This Week",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdmFmbjE4NlU0TWZIMWhTcU4wN1ZIR2Z6Vzd2WUR3MkRRc3poRFAxRmJ0T1J6WFFRbTR4UDY4THBfNmgzZFlZcTBWZmxmX0dSd3cya1FsRFpZa0tjYzRleV84ZlFYcWo0b3p5UFVqVEJ6SEhORndLY1F2cGUxWnVUejhMSkN6dWs?oc=5",
+     "publisher": "CryptoTicker",
+     "published": "2026-10-25T06:19:08+00:00",
+     "triage": {
+      "relevance": 0.675,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "BTC-USD",
+       "ETH-USD",
+       "SOL-USD",
+       "XRP-USD",
+       "ADA-USD"
+      ],
+      "named": [
+       "BTC-USD"
+      ],
+      "summary": "Bitcoin Price $80,853: The Fed Statement Comes at 7 p.m. German Time This Week",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "066c503ba90a83b2",
+      "headline": "Bitcoin Price $80,853: The Fed Statement Comes at 7 p.m. German Time This Week",
+      "what_happened": "Bitcoin Price $80,853: The Fed Statement Comes at 7 p.m. German Time This Week",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "BTC-USD",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "ETH-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "SOL-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XRP-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "ADA-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "75dde9e2dc9dafd0",
+     "title": "S&P 500 Forecast: SPX Falls after hot inflation and as AI debt concerns mount",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQk9hM0V6YUJNS3NXQ2loRFRzejJ6WkdCR0dLaGx5akJEM005TTE5emdNU1dQeUZlal9wNmVMODhsSVBQUnJMT2o3cHJ4b0NhVk1GNU5nQ2FiRUFMOGN4SVM5QTRvekN1ZmFFQ3ZGUDdmOWJqTXBEODNWYmxxZWhtbTFoMDBzaUk2TUFIZERYTkcteXJxLTNWSHJkaVBHc1dHem12SnZfaGdDUmZ3V2pKSHdQNktHZWowTFJxVVBTVWpkLU41?oc=5",
+     "publisher": "StoneX",
+     "published": "2026-10-25T05:54:27+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.762,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "S&P 500 Forecast: SPX Falls after hot inflation and as AI debt concerns mount",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "75dde9e2dc9dafd0",
+      "headline": "S&P 500 Forecast: SPX Falls after hot inflation and as AI debt concerns mount",
+      "what_happened": "S&P 500 Forecast: SPX Falls after hot inflation and as AI debt concerns mount",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -4613,6 +5592,53 @@
      }
     },
     {
+     "id": "5348f1cd395d834c",
+     "title": "How Investors Are Reacting To Arcos Dorados Stock After Earnings Estimate Upgrades",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-arcos-dorados-stock-101152651.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-24T10:11:52+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "MCD"
+      ],
+      "named": [
+       "MCD"
+      ],
+      "summary": "How Investors Are Reacting To Arcos Dorados Stock After Earnings Estimate Upgrades. Arcos Dorados Holdings is being highlighted for a sharp expected 207.7% earnings increase in 2026, alongside upward revisions to those earnings forecasts in the past two months. The company is also drawing attention for ",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "5348f1cd395d834c",
+      "headline": "How Investors Are Reacting To Arcos Dorados Stock After Earnings Estimate Upgrades",
+      "what_happened": "Arcos Dorados Holdings is being highlighted for a sharp expected 207.7% earnings increase in 2026, alongside upward revisions to those earnings forecasts in the past two months. The company is also drawing attention for its EV to EBITDA valuation, which some analysts view as signaling a potentially undervalued Latin American McDonald\u2019s operator. This article will now examine how this upgraded earnings outlook and value profile could reshape the broader investment narrative for Arcos Dorados...",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "MCD",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "b1d7c6d8e388"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "ff0a5d7a84af71d4",
      "title": "Oil rises on Middle East risks; UK retail sales weaken while Canadian sales improve",
      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQLTh0ZWtoMGxLbkxTSkdqOEd4bmdnREYtdGFIVlhQd2xCemdMYTkzQ2hTODVMWUR0cmNjRmIzZXVkbUlMbFk2MDBrLWlxTHgxQzU3UHFsbENmekM5M1B4XzFlWGFEQ3Z6ZlNSMFBGazMtYm5QcUJyZFQ2LUJqOHBaS2tPRmQ1c19vQzhfOTdkUkdNeGtXYUpuMU9WSGpoLW5TN2kwSTJZNVk2YWIxb2h5Y2lZVGo4emFSQ3Rpb2I5ZnczZmdmOWdSaw?oc=5",
@@ -4677,6 +5703,106 @@
      }
     },
     {
+     "id": "88ba9d231af0a7e0",
+     "title": "US flash PMI signals sustained strong growth, but also further inflation uplift in October",
+     "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPMmZ2elREdU9JUTd5ZVpmV3RBOUFFeFZHNzhleVVmTkRYalhVYURYNjZYMFJwaGRKVlBJbnhqWWttTy14U2lMMktxUzJoa1I2MmpRbmhMbzhVU1NWTk14QWxwOVk4Q2RzZk5TY0FJSFVFSktUY1B6NVVTZEw1bW5qZThIaU4xLUxIN3lWOV9KeWZQZDJLcmdXWDRkcjRlem03QVIycnBIVF9md2FkYi1jeFQwMDQ5Y0Z2LTBPOGxsUkV2Q2ljZXRJeVlrMmttc1F0WU1qTmh0cmhpSzBpVDRHNTd3cFNySEtnZU9kTXNPaGxaa0huTHE5ajRHRGI?oc=5",
+     "publisher": "S&P Global",
+     "published": "2026-10-24T04:41:15+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": 0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [],
+      "named": [],
+      "summary": "US flash PMI signals sustained strong growth, but also further inflation uplift in October",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "88ba9d231af0a7e0",
+      "headline": "US flash PMI signals sustained strong growth, but also further inflation uplift in October",
+      "what_happened": "US flash PMI signals sustained strong growth, but also further inflation uplift in October",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "4d6f9313b7ae45a9",
+     "title": "Watch Persistent Oil Prices Threaten Inflation Outlook",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPT0pVZzhLemJyT2tuQjV0VURWeWNUaWVLQnJiNjZqMzIyLUZjT2djNGVLcHRxOGdpdDItb1htSGlhbjdrbTF3LW54OWRfT2F3el9zT2hoQjJwekpkazF2R19oNWdTNWpPWlR1LXVwNE1BLVpHQUZuaWd6U0xBTE5jdmhkMzVGaFBTTFZVZk9vWVp0dDlBX3JvM0M2TUtvdmhEbWV4azN3?oc=5",
+     "publisher": "Bloomberg.com",
+     "published": "2026-10-24T00:00:00+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Watch Persistent Oil Prices Threaten Inflation Outlook",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "4d6f9313b7ae45a9",
+      "headline": "Watch Persistent Oil Prices Threaten Inflation Outlook",
+      "what_happened": "Watch Persistent Oil Prices Threaten Inflation Outlook",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c",
+       "82e0ce4fb2c0",
+       "faeec0f60115"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "7775f902c69ced36",
      "title": "Oil Prices Settle Slightly Higher as Optimism Around US Inflation Data Outweighs OPEC Supply Concerns",
      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOaU5kZ1JwUVprenZfUUdIeHRMMlVXM3I3LUFFWl93cEZTVGI4OVg4MUVqVTRBSmpaT1U3SGdsMFA2RGdmclZNTDJMSVhyenJYX1J6VTFzMEhMbkFFMGhENFlEQ1NqWUZlVDdjbEt3Mmd2MThHTUdMRHhKWWU0RU9sR1N5U1k2Q3J3SklVNU1SM3RtekpPa19kMFRWbEZVU0p3STFQbklDeGJscTh2TnotazdJY0NEbjlhNURLZU5OZ2syZy1fS1dNd3BXYzg?oc=5",
@@ -4738,6 +5864,79 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:14:47.988490+00:00"
+     }
+    },
+    {
+     "id": "77be23f5140bd505",
+     "title": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYlJGRWEycTJwdTZncGE4dWVsRGlqM3NJckp5SzJaM00tbW5Xa2RLVXhtMUh5ZTN4cnQwMS1WWGJPUjNzM1hSNHRuRnJMLVhUa1JGZXJjZHZrRS1idlF2dmpQQ2Q3d3JLUTJFVlBWMzJiZDNreVg5SUdKektSMWp3MXU4Z0tkOWRDTEcwVnhBWWNWTjhzcWstRUhSdDhmNjl6YmN1dU9jVGpCN3E1TENuYy12ZUxoaGND?oc=5",
+     "publisher": "GuruFocus",
+     "published": "2026-10-23T23:34:26+00:00",
+     "triage": {
+      "relevance": 0.76,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "GLD",
+       "EEM",
+       "XLE",
+       "XOM"
+      ],
+      "named": [],
+      "summary": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     },
+     "analysis": {
+      "id": "77be23f5140bd505",
+      "headline": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
+      "what_happened": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "GLD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "EEM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c",
+       "4f7cf3380c04",
+       "083ba36ea784",
+       "141201ec0178"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -4981,6 +6180,108 @@
      }
     },
     {
+     "id": "7ca104855c93050b",
+     "title": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen?",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRjM0X0V1all1ZVNyam5EbXlic0EyY1BCaTJCQThILXg2RGNnQ0M3X2pTRE83dWNQLWFXN2VVOS1NQm1QZndld0dZVnFieHhLcmhrUXQwU1FFakJKQ1RNc0ZfX0wyeVZFNXZ1R2c0T1BxY2dsT2UxMlR4bUtoSnFEMW8zRHp2c1RNamN3aEFISHJBN1hSVEZ3ekJfS1p3ZGxIMVlBVUJhekdsaEJSUGR3Zm00bFVyZGtyVTVDZNIBvAFBVV95cUxQRjM0X0V1all1ZVNyam5EbXlic0EyY1BCaTJCQThILXg2RGNnQ0M3X2pTRE83dWNQLWFXN2VVOS1NQm1QZndld0dZVnFieHhLcmhrUXQwU1FFakJKQ1RNc0ZfX0wyeVZFNXZ1R2c0T1BxY2dsT2UxMlR4bUtoSnFEMW8zRHp2c1RNamN3aEFISHJBN1hSVEZ3ekJfS1p3ZGxIMVlBVUJhekdsaEJSUGR3Zm00bFVyZGtyVTVDZA?oc=5",
+     "publisher": "FOREX.com",
+     "published": "2026-10-23T22:29:35+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "GLD",
+       "EEM"
+      ],
+      "named": [],
+      "summary": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen?",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "7ca104855c93050b",
+      "headline": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen?",
+      "what_happened": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen?",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "GLD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "EEM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c",
+       "4f7cf3380c04",
+       "083ba36ea784",
+       "141201ec0178"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "62122bf3f294712e",
+     "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
+     "url": "https://www.marketwatch.com/story/this-hot-ai-fueled-stock-has-been-in-a-rut-it-just-beat-earnings-expectations-by-36-4a4188cb?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-23T21:13:00+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "ORCL"
+      ],
+      "named": [
+       "ORCL"
+      ],
+      "summary": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.. A company beating earnings expectations by 36% and revenue expectations by 15% would usually see a postresults bump. But not for Bloom Energy, the fuel-cell maker that has flourished due to data-center demand.",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "62122bf3f294712e",
+      "headline": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
+      "what_happened": "A company beating earnings expectations by 36% and revenue expectations by 15% would usually see a postresults bump. But not for Bloom Energy, the fuel-cell maker that has flourished due to data-center demand.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "ORCL",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "776a3e9f82eeb80d",
      "title": "Tech concerns, oil prices, inflation weigh on stocks",
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaWhPYlZ1Z1J6UDVielRndVhXSkNyUUNSeEpPczdTemEwN0JINzdvSktZX1oyazNqRS1NWUdiNWJGa1JaTEJldW9mZ0FpcF9Wd2ZpZEsxOXlQbXJIX3I2UGs4SVZtVi1Bd3NqcnpwdGp6ZVFxYzFLOG5JdlNEOTdkVGJ4OWw?oc=5",
@@ -5045,6 +6346,63 @@
      }
     },
     {
+     "id": "0a18f53dd8e4298a",
+     "title": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQa1ZWLUxqWFYzZEZpcmM0YXVlTjNyNlpRRHBCc182eFdzMU4wUmU1UFZCRF95M29GRnhWeXhzQUpDdnd1UkdMeFlBLUFBM24wak5zWjhIYld6eFNHZHV0RHBaem5IUjd0dVdYMlVueFNSYzhFR1lwR3JEOC14SjRJcjd6aGxGZzgtTGRTZUh0OXhaUVl2UFZlQzhNMC1ySWZjRWV1Q3JpbkdsZDlYeFpubTRpb2N2RUtNV1FvLXotSlYxa1FTTTZrNkRDYkRsSGZfeWVoWWt0bw?oc=5",
+     "publisher": "www.tmgm.com",
+     "published": "2026-10-23T20:53:18+00:00",
+     "triage": {
+      "relevance": 0.68,
+      "sentiment": 0.322,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "GLD",
+       "EEM"
+      ],
+      "named": [],
+      "summary": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "0a18f53dd8e4298a",
+      "headline": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
+      "what_happened": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "GLD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "EEM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "888616539e84",
+       "b42cb75ef90c",
+       "4f7cf3380c04",
+       "083ba36ea784",
+       "141201ec0178"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "f93b95e4478de223",
      "title": "Stock Market Today: Nasdaq Posts Back-To-Back Losses As Oil Surges; Samsara Breaks Out",
      "url": "https://finance.yahoo.com/m/81c00f86-3a6b-31fa-a8aa-5d5650c74f9c/stock-market-today%3A-nasdaq.html?.tsrc=rss",
@@ -5106,6 +6464,110 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-10-25T17:21:31.658750+00:00"
+     }
+    },
+    {
+     "id": "1c34d79dd7297d64",
+     "title": "US Treasury yield on 10-year note, 30-year bond, 2-year jump again: What does this mean for US Fed interes",
+     "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNVFNhUFNSWXIwSHVsUnF4Wk9DSWJLcHhybUIzaUp1eUxWMG1lTzVVY1Q5eWdaWjhURVdYZ2hhT0hmRFBnbUpqNW1JVEpUREZGX3N2YmljRHh2T3BHdDJidGd6cDZZREVjaU1CMERDaVEwZ21QSkliNmVfNEdycnNGOVcxSF9GU1k2OW5Jb2ItRnpTSFM4eVdtQ21OMnR2cENMYk5HSEpYNzhyY3FjRDlBUDRkZFlXbmxzRmhobkZITU1jZnBwZjFjc2ZMRFRZTGYxS0MxZlNQZHVORDBIbG9WbTFIcUlXWG5UOUJvN2JjZmZ0VXcwRml0ZFR1QXFFMWk0V2Z1WE1Ya0lkN2RyZzRGX1l0UdIBmAJBVV95cUxPWWVmX3ozR0dpMkdJOHpxdkx4VENEdndPN1NKVTNybW1OY3hSSXJuMUVQX1hlb1dncGpRVlo4c0pwMmZ3eDhuU0RZUVFfbjJfTmJqRWxVdXJrRXZNWTZTcTJTTnZlZjB0MzFWWWc2eC1mbzBGRktMSUpxVnRjZExWM3RlRHYxeFZNT0hqRURoMnRocEN6a0ZhT0ZMRW5ta29LQlRpWlQtdndmbTdGZVczY0pmeWpPRVZQS0RmUDJNeEt3VXp5WmJtUm5nbmVuc196aDFUakFMWkI4bmZzalBiQkxfaFJOTjVKekY4M21Dd1NVcDFscjNHZktLZk83UEJwS05UZ0puQkRvdHRySWpMZ0xCZmlqTnFB?oc=5",
+     "publisher": "The Economic Times",
+     "published": "2026-10-23T20:05:43+00:00",
+     "triage": {
+      "relevance": 0.715,
+      "sentiment": 0.322,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "TLT",
+       "XLF",
+       "QQQ"
+      ],
+      "named": [],
+      "summary": "US Treasury yield on 10-year note, 30-year bond, 2-year jump again: What does this mean for US Fed interes",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "1c34d79dd7297d64",
+      "headline": "US Treasury yield on 10-year note, 30-year bond, 2-year jump again: What does this mean for US Fed interes",
+      "what_happened": "US Treasury yield on 10-year note, 30-year bond, 2-year jump again: What does this mean for US Fed interes",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "TLT",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLF",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "QQQ",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "1dca4259c999",
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
+     "id": "20da0ccc961b2c73",
+     "title": "US FX WRAP: DXY rises; hawkish Japan CPI report/BoJ sources; EUR hit on weak PMI data",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMElBbnNKTG9Oald2eWJZMm84MjBfeFRsb3BQWlY0TVBvNXIwcWxCMlFLQVpkZWd4bXZmNTdBOVlCenJ5YnBfYWZ0TW1yQVNsaGlWZ0VmRGVpMlVuUmpTQmZTa2diMVJsRmpTNjQ2c1FDSHlpTWVRazdCelJ6V1A5eUw0a0N3bUpKVzdhOU1UczBiNEx1YjB4MS15WmxjRHRTVnJDV3lyZ2VfeGtwcVlXcDZTOFFBR2pw?oc=5",
+     "publisher": "Newsquawk",
+     "published": "2026-10-23T19:32:56+00:00",
+     "triage": {
+      "relevance": 0.715,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [],
+      "named": [],
+      "summary": "US FX WRAP: DXY rises; hawkish Japan CPI report/BoJ sources; EUR hit on weak PMI data",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "20da0ccc961b2c73",
+      "headline": "US FX WRAP: DXY rises; hawkish Japan CPI report/BoJ sources; EUR hit on weak PMI data",
+      "what_happened": "US FX WRAP: DXY rises; hawkish Japan CPI report/BoJ sources; EUR hit on weak PMI data",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "10b7f3fa2f5c",
+       "4674b428ccae",
+       "f48c0eb34f1f",
+       "d8629fd9fd55",
+       "aa90fbbb0aa1"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
      }
     },
     {
@@ -5282,6 +6744,53 @@
      }
     },
     {
+     "id": "317c55b59705e7ef",
+     "title": "Byline Bancorp Q3 Earnings Call Highlights",
+     "url": "https://www.marketbeat.com/instant-alerts/transcript-byline-bancorp-q3-earnings-call-highlights-2026-10-23/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-23T18:04:52+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "V"
+      ],
+      "named": [
+       "V"
+      ],
+      "summary": "Byline Bancorp Q3 Earnings Call Highlights. Byline Bancorp (NYSE:BY) reported record third-quarter net income and revenue, expanded its net interest margin and increased deposits, while also announcing an agreement to acquire Illinois State Bancorp and raising its",
+      "model": "local",
+      "at": "2026-10-25T17:14:47.988490+00:00"
+     },
+     "analysis": {
+      "id": "317c55b59705e7ef",
+      "headline": "Byline Bancorp Q3 Earnings Call Highlights",
+      "what_happened": "Byline Bancorp (NYSE:BY) reported record third-quarter net income and revenue, expanded its net interest margin and increased deposits, while also announcing an agreement to acquire Illinois State Bancorp and raising its quarterly dividend. Net income for the third quarter was $41.8 million, or $0.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "V",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "742af347fb38"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-10-25T17:52:53.197452+00:00"
+     }
+    },
+    {
      "id": "8187f2f61e2dd827",
      "title": "UnitedHealth Soars 11% in a Week After a Beat-and-Raise Quarter: \u201cDiscipline and Execution\u201d",
      "url": "https://www.tikr.com/blog/unitedhealth-soars-11-in-a-week-after-a-beat-and-raise-quarter-discipline-and-execution?ref=yahoofinance&.tsrc=rss",
@@ -5432,6 +6941,22 @@
    ],
    "feed": [
     {
+     "id": "798caac36c0744f4",
+     "title": "'The world's super company': Wall Street weighs SpaceX earnings, company's likely Tesla tie-up",
+     "url": "https://finance.yahoo.com/markets/stocks/article/the-worlds-super-company-wall-street-weighs-spacex-earnings-companys-likely-tesla-tie-up-173949705.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T17:39:49+00:00",
+     "symbols": [
+      "TSLA"
+     ],
+     "relevance": 0.605,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "'The world's super company': Wall Street weighs SpaceX earnings, company's likely Tesla tie-up. Wall Street is starting to size up the potential of a combined SpaceX and Tesla.",
+     "analysed": false
+    },
+    {
      "id": "21c5c309c3dcffa8",
      "title": "Waco unemployment rate drops 0.3%, lower than Texas' number - Waco Tribune-Herald",
      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYUtjXzRWMElWdGFlNUR5V2lXR2RZbE0wVlc5aHFPemZlZGxrMkFQSzdRSUpUanhXaEtrNi1NVGd6OXJwaWhmUVAwZnNab2dVeGZMYTJUa3BoM1BZc1dtaC01Y0MxXzlRbEJSbDVfTFA3N0NwZlpNZnRpQUhDUmo0cjM0X0NKaFI1dWpHMmFSNUh5ODJ1?oc=5",
@@ -5459,7 +6984,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Inflation threatens 8% spike as cost pressures hit hard",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "87d5061147f7aaa9",
@@ -5514,7 +7039,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "Jordi Visser Calls Chamath Palihapitiya\u2019s Bitcoin Going To Zero Tale \u2018Completely Just A Joke,\u2019 Says AI Sell-Off Could Bottom In Two Weeks. Visser said the low for the AI sell-off could come within two weeks, with cloud earnings, the midterms, and the Treasury\u2019s refunding as possible catalysts.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "f76089a09c05c50b",
@@ -5578,7 +7103,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "Sundar Pichai Reported Alphabet's Cloud Revenue Grew 82% Last Quarter While the Gemini App Reached 950 Million Monthly Users. Is Google Cloud Becoming a Bigger Growth Driver Than Search?. The numbers paint a clear picture for shareholders.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "45664f0640cba5be",
@@ -5613,7 +7138,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "What To Expect In Markets This Week: GOOGL, MSFT, AMZN, INTC, HOOD, LLY Earnings, Fed Meeting And More. The spotlight will be particularly intense as several of the biggest names in technology report quarterly results, while the Federal Reserve prepares to make its latest policy decision.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "becdaa2cc830ccdf",
@@ -5724,7 +7249,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Fed policy, Q2 earnings, crude oil prices among key market triggers next week - India Tribune",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "7a543083c300b92b",
@@ -5970,7 +7495,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "The Bond Market's Double Jeopardy: AI Cracks, Oil Burns and the Fed Blinks",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "39d17fc2e29a8a3c",
@@ -6151,7 +7676,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Weekly Outlook | The Federal Reserve's decision, along with U.S. GDP and core PCE, are set to make a big splash! Google, Microsoft, and Amazon will release their earnings reports in quick succession, as U.S. stocks enter the peak of earnings season; Dong",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "9d9a3a71fc5f290d",
@@ -6165,7 +7690,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "President Donald Trump Just Proclaimed, \"Tariffs Don't Cause Inflation, They Cause Wealth,\" but Data From Federal Reserve Economists Show Otherwise",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "bc0915db3e16a437",
@@ -6183,7 +7708,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "US Fed rate decision, corporate earnings, crude oil to steer market sentiment",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "46d9e7765b066db7",
@@ -6201,7 +7726,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "The Week Ahead: Earnings Season, Fed Policy Verdict And Crude Oil In Focus",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "dda0f8b37b52d1a7",
@@ -6218,7 +7743,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Ringgit Strengthens as Fed Signals Shift in Rate Outlook",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "2efcf96545808121",
@@ -6250,7 +7775,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "US Fed, Earnings, Crude Oil to Drive Markets This Week",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "b8fe98b86adab941",
@@ -6268,7 +7793,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Earnings, US Fed interest rate decision, crude oil to drive markets this week: Analysts",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "0e62a98269a8fda2",
@@ -6304,7 +7829,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Bitcoin Price $80,853: The Fed Statement Comes at 7 p.m. German Time This Week",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "bee4a82275176e77",
@@ -6336,7 +7861,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "S&P 500 Forecast: SPX Falls after hot inflation and as AI debt concerns mount",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "2186f5288a8fcda0",
@@ -7221,7 +8746,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "How Investors Are Reacting To Arcos Dorados Stock After Earnings Estimate Upgrades. Arcos Dorados Holdings is being highlighted for a sharp expected 207.7% earnings increase in 2026, alongside upward revisions to those earnings forecasts in the past two months. The company is also drawing attention for ",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "8248f4779c32ee2d",
@@ -7279,20 +8804,6 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Labor Market Strong Enough for Fed to Focus on Inflation",
-     "analysed": false
-    },
-    {
-     "id": "902c7ef77546b00f",
-     "title": "Inflation, earnings reports and the mood of consumers and the Federal Reserve fill out a busy week",
-     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQOUt5bnNuSEhEN2RwYklFVmRHbmVaSHdYSUdLR0xvOVgyVEh5amhMc2ZqZjVhZzZhaUZyNE9MQnFyQjdQTTJfcE1qZWJfUzBXZU1iSlBBX1pQTkdOTzZLUW45SXVqY0pQOEYxREttS0lZbGZfa3dyeFhfR2MxaFNNUEtrSnJSd0RXVVlRa3NaaVBUUTc5VWxQYnJpZmRHUDV1Y3lBYU9jVHpaSlJoaTdGMWdDTVd5eFUxYVdzY1lURnNDc3VNRUg1TFpKejR6NWxwX3hlNGY5UkNkd3pvbE53cEZpRkZxcEhtLUHSAeoBQVVfeXFMUDlLeW5zbkhIRDdkcGJJRVZkR25lWkh3WElHS0dMbzlYMlRIeWpoTHNmamY1YWc2YWlGcjRPTEJxckI3UE0yX3BNamViX1MwV2VNYkpQQV9aUE5HTk82S1FuOUl1amNKUDhGMURLbUtJWWxmX2t3cnhYX0djMWhTTVBLa0pyUndEV1VZUWtzWmlQVFE3OVVsUGJyaWZkR1A1dWN5QWFPY1R6WkpSaGk3RjFnQ01XeXhVMWFXc2NZVEZzQ3N1TUVINUxaSno0ejVscF94ZTRmOVJDZHd6b2xOd3BGaUZGcXBIbS1B?oc=5",
-     "publisher": "myMotherLode.com",
-     "published": "2026-10-24T08:01:00+00:00",
-     "symbols": [],
-     "relevance": 0.635,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "Inflation, earnings reports and the mood of consumers and the Federal Reserve fill out a busy week",
      "analysed": false
     },
     {
@@ -7427,7 +8938,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "US flash PMI signals sustained strong growth, but also further inflation uplift in October",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "89c6a510f1ee0667",
@@ -7593,7 +9104,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Watch Persistent Oil Prices Threaten Inflation Outlook",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "7775f902c69ced36",
@@ -7611,6 +9122,25 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Oil Prices Settle Slightly Higher as Optimism Around US Inflation Data Outweighs OPEC Supply Concerns",
+     "analysed": true
+    },
+    {
+     "id": "77be23f5140bd505",
+     "title": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYlJGRWEycTJwdTZncGE4dWVsRGlqM3NJckp5SzJaM00tbW5Xa2RLVXhtMUh5ZTN4cnQwMS1WWGJPUjNzM1hSNHRuRnJMLVhUa1JGZXJjZHZrRS1idlF2dmpQQ2Q3d3JLUTJFVlBWMzJiZDNreVg5SUdKektSMWp3MXU4Z0tkOWRDTEcwVnhBWWNWTjhzcWstRUhSdDhmNjl6YmN1dU9jVGpCN3E1TENuYy12ZUxoaGND?oc=5",
+     "publisher": "GuruFocus",
+     "published": "2026-10-23T23:34:26+00:00",
+     "symbols": [
+      "GLD",
+      "EEM",
+      "XLE",
+      "XOM"
+     ],
+     "relevance": 0.76,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Oil Prices Surge Amid Inflation Concerns, Impacting Dollar and C",
      "analysed": true
     },
     {
@@ -7751,7 +9281,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "USD/JPY Forecast: Is Rising Japanese Inflation Supporting the Yen?",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "938d5a7d105d7d5a",
@@ -7803,7 +9333,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.. A company beating earnings expectations by 36% and revenue expectations by 15% would usually see a postresults bump. But not for Bloom Energy, the fuel-cell maker that has flourished due to data-center demand.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "776a3e9f82eeb80d",
@@ -7838,7 +9368,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "Australian Dollar posts modest gains against US Dollar as markets await US flash PMI data",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "eda7d2212a898d04",
@@ -7999,6 +9529,20 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "US Treasury yield on 10-year note, 30-year bond, 2-year jump again: What does this mean for US Fed interes",
+     "analysed": true
+    },
+    {
+     "id": "902c7ef77546b00f",
+     "title": "Inflation, earnings reports and the mood of consumers and the Federal Reserve fill out a busy week",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQOUt5bnNuSEhEN2RwYklFVmRHbmVaSHdYSUdLR0xvOVgyVEh5amhMc2ZqZjVhZzZhaUZyNE9MQnFyQjdQTTJfcE1qZWJfUzBXZU1iSlBBX1pQTkdOTzZLUW45SXVqY0pQOEYxREttS0lZbGZfa3dyeFhfR2MxaFNNUEtrSnJSd0RXVVlRa3NaaVBUUTc5VWxQYnJpZmRHUDV1Y3lBYU9jVHpaSlJoaTdGMWdDTVd5eFUxYVdzY1lURnNDc3VNRUg1TFpKejR6NWxwX3hlNGY5UkNkd3pvbE53cEZpRkZxcEhtLUHSAeoBQVVfeXFMUDlLeW5zbkhIRDdkcGJJRVZkR25lWkh3WElHS0dMbzlYMlRIeWpoTHNmamY1YWc2YWlGcjRPTEJxckI3UE0yX3BNamViX1MwV2VNYkpQQV9aUE5HTk82S1FuOUl1amNKUDhGMURLbUtJWWxmX2t3cnhYX0djMWhTTVBLa0pyUndEV1VZUWtzWmlQVFE3OVVsUGJyaWZkR1A1dWN5QWFPY1R6WkpSaGk3RjFnQ01XeXhVMWFXc2NZVEZzQ3N1TUVINUxaSno0ejVscF94ZTRmOVJDZHd6b2xOd3BGaUZGcXBIbS1B?oc=5",
+     "publisher": "myMotherLode.com",
+     "published": "2026-10-23T20:00:00+00:00",
+     "symbols": [],
+     "relevance": 0.635,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Inflation, earnings reports and the mood of consumers and the Federal Reserve fill out a busy week",
      "analysed": false
     },
     {
@@ -8078,7 +9622,7 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "US FX WRAP: DXY rises; hawkish Japan CPI report/BoJ sources; EUR hit on weak PMI data",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "5c18ac6b341f81bc",
@@ -8244,7 +9788,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "Byline Bancorp Q3 Earnings Call Highlights. Byline Bancorp (NYSE:BY) reported record third-quarter net income and revenue, expanded its net interest margin and increased deposits, while also announcing an agreement to acquire Illinois State Bancorp and raising its",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "0a3aece2deb1f54a",
@@ -8261,116 +9805,57 @@
      "analysed": false
     },
     {
-     "id": "8187f2f61e2dd827",
-     "title": "UnitedHealth Soars 11% in a Week After a Beat-and-Raise Quarter: \u201cDiscipline and Execution\u201d",
-     "url": "https://www.tikr.com/blog/unitedhealth-soars-11-in-a-week-after-a-beat-and-raise-quarter-discipline-and-execution?ref=yahoofinance&.tsrc=rss",
+     "id": "900ecd0b133944a3",
+     "title": "Monero (XMR) and Zcash (ZEC) Beat Bitcoin This Week. Can the Privacy Coins Keep It Up?",
+     "url": "https://247wallst.com/investing/cryptocurrency/2026/10/25/monero-xmr-and-zcash-zec-beat-bitcoin-this-week-can-the-privacy-coins-keep-it-up/?.tsrc=rss",
      "publisher": "yahoo",
-     "published": "2026-10-23T17:53:21+00:00",
+     "published": "2026-10-25T17:38:56+00:00",
      "symbols": [
-      "UNH"
+      "BTC-USD",
+      "ETH-USD",
+      "SOL-USD",
+      "XRP-USD",
+      "ADA-USD"
      ],
-     "relevance": 0.725,
-     "sentiment": 0.762,
+     "relevance": 0.545,
+     "sentiment": 0.583,
      "impact": "medium",
-     "category": "earnings",
-     "summary": "UnitedHealth Soars 11% in a Week After a Beat-and-Raise Quarter: \u201cDiscipline and Execution\u201d. Key TakeawaysUnitedHealth stock is up 11% in the past week (through Tuesday\u2019s close), after a third-quarter beat and a raised 2026 outlook for adjusted EPS of at least $20. 50.",
-     "analysed": true
-    },
-    {
-     "id": "2d5164c983a8b3b2",
-     "title": "The Week Ahead: US rate decision, PCE inflation, Microsoft earnings",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOEFkcTk0c1lOcFpPcmZESVJSX3diR0swWDRLRkJlRlE2NEJQS2VJWUhXWFh6NWVBMFRiYmdZekt5U1hnNVN6NVBoUXRMdkJYVnVHUzVsRmoxNkZOb3JXcWN3d0dwYTlxZXZjelhDc2d4bkpfM3J2QTBlUEx3ZlNtcDFENlFxQ1lZbTc0VXVoSlVjVlZNb0w2dDRsclJ0eEdyT1RISlJfVUQzZ0FsX1c1MW9OcnNwZw?oc=5",
-     "publisher": "CMC Markets",
-     "published": "2026-10-23T17:46:39+00:00",
-     "symbols": [
-      "MSFT"
-     ],
-     "relevance": 0.715,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "The Week Ahead: US rate decision, PCE inflation, Microsoft earnings",
+     "category": "crypto",
+     "summary": "Monero (XMR) and Zcash (ZEC) Beat Bitcoin This Week. Can the Privacy Coins Keep It Up?. Privacy coins Monero and Zcash just outpaced Bitcoin, but the reasons behind their gains reveal very different stories, and the outlook for each coin points in opposite directions.",
      "analysed": false
     },
     {
-     "id": "28fd4d75ccef9aa0",
-     "title": "US NY FED STAFF NOWCAST ESTIMATES US Q3 GDP GROWTH RATE AT 2.7%, Q4 AT 2.8%, UNCHANGED FROM PREVIOUS ESTIMATE, AFTER THIS WEEK'S ECONOMIC REPORTS",
-     "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOdjQ3ZEhXQ2kzQkpzQ3U2Y21PaktKdm5SUU9hak9EaXJnTnFiOUQtaDZCenJKUHdoVGpnWEN0dEd2U2pyTHhNeF9OUUlCRGZ5THktcHQ3M1NiUF9LX2ZydWxKbkVmdDQ1c21YNlZ6cDh4UVQ5MFJLdVFVb3JmQ2o3SnRHRVc5M2N1Z3VHczN6eDMtUnhlQXhLWFQ5dHRCZEN6UmladmNIbHZ0TWszMzVYLWRZX3VfMm9RanNnSEgwWmp3NGVWcm8tR3l6UGMwQkNWdTUwM19BbmtQZ0FmQXJnakMzQkl5VWJiczhhVGdVdmhydkVLaXRnZkVRTkxkcnlKVm9YWUxvR1hQRXM0Z2haTWczdjgxZjVqQzZrMWZ5ZnI3dllucEE?oc=5",
-     "publisher": "TradingView",
-     "published": "2026-10-23T17:44:00+00:00",
-     "symbols": [],
-     "relevance": 0.635,
+     "id": "2e4054961496a438",
+     "title": "How to Build $8,300 a Month in Dividend Income Without Owning a Single Bond",
+     "url": "https://247wallst.com/personal-finance/2026/10/25/how-to-build-8300-a-month-in-dividend-income-without-owning-a-single-bond/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T17:33:52+00:00",
+     "symbols": [
+      "CVX"
+     ],
+     "relevance": 0.55,
      "sentiment": 0.322,
      "impact": "medium",
-     "category": "central_bank",
-     "summary": "US NY FED STAFF NOWCAST ESTIMATES US Q3 GDP GROWTH RATE AT 2.7%, Q4 AT 2.8%, UNCHANGED FROM PREVIOUS ESTIMATE, AFTER THIS WEEK'S ECONOMIC REPORTS",
+     "category": "corporate",
+     "summary": "How to Build $8,300 a Month in Dividend Income Without Owning a Single Bond. Generating nearly $100,000 a year in dividend income sounds impossible without a massive nest egg, but the capital you actually need swings wildly depending on where you invest and what risks you are willing to absorb.",
      "analysed": false
     },
     {
-     "id": "8411a4bc2e1c6459",
-     "title": "Visa Just Gained 10% in a Month to a Record High: Take Profits, or Buy More?",
-     "url": "https://www.tikr.com/blog/visa-just-gained-10-in-a-month-to-a-record-high-take-profits-or-buy-more?ref=yahoofinance&.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-23T17:41:10+00:00",
-     "symbols": [
-      "V"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.995,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Visa Just Gained 10% in a Month to a Record High: Take Profits, or Buy More?. Key TakeawaysVisa stock is up 10% in the past month (through Tuesday\u2019s close) to a record high, against a 1% gain for the S&P 500. Earnings estimates barely moved, so the gain came from investors paying a higher multiple",
-     "analysed": true
-    },
-    {
-     "id": "0c508734630cfc61",
-     "title": "Taiwan Semiconductor (TSMC) Posted Record Profit and the Stock Still Fell. Here's What the Market Is Worried About.",
-     "url": "https://www.fool.com/investing/2026/10/23/taiwan-semiconductor-posted-record-profit-and-the/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-23T17:35:00+00:00",
-     "symbols": [
-      "AMD",
-      "AVGO"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Taiwan Semiconductor (TSMC) Posted Record Profit and the Stock Still Fell. Here's What the Market Is Worried About.. The chipmaking giant is still firing on all cylinders, but investors are becoming more cautious.",
-     "analysed": true
-    },
-    {
-     "id": "dc2aed2ca9287999",
-     "title": "Consumers across party lines are fed up with high gas prices",
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxORUpObG9XVHlJUUJsSmVBdUtkTWFxQ1cwcXh3clRlOGFxLS0tbTZwQzg4TW5ib1ZyMHcxRGN4UW5VTkxxa3Izb0FoVmVmZXg3X3Z6cS1zdllVNHk1cnNXUTQzTnltWE0zWk9kbFVkbFhfMnlZYmQ0aVZISzhJbEttZzFNY0VDM3lfSlE?oc=5",
-     "publisher": "CNN",
-     "published": "2026-10-23T17:30:10+00:00",
+     "id": "b87a17e05eeef278",
+     "title": "Iran Hormuz Talks Stall as Oil Tops $116",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FZEU0NnRUQmlMaXpjRko3NDk0Y1huQTNKT1ktVlNTeDRlVVdJeHk4d2xxRWdxTlhjd3JLbWJFQk92dnRNR2E4dUhSTENsT1NFbmY2eEthUjhSRG9hM2RzWi1QQXp3dldFQUhkS1lobmwxS1pm?oc=5",
+     "publisher": "Energi.Media",
+     "published": "2026-10-25T17:17:20+00:00",
      "symbols": [
       "XLE",
       "XOM",
       "CVX"
      ],
-     "relevance": 0.675,
+     "relevance": 0.5,
      "sentiment": 0.0,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "Consumers across party lines are fed up with high gas prices",
-     "analysed": false
-    },
-    {
-     "id": "4b744dbe4dcb313e",
-     "title": "The Cracks Are Spreading: The Recession Trade Is On (NASDAQ:TLT)",
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdUVteUtobGEzcUY1dDdia3BXazJoYjV5clBvWHdTT2lqV1BLY0U5Qkp1bE0yYnhTRVhvVVRWd0tOYVpsTVBVeHBHeGFPMEQtV2JLZzF0cFg1VXBQV204TUVGV3RTSzFHWWVBS2FYM1ZNTk5UbXRZdVRMMGVnWTd1akpIMnlPcmVRd184V0cxbGFKRFlzRWc?oc=5",
-     "publisher": "Seeking Alpha",
-     "published": "2026-10-23T17:25:23+00:00",
-     "symbols": [
-      "TLT"
-     ],
-     "relevance": 0.68,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "The Cracks Are Spreading: The Recession Trade Is On (NASDAQ:TLT)",
+     "impact": "low",
+     "category": "geopolitics",
+     "summary": "Iran Hormuz Talks Stall as Oil Tops $116",
      "analysed": false
     },
     {
@@ -8387,6 +9872,22 @@
      "impact": "low",
      "category": "markets",
      "summary": "Cathie Wood buys $24.5 million of tumbling tech stock. Here are Cathie Wood\u2019s latest moves.",
+     "analysed": false
+    },
+    {
+     "id": "fd5bf4a51b2382e3",
+     "title": "Cathie Wood buys $24.5 million of tumbling megacap stock",
+     "url": "https://www.thestreet.com/investing/stocks/cathie-wood-buys-24-5-million-meta-platforms-stock?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-10-25T17:07:00+00:00",
+     "symbols": [
+      "META"
+     ],
+     "relevance": 0.365,
+     "sentiment": -0.322,
+     "impact": "low",
+     "category": "markets",
+     "summary": "Cathie Wood buys $24.5 million of tumbling megacap stock. Here are Cathie Wood\u2019s latest moves.",
      "analysed": false
     },
     {
@@ -8476,6 +9977,24 @@
      "impact": "medium",
      "category": "crypto",
      "summary": "XRP Held Flat This Week While Bitcoin, Ethereum and Solana Fell. Is It Breaking Away From Bitcoin?. XRP barely budged this week while Bitcoin, Ethereum, and Solana tumbled, sparking talk of a long-awaited decoupling. But the correlation data, the ETF flows, and a brutal 30-day track record tell a more complicated story",
+     "analysed": false
+    },
+    {
+     "id": "8f53b3dc0097cf78",
+     "title": "Brent Crude Oil Price Hits $116: Market Outlook & Energy Stocks October 2026",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9CZjA3U3RMYnRwcUFQN3ZURGlLVk5mbEQxTmxGbGxUNWVPc3dVVFVER0NnOVFackk5bzdVdTZtbFBLVzhfYXlBOW4tRXMyU2tMdGpXempFNmJkMHYzWDQ1dVgyOWw3NFZlY1F4dFJ1Z0s4M01URlVwS3lR?oc=5",
+     "publisher": "Intellectia AI",
+     "published": "2026-10-25T16:35:56+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.465,
+     "sentiment": 0.0,
+     "impact": "low",
+     "category": "commodities",
+     "summary": "Brent Crude Oil Price Hits $116: Market Outlook & Energy Stocks October 2026",
      "analysed": false
     },
     {
@@ -8608,6 +10127,24 @@
      "analysed": false
     },
     {
+     "id": "0579f32424273569",
+     "title": "Fuel prices unchanged for sixth week despite oil rise",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE50ZERaLXhmUnhjcUpBVk9lM0R0VWJfREdKYXRlc3RCLWhMLWRYdFZublFBYmszbFNMOW9vUWxHLVNMdXVmdXRHLTYtN0xHRDA2RktSWWF5TEEwT28zdm1TVTlodkVrOWtuYy1JRWJ3SHJyRWxnQUE?oc=5",
+     "publisher": "Taipei Times",
+     "published": "2026-10-25T16:00:00+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.505,
+     "sentiment": -0.322,
+     "impact": "medium",
+     "category": "commodities",
+     "summary": "Fuel prices unchanged for sixth week despite oil rise",
+     "analysed": false
+    },
+    {
      "id": "381c93576d8078dd",
      "title": "Diversified Energy (DEC) Rises With Oil Prices As Undervalued Narrative Stays In Focus",
      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUFdLNVhheFkzRkQ0UVFOcVFzdnhSU0ZTbTNwQlN3Rzh1X1gxWFVUelUwQnhqMnhrRFV5VUFOa3ZsVF9NX1FDWkdlV2FHbThyeUFKb3FTYy1WY1dZeUF2WGxnM2JhQ3BpZGhuY1h3YlRiUmVNVXhVdEZFNXVYazJRdVBrd1RuMXJLN2szYk1HUVpQU3g3QzAwZnZSQk1Sd3FwbWdUbDAtd0VOWUtpS0wtd0lRcllHOXZYSTlJdVJJNkpVeldtaU01VkZJMNIB0AFBVV95cUxNNE95VXZTQVdFcGp0SUVFcHpseDF5LVRiMFpIZ3hZdXJNbUMyMDNNRXdDa1BrZWRSRURzTm9HSEUwcXFldEs0MUxNbzN3Z3NZam52UktPVkpLT3JyNGszRWZpVVBsNWVJLS1LMXplM01mVTA0czlGRldKa0FWUmlPdURlOTUxVHZPVTFseDlITHZJa3A5Z08wUmE0d2RoaDdlcDVrMUNBWnU4VjVvTmpDWUNnb2pmR3g5VUoxVlExMk9YSVAwRmlmWmFjdXlocjE0?oc=5",
@@ -8637,6 +10174,20 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Federal Reserve Interest Rate Predictions Next Week: October 27\u201328, 2026",
+     "analysed": false
+    },
+    {
+     "id": "00b29a5a911fc75f",
+     "title": "Zanu PF\u2019s Machacha Boasts Of Defeating Sanctions",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNREFpUVZXcEFwYmhySUxEN2JLTVVGLUNfaFRDOUFTZWZPcVQ5Q3dHM3YyQUh6UTdRTVNTN0k0Z2ZLdVY0MkRfaWJCN0dKc1RNVS0wd3FmWWlQTmROVkswN1ByN2RVU3NBd0t4MVY5RDViVkx5Y0hwTzQ3SnRDdWdsUjlpNnhFQlRmakE?oc=5",
+     "publisher": "ZimEye",
+     "published": "2026-10-25T15:13:26+00:00",
+     "symbols": [],
+     "relevance": 0.46,
+     "sentiment": -0.322,
+     "impact": "low",
+     "category": "geopolitics",
+     "summary": "Zanu PF\u2019s Machacha Boasts Of Defeating Sanctions",
      "analysed": false
     },
     {
@@ -8706,43 +10257,13 @@
      "category": "product",
      "summary": "GOOGL's $250B AI Chip Opportunity Takes Aim At NVDA \u2014 Beth Kindig Says Google Is Going After \u2018One Of The Most Profitable Hardware Businesses\u2019. Kindig said Google's advantage may not come from simply building a faster accelerator, but from attacking the economics of AI infrastructure.",
      "analysed": false
-    },
-    {
-     "id": "467b14e132fd7ab2",
-     "title": "The Smartest Industrials Stock to Buy With $500 Right Now",
-     "url": "https://www.fool.com/investing/2026/10/25/the-smartest-industrials-stock-to-buy-with-500-now/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-10-25T14:20:00+00:00",
-     "symbols": [
-      "NVDA"
-     ],
-     "relevance": 0.405,
-     "sentiment": 0.583,
-     "impact": "low",
-     "category": "markets",
-     "summary": "The Smartest Industrials Stock to Buy With $500 Right Now. Eaton combines AI-driven growth with an established, profitable industrial business.",
-     "analysed": false
-    },
-    {
-     "id": "780818b585e4a9b9",
-     "title": "Bangladesh per capita GDP forecast to outstrip India\u2019s: What does it mean?",
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMURjakhBU1dsaF9CX0pUSTAwaHJwUjY3OVh3TzBUTmFRN3lhaHRQbmItN1d6VHFtQWZkcEFmTHAwVVVzQkdBdUVHT0hpbjlQQXdJcUtqT3JCS1Z1VkZJVURIZHVCS3hlbVZKaXRYZWF1S0VJQUhqR0xSbGs2cE5pWjRjZGZMYUE3cFFRa09LeDZXdHFqM0l5NlBQS21WVUhma0RqakNScE55NXlMTXNyQ1RtY9IBuAFBVV95cUxQZVd6NW1INHl1REVia0RxTnJJakFqQkxzMHhya01xdDNkLTZ0RmRSOWl5S2FrTlAtNFpCNXZicm8tNUZzQ1psckxoOFBiWlpFSTI5WEdkRWVLYlZUaUNveTJPNl9GNkdaSElMaks2bFJFZGt2dlFIeDd2ZDlUcTN1R00wTU5oc3pjcEtIOGs4Y0dxaG5ZNVM0eE9TVTNGdEdUQ2JTVEJGRHJwNmFSYlphc2dvVVlNM2FP?oc=5",
-     "publisher": "Al Jazeera",
-     "published": "2026-10-25T14:13:15+00:00",
-     "symbols": [],
-     "relevance": 0.56,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Bangladesh per capita GDP forecast to outstrip India\u2019s: What does it mean?",
-     "analysed": false
     }
    ],
-   "stored": 1190,
+   "stored": 1220,
    "untriaged": 0
   },
   "macro": {
-   "generated_at": "2026-10-25T17:21:31.658750+00:00",
+   "generated_at": "2026-10-25T17:52:53.197452+00:00",
    "indicators": {
     "fed_funds": {
      "id": "fed_funds",
@@ -8964,7 +10485,7 @@
      "series": "^VIX",
      "change_1m_pct": 24.12,
      "trend": "up",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "ust_10y_live": {
      "id": "ust_10y_live",
@@ -8978,7 +10499,7 @@
      "series": "^TNX",
      "change_1m_pct": -3.37,
      "trend": "down",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "ust_3m_live": {
      "id": "ust_3m_live",
@@ -8992,7 +10513,7 @@
      "series": "^IRX",
      "change_1m_pct": -0.88,
      "trend": "down",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "dxy": {
      "id": "dxy",
@@ -9006,7 +10527,7 @@
      "series": "DX-Y.NYB",
      "change_1m_pct": 0.51,
      "trend": "up",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "wti": {
      "id": "wti",
@@ -9020,7 +10541,7 @@
      "series": "CL=F",
      "change_1m_pct": 9.15,
      "trend": "up",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "gold": {
      "id": "gold",
@@ -9034,7 +10555,7 @@
      "series": "GC=F",
      "change_1m_pct": -6.75,
      "trend": "down",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     },
     "copper": {
      "id": "copper",
@@ -9048,7 +10569,7 @@
      "series": "HG=F",
      "change_1m_pct": -3.14,
      "trend": "down",
-     "fetched_at": "2026-10-25T17:21:31.658750+00:00"
+     "fetched_at": "2026-10-25T17:52:53.197452+00:00"
     }
    },
    "relevance": {
@@ -9261,7 +10782,7 @@
    }
   },
   "technicals": {
-   "generated_at": "2026-10-25T17:21:31.658750+00:00",
+   "generated_at": "2026-10-25T17:52:53.197452+00:00",
    "symbols": {
     "SPY": {
      "score": 0.0,
