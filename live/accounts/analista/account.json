@@ -1,0 +1,92 @@
+{
+ "version": 1,
+ "kind": "live",
+ "run_id": "38482bd4582e",
+ "config": {
+  "initial_cash": "10000",
+  "timeframe": "1d",
+  "fees": "alpaca",
+  "execution": {
+   "slippage_model": "sqrt_impact",
+   "fixed_slippage_bps": 0.0,
+   "impact_coefficient": 1.0,
+   "slippage_noise_bps": 0.0,
+   "participation_rate": 0.1,
+   "limit_touch_fill_prob": 0.3,
+   "spread": {
+    "vol_elasticity": 0.5,
+    "max_spread_bps": 500.0,
+    "spread_multiplier": 1.0
+   },
+   "use_observed_quotes": true,
+   "use_l2_book": true
+  },
+  "margin": {
+   "max_leverage": "1",
+   "maintenance_margin": "0.25",
+   "allow_short": false,
+   "margin_interest_annual": "0.07",
+   "short_borrow_fee_annual": "0.005",
+   "cash_interest_annual": "0"
+  },
+  "seed": 0,
+  "warmup_bars": 60,
+  "vol_lookback": 20,
+  "scenario": null,
+  "max_position_pct": 30.0,
+  "risk_free_annual": 0.0,
+  "log_dir": null
+ },
+ "portfolio": {
+  "initial_cash": "10000",
+  "cash": "10000",
+  "margin": {
+   "max_leverage": "1",
+   "maintenance_margin": "0.25",
+   "allow_short": false,
+   "margin_interest_annual": "0.07",
+   "short_borrow_fee_annual": "0.005",
+   "cash_interest_annual": "0"
+  },
+  "positions": [],
+  "fills": [],
+  "closed_trades": [],
+  "equity_curve": [
+   [
+    "2026-10-25T17:15:30.542960+00:00",
+    "10000",
+    "10000",
+    "0",
+    "0"
+   ],
+   [
+    "2026-10-25T17:15:30.543032+00:00",
+    "10000",
+    "10000",
+    "0",
+    "0"
+   ]
+  ],
+  "total_fees": "0",
+  "total_slippage": "0",
+  "total_financing": "0",
+  "peak_equity": "10000",
+  "max_drawdown": "0"
+ },
+ "orders": [],
+ "open_order_ids": [],
+ "order_id_counter": 1,
+ "fill_id_counter": 1,
+ "rng_exec": {
+  "bit_generator": "PCG64",
+  "state": {
+   "state": 209726722718981422394759158150246685477,
+   "inc": 273096372282096494456322297521699537235
+  },
+  "has_uint32": 0,
+  "uinteger": 0
+ },
+ "last_sync": "2026-10-25T17:15:30.543032+00:00",
+ "bankrupt": false,
+ "path_checked": {}
+}

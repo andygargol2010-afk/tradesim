@@ -39,7 +39,7 @@
  },
  "portfolio": {
   "initial_cash": "10000",
-  "cash": "10000",
+  "cash": "10000.00000000000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -65,11 +65,18 @@
     "10000",
     "0",
     "0"
+   ],
+   [
+    "2026-10-25T17:15:30.536085+00:00",
+    "10000.00000000000000000000000000000",
+    "10000.00000000000000000000000000000",
+    "0",
+    "0"
    ]
   ],
   "total_fees": "0",
   "total_slippage": "0",
-  "total_financing": "0",
+  "total_financing": "0E-39",
   "peak_equity": "10000",
   "max_drawdown": "0"
  },
@@ -86,6 +93,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-25T05:34:44.409385+00:00",
- "bankrupt": false
+ "last_sync": "2026-10-25T17:15:30.536085+00:00",
+ "bankrupt": false,
+ "path_checked": {}
 }

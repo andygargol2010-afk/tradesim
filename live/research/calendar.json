@@ -1,375 +1,100 @@
 {
- "generated_at": "2024-03-04T14:45:00+00:00",
+ "generated_at": "2026-10-25T17:14:47.988490+00:00",
  "window": [
-  "2024-02-26",
-  "2024-04-03"
+  "2026-10-18",
+  "2026-11-24"
  ],
  "events": [
   {
-   "date": "2024-02-29",
-   "title": "GDP (second estimate)",
-   "category": "growth",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-02-29T13:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "135ea93b3a37"
-  },
-  {
-   "date": "2024-02-29",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-02-29T13:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "42ad7c2d8364"
-  },
-  {
-   "date": "2024-03-01",
-   "title": "ISM manufacturing PMI",
-   "category": "growth",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-01T15:00:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "a71274d3b830"
-  },
-  {
-   "date": "2024-03-05",
-   "title": "ISM services PMI",
-   "category": "growth",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-05T15:00:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "3b2875717d9e"
-  },
-  {
-   "date": "2024-03-07",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-03-07T13:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "b3ad5e7c82c2"
-  },
-  {
-   "date": "2024-03-08",
-   "title": "Employment Situation (nonfarm payrolls, unemployment rate)",
-   "category": "employment",
+   "date": "2026-10-21",
+   "title": "META quarterly earnings",
+   "category": "earnings",
    "importance": "high",
-   "country": "US",
-   "when": "2024-03-08T13:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "ef419f86e369"
-  },
-  {
-   "date": "2024-03-08",
-   "title": "UMich consumer sentiment (preliminary)",
-   "category": "consumer",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-03-08T15:00:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "ab0ca6349479"
-  },
-  {
-   "date": "2024-03-12",
-   "title": "CPI (consumer prices)",
-   "category": "inflation",
-   "importance": "high",
-   "country": "US",
-   "when": "2024-03-12T12:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "45747a59dde9"
-  },
-  {
-   "date": "2024-03-14",
-   "title": "PPI (producer prices)",
-   "category": "inflation",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-14T12:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "3c09abb0af78"
-  },
-  {
-   "date": "2024-03-14",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-03-14T12:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "82577d1b27b0"
-  },
-  {
-   "date": "2024-03-15",
-   "title": "Retail sales",
-   "category": "consumer",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-15T12:30:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "f1214eb76bbe"
-  },
-  {
-   "date": "2024-03-15",
-   "title": "Quarterly options/futures expiry (quad witching)",
-   "category": "options_expiry",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-15T20:00:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "expiry of index and equity options; volume and volatility spikes are common",
-   "id": "4fa8219b285b"
-  },
-  {
-   "date": "2024-03-20",
-   "title": "FOMC rate decision + economic projections (SEP) and Powell press conference",
-   "category": "central_bank",
-   "importance": "high",
-   "country": "US",
-   "when": "2024-03-20T18:00:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "federalreserve.gov",
-   "notes": "meeting 2024-03-19 to 2024-03-20; statement 14:00 ET, press conference 14:30 ET",
-   "id": "6d6b7bd30422"
-  },
-  {
-   "date": "2024-03-21",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-03-21T12:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "2a11706b40d0"
-  },
-  {
-   "date": "2024-03-28",
-   "title": "GDP (third estimate)",
-   "category": "growth",
-   "importance": "medium",
-   "country": "US",
-   "when": "2024-03-28T12:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "c348e22b30e1"
-  },
-  {
-   "date": "2024-03-28",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2024-03-28T12:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "891d9ecd178b"
-  },
-  {
-   "date": "2024-03-29",
-   "title": "PCE inflation / personal income and outlays",
-   "category": "inflation",
-   "importance": "high",
-   "country": "US",
-   "when": "2024-03-29T12:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "bf867414d0c6"
-  },
-  {
-   "date": "2024-03-29",
-   "title": "US stock market holiday (NYSE/Nasdaq closed)",
-   "category": "holiday",
-   "importance": "medium",
    "country": "US",
    "when": null,
    "symbols": [
-    "*equities"
+    "META"
+   ],
+   "forecast": "EPS 8.55, revenue 74.9B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "ce133b973694"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "TSLA quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "TSLA"
+   ],
+   "forecast": "EPS 0.49, revenue 29.3B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "f04d10057209"
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Initial jobless claims",
+   "category": "employment",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-10-22T12:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
    ],
    "forecast": null,
    "previous": null,
    "actual": null,
    "confirmed": true,
-   "source": "exchange",
-   "notes": "no stock trading; crypto keeps trading",
-   "id": "1980c2a4b037"
+   "source": "rules",
+   "notes": "published every Thursday",
+   "id": "1dca4259c999"
   },
   {
-   "date": "2024-04-01",
-   "title": "ISM manufacturing PMI",
-   "category": "growth",
-   "importance": "medium",
+   "date": "2026-10-23",
+   "title": "PG ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
    "country": "US",
-   "when": "2024-04-01T14:00:00+00:00",
+   "when": null,
    "symbols": [
-    "*equities"
+    "PG"
    ],
    "forecast": null,
    "previous": null,
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "bc4b1f603006"
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "e34d73a4201f"
   },
   {
-   "date": "2024-04-03",
-   "title": "ISM services PMI",
-   "category": "growth",
-   "importance": "medium",
+   "date": "2026-10-26",
+   "title": "CAT ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
    "country": "US",
-   "when": "2024-04-03T14:00:00+00:00",
+   "when": null,
    "symbols": [
-    "*equities"
+    "CAT"
    ],
    "forecast": null,
    "previous": null,
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "ec13f115f166"
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "147bd8c91cf4"
   },
   {
    "date": "2026-10-27",
@@ -388,6 +113,60 @@
    "source": "forexfactory",
    "notes": "",
    "id": "6c6d9f154244"
+  },
+  {
+   "date": "2026-10-27",
+   "title": "V quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "V"
+   ],
+   "forecast": "EPS 3.44, revenue 12.1B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "742af347fb38"
+  },
+  {
+   "date": "2026-10-27",
+   "title": "KO quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "KO"
+   ],
+   "forecast": "EPS 0.88, revenue 12.9B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "a248654222b4"
+  },
+  {
+   "date": "2026-10-27",
+   "title": "BA quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "BA"
+   ],
+   "forecast": "EPS -0.20, revenue 24.4B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "a36c3abcfb4d"
   },
   {
    "date": "2026-10-28",
@@ -446,7 +225,7 @@
   {
    "date": "2026-10-28",
    "title": "Overnight Rate",
-   "category": "other",
+   "category": "central_bank",
    "importance": "high",
    "country": "CA",
    "when": "2026-10-28T13:45:00+00:00",
@@ -481,6 +260,24 @@
   },
   {
    "date": "2026-10-28",
+   "title": "FOMC rate decision and Powell press conference",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-10-28T18:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "federalreserve.gov",
+   "notes": "meeting 2026-10-27 to 2026-10-28; statement 14:00 ET, press conference 14:30 ET",
+   "id": "aa90fbbb0aa1"
+  },
+  {
+   "date": "2026-10-28",
    "title": "Federal Funds Rate",
    "category": "central_bank",
    "importance": "high",
@@ -496,6 +293,42 @@
    "source": "forexfactory",
    "notes": "",
    "id": "8b4997698c79"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "MSFT quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MSFT"
+   ],
+   "forecast": "EPS 4.72, revenue 90.8B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "b4cf61b26bfa"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "GOOGL quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "GOOGL"
+   ],
+   "forecast": "EPS 2.97, revenue 127.8B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "7f064105f6bf"
   },
   {
    "date": "2026-10-29",
@@ -681,6 +514,78 @@
    "id": "74b9f78d1373"
   },
   {
+   "date": "2026-10-29",
+   "title": "AMZN quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "AMZN"
+   ],
+   "forecast": "EPS 1.98, revenue 202.2B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "5f09442521da"
+  },
+  {
+   "date": "2026-10-29",
+   "title": "MA quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MA"
+   ],
+   "forecast": "EPS 5.17, revenue 9.7B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "d229c0ab8984"
+  },
+  {
+   "date": "2026-10-29",
+   "title": "LLY quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "LLY"
+   ],
+   "forecast": "EPS 6.67, revenue 22.6B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "6658bdddad33"
+  },
+  {
+   "date": "2026-10-29",
+   "title": "CAT quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "CAT"
+   ],
+   "forecast": "EPS 7.03, revenue 20.7B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "fbb3e329db60"
+  },
+  {
    "date": "2026-10-30",
    "title": "BOJ Press Conference",
    "category": "central_bank",
@@ -715,12 +620,466 @@
    "source": "forexfactory",
    "notes": "",
    "id": "3866f7b26986"
+  },
+  {
+   "date": "2026-10-30",
+   "title": "XOM quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "XOM"
+   ],
+   "forecast": "EPS 4.03, revenue 106.0B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "82e0ce4fb2c0"
+  },
+  {
+   "date": "2026-10-30",
+   "title": "CVX quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "CVX"
+   ],
+   "forecast": "EPS 4.83, revenue 61.6B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "faeec0f60115"
+  },
+  {
+   "date": "2026-10-30",
+   "title": "COST ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "COST"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "beaa56a6df4a"
+  },
+  {
+   "date": "2026-11-02",
+   "title": "ISM manufacturing PMI",
+   "category": "growth",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-02T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "5515568278fd"
+  },
+  {
+   "date": "2026-11-02",
+   "title": "AAPL quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "AAPL"
+   ],
+   "forecast": "EPS 1.98, revenue 113.4B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "a9495d0a53d8"
+  },
+  {
+   "date": "2026-11-03",
+   "title": "AMD quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "AMD"
+   ],
+   "forecast": "EPS 1.93, revenue 13.1B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "ef82f1a1d8cd"
+  },
+  {
+   "date": "2026-11-03",
+   "title": "PFE quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "PFE"
+   ],
+   "forecast": "EPS 0.73, revenue 15.9B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "b637e35b366b"
+  },
+  {
+   "date": "2026-11-04",
+   "title": "ISM services PMI",
+   "category": "growth",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-04T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "93f5e7f46b8e"
+  },
+  {
+   "date": "2026-11-04",
+   "title": "MCD quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MCD"
+   ],
+   "forecast": "EPS 3.38, revenue 7.3B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "b1d7c6d8e388"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Initial jobless claims",
+   "category": "employment",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-11-05T13:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "rules",
+   "notes": "published every Thursday",
+   "id": "0c72e809fdb5"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Employment Situation (nonfarm payrolls, unemployment rate)",
+   "category": "employment",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-06T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "f657cafafaa9"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "PFE ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "PFE"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "9704db90cb30"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "CPI (consumer prices)",
+   "category": "inflation",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-12T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "562c8d2eaddd"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Initial jobless claims",
+   "category": "employment",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-11-12T13:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "rules",
+   "notes": "published every Thursday",
+   "id": "ffce9af0ff14"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "PPI (producer prices)",
+   "category": "inflation",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-13T13:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "d2896facfd3c"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "UMich consumer sentiment (preliminary)",
+   "category": "consumer",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-11-13T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "d3b033fe6ddf"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "Retail sales",
+   "category": "consumer",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-17T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "135020d1ca93"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "NVDA quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "forecast": "EPS 2.47, revenue 109.0B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "561a51c2eeb8"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "HD quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "HD"
+   ],
+   "forecast": "EPS 3.84, revenue 42.7B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "cd51d79c1706"
+  },
+  {
+   "date": "2026-11-18",
+   "title": "FOMC minutes",
+   "category": "central_bank",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-18T19:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "federalreserve.gov",
+   "notes": "minutes of the 2026-10-28 meeting (published 3 weeks later)",
+   "id": "b84ede22fb83"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Initial jobless claims",
+   "category": "employment",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-11-19T13:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "rules",
+   "notes": "published every Thursday",
+   "id": "8f3e00b6ebcf"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "WMT quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "WMT"
+   ],
+   "forecast": "EPS 0.64, revenue 187.2B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "19a11c34685e"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "MSFT ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MSFT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "29821a4c96ba"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Monthly options expiry",
+   "category": "options_expiry",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-11-20T21:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "rules",
+   "notes": "expiry of index and equity options; volume and volatility spikes are common",
+   "id": "8fcbf309a7f9"
+  },
+  {
+   "date": "2026-11-24",
+   "title": "JNJ ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "JNJ"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "23a1f28beb5e"
   }
  ],
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "19 events this week",
-  "companies": "0 earnings/dividend events"
+  "companies": "26 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null

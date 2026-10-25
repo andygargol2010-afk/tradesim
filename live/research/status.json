@@ -1,42 +1,61 @@
 {
- "started_at": "2024-03-04T14:45:00+00:00",
+ "started_at": "2026-10-25T17:14:47.988490+00:00",
  "errors": {},
- "llm": "no ANTHROPIC_API_KEY",
+ "llm": "local",
+ "engines": [
+  "local (gratis, sin IA)"
+ ],
  "macro": {
   "indicators": 23
  },
  "calendar": {
-  "events": 39,
+  "events": 59,
   "researched_at": null
  },
+ "news_engines": {
+  "local": 1211
+ },
  "news": {
-  "fetched": 633,
-  "new": 0,
-  "stored": 655,
-  "triaged": 0,
-  "deep_analyses": 0,
-  "untriaged_backlog": 655
+  "fetched": 1149,
+  "new": 543,
+  "stored": 1186,
+  "triaged": 1186,
+  "deep_analyses": 25,
+  "untriaged_backlog": 0
  },
  "technicals": {
-  "symbols": 5
+  "symbols": 50
  },
  "llm_usage": {
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 11.9,
+ "duration_s": 30.5,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
  "config": {
   "enabled": true,
-  "dir": "live/research",
+  "dir": "/home/runner/work/tradesim/tradesim/live/research",
   "news": true,
   "macro": true,
   "calendar": true,
   "technicals": true,
   "analyze": true,
+  "engines": [
+   "gemini",
+   "groq",
+   "anthropic"
+  ],
+  "free_models": {},
+  "daily_requests": {
+   "gemini": 150,
+   "groq": 400,
+   "anthropic": 2000
+  },
+  "triage_engine": "local",
+  "max_local_deep_per_run": 25,
   "triage_model": "claude-haiku-5-5",
   "deep_model": "claude-sonnet-5-5",
   "calendar_model": "claude-opus-5-5",
@@ -45,9 +64,9 @@
   "deep_min_relevance": 0.6,
   "read_articles": true,
   "calendar_days": 30,
-  "keep_news_days": 7.0,
-  "news_max_age_days": 3.0,
-  "calendar_research_hours": 20.0,
+  "keep_news_days": 7,
+  "news_max_age_days": 3,
+  "calendar_research_hours": 20,
   "language": "es"
  }
 }
