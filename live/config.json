@@ -68,7 +68,8 @@
       "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 días está sobre la de 50 (máx. 15% por activo). Sirve de referencia."
+      "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 días está sobre la de 50 (máx. 15% por activo). Sirve de referencia.",
+      "stop_loss_atr": 4.5
     },
     {
       "id": "buy-hold",
