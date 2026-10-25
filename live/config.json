@@ -116,6 +116,17 @@
       "broker": "paper",
       "description": "No hace trading: mantiene una cartera diversificada (índices 43 % (máx. 25 % por activo), bonos 15 %, oro 7 %, 8 acciones de calidad 28 %, cripto 5 %), revisa las acciones una vez al año y rebalancea cada trimestre o si una clase de activo se desvía de su banda. Sin stops ni market timing.",
       "auto_stop": false
+    },
+    {
+      "id": "meta",
+      "name": "Meta-agente (Hedge)",
+      "agent": "HedgeMetaAgent",
+      "params": {},
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Reparte su capital entre los demás agentes con pesos multiplicativos (algoritmo Hedge): cada día gana peso quien más rinde y pierde quien menos. Copia la cartera combinada. Garantía formal: a largo plazo rinde casi como el mejor agente (arrepentimiento ≤ √T).",
+      "auto_stop": false
     }
   ],
   "weekend_crypto": true,

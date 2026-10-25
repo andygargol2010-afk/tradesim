@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 from decimal import Decimal
 from types import SimpleNamespace
 
+import numpy as np
 import pytest
 
 from tradesim import SyntheticProvider
@@ -364,3 +365,26 @@ def test_protective_stops_do_not_block_decisions(tmp_path, universe):
     trader = runner.load_trader(runner.config.accounts[0], runner.base_provider)
     assert trader.open_order_ids and all(trader.orders[i].reduce_only for i in trader.open_order_ids)
     assert trader.observe().open_orders == 0  # automatic stops rest for the life of a position
+
+
+def test_hedge_meta_agent_follows_the_best_agent(tmp_path, universe):
+    import pandas as pd
+
+    from tradesim.agents.meta import HedgeMetaAgent, hedge_weights
+
+    idx = pd.date_range("2024-01-01", periods=300, freq="D")
+    eq = pd.DataFrame({"good": 100 * 1.001 ** np.arange(300), "bad": 100 * 0.999 ** np.arange(300)}, index=idx)
+    w = hedge_weights(eq, eta=2.5)
+    assert w["good"].iloc[-1] > 0.7 and w["good"].is_monotonic_increasing
+    runner, clock = make_runner(tmp_path, universe, accounts=[
+        AccountSpec("bh", "BH", "BuyAndHoldAgent", {}, auto_stop=False),
+        AccountSpec("ma", "MA", "MovingAverageCrossAgent", {}),
+        AccountSpec("meta", "Meta", "HedgeMetaAgent", {}, auto_stop=False)])
+    for d in range(3):
+        clock.t = datetime(2024, 3, 4, 14, 45, tzinfo=timezone.utc) + timedelta(days=d)
+        runner.run("decide", export=False)
+    state = json.loads((tmp_path / "accounts" / "meta" / "agent.json").read_text())["state"]
+    assert set(state["log_w"]) == {"bh", "ma"} and state["history"]
+    pos = runner.load_trader(runner.config.accounts[2], runner.base_provider).portfolio.open_positions()
+    assert pos  # it holds the combined portfolio of the other agents
+    assert HedgeMetaAgent().act is not None

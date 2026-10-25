@@ -154,12 +154,15 @@ def default_groups(symbols: Sequence[str], universe: Any = None) -> tuple[dict[s
 
 
 def build_panel(frames: dict[str, pd.DataFrame | pd.Series], groups: dict[str, str], markets: dict[str, str],
-                horizon: int | None = None, last_only: bool = False) -> list[dict[str, Any]]:
+                horizon: int | None = None, last_only: bool = False, every_days: int = 1,
+                cache: dict | None = None) -> list[dict[str, Any]]:
     """Feature vectors for every (symbol, bar) of ``frames`` (or only each symbol's last bar).
 
     With ``horizon`` each sample also gets its raw target ``y`` (open-to-open log return over ``horizon`` bars in
     volatility units, see :func:`_entry_exit`) and the date it becomes known (``realized``). Market and group context
-    only use bars dated on or before the sample's bar: no look-ahead."""
+    only use bars dated on or before the sample's bar: no look-ahead. ``every_days`` > 1 keeps one calendar day in
+    that many (the same days for every asset), e.g. 7 for weekly, non-overlapping samples on large universes.
+    ``cache`` (a dict kept by the caller) memoises each bar's own features between calls."""
     mkt: dict[str, tuple[pd.DatetimeIndex, list[np.ndarray | None]]] = {}
     for m in set(markets.values()):
         if m in frames:
@@ -170,8 +173,18 @@ def build_panel(frames: dict[str, pd.DataFrame | pd.Series], groups: dict[str, s
     rows = []
     for sym, bars in frames.items():
         idx = _closes(bars).index
+        cols = ([bars.to_numpy(dtype=float)] if isinstance(bars, pd.Series) else
+                [bars[k].to_numpy(dtype=float) if k in bars else None for k in ("close", "open", "high", "low", "volume")])
         for t in ([len(idx) - 1] if last_only else range(MIN_BARS - 1, len(idx))):
-            f = _frame_features(bars, t + 1)
+            if every_days > 1 and idx[t].toordinal() % every_days:
+                continue
+            key = (sym, idx[t])
+            f = cache.get(key) if cache is not None else None
+            if f is None:
+                lo = max(0, t + 1 - MIN_BARS)
+                f = price_features(*[None if a is None else a[lo: t + 1] for a in cols])
+                if cache is not None and f is not None and t < len(idx) - 1:  # the last bar may still change
+                    cache[key] = f
             if f is not None:
                 rows.append((sym, t, idx[t], f[0], f[1]))
     by_group: dict[tuple[Any, str], list[float]] = defaultdict(list)
@@ -402,6 +415,7 @@ class OnlineLinearAgent(Agent):
         self.model = RecursiveLeastSquares(len(FEATURES), forgetting, ridge)
         self.gbm = GradientBoostingModel()
         self.gbm_attempt: str | None = None  # last (re)training attempt
+        self._feature_cache: dict = {}  # in-memory only: features of past bars do not change
         self.pending: dict[str, list[dict[str, Any]]] = {}  # symbol -> samples waiting for their outcome
         # [combined prediction made at the time, realised, sample date, linear prediction, boosting prediction]
         self.history: list[list[Any]] = []
@@ -479,7 +493,7 @@ class OnlineLinearAgent(Agent):
         if groups is None or markets is None:
             groups, markets = default_groups(list(frames))
         self._set_forgetting(len(frames))
-        samples = build_panel(frames, groups, markets, horizon=self.horizon)
+        samples = build_panel(frames, groups, markets, horizon=self.horizon, cache=self._feature_cache)
         demean_targets(samples)
         created: dict[str, list[int]] = defaultdict(list)
         realised: dict[str, list[int]] = defaultdict(list)
@@ -562,7 +576,7 @@ class OnlineLinearAgent(Agent):
         elif self._gbm_due(obs.timestamp, len(symbols)):
             self.gbm_attempt = obs.timestamp.isoformat()
             samples = build_panel(self._frames(obs, symbols + context, self.pretrain_bars), groups, markets,
-                                  horizon=self.horizon)
+                                  horizon=self.horizon, cache=self._feature_cache)
             demean_targets(samples)
             self.gbm.fit(samples, self.horizon, now=obs.timestamp.isoformat())
         lookback = max(MIN_BARS + 8 + self.horizon, 80)

@@ -224,6 +224,23 @@ class LiveRunner:
 
         return ResearchStore(rc.dir)
 
+    def peer_snapshot(self, exclude: str) -> dict[str, dict[str, Any]]:
+        """Equity and portfolio weights of the other accounts (for meta-agents such as HedgeMetaAgent)."""
+        out = {}
+        for spec in self.config.accounts:
+            if spec.id == exclude or not spec.enabled or spec.agent == "HedgeMetaAgent":
+                continue
+            try:
+                pf = self.load_trader(spec, getattr(self, "_provider", None) or self.base_provider).portfolio
+            except Exception as exc:  # noqa: BLE001 - a broken account is simply left out
+                log.warning("peer %s unavailable: %s", spec.id, exc)
+                continue
+            eq = float(pf.equity)
+            if eq > 0:
+                out[spec.id] = {"name": spec.name, "equity": eq,
+                                "weights": {p.symbol: float(p.market_value) / eq for p in pf.open_positions()}}
+        return out
+
     def holdings(self) -> set[str]:
         """Symbols held by any account (their news gets priority in the deep analysis)."""
         out: set[str] = set()
@@ -260,6 +277,7 @@ class LiveRunner:
         t0 = time.perf_counter()
         now = self.clock()
         provider = RunCacheProvider(self.base_provider)
+        self._provider = provider
         research = self.refresh_research(provider) if mode in ("decide", "research") else None
         # research mode also syncs the accounts like "mark": resting stop-loss / take-profit orders are
         # checked every hour and the equity curve gets an hourly point.
@@ -387,6 +405,8 @@ class LiveRunner:
         agent = self.load_agent(spec)
         if hasattr(agent, "attach_research"):
             agent.attach_research(self.research_store())
+        if hasattr(agent, "attach_peers"):
+            agent.attach_peers(self.peer_snapshot(exclude=spec.id))
         if getattr(agent, "client", "absent") is None and self.llm_client not in ("auto", None):
             agent.client = self.llm_client
         pf = trader.portfolio

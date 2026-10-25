@@ -1,0 +1,60 @@
+# Nightly honest validation: purged cross-validation of the learner on a large sample of the universe
+# (5 years, weekly samples) and walk-forward backtests of every rule-based account after costs vs buy & hold.
+# Results: live/validation.json (survivorship bias warning included).
+name: Nightly validation
+
+on:
+  schedule:
+    - cron: "41 3 * * *"
+  workflow_dispatch:
+    inputs:
+      max_symbols:
+        description: "symbols of the universe for the CV (0 = all 2028)"
+        default: "600"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-validation
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[yfinance,crypto,ml]"
+
+      - name: Bar cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/bars
+          key: bars-${{ github.run_id }}
+          restore-keys: bars-
+
+      - name: Validate
+        run: |
+          python scripts/validate.py --cv --universe all --max-symbols "${{ github.event.inputs.max_symbols || '600' }}" \
+            --years 5 --backtests
+
+      - name: Commit report
+        run: |
+          git config user.name "tradesim-bot"
+          git config user.email "tradesim-bot@users.noreply.github.com"
+          git add live/validation.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "validation: nightly report $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 10
+          done
+          exit 1

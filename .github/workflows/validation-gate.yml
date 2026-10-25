@@ -1,0 +1,32 @@
+# A change to an agent or to the live accounts only goes live if it improves out of sample: every changed account
+# is backtested (2 years, after costs) in its new and its current version and must beat both the current version
+# and buy & hold. Fails the check otherwise.
+name: Validation gate
+
+on:
+  pull_request:
+    paths:
+      - "tradesim/agents/**"
+      - "tradesim/simulator.py"
+      - "tradesim/patterns.py"
+      - "live/config.json"
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[yfinance,crypto,ml]"
+
+      - name: Gate
+        run: python scripts/validate.py --gate --baseline-ref "origin/${{ github.base_ref }}" --years 2

@@ -64,14 +64,26 @@ y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se ac
 
 | Cuenta | Agente | Cómo decide / aprende |
 |---|---|---|
-| Aprendiz lineal | `OnlineLinearAgent` | Mínimos cuadrados recursivos con olvido: aprende cada día qué patrones de precio preceden a las subidas (pre-entrenado con ~3 años) y compra las mejores predicciones |
-| RSI adaptativo | `WalkForwardRSIAgent` | RSI cuyo ajuste se re-optimiza cada semana simulando variantes en el último año (con costes) |
+| Aprendiz lineal | `OnlineLinearAgent` | Predice qué activos batirán a la media en 5 sesiones (de apertura a apertura, lo que realmente puede operar) con dos modelos: lineal online (olvido por día) y LightGBM re-entrenado cada semana, pesados por su IC fuera de muestra. Solo opera si su IC es significativo y si la ventaja esperada paga 1,5 veces los costes |
+| RSI adaptativo | `WalkForwardRSIAgent` | RSI cuyo ajuste se re-optimiza cada semana simulando variantes en el último año (con costes), puntuadas por la mediana del Sharpe de 4 trimestres |
 | Cruce de medias | `MovingAverageCrossAgent` | Seguidor de tendencia fijo (referencia sin aprendizaje) |
 | Buy & hold | `BuyAndHoldAgent` | Compra todo el primer día y mantiene: la vara de medir |
-| Analista discrecional | `DiscretionaryAgent` | Sin regla fija: estudia patrones técnicos, macro por tipo de activo, noticias analizadas y el calendario del mes, y decide la cartera con tesis, catalizadores e invalidación; revisa sus decisiones y anota lecciones. Decide con IA gratuita (Gemini/Groq) si hay clave, o con el motor local gratuito |
+| Analista discrecional | `DiscretionaryAgent` | Sin regla fija: estudia patrones técnicos, macro por tipo de activo, noticias analizadas y el calendario del mes, y decide la cartera con tesis, catalizadores e invalidación. Cada posición lleva un pronóstico (probabilidad de subida, horizonte, retorno esperado) que se puntúa (Brier, calibración por convicción, régimen y patrón); solo guarda lecciones respaldadas por datos (n ≥ 30, t > 2). Su motor local aprende los pesos de técnico/noticias/tendencia. Decide con IA gratuita (Gemini/Groq) si hay clave, o con el motor local gratuito |
+| Inversor tradicional | `TraditionalInvestorAgent` | Cartera de política diversificada, rebalanceo trimestral o por bandas |
+| Meta-agente (Hedge) | `HedgeMetaAgent` | Reparte el capital entre los demás agentes con pesos multiplicativos (`w_i *= exp(η·r_i)`): converge al mejor agente con arrepentimiento ≤ √T |
 
-El aprendiz lineal también usa **patrones técnicos** como variables (ruptura del rango de 20 días, calidad de la
-tendencia, señal de velas) y aprende por sí mismo cuáles anticipan subidas.
+El aprendiz usa como variables precio, **patrones técnicos** (ruptura del rango de 20 días, calidad de la tendencia,
+velas), volumen, contexto de mercado (SPY; BTC para cripto), fuerza frente al mercado y a su sector, e interacciones
+con el régimen. Aprende el retorno *relativo* a la media de los activos (elige activos, no adivina el mercado) y su
+olvido es por día (λ por muestra = λ_día^(1/N)), así no olvida antes por tener más activos.
+
+**Validación honesta** (`scripts/validate.py`, `.github/workflows/nightly-validation.yml`, cada noche): validación
+cruzada con purga y embargo del aprendiz sobre 600 activos del universo y 5 años (muestras semanales, IC de rango
+fuera de muestra del modelo lineal, LightGBM y su media), y backtests hacia adelante de cada cuenta tras costes frente a
+buy & hold, en `live/validation.json`. **Puerta de promoción** (`.github/workflows/validation-gate.yml`, en cada pull
+request que toque agentes o la configuración): cada cuenta cambiada se prueba en su versión nueva y actual y solo pasa
+si mejora el Sharpe tras costes (y el IC, si lo mide) y supera a buy & hold. Ojo: `universe.csv` solo tiene los
+integrantes actuales de los índices (sesgo de supervivencia), así que los resultados sobre el pasado son optimistas.
 
 **Cómo funciona.** `.github/workflows/live-trading.yml` ejecuta `scripts/live_run.py` con GitHub Actions:
 
