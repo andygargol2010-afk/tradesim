@@ -53,6 +53,8 @@ class AccountSpec:
     auto_stop: bool = True  # automatic trailing stop-loss for unprotected positions
     stop_loss_atr: float | None = None  # per-account ATR multiple for it (None: risk.stop_loss_atr)
     drawdown_control: bool = True  # gradual de-risking in drawdowns (off for the buy & hold benchmark)
+    shadow_of: str | None = None  # candidate version of that account, promoted only if better (trading.promotion)
+    history: list[dict[str, Any]] = field(default_factory=list)  # promotions it went through
 
     def build_agent(self) -> Agent:
         if ":" in self.agent:

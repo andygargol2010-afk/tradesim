@@ -9,9 +9,10 @@ from tradesim.agents.examples import BuyAndHoldAgent, MovingAverageCrossAgent, R
 from tradesim.agents.investor import TraditionalInvestorAgent
 from tradesim.agents.learning import OnlineLinearAgent, WalkForwardRSIAgent
 from tradesim.agents.meta import HedgeMetaAgent
+from tradesim.agents.stacking import SignalStackingAgent
 
 __all__ = [
     "HOLD", "Action", "Agent", "BuyAndHoldAgent", "CancelOrders", "ClaudePortfolioManager", "DiscretionaryAgent", "ClosePosition", "FunctionAgent", "HedgeMetaAgent",
-    "MovingAverageCrossAgent", "Observation", "OnlineLinearAgent", "OrderIntent", "PolicyAgent", "RandomAgent", "SetExits", "SimpleRSIAgent",
+    "MovingAverageCrossAgent", "Observation", "OnlineLinearAgent", "OrderIntent", "PolicyAgent", "RandomAgent", "SetExits", "SignalStackingAgent", "SimpleRSIAgent",
     "TargetWeights", "TraditionalInvestorAgent", "WalkForwardRSIAgent",
 ]

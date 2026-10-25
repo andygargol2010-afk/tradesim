@@ -64,6 +64,7 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
     """Everything the dashboard shows for one account."""
     meta = read_json(account_dir / "meta.json") if (account_dir / "meta.json").exists() else {}
     base: dict[str, Any] = {"id": spec.id, "name": spec.name, "description": spec.description, "agent": spec.agent,
+                            "shadow_of": spec.shadow_of,
                             "params": spec.params, "broker": spec.broker, "fees": spec.fees,
                             "initial_cash": spec.initial_cash, "meta": meta}
     state_path = account_dir / "account.json"

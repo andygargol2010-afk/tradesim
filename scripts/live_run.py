@@ -46,7 +46,7 @@ def main() -> int:
         export_dashboard(config)
         print(f"exported {config.dashboard_file}")
         return 0
-    record = LiveRunner(config).run(args.mode)
+    record = LiveRunner(config, config_path=args.config).run(args.mode)
     print(f"{record['mode']} run at {record['started_at']} took {record['duration_s']}s")
     if record.get("chronicle"):
         print("  chronicle:", record["chronicle"])

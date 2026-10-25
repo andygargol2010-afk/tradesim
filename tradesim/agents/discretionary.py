@@ -31,7 +31,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Sequence
 
 from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent, SetExits
-from tradesim.agents.forecasts import ForecastBook, PatternStats, SignalLearner
+from tradesim.agents.forecasts import CaseMemory, ForecastBook, PatternStats, SignalLearner
 from tradesim.data.base import DataUnavailableError
 
 log = logging.getLogger(__name__)
@@ -155,6 +155,7 @@ class DiscretionaryAgent(Agent):
         self.signal_learner = SignalLearner()
         self.book = ForecastBook()
         self.pattern_stats = PatternStats()
+        self.cases = CaseMemory()
         self.notes = ""
         self.usage_total: dict[str, Any] = {}
         self.steps = 0
@@ -206,6 +207,8 @@ class DiscretionaryAgent(Agent):
         self.pattern_stats.record(obs.timestamp, reports, prices, sigmas, self._regime()[0])
         signals, news = self._signal_scores(obs.timestamp, symbols, reports)
         self.signal_learner.record(obs.timestamp, signals, prices, sigmas)
+        self.cases.resolve(obs.timestamp, prices, float(obs.equity))
+        self._case_state = self._market_state(obs, signals, reports)
         usage, errors, sources = Usage(), [], []
         decision, engine, dossier = None, None, ""
         for b in self._backends():
@@ -248,6 +251,9 @@ class DiscretionaryAgent(Agent):
         self._remember(obs, decision, targets, review)
         self.book.record(obs.timestamp, [p for p in decision.get("positions", []) if p.get("symbol") in targets],
                          prices, decision.get("regime"), self._pattern_names(reports))
+        self.cases.record(obs.timestamp, self._case_state, prices, float(obs.equity),
+                          f"{decision.get('regime')}; " + ", ".join(f"{s} {w:.0%}" for s, w in sorted(
+                              targets.items(), key=lambda kv: -kv[1])[:6]))
         self._last = {"status": "ok", "engine": engine, "engine_errors": errors,
                       "market_view": decision.get("market_view"), "regime": decision.get("regime"),
                       "key_risks": decision.get("key_risks"), "targets": {s: round(w, 4) for s, w in targets.items()},
@@ -255,7 +261,9 @@ class DiscretionaryAgent(Agent):
                       "changes": changes, "watchlist": decision.get("watchlist"), "lessons_new": decision.get("lessons"),
                       "adjustments": notes, "sources": sources[:15], "usage": usage.to_dict(),
                       "dossier_chars": len(dossier),
-                      "diary": decision.get("diary") if isinstance(decision.get("diary"), dict) else None}
+                      "diary": decision.get("diary") if isinstance(decision.get("diary"), dict) else None,
+                      "scores": {s: [round(v["tech"], 3), round(v["news"], 3), round(v["trend"], 3)]
+                                 for s, v in signals.items()}}
         return actions
 
     def _reports(self, obs: Observation, symbols: list[str]) -> dict[str, Any]:
@@ -324,6 +332,10 @@ class DiscretionaryAgent(Agent):
                 f"- {d['date'][:10]} ({d.get('regime')}, equity {d.get('equity'):.0f}): {d.get('summary', '')[:300]}"
                 for d in self.decisions[-(3 if compact else 5):]))
         parts.append("YOUR TRACK RECORD (measured, not opinions):\n" + self.book.summary_text())
+        state = getattr(self, "_case_state", None)
+        if state:
+            parts.append("MOST SIMILAR PAST DAYS (by macro, trend, volatility, breadth and news) AND WHAT HAPPENED "
+                         "NEXT:\n" + self.cases.summary_text(state, 5 if compact else 10))
         proven = [r for r in self.pattern_stats.table(40) if r["n"] >= 30 and r["t"] is not None and abs(r["t"]) > 2]
         if proven:
             parts.append("CHART PATTERNS WITH A MEASURED EDGE in this universe (signed 5-day relative return; others "
@@ -420,6 +432,29 @@ class DiscretionaryAgent(Agent):
                         "trend": {"bullish": 1.0, "bearish": -1.0}.get(trend.get("direction"), 0.0)
                         * float(trend.get("quality") or 0)}
         return out, news
+
+    def _market_state(self, obs: Observation, signals: dict[str, dict[str, float]], reports: dict[str, Any]
+                      ) -> dict[str, float | None]:
+        """Today's state for the case memory: macro, SPY trend and volatility, breadth, average news tone."""
+        import numpy as np
+
+        ind = (self.research.load("macro") or {}).get("indicators", {}) if self.research is not None else {}
+        val = lambda k: (ind.get(k) or {}).get("value")  # noqa: E731
+        state: dict[str, float | None] = {"vix": val("vix"), "hy_spread": val("hy_spread"),
+                                          "curve_10y_2y": val("curve_10y_2y"), "spy_ret_20": None, "spy_vol_20": None}
+        try:
+            c = obs.closes("SPY", 21)
+            if len(c) >= 21 and (c > 0).all():
+                lr = np.diff(np.log(c))
+                state["spy_ret_20"] = round(float(lr.sum()) * 100, 2)
+                state["spy_vol_20"] = round(float(lr.std(ddof=1) * np.sqrt(252)) * 100, 2)
+        except (DataUnavailableError, KeyError, ValueError):
+            pass
+        trends = [1.0 if (r.trend or {}).get("direction") == "bullish" else 0.0 for r in reports.values()]
+        state["breadth"] = round(float(np.mean(trends)), 3) if trends else None
+        news = [v["news"] for v in signals.values() if v["news"]]
+        state["news_mean"] = round(float(np.mean(news)), 3) if news else None
+        return state
 
     @staticmethod
     def _sigmas(obs: Observation, symbols: list[str]) -> dict[str, float]:
@@ -809,13 +844,15 @@ class DiscretionaryAgent(Agent):
                 "signal_ic": self.signal_learner.ic(),
                 "signal_ic_by_horizon": self.signal_learner.signal_ic(),
                 "pattern_edges": self.pattern_stats.table(),
+                "case_memory_days": len(self.cases.cases),
                 "theses": self.theses}
 
     def state_dict(self) -> dict[str, Any]:
         return {"theses": self.theses, "decisions": self.decisions, "lessons": self.lessons, "reviews": self.reviews,
                 "notes": self.notes, "usage_total": self.usage_total, "steps": self.steps,
                 "last_engine": self.last_engine, "signal_learner": self.signal_learner.state_dict(),
-                "forecasts": self.book.state_dict(), "pattern_stats": self.pattern_stats.state_dict()}
+                "forecasts": self.book.state_dict(), "pattern_stats": self.pattern_stats.state_dict(),
+                "cases": self.cases.state_dict()}
 
     def load_state_dict(self, state: dict[str, Any]) -> None:
         if not state:
@@ -826,6 +863,7 @@ class DiscretionaryAgent(Agent):
         self.signal_learner.load_state_dict(state.get("signal_learner"))
         self.book.load_state_dict(state.get("forecasts"))
         self.pattern_stats.load_state_dict(state.get("pattern_stats"))
+        self.cases.load_state_dict(state.get("cases"))
         self.lessons = (self.book.lessons() + self.signal_learner.lessons())[:15]  # old free-text lessons dropped
         self.notes = state.get("notes", "")
         self.usage_total = state.get("usage_total", {})

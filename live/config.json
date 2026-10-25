@@ -119,6 +119,16 @@
       "auto_stop": false
     },
     {
+      "id": "combinador",
+      "name": "Combinador de señales",
+      "agent": "SignalStackingAgent",
+      "params": {},
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Modelo de segundo nivel: combina las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias), con pesos distintos en mercados de tensión, aprendiendo de los resultados cuál conviene en cada situación. Solo opera cuando su acierto (IC) es significativo."
+    },
+    {
       "id": "meta",
       "name": "Meta-agente (Hedge)",
       "agent": "HedgeMetaAgent",

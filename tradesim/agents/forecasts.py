@@ -361,3 +361,83 @@ class PatternStats:
     def load_state_dict(self, d: dict[str, Any] | None) -> None:
         if d:
             self.pending, self.stats = d.get("pending", []), d.get("stats", {})
+
+
+CASE_FIELDS = ["vix", "hy_spread", "curve_10y_2y", "spy_ret_20", "spy_vol_20", "breadth", "news_mean"]
+
+
+class CaseMemory:
+    """Verifiable memory of situations: every day the market state (macro, technicals, news) is stored with what
+    happened next (SPY and BTC 5 and 20 days later, best and worst assets, the analyst's own result). When deciding,
+    the most similar past days (standardised distance over the fields both days have) and their outcomes are
+    shown to the model: cases, not opinions."""
+
+    def __init__(self, keep: int = 750):
+        self.keep = keep
+        self.cases: list[dict[str, Any]] = []
+
+    def record(self, now: datetime, state: dict[str, float | None], prices: dict[str, float], equity: float,
+               decision: str = "") -> None:
+        day = now.date().isoformat()
+        if self.cases and self.cases[-1]["date"][:10] == day:
+            return
+        self.cases.append({"date": now.isoformat(), "state": state, "prices": {k: round(v, 6) for k, v in prices.items()},
+                           "equity": equity, "decision": decision[:300], "outcome": {}})
+        del self.cases[:-self.keep]
+
+    def resolve(self, now: datetime, prices: dict[str, float], equity: float) -> None:
+        for c in self.cases:
+            age = _days(c["date"], now)
+            for h, cal in (("5d", 7), ("20d", 28)):
+                if h in c["outcome"] or age < cal:
+                    continue
+                rets = {s: prices[s] / p - 1 for s, p in c["prices"].items() if p > 0 and prices.get(s)}
+                if not rets:
+                    continue
+                ranked = sorted(rets, key=rets.get)
+                c["outcome"][h] = {"SPY": round(rets.get("SPY", float("nan")) * 100, 2) if "SPY" in rets else None,
+                                   "BTC-USD": round(rets["BTC-USD"] * 100, 2) if "BTC-USD" in rets else None,
+                                   "best": [[s, round(rets[s] * 100, 1)] for s in ranked[-3:][::-1]],
+                                   "worst": [[s, round(rets[s] * 100, 1)] for s in ranked[:3]],
+                                   "my_result_pct": round((equity / c["equity"] - 1) * 100, 2) if c["equity"] else None}
+
+    def similar(self, state: dict[str, float | None], k: int = 10) -> list[dict[str, Any]]:
+        done = [c for c in self.cases if "5d" in c["outcome"]]
+        if len(done) < 3:
+            return []
+        cols = [f for f in CASE_FIELDS if state.get(f) is not None]
+        vals = {f: np.array([c["state"].get(f) for c in done if c["state"].get(f) is not None], dtype=float)
+                for f in cols}
+        scale = {f: (v.std() if len(v) > 2 and v.std() > 0 else 1.0) for f, v in vals.items()}
+        scored = []
+        for c in done:
+            common = [f for f in cols if c["state"].get(f) is not None]
+            if len(common) < max(2, len(cols) // 2):
+                continue
+            d = math.sqrt(sum(((state[f] - c["state"][f]) / scale[f]) ** 2 for f in common) / len(common))
+            scored.append((d, c))
+        scored.sort(key=lambda x: x[0])
+        return [{"date": c["date"][:10], "distance": round(d, 2), "state": c["state"], "outcome": c["outcome"],
+                 "decision": c["decision"]} for d, c in scored[:k]]
+
+    def summary_text(self, state: dict[str, float | None], k: int = 10) -> str:
+        sims = self.similar(state, k)
+        if not sims:
+            return f"Not enough past days with known outcomes yet ({len(self.cases)} recorded)."
+        lines = []
+        for s in sims:
+            o5, o20 = s["outcome"].get("5d", {}), s["outcome"].get("20d", {})
+            st = ", ".join(f"{f} {v:.2f}" for f, v in s["state"].items() if v is not None)
+            lines.append(f"- {s['date']} (distance {s['distance']}): {st}. Next 5d: SPY {o5.get('SPY')}%, BTC "
+                         f"{o5.get('BTC-USD')}%, best {o5.get('best')}, worst {o5.get('worst')}, my result "
+                         f"{o5.get('my_result_pct')}%" + (f"; 20d: SPY {o20.get('SPY')}%, my result "
+                                                           f"{o20.get('my_result_pct')}%" if o20 else "")
+                         + (f". I then decided: {s['decision']}" if s["decision"] else ""))
+        return "\n".join(lines)
+
+    def state_dict(self) -> dict[str, Any]:
+        return {"cases": self.cases}
+
+    def load_state_dict(self, d: dict[str, Any] | None) -> None:
+        if d:
+            self.cases = d.get("cases", [])

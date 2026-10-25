@@ -573,3 +573,20 @@ def test_signal_ic_by_horizon_drops_useless_news_and_pattern_edges():
     w, src = sl.weights()
     assert w["news"] < 0.3 and src != "fijos"  # unproven news loses weight (learned or verified)
     assert ps.edge("hammer", "neutral") == 1.0 and ps.edge("doji", "neutral") in (0.0, -1.0)
+
+
+def test_case_memory_finds_similar_days_with_outcomes():
+    from datetime import datetime, timedelta, timezone
+
+    from tradesim.agents.forecasts import CaseMemory
+
+    t0 = datetime(2025, 1, 1, tzinfo=timezone.utc)
+    mem = CaseMemory()
+    for d in range(40):
+        calm = d % 2 == 0
+        mem.record(t0 + timedelta(days=d), {"vix": 13.0 if calm else 30.0, "spy_ret_20": 3.0 if calm else -6.0},
+                   {"SPY": 100.0 + d, "BTC-USD": 50.0}, 100.0, "calma" if calm else "tensión")
+        mem.resolve(t0 + timedelta(days=d), {"SPY": 100.0 + d, "BTC-USD": 50.0}, 100.0)
+    sims = mem.similar({"vix": 31.0, "spy_ret_20": -5.0}, k=5)
+    assert len(sims) == 5 and all(s["decision"] == "tensión" for s in sims) and sims[0]["outcome"]["5d"]["SPY"] > 0
+    assert "Next 5d" in mem.summary_text({"vix": 31.0, "spy_ret_20": -5.0})

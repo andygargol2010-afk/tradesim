@@ -127,8 +127,9 @@ class LiveRunner:
 
     def __init__(self, config: LiveConfig, provider: DataProvider | None = None,
                  universe: AssetUniverse | None = None, clock: Callable[[], datetime] | None = None,
-                 llm_client: Any = "auto"):
+                 llm_client: Any = "auto", config_path: str | Path | None = None):
         self.config = config
+        self.config_path = Path(config_path) if config_path else None  # needed to promote shadow accounts
         self.universe = universe or AssetUniverse.default()
         self.base_provider = provider or default_live_provider(config.crypto_exchange, config.stocks_data)
         self.clock = clock or (lambda: datetime.now(timezone.utc))
@@ -228,7 +229,7 @@ class LiveRunner:
         """Equity and portfolio weights of the other accounts (for meta-agents such as HedgeMetaAgent)."""
         out = {}
         for spec in self.config.accounts:
-            if spec.id == exclude or not spec.enabled or spec.agent == "HedgeMetaAgent":
+            if spec.id == exclude or not spec.enabled or spec.agent == "HedgeMetaAgent" or spec.shadow_of:
                 continue
             try:
                 pf = self.load_trader(spec, getattr(self, "_provider", None) or self.base_provider).portfolio
@@ -237,9 +238,25 @@ class LiveRunner:
                 continue
             eq = float(pf.equity)
             if eq > 0:
-                out[spec.id] = {"name": spec.name, "equity": eq,
+                out[spec.id] = {"name": spec.name, "equity": eq, "explain": self._latest_explain(spec),
                                 "weights": {p.symbol: float(p.market_value) / eq for p in pf.open_positions()}}
         return out
+
+    def _latest_explain(self, spec: AccountSpec, max_age_days: float = 2.0) -> dict[str, Any] | None:
+        """The account's most recent decision explanation (its signals), if recent."""
+        path = self.account_dir(spec) / "journal.jsonl"
+        if not path.exists():
+            return None
+        now = self.clock()
+        for line in reversed(path.read_text().splitlines()[-30:]):
+            try:
+                e = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if e.get("explain"):
+                age = (now - datetime.fromisoformat(e["time"])).total_seconds() / 86400
+                return e["explain"] if age <= max_age_days else None
+        return None
 
     def holdings(self) -> set[str]:
         """Symbols held by any account (their news gets priority in the deep analysis)."""
@@ -301,6 +318,11 @@ class LiveRunner:
                                                "trace": traceback.format_exc(limit=5)}
                 self._journal(spec, {"time": now.isoformat(), "mode": mode, "status": "error",
                                      "message": f"{type(exc).__name__}: {exc}"})
+        if mode == "decide":
+            try:
+                record["shadows"] = self.review_shadows(now)
+            except Exception as exc:  # noqa: BLE001
+                log.warning("shadow review failed: %s", exc)
         record["data_errors"] = provider.errors
         record["duration_s"] = round(time.perf_counter() - t0, 2)
         runs = Path(self.config.runs_log)
@@ -348,7 +370,11 @@ class LiveRunner:
             elif not trader.symbols:
                 status, message = "skipped", "no prices available"
             else:
+                restored = self._maybe_rollback(spec, meta, now)
                 entry = self._decide(spec, trader, now, restrict=None if window_ok else partial, exposure=scale)
+                if restored:
+                    entry["rollback"] = f"IC of the last 20 days < 0: learned state restored from {restored}"
+                self._checkpoint(spec, now)
                 trimmed = self._enforce_exposure(trader, scale)
                 if trimmed:
                     entry.setdefault("orders", []).extend(trimmed)
@@ -394,6 +420,58 @@ class LiveRunner:
             meta.pop("halted_since", None)
             return 1.0, 0.0, f"reactivated after {days:.0f} days stopped: peak reset to {equity:.2f}"
         return 0.0, dd, f"resumes in {self.config.risk.reactivate_after_days - days:.0f} days"
+
+    def _maybe_rollback(self, spec: AccountSpec, meta: dict[str, Any], now: datetime) -> str | None:
+        from tradesim.trading.promotion import recent_ic, rollback
+
+        try:
+            return rollback(self.account_dir(spec), now, recent_ic(self.load_agent(spec), 20), meta)
+        except Exception as exc:  # noqa: BLE001 - never block a decision over this
+            log.warning("%s: rollback check failed: %s", spec.id, exc)
+            return None
+
+    def _checkpoint(self, spec: AccountSpec, now: datetime) -> None:
+        from tradesim.trading.promotion import checkpoint, recent_ic
+
+        try:
+            ic = recent_ic(self.load_agent(spec), 60)
+            if ic is not None:
+                checkpoint(self.account_dir(spec), now, ic)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("%s: checkpoint failed: %s", spec.id, exc)
+
+    def review_shadows(self, now: datetime, min_days: int = 28, max_days: int = 120) -> list[dict[str, Any]]:
+        """Promote each shadow account that beats the account it shadows with statistical evidence."""
+        from tradesim.trading.promotion import compare, daily_returns, promote, recent_ic
+
+        out = []
+        by_id = {a.id: a for a in self.config.accounts}
+        for sh in [a for a in self.config.accounts if a.shadow_of and a.enabled]:
+            pr = by_id.get(sh.shadow_of)
+            created = self._meta(sh).get("created_at")
+            if pr is None or not created:
+                continue
+            age = (now - datetime.fromisoformat(created)).days
+            res = compare(daily_returns(self.account_dir(pr) / "journal.jsonl"),
+                          daily_returns(self.account_dir(sh) / "journal.jsonl"))
+            ic_p, ic_s = recent_ic(self.load_agent(pr), 60), recent_ic(self.load_agent(sh), 60)
+            res.update(shadow=sh.id, primary=pr.id, age_days=age, ic_primary=ic_p, ic_shadow=ic_s)
+            better = res["better"] and (ic_p is None or ic_s is None or ic_s > ic_p)
+            if age >= min_days and better:
+                if self.config_path is not None:
+                    promote(self.config_path, pr.id, sh.id, Path(self.config.state_dir))
+                    for k in ("agent", "params", "auto_stop", "stop_loss_atr"):
+                        setattr(pr, k, getattr(sh, k))
+                    self.config.accounts = [a for a in self.config.accounts if a.id != sh.id]
+                    res["action"] = "promoted"
+                else:
+                    res["action"] = "would promote (runner has no config_path)"
+            elif age >= max_days:
+                res["action"] = "not better after the trial period: keep the current version"
+            else:
+                res["action"] = "trial running"
+            out.append(res)
+        return out
 
     @staticmethod
     def _enforce_exposure(trader, scale: float, tolerance: float = 0.02) -> list[dict[str, Any]]:
