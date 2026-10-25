@@ -159,7 +159,7 @@ class BuyAndHoldAgent(Agent):
         syms = self.symbols or obs.symbols
         if obs.open_orders or not syms:
             return []
-        self._done = True
+        self._done = obs.tradable is None  # partial session (weekend crypto): finish the rest on the next full one
         return TargetWeights({s: self.invested_fraction / len(syms) for s in syms})
 
     def state_dict(self) -> dict[str, Any]:

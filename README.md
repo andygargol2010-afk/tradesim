@@ -109,6 +109,12 @@ El stop solo sube, nunca baja (stop dinámico); si el precio ya está bajo el st
 (`risk.stop_loss_atr`; `null` lo desactiva), dinámico: sube con el precio y nunca baja. El analista usa los suyos y
 Buy & hold queda excluido (`"auto_stop": false` en su cuenta) para seguir siendo una referencia pura.
 
+**Cripto en fin de semana y festivos** (`"weekend_crypto": true`). Con la bolsa cerrada cada agente decide igual que
+un día laborable, comparando los 50 activos (acciones a su último precio), y solo se ejecuta la parte cripto: una
+compra de cripto ocurre solo si entra en su selección frente a las acciones, es decir, si la prefiere a lo que podría
+comprar el lunes; si no, espera. Las ventas de cripto se ejecutan; las compras usan solo efectivo libre (nunca se venden
+acciones para financiarlas) y se reducen si no alcanza. El resto de la decisión queda en el diario como aplazado.
+
 **Límites de riesgo** (`live/config.json` → `risk`): máximo 30 % por posición, la cuenta deja de abrir posiciones con un
 drawdown ≥ 35 %, máximo 60 órdenes por decisión. Una cuenta que falla no detiene a las demás.
 

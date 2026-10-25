@@ -247,3 +247,43 @@ def test_yfinance_ignores_stale_out_of_session_quotes(monkeypatch):
     assert not quotes["AAA"].modelled and quotes["AAA"].bid == 99.98
     for s in ("BBB", "CCC", "DDD"):
         assert quotes[s].modelled and quotes[s].bid == quotes[s].ask == 100.0
+
+
+def test_weekend_crypto_partial_session(tmp_path, universe):
+    sat = Clock(datetime(2024, 3, 9, 14, 45, tzinfo=timezone.utc))
+    runner, clock = make_runner(tmp_path, universe, clock=sat,
+                                accounts=[AccountSpec("bh", "BH", "BuyAndHoldAgent", {}, auto_stop=False)])
+    assert runner.run("decide", export=False)["accounts"]["bh"]["status"] == "skipped"  # opt-in
+    runner.config.weekend_crypto = True
+    clock.t = clock.t.replace(day=10)
+    rec = runner.run("decide", export=False)["accounts"]["bh"]
+    assert rec["status"] == "ok"
+    journal = [json.loads(x) for x in (tmp_path / "accounts" / "bh" / "journal.jsonl").read_text().splitlines()]
+    last = [e for e in journal if e.get("session") == "partial"][-1]
+    filled = {o["symbol"] for o in last["orders"] if o["status"] != "rejected"}
+    assert filled == {"BTC-USD", "ETH-USD"}  # stocks wait for Monday
+    assert set(last["deferred_to_next_session"]) == {"SPY", "AAPL", "MSFT"}
+    clock.t = clock.t.replace(day=11)  # Monday: the stock part is executed
+    runner.run("decide", export=False)
+    data = export_dashboard(runner.config, universe, now=clock.t)
+    assert data["accounts"][0]["summary"]["open_positions"] == len(SYMBOLS)
+
+
+def test_partial_session_keeps_only_open_markets_and_free_cash(tmp_path, universe):
+    from tradesim.agents.base import ClosePosition, OrderIntent, TargetWeights
+    from tradesim.trading.runner import _fund_from_cash
+
+    runner, _ = make_runner(tmp_path, universe)
+    trader = SimpleNamespace(portfolio=SimpleNamespace(equity=Decimal(100), cash=Decimal(50),
+                                                       quantity=lambda s: Decimal(0), open_positions=lambda: []),
+                             get_price=lambda s: {"mid": 10.0, "ask": 10.0})
+    entry: dict = {}
+    # the agent prefers stocks: crypto is not bought just because it is the only open market
+    out = runner._restrict([TargetWeights({"SPY": 0.5, "AAPL": 0.5})], {"BTC-USD", "ETH-USD"}, trader, entry)
+    assert out == [] and entry["deferred_to_next_session"] == ["AAPL", "SPY"]
+    out = runner._restrict([TargetWeights({"SPY": 0.4, "BTC-USD": 0.4}), ClosePosition("MSFT")],
+                           {"BTC-USD"}, trader, entry)
+    assert [(a.symbol, a.side, a.notional) for a in out] == [("BTC-USD", "buy", 40.0)]
+    big = _fund_from_cash([OrderIntent.buy("BTC-USD", notional=80), OrderIntent.buy("ETH-USD", notional=20)],
+                          trader, entry)
+    assert sum(a.notional for a in big) == pytest.approx(49.5) and "funding" in entry

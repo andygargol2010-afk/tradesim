@@ -121,6 +121,8 @@ class Observation:
         cash / equity: account values in USD.
         positions: signed quantity per symbol with an open position (exact ``Decimal``).
         open_orders: number of working orders.
+        tradable: ``None`` normally; when some markets are closed (weekends, holidays), the symbols whose
+            orders can execute now. Decide as usual: only the part of the decision on these symbols is sent.
     """
 
     timestamp: datetime
@@ -133,6 +135,7 @@ class Observation:
     positions: dict[str, Decimal]
     open_orders: int
     _sim: "BaseSimulator | None" = field(default=None, repr=False, compare=False)
+    tradable: list[str] | None = None  # set when only some markets are open (e.g. crypto at weekends)
 
     def position(self, symbol: str) -> Decimal:
         return self.positions.get(symbol, Decimal(0))

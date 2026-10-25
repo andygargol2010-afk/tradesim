@@ -76,6 +76,9 @@ class LiveConfig:
     risk: RiskLimits = field(default_factory=RiskLimits)
     schedule: list[dict[str, str]] = field(default_factory=list)  # informative, shown on the dashboard
     research: dict[str, Any] = field(default_factory=dict)  # see tradesim.research.refresh.ResearchConfig
+    # Decide also when only some markets are open (crypto at weekends / on US holidays): agents decide on the
+    # whole universe as usual and only the part on open markets is executed, funded with free cash only.
+    weekend_crypto: bool = False
 
     def research_config(self):
         """Research settings; research is off unless the config has a ``research`` section."""

@@ -79,6 +79,42 @@ def _research_digest(r: dict[str, Any] | None) -> dict[str, Any] | None:
     return out
 
 
+def _buy_notional(a: Any, trader) -> float | None:
+    from tradesim.agents.base import OrderIntent
+
+    if not isinstance(a, OrderIntent) or a.side.lower() != "buy":
+        return None
+    if a.notional is not None:
+        return float(a.notional)
+    if a.percent_of_equity is not None:
+        return float(a.percent_of_equity) / 100 * float(trader.portfolio.equity)
+    if a.quantity is not None:
+        return float(a.quantity) * float(trader.get_price(a.symbol)["ask"])
+    return None
+
+
+def _fund_from_cash(entries: list[Any], trader, entry: dict[str, Any]) -> list[Any]:
+    """Partial sessions: buys may only use free cash (positions in closed markets cannot be sold to fund them)."""
+    from dataclasses import replace
+
+    wanted = {i: n for i, a in enumerate(entries) if (n := _buy_notional(a, trader))}
+    total = sum(wanted.values())
+    cash = float(trader.portfolio.cash) * 0.99  # small buffer for fees and spread
+    if total <= cash or total <= 0:
+        return entries
+    k = max(cash, 0.0) / total
+    entry["funding"] = f"buys scaled to {k:.0%} of the request: free cash {cash:.2f} < {total:.2f}"
+    out = []
+    for i, a in enumerate(entries):
+        if i in wanted:
+            n = round(wanted[i] * k, 2)
+            if n >= 1.0:
+                out.append(replace(a, notional=n, quantity=None, percent_of_equity=None))
+        else:
+            out.append(a)
+    return out
+
+
 class LiveRunner:
     """Runs the accounts of a :class:`LiveConfig` once (``run("decide")`` or ``run("mark")``).
 
@@ -230,6 +266,8 @@ class LiveRunner:
         prices = self.price_snapshot(provider)
         quoted = [s for s, p in prices.items() if "error" not in p]
         window_ok, window_msg = self.decision_window_open(now)
+        open_now = [s for s in self.config.symbols if s in quoted and is_market_open(self.universe.get(s), now)]
+        partial = open_now if (not window_ok and self.config.weekend_crypto and open_now) else None
         record: dict[str, Any] = {"started_at": now.isoformat(), "mode": mode, "accounts": {}, "prices": prices}
         if research is not None:
             record["research"] = _research_digest(research)
@@ -237,7 +275,8 @@ class LiveRunner:
             if not spec.enabled:
                 continue
             try:
-                record["accounts"][spec.id] = self._run_account(spec, provider, mode, now, quoted, window_ok, window_msg)
+                record["accounts"][spec.id] = self._run_account(spec, provider, mode, now, quoted, window_ok, window_msg,
+                                                                   partial)
             except Exception as exc:  # one broken account must not stop the others
                 log.exception("account %s failed", spec.id)
                 record["accounts"][spec.id] = {"status": "error", "message": f"{type(exc).__name__}: {exc}",
@@ -257,7 +296,8 @@ class LiveRunner:
         return record
 
     def _run_account(self, spec: AccountSpec, provider: RunCacheProvider, mode: str, now: datetime,
-                     quoted: list[str], window_ok: bool, window_msg: str) -> dict[str, Any]:
+                     quoted: list[str], window_ok: bool, window_msg: str,
+                     partial: list[str] | None = None) -> dict[str, Any]:
         trader = self.load_trader(spec, provider)
         meta = self._meta(spec)
         meta.setdefault("created_at", now.isoformat())
@@ -270,14 +310,14 @@ class LiveRunner:
             drawdown = float((pf.peak_equity - pf.equity) / pf.peak_equity * 100) if pf.peak_equity > 0 else 0.0
             if meta.get("last_decision_date") == today:
                 status, message = "skipped", "already decided today"
-            elif not window_ok:
+            elif not window_ok and partial is None:
                 status, message = "skipped", window_msg
             elif drawdown >= self.config.risk.halt_drawdown_pct:
                 status, message = "halted", f"drawdown {drawdown:.1f}% >= halt limit {self.config.risk.halt_drawdown_pct}%"
             elif not trader.symbols:
                 status, message = "skipped", "no prices available"
             else:
-                entry = self._decide(spec, trader, now)
+                entry = self._decide(spec, trader, now, restrict=None if window_ok else partial)
                 status = entry["status"]
                 message = entry.get("message", "")
                 meta["last_decision_date"] = today
@@ -295,7 +335,45 @@ class LiveRunner:
         return {"status": status, "message": message, "equity": float(trader.portfolio.equity),
                 "fills_on_sync": len(synced)}
 
-    def _decide(self, spec: AccountSpec, trader, now: datetime) -> dict[str, Any]:
+    def _restrict(self, items: list[Any], open_syms: set[str], trader, entry: dict[str, Any]) -> list[Any]:
+        """Keep the part of a decision that can execute now; the rest waits for the next full session."""
+        from tradesim.agents.base import CancelOrders, ClosePosition, OrderIntent, SetExits, TargetWeights
+
+        out: list[Any] = []
+        deferred: set[str] = set()
+        for a in items:
+            weights = a.weights if isinstance(a, TargetWeights) else a.get("weights") if isinstance(a, dict) else None
+            if weights is not None:  # rebalance: translate the open-market part into orders
+                eq = float(trader.portfolio.equity)
+                deferred |= {s for s in weights if s not in open_syms}
+                held = {p.symbol for p in trader.portfolio.open_positions()}
+                for sym in sorted((set(weights) | held) & open_syms):
+                    px = float(trader.get_price(sym)["mid"])
+                    if not px > 0:
+                        continue
+                    delta = float(weights.get(sym, 0.0)) * eq - float(trader.portfolio.quantity(sym)) * px
+                    if delta >= 1.0:
+                        out.append(OrderIntent.buy(sym, notional=round(delta, 2), tag="rebalance (solo cripto)"))
+                    elif delta <= -1.0:
+                        qty = min(float(trader.portfolio.quantity(sym)), -delta / px)
+                        out.append(OrderIntent.sell(sym, quantity=qty, tag="rebalance (solo cripto)"))
+                continue
+            sym = getattr(a, "symbol", None) if not isinstance(a, dict) else (a.get("symbol") or a.get("close"))
+            if isinstance(a, CancelOrders) and sym is None:
+                continue  # would also cancel the protective orders of positions in closed markets
+            if isinstance(a, SetExits) or sym in open_syms:
+                out.append(a)
+            elif isinstance(a, (OrderIntent, ClosePosition)) or isinstance(a, dict):
+                deferred.add(sym)
+        entry["deferred_to_next_session"] = sorted(s for s in deferred if s)
+        entry["message"] = (f"partial session: only {len(open_syms)} open markets traded; "
+                            f"{len(entry['deferred_to_next_session'])} decisions wait for the next full session")
+        return out
+
+    def _decide(self, spec: AccountSpec, trader, now: datetime, restrict: list[str] | None = None) -> dict[str, Any]:
+        """One decision. With ``restrict`` (the symbols whose market is open) the agent still decides on the whole
+        universe, but only the part on open markets is executed and buys are funded with free cash only: a crypto
+        purchase happens at the weekend only if the agent prefers it over everything it could buy on Monday."""
         agent = self.load_agent(spec)
         if hasattr(agent, "attach_research"):
             agent.attach_research(self.research_store())
@@ -319,6 +397,9 @@ class LiveRunner:
         if dropped:
             entry["dropped_symbols"] = dropped
         obs = trader.observe()
+        if restrict is not None:
+            obs.tradable = [s for s in restrict if s in usable]
+            entry["session"] = "partial"
         t_act = time.perf_counter()
         action = agent.act(obs)
         entry["think_time_s"] = round(time.perf_counter() - t_act, 3)
@@ -329,9 +410,14 @@ class LiveRunner:
             results = []
         else:
             items = _flatten(action)
+            if restrict is not None:
+                items = self._restrict(items, set(obs.tradable or []), trader, entry)
             results = trader.apply_action([a for a in items if _is_exit(a)])
             trader._settle()  # execute the exits now: their cash funds the entries below
-            results += trader.apply_action([a for a in items if not _is_exit(a)])
+            entries = [a for a in items if not _is_exit(a)]
+            if restrict is not None:
+                entries = _fund_from_cash(entries, trader, entry)
+            results += trader.apply_action(entries)
             trader.sync()  # execute now against the current quotes / order books
             # Journal the orders as they ended up (filled / rejected...), not as they were submitted.
             results = [trader.orders[r["id"]].to_dict() if r.get("id") in trader.orders else r for r in results]

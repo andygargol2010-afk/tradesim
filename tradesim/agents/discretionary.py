@@ -647,6 +647,8 @@ class DiscretionaryAgent(Agent):
             sym = p.get("symbol")
             if sym not in targets:
                 continue
+            if obs.tradable is not None and sym not in obs.tradable and obs.position(sym) <= 0:
+                continue  # partial session: this purchase waits for its market to open
             old = self.theses.get(sym, {})
             self.theses[sym] = {
                 "opened_at": old.get("opened_at", now), "entry_price": old.get("entry_price") or obs.prices.get(sym),
