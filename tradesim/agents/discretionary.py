@@ -141,7 +141,7 @@ class ClaudePortfolioManager(Agent):
         if self.web_searches:
             tools.append({**WEB_SEARCH, "max_uses": self.web_searches})
         if self.web_fetches:
-            tools.append({**WEB_FETCH, "max_uses": self.web_fetches})
+            tools.append({**WEB_FETCH, "max_uses": self.web_fetches, "max_content_tokens": 8000})
         usage = Usage()
         try:
             decision, sources = submit_call(client, self.model, self._system(), dossier, DECISION_TOOL, usage,
@@ -371,7 +371,9 @@ class ClaudePortfolioManager(Agent):
                 "invalidation": p.get("invalidation", ""), "horizon_days": p.get("horizon_days"), "updated_at": now}
         for sym in [s for s in self.theses if s not in targets and obs.position(s) <= 0]:
             del self.theses[sym]  # never bought (or sold now): nothing to track
-        new_lessons = [x.strip() for x in decision.get("lessons", []) if isinstance(x, str) and x.strip()]
+        known = {x.lower() for x in self.lessons}
+        new_lessons = [x.strip() for x in decision.get("lessons", []) if isinstance(x, str) and x.strip()
+                       and x.strip().lower() not in known]
         self.lessons = (self.lessons + new_lessons)[-15:]
         self.notes = str(decision.get("notes_for_next_time", ""))[:1500]
         self.decisions.append({"date": now, "regime": decision.get("regime"), "equity": obs.equity,

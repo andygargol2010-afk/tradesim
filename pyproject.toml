@@ -22,6 +22,7 @@ alpaca = ["alpaca-py>=0.30"]
 storage = ["pyarrow>=14"]
 universe = ["requests>=2.31", "lxml>=5"]
 viz = ["matplotlib>=3.7"]
+llm = ["anthropic>=2.0", "requests>=2.31"]
 all = [
     "matplotlib>=3.7",
     "gymnasium>=0.29",
@@ -31,6 +32,7 @@ all = [
     "pyarrow>=14",
     "requests>=2.31",
     "lxml>=5",
+    "anthropic>=2.0",
 ]
 dev = ["pytest>=8"]
 

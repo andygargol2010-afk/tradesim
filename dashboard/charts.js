@@ -334,3 +334,20 @@ function initTheme(onThemeChange) {
   });
 }
 
+
+// ---------------------------------------------------------------- live data
+/** Fetch live.json from the repository (fresh after every scheduled run) and the deployed copy; keep the
+ *  newest. The repository URL comes from <meta name="tradesim-data-url">. Returns [sourceName, data]. */
+async function loadLiveData() {
+  const remote = document.querySelector('meta[name="tradesim-data-url"]')?.content;
+  const sources = [["repositorio", remote], ["despliegue", "live.json"]].filter(([, url]) => url);
+  const got = await Promise.allSettled(sources.map(async ([name, url]) => {
+    const res = await fetch(url, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
+    return [name, await res.json()];
+  }));
+  const ok = got.filter((r) => r.status === "fulfilled").map((r) => r.value);
+  if (!ok.length) throw new Error(got.map((r) => r.reason?.message).join("; "));
+  ok.sort((a, b) => (b[1].meta?.generated_at || "").localeCompare(a[1].meta?.generated_at || ""));
+  return ok[0];
+}

@@ -1,5 +1,5 @@
 # Daily live paper trading: runs the agents in live/config.json on real-time prices and commits
-# their state (accounts, journals, learned models) back to the repo, which redeploys the dashboard.
+# their state (accounts, journals, learned models, research) back to the repo; the dashboard reads it.
 name: Live trading
 
 on:
@@ -7,12 +7,13 @@ on:
     - cron: "45 14 * * *"    # daily decision (NYSE open; weekends/holidays are skipped by the runner)
     - cron: "45 19 * * 1-5"  # mark to market before the New York close
     - cron: "15 2 * * *"     # overnight mark (crypto trades 24/7)
+    - cron: "20 * * * *"     # hourly research: news + Claude analysis, macro, calendar, patterns
   workflow_dispatch:
     inputs:
       mode:
-        description: "decide = daily decision, mark = valuation only"
+        description: "decide = daily decision, mark = valuation only, research = news/macro/calendar refresh"
         type: choice
-        options: [mark, decide]
+        options: [mark, decide, research]
         default: mark
 
 permissions:
@@ -35,13 +36,17 @@ jobs:
           cache: pip
 
       - name: Install
-        run: pip install -e ".[yfinance,crypto,alpaca]"
+        run: pip install -e ".[yfinance,crypto,alpaca,llm]"
 
       - name: Choose mode
         run: |
           MODE="${{ github.event.inputs.mode }}"
           if [ -z "$MODE" ]; then
-            if [ "${{ github.event.schedule }}" = "45 14 * * *" ]; then MODE=decide; else MODE=mark; fi
+            case "${{ github.event.schedule }}" in
+              "45 14 * * *") MODE=decide ;;
+              "20 * * * *") MODE=research ;;
+              *) MODE=mark ;;
+            esac
           fi
           echo "MODE=$MODE" >> "$GITHUB_ENV"
 
@@ -50,6 +55,9 @@ jobs:
           # Optional: Alpaca keys give real bid/ask for stocks (free paper account). Without them Yahoo is used.
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          # Claude: news analysis, calendar research and the discretionary agent. Without it, data is still
+          # collected and the other agents trade normally; the Claude agent holds.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # Real money stays disabled unless the repository variable TRADESIM_ALLOW_LIVE is set to 1.
           TRADESIM_ALLOW_LIVE: ${{ vars.TRADESIM_ALLOW_LIVE }}
         run: python scripts/live_run.py --mode "$MODE"

@@ -239,7 +239,7 @@ class NewsAnalyst:
             payload = "\n\n".join(json.dumps({
                 "id": i.id, "published": i.published, "source": i.publisher or i.source, "url": i.url,
                 "title": i.title, "summary": i.summary, "triage": i.triage}, ensure_ascii=False) for i in batch)
-            tools = [{**WEB_FETCH, "max_uses": len(batch)}] if self.read_articles else []
+            tools = [{**WEB_FETCH, "max_uses": len(batch), "max_content_tokens": 6000}] if self.read_articles else []
             try:
                 out, sources = submit_call(self.client, self.deep_model, system,
                                            f"Analyse these {len(batch)} news items:\n\n{payload}", DEEP_TOOL,

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tradesim · Investigación</title>
+  <meta name="description" content="Calendario de eventos del próximo mes, noticias analizadas por Claude, datos macro por tipo de activo y patrones técnicos de cada activo.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="tradesim-data-url" content="https://raw.githubusercontent.com/andygargol2010-afk/tradesim/main/dashboard/live.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="viz-root">
+    <header class="page-head">
+      <div>
+        <nav class="nav" aria-label="Secciones"><a href="/">Operativa diaria</a><a href="research.html" aria-current="page">Investigación</a><a href="backtest.html">Backtest</a></nav>
+        <h1>tradesim · Investigación</h1>
+        <p class="subtitle">Lo que leen los agentes: eventos del próximo mes, noticias analizadas, datos macro y patrones técnicos. Se actualiza cada hora.</p>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">◐ Tema</button>
+    </header>
+    <div class="statusbar" id="statusbar">Cargando…</div>
+    <div id="notice"></div>
+
+    <main id="app" aria-busy="true">
+      <nav class="toc" aria-label="Contenido">
+        <a href="#calendar">Calendario</a><a href="#news">Noticias</a><a href="#macro">Macro</a><a href="#technicals">Patrones técnicos</a>
+      </nav>
+
+      <section class="card" id="calendar" aria-labelledby="h-cal">
+        <h2 id="h-cal">Calendario del próximo mes</h2>
+        <p class="hint" id="cal-hint"></p>
+        <div class="research-summary" id="cal-summary" hidden></div>
+        <div class="filters" role="group" aria-label="Filtros del calendario">
+          <label>Importancia <select id="cal-importance">
+            <option value="low">todas</option><option value="medium" selected>media y alta</option><option value="high">solo alta</option>
+          </select></label>
+          <label>Tipo <select id="cal-category"></select></label>
+          <label>Activo <select id="cal-asset"></select></label>
+        </div>
+        <div id="cal-list"></div>
+        <details class="data-view" id="cal-past-wrap">
+          <summary>Últimos 7 días y resultados</summary>
+          <div id="cal-past"></div>
+        </details>
+      </section>
+
+      <section class="card" id="news" aria-labelledby="h-news">
+        <h2 id="h-news">Noticias</h2>
+        <p class="hint" id="news-hint"></p>
+        <div class="filters" role="group" aria-label="Filtros de noticias">
+          <label>Activo <select id="news-asset"></select></label>
+        </div>
+        <h3>Análisis detallados</h3>
+        <div id="analyses"></div>
+        <h3>Resto de noticias (últimas 48 h)</h3>
+        <div class="table-scroll tall"><table id="feed-table" class="data-table wrap"></table></div>
+      </section>
+
+      <section class="card" id="macro" aria-labelledby="h-macro">
+          <h2 id="h-macro">Datos macro</h2>
+          <p class="hint" id="macro-hint"></p>
+          <div class="table-scroll"><table id="macro-table" class="data-table"></table></div>
+          <h3 id="h-relevance">Qué datos mira cada tipo de activo</h3>
+          <p class="hint">Los agentes reciben todos los datos, con esta guía de cuáles mueven cada activo.</p>
+          <div class="table-scroll"><table id="relevance-table" class="data-table wrap"></table></div>
+      </section>
+
+      <section class="card" id="technicals" aria-labelledby="h-tech">
+        <h2 id="h-tech">Patrones técnicos</h2>
+        <p class="hint" id="tech-hint"></p>
+        <div class="filters" role="group" aria-label="Filtros de patrones">
+          <label>Tipo de activo <select id="tech-class">
+            <option value="">todos</option><option value="equity">acciones</option><option value="etf">ETF</option><option value="crypto">cripto</option>
+          </select></label>
+          <label>Orden <select id="tech-sort">
+            <option value="score">más alcistas primero</option><option value="-score">más bajistas primero</option><option value="symbol">alfabético</option>
+          </select></label>
+        </div>
+        <div class="legend" aria-hidden="true">
+          <span><span class="tri up">▲</span>alcista</span><span><span class="tri down">▼</span>bajista</span><span><span class="tri flat">●</span>neutral</span>
+          <span>Puntuación: balance de patrones y tendencia, de −1 (bajista) a +1 (alcista)</span>
+        </div>
+        <div class="table-scroll"><table id="tech-table" class="data-table wrap"></table></div>
+      </section>
+    </main>
+
+    <footer class="page-foot" id="footer"></footer>
+  </div>
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite" hidden></div>
+  <script src="charts.js"></script>
+  <script src="research.js"></script>
+</body>
+</html>

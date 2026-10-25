@@ -246,7 +246,8 @@ def fomc_events(start: date, end: date, schedule: dict[int, list[tuple[int, int,
 # ------------------------------------------------------------------------ Forex Factory
 _FF_CATEGORY = [
     (r"FOMC|Fed |Federal Funds|Powell|Rate Decision|Monetary Policy|Cash Rate|Official Bank Rate|Main Refinancing|"
-     r"BOJ|ECB|BOE|SNB|RBA|BOC|RBNZ|Press Conference|Minutes", "central_bank"),
+     r"BOJ|ECB|BOE|SNB|RBA|BOC|RBNZ|Press Conference|Minutes|Overnight Rate|Policy Rate|Interest Rate|Refinancing",
+     "central_bank"),
     (r"CPI|PPI|PCE|Inflation|Price Index", "inflation"),
     (r"Non-Farm|Unemployment|Jobless|Employment|ADP|JOLTS|Payroll|Earnings", "employment"),
     (r"GDP|PMI|ISM|Industrial|Durable|Factory|Production", "growth"),

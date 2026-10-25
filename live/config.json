@@ -26,6 +26,11 @@
       "cron": "15 2 * * *",
       "mode": "mark",
       "label": "Valoración nocturna (las cripto cotizan 24/7): 02:15 UTC"
+    },
+    {
+      "cron": "20 * * * *",
+      "mode": "research",
+      "label": "Investigación cada hora (minuto 20): noticias analizadas por Claude, macro, calendario del mes y patrones técnicos"
     }
   ],
   "accounts": [
@@ -73,6 +78,40 @@
       "fees": "alpaca",
       "broker": "paper",
       "description": "Compra los 50 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor."
+    },
+    {
+      "id": "analista",
+      "name": "Analista discrecional (Claude)",
+      "agent": "ClaudePortfolioManager",
+      "params": {
+        "model": "claude-opus-5-5",
+        "effort": "high",
+        "max_weight": 0.15,
+        "max_positions": 12,
+        "web_searches": 5,
+        "web_fetches": 3
+      },
+      "initial_cash": 10000,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Sin reglas fijas: cada día Claude estudia los patrones técnicos de los 50 activos, los datos macro relevantes para cada tipo de activo, el análisis detallado de las noticias y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidación por posición. Revisa sus decisiones pasadas y anota lecciones."
     }
-  ]
+  ],
+  "research": {
+    "enabled": true,
+    "dir": "live/research",
+    "analyze": true,
+    "triage_model": "claude-haiku-5-5",
+    "deep_model": "claude-sonnet-5-5",
+    "calendar_model": "claude-opus-5-5",
+    "max_triage_per_run": 300,
+    "max_deep_per_run": 12,
+    "deep_min_relevance": 0.6,
+    "read_articles": true,
+    "calendar_days": 30,
+    "keep_news_days": 7,
+    "news_max_age_days": 3,
+    "calendar_research_hours": 20,
+    "language": "es"
+  }
 }

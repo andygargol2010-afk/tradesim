@@ -55,7 +55,7 @@ episodios de evaluación, gráficas en `runs/practice/` y comparación contra ba
 
 ## Operativa diaria en vivo
 
-Cuatro agentes operan **cada día con precios reales**, cada uno en su propia cuenta de práctica de $10.000, y el
+Cinco agentes operan **cada día con precios reales** sobre 50 activos (ETF, acciones y cripto), cada uno en su propia cuenta de práctica de $10.000, y el
 dashboard (`dashboard/index.html`, la portada en Vercel) muestra por cuenta: equity, P&L total y del día, operaciones
 abiertas (cantidad fraccionaria, **capital asignado y % de la cuenta al entrar**, precio medio, precio actual, resultado
 no realizado, días abierta, motivo de entrada), operaciones cerradas (asignado, entrada/salida, resultado neto,
@@ -68,6 +68,10 @@ y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se ac
 | RSI adaptativo | `WalkForwardRSIAgent` | RSI cuyo ajuste se re-optimiza cada semana simulando variantes en el último año (con costes) |
 | Cruce de medias | `MovingAverageCrossAgent` | Seguidor de tendencia fijo (referencia sin aprendizaje) |
 | Buy & hold | `BuyAndHoldAgent` | Compra todo el primer día y mantiene: la vara de medir |
+| Analista discrecional (Claude) | `ClaudePortfolioManager` | Sin regla fija: Claude estudia patrones técnicos, macro por tipo de activo, noticias analizadas y el calendario del mes, y decide la cartera con tesis, catalizadores e invalidación; revisa sus decisiones y anota lecciones |
+
+El aprendiz lineal también usa **patrones técnicos** como variables (ruptura del rango de 20 días, calidad de la
+tendencia, señal de velas) y aprende por sí mismo cuáles anticipan subidas.
 
 **Cómo funciona.** `.github/workflows/live-trading.yml` ejecuta `scripts/live_run.py` con GitHub Actions:
 
@@ -76,6 +80,8 @@ y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se ac
   y el libro reales (spread, impacto y comisiones de Alpaca). Primero ventas, luego compras con lo liberado.
   Una sola decisión por día y cuenta, aunque el workflow se relance.
 - **19:45 UTC laborables y 02:15 UTC diario** (`mark`): valoración a mercado (las cripto cotizan 24/7).
+- **Cada hora, minuto 20** (`research`): noticias + análisis con Claude, datos macro, calendario del próximo mes y
+  patrones técnicos (ver *Investigación* abajo). La decisión diaria también refresca la investigación antes de decidir.
 - Cada ejecución hace commit de `live/` (estado de cuentas, modelos aprendidos, diarios, `runs.jsonl`) y de
   `dashboard/live.json`; Vercel redespliega solo. El historial de git es el registro auditable de todo.
 - Se puede lanzar a mano: GitHub → Actions → *Live trading* → *Run workflow* (`mark` o `decide`).
@@ -84,11 +90,46 @@ y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se ac
 spread modelado) o, si defines los secretos `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` en GitHub, Alpaca (bid/ask reales).
 
 **Límites de riesgo** (`live/config.json` → `risk`): máximo 30 % por posición, la cuenta deja de abrir posiciones con un
-drawdown ≥ 35 %, máximo 20 órdenes por decisión. Una cuenta que falla no detiene a las demás.
+drawdown ≥ 35 %, máximo 60 órdenes por decisión. Una cuenta que falla no detiene a las demás.
 
 **Añadir o cambiar agentes**: edita `accounts` en `live/config.json` (`agent` es una clase de `tradesim.agents` o
 `"paquete.modulo:MiAgente"`, `params` sus argumentos). Cualquier `Agent` sirve; si aprende, implementa
 `state_dict()` / `load_state_dict()` y su estado se guarda en `live/accounts/<id>/agent.json` tras cada ejecución.
+
+### Investigación: noticias, macro, calendario y patrones técnicos
+
+`tradesim/research/` alimenta a los agentes (y a la página **Investigación** del dashboard, `dashboard/research.html`).
+Se guarda en `live/research/*.json` en cada ejecución horaria:
+
+- **Patrones técnicos** (`tradesim/patterns.py`, sin red): tendencia, soportes y resistencias con número de toques,
+  velas (envolventes, martillo, estrellas, harami, tres soldados…), figuras (doble techo/suelo, hombro-cabeza-hombro,
+  triángulos, cuñas, rupturas con volumen, máximos de 52 semanas) y eventos de indicadores (cruce dorado/muerte,
+  divergencias RSI, cruces MACD, compresión de Bollinger, huecos, picos de volumen). Cada patrón trae dirección,
+  fuerza 0-1, estado (en formación/confirmado) y niveles (clavicular, objetivo, invalidación). Cualquier agente los usa
+  con `obs.patterns("AAPL")`; los agentes LLM con la herramienta `detect_patterns`.
+- **Noticias**: titulares de Yahoo Finance por activo, CoinDesk, la Fed y búsquedas de Google News sobre temas macro
+  (Fed, inflación, empleo, bonos, petróleo, aranceles, regulación cripto…), deduplicadas. Claude **clasifica todas**
+  (relevancia para nuestros activos, sentimiento, impacto, activos afectados y resumen en español; modelo rápido) y
+  **analiza en detalle las importantes** (qué pasó, por qué importa, efecto por activo con dirección/intensidad/plazo,
+  relación con el macro, si está descontado, confianza, qué vigilar y eventos del calendario relacionados; puede abrir
+  el artículo completo).
+- **Macro por tipo de activo**: 23 indicadores — oficiales de FRED (tipos de la Fed, curva, tipo real, diferencial high
+  yield, IPC/PCE, paro, nóminas, peticiones de paro, PIB, ventas minoristas, confianza, M2) y de mercado (VIX, 10 años,
+  dólar, petróleo, oro, cobre) — con un mapa de qué datos mueven cada tipo de activo (bonos, oro, cripto, energía,
+  bancos, tecnología…).
+- **Calendario del próximo mes**, regenerado en cada ejecución: reuniones y actas de la Fed (de federalreserve.gov),
+  datos de la semana con previsión y dato anterior (Forex Factory), resultados y dividendos de las empresas (Yahoo),
+  festivos y vencimientos de opciones, y fechas estimadas de los grandes datos de EE. UU. (empleo, IPC, PCE, PIB, ISM…).
+  Una vez al día Claude **lo verifica con búsqueda web**: corrige fechas estimadas, añade eventos que ninguna fuente
+  cubre (otros bancos centrales, elecciones, subastas del Tesoro, eventos cripto…) y anota los resultados de los eventos
+  ya ocurridos.
+
+**Activar Claude**: añade el secreto `ANTHROPIC_API_KEY` en GitHub → Settings → Secrets and variables → Actions. Sin él
+todo se recoge igualmente, pero las noticias quedan sin analizar y el analista discrecional no opera (mantiene en cash).
+Modelos y límites en `live/config.json` → `research` (`triage_model`, `deep_model`, `calendar_model`,
+`max_deep_per_run`…) y en los `params` de la cuenta `analista`. **Coste orientativo**: unos 2-3 USD al día en total (~70 USD al mes)
+(clasificación con Haiku, análisis con Sonnet, calendario y decisión diaria con Opus); el coste estimado se ve en la
+página de Investigación y en la cuenta del analista. Para reducirlo, baja `max_deep_per_run` o usa modelos más baratos.
 
 ### Pasar un agente a dinero real (Alpaca)
 

@@ -377,12 +377,13 @@ def _breakouts(c: np.ndarray, v: np.ndarray, levels: list[dict[str, Any]], a: fl
             j = n - 1 - back
             vol_mult = float(v[j] / np.mean(v[-22:-2])) if vol_ok else 1.0
             strength = min(1.0, 0.4 + 0.06 * min(lv["touches"], 5) + (0.2 if vol_mult >= 1.5 else 0.0)) * (1 - 0.2 * back)
-            if c[j - 1] <= L < c[j] and c[-1] > L + 0.1 * a:
+            held = c[max(0, j - 12):j]  # the level must have held for a while: a range's midline does not count
+            if c[j - 1] <= L < c[j] and c[-1] > L + 0.1 * a and (held <= L + 0.1 * a).all():
                 out.append(Pattern("resistance_breakout", "chart", BULLISH, strength, back, levels={"level": L},
                                    note=f"closed above a {lv['touches']}-touch resistance"
                                         + (f" on {vol_mult:.1f}x volume" if vol_mult >= 1.5 else "")))
                 break
-            if c[j - 1] >= L > c[j] and c[-1] < L - 0.1 * a:
+            if c[j - 1] >= L > c[j] and c[-1] < L - 0.1 * a and (held >= L - 0.1 * a).all():
                 out.append(Pattern("support_breakdown", "chart", BEARISH, strength, back, levels={"level": L},
                                    note=f"closed below a {lv['touches']}-touch support"
                                         + (f" on {vol_mult:.1f}x volume" if vol_mult >= 1.5 else "")))
@@ -414,6 +415,10 @@ def _double(h, l, c, piv_h, piv_l, a: float, top: bool) -> list[Pattern]:
         neck = float(h[i1:i2 + 1].max())
         height = neck - min(p1, p2)
     if height < 2.0 * a:
+        return []
+    # A reversal pattern needs a prior trend to reverse: a rally into a double top, a decline into a bottom.
+    before = c[max(0, i1 - 30):i1]
+    if not len(before) or (top and before.min() > neck) or (not top and before.max() < neck):
         return []
     px = c[-1]
     crossed = (px < neck) if top else (px > neck)

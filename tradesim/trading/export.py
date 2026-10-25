@@ -174,6 +174,72 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
     }
 
 
+def research_payload(config: LiveConfig, now: datetime) -> dict[str, Any] | None:
+    """News analyses, the event calendar, macro data and technical patterns for the dashboard."""
+    rc = config.research_config()
+    if not rc.enabled:
+        return None
+    from datetime import timedelta
+
+    from tradesim.research.calendar import NY
+    from tradesim.research.macro import ETF_PROFILE, RELEVANCE, asset_profile
+    from tradesim.research.refresh import ResearchStore
+
+    store = ResearchStore(rc.dir)
+    if not store.exists():
+        return {"status": "pending"}
+    status = store.load("status")
+    cal = store.load("calendar")
+    today = now.astimezone(NY).date()
+    lo, hi = (today - timedelta(days=7)).isoformat(), (today + timedelta(days=rc.calendar_days + 1)).isoformat()
+    events = [{k: e.get(k) for k in ("id", "date", "when", "title", "category", "importance", "country", "symbols",
+                                     "forecast", "previous", "actual", "confirmed", "source", "notes")}
+              for e in cal.get("events", []) if lo <= e["date"] <= hi]
+
+    news = store.news()
+    recent = news.recent(72, now)
+    analyses = [{"id": i.id, "title": i.title, "url": i.url, "publisher": i.publisher or i.source,
+                 "published": i.published, "triage": i.triage, "analysis": i.analysis}
+                for i in recent if i.analysis][:80]
+    cutoff = (now - timedelta(hours=48)).isoformat()
+    feed = [{"id": i.id, "title": i.title, "url": i.url, "publisher": i.publisher or i.source, "published": i.published,
+             "symbols": (i.triage or {}).get("symbols") or i.symbols, "relevance": (i.triage or {}).get("relevance"),
+             "sentiment": (i.triage or {}).get("sentiment"), "impact": (i.triage or {}).get("impact"),
+             "category": (i.triage or {}).get("category"), "summary": (i.triage or {}).get("summary"),
+             "analysed": i.analysis is not None}
+            for i in recent if i.published >= cutoff and (i.triage is None or i.triage.get("relevance", 0) >= 0.35)]
+    feed.sort(key=lambda r: ((r["relevance"] or 0) >= 0.6, r["published"]), reverse=True)
+
+    macro = store.load("macro")
+    universe = AssetUniverse.default()
+    profiles = {s: asset_profile(universe.get(s)) for s in config.symbols if s in universe}
+
+    tech = store.load("technicals")
+    technicals = {}
+    for sym, r in (tech.get("symbols") or {}).items():
+        technicals[sym] = {"score": r.get("score"), "close": r.get("close"), "as_of": r.get("as_of"),
+                           "trend": r.get("trend"), "support": (r.get("support") or [None])[0],
+                           "resistance": (r.get("resistance") or [None])[0], "rsi": (r.get("indicators") or {}).get("rsi_14"),
+                           "atr_pct": (r.get("indicators") or {}).get("atr_pct"),
+                           "patterns": (r.get("patterns") or [])[:6]}
+    return {
+        "status": {k: status.get(k) for k in ("started_at", "duration_s", "llm", "news", "macro", "calendar",
+                                              "technicals", "calendar_research")},
+        "errors": status.get("errors") or {},
+        "llm_cost_usd_last": (status.get("llm_usage") or {}).get("cost_usd_estimate"),
+        "llm_cost_usd_total": (status.get("llm_usage_total") or {}).get("cost_usd_estimate"),
+        "models": {k: (status.get("config") or {}).get(k) for k in ("triage_model", "deep_model", "calendar_model")},
+        "calendar": {"events": events, "window": cal.get("window"), "generated_at": cal.get("generated_at"),
+                     "researched_at": cal.get("researched_at"), "summary": cal.get("research_summary"),
+                     "sources": cal.get("sources"), "research_sources": cal.get("research_sources")},
+        "news": {"analyses": analyses, "feed": feed[:200], "stored": len(news.items),
+                 "untriaged": sum(1 for i in news.items.values() if i.triage is None)},
+        "macro": {"generated_at": macro.get("generated_at"), "indicators": macro.get("indicators") or {},
+                  "relevance": RELEVANCE, "profiles": profiles, "etf_profiles": ETF_PROFILE},
+        "technicals": {"generated_at": tech.get("generated_at"), "symbols": technicals},
+    }
+
+
 def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
                      now: datetime | None = None) -> dict[str, Any]:
     """Write ``config.dashboard_file`` and return its content."""
@@ -200,12 +266,17 @@ def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
             "stocks_data": config.stocks_data,
         },
         "last_run": {k: last.get(k) for k in ("started_at", "mode", "duration_s", "accounts", "data_errors")} if last else None,
-        "prices": last.get("prices") if last else {},
+        "prices": next((r["prices"] for r in reversed(runs) if r.get("prices")), {}),
         "runs": [{"started_at": r.get("started_at"), "mode": r.get("mode"), "duration_s": r.get("duration_s"),
                   "errors": len(r.get("data_errors") or {}) + sum(1 for a in (r.get("accounts") or {}).values()
                                                                    if a.get("status") == "error")}
                  for r in reversed(runs[-30:])],
         "accounts": accounts,
     }
+    try:
+        data["research"] = research_payload(config, now)
+    except Exception as exc:  # noqa: BLE001 - the dashboard must render even if research files are broken
+        log.exception("research export failed")
+        data["research"] = {"status": "error", "error": f"{type(exc).__name__}: {exc}"}
     write_json(config.dashboard_file, data)
     return data

@@ -37,21 +37,27 @@ function assignColors() {
 }
 
 // ---------------------------------------------------------------- schedule
-/** Next run times for "M H * * D" crons (D = "*" or "a-b"), in UTC. */
+/** Next run times for "M H * * D" crons (H = hour or "*", D = "*" or "a-b"), in UTC. */
 function nextRuns(schedule, n = 3) {
   const now = new Date();
   const out = [];
   for (const job of schedule || []) {
     const [m, hr, , , dow] = job.cron.split(/\s+/);
     const days = dow === "*" ? null : (() => { const [a, b] = dow.split("-").map(Number); return [a, b ?? a]; })();
-    for (let k = 0; k < 8; k++) {
-      const t = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + k, +hr, +m));
-      const wd = t.getUTCDay();
-      if (t > now && (!days || (wd >= days[0] && wd <= days[1]))) { out.push({ t, mode: job.mode }); break; }
+    const hours = hr === "*" ? [...Array(24).keys()] : [+hr];
+    let found = null;
+    for (let k = 0; k < 8 && !found; k++) {
+      for (const hh of hours) {
+        const t = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + k, hh, +m));
+        const wd = t.getUTCDay();
+        if (t > now && (!days || (wd >= days[0] && wd <= days[1]))) { found = t; break; }
+      }
     }
+    if (found) out.push({ t: found, mode: job.mode });
   }
   return out.sort((a, b) => a.t - b.t).slice(0, n);
 }
+const MODE_ES = { decide: "decisión", mark: "valoración", research: "investigación" };
 
 // ---------------------------------------------------------------- live prices
 const cryptoSymbols = () => live.data.meta.symbols.filter((s) => live.data.meta.asset_class?.[s] === "crypto");
@@ -94,13 +100,18 @@ function renderStatus() {
   if (last) {
     const errs = Object.keys(last.data_errors || {}).length +
       Object.values(last.accounts || {}).filter((a) => a.status === "error").length;
-    bar.append(h("span", {}, "Última ejecución: ", h("strong", {}, fmtWhen(last.started_at)), ` (${fmtAgo(last.started_at)}, ${last.mode === "decide" ? "decisión" : "valoración"}, ${fmtNum(last.duration_s, 1)} s)`));
+    bar.append(h("span", {}, "Última ejecución: ", h("strong", {}, fmtWhen(last.started_at)), ` (${fmtAgo(last.started_at)}, ${MODE_ES[last.mode] || last.mode}, ${fmtNum(last.duration_s, 1)} s)`));
     bar.append(h("span", {}, errs ? `⚠ ${errs} incidencia${errs > 1 ? "s" : ""} en la última ejecución` : "✓ sin incidencias"));
     if (live.source) bar.append(h("span", {}, `datos: ${live.source}`));
   }
+  const rs = d.research?.status;
+  if (rs?.started_at) {
+    bar.append(h("span", {}, h("a", { href: "research.html" }, "Investigación"), ` actualizada ${fmtAgo(rs.started_at)}`,
+      rs.llm === "enabled" ? "" : " (sin análisis de Claude)"));
+  }
   const next = nextRuns(d.meta.schedule);
   if (next.length) {
-    bar.append(h("span", {}, "Próximas: ", next.map((r) => `${fmtWhen(r.t.toISOString())} (${r.mode === "decide" ? "decisión" : "valoración"})`).join(" · ")));
+    bar.append(h("span", {}, "Próximas: ", next.map((r) => `${fmtWhen(r.t.toISOString())} (${MODE_ES[r.mode] || r.mode})`).join(" · ")));
   }
   const started = d.accounts.some((a) => a.summary);
   $("notice").replaceChildren();
@@ -220,8 +231,8 @@ function renderAccount() {
     { label: "Resultado", get: (t) => signed(t.pnl) },
     { label: "Rendimiento", get: (t) => fmtPct(t.return_pct) },
     { label: "Comisiones", get: (t) => fmtMoney(t.fees) },
-    { label: "Motivo entrada", get: (t) => t.entry_reason || "—" },
-    { label: "Motivo salida", get: (t) => t.exit_reason || "—" },
+    { label: "Motivo entrada", get: (t) => t.entry_reason || "—", cls: () => "reason" },
+    { label: "Motivo salida", get: (t) => t.exit_reason || "—", cls: () => "reason" },
   ], a.closed_trades);
   if (!a.closed_trades.length) $("trades-table").append(h("caption", { class: "empty" }, "Aún no hay operaciones cerradas."));
 
@@ -231,7 +242,7 @@ function renderAccount() {
     { label: "Activo", get: (o) => o.symbol },
     { label: "Cantidad", get: (o) => o.quantity },
     { label: "Tipo", get: (o) => o.order_type },
-    { label: "Motivo", get: (o) => o.tag || "—" },
+    { label: "Motivo", get: (o) => o.tag || "—", cls: () => "reason" },
   ], a.open_orders);
   if (!a.open_orders.length) $("orders-table").append(h("caption", { class: "empty" }, "Sin órdenes pendientes."));
   renderLearning(a);
@@ -273,7 +284,7 @@ function renderAccountLive() {
     { label: "Resultado", get: (p) => signed(parseFloat(p.quantity) * (livePrice(p.symbol) ?? p.last_price) - p.allocated) },
     { label: "Rendimiento", get: (p) => fmtPct((parseFloat(p.quantity) * (livePrice(p.symbol) ?? p.last_price) / p.allocated - 1) * 100) },
     { label: "Peso", get: (p) => fmtPct(p.weight_pct, false, 1) },
-    { label: "Motivo entrada", get: (p) => p.entry_reason || "—" },
+    { label: "Motivo entrada", get: (p) => p.entry_reason || "—", cls: () => "reason" },
   ], a.positions);
   if (!a.positions.length) $("positions-table").append(h("caption", { class: "empty" }, "Sin posiciones abiertas: todo en cash."));
 }
@@ -284,6 +295,7 @@ function renderLearning(a) {
   const L = a.learning;
   if (!L || !Object.keys(L).length) { root.append(h("p", { class: "empty" }, "Este agente no aprende: sus reglas son fijas.")); return; }
   if (L.error) { root.append(h("p", { class: "empty" }, `No se pudo leer el estado: ${L.error}`)); return; }
+  if ("open_theses" in L) { renderAnalystMemory(root, L); return; }
   const kv = h("dl", { class: "kv" });
   const add = (k, v) => kv.append(h("dt", {}, k), h("dd", {}, v));
   if (L.method) add("Método", L.method);
@@ -324,6 +336,40 @@ function renderLearning(a) {
   }
 }
 
+const REGIME = { risk_on: "apetito por el riesgo", neutral: "neutral", risk_off: "aversión al riesgo" };
+const CONVICTION = { low: "baja", medium: "media", high: "alta" };
+
+/** Memory of the Claude discretionary agent: last view, open theses, lessons, cost. */
+function renderAnalystMemory(root, L) {
+  const kv = h("dl", { class: "kv" });
+  const add = (k, v) => kv.append(h("dt", {}, k), h("dd", {}, v));
+  add("Método", "Análisis discrecional con Claude: patrones técnicos + macro + noticias + calendario, con memoria");
+  add("Modelo", L.model || "n/a");
+  add("Decisiones tomadas", String(L.decisions ?? 0));
+  if (L.last_regime) add("Lectura del mercado", REGIME[L.last_regime] || L.last_regime);
+  if (isNum(L.llm_cost_usd_total)) add("Coste de Claude (este agente)", fmtMoney(L.llm_cost_usd_total));
+  root.append(kv);
+  if (L.last_view) root.append(h("div", { class: "chart-title" }, "Última visión del mercado"), h("p", { class: "view" }, L.last_view));
+  const theses = Object.entries(L.theses || {});
+  if (theses.length) {
+    root.append(h("div", { class: "chart-title" }, "Tesis abiertas"));
+    const tbl = h("table", { class: "data-table wrap theses" });
+    table(tbl, [
+      { label: "Activo", get: ([s]) => s },
+      { label: "Peso", get: ([, t]) => fmtPct(t.target_weight * 100, false, 1) },
+      { label: "Convicción", get: ([, t]) => CONVICTION[t.conviction] || t.conviction || "—" },
+      { label: "Tesis", get: ([, t]) => t.thesis || "—" },
+      { label: "Invalidación", get: ([, t]) => t.invalidation || "—" },
+      { label: "Catalizadores", get: ([, t]) => (t.catalysts || []).join(" · ") || "—" },
+    ], theses);
+    root.append(h("div", { class: "table-scroll" }, tbl));
+  }
+  if (L.lessons?.length) {
+    root.append(h("div", { class: "chart-title" }, "Lecciones que ha anotado"), h("ul", { class: "lessons" }, L.lessons.map((x) => h("li", {}, x))));
+  }
+  if (!L.decisions) root.append(h("p", { class: "empty" }, "Todavía no ha decidido."));
+}
+
 /** Runner and agent messages are written in English in the code; show them in Spanish. */
 const TRANSLATIONS = [
   [/^market closed for (\d+) symbols \(e\.g\. ([^)]+)\): no decisions today$/, "Mercado cerrado para $1 activos (p. ej. $2): hoy no se decide"],
@@ -335,7 +381,7 @@ const TRANSLATIONS = [
   [/^buy /, "compra "], [/^sell /, "venta "], [/^trim /, "reduce "], [/ to (\d+%)/, " hasta $1"], [/prediction /, "predicción "],
 ];
 const tr = (msg) => TRANSLATIONS.reduce((m, [re, rep]) => m.replace(re, rep), msg || "");
-const quiet = (e) => !e.orders?.length && !e.explain?.retuned && e.status !== "error" && e.status !== "halted" && e.status !== "rejected";
+const quiet = (e) => !e.orders?.length && !e.explain?.retuned && !e.explain?.market_view && e.status !== "error" && e.status !== "halted" && e.status !== "rejected";
 
 function renderJournal(a) {
   const ul = $("journal");
@@ -354,6 +400,20 @@ function renderJournal(a) {
     const li = h("li", {}, h("div", { class: "head" }, h("span", { class: "when" }, fmtWhen(e.time)), statusChip(e.status),
       e.message ? h("span", { class: "msg" }, tr(e.message)) : null,
       isNum(e.equity_after) ? h("span", { class: "msg" }, `equity ${fmtMoney(e.equity_after)}`) : null));
+    const ex = e.explain || {};
+    if (ex.market_view) {
+      li.append(h("p", { class: "view" }, h("strong", {}, `Visión (${REGIME[ex.regime] || ex.regime || "?"}): `), ex.market_view));
+      const bits = [];
+      if (ex.changes?.length) bits.push(...ex.changes.map((c) => `Cambio: ${c}`));
+      if (ex.key_risks?.length) bits.push(`Riesgos: ${ex.key_risks.join(" · ")}`);
+      if (ex.watchlist?.length) bits.push(`Vigilando: ${ex.watchlist.join(" · ")}`);
+      if (ex.lessons_new?.length) bits.push(...ex.lessons_new.map((x) => `Lección: ${x}`));
+      if (ex.sources?.length) bits.push(`Consultó en la web: ${ex.sources.slice(0, 5).map((s) => s.title || s.url).join(" · ")}`);
+      if (isNum(ex.usage?.cost_usd_estimate)) bits.push(`Coste de esta decisión: ${fmtMoney(ex.usage.cost_usd_estimate)}`);
+      if (bits.length) li.append(h("ul", { class: "signals" }, bits.map((b) => h("li", {}, b))));
+    } else if (ex.status === "inactive" || (ex.status === "error" && ex.message)) {
+      li.append(h("ul", { class: "signals" }, h("li", {}, ex.message)));
+    }
     const sig = e.explain?.signals;
     if (sig?.length) li.append(h("ul", { class: "signals" }, sig.slice(0, 8).map((s) => h("li", {}, tr(s)))));
     if (e.explain?.retuned) {
@@ -368,7 +428,7 @@ function renderJournal(a) {
         { label: "Cantidad", get: (o) => o.quantity },
         { label: "Precio medio", get: (o) => (parseFloat(o.avg_fill_price) ? fmtPrice(parseFloat(o.avg_fill_price)) : "—") },
         { label: "Estado", get: (o) => o.status + (o.reject_reason ? `: ${o.reject_reason}` : "") },
-        { label: "Motivo", get: (o) => o.tag || "—" },
+        { label: "Motivo", get: (o) => o.tag || "—", cls: () => "reason" },
       ], e.orders);
       li.append(h("div", { class: "table-scroll" }, tbl));
     }
@@ -398,26 +458,10 @@ function renderAll() {
   renderAccount();
 }
 
-/** Fetch the repository copy (fresh after every run) and the deployed copy; keep the newest. */
-async function loadData() {
-  const remote = document.querySelector('meta[name="tradesim-data-url"]')?.content;
-  const sources = [["repositorio", remote], ["despliegue", "live.json"]].filter(([, url]) => url);
-  const got = await Promise.allSettled(sources.map(async ([name, url]) => {
-    const res = await fetch(url, { cache: "no-cache" });
-    if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
-    return [name, await res.json()];
-  }));
-  const ok = got.filter((r) => r.status === "fulfilled").map((r) => r.value);
-  if (!ok.length) throw new Error(got.map((r) => r.reason?.message).join("; "));
-  ok.sort((a, b) => (b[1].meta?.generated_at || "").localeCompare(a[1].meta?.generated_at || ""));
-  live.source = ok[0][0];
-  return ok[0][1];
-}
-
 async function boot() {
   initTheme(() => { if (live.data) renderAll(); });
   try {
-    live.data = await loadData();
+    [live.source, live.data] = await loadLiveData();
   } catch (err) {
     $("statusbar").textContent = "";
     $("app").replaceChildren(h("div", { class: "error" },

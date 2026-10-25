@@ -173,3 +173,64 @@ details.data-view summary { cursor: pointer; color: var(--text-2); font-size: 13
 .journal .orders { margin-top: 6px; font-size: 12.5px; }
 .empty { color: var(--text-2); padding: 12px 0; }
 .pos { white-space: nowrap; }
+
+/* research page */
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 14px; font-size: 13px; }
+.toc a { color: var(--text-2); }
+a { color: var(--series-1); }
+.muted { color: var(--muted); }
+.tri { font-size: 11px; margin-right: 3px; }
+.tri.up { color: var(--buy); } .tri.down { color: var(--sell); } .tri.flat { color: var(--muted); }
+.legend .tri { margin-right: 5px; }
+.tag { display: inline-block; font-size: 11px; color: var(--text-2); border: 1px solid var(--border); border-radius: 4px;
+  padding: 0 5px; margin-left: 6px; white-space: nowrap; vertical-align: 1px; }
+.data-table.wrap td { white-space: normal; text-align: left; vertical-align: top; }
+.data-table.wrap td:not(:last-child) { white-space: nowrap; }
+.data-table.wrap th { text-align: left; }
+.data-table .indent { padding-left: 12px; }
+.research-summary { background: var(--hover); border-radius: 8px; padding: 10px 12px; margin: 4px 0 8px; max-width: 980px; }
+.day { margin-top: 12px; }
+.day-head { display: flex; gap: 10px; align-items: baseline; border-bottom: 1px solid var(--grid); padding-bottom: 4px; }
+.day-head span { color: var(--text-2); font-size: 13px; }
+ul.events { list-style: none; margin: 0; padding: 0; }
+li.ev { display: grid; grid-template-columns: 34px 150px 30px minmax(0, 1fr) auto; gap: 2px 10px; align-items: baseline;
+  padding: 6px 2px; border-bottom: 1px solid var(--grid); font-size: 13px; }
+li.ev .imp { color: var(--text-2); font-size: 10px; letter-spacing: -1px; }
+li.ev.imp-high .imp { color: var(--text); }
+li.ev .time { color: var(--text-2); font-variant-numeric: tabular-nums; }
+li.ev .country { color: var(--muted); font-size: 12px; }
+li.ev.imp-high .title { font-weight: 600; }
+li.ev .nums { display: flex; gap: 10px; color: var(--text-2); font-size: 12px; font-variant-numeric: tabular-nums; justify-content: flex-end; }
+li.ev .nums .actual { color: var(--text); font-weight: 600; }
+li.ev .meta { grid-column: 4 / -1; color: var(--muted); font-size: 12px; }
+@media (max-width: 700px) {
+  li.ev { grid-template-columns: 30px minmax(0, 1fr); }
+  li.ev .time, li.ev .title, li.ev .nums, li.ev .meta { grid-column: 2; }
+  li.ev .country { display: none; }
+  li.ev .nums { justify-content: flex-start; }
+}
+details.analysis { border: 1px solid var(--border); border-radius: 10px; margin: 8px 0; }
+details.analysis > summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; padding: 10px 12px; }
+details.analysis > summary .when { color: var(--text-2); font-size: 12px; white-space: nowrap; }
+details.analysis > summary .headline { font-weight: 600; flex: 1 1 320px; min-width: 0; }
+details.analysis[open] > summary { border-bottom: 1px solid var(--grid); }
+.chips { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.an-body { padding: 4px 14px 10px; max-width: 1000px; }
+.an-body p { margin: 8px 0; }
+.an-body .facts { color: var(--text-2); font-size: 13px; }
+.an-body table { margin: 6px 0; }
+.rbar { display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+.rtrack { width: 48px; height: 6px; background: var(--grid); border-radius: 3px; position: relative; overflow: hidden; }
+.rfill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--text-2); border-radius: 3px; }
+.sbar { display: inline-grid; grid-template-columns: 90px 42px; align-items: center; gap: 6px; }
+.sbar .track { position: relative; height: 10px; background: var(--grid); border-radius: 3px; }
+.sbar .fill { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+.sbar .mid { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--axis); }
+.sbar .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--text-2); font-size: 12px; }
+.chip.pat { font-size: 11.5px; }
+.view { margin: 6px 0 10px; max-width: 980px; }
+.theses td { max-width: 360px; }
+.lessons { margin: 4px 0 0; padding-left: 18px; color: var(--text-2); font-size: 13px; }
+.data-table.theses td:nth-child(n+4) { white-space: normal; min-width: 180px; }
+.journal ul.signals li { border: 0; padding: 2px 0; }
+.data-table td.reason { white-space: normal; text-align: left; min-width: 240px; max-width: 420px; }
