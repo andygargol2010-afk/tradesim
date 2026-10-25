@@ -37,6 +37,11 @@ def compute_metrics(
 ) -> dict[str, Any]:
     """Standard performance statistics.
 
+    Equity-curve metrics (return, drawdown, Sharpe, Sortino...) use one point per bar;
+    trade metrics (win rate, profit factor, average / best / worst trade) use closed round
+    trips, net of their share of entry and exit fees. Trade keys are always present and are
+    ``None`` when no trade was closed.
+
     Args:
         equity: equity values indexed by timestamp (one point per bar).
         closed_trades: round trips for trade statistics.
@@ -47,7 +52,9 @@ def compute_metrics(
     out: dict[str, Any] = {}
     equity = equity.astype(float).dropna()
     if len(equity) < 2:
-        return {"bars": len(equity), "note": "not enough data"}
+        final = float(equity.iloc[-1]) if len(equity) else None
+        return {"bars": len(equity), "final_equity": final, "total_return_pct": 0.0, "num_trades": len(closed_trades),
+                "note": "not enough data"}
     rets = equity.pct_change().dropna()
     rf = (1 + risk_free_annual) ** (1 / periods_per_year) - 1
     excess = rets - rf
@@ -62,6 +69,7 @@ def compute_metrics(
     out.update({
         "bars": int(len(equity)),
         "start_equity": float(equity.iloc[0]),
+        "final_equity": float(equity.iloc[-1]),
         "end_equity": float(equity.iloc[-1]),
         "total_return_pct": float(total_return * 100),
         "cagr_pct": float(cagr * 100) if math.isfinite(cagr) else None,
@@ -85,6 +93,9 @@ def compute_metrics(
 
     pnls = np.array([float(t.pnl) for t in closed_trades])
     out["num_trades"] = int(len(pnls))
+    out.update({k: None for k in ("win_rate_pct", "profit_factor", "avg_trade_pnl", "best_trade", "worst_trade",
+                                  "avg_win", "avg_loss", "payoff_ratio", "expectancy", "largest_win",
+                                  "largest_loss", "avg_trade_return_pct")})
     if len(pnls):
         wins, losses = pnls[pnls > 0], pnls[pnls < 0]
         gross_win, gross_loss = wins.sum(), -losses.sum()
@@ -95,6 +106,10 @@ def compute_metrics(
             "avg_loss": float(losses.mean()) if len(losses) else 0.0,
             "payoff_ratio": float(wins.mean() / -losses.mean()) if len(wins) and len(losses) else None,
             "expectancy": float(pnls.mean()),
+            "avg_trade_pnl": float(pnls.mean()),
+            "avg_trade_return_pct": float(np.mean([t.return_pct for t in closed_trades]) * 100),
+            "best_trade": float(pnls.max()),
+            "worst_trade": float(pnls.min()),
             "largest_win": float(pnls.max()),
             "largest_loss": float(pnls.min()),
         })

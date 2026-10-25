@@ -25,7 +25,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
-from typing import Any, Callable, Iterable
+from typing import TYPE_CHECKING, Any, Callable, Iterable
 from zoneinfo import ZoneInfo
 
 import numpy as np
@@ -47,6 +47,9 @@ from tradesim.types import (
     ZERO, AssetClass, D, Fill, IdGenerator, Order, OrderStatus, OrderType, Quote, Side, TimeInForce,
     quantize_down,
 )
+
+if TYPE_CHECKING:  # pragma: no cover
+    from tradesim.agents.base import Observation
 
 log = logging.getLogger(__name__)
 NY = ZoneInfo("America/New_York")
@@ -218,6 +221,117 @@ class BaseSimulator:
         """Closed round trips (with net PnL)."""
         return [t.to_dict() for t in self.portfolio.closed_trades[-limit:]]
 
+    def get_trade_history(self, kind: str = "fills", symbol: str | None = None,
+                          as_dataframe: bool = False) -> list[dict[str, Any]] | pd.DataFrame:
+        """Complete history of the episode.
+
+        Args:
+            kind: ``"fills"`` = every execution (buys and sells, partial fills included, with
+                price, fee, maker/taker, slippage cost and realised PnL); ``"closed"`` = closed
+                round trips (entry/exit price, net PnL after fees) used for win rate etc.
+            symbol: only this symbol.
+            as_dataframe: return a ``pandas.DataFrame`` (numeric columns as floats) instead of dicts.
+        """
+        if kind == "fills":
+            rows = [f.to_dict() for f in self.portfolio.fills if symbol is None or f.symbol == symbol]
+            time_cols, num_cols = ["timestamp"], ["quantity", "price", "notional", "fee", "slippage_cost", "realized_pnl"]
+        elif kind == "closed":
+            rows = [t.to_dict() for t in self.portfolio.closed_trades if symbol is None or t.symbol == symbol]
+            time_cols, num_cols = ["opened_at", "closed_at"], ["quantity", "entry_price", "exit_price", "pnl", "fees"]
+        else:
+            raise ValueError("kind must be 'fills' or 'closed'")
+        if not as_dataframe:
+            return rows
+        df = pd.DataFrame(rows)
+        for c in num_cols:
+            if c in df:
+                df[c] = df[c].astype(float)
+        for c in time_cols:
+            if c in df:
+                df[c] = pd.to_datetime(df[c], utc=True)
+        return df
+
+    # ======================================================== agent loop API
+    def observe(self) -> "Observation":
+        """Snapshot for ``Agent.act``: prices, cash, equity, positions (see :class:`Observation`)."""
+        from tradesim.agents.base import Observation
+
+        symbols = list(getattr(self, "symbols", []) or [p.symbol for p in self.portfolio.open_positions()])
+        prices = {}
+        for s in symbols:
+            try:
+                prices[s] = self._quote(self.universe.get(s)).last
+            except Exception:  # noqa: BLE001 - no price yet (before first bar / feed hiccup)
+                prices[s] = float("nan")
+        return Observation(
+            timestamp=self.now, step=0, steps_remaining=0, symbols=symbols, prices=prices,
+            cash=float(self.portfolio.cash), equity=float(self.portfolio.equity),
+            positions={p.symbol: p.quantity for p in self.portfolio.open_positions()},
+            open_orders=len(self.open_order_ids), _sim=self,
+        )
+
+    def recent_closes(self, symbol: str, limit: int = 100) -> np.ndarray:
+        """Last ``limit`` completed closes of ``symbol`` as a numpy array."""
+        return self.get_historical_data(symbol, limit=limit)["close"].to_numpy(dtype=float)
+
+    def apply_action(self, action: Any) -> list[dict[str, Any]]:
+        """Execute an agent action (see :mod:`tradesim.agents.base` for the accepted forms).
+
+        Returns the resulting order dicts; rejected orders carry ``status == "rejected"``
+        and a ``reject_reason`` instead of raising, so agents can learn from them.
+        """
+        from tradesim.agents.base import CancelOrders, ClosePosition, OrderIntent, TargetWeights
+
+        if action is None or (isinstance(action, str) and action.lower() == "hold"):
+            return []
+        if isinstance(action, (list, tuple)):
+            out: list[dict[str, Any]] = []
+            for a in action:
+                out.extend(self.apply_action(a))
+            return out
+        if isinstance(action, OrderIntent):
+            return [self.place_order(**action.kwargs())]
+        if isinstance(action, TargetWeights):
+            return self.target_weights(action.weights)
+        if isinstance(action, ClosePosition):
+            res = self.close_position(action.symbol)
+            return [res] if res else []
+        if isinstance(action, CancelOrders):
+            self.cancel_all_orders(action.symbol)
+            return []
+        if isinstance(action, dict):
+            if "weights" in action:
+                return self.target_weights(action["weights"])
+            if "close" in action:
+                res = self.close_position(action["close"])
+                return [res] if res else []
+            return [self.place_order(**action)]
+        raise TypeError(f"Unsupported action type {type(action).__name__}: {action!r}")
+
+    # ============================================================ reporting
+    def print_portfolio(self) -> None:
+        """Print cash, equity and open positions (fractional quantity, average price, unrealised PnL)."""
+        from tradesim.reporting import format_portfolio
+
+        print(format_portfolio(self.get_portfolio()))
+
+    def print_summary(self, title: str | None = None) -> None:
+        """Print a readable summary of the episode's performance metrics."""
+        from tradesim.reporting import format_summary
+
+        print(format_summary(self.get_metrics(), title=title or f"Episode summary ({self.now:%Y-%m-%d %H:%M} UTC)"))
+
+    def plot_results(self, symbol: str | None = None, path: str | Path | None = None, show: bool | None = None,
+                     benchmark: bool = True):
+        """Plot equity curve, drawdown and (optionally) buy/sell points on ``symbol``'s price.
+
+        Saves to ``path`` if given; shows the window when ``show`` is true (default: only when
+        no path is given and the matplotlib backend is interactive). Returns the figure.
+        """
+        from tradesim.reporting import plot_results
+
+        return plot_results(self, symbol=symbol, path=path, show=show, benchmark=benchmark)
+
     def place_order(
         self,
         symbol: str,
@@ -334,6 +448,10 @@ class BaseSimulator:
         m["total_slippage_cost"] = float(self.portfolio.total_slippage)
         m["total_financing"] = float(self.portfolio.total_financing)
         m["turnover_notional"] = turnover
+        m["num_fills"] = len(self.portfolio.fills)
+        m["open_positions"] = len(self.portfolio.open_positions())
+        m["start"] = curve[0].timestamp.isoformat()
+        m["end"] = curve[-1].timestamp.isoformat()
         return m
 
     # =============================================================== orders
@@ -538,15 +656,20 @@ class TradingSimulator(BaseSimulator):
     Example::
 
         sim = TradingSimulator(provider=SyntheticProvider(seed=1),
-                               config=SimulatorConfig(initial_cash=10_000, timeframe="1d"))
-        sim.reset(symbols=["AAPL", "BTC-USD"], start="2023-01-01", end="2024-01-01")
+                               config=SimulatorConfig(initial_cash=10_000, timeframe="1d"),
+                               symbols=["AAPL", "BTC-USD"], start="2023-01-01", end="2024-01-01")
+        sim.reset()
         sim.place_order("BTC-USD", "buy", 0.003)
         sim.step()
         print(sim.get_portfolio())
+
+    ``symbols`` / ``start`` / ``end`` given here are the defaults for :meth:`reset`, so the
+    simulator can be handed straight to :func:`tradesim.practice.evaluate_agent`.
     """
 
     def __init__(self, universe: AssetUniverse | None = None, provider: DataProvider | None = None,
-                 config: SimulatorConfig | None = None):
+                 config: SimulatorConfig | None = None, symbols: Iterable[str] | None = None,
+                 start: datetime | str | None = None, end: datetime | str | None = None):
         if provider is None:
             from tradesim.data.synthetic import SyntheticProvider
 
@@ -554,19 +677,31 @@ class TradingSimulator(BaseSimulator):
             log.warning("No provider given: using SyntheticProvider (synthetic prices, not real market data).")
         super().__init__(universe, provider, config)
         self.data: MarketData | None = None
-        self.symbols: list[str] = []
+        self.symbols: list[str] = list(dict.fromkeys(symbols)) if symbols else []
+        self.default_start: datetime | str = start or "2023-01-01"
+        self.default_end: datetime | str = end or "2024-01-01"
         self._calendar = np.array([], dtype=np.int64)
         self._k = 0
+        self._start_k = 0
+        self._end_k = 0
         self._aux_cache: dict[tuple[str, str], pd.DataFrame] = {}
 
     # --------------------------------------------------------------- episode
     def reset(self, symbols: Iterable[str] | None = None, start: datetime | str | None = None,
-              end: datetime | str | None = None, seed: int | None = None, start_offset: int = 0) -> dict[str, Any]:
+              end: datetime | str | None = None, seed: int | None = None, start_offset: int | None = None,
+              episode_length: int | None = None, random_start: bool = False) -> dict[str, Any]:
         """Start a new episode: fresh portfolio, data loaded for ``symbols`` over ``[start, end)``.
 
+        Args:
+            symbols / start / end: default to the previous episode's (or the constructor's).
+            seed: master seed for this episode (execution noise, scenarios, random start).
+            start_offset: start this many bars into the window (earlier bars are visible history).
+            episode_length: stop after this many bars (default: run to the end of the window).
+            random_start: draw the start bar at random (seeded) so that consecutive episodes
+                cover different market periods; requires ``episode_length``.
+
         Data is reused when the window, scenario (and seed, if a scenario is set) are unchanged,
-        so repeated resets for RL training are cheap. ``start_offset`` starts the episode that
-        many bars into the window (bars before it act as visible history).
+        so repeated resets for training / evaluation are cheap.
         """
         if seed is not None:
             self.config.seed = seed
@@ -577,8 +712,10 @@ class TradingSimulator(BaseSimulator):
             self.symbols = list(dict.fromkeys(symbols))
         if not self.symbols:
             raise ValueError("reset() needs at least one symbol")
-        start = pd.Timestamp(start or "2023-01-01")
-        end = pd.Timestamp(end or "2024-01-01")
+        self.default_start = start or self.default_start
+        self.default_end = end or self.default_end
+        start = pd.Timestamp(self.default_start)
+        end = pd.Timestamp(self.default_end)
         start = start.tz_localize("UTC") if start.tzinfo is None else start.tz_convert("UTC")
         end = end.tz_localize("UTC") if end.tzinfo is None else end.tz_convert("UTC")
         scenario = self.config.scenario
@@ -600,9 +737,19 @@ class TradingSimulator(BaseSimulator):
         self._calendar = self.data.calendar(self.symbols)
         if len(self._calendar) < 2:
             raise RuntimeError("Not enough bars in the requested window")
-        if not 0 <= start_offset < len(self._calendar) - 1:
-            raise ValueError(f"start_offset {start_offset} outside [0, {len(self._calendar) - 2}]")
-        self._k = start_offset
+        last = len(self._calendar) - 1
+        if episode_length is not None and episode_length < 1:
+            raise ValueError("episode_length must be >= 1")
+        if start_offset is None:
+            start_offset = 0
+            if random_start:
+                if episode_length is None:
+                    raise ValueError("random_start=True needs episode_length")
+                start_offset = int(self.rng_episode.integers(0, max(last - episode_length, 0) + 1))
+        if not 0 <= start_offset < last:
+            raise ValueError(f"start_offset {start_offset} outside [0, {last - 1}]")
+        self._k = self._start_k = start_offset
+        self._end_k = last if episode_length is None else min(start_offset + episode_length, last)
         self._mark_all(self._calendar[self._k])
         self._record_equity(self.now)
         self.events.emit("reset", self.now, symbols=len(self.symbols), loaded=len(loaded),
@@ -622,7 +769,7 @@ class TradingSimulator(BaseSimulator):
 
     @property
     def done(self) -> bool:
-        return self.bankrupt or self._k >= len(self._calendar) - 1
+        return self.bankrupt or self._k >= self._end_k
 
     @property
     def num_bars(self) -> int:
@@ -634,7 +781,49 @@ class TradingSimulator(BaseSimulator):
 
     @property
     def steps_remaining(self) -> int:
-        return max(len(self._calendar) - 1 - self._k, 0)
+        return max(self._end_k - self._k, 0)
+
+    @property
+    def episode_step(self) -> int:
+        """Bars elapsed since the start of the current episode."""
+        return self._k - self._start_k
+
+    def observe(self) -> "Observation":
+        """Snapshot for ``Agent.act`` (cheap even with 1000+ symbols: reads the price arrays)."""
+        from tradesim.agents.base import Observation
+
+        assert self.data is not None, "call reset() first"
+        ts_ns = int(self._calendar[self._k])
+        prices: dict[str, float] = {}
+        for sym in self.symbols:
+            series = self.data.series[sym]
+            i = series.index_le(ts_ns)
+            prices[sym] = float(series.close[i]) if i is not None else float("nan")
+        return Observation(
+            timestamp=self.now, step=self.episode_step, steps_remaining=self.steps_remaining,
+            symbols=list(self.symbols), prices=prices, cash=float(self.portfolio.cash),
+            equity=float(self.portfolio.equity),
+            positions={p.symbol: p.quantity for p in self.portfolio.open_positions()},
+            open_orders=len(self.open_order_ids), _sim=self,
+        )
+
+    def recent_closes(self, symbol: str, limit: int = 100) -> np.ndarray:
+        """Last ``limit`` completed closes as a numpy array, read straight from the price arrays."""
+        assert self.data is not None, "call reset() first"
+        series = self.data.ensure(symbol)
+        i = series.index_le(int(self._calendar[self._k]))
+        if i is None:
+            return np.array([], dtype=float)
+        return series.close[max(0, i + 1 - limit): i + 1]
+
+    def price_series(self, symbol: str, episode_only: bool = True) -> pd.Series:
+        """Close prices of ``symbol`` up to now (from the episode start if ``episode_only``)."""
+        assert self.data is not None
+        lo = int(self._calendar[self._start_k]) if episode_only else None
+        df = self.data.frame_upto(symbol, int(self._calendar[self._k]))
+        if lo is not None:
+            df = df[df.index.asi8 >= lo]
+        return df["close"]
 
     def step(self, n: int = 1) -> list[dict[str, Any]]:
         """Advance ``n`` bars, executing open orders on each. Returns the fills that happened."""
@@ -764,6 +953,8 @@ class TradingSimulator(BaseSimulator):
             "start": self.data.start.isoformat(),
             "end": self.data.end.isoformat(),
             "k": self._k,
+            "start_k": self._start_k,
+            "end_k": self._end_k,
             "portfolio": self.portfolio.state(),
             "orders": [o.to_dict() for o in self.orders.values()],
             "open_order_ids": self.open_order_ids,
@@ -784,6 +975,8 @@ class TradingSimulator(BaseSimulator):
         sim = cls(universe, provider, cfg)
         sim.reset(symbols=st["symbols"], start=st["start"], end=st["end"])
         sim._k = int(st["k"])
+        sim._start_k = int(st.get("start_k", 0))
+        sim._end_k = int(st.get("end_k", sim.num_bars - 1))
         sim.run_id = st["run_id"]
         sim.portfolio = Portfolio.from_state(st["portfolio"])
         sim.orders = {d["id"]: Order.from_dict(d) for d in st["orders"]}

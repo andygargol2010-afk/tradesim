@@ -21,7 +21,9 @@ crypto = ["ccxt>=4.2"]
 alpaca = ["alpaca-py>=0.30"]
 storage = ["pyarrow>=14"]
 universe = ["requests>=2.31", "lxml>=5"]
+viz = ["matplotlib>=3.7"]
 all = [
+    "matplotlib>=3.7",
     "gymnasium>=0.29",
     "yfinance>=0.2.40",
     "ccxt>=4.2",

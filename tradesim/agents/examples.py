@@ -1,0 +1,147 @@
+"""Simple example agents to exercise the whole system (not meant to be profitable).
+
+All of them implement only ``act(observation) -> action`` and work with any symbol set
+(fractional sizing, 1000+ symbols). They read prices from the observation and history via
+``observation.history()``, which never returns future bars.
+"""
+
+from __future__ import annotations
+
+from typing import Any, Sequence
+
+import numpy as np
+
+from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent, TargetWeights
+from tradesim.indicators import rsi_last
+
+
+class SimpleRSIAgent(Agent):
+    """Mean reversion on RSI: buy when RSI < ``oversold``, sell when RSI > ``overbought``.
+
+    Each entry invests ``position_pct`` % of equity (fractional quantities); at most
+    ``max_positions`` open positions at once.
+
+    Args:
+        symbols: symbols to trade (default: every symbol of the episode).
+        period: RSI look-back in bars.
+        oversold / overbought: entry / exit thresholds.
+        position_pct: % of equity per position.
+        max_positions: cap on simultaneous positions.
+    """
+
+    def __init__(self, symbols: Sequence[str] | None = None, period: int = 14, oversold: float = 30.0,
+                 overbought: float = 70.0, position_pct: float = 10.0, max_positions: int = 8):
+        self.symbols = list(symbols) if symbols else None
+        self.period = period
+        self.oversold = oversold
+        self.overbought = overbought
+        self.position_pct = position_pct
+        self.max_positions = max_positions
+        self.name = f"SimpleRSIAgent({period}, {oversold:g}/{overbought:g})"
+
+    def act(self, obs: Observation) -> list[Any]:
+        if obs.open_orders:  # previous orders still working (e.g. market closed): wait
+            return []
+        actions: list[Any] = []
+        n_positions = len(obs.positions)
+        for sym in self.symbols or obs.symbols:
+            value = rsi_last(obs.closes(sym, self.period * 3), self.period)
+            if value != value:  # not enough history yet
+                continue
+            held = obs.position(sym)
+            if held > 0 and value > self.overbought:
+                actions.append(ClosePosition(sym))
+                n_positions -= 1
+            elif held == 0 and value < self.oversold and n_positions < self.max_positions:
+                actions.append(OrderIntent.buy(sym, percent_of_equity=self.position_pct, tag=f"RSI {value:.1f}"))
+                n_positions += 1
+        return actions
+
+
+class MovingAverageCrossAgent(Agent):
+    """Trend following: hold equal weights in symbols whose fast SMA is above the slow SMA.
+
+    Rebalances only when the set of "uptrend" symbols changes, to limit trading costs.
+    """
+
+    def __init__(self, symbols: Sequence[str] | None = None, fast: int = 20, slow: int = 50,
+                 invested_fraction: float = 0.95):
+        self.symbols = list(symbols) if symbols else None
+        self.fast, self.slow = fast, slow
+        self.invested_fraction = invested_fraction
+        self.name = f"MovingAverageCrossAgent({fast}/{slow})"
+        self._current: frozenset[str] = frozenset()
+
+    def reset(self) -> None:
+        self._current = frozenset()
+
+    def act(self, obs: Observation) -> Any:
+        if obs.open_orders:
+            return []
+        up = []
+        for sym in self.symbols or obs.symbols:
+            closes = obs.closes(sym, self.slow)
+            if len(closes) == self.slow and closes[-self.fast:].mean() > closes.mean():
+                up.append(sym)
+        chosen = frozenset(up)
+        if chosen == self._current:
+            return []
+        self._current = chosen
+        w = self.invested_fraction / len(chosen) if chosen else 0.0
+        return TargetWeights({s: w for s in chosen})
+
+
+class RandomAgent(Agent):
+    """Controlled random agent: each step, with probability ``trade_prob``, buys or sells a random
+    symbol for ``position_pct`` % of equity. Seeded, so runs are reproducible. A useful baseline:
+    a real strategy should beat it after costs.
+
+    For ``PaperTradingEnv`` pass ``action_space=env.action_space`` and it samples from it instead.
+    """
+
+    def __init__(self, trade_prob: float = 0.2, position_pct: float = 10.0, seed: int = 0,
+                 action_space: Any = None):
+        self.trade_prob = trade_prob
+        self.position_pct = position_pct
+        self.seed = seed
+        self.action_space = action_space
+        self.name = f"RandomAgent(p={trade_prob:g})"
+        self.rng = np.random.default_rng(seed)
+        self._episodes = 0
+
+    def reset(self) -> None:
+        self.rng = np.random.default_rng([self.seed, self._episodes])
+        self._episodes += 1
+        if self.action_space is not None:
+            self.action_space.seed(int(self.rng.integers(2**31 - 1)))
+
+    def act(self, obs: Any) -> Any:
+        if self.action_space is not None:
+            return self.action_space.sample()
+        if self.rng.random() >= self.trade_prob:
+            return []
+        sym = obs.symbols[int(self.rng.integers(len(obs.symbols)))]
+        if obs.position(sym) > 0 and self.rng.random() < 0.5:
+            return ClosePosition(sym)
+        return OrderIntent.buy(sym, percent_of_equity=self.position_pct, tag="random")
+
+
+class BuyAndHoldAgent(Agent):
+    """Benchmark: invest equally in all symbols on the first step, then hold."""
+
+    name = "BuyAndHoldAgent"
+
+    def __init__(self, symbols: Sequence[str] | None = None, invested_fraction: float = 0.95):
+        self.symbols = list(symbols) if symbols else None
+        self.invested_fraction = invested_fraction
+        self._done = False
+
+    def reset(self) -> None:
+        self._done = False
+
+    def act(self, obs: Observation) -> Any:
+        if self._done:
+            return []
+        self._done = True
+        syms = self.symbols or obs.symbols
+        return TargetWeights({s: self.invested_fraction / len(syms) for s in syms})

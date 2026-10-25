@@ -106,6 +106,18 @@ TOOLS: list[dict[str, Any]] = [
         "input_schema": {"type": "object", "properties": {"limit": {"type": "integer", "default": 20}}},
     },
     {
+        "name": "get_trade_history",
+        "description": "Execution history: 'fills' = every buy/sell execution with price and fee; 'closed' = round trips with net PnL.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "kind": {"type": "string", "enum": ["fills", "closed"], "default": "fills"},
+                "symbol": _SYMBOL,
+                "limit": {"type": "integer", "default": 50, "maximum": 500},
+            },
+        },
+    },
+    {
         "name": "get_metrics",
         "description": "Performance metrics so far: return, Sharpe, Sortino, max drawdown, win rate, profit factor, fees.",
         "input_schema": {"type": "object", "properties": {}},
@@ -155,6 +167,9 @@ def dispatch(sim: Any, name: str, args: dict[str, Any] | None) -> str:
             result = sim.close_position(args["symbol"]) or {"message": "no position"}
         elif name == "get_trades":
             result = sim.get_trades(int(args.get("limit", 20)))
+        elif name == "get_trade_history":
+            rows = sim.get_trade_history(args.get("kind", "fills"), args.get("symbol"))
+            result = rows[-int(args.get("limit", 50)):]
         elif name == "get_metrics":
             result = {k: _round(v) for k, v in sim.get_metrics().items()}
         else:

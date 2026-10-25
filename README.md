@@ -12,6 +12,8 @@ es deliberadamente **conservador** (nunca regala precios, liquidez ni informaci�
 - Órdenes **market, limit, stop, stop-limit** · TIF **GTC, DAY, IOC, FOK** · spread, slippage, impacto de mercado,
   liquidez limitada, fills parciales, comisiones por bróker, márgenes, cortos y financiación.
 - Interfaz **Gymnasium** (`PaperTradingEnv`) + API "humana" + **tools JSON para LLMs** (Claude, OpenAI-style).
+- **Loop de práctica**: el agente solo implementa `act(observation) -> action`; `run_episode`, `evaluate_agent` y
+  `compare_agents` se encargan del resto, con métricas, resumen legible y gráficas.
 - Persistencia, logs JSONL + SQLite, seeds, escenarios de estrés y métricas de rendimiento.
 
 ---
@@ -25,9 +27,33 @@ pip install -e ".[all,dev]"        # todo: gymnasium, yfinance, ccxt, alpaca-py,
 pip install -e .
 ```
 
-Python 3.11+. Tests: `pytest -q` (47 tests, < 3 s, sin red).
+Python 3.11+. Tests: `pytest -q` (61 tests, < 10 s, sin red). Las gráficas usan matplotlib (`pip install -e ".[viz]"`).
 
-## Inicio rápido
+## Practicar y evaluar un agente (lo más rápido)
+
+```python
+from tradesim import TradingSimulator, SimulatorConfig, SyntheticProvider, SimpleRSIAgent, evaluate_agent
+
+env = TradingSimulator(
+    provider=SyntheticProvider(seed=1),                      # o CachedProvider(YFinanceProvider()) con datos reales
+    config=SimulatorConfig(initial_cash=10_000, fees="alpaca"),
+    symbols=["SPY", "AAPL", "MSFT", "NVDA", "GLD", "BTC-USD", "ETH-USD"],
+    start="2021-01-01", end="2024-12-31",
+)
+agent = SimpleRSIAgent(period=14, oversold=30, overbought=70, position_pct=10)
+
+report = evaluate_agent(agent, env, n_episodes=10, episode_length=126)   # imprime cada episodio y la tabla
+report.plot("runs/evaluation.png")       # curvas de todos los episodios, distribución de retornos, Sharpe
+
+env.print_summary()                      # resumen del último episodio
+env.print_portfolio()                    # cash, posiciones (cantidad fraccionaria, precio medio, PnL no realizado)
+env.plot_results(path="runs/episode.png")   # equity vs buy & hold, drawdown, compras/ventas sobre el precio
+```
+
+Ejemplo completo ejecutable: `python examples/practice.py` (crea el entorno, corre un episodio con render, 10
+episodios de evaluación, gráficas en `runs/practice/` y comparación contra baselines).
+
+## Inicio rápido (API de bajo nivel)
 
 ```python
 from tradesim import TradingSimulator, SimulatorConfig, CachedProvider
@@ -54,9 +80,10 @@ Scripts de ejemplo (`examples/`):
 
 | Script | Qué demuestra |
 |---|---|
+| `practice.py` | **Flujo completo de práctica**: entorno → agente → episodios → métricas → gráficas → comparación con baselines |
 | `demo.py` | Carga 2.000+ activos, compras fraccionadas, todos los tipos de orden, rechazos, liquidez limitada con fills parciales, estrategia, portfolio, métricas y persistencia. `--data synthetic|yfinance|mixed` |
 | `rl_agent.py` | Entorno Gymnasium: baselines (random, buy&hold, momentum) en episodios fuera de muestra; PPO opcional con `stable-baselines3` |
-| `llm_agent.py` | Agente Claude con function calling sobre el simulador (`--dry-run` para un agente guionizado sin API) |
+| `llm_agent.py` | `ClaudeAgent(Agent)` con function calling, ejecutado con `run_episode` (`--dry-run` para un agente guionizado sin API) |
 | `live_paper.py` | Paper trading en vivo con cotizaciones y libro L2 reales vía ccxt, con estado reanudable |
 
 ---
@@ -105,6 +132,10 @@ Scripts de ejemplo (`examples/`):
 | `portfolio/` | Contabilidad exacta y métricas |
 | `simulator.py` / `live.py` | Relojes histórico y en vivo sobre el mismo núcleo de bróker |
 | `env.py` | `PaperTradingEnv` (Gymnasium) |
+| `agents/base.py` | Contrato `Agent.act(observation) -> action`, `Observation`, tipos de acción, adaptadores (`FunctionAgent`, `PolicyAgent`) |
+| `agents/examples.py` | `SimpleRSIAgent`, `MovingAverageCrossAgent`, `RandomAgent`, `BuyAndHoldAgent` |
+| `practice.py` | `run_episode`, `evaluate_agent`, `compare_agents`, `EpisodeResult`, `EvaluationReport` |
+| `reporting.py` | `print_summary`, `print_portfolio`, `plot_results`, `plot_evaluation` |
 | `agents/llm_tools.py` | Definiciones de tools + `dispatch()` para agentes LLM |
 | `persistence.py` | Log de eventos JSONL, SQLite de órdenes/fills/equity, snapshots JSON atómicos |
 
@@ -211,6 +242,61 @@ respaldo y (en sintético) la volatilidad.
 
 ## Entrenar agentes
 
+### La interfaz del agente
+
+Un agente solo necesita `act(observation) -> action` (y opcionalmente `reset()`, llamado al inicio de cada episodio):
+
+```python
+from tradesim import Agent, OrderIntent, TargetWeights, ClosePosition
+
+class MyAgent(Agent):
+    def act(self, obs):
+        closes = obs.closes("BTC-USD", 50)          # numpy, solo barras ya cerradas
+        if obs.position("BTC-USD") == 0 and closes[-1] > closes.mean():
+            return OrderIntent.buy("BTC-USD", percent_of_equity=20)      # o quantity=0.003 / notional=500
+        if obs.position("BTC-USD") > 0 and closes[-1] < closes.mean():
+            return ClosePosition("BTC-USD")
+        return []                                    # hold
+```
+
+`Observation` (para agentes de reglas / LLM con `TradingSimulator`): `timestamp`, `step`, `steps_remaining`,
+`symbols`, `prices` (último cierre), `cash`, `equity`, `positions` (cantidad exacta `Decimal`), `open_orders`, y
+los métodos `closes(symbol, n)` (rápido, numpy), `history(symbol, n, timeframe, indicators)` (DataFrame con
+SMA/EMA/RSI/ATR/MACD/Bollinger), `quote(symbol)`, `portfolio()`, `weight(symbol)`, `to_text()` (para prompts) y
+`sim` (para agentes LLM que operan con `llm_tools.dispatch`).
+
+Acciones válidas: `None`/`[]` (hold), `OrderIntent` o un dict con los argumentos de `place_order` (market, limit,
+stop, stop-limit, fracciones, `notional`, `percent_of_equity`), `TargetWeights({...})` o `{"weights": {...}}`,
+`ClosePosition(symbol)`, `CancelOrders(symbol=None)`, o una lista de ellas. Las órdenes inválidas no lanzan
+excepciones: vuelven con `status="rejected"` y su motivo, y se cuentan en `rejected_orders`.
+
+Con `PaperTradingEnv` (RL) el mismo `run_episode` / `evaluate_agent` funciona: el agente recibe el vector de
+observación y devuelve una acción del `action_space`. `PolicyAgent(model)` adapta cualquier política con
+`predict()` (Stable-Baselines3) y `RandomAgent(action_space=env.action_space)` da un baseline aleatorio.
+
+### Episodios, evaluación y comparación
+
+- `run_episode(agent, env, render=False, seed=None, episode_length=None, random_start=None, max_steps=None)` →
+  `EpisodeResult` (`metrics`, `equity`, `fills`, `trades`, `print_summary()`).
+- `evaluate_agent(agent, env, n_episodes=20, episode_length=None, seed=0)` → `EvaluationReport`: cada episodio
+  empieza en una fecha aleatoria (con seed `seed + i`), por defecto con la mitad de la ventana de datos.
+  `report.episodes` (DataFrame, una fila por episodio), `report.summary` (media, mediana, desviación, mínimo y
+  máximo de cada métrica; mejor/peor episodio; % de episodios positivos y % que baten a buy & hold),
+  `print(report)` y `report.plot(path)`.
+- `compare_agents([a, b, c], env, n_episodes, episode_length, seed)` → tabla con un agente por fila, evaluados
+  sobre **exactamente los mismos episodios**.
+- Cada episodio incluye `benchmark_return_pct`: buy & hold equiponderado de los símbolos del episodio, sin costes.
+  Es la vara de medir honesta: un agente que no lo supera después de costes no aporta nada.
+
+### Métricas (`get_metrics()`)
+
+Capital final, retorno total, CAGR, max drawdown y su duración, volatilidad, Sharpe, Sortino, Calmar, VaR/CVaR,
+número de trades, win rate, profit factor, average trade PnL, mejor y peor trade, payoff, comisiones, slippage,
+financiación, turnover y tiempo en mercado. Las métricas de equity salen de la equity curve (un punto por barra);
+las de trades salen de los round trips cerrados (`get_trade_history("closed")`), netos de su parte de comisiones.
+Ojo: una posición perdedora que sigue abierta no cuenta para el win rate (sí para equity, drawdown y Sharpe); por eso
+conviene mirar ambas cosas. `get_trade_history("fills")` devuelve cada ejecución (también los fills parciales).
+
 ### RL (Gymnasium)
 
 ```python
@@ -309,7 +395,8 @@ timeframe (252 días × 6,5 h para acciones, 365 × 24 h para cripto).
 pytest -q
 ```
 
-Cubren contabilidad (precio medio, PnL realizado, giros largo→corto, precisión fraccionaria), cada tipo de orden,
+Cubren la interfaz de agentes, `run_episode` / `evaluate_agent` / `compare_agents` (reproducibilidad, inicio
+aleatorio, entorno RL), métricas contra el historial de trades, gráficas, contabilidad (precio medio, PnL realizado, giros largo→corto, precisión fraccionaria), cada tipo de orden,
 gaps, capacidad/fills parciales, IOC/FOK, impacto creciente con el tamaño, barrido de libro L2, comisiones, ausencia de
 look-ahead, rechazos, reservas de cash, expiración DAY, margen y cortos, reproducibilidad, guardar/cargar,
 escenarios, caché y el entorno Gymnasium (`check_env`).
