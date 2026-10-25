@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tradesim · Diario</title>
+  <meta name="description" content="Diario de la simulación escrito por un agente de IA: patrones del mercado y qué hizo cada agente según la situación.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="tradesim-data-url" content="https://raw.githubusercontent.com/andygargol2010-afk/tradesim/main/dashboard/diario.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="viz-root">
+    <header class="page-head">
+      <div>
+        <nav class="nav" aria-label="Secciones"><a href="/">Operativa diaria</a><a href="research.html">Investigación</a><a href="diario.html" aria-current="page">Diario</a><a href="backtest.html">Backtest</a></nav>
+        <h1>tradesim · Diario</h1>
+        <p class="subtitle">Cada día un agente de IA anota la situación del mercado, los patrones que aparecieron y qué hizo cada agente según esa situación. También en <a href="diario.md">diario.md</a>.</p>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">◐ Tema</button>
+    </header>
+    <div class="statusbar" id="statusbar">Cargando…</div>
+    <div id="notice"></div>
+
+    <main id="app" aria-busy="true">
+      <section class="card" id="stats" aria-labelledby="h-stats">
+        <h2 id="h-stats">Patrones acumulados: qué hace cada agente según la situación</h2>
+        <p class="hint">Días por tipo de situación (volatilidad · dirección del mercado; «solo cripto» con la bolsa cerrada), cuántos de ellos operó cada agente y su resultado medio del día.</p>
+        <div class="table-scroll"><table id="stats-table" class="data-table"></table></div>
+      </section>
+      <div id="entries"></div>
+    </main>
+
+    <footer class="page-foot" id="footer"></footer>
+  </div>
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite" hidden></div>
+  <script src="charts.js"></script>
+  <script src="diario.js"></script>
+</body>
+</html>

@@ -308,3 +308,56 @@ def test_traditional_investor_holds_and_rebalances(tmp_path, universe):
     assert fills_per_day[0] >= 3 and trading_days <= 4  # initial investment + quarterly / band rebalances only
     acc = {a["id"]: a for a in export_dashboard(runner.config, universe, now=clock.t)["accounts"]}["inv"]
     assert acc["summary"]["open_positions"] >= 3
+
+
+def test_daily_chronicle(tmp_path, universe, monkeypatch):
+    for k in ("GEMINI_API_KEY", "GROQ_API_KEY", "ANTHROPIC_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    from tradesim.trading.chronicle import write_entry
+
+    runner, clock = make_runner(tmp_path, universe)
+    runner.config.chronicle = True
+    days = []
+    for d in range(4):
+        day = datetime(2024, 3, 4, tzinfo=timezone.utc) + timedelta(days=d)
+        for hh in (14, 19):
+            clock.t = day.replace(hour=hh, minute=45)
+            rec = runner.run("decide" if hh == 14 else "mark", export=True)
+            days.append(rec.get("chronicle"))
+    store = json.loads((tmp_path / "diario.json").read_text())
+    assert [e["date"] for e in store["entries"]] == ["2024-03-06", "2024-03-05", "2024-03-04"]  # yesterday, once
+    e = store["entries"][-1]
+    assert e["engine"] == "local" and {a["id"] for a in e["text"]["agentes"]} == {"rsi", "ma", "bh"}
+    bh = next(a for a in e["facts"]["agents"] if a["id"] == "bh")
+    assert bh["buys"] == sorted(SYMBOLS) and bh["day_pnl_pct"] is not None
+    assert store["stats"]["bh"]["by_situation"]
+    md = (tmp_path / "diario.md").read_text()
+    assert "## Patrones acumulados" in md and "### Buy & hold" in md and "**Qué hizo:** compró" in md
+    write_entry(runner.config, datetime(2024, 3, 6).date(), use_ai=False)  # rewriting a day replaces it
+    assert len(json.loads((tmp_path / "diario.json").read_text())["entries"]) == 3
+
+
+def test_chronicle_ai_text_keeps_every_agent(tmp_path, universe, monkeypatch):
+    import tradesim.research.llm as llm
+    from tradesim.trading.chronicle import write_entry
+
+    seen = {}
+
+    class Fake:
+        name = "gemini"
+
+        def json(self, system, user, schema, usage, max_tokens=0, effort=None):
+            seen["payload"] = json.loads(user)
+            return {"titulo": "Día tranquilo", "situacion": "SPY sube.", "patrones_mercado": [],
+                    "agentes": [{"id": "bh", "que_hizo": "compró todo", "por_que": "es su regla",
+                                 "segun_situacion": "igual que siempre", "resultado": "+0,1 %"}],
+                    "comparativa": "empate", "patrones_recurrentes": ["bh nunca vende"], "a_vigilar": []}
+
+    monkeypatch.setattr(llm, "make_backends", lambda *a, **k: [Fake()])
+    runner, clock = make_runner(tmp_path, universe)
+    runner.config.research = {"dir": str(tmp_path / "research")}
+    runner.run("decide", export=True)
+    e = write_entry(runner.config, clock.t.date())
+    assert e["engine"] == "gemini" and e["text"]["titulo"] == "Día tranquilo"
+    assert [a["id"] for a in e["text"]["agentes"]] == ["bh", "rsi", "ma"]  # missing ones filled locally
+    assert {"hoy", "estadisticas_acumuladas", "dias_anteriores"} <= set(seen["payload"])

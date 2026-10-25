@@ -109,6 +109,13 @@ El stop solo sube, nunca baja (stop dinámico); si el precio ya está bajo el st
 (`risk.stop_loss_atr`; `null` lo desactiva), dinámico: sube con el precio y nunca baja. El analista usa los suyos y
 Buy & hold queda excluido (`"auto_stop": false` en su cuenta) para seguir siendo una referencia pura.
 
+**Diario de la simulación** (`"chronicle": true`). Tras el primer run de cada día (UTC), un agente de IA (Gemini o Groq
+gratis; Claude si hay clave; si no, texto local) escribe la entrada del día anterior en `dashboard/diario.md` y
+`dashboard/diario.json` (página `diario.html`): situación del mercado, patrones técnicos que aparecieron y, por agente,
+qué hizo, por qué, cómo encaja con la situación y su resultado. Cada día se etiqueta (`calma · alcista`,
+`tensión · bajista`, `solo cripto`...) y una tabla acumulada muestra qué hace cada agente en cada tipo de situación.
+Escribir o rehacer un día a mano: `python scripts/live_run.py --chronicle 2026-10-26`.
+
 **Inversor tradicional** (`TraditionalInvestorAgent`). No hace trading: mantiene una cartera de política (índices
 SPY/QQQ/EEM 43 %, bonos TLT 15 %, oro GLD 7 %, 8 acciones de calidad 28 %, BTC/ETH 5 %, 2 % en efectivo; máx. 25 % por
 activo). Elige las acciones una vez al año (crecimiento estable a 1 año ajustado por volatilidad, sobre su media de 200

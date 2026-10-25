@@ -79,6 +79,8 @@ class LiveConfig:
     # Decide also when only some markets are open (crypto at weekends / on US holidays): agents decide on the
     # whole universe as usual and only the part on open markets is executed, funded with free cash only.
     weekend_crypto: bool = False
+    # Daily AI chronicle of the simulation (dashboard/diario.json + diario.md), see tradesim.trading.chronicle.
+    chronicle: bool = False
 
     def research_config(self):
         """Research settings; research is off unless the config has a ``research`` section."""

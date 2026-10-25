@@ -293,6 +293,16 @@ class LiveRunner:
             from tradesim.trading.export import export_dashboard
 
             export_dashboard(self.config, self.universe, now=self.clock())
+            if self.config.chronicle:
+                from tradesim.trading.chronicle import maybe_write
+
+                try:  # yesterday's chronicle, once; never blocks the trading run
+                    entry = maybe_write(self.config, self.clock())
+                    if entry:
+                        record["chronicle"] = {"date": entry["date"], "engine": entry["engine"]}
+                except Exception as exc:  # noqa: BLE001
+                    log.warning("chronicle failed: %s", exc)
+                    record["chronicle"] = {"error": str(exc)[:300]}
         return record
 
     def _run_account(self, spec: AccountSpec, provider: RunCacheProvider, mode: str, now: datetime,
