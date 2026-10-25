@@ -55,7 +55,7 @@ episodios de evaluación, gráficas en `runs/practice/` y comparación contra ba
 
 ## Operativa diaria en vivo
 
-Cinco agentes operan **cada día con precios reales** sobre 50 activos (ETF, acciones y cripto), cada uno en su propia cuenta de práctica de $10.000, y el
+Cinco agentes operan **cada día con precios reales** sobre 50 activos (ETF, acciones y cripto), cada uno en su propia cuenta de práctica de 100 $ (`initial_cash` en `live/config.json`), y el
 dashboard (`dashboard/index.html`, la portada en Vercel) muestra por cuenta: equity, P&L total y del día, operaciones
 abiertas (cantidad fraccionaria, **capital asignado y % de la cuenta al entrar**, precio medio, precio actual, resultado
 no realizado, días abierta, motivo de entrada), operaciones cerradas (asignado, entrada/salida, resultado neto,

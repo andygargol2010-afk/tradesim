@@ -42,7 +42,7 @@
         "top_k": 6,
         "max_weight": 0.2
       },
-      "initial_cash": 10000,
+      "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
       "description": "Aprende cada día qué patrones de precio preceden a las subidas (mínimos cuadrados recursivos con olvido) y compra los 6 activos con mejor predicción (máx. 20% cada uno). Se pre-entrena con ~3 años de historia."
@@ -52,7 +52,7 @@
       "name": "RSI adaptativo",
       "agent": "WalkForwardRSIAgent",
       "params": {},
-      "initial_cash": 10000,
+      "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
       "description": "Compra sobreventa (RSI bajo) y vende sobrecompra. Cada semana simula variantes en el último año con costes reales y adopta la mejor solo si mejora con claridad."
@@ -64,7 +64,7 @@
       "params": {
         "max_weight": 0.15
       },
-      "initial_cash": 10000,
+      "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
       "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 días está sobre la de 50 (máx. 15% por activo). Sirve de referencia."
@@ -74,7 +74,7 @@
       "name": "Buy & hold",
       "agent": "BuyAndHoldAgent",
       "params": {},
-      "initial_cash": 10000,
+      "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
       "description": "Compra los 50 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor."
@@ -96,7 +96,7 @@
         "web_searches": 5,
         "web_fetches": 3
       },
-      "initial_cash": 10000,
+      "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
       "description": "Sin reglas fijas: cada día estudia los patrones técnicos de los 50 activos, los datos macro relevantes para cada tipo de activo, las noticias analizadas y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidación por posición. Decide con IA gratuita (Gemini o Groq) si hay clave; si no, o si se agota el cupo, con el motor local gratuito que combina las mismas señales. Revisa sus decisiones pasadas y anota lecciones."
