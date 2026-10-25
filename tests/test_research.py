@@ -256,12 +256,15 @@ def test_calendar_research_updates_and_overrides(offline):
 
 # ---------------------------------------------------------------------------- analyst
 def test_news_triage_and_deep_analysis():
+    from tradesim.research.llm import AnthropicBackend
+
     items = parse_rss(rss([("Apple beats", "Strong quarter", "Mon, 26 Oct 2026 11:00:00 +0000"),
                            ("Listicle: 5 stocks", "", "Mon, 26 Oct 2026 10:00:00 +0000")]), "yahoo", ["AAPL"])
     client = FakeClient()
-    a = NewsAnalyst(client, ["AAPL (equity/IT) Apple", "SPY (etf) S&P 500"])
+    claude = AnthropicBackend(client, "claude-haiku-5-5")
+    a = NewsAnalyst(["AAPL (equity/IT) Apple", "SPY (etf) S&P 500"], triage_backends=[claude], deep_backends=[claude])
     assert a.triage(items, NOW) == 2
-    assert items[0].triage["symbols"] == ["AAPL"]  # unknown symbols dropped
+    assert items[0].triage["symbols"] == ["AAPL"] and items[0].triage["model"].startswith("anthropic")
     chosen = pick_for_deep(items, {"AAPL"}, limit=1, now=NOW)
     assert len(chosen) == 1
     assert a.deep(chosen, "context", NOW) == 1
@@ -272,11 +275,74 @@ def test_news_triage_and_deep_analysis():
     assert deep_call["tools"][0]["type"] == "web_fetch_20260209" and deep_call["tools"][-1]["eager_input_streaming"]
 
 
+def test_local_engine_triages_and_analyses_without_any_key():
+    from tradesim.research.local_nlp import LocalNewsAnalyst
+
+    lines = ["AAPL (equity/IT) Apple Inc.", "XOM (equity/Energy) ExxonMobil", "BTC-USD (crypto) Bitcoin",
+             "ETH-USD (crypto) Ethereum", "SPY (etf) SPDR S&P 500 ETF Trust"]
+    la = LocalNewsAnalyst(lines)
+    mk = lambda t, s="", syms=(): NewsItem(item_id(t), t, "u", NOW.isoformat(), "yahoo", s, "Reuters", list(syms))
+    good = la.triage_item(mk("Apple beats estimates and raises guidance as iPhone sales surge"), NOW)
+    assert good["symbols"] == ["AAPL"] and good["sentiment"] > 0.5 and good["category"] == "earnings"
+    bad = la.triage_item(mk("Exxon cuts guidance after refinery outage; shares plunge"), NOW)
+    assert bad["symbols"] == ["XOM"] and bad["sentiment"] < -0.5
+    neg = la.triage_item(mk("Apple did not miss estimates"), NOW)
+    assert neg["sentiment"] >= 0  # negation flips "miss"
+    bait = la.triage_item(mk("3 High Quality Stocks to Buy Now and Hold Forever", syms=["AAPL"]), NOW)
+    assert bait["category"] == "opinion" and bait["relevance"] < 0.3
+    crypto = la.triage_item(mk("South Korea makes stablecoins an official means of payment"), NOW)
+    assert set(crypto["symbols"]) == {"BTC-USD", "ETH-USD"}
+    fed = la.triage_item(mk("Fed signals rate hike as inflation runs hotter than expected"), NOW)
+    assert fed["category"] == "central_bank" and fed["relevance"] >= 0.6 and fed["sentiment"] < 0
+    # every item analysed; deep pass falls back to the local engine when no AI engine answers
+    items = [mk("Apple beats estimates", "Revenue up 20%.", ["AAPL"]), mk("Fed holds rates")]
+    a = NewsAnalyst(lines, deep_backends=[])
+    assert a.triage(items, NOW) == 2 and all(i.triage["model"] == "local" for i in items)
+    cal = {"events": [{"id": "e1", "date": "2026-10-29", "symbols": ["AAPL"], "category": "earnings"}]}
+    assert a.deep(items, "", NOW, cal) == 2
+    assert items[0].analysis["model"] == "local" and items[0].analysis["related_events"] == ["e1"]
+    assert items[0].analysis["why_it_matters"] and a.engines == {"local": 4}
+
+
+def test_free_engine_backend_budget_and_fallback(tmp_path):
+    from tradesim.research.llm import (Budget, LLMError, OpenAICompatBackend, QuotaError, json_with_fallback,
+                                       parse_json_text)
+
+    calls = []
+
+    def post(url, headers, payload, timeout):
+        calls.append((url, headers, payload))
+        if "groq" in url:
+            return 429, {"error": {"message": "rate limited"}}
+        return 200, {"choices": [{"message": {"content": "```json\n{\"ok\": true}\n```"}}],
+                     "usage": {"prompt_tokens": 10, "completion_tokens": 5}}
+
+    budget = Budget(tmp_path / "budget.json", {"gemini": 2, "groq": 5})
+    groq = OpenAICompatBackend("groq", "k1", budget=budget, post=post)
+    gemini = OpenAICompatBackend("gemini", "k2", budget=budget, post=post)
+    usage, errors = Usage(), []
+    out, used = json_with_fallback([groq, gemini], "sys", "user", {"type": "object"}, usage, errors=errors)
+    assert out == {"ok": True} and used is gemini and "rate limit" in errors[0]
+    url, headers, payload = calls[-1]
+    assert url == "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+    assert headers["Authorization"] == "Bearer k2" and payload["response_format"] == {"type": "json_object"}
+    assert payload["model"] == "gemini-flash-lite-latest" and "JSON schema" in payload["messages"][0]["content"]
+    assert usage.cost_usd() == 0  # free tiers cost nothing
+    gemini.json("s", "u", {}, usage)  # second request of the day: still within budget
+    with pytest.raises(QuotaError):
+        gemini.json("s", "u", {}, usage)  # budget shared with the file: a third one is refused
+    assert Budget(tmp_path / "budget.json", {"gemini": 2}).used("gemini") == 2
+    with pytest.raises(LLMError):
+        json_with_fallback([groq], "s", "u", {}, usage)
+    assert parse_json_text('Sure! {"a": 1} hope it helps') == {"a": 1}
+
+
 def test_refresh_research_end_to_end(tmp_path, offline):
     store = ResearchStore(tmp_path / "research")
     cfg = ResearchConfig(technicals=False)
     st = refresh_research(cfg, ["AAPL", "BTC-USD"], AssetUniverse.default(), store, now=NOW, client=FakeClient())
     assert st["news"]["stored"] > 0 and st["news"]["triaged"] == st["news"]["stored"]
+    assert st["engines"][0].startswith("Claude") and st["news_engines"].get("local") == st["news"]["stored"]
     assert st["news"]["deep_analyses"] > 0 and st["calendar_research"] == "done"
     assert st["macro"]["indicators"] > 10 and st["llm_usage"]["cost_usd_estimate"] > 0
     assert {p.stem for p in (tmp_path / "research").iterdir()} >= {"news", "macro", "calendar", "status"}
@@ -287,7 +353,7 @@ def test_refresh_research_end_to_end(tmp_path, offline):
     assert st2["llm_usage_total"]["cost_usd_estimate"] >= st["llm_usage"]["cost_usd_estimate"]
     # without a client the data is still collected
     st3 = refresh_research(cfg, ["AAPL"], AssetUniverse.default(), ResearchStore(tmp_path / "r2"), now=NOW, client=None)
-    assert st3["llm"] == "no ANTHROPIC_API_KEY" and st3["news"]["untriaged_backlog"] > 0
+    assert st3["llm"] == "local" and st3["news"]["untriaged_backlog"] == 0 and st3["news"]["deep_analyses"] > 0
 
 
 # ------------------------------------------------------------------- discretionary agent
@@ -375,3 +441,69 @@ def test_runner_research_mode_exports_dashboard(tmp_path, offline):
     assert not (tmp_path / "runs.jsonl").exists()  # research runs do not touch the trading log
     # research is off unless the config has a research section
     assert LiveConfig(symbols=["AAPL"], accounts=[]).research_config().enabled is False
+
+
+def test_discretionary_agent_local_engine_without_keys(tmp_path, offline, monkeypatch):
+    from tradesim.agents.discretionary import DiscretionaryAgent
+
+    for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "GEMINI_API_KEY", "GROQ_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    store = ResearchStore(tmp_path / "research")
+    refresh_research(ResearchConfig(technicals=False), ["SPY", "AAPL", "GLD", "BTC-USD"], AssetUniverse.default(),
+                     store, now=NOW, client=None)
+    agent = DiscretionaryAgent(min_score=-1.0, max_weight=0.2, every=5)  # min_score -1: always pick something
+    agent.attach_research(store)
+    env = _sim()
+    res = run_episode(agent, env, seed=0, episode_length=6)
+    ex = agent.explain()
+    assert ex["status"] == "ok" and ex["engine"].startswith("local") and res.metrics["num_fills"] > 0
+    assert "motor local" in ex["market_view"] and ex["positions"]
+    p = ex["positions"][0]
+    assert p["thesis"].startswith("Puntuación") and p["invalidation"] and p["target_weight"] <= 0.2
+    assert sum(x["target_weight"] for x in ex["positions"]) <= 0.95 + 1e-9
+    assert agent.learning_summary()["last_engine"].startswith("local")
+    env.close()
+
+
+def test_discretionary_agent_free_engine_then_fallback(tmp_path, offline, monkeypatch):
+    from tradesim.agents.discretionary import DiscretionaryAgent
+    from tradesim.research.llm import OpenAICompatBackend
+
+    monkeypatch.setenv("GEMINI_API_KEY", "free-key")
+    for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "GROQ_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    sent = []
+
+    def fake_send(self, payload):
+        sent.append(payload)
+        return 200, {"choices": [{"message": {"content": json.dumps(DECISION)}}],
+                     "usage": {"prompt_tokens": 3000, "completion_tokens": 800}}
+
+    monkeypatch.setattr(OpenAICompatBackend, "_send", fake_send)
+    store = ResearchStore(tmp_path / "research")
+    refresh_research(ResearchConfig(technicals=False, engines=[]), ["SPY", "AAPL", "GLD", "BTC-USD"],
+                     AssetUniverse.default(), store, now=NOW, client=None)
+    agent = DiscretionaryAgent(max_weight=0.15, every=5, daily_requests={"gemini": 1})
+    agent.attach_research(store)
+    env = _sim()
+    run_episode(agent, env, seed=0, episode_length=7)  # decisions on steps 1 and 6
+    assert len(sent) == 1  # the daily budget allowed one request...
+    assert agent.decisions[0]["summary"] == DECISION["market_view"]
+    assert agent.explain()["engine"].startswith("local")  # ...the second decision fell back to the local engine
+    assert "daily budget" in agent.explain()["engine_errors"][0]
+    prompt = sent[0]["messages"][1]["content"]
+    assert len(prompt) < 30_000 and "TECHNICALS" in prompt  # compact dossier for free tiers
+    env.close()
+
+
+def test_local_analysis_only_directs_named_assets():
+    from tradesim.research.local_nlp import LocalNewsAnalyst
+
+    la = LocalNewsAnalyst(["GLD (etf) SPDR Gold Shares", "XOM (equity/Energy) ExxonMobil", "TLT (etf) iShares 20+ Year Treasury Bond"])
+    theme = NewsItem("a", "Gold price outlook as US bond yields rise ahead of FOMC", "u", NOW.isoformat(), "yahoo",
+                     "Oil prices climb too.")
+    theme.triage = la.triage_item(theme, NOW)
+    assert {x["direction"] for x in la.analyse_item(theme, NOW)["affected"]} == {"unclear"}
+    named = NewsItem("b", "Exxon beats estimates", "u", NOW.isoformat(), "yahoo")
+    named.triage = la.triage_item(named, NOW)
+    assert [(x["symbol"], x["direction"]) for x in la.analyse_item(named, NOW)["affected"]] == [("XOM", "up")]

@@ -223,8 +223,8 @@ def research_payload(config: LiveConfig, now: datetime) -> dict[str, Any] | None
                            "atr_pct": (r.get("indicators") or {}).get("atr_pct"),
                            "patterns": (r.get("patterns") or [])[:6]}
     return {
-        "status": {k: status.get(k) for k in ("started_at", "duration_s", "llm", "news", "macro", "calendar",
-                                              "technicals", "calendar_research")},
+        "status": {k: status.get(k) for k in ("started_at", "duration_s", "llm", "engines", "news_engines", "news",
+                                              "macro", "calendar", "technicals", "calendar_research")},
         "errors": status.get("errors") or {},
         "llm_cost_usd_last": (status.get("llm_usage") or {}).get("cost_usd_estimate"),
         "llm_cost_usd_total": (status.get("llm_usage_total") or {}).get("cost_usd_estimate"),

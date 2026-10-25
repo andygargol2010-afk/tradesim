@@ -68,7 +68,7 @@ y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se ac
 | RSI adaptativo | `WalkForwardRSIAgent` | RSI cuyo ajuste se re-optimiza cada semana simulando variantes en el último año (con costes) |
 | Cruce de medias | `MovingAverageCrossAgent` | Seguidor de tendencia fijo (referencia sin aprendizaje) |
 | Buy & hold | `BuyAndHoldAgent` | Compra todo el primer día y mantiene: la vara de medir |
-| Analista discrecional (Claude) | `ClaudePortfolioManager` | Sin regla fija: Claude estudia patrones técnicos, macro por tipo de activo, noticias analizadas y el calendario del mes, y decide la cartera con tesis, catalizadores e invalidación; revisa sus decisiones y anota lecciones |
+| Analista discrecional | `DiscretionaryAgent` | Sin regla fija: estudia patrones técnicos, macro por tipo de activo, noticias analizadas y el calendario del mes, y decide la cartera con tesis, catalizadores e invalidación; revisa sus decisiones y anota lecciones. Decide con IA gratuita (Gemini/Groq) si hay clave, o con el motor local gratuito |
 
 El aprendiz lineal también usa **patrones técnicos** como variables (ruptura del rango de 20 días, calidad de la
 tendencia, señal de velas) y aprende por sí mismo cuáles anticipan subidas.
@@ -80,7 +80,7 @@ tendencia, señal de velas) y aprende por sí mismo cuáles anticipan subidas.
   y el libro reales (spread, impacto y comisiones de Alpaca). Primero ventas, luego compras con lo liberado.
   Una sola decisión por día y cuenta, aunque el workflow se relance.
 - **19:45 UTC laborables y 02:15 UTC diario** (`mark`): valoración a mercado (las cripto cotizan 24/7).
-- **Cada hora, minuto 20** (`research`): noticias + análisis con Claude, datos macro, calendario del próximo mes y
+- **Cada hora, minuto 20** (`research`): noticias analizadas, datos macro, calendario del próximo mes y
   patrones técnicos (ver *Investigación* abajo). La decisión diaria también refresca la investigación antes de decidir.
 - Cada ejecución hace commit de `live/` (estado de cuentas, modelos aprendidos, diarios, `runs.jsonl`) y de
   `dashboard/live.json`; Vercel redespliega solo. El historial de git es el registro auditable de todo.
@@ -108,11 +108,10 @@ Se guarda en `live/research/*.json` en cada ejecución horaria:
   fuerza 0-1, estado (en formación/confirmado) y niveles (clavicular, objetivo, invalidación). Cualquier agente los usa
   con `obs.patterns("AAPL")`; los agentes LLM con la herramienta `detect_patterns`.
 - **Noticias**: titulares de Yahoo Finance por activo, CoinDesk, la Fed y búsquedas de Google News sobre temas macro
-  (Fed, inflación, empleo, bonos, petróleo, aranceles, regulación cripto…), deduplicadas. Claude **clasifica todas**
-  (relevancia para nuestros activos, sentimiento, impacto, activos afectados y resumen en español; modelo rápido) y
-  **analiza en detalle las importantes** (qué pasó, por qué importa, efecto por activo con dirección/intensidad/plazo,
-  relación con el macro, si está descontado, confianza, qué vigilar y eventos del calendario relacionados; puede abrir
-  el artículo completo).
+  (Fed, inflación, empleo, bonos, petróleo, aranceles, regulación cripto…), deduplicadas. **Todas se clasifican**
+  (relevancia para nuestros activos, sentimiento, impacto, activos afectados) y **las importantes se analizan en
+  detalle** (qué pasó, por qué importa, efecto por activo con dirección/intensidad/plazo, relación con el macro, si
+  está descontado, confianza, qué vigilar y eventos del calendario relacionados).
 - **Macro por tipo de activo**: 23 indicadores — oficiales de FRED (tipos de la Fed, curva, tipo real, diferencial high
   yield, IPC/PCE, paro, nóminas, peticiones de paro, PIB, ventas minoristas, confianza, M2) y de mercado (VIX, 10 años,
   dólar, petróleo, oro, cobre) — con un mapa de qué datos mueven cada tipo de activo (bonos, oro, cripto, energía,
@@ -120,16 +119,24 @@ Se guarda en `live/research/*.json` en cada ejecución horaria:
 - **Calendario del próximo mes**, regenerado en cada ejecución: reuniones y actas de la Fed (de federalreserve.gov),
   datos de la semana con previsión y dato anterior (Forex Factory), resultados y dividendos de las empresas (Yahoo),
   festivos y vencimientos de opciones, y fechas estimadas de los grandes datos de EE. UU. (empleo, IPC, PCE, PIB, ISM…).
-  Una vez al día Claude **lo verifica con búsqueda web**: corrige fechas estimadas, añade eventos que ninguna fuente
-  cubre (otros bancos centrales, elecciones, subastas del Tesoro, eventos cripto…) y anota los resultados de los eventos
-  ya ocurridos.
+  Si se usa Claude (de pago), una vez al día lo verifica con búsqueda web y añade eventos que ninguna fuente cubre.
 
-**Activar Claude**: añade el secreto `ANTHROPIC_API_KEY` en GitHub → Settings → Secrets and variables → Actions. Sin él
-todo se recoge igualmente, pero las noticias quedan sin analizar y el analista discrecional no opera (mantiene en cash).
-Modelos y límites en `live/config.json` → `research` (`triage_model`, `deep_model`, `calendar_model`,
-`max_deep_per_run`…) y en los `params` de la cuenta `analista`. **Coste orientativo**: unos 2-3 USD al día en total (~70 USD al mes)
-(clasificación con Haiku, análisis con Sonnet, calendario y decisión diaria con Opus); el coste estimado se ve en la
-página de Investigación y en la cuenta del analista. Para reducirlo, baja `max_deep_per_run` o usa modelos más baratos.
+**Motores de análisis: gratis por defecto.** Se prueban en orden y, si uno falla o agota su cupo, entra el siguiente:
+
+1. **Gemini** (Google AI Studio) y **Groq**: planes gratuitos, sin tarjeta. Crea una clave gratuita y guárdala como
+   secreto `GEMINI_API_KEY` o `GROQ_API_KEY` en GitHub → Settings → Secrets and variables → Actions. Se usan solo
+   para el análisis de las noticias importantes y la decisión diaria (unas 25-50 peticiones al día), con un tope diario
+   propio (`daily_requests`) para no pasar del cupo gratuito. Sus límites los fija cada proveedor y cambian a menudo.
+2. **Claude** (`ANTHROPIC_API_KEY`): de pago, solo si añades esa clave; añade búsqueda web.
+3. **Motor local** (siempre, sin claves, coste 0): clasifica todas las noticias con un diccionario financiero (palabras y
+   frases de mercado, negaciones, filtro de titulares de relleno) y genera análisis con plantillas; el analista decide
+   combinando patrones técnicos (55 %), sentimiento de las noticias (30 %) y tendencia (15 %), ajusta la exposición al
+   régimen macro (VIX, diferencial de crédito), no abre posiciones a 2 días de unos resultados y reduce el tamaño antes
+   de eventos clave (Fed, IPC, empleo). Es un motor de palabras clave: no entiende ironía ni matices.
+
+Sin ninguna clave el sistema funciona entero y gratis. Ajustes en `live/config.json` → `research` (`engines`,
+`free_models`, `daily_requests`, `triage_engine`…) y en los `params` de la cuenta `analista`. La página de
+Investigación muestra qué motor analizó cada noticia y el analista indica con qué motor tomó cada decisión.
 
 ### Pasar un agente a dinero real (Alpaca)
 

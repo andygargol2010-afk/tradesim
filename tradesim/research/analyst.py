@@ -1,7 +1,8 @@
 """Claude analysts: read every news item, study the important ones in depth, and keep the calendar right.
 
-* :class:`NewsAnalyst` works in two passes so every item is analysed without paying top-model prices for
-  noise. **Triage** (fast model, batches of ~25) scores each item: relevance to our assets, sentiment,
+* :class:`NewsAnalyst` works in two passes so every item is analysed without spending model requests on
+  noise. Each pass runs on the configured engines in order (free Gemini / Groq tiers, Claude) and falls back
+  to the free local engine (:mod:`tradesim.research.local_nlp`). **Triage** (fast model, batches of ~25) scores each item: relevance to our assets, sentiment,
   expected impact, which symbols it concerns, and a one-sentence summary. **Deep analysis** (stronger
   model, may open the article with web fetch) covers the items that matter most: what happened, why
   it matters, the transmission channel to each affected asset, horizon, whether it is priced in,
@@ -21,7 +22,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Iterable
 
 from tradesim.research.calendar import NY, Event, calendar_brief, event_id
-from tradesim.research.llm import WEB_FETCH, WEB_SEARCH, LLMError, Usage, json_call, submit_call
+from tradesim.research.llm import WEB_FETCH, WEB_SEARCH, LLMError, Usage, json_with_fallback, submit_call
 from tradesim.research.news import NewsItem
 
 log = logging.getLogger(__name__)
@@ -154,20 +155,31 @@ def _clip(x: Any, lo: float, hi: float, default: float = 0.0) -> float:
 
 
 class NewsAnalyst:
-    """Two-pass news analysis (see module docstring). ``client`` is an ``anthropic.Anthropic``."""
+    """Two-pass news analysis (see module docstring).
 
-    def __init__(self, client: Any, universe_lines: list[str], triage_model: str = "claude-haiku-5-5",
-                 deep_model: str = "claude-sonnet-5-5", language: str = "es", triage_batch: int = 25,
+    ``triage_backends`` / ``deep_backends`` are engines (:mod:`tradesim.research.llm`) tried in order;
+    when a list is empty or every engine fails (quota, outage) the free local engine
+    (:class:`~tradesim.research.local_nlp.LocalNewsAnalyst`) does the work, so every item is always covered.
+    """
+
+    def __init__(self, universe_lines: list[str], triage_backends: list[Any] | None = None,
+                 deep_backends: list[Any] | None = None, language: str = "es", triage_batch: int = 25,
                  deep_batch: int = 4, read_articles: bool = True):
-        self.client = client
+        from tradesim.research.local_nlp import LocalNewsAnalyst
+
         self.universe_lines = universe_lines
         self.symbols = {line.split(" ", 1)[0] for line in universe_lines}
-        self.triage_model, self.deep_model = triage_model, deep_model
+        self.triage_backends, self.deep_backends = list(triage_backends or []), list(deep_backends or [])
         self.language = LANG.get(language, language)
         self.triage_batch, self.deep_batch = triage_batch, deep_batch
         self.read_articles = read_articles
+        self.local = LocalNewsAnalyst(universe_lines)
         self.usage = Usage()
         self.errors: list[str] = []
+        self.engines: dict[str, int] = {}  # items analysed per engine
+
+    def _count(self, engine: str, n: int) -> None:
+        self.engines[engine] = self.engines.get(engine, 0) + n
 
     # ------------------------------------------------------------------ triage
     def _triage_system(self) -> str:
@@ -185,34 +197,42 @@ class NewsAnalyst:
         )
 
     def triage(self, items: list[NewsItem], now: datetime) -> int:
+        """Triage every item (LLM batches when available, the local engine otherwise)."""
         done = 0
         for k in range(0, len(items), self.triage_batch):
             batch = items[k:k + self.triage_batch]
-            lines = [json.dumps({"id": i.id, "published": i.published[:16], "source": i.publisher or i.source,
-                                 "feed": i.symbols or i.topics, "title": i.title, "summary": i.summary[:400]},
-                                ensure_ascii=False) for i in batch]
-            try:
-                out = json_call(self.client, self.triage_model, self._triage_system(), "\n".join(lines),
-                                TRIAGE_SCHEMA, self.usage, max_tokens=12000, effort="low")
-            except LLMError as exc:
-                self.errors.append(f"triage: {exc}")
-                log.warning("triage batch failed: %s", exc)
-                continue
+            out, engine = None, "local"
+            if self.triage_backends:
+                lines = [json.dumps({"id": i.id, "published": i.published[:16], "source": i.publisher or i.source,
+                                     "feed": i.symbols or i.topics, "title": i.title, "summary": i.summary[:400]},
+                                    ensure_ascii=False) for i in batch]
+                try:
+                    out, b = json_with_fallback(self.triage_backends, self._triage_system(), "\n".join(lines),
+                                                TRIAGE_SCHEMA, self.usage, max_tokens=12000, effort="low",
+                                                errors=self.errors)
+                    engine = f"{b.name}:{b.model}"
+                except LLMError:
+                    out = None
             by_id = {i.id: i for i in batch}
-            for row in out.get("items", []):
-                item = by_id.get(row.get("id"))
-                if item is None:
-                    continue
-                item.triage = {
-                    "relevance": round(_clip(row.get("relevance"), 0, 1), 3),
-                    "sentiment": round(_clip(row.get("sentiment"), -1, 1), 3),
-                    "impact": row.get("impact") if row.get("impact") in ("low", "medium", "high") else "low",
-                    "category": row.get("category", "other"),
-                    "symbols": [s for s in row.get("symbols", []) if s in self.symbols],
-                    "summary": str(row.get("summary", ""))[:500],
-                    "model": self.triage_model, "at": now.isoformat(),
-                }
-                done += 1
+            if out is not None:
+                for row in out.get("items", []):
+                    item = by_id.pop(row.get("id"), None)
+                    if item is None:
+                        continue
+                    item.triage = {
+                        "relevance": round(_clip(row.get("relevance"), 0, 1), 3),
+                        "sentiment": round(_clip(row.get("sentiment"), -1, 1), 3),
+                        "impact": row.get("impact") if row.get("impact") in ("low", "medium", "high") else "low",
+                        "category": row.get("category", "other"),
+                        "symbols": [s for s in row.get("symbols", []) if s in self.symbols],
+                        "summary": str(row.get("summary", ""))[:500],
+                        "model": engine, "at": now.isoformat(),
+                    }
+                    done += 1
+                self._count(engine, len(batch) - len(by_id))
+            if by_id:  # no engine, or items the model skipped
+                done += self.local.triage(list(by_id.values()), now)
+                self._count("local", len(by_id))
         return done
 
     # ------------------------------------------------------------------ deep analysis
@@ -231,7 +251,15 @@ class NewsAnalyst:
             + f"\nWrite every text field in {self.language}. Finish by calling submit_analyses once with all items."
         )
 
-    def deep(self, items: list[NewsItem], context: str, now: datetime) -> int:
+    def _store(self, item: NewsItem, row: dict[str, Any], engine: str, now: datetime) -> None:
+        row = dict(row)
+        row["affected"] = [a for a in row.get("affected", []) if isinstance(a, dict) and a.get("symbol") in self.symbols]
+        row["confidence"] = round(_clip(row.get("confidence"), 0, 1, 0.5), 2)
+        row["model"], row["at"] = engine, now.isoformat()
+        item.analysis = row
+
+    def deep(self, items: list[NewsItem], context: str, now: datetime, calendar: dict[str, Any] | None = None) -> int:
+        """Detailed analysis of ``items``: LLM engines in order, the local engine for what they leave."""
         done = 0
         system = self._deep_system(context)
         for k in range(0, len(items), self.deep_batch):
@@ -239,27 +267,36 @@ class NewsAnalyst:
             payload = "\n\n".join(json.dumps({
                 "id": i.id, "published": i.published, "source": i.publisher or i.source, "url": i.url,
                 "title": i.title, "summary": i.summary, "triage": i.triage}, ensure_ascii=False) for i in batch)
-            tools = [{**WEB_FETCH, "max_uses": len(batch), "max_content_tokens": 6000}] if self.read_articles else []
-            try:
-                out, sources = submit_call(self.client, self.deep_model, system,
-                                           f"Analyse these {len(batch)} news items:\n\n{payload}", DEEP_TOOL,
-                                           self.usage, server_tools=tools, max_tokens=24000, effort="medium")
-            except LLMError as exc:
-                self.errors.append(f"deep: {exc}")
-                log.warning("deep analysis batch failed: %s", exc)
-                continue
+            user = f"Analyse these {len(batch)} news items:\n\n{payload}"
             by_id = {i.id: i for i in batch}
-            for row in out.get("analyses", []):
-                item = by_id.get(row.get("id"))
-                if item is None:
+            for b in self.deep_backends:
+                try:
+                    if b.name == "anthropic":  # Claude can open the articles (web fetch)
+                        if getattr(b, "budget", None):
+                            b.budget.take(b.name)
+                        tools = [{**WEB_FETCH, "max_uses": len(batch), "max_content_tokens": 6000}] \
+                            if self.read_articles else []
+                        out, _ = submit_call(b.client, b.model, system, user, DEEP_TOOL, self.usage,
+                                             server_tools=tools, max_tokens=24000, effort="medium")
+                    else:
+                        out = b.json(system.replace("submit_analyses", "the JSON answer"), user,
+                                     DEEP_TOOL["input_schema"], self.usage, max_tokens=8000)
+                except LLMError as exc:
+                    self.errors.append(f"deep {b.name}: {exc}"[:240])
+                    log.warning("deep analysis with %s failed: %s", b.name, exc)
                     continue
-                row = dict(row)
-                row["affected"] = [a for a in row.get("affected", []) if isinstance(a, dict)
-                                   and a.get("symbol") in self.symbols]
-                row["confidence"] = round(_clip(row.get("confidence"), 0, 1, 0.5), 2)
-                row["model"], row["at"] = self.deep_model, now.isoformat()
-                item.analysis = row
+                engine = f"{b.name}:{b.model}"
+                for row in out.get("analyses", []):
+                    item = by_id.pop(row.get("id"), None)
+                    if item is not None:
+                        self._store(item, row, engine, now)
+                        done += 1
+                        self._count(engine, 1)
+                break
+            for item in by_id.values():  # no engine answered: local analysis
+                item.analysis = self.local.analyse_item(item, now, calendar)
                 done += 1
+                self._count("local", 1)
         return done
 
 

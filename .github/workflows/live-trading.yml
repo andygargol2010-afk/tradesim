@@ -55,8 +55,11 @@ jobs:
           # Optional: Alpaca keys give real bid/ask for stocks (free paper account). Without them Yahoo is used.
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          # Claude: news analysis, calendar research and the discretionary agent. Without it, data is still
-          # collected and the other agents trade normally; the Claude agent holds.
+          # Optional AI engines for news analysis and the discretionary agent. All optional: without them the
+          # free local engine does the work. Free keys (no card): Google AI Studio (Gemini) and Groq.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Claude is paid (Anthropic API); only used if this secret exists.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # Real money stays disabled unless the repository variable TRADESIM_ALLOW_LIVE is set to 1.
           TRADESIM_ALLOW_LIVE: ${{ vars.TRADESIM_ALLOW_LIVE }}

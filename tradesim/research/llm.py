@@ -70,6 +70,8 @@ class Usage:
     def cost_usd(self) -> float:
         total = 0.0
         for model, r in self.by_model.items():
+            if model.split(":")[0] in FREE_PROVIDERS:
+                continue  # free tiers
             pin, pout = PRICES.get(model, (4.0, 20.0))
             total += (r["input_tokens"] * pin + r["output_tokens"] * pout + r["cache_read_tokens"] * pin * 0.1
                       + r["cache_write_tokens"] * pin * 1.25) / 1e6
@@ -179,3 +181,198 @@ def require_keys(obj: dict[str, Any], keys: list[str], where: str) -> None:
     missing = [k for k in keys if k not in obj]
     if missing:
         raise LLMError(f"{where}: missing {', '.join(missing)}")
+
+
+# ----------------------------------------------------------------------------- backends
+# The research and the discretionary agent can run on several engines, tried in order:
+#   * free tiers of OpenAI-compatible APIs (Google Gemini, Groq): need a free API key, no card;
+#   * Anthropic's Claude (paid; adds web search for the calendar and the agent);
+#   * the local keyword / multi-factor engines (always available, no key).
+# A daily request budget per provider keeps the free tiers within their quotas.
+
+FREE_PROVIDERS: dict[str, dict[str, str]] = {
+    "gemini": {"base_url": "https://generativelanguage.googleapis.com/v1beta/openai", "env": "GEMINI_API_KEY",
+               "model": "gemini-flash-lite-latest", "label": "Google Gemini (gratis)"},
+    "groq": {"base_url": "https://api.groq.com/openai/v1", "env": "GROQ_API_KEY", "model": "openai/gpt-oss-120b",
+             "label": "Groq (gratis)"},
+}
+
+
+class QuotaError(LLMError):
+    """The provider's (or our) daily budget is spent."""
+
+
+class Budget:
+    """Requests per provider per UTC day, persisted so separate runs share the count."""
+
+    def __init__(self, path: Any = None, limits: dict[str, int] | None = None):
+        from pathlib import Path
+
+        self.path = Path(path) if path else None
+        self.limits = limits or {}
+        self.counts: dict[str, Any] = {}
+        if self.path and self.path.exists():
+            try:
+                self.counts = json.loads(self.path.read_text())
+            except (OSError, ValueError):
+                self.counts = {}
+
+    @staticmethod
+    def _today() -> str:
+        from datetime import datetime, timezone
+
+        return datetime.now(timezone.utc).date().isoformat()
+
+    def used(self, provider: str) -> int:
+        day = self.counts.get(self._today(), {})
+        return int(day.get(provider, 0))
+
+    def take(self, provider: str) -> None:
+        limit = self.limits.get(provider)
+        if limit is not None and self.used(provider) >= limit:
+            raise QuotaError(f"{provider}: daily budget of {limit} requests used")
+        today = self._today()
+        self.counts = {today: {**self.counts.get(today, {}), provider: self.used(provider) + 1}}  # keep today only
+        if self.path:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            self.path.write_text(json.dumps(self.counts))
+
+
+class Backend:
+    """One engine able to answer a JSON-schema request. ``name``: anthropic | gemini | groq."""
+
+    name = ""
+    label = ""
+    free = False
+    web = False  # can search the web (Anthropic server tools)
+
+    def json(self, system: str, user: str, schema: dict[str, Any], usage: Usage, max_tokens: int = 8000,
+             effort: str | None = None) -> dict[str, Any]:  # pragma: no cover - interface
+        raise NotImplementedError
+
+
+class AnthropicBackend(Backend):
+    name, label, free, web = "anthropic", "Claude (Anthropic, de pago)", False, True
+
+    def __init__(self, client: Any, model: str = "claude-opus-5-5", budget: Budget | None = None):
+        self.client, self.model, self.budget = client, model, budget
+
+    def json(self, system, user, schema, usage, max_tokens=16000, effort="medium"):
+        if self.budget:
+            self.budget.take(self.name)
+        return json_call(self.client, self.model, system, user, schema, usage, max_tokens=max_tokens, effort=effort)
+
+
+class OpenAICompatBackend(Backend):
+    """Chat-completions API with JSON mode (Gemini's and Groq's OpenAI-compatible endpoints)."""
+
+    free = True
+
+    def __init__(self, name: str, api_key: str, model: str | None = None, base_url: str | None = None,
+                 budget: Budget | None = None, timeout: float = 120.0, post: Any = None):
+        spec = FREE_PROVIDERS.get(name, {})
+        self.name, self.label = name, spec.get("label", name)
+        self.api_key = api_key
+        self.model = model or spec.get("model", "")
+        self.base_url = (base_url or spec.get("base_url", "")).rstrip("/")
+        self.budget, self.timeout = budget, timeout
+        self._post = post  # injectable for tests: (url, headers, payload, timeout) -> (status, json)
+
+    def _send(self, payload: dict[str, Any]) -> tuple[int, dict[str, Any]]:
+        url = f"{self.base_url}/chat/completions"
+        headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
+        if self._post is not None:
+            return self._post(url, headers, payload, self.timeout)
+        import requests
+
+        r = requests.post(url, headers=headers, json=payload, timeout=self.timeout)
+        try:
+            body = r.json()
+        except ValueError:
+            body = {"error": {"message": r.text[:300]}}
+        return r.status_code, body
+
+    def json(self, system, user, schema, usage, max_tokens=8000, effort=None):
+        if self.budget:
+            self.budget.take(self.name)
+        sys_text = (system + "\n\nAnswer with ONE JSON object and nothing else. It must follow this JSON schema "
+                    "(all listed properties required):\n" + json.dumps(schema, ensure_ascii=False))
+        payload = {"model": self.model, "max_tokens": max_tokens, "temperature": 0.3,
+                   "response_format": {"type": "json_object"},
+                   "messages": [{"role": "system", "content": sys_text}, {"role": "user", "content": user}]}
+        try:
+            status, body = self._send(payload)
+        except Exception as exc:  # noqa: BLE001 - network errors
+            raise LLMError(f"{self.name}: {exc}") from exc
+        if status == 429:
+            raise QuotaError(f"{self.name}: rate limit / quota reached")
+        if status != 200:
+            msg = (body.get("error") or {}).get("message") if isinstance(body, dict) else str(body)
+            raise LLMError(f"{self.name}: HTTP {status}: {str(msg)[:300]}")
+        u = body.get("usage") or {}
+        usage.add(f"{self.name}:{self.model}", _CompatUsage(u.get("prompt_tokens", 0), u.get("completion_tokens", 0)))
+        try:
+            text = body["choices"][0]["message"]["content"] or ""
+        except (KeyError, IndexError, TypeError) as exc:
+            raise LLMError(f"{self.name}: unexpected response") from exc
+        return parse_json_text(text, self.name)
+
+
+@dataclass
+class _CompatUsage:
+    input_tokens: int
+    output_tokens: int
+    cache_read_input_tokens: int = 0
+    cache_creation_input_tokens: int = 0
+    server_tool_use: Any = None
+
+
+def parse_json_text(text: str, who: str = "model") -> dict[str, Any]:
+    """Parse a JSON object from a model answer (tolerates code fences and text around it)."""
+    t = text.strip()
+    if t.startswith("```"):
+        t = t.strip("`")
+        t = t[t.find("{"):] if "{" in t else t
+    start, end = t.find("{"), t.rfind("}")
+    if start < 0 or end <= start:
+        raise LLMError(f"{who}: no JSON object in the answer")
+    try:
+        out = json.loads(t[start:end + 1])
+    except json.JSONDecodeError as exc:
+        raise LLMError(f"{who}: invalid JSON ({exc})") from exc
+    if not isinstance(out, dict):
+        raise LLMError(f"{who}: JSON is not an object")
+    return out
+
+
+def make_backends(order: list[str], models: dict[str, str] | None = None, budget: Budget | None = None,
+                  anthropic_client: Any = "auto", anthropic_model: str = "claude-opus-5-5") -> list[Backend]:
+    """Backends available in this environment, in ``order`` (names: gemini, groq, anthropic)."""
+    models = models or {}
+    out: list[Backend] = []
+    for name in order:
+        if name == "anthropic":
+            client = make_client() if anthropic_client == "auto" else anthropic_client
+            if client is not None:
+                out.append(AnthropicBackend(client, models.get("anthropic", anthropic_model), budget))
+        elif name in FREE_PROVIDERS:
+            key = os.environ.get(FREE_PROVIDERS[name]["env"])
+            if key:
+                out.append(OpenAICompatBackend(name, key, models.get(name), budget=budget))
+    return out
+
+
+def json_with_fallback(backends: list[Backend], system: str, user: str, schema: dict[str, Any], usage: Usage,
+                       max_tokens: int = 8000, effort: str | None = "medium",
+                       errors: list[str] | None = None) -> tuple[dict[str, Any], Backend]:
+    """Try each backend in order; returns ``(answer, backend_used)``. Raises LLMError if all fail."""
+    last: Exception | None = None
+    for b in backends:
+        try:
+            return b.json(system, user, schema, usage, max_tokens=max_tokens, effort=effort), b
+        except LLMError as exc:
+            last = exc
+            if errors is not None:
+                errors.append(str(exc)[:200])
+            log.warning("%s failed (%s); trying the next engine", b.name, exc)
+    raise LLMError(f"no engine answered: {last}")

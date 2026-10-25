@@ -35,9 +35,16 @@ class ResearchConfig:
         enabled: run research at all.
         dir: where the research files live (relative to the repository root).
         news / macro / calendar / technicals: switch each part on or off.
-        analyze: use Claude (needs ``ANTHROPIC_API_KEY``); without it data is still collected.
-        triage_model / deep_model / calendar_model: models for each analyst task.
-        max_triage_per_run / max_deep_per_run: caps per refresh (cost control); the backlog carries over.
+        analyze: use AI engines when available; without them the free local engine analyses everything.
+        engines: AI engines in order of preference: ``gemini`` / ``groq`` (free tiers, need the free keys
+            ``GEMINI_API_KEY`` / ``GROQ_API_KEY``) and ``anthropic`` (Claude, paid, ``ANTHROPIC_API_KEY``).
+            Missing keys are skipped; when all fail the local engine takes over.
+        free_models: model per free engine (defaults in ``tradesim.research.llm.FREE_PROVIDERS``).
+        daily_requests: request budget per engine per UTC day (keeps free tiers within quota).
+        triage_engine: ``"local"`` (free keyword engine for every item, default) or ``"llm"``.
+        triage_model / deep_model / calendar_model: Claude models for each task (when ``anthropic`` is used).
+        max_triage_per_run / max_deep_per_run: caps per refresh for AI engines; the backlog carries over.
+        max_local_deep_per_run: detailed analyses per refresh when only the local engine is available.
         deep_min_relevance: triage relevance needed for a deep analysis (held assets need 0.2 less).
         read_articles: let the deep analyst open articles with web fetch.
         calendar_days / keep_news_days / news_max_age_days: windows.
@@ -52,6 +59,11 @@ class ResearchConfig:
     calendar: bool = True
     technicals: bool = True
     analyze: bool = True
+    engines: list[str] = field(default_factory=lambda: ["gemini", "groq", "anthropic"])
+    free_models: dict[str, str] = field(default_factory=dict)
+    daily_requests: dict[str, int] = field(default_factory=lambda: {"gemini": 150, "groq": 400, "anthropic": 2000})
+    triage_engine: str = "local"
+    max_local_deep_per_run: int = 25
     triage_model: str = "claude-haiku-5-5"
     deep_model: str = "claude-sonnet-5-5"
     calendar_model: str = "claude-opus-5-5"
@@ -121,17 +133,20 @@ def refresh_research(cfg: ResearchConfig, symbols: list[str], universe: AssetUni
                      holdings: set[str] | None = None) -> dict[str, Any]:
     """Run one refresh and return a status dict (also saved as ``status.json``).
 
-    ``client="auto"`` builds an Anthropic client from the environment (``None`` disables analysis);
-    ``provider`` (a DataProvider) is needed for the technical patterns.
+    ``client`` is the Anthropic client: ``"auto"`` builds it from ``ANTHROPIC_API_KEY`` when ``anthropic`` is
+    among ``cfg.engines``; ``None`` disables every AI engine (local engine only). Free engines are built from
+    their keys. ``provider`` (a DataProvider) is needed for the technical patterns.
     """
     now = now or datetime.now(timezone.utc)
     t0 = time.perf_counter()
-    if client == "auto":
-        client = make_client() if cfg.analyze else None
     holdings = holdings or set()
     lines = universe_lines(symbols, universe)
-    status: dict[str, Any] = {"started_at": now.isoformat(), "errors": {}, "llm": "enabled" if client else
-                              ("disabled in config" if not cfg.analyze else "no ANTHROPIC_API_KEY")}
+    engines = engine_chain(cfg, store, client)
+    if client == "auto":
+        client = next((b.client for b in engines["deep"] if b.name == "anthropic"), None)
+    status: dict[str, Any] = {"started_at": now.isoformat(), "errors": {},
+                              "llm": "enabled" if engines["deep"] else "local",
+                              "engines": [b.label for b in engines["deep"]] + ["local (gratis, sin IA)"]}
     usage = Usage()
 
     if cfg.macro:
@@ -153,7 +168,7 @@ def refresh_research(cfg: ResearchConfig, symbols: list[str], universe: AssetUni
         status["errors"].update({f"calendar:{k}": v for k, v in builder.errors.items()})
         due = not cal.get("researched_at") or \
             now - datetime.fromisoformat(cal["researched_at"]) >= timedelta(hours=cfg.calendar_research_hours)
-        if client is not None and due:
+        if client is not None and cfg.analyze and "anthropic" in cfg.engines and due:
             researcher = CalendarResearcher(client, lines, cfg.calendar_model, cfg.language)
             try:
                 cal = researcher.research(cal, now)
@@ -172,21 +187,19 @@ def refresh_research(cfg: ResearchConfig, symbols: list[str], universe: AssetUni
         added = news.merge(fetched)
         news.prune(now, cfg.keep_news_days)
         status["errors"].update({f"news:{k}": v for k, v in collector.errors.items()})
-        triaged = deep = 0
-        if client is not None:
-            analyst = NewsAnalyst(client, lines, cfg.triage_model, cfg.deep_model, cfg.language,
-                                  read_articles=cfg.read_articles)
-            pending = sorted((i for i in news.items.values() if i.triage is None), key=lambda i: i.published,
-                             reverse=True)[: cfg.max_triage_per_run]
-            triaged = analyst.triage(pending, now)
-            store.save("news", news.to_dict())  # keep the triage even if the deep pass fails
-            chosen = pick_for_deep(news.items.values(), holdings, cfg.max_deep_per_run, cfg.deep_min_relevance,
-                                   now=now)
-            if chosen:
-                deep = analyst.deep(chosen, analysis_context(store, now), now)
-            usage.merge(analyst.usage)
-            if analyst.errors:
-                status["errors"]["analyst"] = "; ".join(analyst.errors)[:500]
+        analyst = NewsAnalyst(lines, engines["triage"], engines["deep"], cfg.language, read_articles=cfg.read_articles)
+        pending = sorted((i for i in news.items.values() if i.triage is None), key=lambda i: i.published, reverse=True)
+        if engines["triage"]:
+            pending = pending[: cfg.max_triage_per_run]
+        triaged = analyst.triage(pending, now)
+        store.save("news", news.to_dict())  # keep the triage even if the deep pass fails
+        limit = cfg.max_deep_per_run if engines["deep"] else cfg.max_local_deep_per_run
+        chosen = pick_for_deep(news.items.values(), holdings, limit, cfg.deep_min_relevance, now=now)
+        deep = analyst.deep(chosen, analysis_context(store, now), now, calendar=store.load("calendar")) if chosen else 0
+        usage.merge(analyst.usage)
+        status["news_engines"] = analyst.engines
+        if analyst.errors:
+            status["errors"]["analyst"] = "; ".join(analyst.errors)[:500]
         store.save("news", news.to_dict())
         backlog = sum(1 for i in news.items.values() if i.triage is None)
         status["news"] = {"fetched": len(fetched), "new": added, "stored": len(news.items), "triaged": triaged,
@@ -205,6 +218,29 @@ def refresh_research(cfg: ResearchConfig, symbols: list[str], universe: AssetUni
     status["config"] = asdict(cfg)
     store.save("status", status)
     return status
+
+
+def engine_chain(cfg: ResearchConfig, store: ResearchStore, client: Any = "auto") -> dict[str, list[Any]]:
+    """AI engines per task, in preference order (empty lists = local engine only)."""
+    from tradesim.research.llm import AnthropicBackend, Budget, make_backends
+
+    if not cfg.analyze or client is None:
+        return {"triage": [], "deep": []}
+    budget = Budget(store.dir / "llm_budget.json", cfg.daily_requests)
+    free = make_backends([e for e in cfg.engines if e != "anthropic"], cfg.free_models, budget)
+    anthropic_client = make_client() if client == "auto" else client
+    claude = anthropic_client is not None and "anthropic" in cfg.engines
+
+    def chain(claude_model: str) -> list[Any]:
+        out = []
+        for name in cfg.engines:
+            if name == "anthropic" and claude:
+                out.append(AnthropicBackend(anthropic_client, claude_model, budget))
+            else:
+                out += [b for b in free if b.name == name]
+        return out
+
+    return {"triage": chain(cfg.triage_model) if cfg.triage_engine == "llm" else [], "deep": chain(cfg.deep_model)}
 
 
 def refresh_technicals(store: ResearchStore, symbols: list[str], universe: AssetUniverse, provider: Any,

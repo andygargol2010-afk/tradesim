@@ -107,7 +107,7 @@ function renderStatus() {
   const rs = d.research?.status;
   if (rs?.started_at) {
     bar.append(h("span", {}, h("a", { href: "research.html" }, "Investigación"), ` actualizada ${fmtAgo(rs.started_at)}`,
-      rs.llm === "enabled" ? "" : " (sin análisis de Claude)"));
+      rs.llm === "enabled" ? "" : " (motor local gratuito)"));
   }
   const next = nextRuns(d.meta.schedule);
   if (next.length) {
@@ -339,15 +339,16 @@ function renderLearning(a) {
 const REGIME = { risk_on: "apetito por el riesgo", neutral: "neutral", risk_off: "aversión al riesgo" };
 const CONVICTION = { low: "baja", medium: "media", high: "alta" };
 
-/** Memory of the Claude discretionary agent: last view, open theses, lessons, cost. */
+/** Memory of the discretionary agent: last view, open theses, lessons, engine, cost. */
 function renderAnalystMemory(root, L) {
   const kv = h("dl", { class: "kv" });
   const add = (k, v) => kv.append(h("dt", {}, k), h("dd", {}, v));
-  add("Método", "Análisis discrecional con Claude: patrones técnicos + macro + noticias + calendario, con memoria");
-  add("Modelo", L.model || "n/a");
+  add("Método", "Análisis discrecional: patrones técnicos + macro + noticias + calendario, con memoria");
+  add("Motores", (L.engines || []).map((e) => ({ gemini: "Gemini (gratis)", groq: "Groq (gratis)", anthropic: "Claude (de pago)" }[e] || e)).join(" → ") + " → motor local (gratis)");
+  if (L.last_engine) add("Última decisión con", L.last_engine);
   add("Decisiones tomadas", String(L.decisions ?? 0));
   if (L.last_regime) add("Lectura del mercado", REGIME[L.last_regime] || L.last_regime);
-  if (isNum(L.llm_cost_usd_total)) add("Coste de Claude (este agente)", fmtMoney(L.llm_cost_usd_total));
+  add("Coste de IA de pago (este agente)", fmtMoney(L.llm_cost_usd_total || 0));
   root.append(kv);
   if (L.last_view) root.append(h("div", { class: "chart-title" }, "Última visión del mercado"), h("p", { class: "view" }, L.last_view));
   const theses = Object.entries(L.theses || {});
@@ -402,7 +403,7 @@ function renderJournal(a) {
       isNum(e.equity_after) ? h("span", { class: "msg" }, `equity ${fmtMoney(e.equity_after)}`) : null));
     const ex = e.explain || {};
     if (ex.market_view) {
-      li.append(h("p", { class: "view" }, h("strong", {}, `Visión (${REGIME[ex.regime] || ex.regime || "?"}): `), ex.market_view));
+      li.append(h("p", { class: "view" }, h("strong", {}, `Visión (${REGIME[ex.regime] || ex.regime || "?"}${ex.engine ? ` · ${ex.engine}` : ""}): `), ex.market_view));
       const bits = [];
       if (ex.changes?.length) bits.push(...ex.changes.map((c) => `Cambio: ${c}`));
       if (ex.key_risks?.length) bits.push(`Riesgos: ${ex.key_risks.join(" · ")}`);

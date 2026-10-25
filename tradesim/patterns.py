@@ -631,3 +631,25 @@ def pattern_features(c: np.ndarray, o: np.ndarray | None = None, h: np.ndarray |
     if o is not None and h is not None and l is not None and len(o) == len(c):
         candle = candle_signal(np.asarray(o, float), np.asarray(h, float), np.asarray(l, float), c)
     return np.array([brk, trend, candle])
+
+
+# Spanish names (dashboard and the texts the local decision engine writes).
+PATTERN_NAMES_ES = {
+    "doji": "doji", "hammer": "martillo", "hanging_man": "hombre colgado", "shooting_star": "estrella fugaz",
+    "inverted_hammer": "martillo invertido", "bullish_engulfing": "envolvente alcista",
+    "bearish_engulfing": "envolvente bajista", "bullish_harami": "harami alcista", "bearish_harami": "harami bajista",
+    "piercing_line": "línea penetrante", "dark_cloud_cover": "nube oscura", "morning_star": "estrella de la mañana",
+    "evening_star": "estrella del atardecer", "three_white_soldiers": "tres soldados blancos",
+    "three_black_crows": "tres cuervos negros", "inside_bar": "barra interior",
+    "resistance_breakout": "ruptura de resistencia", "support_breakdown": "pérdida de soporte",
+    "double_top": "doble techo", "double_bottom": "doble suelo", "head_and_shoulders": "hombro-cabeza-hombro",
+    "inverse_head_and_shoulders": "HCH invertido", "ascending_triangle": "triángulo ascendente",
+    "descending_triangle": "triángulo descendente", "symmetrical_triangle": "triángulo simétrico",
+    "rising_wedge": "cuña ascendente", "falling_wedge": "cuña descendente", "golden_cross": "cruce dorado",
+    "death_cross": "cruce de la muerte", "new_52w_high": "máximo de 52 semanas", "new_52w_low": "mínimo de 52 semanas",
+    "bullish_rsi_divergence": "divergencia alcista RSI", "bearish_rsi_divergence": "divergencia bajista RSI",
+    "rsi_oversold": "RSI en sobreventa", "rsi_overbought": "RSI en sobrecompra",
+    "macd_bullish_cross": "cruce alcista MACD", "macd_bearish_cross": "cruce bajista MACD",
+    "bollinger_squeeze": "compresión de Bollinger", "gap_up": "hueco alcista", "gap_down": "hueco bajista",
+    "volume_spike": "pico de volumen",
+}

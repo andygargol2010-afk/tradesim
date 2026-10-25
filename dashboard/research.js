@@ -106,18 +106,19 @@ function renderStatus() {
   const st = r.status || {};
   bar.append(h("span", {}, "Investigación actualizada: ", h("strong", {}, fmtWhen(st.started_at)), ` (${fmtAgo(st.started_at)}, ${fmtNum(st.duration_s, 0)} s)`));
   const llmOn = st.llm === "enabled";
-  bar.append(h("span", {}, llmOn ? "✓ análisis con Claude activo" : "⚠ análisis con Claude desactivado"));
-  if (isNum(r.llm_cost_usd_total)) bar.append(h("span", {}, `coste estimado de Claude: ${fmtMoney(r.llm_cost_usd_total)} en total`));
+  bar.append(h("span", {}, "Motor: ", h("strong", {}, (st.engines || ["local (gratis, sin IA)"]).join(" → "))));
+  if (isNum(r.llm_cost_usd_total) && r.llm_cost_usd_total > 0) bar.append(h("span", {}, `coste estimado de IA de pago: ${fmtMoney(r.llm_cost_usd_total)} en total`));
+  else bar.append(h("span", {}, "coste: 0 $"));
   const nErr = Object.keys(r.errors || {}).length;
   bar.append(h("span", { title: Object.entries(r.errors || {}).map(([k, v]) => `${k}: ${v}`).join("\n") },
     nErr ? `⚠ ${nErr} fuente${nErr > 1 ? "s" : ""} con incidencias` : "✓ todas las fuentes respondieron"));
   if (R.source) bar.append(h("span", {}, `datos: ${R.source}`));
   $("notice").replaceChildren();
   if (!llmOn) {
-    $("notice").append(h("div", { class: "notice", role: "note" }, h("span", { class: "icon", "aria-hidden": "true" }, "!"),
-      h("span", {}, h("strong", {}, "Falta la clave de Claude. "),
-        "Las noticias, el macro, el calendario y los patrones se recogen igualmente, pero las noticias no se analizan, el calendario no se verifica con búsqueda web y el analista discrecional no opera. Añade ",
-        h("code", {}, "ANTHROPIC_API_KEY"), " en GitHub → Settings → Secrets and variables → Actions.")));
+    $("notice").append(h("div", { class: "notice", role: "note" }, h("span", { class: "icon", "aria-hidden": "true" }, "i"),
+      h("span", {}, h("strong", {}, "Modo gratuito sin IA. "),
+        "Todo se analiza con el motor local (diccionario financiero y reglas). Para análisis con IA gratis añade una clave gratuita de Google AI Studio (",
+        h("code", {}, "GEMINI_API_KEY"), ") o de Groq (", h("code", {}, "GROQ_API_KEY"), ") en GitHub → Settings → Secrets and variables → Actions.")));
   }
   $("footer").replaceChildren(`Datos generados ${fmtWhen(R.data.meta.generated_at)} · modelos: noticias ${r.models?.triage_model || "?"} (clasificación) y `,
     `${r.models?.deep_model || "?"} (análisis), calendario ${r.models?.calendar_model || "?"} · fuentes: Yahoo Finance, Google News, CoinDesk, `,
@@ -151,7 +152,7 @@ function eventRow(e) {
     h("span", { class: "country" }, e.country),
     h("span", { class: "title" }, titleEs(e.title),
       e.confirmed === false ? h("span", { class: "tag", title: "fecha calculada por la regla habitual; se confirma cuando la fuente oficial la publica" }, "fecha estimada") : null,
-      e.source === "claude-web" ? h("span", { class: "tag", title: e.notes || "" }, "añadido por Claude") : null),
+      e.source === "claude-web" ? h("span", { class: "tag", title: e.notes || "" }, "añadido por la IA") : null),
     h("span", { class: "nums" }, ...nums),
     h("span", { class: "meta" }, `${CATEGORY[e.category] || e.category} · ${assetsLabel(e.symbols)}`));
 }
@@ -168,7 +169,7 @@ function renderCalendar() {
     "Horas en tu zona horaria y en Nueva York.");
   const sum = $("cal-summary");
   sum.hidden = !cal.summary;
-  if (cal.summary) sum.replaceChildren(h("strong", {}, "Resumen del mes (Claude): "), cal.summary);
+  if (cal.summary) sum.replaceChildren(h("strong", {}, "Resumen del mes (IA): "), cal.summary);
   $("cal-list").replaceChildren(...groupByDay(future));
   if (!future.length) $("cal-list").append(h("p", { class: "empty" }, "Ningún evento con estos filtros."));
   $("cal-past").replaceChildren(...groupByDay(past));
@@ -219,7 +220,8 @@ function analysisCard(a, open) {
     })()) : null,
     an.macro_link ? h("p", {}, h("strong", {}, "Contexto macro. "), an.macro_link) : null,
     h("p", { class: "facts" }, `¿Descontado por el mercado? ${PRICED[an.priced_in] || an.priced_in} · confianza ${fmtPct((an.confidence ?? 0) * 100, false, 0)}`
-      + (an.read_full_article ? " · leyó el artículo completo" : "")),
+      + (an.read_full_article ? " · leyó el artículo completo" : "")
+      + ` · ${String(an.model || "").startsWith("local") ? "análisis automático del motor local (sin IA)" : `IA: ${String(an.model || "").split(":")[0]}`}`),
     an.what_to_watch ? h("p", {}, h("strong", {}, "Qué vigilar. "), an.what_to_watch) : null,
     related.length ? h("p", {}, h("strong", {}, "Eventos relacionados. "), related.join(" · ")) : null,
     h("p", { class: "facts" }, h("a", { href: a.url, target: "_blank", rel: "noopener" }, `Fuente: ${a.publisher || "original"} ↗`),
@@ -233,11 +235,13 @@ function renderNews() {
   const asset = $("news-asset").value;
   const touches = (syms) => !asset || (syms || []).includes(asset);
   const analyses = (n.analyses || []).filter((a) => touches((a.analysis.affected || []).map((x) => x.symbol).concat(a.triage?.symbols || [])));
-  $("news-hint").textContent = `${n.stored ?? 0} noticias de los últimos 7 días. Claude las clasifica todas (relevancia, sentimiento e impacto) y analiza en detalle las importantes`
+  const eng = Object.entries(R.data.research.status?.news_engines || {}).map(([k, v]) => `${k === "local" ? "motor local" : k.split(":")[0]} ${v}`).join(", ");
+  $("news-hint").textContent = `${n.stored ?? 0} noticias de los últimos 7 días. Todas se clasifican (relevancia, sentimiento e impacto) y las importantes se analizan en detalle`
+    + (eng ? ` (última actualización: ${eng})` : "")
     + (n.untriaged ? `; ${n.untriaged} pendientes de clasificar.` : ".");
   $("analyses").replaceChildren(...analyses.slice(0, 40).map((a, i) => analysisCard(a, i < 2)));
   if (!analyses.length) $("analyses").append(h("p", { class: "empty" }, R.data.research.status?.llm === "enabled"
-    ? "Todavía no hay análisis detallados para este filtro." : "Sin análisis: falta la clave de Claude."));
+    ? "Todavía no hay análisis detallados para este filtro." : "Todavía no hay análisis detallados para este filtro."));
   const feed = (n.feed || []).filter((f) => touches(f.symbols));
   table($("feed-table"), [
     { label: "Hora", get: (f) => fmtAgo(f.published) },
