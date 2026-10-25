@@ -84,9 +84,12 @@ class PatternReport:
     indicators: dict[str, float | None]
     patterns: list[Pattern]
 
-    def score(self) -> float:
-        """Net bullishness in [-1, 1] (direction x strength of every pattern, plus the trend)."""
-        s = sum(_SIGN[p.direction] * p.strength for p in self.patterns)
+    def score(self, weights: dict[str, float] | None = None) -> float:
+        """Net bullishness in [-1, 1] (direction x strength of every pattern, plus the trend). ``weights``
+        multiplies each pattern by name (e.g. 0 for a pattern that has shown no edge, -1 for one that works in
+        reverse); patterns not listed count once."""
+        w = weights or {}
+        s = sum(_SIGN[p.direction] * p.strength * w.get(p.name, 1.0) for p in self.patterns)
         s += 0.5 * _SIGN.get(self.trend.get("direction", NEUTRAL), 0.0) * float(self.trend.get("quality") or 0.0)
         return float(math.tanh(s / 2.0))
 

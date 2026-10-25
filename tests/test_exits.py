@@ -216,3 +216,23 @@ def test_auto_trailing_stop_for_unprotected_positions():
     if sim.portfolio.quantity("SPY") == 0:
         last = sim.portfolio.closed_trades[-1]
         assert last.symbol == "SPY" and sim.orders[last.exit_order_id].tag.endswith("automático")
+
+
+def test_risk_sizing_groups_and_drawdown_exposure():
+    import numpy as np
+    import pandas as pd
+
+    from tradesim.agents.risk import correlation_groups, drawdown_exposure, size_positions
+
+    rng = np.random.default_rng(0)
+    idx = pd.date_range("2024-01-01", periods=61, freq="D")
+    common = rng.normal(0, 0.04, 61)
+    rets = pd.DataFrame({"BTC-USD": common + rng.normal(0, 0.01, 61), "ETH-USD": common + rng.normal(0, 0.01, 61),
+                         "DOGE-USD": common * 1.5 + rng.normal(0, 0.02, 61), "KO": rng.normal(0, 0.008, 61),
+                         "SPY": rng.normal(0, 0.01, 61)}, index=idx)
+    groups = correlation_groups(rets, 0.7)
+    assert groups["BTC-USD"] == groups["ETH-USD"] == groups["DOGE-USD"] != groups["KO"]
+    w = size_positions(list(rets), rets, target_vol=0.15, max_weight=0.5)
+    assert w["KO"] > 4 * w["DOGE-USD"]  # equal risk, not equal money
+    assert sum(w[s] for s in ("BTC-USD", "ETH-USD", "DOGE-USD")) <= 0.30 + 1e-9  # crypto / correlated group cap
+    assert drawdown_exposure(0, 35) == 1 and drawdown_exposure(17.5, 35) == 0.75 and drawdown_exposure(40, 35) == 0

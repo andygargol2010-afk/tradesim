@@ -542,3 +542,34 @@ def test_forecast_book_and_signal_learner_only_keep_supported_lessons():
         prices = {s: prices[s] * float(np.exp(0.01 * sig[s]["news"] + rng.normal(0, 0.005))) for s in syms}
     w, src = sl.weights()
     assert src == "aprendidos" and w["news"] > abs(w["tech"])
+
+
+def test_signal_ic_by_horizon_drops_useless_news_and_pattern_edges():
+    from datetime import datetime, timedelta, timezone
+    from types import SimpleNamespace
+
+    import numpy as np
+
+    from tradesim.agents.forecasts import PatternStats, SignalLearner
+
+    rng = np.random.default_rng(3)
+    t0 = datetime(2025, 1, 1, tzinfo=timezone.utc)
+    syms = [f"A{k}" for k in range(10)]
+    sl = SignalLearner(min_days=10)
+    ps = PatternStats(min_n=30)
+    prices = {s: 100.0 for s in syms}
+    for d in range(160):  # technicals predict, news is noise; a "hammer" works, a "doji" does not
+        now = t0 + timedelta(days=d)
+        sl.resolve(now, prices)
+        ps.resolve(now, prices)
+        sig = {s: {"tech": rng.normal(), "news": rng.normal(), "trend": 0.0} for s in syms}
+        sl.record(now, sig, prices, {s: 0.01 for s in syms})
+        reps = {s: SimpleNamespace(patterns=[SimpleNamespace(name="hammer" if sig[s]["tech"] > 0 else "doji",
+                                                             direction="bullish", bars_ago=0)]) for s in syms}
+        ps.record(now, reps, prices, {s: 0.01 for s in syms}, "neutral")
+        prices = {s: prices[s] * float(np.exp(0.003 * sig[s]["tech"] + rng.normal(0, 0.004))) for s in syms}
+    ic = sl.signal_ic()
+    assert ic["tech"][5]["rank_ic_mean"] > 0.1 and ic["tech"][1]["days"] > 10
+    w, src = sl.weights()
+    assert w["news"] < 0.3 and src != "fijos"  # unproven news loses weight (learned or verified)
+    assert ps.edge("hammer", "neutral") == 1.0 and ps.edge("doji", "neutral") in (0.0, -1.0)

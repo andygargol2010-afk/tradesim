@@ -31,7 +31,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Sequence
 
 from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent, SetExits
-from tradesim.agents.forecasts import ForecastBook, SignalLearner
+from tradesim.agents.forecasts import ForecastBook, PatternStats, SignalLearner
 from tradesim.data.base import DataUnavailableError
 
 log = logging.getLogger(__name__)
@@ -154,6 +154,7 @@ class DiscretionaryAgent(Agent):
         self.reviews: list[dict[str, Any]] = []
         self.signal_learner = SignalLearner()
         self.book = ForecastBook()
+        self.pattern_stats = PatternStats()
         self.notes = ""
         self.usage_total: dict[str, Any] = {}
         self.steps = 0
@@ -200,8 +201,11 @@ class DiscretionaryAgent(Agent):
         prices = {s: float(obs.prices[s]) for s in symbols}
         self.book.resolve(obs.timestamp, prices)
         self.signal_learner.resolve(obs.timestamp, prices)
+        self.pattern_stats.resolve(obs.timestamp, prices)
+        sigmas = self._sigmas(obs, symbols)
+        self.pattern_stats.record(obs.timestamp, reports, prices, sigmas, self._regime()[0])
         signals, news = self._signal_scores(obs.timestamp, symbols, reports)
-        self.signal_learner.record(obs.timestamp, signals, prices, self._sigmas(obs, symbols))
+        self.signal_learner.record(obs.timestamp, signals, prices, sigmas)
         usage, errors, sources = Usage(), [], []
         decision, engine, dossier = None, None, ""
         for b in self._backends():
@@ -320,6 +324,12 @@ class DiscretionaryAgent(Agent):
                 f"- {d['date'][:10]} ({d.get('regime')}, equity {d.get('equity'):.0f}): {d.get('summary', '')[:300]}"
                 for d in self.decisions[-(3 if compact else 5):]))
         parts.append("YOUR TRACK RECORD (measured, not opinions):\n" + self.book.summary_text())
+        proven = [r for r in self.pattern_stats.table(40) if r["n"] >= 30 and r["t"] is not None and abs(r["t"]) > 2]
+        if proven:
+            parts.append("CHART PATTERNS WITH A MEASURED EDGE in this universe (signed 5-day relative return; others "
+                         "have shown none or lack data):\n" + "\n".join(
+                             f"- {r['pattern']} [{r['regime']}]: {r['mean_signed_ret_sigma']:+.2f} sigma, t {r['t']:+.1f}"
+                             f", n {r['n']}" for r in proven[:10]))
         if self.lessons:
             parts.append("LESSONS BACKED BY YOUR DATA (n>=30, |t|>2):\n"
                          + "\n".join(f"- {x}" for x in self.lessons[-(8 if compact else 12):]))
@@ -402,10 +412,11 @@ class DiscretionaryAgent(Agent):
                        ) -> tuple[dict[str, dict[str, float]], dict[str, tuple[float, int, list[str]]]]:
         """Technical, news and trend score of every asset (-1..1), plus the news details."""
         news = self._news_scores(now, symbols)
+        pattern_w = self.pattern_stats.weights(self._regime()[0])  # patterns weighted by their proven edge
         out = {}
         for sym, rep in reports.items():
             trend = rep.trend or {}
-            out[sym] = {"tech": float(rep.score()), "news": float(news.get(sym, (0.0, 0, []))[0]),
+            out[sym] = {"tech": float(rep.score(pattern_w)), "news": float(news.get(sym, (0.0, 0, []))[0]),
                         "trend": {"bullish": 1.0, "bearish": -1.0}.get(trend.get("direction"), 0.0)
                         * float(trend.get("quality") or 0)}
         return out, news
@@ -600,6 +611,19 @@ class DiscretionaryAgent(Agent):
             k = self.invested_fraction / total
             targets = {s: w * k for s, w in targets.items()}
             notes.append(f"scaled weights by {k:.2f} to stay within {self.invested_fraction:.0%} invested")
+        if len(targets) > 1:  # one bet in disguise: caps per correlated group and for crypto
+            from tradesim.agents.risk import apply_caps, correlation_groups, periods_per_year, returns_frame
+
+            universe = getattr(obs._sim, "universe", None)
+            capped = apply_caps(targets, correlation_groups(returns_frame(obs, targets)), 0.30,
+                                {s for s in targets if periods_per_year(s, universe) == 365}, 0.30)
+            if any(abs(capped[s] - targets[s]) > 1e-6 for s in targets):
+                notes.append("weights capped at 30 % per group of correlated assets / crypto")
+            targets = capped
+        cap = getattr(obs, "exposure_cap", 1.0)
+        if cap < 1:
+            targets = {s: w * cap for s, w in targets.items()}
+            notes.append(f"drawdown: exposure capped at {cap:.0%}")
         return targets, notes
 
     def _exit_levels(self, obs: Observation, sym: str, p: dict[str, Any] | None,
@@ -783,13 +807,15 @@ class DiscretionaryAgent(Agent):
                 "forecast_track_record": self.book.stats(),
                 "signal_weights": dict(zip(("weights", "source"), self.signal_learner.weights())),
                 "signal_ic": self.signal_learner.ic(),
+                "signal_ic_by_horizon": self.signal_learner.signal_ic(),
+                "pattern_edges": self.pattern_stats.table(),
                 "theses": self.theses}
 
     def state_dict(self) -> dict[str, Any]:
         return {"theses": self.theses, "decisions": self.decisions, "lessons": self.lessons, "reviews": self.reviews,
                 "notes": self.notes, "usage_total": self.usage_total, "steps": self.steps,
                 "last_engine": self.last_engine, "signal_learner": self.signal_learner.state_dict(),
-                "forecasts": self.book.state_dict()}
+                "forecasts": self.book.state_dict(), "pattern_stats": self.pattern_stats.state_dict()}
 
     def load_state_dict(self, state: dict[str, Any]) -> None:
         if not state:
@@ -799,6 +825,7 @@ class DiscretionaryAgent(Agent):
         self.reviews = state.get("reviews", [])
         self.signal_learner.load_state_dict(state.get("signal_learner"))
         self.book.load_state_dict(state.get("forecasts"))
+        self.pattern_stats.load_state_dict(state.get("pattern_stats"))
         self.lessons = (self.book.lessons() + self.signal_learner.lessons())[:15]  # old free-text lessons dropped
         self.notes = state.get("notes", "")
         self.usage_total = state.get("usage_total", {})

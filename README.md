@@ -87,7 +87,7 @@ integrantes actuales de los índices (sesgo de supervivencia), así que los resu
 
 **Cómo funciona.** `.github/workflows/live-trading.yml` ejecuta `scripts/live_run.py` con GitHub Actions:
 
-- **14:45 UTC todos los días** (`decide`): sincroniza, y si la bolsa de Nueva York está abierta (lunes a viernes, sin
+- **15:40 UTC todos los días** (`decide`; más de 1 h después de la apertura de Nueva York, cuando los spreads ya se estrecharon): sincroniza, y si la bolsa de Nueva York está abierta (lunes a viernes, sin
   festivos NYSE) cada agente observa precios actuales, decide y sus órdenes se ejecutan al momento contra la cotización
   y el libro reales (spread, impacto y comisiones de Alpaca). Primero ventas, luego compras con lo liberado.
   Una sola decisión por día y cuenta, aunque el workflow se relance.

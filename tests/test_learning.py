@@ -146,3 +146,19 @@ def test_median_sharpe_needs_consistency():
     full = lambda r: r.mean() / r.std() * np.sqrt(252)  # noqa: E731
     assert full(lucky) > full(steady)  # one-period Sharpe prefers the lucky setting...
     assert WalkForwardRSIAgent.median_sharpe(eq(steady), 4) > WalkForwardRSIAgent.median_sharpe(eq(lucky), 4)
+
+
+def test_bad_bars_and_regimes():
+    from tradesim.agents.learning import RegimeModel, bad_bars
+
+    idx = pd.date_range("2024-01-01", periods=120, freq="D", tz="UTC")
+    c = 100 * np.exp(np.cumsum(np.random.default_rng(0).normal(0, 0.01, 120)))
+    c[80] = c[79] * 3  # a bad print
+    df = pd.DataFrame({"close": c, "volume": 1e6}, index=idx)
+    df.iloc[90, 1] = 0.0  # no volume
+    bad = bad_bars(df)
+    assert bad[80] and bad[90] and bad.sum() <= 3
+    rng = np.random.default_rng(1)
+    z = np.r_[rng.normal([0, 1, 0.7, 0.10], 0.05, (100, 4)), rng.normal([0.5, -1, 0.3, 0.35], 0.05, (100, 4))]
+    m = RegimeModel(k=2).fit(z)
+    assert m.label(np.array([0, 1, 0.7, 0.1])) == 0 and m.label(np.array([0.5, -1, 0.3, 0.35])) == 1  # calm, stressed

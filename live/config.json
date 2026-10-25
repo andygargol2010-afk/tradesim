@@ -14,7 +14,7 @@
   },
   "schedule": [
     {
-      "cron": "45 14 * * *",
+      "cron": "40 15 * * *",
       "mode": "decide",
       "label": "Decisión diaria: 14:45 UTC (15 min tras la apertura de Nueva York en invierno, 75 min en verano)"
     },
@@ -82,7 +82,8 @@
       "fees": "alpaca",
       "broker": "paper",
       "description": "Compra los 50 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor.",
-      "auto_stop": false
+      "auto_stop": false,
+      "drawdown_control": false
     },
     {
       "id": "analista",

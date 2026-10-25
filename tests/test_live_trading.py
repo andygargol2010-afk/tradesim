@@ -388,3 +388,17 @@ def test_hedge_meta_agent_follows_the_best_agent(tmp_path, universe):
     pos = runner.load_trader(runner.config.accounts[2], runner.base_provider).portfolio.open_positions()
     assert pos  # it holds the combined portfolio of the other agents
     assert HedgeMetaAgent().act is not None
+
+
+def test_drawdown_scales_exposure_and_reactivates(tmp_path, universe):
+    runner, clock = make_runner(tmp_path, universe, accounts=[AccountSpec("ma", "MA", "MovingAverageCrossAgent", {})])
+    spec, meta, now = runner.config.accounts[0], {"risk_peak": 100.0}, clock.t
+    scale, dd, _ = runner._exposure(spec, meta, 82.5, 100.0, now)
+    assert dd == pytest.approx(17.5) and scale == pytest.approx(0.75)
+    scale, _, note = runner._exposure(spec, meta, 60.0, 100.0, now)
+    assert scale == 0 and "resumes" in note and meta["halted_since"]
+    later = now + timedelta(days=runner.config.risk.reactivate_after_days)
+    scale, dd, note = runner._exposure(spec, meta, 60.0, 100.0, later)
+    assert scale == 1 and dd == 0 and meta["risk_peak"] == 60.0 and "reactivated" in note
+    bh = AccountSpec("bh", "BH", "BuyAndHoldAgent", {}, drawdown_control=False)
+    assert runner._exposure(bh, {"risk_peak": 100.0}, 50.0, 100.0, now)[0] == 1.0

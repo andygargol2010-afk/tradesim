@@ -123,6 +123,8 @@ class Observation:
         open_orders: number of working orders, not counting protective exits (stop-loss / take-profit).
         tradable: ``None`` normally; when some markets are closed (weekends, holidays), the symbols whose
             orders can execute now. Decide as usual: only the part of the decision on these symbols is sent.
+        exposure_cap: fraction of equity the account may invest now (1 normally; lower in a drawdown). The runner
+            sells down to it anyway; sizing with it avoids buying what would be sold right away.
     """
 
     timestamp: datetime
@@ -136,6 +138,7 @@ class Observation:
     open_orders: int
     _sim: "BaseSimulator | None" = field(default=None, repr=False, compare=False)
     tradable: list[str] | None = None  # set when only some markets are open (e.g. crypto at weekends)
+    exposure_cap: float = 1.0  # max fraction of equity to invest (lowered by the runner in drawdowns)
 
     def position(self, symbol: str) -> Decimal:
         return self.positions.get(symbol, Decimal(0))

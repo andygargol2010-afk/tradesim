@@ -17,7 +17,9 @@ class RiskLimits:
 
     Attributes:
         max_position_pct: pre-trade cap on any single position, % of equity.
-        halt_drawdown_pct: stop opening positions once the account is this far below its peak.
+        halt_drawdown_pct: drawdown from the peak at which exposure reaches zero. On the way down the runner caps
+            invested capital at ``1 - (drawdown / halt_drawdown_pct)^2`` of equity (selling down to it); at the limit
+            everything is closed, and after ``reactivate_after_days`` the peak is reset and the account resumes.
         max_orders_per_run: refuse to send more orders than this in one decision (runaway agent guard).
         stop_loss_atr: automatic trailing stop-loss (ATR multiples) for every position an agent leaves
             without its own stop; ``None`` disables it.
@@ -27,6 +29,7 @@ class RiskLimits:
     halt_drawdown_pct: float = 35.0
     max_orders_per_run: int = 20
     stop_loss_atr: float | None = 2.5
+    reactivate_after_days: int = 20
 
 
 @dataclass
@@ -49,6 +52,7 @@ class AccountSpec:
     enabled: bool = True
     auto_stop: bool = True  # automatic trailing stop-loss for unprotected positions
     stop_loss_atr: float | None = None  # per-account ATR multiple for it (None: risk.stop_loss_atr)
+    drawdown_control: bool = True  # gradual de-risking in drawdowns (off for the buy & hold benchmark)
 
     def build_agent(self) -> Agent:
         if ":" in self.agent:

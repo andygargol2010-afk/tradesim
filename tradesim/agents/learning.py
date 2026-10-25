@@ -37,9 +37,14 @@ log = logging.getLogger(__name__)
 OWN_FEATURES = ["bias", "ret_1", "ret_5", "ret_20", "ret_60", "vol_ratio", "rsi_14", "dist_sma20", "dist_sma50",
                 *PATTERN_FEATURES, "volume_z", "volume_trend"]
 # market context (SPY; BTC-USD for crypto), strength vs the market and vs its sector / asset class, interactions
-CONTEXT_FEATURES = ["mkt_ret_5", "mkt_ret_20", "mkt_vol_regime", "rel_mkt_20", "rel_group_20",
+CONTEXT_FEATURES = ["mkt_ret_5", "mkt_ret_20", "mkt_vol_regime", "breadth", "rel_mkt_20", "rel_group_20",
                     "ret_5_x_regime", "ret_20_x_mkt"]
-FEATURES = OWN_FEATURES + CONTEXT_FEATURES
+# market regime (k-means over market volatility, trend and breadth) and its interactions: reversal and momentum
+# signals can flip sign from one regime to another
+N_REGIMES = 3
+REGIME_FEATURES = ([f"regime_{k}" for k in range(N_REGIMES)] + [f"ret_5_x_regime_{k}" for k in range(N_REGIMES)]
+                   + [f"ret_20_x_regime_{k}" for k in range(N_REGIMES)])
+FEATURES = OWN_FEATURES + CONTEXT_FEATURES + REGIME_FEATURES
 MIN_BARS = 61
 _I_RET5, _I_RET20 = OWN_FEATURES.index("ret_5"), OWN_FEATURES.index("ret_20")
 
@@ -96,17 +101,101 @@ def market_features(closes: np.ndarray) -> np.ndarray | None:
     if not (s20 > 0 and s60 > 0):
         return None
     return np.array([lr[-5:].sum() / (s20 * math.sqrt(5)), lr[-20:].sum() / (s20 * math.sqrt(20)), s20 / s60 - 1.0,
-                     lr[-20:].sum()])
+                     lr[-20:].sum(), s20 * math.sqrt(252)])
 
 
-def context_features(own: np.ndarray, sigma: float, mkt: np.ndarray | None, group_ret20: float | None) -> np.ndarray:
-    """Full feature vector: the asset's own features plus market context, relative strength and interactions."""
+def context_features(own: np.ndarray, sigma: float, mkt: np.ndarray | None, group_ret20: float | None,
+                     breadth: float | None = None) -> np.ndarray:
+    """Full feature vector: the asset's own features plus market context, breadth, relative strength and interactions
+    (the regime slots stay at 0 until :class:`RegimeModel` fills them)."""
     m5, m20, regime = (mkt[0], mkt[1], mkt[2]) if mkt is not None else (0.0, 0.0, 0.0)
     rel_mkt = ((own[_I_RET20] * sigma * math.sqrt(20) - mkt[3]) / (sigma * math.sqrt(20))) if mkt is not None else 0.0
     rel_group = own[_I_RET20] - group_ret20 if group_ret20 is not None else 0.0
-    x = np.r_[own, m5, m20, regime, rel_mkt, rel_group, own[_I_RET5] * regime,
-              own[_I_RET20] * float(np.clip(m20 / 2, -1, 1))]
+    b = (breadth - 0.5) * 4.0 if breadth is not None else 0.0
+    x = np.r_[own, m5, m20, regime, b, rel_mkt, rel_group, own[_I_RET5] * regime,
+              own[_I_RET20] * float(np.clip(m20 / 2, -1, 1)), np.zeros(len(REGIME_FEATURES))]
     return np.clip(x, -5.0, 5.0)
+
+
+def bad_bars(bars: pd.DataFrame | pd.Series, n_sigma: float = 10.0) -> np.ndarray:
+    """Bars not to learn from: a close-to-close move beyond ``n_sigma`` robust deviations of the previous 60 bars
+    (bad split adjustments, zero or absurd prints) or zero volume (when the feed reports volume at all)."""
+    c = _closes(bars).to_numpy(dtype=float)
+    bad = ~np.isfinite(c) | (c <= 0)
+    with np.errstate(divide="ignore", invalid="ignore"):
+        r = np.r_[0.0, np.diff(np.log(np.where(c > 0, c, np.nan)))]
+    mad = pd.Series(np.abs(r)).shift(1).rolling(60, min_periods=20).median().to_numpy() * 1.4826
+    bad |= np.nan_to_num(np.abs(r) > n_sigma * np.where(mad > 0, mad, np.inf), nan=False)
+    if isinstance(bars, pd.DataFrame) and "volume" in bars:
+        v = bars["volume"].to_numpy(dtype=float)
+        if np.mean(v > 0) > 0.5:
+            bad |= ~(v > 0)
+    return bad
+
+
+def _any_bad(cum: np.ndarray, a: int, b: int) -> bool:
+    """Bad bar in positions ``a..b`` (inclusive), ``cum`` = cumulative count with a leading 0."""
+    a, b = max(a, 0), min(b, len(cum) - 2)
+    return b >= a and cum[b + 1] - cum[a] > 0
+
+
+class RegimeModel:
+    """Market regimes by k-means over ``[market volatility regime, market 20-day trend, breadth, volatility level]``
+    per date, ordered from calm to stressed. Fitted once on the pre-training history (labels must stay stable for the
+    online model); fills the one-hot and interaction slots of each sample."""
+
+    def __init__(self, k: int = N_REGIMES):
+        self.k = k
+        self.mu: np.ndarray | None = None
+        self.sd: np.ndarray | None = None
+        self.centroids: np.ndarray | None = None
+
+    def fit(self, z: np.ndarray, iters: int = 100) -> "RegimeModel":
+        z = np.asarray(z, dtype=float)
+        if z.ndim != 2:
+            return self
+        z = z[np.all(np.isfinite(z), axis=1)]
+        if len(z) < 10 * self.k:
+            return self
+        self.mu, self.sd = z.mean(0), z.std(0) + 1e-9
+        zs = (z - self.mu) / self.sd
+        order = np.argsort(zs[:, 3])  # deterministic start: quantiles of the volatility level
+        c = np.array([zs[order[int((i + 0.5) * len(zs) / self.k)]] for i in range(self.k)])
+        for _ in range(iters):
+            lab = np.argmin(((zs[:, None, :] - c[None]) ** 2).sum(-1), axis=1)
+            new = np.array([zs[lab == i].mean(0) if np.any(lab == i) else c[i] for i in range(self.k)])
+            if np.allclose(new, c):
+                break
+            c = new
+        self.centroids = c[np.argsort(c[:, 3])]  # 0 = calmest, k-1 = most volatile
+        return self
+
+    def label(self, z: np.ndarray) -> int | None:
+        if self.centroids is None or z is None or not np.all(np.isfinite(z)):
+            return None
+        return int(np.argmin((((np.asarray(z) - self.mu) / self.sd - self.centroids) ** 2).sum(-1)))
+
+    def apply(self, samples: list[dict[str, Any]]) -> None:
+        start = len(OWN_FEATURES) + len(CONTEXT_FEATURES)
+        for s in samples:
+            k = self.label(s.get("z"))
+            if k is None:
+                continue
+            x = s["x"]
+            x[start: start + len(REGIME_FEATURES)] = 0.0
+            x[start + k] = 1.0
+            x[start + self.k + k] = x[_I_RET5]
+            x[start + 2 * self.k + k] = x[_I_RET20]
+
+    def state_dict(self) -> dict[str, Any] | None:
+        if self.centroids is None:
+            return None
+        return {"mu": self.mu.tolist(), "sd": self.sd.tolist(), "centroids": self.centroids.tolist()}
+
+    def load_state_dict(self, d: dict[str, Any] | None) -> None:
+        if d:
+            self.mu, self.sd = np.array(d["mu"]), np.array(d["sd"])
+            self.centroids = np.array(d["centroids"])
 
 
 def _frame_features(df: pd.DataFrame | pd.Series, end: int | None = None) -> tuple[np.ndarray, float] | None:
@@ -171,12 +260,17 @@ def build_panel(frames: dict[str, pd.DataFrame | pd.Series], groups: dict[str, s
             first = max(MIN_BARS - 1, len(arr) - 5) if last_only else MIN_BARS - 1
             mkt[m] = (c.index[first:], [market_features(arr[: t + 1]) for t in range(first, len(arr))])
     rows = []
+    bad_cum: dict[str, np.ndarray] = {}
     for sym, bars in frames.items():
         idx = _closes(bars).index
         cols = ([bars.to_numpy(dtype=float)] if isinstance(bars, pd.Series) else
                 [bars[k].to_numpy(dtype=float) if k in bars else None for k in ("close", "open", "high", "low", "volume")])
+        cum = np.r_[0, np.cumsum(bad_bars(bars))]
+        bad_cum[sym] = cum
         for t in ([len(idx) - 1] if last_only else range(MIN_BARS - 1, len(idx))):
             if every_days > 1 and idx[t].toordinal() % every_days:
+                continue
+            if _any_bad(cum, t - MIN_BARS + 2, t):  # a bad print inside the feature window
                 continue
             key = (sym, idx[t])
             f = cache.get(key) if cache is not None else None
@@ -188,8 +282,11 @@ def build_panel(frames: dict[str, pd.DataFrame | pd.Series], groups: dict[str, s
             if f is not None:
                 rows.append((sym, t, idx[t], f[0], f[1]))
     by_group: dict[tuple[Any, str], list[float]] = defaultdict(list)
+    above: dict[Any, list[bool]] = defaultdict(list)
+    i_sma50 = OWN_FEATURES.index("dist_sma50")
     for sym, _, d, own, _ in rows:
         by_group[(d.date(), groups.get(sym, ""))].append(own[_I_RET20])
+        above[d.date()].append(own[i_sma50] > 0)
     out = []
     for sym, t, d, own, sigma in rows:
         mv = None
@@ -198,10 +295,14 @@ def build_panel(frames: dict[str, pd.DataFrame | pd.Series], groups: dict[str, s
             j = int(dates.searchsorted(d, side="right")) - 1
             mv = vecs[j] if j >= 0 else None
         g = by_group[(d.date(), groups.get(sym, ""))]
-        s: dict[str, Any] = {"sym": sym, "ts": d.isoformat(), "x": context_features(own, sigma, mv, float(np.mean(g))
-                                                                                    if len(g) >= 3 else None),
+        a = above[d.date()]
+        breadth = float(np.mean(a)) if len(a) >= 5 else None
+        s: dict[str, Any] = {"sym": sym, "ts": d.isoformat(),
+                             "x": context_features(own, sigma, mv, float(np.mean(g)) if len(g) >= 3 else None, breadth),
                              "sigma": sigma}
-        if horizon:
+        if mv is not None and breadth is not None:
+            s["z"] = [float(mv[2]), float(mv[1]), breadth, float(mv[4])]
+        if horizon and not _any_bad(bad_cum[sym], t + 1, t + 1 + horizon):  # no bad print inside the target
             ee = _entry_exit(frames[sym], t, horizon)
             if ee is not None and ee[0] > 0 and ee[1] > 0:
                 s["y"] = float(np.clip(math.log(ee[1] / ee[0]) / (sigma * math.sqrt(horizon)), -6, 6))
@@ -393,6 +494,9 @@ class OnlineLinearAgent(Agent):
         min_hold_days: a position is not sold for a weak signal before this many days (costs!),
             only if its prediction falls below ``-entry_threshold``.
         forgetting: RLS forgetting per day (0.998 ~ the last 500 days matter most).
+        target_vol: annual volatility the portfolio is sized for (inverse-volatility weights).
+        group_cap / crypto_cap: max weight of a group of correlated assets / of crypto as a whole.
+        turnover_penalty: lambda of ``prediction * w - lambda * |w - w_now| * cost`` (higher = rotates less).
     """
 
     def __init__(self, symbols: Sequence[str] | None = None, top_k: int = 4, entry_threshold: float = 0.08,
@@ -400,7 +504,9 @@ class OnlineLinearAgent(Agent):
                  rebalance_band: float = 0.06, min_hold_days: int = 5, forgetting: float = 0.998,
                  ridge: float = 50.0, min_samples: int = 300, pretrain_bars: int = 750, track: int = 15000,
                  horizon: int = 1, ic_gate: bool = False, ic_window: int = 60, ic_min_t: float = 2.0,
-                 ic_min_days: int = 20, cost_multiple: float = 1.5, gbm: bool = True, gbm_every_days: int = 7):
+                 ic_min_days: int = 20, cost_multiple: float = 1.5, gbm: bool = True, gbm_every_days: int = 7,
+                 target_vol: float = 0.15, group_cap: float = 0.30, crypto_cap: float = 0.30,
+                 turnover_penalty: float = 1.0):
         self.symbols = list(symbols) if symbols else None
         self.top_k, self.entry_threshold, self.exit_threshold = top_k, entry_threshold, exit_threshold
         self.max_weight, self.invested_fraction, self.rebalance_band = max_weight, invested_fraction, rebalance_band
@@ -409,11 +515,14 @@ class OnlineLinearAgent(Agent):
         self.horizon = max(1, int(horizon))
         self.ic_gate, self.ic_window, self.ic_min_t, self.ic_min_days = ic_gate, ic_window, ic_min_t, ic_min_days
         self.cost_multiple = cost_multiple
+        self.target_vol, self.group_cap, self.crypto_cap = target_vol, group_cap, crypto_cap
+        self.turnover_penalty = turnover_penalty
         self.day_forgetting = forgetting
         self.use_gbm, self.gbm_every_days = gbm, gbm_every_days
         self.entries: dict[str, str] = {}  # symbol -> when the agent opened it
         self.model = RecursiveLeastSquares(len(FEATURES), forgetting, ridge)
         self.gbm = GradientBoostingModel()
+        self.regime = RegimeModel()
         self.gbm_attempt: str | None = None  # last (re)training attempt
         self._feature_cache: dict = {}  # in-memory only: features of past bars do not change
         self.pending: dict[str, list[dict[str, Any]]] = {}  # symbol -> samples waiting for their outcome
@@ -460,6 +569,7 @@ class OnlineLinearAgent(Agent):
             if df is None or not isinstance(queue, list):
                 continue
             idx = _closes(df).index
+            cum = np.r_[0, np.cumsum(bad_bars(df))]
             waiting = []
             for p in queue:
                 ts = pd.Timestamp(p["ts"])
@@ -471,6 +581,8 @@ class OnlineLinearAgent(Agent):
                 ee = _entry_exit(df, pos, self.horizon)
                 if ee is None:
                     waiting.append(p)
+                elif _any_bad(cum, pos + 1, pos + 1 + self.horizon):
+                    continue  # a bad print in the outcome: do not learn from it
                 elif ee[0] > 0 and ee[1] > 0:
                     resolved.append({**p, "y": float(np.clip(math.log(ee[1] / ee[0])
                                                              / (p["sigma"] * math.sqrt(self.horizon)), -6, 6)),
@@ -494,6 +606,10 @@ class OnlineLinearAgent(Agent):
             groups, markets = default_groups(list(frames))
         self._set_forgetting(len(frames))
         samples = build_panel(frames, groups, markets, horizon=self.horizon, cache=self._feature_cache)
+        if self.regime.centroids is None:  # regimes are fitted once, so their labels stay stable
+            by_day = {s["ts"][:10]: s["z"] for s in samples if "z" in s}
+            self.regime.fit(np.array(list(by_day.values())))
+        self.regime.apply(samples)
         demean_targets(samples)
         created: dict[str, list[int]] = defaultdict(list)
         realised: dict[str, list[int]] = defaultdict(list)
@@ -577,6 +693,7 @@ class OnlineLinearAgent(Agent):
             self.gbm_attempt = obs.timestamp.isoformat()
             samples = build_panel(self._frames(obs, symbols + context, self.pretrain_bars), groups, markets,
                                   horizon=self.horizon, cache=self._feature_cache)
+            self.regime.apply(samples)
             demean_targets(samples)
             self.gbm.fit(samples, self.horizon, now=obs.timestamp.isoformat())
         lookback = max(MIN_BARS + 8 + self.horizon, 80)
@@ -584,7 +701,10 @@ class OnlineLinearAgent(Agent):
         self._learn(bars)
         preds: dict[str, float] = {}
         sigmas: dict[str, float] = {}
-        for s in build_panel(bars, groups, markets, last_only=True):
+        current = build_panel(bars, groups, markets, last_only=True)
+        self.regime.apply(current)
+        regime_now = next((self.regime.label(s.get("z")) for s in current if s["sym"] == "SPY"), None)
+        for s in current:
             if s["sym"] not in symbols:
                 continue
             pred, lin, gb = self._predict(s["x"])
@@ -596,7 +716,8 @@ class OnlineLinearAgent(Agent):
             del queue[:-(self.horizon + 3)]
         wl, wg = self._weights()
         self._last = {"predictions": {s: round(v, 4) for s, v in sorted(preds.items(), key=lambda kv: -kv[1])},
-                      "samples": self.model.n, "ensemble": {"linear": round(wl, 3), "gbm": round(wg, 3)}}
+                      "samples": self.model.n, "ensemble": {"linear": round(wl, 3), "gbm": round(wg, 3)},
+                      "regime": regime_now}
         if self.model.n < self.min_samples or obs.open_orders:
             self._last["signals"] = ["learning: not trading yet" if self.model.n < self.min_samples
                                      else "open orders pending: waiting"]
@@ -617,24 +738,48 @@ class OnlineLinearAgent(Agent):
         return pred * sigma * math.sqrt(self.horizon) > self.cost_multiple * self._round_trip_cost(obs, sym)
 
     def _rebalance(self, obs: Observation, preds: dict[str, float], sigmas: dict[str, float]) -> list[Any]:
+        """Pick assets by expected relative return net of costs, then size them by risk.
+
+        Selection maximises ``prediction * w - turnover_penalty * |w - w_now| * cost``: a holding is only sold when
+        its expected loss beats the cost of selling, and only replaced when the newcomer's expected edge exceeds
+        both one-way costs. Weights: inverse volatility scaled to ``target_vol`` with caps per correlated group
+        (see :mod:`tradesim.agents.risk`)."""
+        from tradesim.agents.risk import returns_frame, size_positions
+
         for sym in list(self.entries):
             if obs.position(sym) <= 0:
                 del self.entries[sym]
-        young = {s for s in preds if obs.position(s) > 0 and self._held_days(obs, s) < self.min_hold_days
-                 and preds[s] > -self.entry_threshold}
-        keep = {s for s, p in preds.items() if obs.position(s) > 0 and p > self.exit_threshold} | young
-        fresh = [s for s, p in sorted(preds.items(), key=lambda kv: -kv[1])
-                 if p > self.entry_threshold and s not in keep and self._pays_costs(obs, s, p, sigmas[s])]
-        chosen = sorted(keep, key=lambda s: -preds[s]) + fresh
-        chosen = chosen[: self.top_k]
-        target = min(self.max_weight, self.invested_fraction / max(len(chosen), 1))
+        h = math.sqrt(self.horizon)
+        er = {s: p * sigmas[s] * h for s, p in preds.items()}  # expected relative return over the horizon
+        cost = {s: self._round_trip_cost(obs, s) / 2 for s in preds}  # one way
+        lam = self.turnover_penalty
+        held = [s for s in preds if obs.position(s) > 0]
+        young = {s for s in held if self._held_days(obs, s) < self.min_hold_days and preds[s] > -self.entry_threshold}
+        keep = [s for s in held if s in young or (preds[s] > self.exit_threshold or er[s] > -lam * cost[s])]
+        keep = sorted(keep, key=lambda s: -er[s])[: self.top_k]
+        fresh = [s for s in sorted(preds, key=lambda s: -er[s]) if s not in keep and preds[s] > self.entry_threshold
+                 and self._pays_costs(obs, s, preds[s], sigmas[s])]
+        chosen = keep + fresh[: max(0, self.top_k - len(keep))]
+        rest = [s for s in fresh if s not in chosen]
+        while rest:  # swap the weakest holding only if the edge gained pays both trips
+            worst = min((s for s in chosen if s not in young), key=lambda s: er[s], default=None)
+            best = rest[0]
+            if worst is None or er[best] - er[worst] <= lam * (cost[best] + cost[worst]):
+                break
+            chosen[chosen.index(worst)] = best
+            rest.pop(0)
+        rets = returns_frame(obs, chosen)
+        targets = size_positions(chosen, rets, getattr(obs._sim, "universe", None), target_vol=self.target_vol,
+                                 max_weight=self.max_weight, invested_cap=self.invested_fraction,
+                                 group_cap=self.group_cap, crypto_cap=self.crypto_cap,
+                                 exposure=getattr(obs, "exposure_cap", 1.0))
         actions: list[Any] = []
         signals: list[str] = []
         for sym in list(obs.positions):
-            if sym in preds and sym not in chosen and obs.position(sym) > 0:
+            if sym in preds and sym not in targets and obs.position(sym) > 0:
                 actions.append(ClosePosition(sym))
                 signals.append(f"sell {sym}: prediction {preds[sym]:+.3f}σ")
-        for sym in chosen:
+        for sym, target in targets.items():
             cur = obs.weight(sym)
             diff = target - cur
             price = obs.prices.get(sym, float("nan"))
@@ -650,6 +795,7 @@ class OnlineLinearAgent(Agent):
                 actions.append(OrderIntent.sell(sym, quantity=qty, tag=f"trim, {tag}"))
                 signals.append(f"trim {sym} to {target:.0%}: {tag}")
         self._last["signals"] = signals or ["hold"]
+        self._last["sizing"] = {s: round(w, 4) for s, w in targets.items()}
         return actions
 
     def explain(self) -> dict[str, Any] | None:
@@ -706,7 +852,7 @@ class OnlineLinearAgent(Agent):
         }
 
     def state_dict(self) -> dict[str, Any]:
-        return {"version": 2, "model": self.model.state_dict(), "pending": self.pending, "history": self.history,
+        return {"version": 3, "regime": self.regime.state_dict(), "model": self.model.state_dict(), "pending": self.pending, "history": self.history,
                 "pretrained_on": self.pretrained_on, "entries": self.entries, "gbm": self.gbm.state_dict(),
                 "gbm_attempt": self.gbm_attempt}
 
@@ -714,7 +860,7 @@ class OnlineLinearAgent(Agent):
         if not state:
             return
         self.entries = state.get("entries", {})
-        if len(state["model"]["w"]) != len(FEATURES) or state.get("version", 1) < 2:
+        if len(state["model"]["w"]) != len(FEATURES) or state.get("version", 1) < 3:
             # The features or the target changed: relearn from history on the next act().
             log.warning("%s: saved model is from an older version (%d features, expected %d); it will be retrained",
                         self.name, len(state["model"]["w"]), len(FEATURES))
@@ -723,6 +869,7 @@ class OnlineLinearAgent(Agent):
         self.pending = state.get("pending", {})
         self.history = state.get("history", [])
         self.pretrained_on = state.get("pretrained_on", 0)
+        self.regime.load_state_dict(state.get("regime"))
         if self.use_gbm:
             self.gbm.load_state_dict(state.get("gbm"))
         self.gbm_attempt = state.get("gbm_attempt")

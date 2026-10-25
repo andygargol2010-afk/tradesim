@@ -335,17 +335,26 @@ class LiveRunner:
         today = now.date().isoformat()
         if mode == "decide":
             pf = trader.portfolio
-            drawdown = float((pf.peak_equity - pf.equity) / pf.peak_equity * 100) if pf.peak_equity > 0 else 0.0
+            scale, drawdown, risk_note = self._exposure(spec, meta, float(pf.equity), float(pf.peak_equity), now)
             if meta.get("last_decision_date") == today:
                 status, message = "skipped", "already decided today"
             elif not window_ok and partial is None:
                 status, message = "skipped", window_msg
-            elif drawdown >= self.config.risk.halt_drawdown_pct:
-                status, message = "halted", f"drawdown {drawdown:.1f}% >= halt limit {self.config.risk.halt_drawdown_pct}%"
+            elif scale <= 0:
+                trimmed = self._enforce_exposure(trader, 0.0)
+                status, message = "halted", (f"drawdown {drawdown:.1f}% >= limit {self.config.risk.halt_drawdown_pct}%: "
+                                             f"positions closed ({len(trimmed)} orders); {risk_note}")
+                meta["last_decision_date"] = today
             elif not trader.symbols:
                 status, message = "skipped", "no prices available"
             else:
-                entry = self._decide(spec, trader, now, restrict=None if window_ok else partial)
+                entry = self._decide(spec, trader, now, restrict=None if window_ok else partial, exposure=scale)
+                trimmed = self._enforce_exposure(trader, scale)
+                if trimmed:
+                    entry.setdefault("orders", []).extend(trimmed)
+                if scale < 1:
+                    entry["exposure_cap"] = round(scale, 3)
+                    entry["risk_note"] = risk_note
                 status = entry["status"]
                 message = entry.get("message", "")
                 meta["last_decision_date"] = today
@@ -362,6 +371,47 @@ class LiveRunner:
         trader.close()
         return {"status": status, "message": message, "equity": float(trader.portfolio.equity),
                 "fills_on_sync": len(synced)}
+
+    def _exposure(self, spec: AccountSpec, meta: dict[str, Any], equity: float, peak: float, now: datetime
+                  ) -> tuple[float, float, str]:
+        """Exposure cap from the drawdown (``1 - (dd / limit)^2``) and the reactivation rule after a full stop."""
+        from tradesim.agents.risk import drawdown_exposure
+
+        limit = self.config.risk.halt_drawdown_pct
+        risk_peak = max(float(meta.get("risk_peak") or peak), equity)
+        meta["risk_peak"] = risk_peak
+        dd = (risk_peak - equity) / risk_peak * 100 if risk_peak > 0 else 0.0
+        if not spec.drawdown_control:
+            return 1.0, dd, ""
+        scale = drawdown_exposure(dd, limit)
+        if scale > 0:
+            meta.pop("halted_since", None)
+            return scale, dd, f"drawdown {dd:.1f}%: exposure capped at {scale:.0%}" if scale < 1 else ""
+        since = meta.setdefault("halted_since", now.isoformat())
+        days = (now - datetime.fromisoformat(since)).total_seconds() / 86400
+        if days >= self.config.risk.reactivate_after_days:  # restart from the current equity as the new peak
+            meta["risk_peak"] = equity
+            meta.pop("halted_since", None)
+            return 1.0, 0.0, f"reactivated after {days:.0f} days stopped: peak reset to {equity:.2f}"
+        return 0.0, dd, f"resumes in {self.config.risk.reactivate_after_days - days:.0f} days"
+
+    @staticmethod
+    def _enforce_exposure(trader, scale: float, tolerance: float = 0.02) -> list[dict[str, Any]]:
+        """Sell every position proportionally if the invested fraction exceeds ``scale``."""
+        from tradesim.agents.base import OrderIntent
+
+        pf = trader.portfolio
+        eq = float(pf.equity)
+        invested = sum(float(p.market_value) for p in pf.open_positions())
+        if eq <= 0 or invested <= (scale + tolerance) * eq:
+            return []
+        keep = scale * eq / invested
+        tag = f"reducción por caída (exposición máx. {scale:.0%})"
+        orders = [OrderIntent.sell(p.symbol, quantity=float(p.quantity) * (1 - keep) if keep > 0 else float(p.quantity),
+                                   tag=tag) for p in pf.open_positions() if p.quantity > 0]
+        results = trader.apply_action(orders)
+        trader.sync()
+        return [trader.orders[r["id"]].to_dict() if r.get("id") in trader.orders else r for r in results]
 
     def _restrict(self, items: list[Any], open_syms: set[str], trader, entry: dict[str, Any]) -> list[Any]:
         """Keep the part of a decision that can execute now; the rest waits for the next full session."""
@@ -398,7 +448,8 @@ class LiveRunner:
                             f"{len(entry['deferred_to_next_session'])} decisions wait for the next full session")
         return out
 
-    def _decide(self, spec: AccountSpec, trader, now: datetime, restrict: list[str] | None = None) -> dict[str, Any]:
+    def _decide(self, spec: AccountSpec, trader, now: datetime, restrict: list[str] | None = None,
+                exposure: float = 1.0) -> dict[str, Any]:
         """One decision. With ``restrict`` (the symbols whose market is open) the agent still decides on the whole
         universe, but only the part on open markets is executed and buys are funded with free cash only: a crypto
         purchase happens at the weekend only if the agent prefers it over everything it could buy on Monday."""
@@ -427,6 +478,7 @@ class LiveRunner:
         if dropped:
             entry["dropped_symbols"] = dropped
         obs = trader.observe()
+        obs.exposure_cap = exposure
         if restrict is not None:
             obs.tradable = [s for s in restrict if s in usable]
             entry["session"] = "partial"

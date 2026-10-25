@@ -4,7 +4,7 @@ name: Live trading
 
 on:
   schedule:
-    - cron: "45 14 * * *"    # daily decision (NYSE open; weekends/holidays are skipped by the runner)
+    - cron: "40 15 * * *"    # daily decision, >1 h after the NYSE open (spreads are widest right after it)
     - cron: "45 19 * * 1-5"  # mark to market before the New York close
     - cron: "15 2 * * *"     # overnight mark (crypto trades 24/7)
     - cron: "20 * * * *"     # hourly research: news + Claude analysis, macro, calendar, patterns
@@ -43,7 +43,7 @@ jobs:
           MODE="${{ github.event.inputs.mode }}"
           if [ -z "$MODE" ]; then
             case "${{ github.event.schedule }}" in
-              "45 14 * * *") MODE=decide ;;
+              "40 15 * * *") MODE=decide ;;
               "20 * * * *") MODE=research ;;
               *) MODE=mark ;;
             esac

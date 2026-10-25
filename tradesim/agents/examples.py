@@ -88,7 +88,8 @@ class SimpleRSIAgent(Agent):
 
 
 class MovingAverageCrossAgent(Agent):
-    """Trend following: hold equal weights in symbols whose fast SMA is above the slow SMA.
+    """Trend following: hold the symbols whose fast SMA is above the slow SMA, sized by risk (inverse volatility,
+    portfolio at ``target_vol``; ``target_vol=None`` for the old equal weights).
 
     Rebalances only when the set of "uptrend" symbols differs from the symbols actually held, to
     limit trading costs. Comparing with the real positions (not with what it last asked for) keeps
@@ -99,11 +100,13 @@ class MovingAverageCrossAgent(Agent):
     """
 
     def __init__(self, symbols: Sequence[str] | None = None, fast: int = 20, slow: int = 50,
-                 invested_fraction: float = 0.95, max_weight: float = 1.0):
+                 invested_fraction: float = 0.95, max_weight: float = 1.0, target_vol: float | None = 0.15,
+                 group_cap: float = 0.30, crypto_cap: float = 0.30):
         self.symbols = list(symbols) if symbols else None
         self.fast, self.slow = fast, slow
         self.invested_fraction = invested_fraction
         self.max_weight = max_weight
+        self.target_vol, self.group_cap, self.crypto_cap = target_vol, group_cap, crypto_cap
         self.name = f"MovingAverageCrossAgent({fast}/{slow})"
 
     def act(self, obs: Observation) -> Any:
@@ -120,6 +123,15 @@ class MovingAverageCrossAgent(Agent):
         self._last = {"uptrend": sorted(chosen), "held": sorted(held), "checked": len(self.symbols or obs.symbols)}
         if chosen == held:
             return []
+        if self.target_vol and chosen:  # equal risk, portfolio sized to target_vol, caps per correlated group
+            from tradesim.agents.risk import returns_frame, size_positions
+
+            weights = size_positions(sorted(chosen), returns_frame(obs, chosen), getattr(obs._sim, "universe", None),
+                                     target_vol=self.target_vol, max_weight=self.max_weight,
+                                     invested_cap=self.invested_fraction, group_cap=self.group_cap,
+                                     crypto_cap=self.crypto_cap, exposure=getattr(obs, "exposure_cap", 1.0))
+            self._last["weights"] = {s: round(w, 4) for s, w in weights.items()}
+            return TargetWeights(weights)
         w = min(self.max_weight, self.invested_fraction / len(chosen)) if chosen else 0.0
         return TargetWeights({s: w for s in chosen})
 
