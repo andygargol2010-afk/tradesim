@@ -103,6 +103,17 @@
       "fees": "alpaca",
       "broker": "paper",
       "description": "Sin reglas fijas: cada día estudia los patrones técnicos de los 50 activos, los datos macro relevantes para cada tipo de activo, las noticias analizadas y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidación por posición. Decide con IA gratuita (Gemini o Groq) si hay clave; si no, o si se agota el cupo, con el motor local gratuito que combina las mismas señales. Revisa sus decisiones pasadas y anota lecciones."
+    },
+    {
+      "id": "inversor",
+      "name": "Inversor tradicional",
+      "agent": "TraditionalInvestorAgent",
+      "params": {},
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "No hace trading: mantiene una cartera diversificada (índices 43 % (máx. 25 % por activo), bonos 15 %, oro 7 %, 8 acciones de calidad 28 %, cripto 5 %), revisa las acciones una vez al año y rebalancea cada trimestre o si una clase de activo se desvía de su banda. Sin stops ni market timing.",
+      "auto_stop": false
     }
   ],
   "weekend_crypto": true,

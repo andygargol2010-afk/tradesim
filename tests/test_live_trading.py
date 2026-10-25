@@ -287,3 +287,24 @@ def test_partial_session_keeps_only_open_markets_and_free_cash(tmp_path, univers
     big = _fund_from_cash([OrderIntent.buy("BTC-USD", notional=80), OrderIntent.buy("ETH-USD", notional=20)],
                           trader, entry)
     assert sum(a.notional for a in big) == pytest.approx(49.5) and "funding" in entry
+
+
+def test_traditional_investor_holds_and_rebalances(tmp_path, universe):
+    from tradesim.agents import TraditionalInvestorAgent
+
+    inv = TraditionalInvestorAgent()
+    t = inv.targets({"SPY", "AAPL", "BTC-USD"})  # missing funds: their weight goes to the rest of the policy
+    assert set(t) == {"SPY", "BTC-USD"} and t["SPY"] == 0.25  # capped: the excess stays in cash
+    runner, clock = make_runner(tmp_path, universe, accounts=[
+        AccountSpec("inv", "Inversor", "TraditionalInvestorAgent", {"lookback": 40}, auto_stop=False)])
+    runner.config.weekend_crypto = True
+    fills_per_day = []
+    for d in range(100):
+        clock.t = datetime(2024, 3, 4, 14, 45, tzinfo=timezone.utc) + timedelta(days=d)
+        runner.run("decide", export=False)
+        journal = (tmp_path / "accounts" / "inv" / "journal.jsonl").read_text().splitlines()
+        fills_per_day.append(sum(len(json.loads(x).get("orders", [])) for x in journal))
+    trading_days = sum(1 for a, b in zip([0] + fills_per_day, fills_per_day) if b > a)
+    assert fills_per_day[0] >= 3 and trading_days <= 4  # initial investment + quarterly / band rebalances only
+    acc = {a["id"]: a for a in export_dashboard(runner.config, universe, now=clock.t)["accounts"]}["inv"]
+    assert acc["summary"]["open_positions"] >= 3

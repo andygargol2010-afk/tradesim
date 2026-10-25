@@ -109,6 +109,14 @@ El stop solo sube, nunca baja (stop dinámico); si el precio ya está bajo el st
 (`risk.stop_loss_atr`; `null` lo desactiva), dinámico: sube con el precio y nunca baja. El analista usa los suyos y
 Buy & hold queda excluido (`"auto_stop": false` en su cuenta) para seguir siendo una referencia pura.
 
+**Inversor tradicional** (`TraditionalInvestorAgent`). No hace trading: mantiene una cartera de política (índices
+SPY/QQQ/EEM 43 %, bonos TLT 15 %, oro GLD 7 %, 8 acciones de calidad 28 %, BTC/ETH 5 %, 2 % en efectivo; máx. 25 % por
+activo). Elige las acciones una vez al año (crecimiento estable a 1 año ajustado por volatilidad, sobre su media de 200
+días, una por sector; conserva las que sigan entre las 16 mejores) y rebalancea cada trimestre o antes si una clase de
+activo sale de su banda (regla 5/25), sin tocar desviaciones menores del 1 %. Sin stops, sin market timing y sin operar
+en fin de semana. Prueba a 1 año con 100 USD: 120,8 (oct-24→oct-25, caída máx. 15,8 %) y 109,8 (oct-25→oct-26, caída
+máx. 7,0 %), frente a 130,2 y 103,1 de buy & hold.
+
 **Cripto en fin de semana y festivos** (`"weekend_crypto": true`). Con la bolsa cerrada cada agente decide igual que
 un día laborable, comparando los 50 activos (acciones a su último precio), y solo se ejecuta la parte cripto: una
 compra de cripto ocurre solo si entra en su selección frente a las acciones, es decir, si la prefiere a lo que podría

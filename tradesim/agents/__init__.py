@@ -6,10 +6,11 @@ from tradesim.agents.base import (
 )
 from tradesim.agents.discretionary import ClaudePortfolioManager, DiscretionaryAgent
 from tradesim.agents.examples import BuyAndHoldAgent, MovingAverageCrossAgent, RandomAgent, SimpleRSIAgent
+from tradesim.agents.investor import TraditionalInvestorAgent
 from tradesim.agents.learning import OnlineLinearAgent, WalkForwardRSIAgent
 
 __all__ = [
     "HOLD", "Action", "Agent", "BuyAndHoldAgent", "CancelOrders", "ClaudePortfolioManager", "DiscretionaryAgent", "ClosePosition", "FunctionAgent",
     "MovingAverageCrossAgent", "Observation", "OnlineLinearAgent", "OrderIntent", "PolicyAgent", "RandomAgent", "SetExits", "SimpleRSIAgent",
-    "TargetWeights", "WalkForwardRSIAgent",
+    "TargetWeights", "TraditionalInvestorAgent", "WalkForwardRSIAgent",
 ]
