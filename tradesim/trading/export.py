@@ -185,6 +185,7 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
         "open_orders": open_orders,
         "journal": list(reversed(_tail_jsonl(account_dir / "journal.jsonl", JOURNAL_ENTRIES))),
         "learning": json.loads(json.dumps(learning, default=str)) if learning is not None else None,
+        "_daily_returns": daily.pct_change().dropna(),  # for the significance stats (removed before writing)
     }
 
 
@@ -261,13 +262,14 @@ def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
     now = now or datetime.now(timezone.utc)
     runs = _tail_jsonl(Path(config.runs_log), 60)
     last = runs[-1] if runs else None
-    accounts = []
+    accounts: list[dict[str, Any]] = []
     for spec in config.accounts:
         try:
             accounts.append(account_payload(spec, Path(config.state_dir) / spec.id, universe, now))
         except Exception as exc:  # noqa: BLE001
             log.exception("export failed for %s", spec.id)
             accounts.append({"id": spec.id, "name": spec.name, "status": "error", "error": f"{type(exc).__name__}: {exc}"})
+    _add_significance(accounts, config)
     data = {
         "meta": {
             "generated_at": now.isoformat(),
@@ -294,3 +296,21 @@ def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
         data["research"] = {"status": "error", "error": f"{type(exc).__name__}: {exc}"}
     write_json(config.dashboard_file, data)
     return data
+
+
+def _add_significance(accounts: list[dict[str, Any]], config: LiveConfig) -> None:
+    """Per account: bootstrap Sharpe interval, P(beats buy & hold), IC with t, days until significant."""
+    from tradesim.trading.significance import significance
+
+    by_id = {a.id: a for a in config.accounts}
+    bench = next((a.get("_daily_returns") for a in accounts
+                  if by_id.get(a["id"]) is not None and by_id[a["id"]].agent == "BuyAndHoldAgent"), None)
+    for a in accounts:
+        daily = a.pop("_daily_returns", None)
+        if daily is None:
+            continue
+        is_bench = by_id.get(a["id"]) is not None and by_id[a["id"]].agent == "BuyAndHoldAgent"
+        try:
+            a["significance"] = significance(daily, None if is_bench else bench, a.get("learning"))
+        except Exception as exc:  # noqa: BLE001
+            a["significance"] = {"error": str(exc)[:200]}

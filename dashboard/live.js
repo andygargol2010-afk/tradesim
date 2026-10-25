@@ -144,6 +144,20 @@ function renderAccounts() {
   ], rows, { selected: live.account, onRow: (i) => selectAccount(i, true) });
 }
 
+function renderEdge() {
+  const days = (v) => (v === null || v === undefined ? "no se alcanza al ritmo actual" : v === 0 ? "ya significativo" : `${v} días más`);
+  table($("edge-table"), [
+    { label: "Cuenta", get: (a) => keyed(a.name, a.color) },
+    { label: "Días", get: (a) => a.significance?.days ?? "—" },
+    { label: "Sharpe [IC 95 %]", get: (a) => (isNum(a.significance?.sharpe)
+      ? `${fmtNum(a.significance.sharpe)} [${fmtNum(a.significance.sharpe_ci95[0])}, ${fmtNum(a.significance.sharpe_ci95[1])}]` : "pocos días") },
+    { label: "P(bate a B&H)", get: (a) => (isNum(a.significance?.p_beats_buy_hold) ? fmtPct(a.significance.p_beats_buy_hold * 100, false, 0) : "—") },
+    { label: "IC (t)", get: (a) => (a.significance?.rank_ic ? `${fmtNum(a.significance.rank_ic.mean, 3)} (t ${fmtNum(a.significance.rank_ic.t)})` : "—") },
+    { label: "Para Sharpe significativo", get: (a) => (isNum(a.significance?.sharpe) ? days(a.significance.days_to_significant_sharpe) : "—") },
+    { label: "Para batir a B&H con significancia", get: (a) => ("p_beats_buy_hold" in (a.significance || {}) ? days(a.significance.days_to_significant_vs_buy_hold) : "—") },
+  ], live.data.accounts);
+}
+
 function renderPerformance() {
   const accs = live.data.accounts.filter((a) => a.equity_curve?.t?.length);
   const root = $("chart-perf");
@@ -468,6 +482,7 @@ function renderAll() {
   assignColors();
   renderStatus();
   renderAccounts();
+  renderEdge();
   renderPerformance();
   renderPrices();
   $("sel-account").replaceChildren(...live.data.accounts.map((a, i) => h("option", { value: i }, a.name)));

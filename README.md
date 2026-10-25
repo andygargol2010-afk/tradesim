@@ -77,6 +77,31 @@ velas), volumen, contexto de mercado (SPY; BTC para cripto), fuerza frente al me
 con el régimen. Aprende el retorno *relativo* a la media de los activos (elige activos, no adivina el mercado) y su
 olvido es por día (λ por muestra = λ_día^(1/N)), así no olvida antes por tener más activos.
 
+**Riesgo.** El aprendiz, el cruce de medias y el combinador dimensionan por riesgo: peso ∝ 1/σ y cartera escalada a
+una volatilidad del 15 % anual (covarianza de 60 días), con un tope del 30 % por grupo de activos correlacionados
+(correlación > 0,7, enlace completo) y para la cripto en conjunto; el analista también respeta esos topes. En una
+caída, el runner limita lo invertido a `1 − (caída / 35 %)²` del capital y vende hasta ese nivel; al 35 % cierra todo
+y, tras 20 días, reinicia el máximo y la cuenta vuelve a operar (buy & hold queda fuera: `"drawdown_control": false`).
+El aprendiz penaliza la rotación: solo vende si la pérdida esperada supera el coste de vender y solo sustituye una
+posición si la ventaja nueva paga las dos operaciones. La decisión diaria es a las 15:40 UTC, lejos de la apertura.
+
+**Señales verificadas.** El analista mide el IC de cada señal (técnico, noticias, tendencia) a 1, 3 y 5 días: una
+señal sin IC positivo tras 30 días pierde su peso y con IC positivo no significativo pesa la mitad. Cada patrón técnico
+lleva su historial por régimen y solo cuenta si demuestra ventaja (n ≥ 30, |t| > 2; si funciona al revés, se invierte).
+El aprendiz descarta barras con |retorno| > 10σ robustas o volumen 0 y recibe el régimen de mercado (k-means sobre
+volatilidad, tendencia y amplitud del mercado) como variable y en interacciones.
+
+**Memoria y combinación.** El analista guarda cada día el estado del mercado y lo que pasó después, y al decidir ve
+los 10 días pasados más parecidos. El *Combinador de señales* (`SignalStackingAgent`) aprende a combinar las señales
+de los demás agentes, con pesos propios para los regímenes de tensión.
+
+**Cambios seguros.** Una cuenta con `"shadow_of": "<cuenta>"` prueba en paralelo una versión nueva; a los 28 días la
+sustituye solo si gana con evidencia (prueba t pareada de rendimientos diarios > 2, mejor Sharpe y mejor IC). El estado
+aprendido se guarda cada semana en `live/accounts/<cuenta>/checkpoints/` y, si el IC de los últimos 20 días se vuelve
+negativo, se restaura el último punto con IC positivo. El panel *¿Ventaja real o suerte?* muestra por agente el Sharpe
+con su intervalo de confianza (bootstrap), la probabilidad de batir a buy & hold, el IC con su t y los días que faltan
+para que el resultado sea significativo.
+
 **Validación honesta** (`scripts/validate.py`, `.github/workflows/nightly-validation.yml`, cada noche): validación
 cruzada con purga y embargo del aprendiz sobre 600 activos del universo y 5 años (muestras semanales, IC de rango
 fuera de muestra del modelo lineal, LightGBM y su media), y backtests hacia adelante de cada cuenta tras costes frente a

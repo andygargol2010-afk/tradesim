@@ -85,3 +85,19 @@ def test_stacking_learns_which_signal_works():
             hist[s].append(hist[s][-1] * float(np.exp(0.004 * preds[s] + rng.normal(0, 0.006))))
     w = dict(zip(STACK_FEATURES, agent.model.w))
     assert w["learner_pred"] > 3 * abs(w["rsi_dev"]) and agent.ic_stats()["rank_ic_mean"] > 0.05
+
+
+def test_significance_stats():
+    import pandas as pd
+
+    from tradesim.trading.significance import significance
+
+    rng = np.random.default_rng(0)
+    idx = pd.date_range("2025-01-01", periods=250, freq="D")
+    bench = pd.Series(rng.normal(0.0003, 0.01, 250), index=idx)
+    skilled = bench + rng.normal(0.002, 0.003, 250)
+    s = significance(skilled, bench, {"rank_ic_mean": 0.03, "rank_ic_t": 1.0, "rank_ic_days": 20})
+    assert s["sharpe_ci95"][0] < s["sharpe"] < s["sharpe_ci95"][1] and s["p_beats_buy_hold"] > 0.95
+    assert s["days_to_significant_vs_buy_hold"] == 0 and s["rank_ic"]["days_to_significant"] == 60
+    noisy = significance(pd.Series(rng.normal(0.0002, 0.02, 30), index=idx[:30]))
+    assert noisy["sharpe_ci95"][0] < 0 < noisy["sharpe_ci95"][1]  # a month proves nothing
