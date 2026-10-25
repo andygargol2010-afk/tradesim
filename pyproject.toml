@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tradesim"
+version = "0.1.0"
+description = "High-fidelity trading simulator / paper-trading environment for training AI trading agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+rl = ["gymnasium>=0.29"]
+yfinance = ["yfinance>=0.2.40"]
+crypto = ["ccxt>=4.2"]
+alpaca = ["alpaca-py>=0.30"]
+storage = ["pyarrow>=14"]
+universe = ["requests>=2.31", "lxml>=5"]
+all = [
+    "gymnasium>=0.29",
+    "yfinance>=0.2.40",
+    "ccxt>=4.2",
+    "alpaca-py>=0.30",
+    "pyarrow>=14",
+    "requests>=2.31",
+    "lxml>=5",
+]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["tradesim*"]
+
+[tool.setuptools.package-data]
+"tradesim.assets" = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
