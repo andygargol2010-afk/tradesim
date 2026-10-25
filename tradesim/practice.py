@@ -49,6 +49,7 @@ class EpisodeResult:
         equity: equity curve (indexed by time).
         fills: every execution of the episode (DataFrame).
         trades: closed round trips of the episode (DataFrame).
+        benchmark: equal-weight buy & hold equity on the same timestamps (``None`` if unavailable).
     """
 
     episode: int
@@ -57,6 +58,7 @@ class EpisodeResult:
     equity: pd.Series
     fills: pd.DataFrame
     trades: pd.DataFrame
+    benchmark: pd.Series | None = None
 
     def summary(self) -> str:
         return format_summary(self.metrics, title=f"Episode {self.episode} (seed {self.seed})")
@@ -139,7 +141,7 @@ def _collect(episode: int, seed: int | None, sim: BaseSimulator | None, extra: d
     metrics.update(extra)
     return EpisodeResult(episode, seed, metrics, eq["equity"],
                          sim.get_trade_history("fills", as_dataframe=True),
-                         sim.get_trade_history("closed", as_dataframe=True))
+                         sim.get_trade_history("closed", as_dataframe=True), bench)
 
 
 def _render_line(sim: BaseSimulator, step: int, action_results: list[dict[str, Any]], fills: list[dict[str, Any]]) -> str:

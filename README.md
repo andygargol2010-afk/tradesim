@@ -53,6 +53,22 @@ env.plot_results(path="runs/episode.png")   # equity vs buy & hold, drawdown, co
 Ejemplo completo ejecutable: `python examples/practice.py` (crea el entorno, corre un episodio con render, 10
 episodios de evaluación, gráficas en `runs/practice/` y comparación contra baselines).
 
+## Dashboard de resultados (web)
+
+`dashboard/` es una página estática que compara agentes y permite explorar cada episodio: tabla comparativa,
+retorno medio barra a barra frente a buy & hold, retorno de cada episodio, y por episodio equity, drawdown,
+precio con compras/ventas, trades cerrados y ejecuciones. Modo claro/oscuro, tooltips y enlaces directos
+(`#agent=1&episode=3`).
+
+```bash
+python scripts/build_dashboard.py                     # genera dashboard/data.json (datos sintéticos, ~3 s)
+python scripts/build_dashboard.py --data yfinance --episodes 20 --length 252
+python -m http.server -d dashboard 8000               # vista previa en http://localhost:8000
+```
+
+Despliegue en Vercel: importa el repo (Add New → Project). `vercel.json` ya sirve `dashboard/` como sitio estático,
+sin build de Python; para actualizar los resultados, regenera `data.json`, haz commit y push.
+
 ## Inicio rápido (API de bajo nivel)
 
 ```python

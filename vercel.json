@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo 'static site: no install'",
+  "buildCommand": "echo 'static site: dashboard/data.json is generated with scripts/build_dashboard.py'",
+  "outputDirectory": "dashboard",
+  "cleanUrls": true,
+  "headers": [
+    { "source": "/data.json", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+  ]
+}
