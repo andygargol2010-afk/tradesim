@@ -55,7 +55,8 @@ def test_online_agent_learns_mean_reversion():
     w = dict(zip(FEATURES, agent.model.w))
     assert w["ret_1"] < -0.15  # learned that yesterday's move tends to reverse
     summary = agent.learning_summary()
-    assert summary["information_coefficient_last250"] > 0.1 and summary["direction_hit_rate_pct_last250"] > 55
+    assert summary["rank_ic_mean"] > 0.1 and summary["rank_ic_t"] > 2 and summary["direction_hit_rate_pct"] > 55
+    assert agent.has_edge()
 
 
 def test_online_agent_trades_and_keeps_learning_in_simulator():
@@ -90,3 +91,16 @@ def test_walk_forward_rsi_retunes_and_persists():
     restored.load_state_dict(json.loads(json.dumps(agent.state_dict())))
     assert restored.params == agent.params and restored._inner.period == agent.params[0]
     assert "params" in agent.explain()
+
+
+def test_no_edge_gate_and_horizon_without_lookahead():
+    rng = np.random.default_rng(7)
+    idx = pd.date_range("2020-01-01", periods=700, freq="D", tz="UTC")
+    frames = {f"RW{k}-USD": pd.Series(100 * np.exp(np.cumsum(rng.normal(0, 0.02, 700))), index=idx) for k in range(6)}
+    agent = OnlineLinearAgent(pretrain_bars=0, horizon=5, ic_gate=True)
+    agent.pretrain(frames)
+    st = agent.ic_stats()
+    assert abs(st["rank_ic_mean"]) < 0.1 and not agent.has_edge()  # random walks: no edge, gate stays shut
+    mr = OnlineLinearAgent(pretrain_bars=0, horizon=1, ic_gate=True)
+    mr.pretrain({s: f["close"] for s, f in mean_reverting_frames(n_symbols=6).items()})
+    assert mr.has_edge()

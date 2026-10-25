@@ -101,6 +101,9 @@ class DiscretionaryAgent(Agent):
         client: an ``anthropic.Anthropic``; by default built from ``ANTHROPIC_API_KEY`` on first use.
         engines / free_models / daily_requests: engine order, model per free engine, requests per engine per day.
         local_fallback: decide with the local engine when no AI engine answers.
+        min_hold_days: positions younger than this are not sold for a weaker signal (stops still apply).
+        stop_atr / target_rr: default exits: stop this many ATR below the price (or under support),
+            target ``target_rr`` times the risk above it (or at resistance).
     """
 
     def __init__(self, symbols: Sequence[str] | None = None, model: str = "claude-opus-5-5", effort: str = "high",
@@ -109,7 +112,8 @@ class DiscretionaryAgent(Agent):
                  language: str = "es", max_news: int = 40, client: Any = None,
                  engines: Sequence[str] = ("gemini", "groq", "anthropic"), free_models: dict[str, str] | None = None,
                  daily_requests: dict[str, int] | None = None, local_fallback: bool = True,
-                 min_score: float = 0.25):
+                 min_score: float = 0.25, min_hold_days: float = 0.0, stop_atr: float = 2.0,
+                 target_rr: float = 2.0):
         self.symbols = list(symbols) if symbols else None
         self.model, self.effort = model, effort
         self.max_weight, self.max_positions, self.invested_fraction = max_weight, max_positions, invested_fraction
@@ -120,6 +124,7 @@ class DiscretionaryAgent(Agent):
         self.engines, self.free_models = list(engines), dict(free_models or {})
         self.daily_requests = daily_requests or {"gemini": 150, "groq": 400, "anthropic": 2000}
         self.local_fallback, self.min_score = local_fallback, min_score
+        self.min_hold_days, self.stop_atr, self.target_rr = min_hold_days, stop_atr, target_rr
         self.research: Any = None
         self.name = f"{type(self).__name__}({'/'.join(self.engines)})"
         self.last_engine: str | None = None
@@ -542,12 +547,12 @@ class DiscretionaryAgent(Agent):
         stop, target, src = num("stop_loss"), num("take_profit"), "modelo"
         if stop is None or not (price * 0.6 < stop < price - 0.3 * atr):
             sup = (getattr(rep, "support", None) or [{}])[0].get("price") if rep is not None else None
-            stop = sup - 0.25 * atr if sup and 0.5 * atr <= price - sup <= 4 * atr else price - 2 * atr
+            stop = sup - 0.25 * atr if sup and 0.5 * atr <= price - sup <= 4 * atr else price - self.stop_atr * atr
             src = "soporte/ATR"
         risk = price - stop
         if target is None or not (price + 0.3 * atr < target < price * 2):
             res = (getattr(rep, "resistance", None) or [{}])[0].get("price") if rep is not None else None
-            target = res - 0.1 * atr if res and res - price >= 1.5 * risk else price + 2 * risk
+            target = res - 0.1 * atr if res and res - price >= 1.5 * risk else price + self.target_rr * risk
         current = obs.sim.get_exits(sym) if hasattr(obs.sim, "get_exits") else {}
         held = obs.position(sym) > 0  # the stop only trails within one position, not across re-entries
         old = (current.get("stop_loss") or (self.theses.get(sym) or {}).get("stop_loss")) if held else None
@@ -555,7 +560,7 @@ class DiscretionaryAgent(Agent):
         if old and old > stop:
             stop, note = old, f"stop {old:.4g} (se mantiene: nunca se baja), objetivo {target:.4g}"
             if target <= price:
-                target = price + 2 * max(price - stop, 0.5 * atr)
+                target = price + self.target_rr * max(price - stop, 0.5 * atr)
         return round(stop, 6), round(target, 6), note
 
     def _orders(self, obs: Observation, targets: dict[str, float], decision: dict[str, Any],
@@ -581,6 +586,11 @@ class DiscretionaryAgent(Agent):
                 changes.append(f"vender {sym}: el precio está bajo su stop-loss {stop:.4g}")
         for sym in sorted(held - set(targets)):
             if any(isinstance(a, ClosePosition) and a.symbol == sym for a in actions):
+                continue
+            opened = (self.theses.get(sym) or {}).get("opened_at")
+            age = (obs.timestamp - datetime.fromisoformat(opened)).total_seconds() / 86400 if opened else 1e9
+            if age < self.min_hold_days:  # too young to drop on a weaker signal (costs): keep, stop still protects
+                targets[sym] = obs.weight(sym)
                 continue
             actions.append(ClosePosition(sym))
             changes.append(f"vender {sym} (fuera de la cartera objetivo)")

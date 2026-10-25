@@ -315,9 +315,11 @@ function renderLearning(a) {
   if (L.method) add("Método", L.method);
   if ("samples_learned" in L) {
     add("Muestras aprendidas", fmtNum(L.samples_learned, 0) + (L.pretrained_samples ? ` (${fmtNum(L.pretrained_samples, 0)} de pre-entrenamiento)` : ""));
-    add("Opera", L.trading_enabled ? "sí" : "todavía no (aprendiendo)");
-    add("Correlación predicción/realidad", isNum(L.information_coefficient_last250) ? fmtNum(L.information_coefficient_last250, 3) + " (últimas 250)" : "n/a");
-    add("Aciertos de dirección", fmtPct(L.direction_hit_rate_pct_last250, false, 1));
+    add("Opera", L.trading_enabled ? "sí" : (L.ic_gate ? "no: sin ventaja estadística (en efectivo)" : "todavía no (aprendiendo)"));
+    if (L.horizon_bars) add("Horizonte de predicción", `${L.horizon_bars} día${L.horizon_bars > 1 ? "s" : ""}`);
+    add("Correlación por ranking (IC)", isNum(L.rank_ic_mean)
+      ? `${fmtNum(L.rank_ic_mean, 3)} · t = ${fmtNum(L.rank_ic_t, 2)} (${L.rank_ic_days} días; t ≥ 2 = ventaja significativa)` : "n/a");
+    add("Aciertos de dirección", fmtPct(L.direction_hit_rate_pct, false, 1));
   }
   if (L.params) {
     add("Parámetros actuales", `RSI ${L.params.period} · compra < ${L.params.oversold} · venta > ${L.params.overbought}`);

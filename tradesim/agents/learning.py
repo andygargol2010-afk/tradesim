@@ -149,16 +149,20 @@ class OnlineLinearAgent(Agent):
     def __init__(self, symbols: Sequence[str] | None = None, top_k: int = 4, entry_threshold: float = 0.08,
                  exit_threshold: float = -0.02, max_weight: float = 0.25, invested_fraction: float = 0.95,
                  rebalance_band: float = 0.06, min_hold_days: int = 5, forgetting: float = 0.998,
-                 ridge: float = 50.0, min_samples: int = 300, pretrain_bars: int = 750, track: int = 750):
+                 ridge: float = 50.0, min_samples: int = 300, pretrain_bars: int = 750, track: int = 4000,
+                 horizon: int = 1, ic_gate: bool = False, ic_window: int = 60, ic_min_t: float = 2.0,
+                 ic_min_days: int = 20):
         self.symbols = list(symbols) if symbols else None
         self.top_k, self.entry_threshold, self.exit_threshold = top_k, entry_threshold, exit_threshold
         self.max_weight, self.invested_fraction, self.rebalance_band = max_weight, invested_fraction, rebalance_band
         self.min_samples, self.pretrain_bars, self.track = min_samples, pretrain_bars, track
         self.min_hold_days = min_hold_days
+        self.horizon = max(1, int(horizon))
+        self.ic_gate, self.ic_window, self.ic_min_t, self.ic_min_days = ic_gate, ic_window, ic_min_t, ic_min_days
         self.entries: dict[str, str] = {}  # symbol -> when the agent opened it
         self.model = RecursiveLeastSquares(len(FEATURES), forgetting, ridge)
-        self.pending: dict[str, dict[str, Any]] = {}  # symbol -> features of its last completed bar
-        self.history: list[list[float]] = []  # [prediction, realised] out-of-sample pairs
+        self.pending: dict[str, list[dict[str, Any]]] = {}  # symbol -> samples waiting for their outcome
+        self.history: list[list[Any]] = []  # [prediction made at the time, realised, sample date] (out of sample)
         self.pretrained_on = 0
         self.name = f"OnlineLinearAgent(top{top_k})"
         self._last: dict[str, Any] | None = None
@@ -167,51 +171,108 @@ class OnlineLinearAgent(Agent):
     def _bars(self, obs: Observation, sym: str, n: int) -> pd.DataFrame:
         return obs.history(sym, limit=n)
 
+    def _target(self, close_then: float, close_later: float, sigma: float) -> float:
+        """Return over ``horizon`` bars in units of the asset's volatility (clipped)."""
+        return float(np.clip(math.log(close_later / close_then) / (sigma * math.sqrt(self.horizon)), -6, 6))
+
     def _learn_symbol(self, sym: str, bars: pd.DataFrame | pd.Series) -> None:
-        """Consume bars completed since the symbol's pending sample, then refresh the pending sample."""
+        """Learn from samples whose ``horizon`` bars have now completed, then add today's sample.
+
+        The prediction logged for each sample is the one the model made when the sample was created, so
+        the information coefficient is measured strictly out of sample."""
         closes = _closes(bars)
         if len(closes) < MIN_BARS:
             return
+        queue = self.pending.get(sym) or []
+        if isinstance(queue, dict):  # state saved by an older version (one sample per symbol)
+            queue = [queue]
+        waiting = []
+        for p in queue:
+            later = closes[closes.index > pd.Timestamp(p["ts"])]
+            if len(later) >= self.horizon:
+                y = self._target(p["close"], float(later.iloc[self.horizon - 1]), p["sigma"])
+                x = np.array(p["x"])
+                pred = p.get("pred", self.model.predict(x))
+                self.model.update(x, y)
+                self.history.append([float(pred), y, p["ts"][:10]])
+            else:
+                waiting.append(p)
+        del self.history[:-self.track]
         last_ts = closes.index[-1].isoformat()
-        pend = self.pending.get(sym)
-        if pend is not None and pend["ts"] != last_ts:
-            newer = closes[closes.index > pd.Timestamp(pend["ts"])]
-            if len(newer):
-                y = math.log(float(newer.iloc[-1]) / pend["close"]) / (pend["sigma"] * math.sqrt(len(newer)))
-                pred = self.model.update(np.array(pend["x"]), float(np.clip(y, -6, 6)))
-                self.history.append([pred, float(y)])
-                del self.history[:-self.track]
-        if pend is None or pend["ts"] != last_ts:
+        if not any(p["ts"] == last_ts for p in waiting):
             feats = _frame_features(bars)
             if feats is not None:
-                self.pending[sym] = {"ts": last_ts, "x": feats[0].tolist(), "sigma": feats[1],
-                                     "close": float(closes.iloc[-1])}
+                waiting.append({"ts": last_ts, "x": feats[0].tolist(), "sigma": feats[1],
+                                "close": float(closes.iloc[-1]), "pred": self.model.predict(feats[0])})
+        self.pending[sym] = waiting[-(self.horizon + 2):]
 
     def pretrain(self, frames: dict[str, pd.DataFrame | pd.Series]) -> int:
         """Walk forward through history (OHLC frames or closes; all symbols interleaved in time order).
-        Returns the number of samples learned."""
-        samples: list[tuple[pd.Timestamp, str, np.ndarray, float]] = []
+
+        Day by day: first learn the samples whose outcome is known that day, then predict the new ones,
+        so no prediction ever uses information from its own future. Returns the number of samples learned."""
+        h = self.horizon
+        created: dict[pd.Timestamp, list[tuple[np.ndarray, float, str]]] = {}
+        realised: dict[pd.Timestamp, list[tuple[int, float]]] = {}
+        xs: list[np.ndarray] = []
         for sym, bars in frames.items():
             closes = _closes(bars)
             c = closes.to_numpy(dtype=float)
-            for t in range(MIN_BARS - 1, len(c) - 1):
+            for t in range(MIN_BARS - 1, len(c) - h):
                 feats = _frame_features(bars, t + 1)
                 if feats is None:
                     continue
-                y = math.log(c[t + 1] / c[t]) / feats[1]
-                samples.append((closes.index[t], sym, feats[0], float(np.clip(y, -6, 6))))
-        samples.sort(key=lambda s: (s[0], s[1]))
-        for _, _, x, y in samples:
-            pred = self.model.update(x, y)
-            self.history.append([pred, y])
+                k = len(xs)
+                xs.append(feats[0])
+                created.setdefault(closes.index[t], []).append((k, closes.index[t].isoformat()[:10]))
+                realised.setdefault(closes.index[t + h], []).append((k, self._target(c[t], c[t + h], feats[1])))
+        preds: dict[int, tuple[float, str]] = {}
+        n = 0
+        for day in sorted(set(created) | set(realised)):
+            for k, y in realised.get(day, []):
+                pred, ts = preds.pop(k)
+                self.model.update(xs[k], y)
+                self.history.append([pred, y, ts])
+                n += 1
+            for k, ts in created.get(day, []):
+                preds[k] = (self.model.predict(xs[k]), ts)
         del self.history[:-self.track]
-        self.pretrained_on += len(samples)
-        return len(samples)
+        self.pretrained_on += n
+        return n
+
+    def ic_stats(self) -> dict[str, Any]:
+        """Daily cross-sectional rank IC (Spearman between predictions and outcomes across assets) over the
+        last ``ic_window`` non-overlapping sample dates: mean, t-statistic and number of days. Pooling all pairs instead
+        would mostly measure the market moving all assets together."""
+        by_day: dict[str, list[tuple[float, float]]] = {}
+        for row in self.history:
+            if len(row) >= 3:
+                by_day.setdefault(row[2], []).append((row[0], row[1]))
+        ics = []
+        # one day in every ``horizon``: outcomes of consecutive days overlap and would inflate the t-statistic
+        days = sorted(by_day)[-self.ic_window * self.horizon:][::-1][::self.horizon]
+        for day in days:
+            pts = np.array(by_day[day])
+            if len(pts) >= 3 and pts[:, 0].std() > 0 and pts[:, 1].std() > 0:
+                r0 = pd.Series(pts[:, 0]).rank().to_numpy()
+                r1 = pd.Series(pts[:, 1]).rank().to_numpy()
+                ics.append(float(np.corrcoef(r0, r1)[0, 1]))
+        if len(ics) < 2:
+            return {"rank_ic_mean": None, "rank_ic_t": None, "days": len(ics)}
+        arr = np.array(ics)
+        sd = arr.std(ddof=1)
+        return {"rank_ic_mean": float(arr.mean()), "rank_ic_t": float(arr.mean() / sd * math.sqrt(len(arr))) if sd > 0
+                else None, "days": len(arr)}
+
+    def has_edge(self) -> bool:
+        st = self.ic_stats()
+        return (st["days"] >= self.ic_min_days and (st["rank_ic_mean"] or 0) > 0
+                and (st["rank_ic_t"] or 0) >= self.ic_min_t)
 
     # ------------------------------------------------------------------ acting
     def act(self, obs: Observation) -> list[Any]:
         symbols = self.symbols or obs.symbols
-        lookback = max(MIN_BARS + 5, 80)
+        lookback = max(MIN_BARS + 5 + self.horizon, 80)
         if self.model.n == 0 and self.pretrain_bars > MIN_BARS:
             frames = {}
             for s in symbols:
@@ -231,16 +292,21 @@ class OnlineLinearAgent(Agent):
                 log.warning("%s: skipping %s this step (%s)", self.name, sym, exc)
                 continue
             self._learn_symbol(sym, bars)
-            closes = bars["close"]
-            pend = self.pending.get(sym)
-            if pend is not None and pend["ts"] == (closes.index[-1].isoformat() if len(closes) else None):
-                preds[sym] = self.model.predict(np.array(pend["x"]))
+            last = bars["close"].index[-1].isoformat() if len(bars) else None
+            cur = next((p for p in self.pending.get(sym, []) if p["ts"] == last), None)
+            if cur is not None:
+                preds[sym] = self.model.predict(np.array(cur["x"]))
         self._last = {"predictions": {s: round(v, 4) for s, v in sorted(preds.items(), key=lambda kv: -kv[1])},
                       "samples": self.model.n}
         if self.model.n < self.min_samples or obs.open_orders:
             self._last["signals"] = ["learning: not trading yet" if self.model.n < self.min_samples
                                      else "open orders pending: waiting"]
             return []
+        if self.ic_gate and not self.has_edge():
+            st = self.ic_stats()
+            self._last["signals"] = [f"no statistical edge (rank IC {st['rank_ic_mean'] or 0:+.3f}, "
+                                     f"t {st['rank_ic_t'] or 0:.2f}): cash"]
+            return [ClosePosition(s) for s, q in obs.positions.items() if q > 0]
         return self._rebalance(obs, preds)
 
     def _held_days(self, obs: Observation, sym: str) -> float:
@@ -288,18 +354,18 @@ class OnlineLinearAgent(Agent):
         return self._last
 
     def learning_summary(self) -> dict[str, Any] | None:
-        h = np.array(self.history[-250:]) if self.history else np.zeros((0, 2))
-        ic = hit = None
-        if len(h) >= 30 and h[:, 0].std() > 0 and h[:, 1].std() > 0:
-            ic = float(np.corrcoef(h[:, 0], h[:, 1])[0, 1])
-            hit = float(np.mean(np.sign(h[:, 0]) == np.sign(h[:, 1])) * 100)
+        st = self.ic_stats()
+        h = np.array([r[:2] for r in self.history[-2000:]], dtype=float) if self.history else np.zeros((0, 2))
+        hit = float(np.mean(np.sign(h[:, 0]) == np.sign(h[:, 1])) * 100) if len(h) >= 30 else None
         return {
             "method": "Recursive least squares with forgetting (online)",
+            "horizon_bars": self.horizon,
             "samples_learned": self.model.n,
             "pretrained_samples": self.pretrained_on,
-            "trading_enabled": self.model.n >= self.min_samples,
-            "information_coefficient_last250": ic,
-            "direction_hit_rate_pct_last250": hit,
+            "trading_enabled": self.model.n >= self.min_samples and (not self.ic_gate or self.has_edge()),
+            "ic_gate": self.ic_gate,
+            "rank_ic_mean": st["rank_ic_mean"], "rank_ic_t": st["rank_ic_t"], "rank_ic_days": st["days"],
+            "direction_hit_rate_pct": hit,
             "weights": dict(zip(FEATURES, (round(float(w), 4) for w in self.model.w))),
         }
 

@@ -108,7 +108,8 @@ class LiveRunner:
     def _sim_config(self, spec: AccountSpec) -> SimulatorConfig:
         return SimulatorConfig(initial_cash=spec.initial_cash, timeframe=self.config.timeframe, fees=spec.fees,
                                max_position_pct=self.config.risk.max_position_pct,
-                               auto_stop_atr=self.config.risk.stop_loss_atr if spec.auto_stop else None, seed=0)
+                               auto_stop_atr=(spec.stop_loss_atr or self.config.risk.stop_loss_atr) if spec.auto_stop else None,
+                               seed=0)
 
     def load_trader(self, spec: AccountSpec, provider: DataProvider):
         path = self.account_dir(spec) / "account.json"
