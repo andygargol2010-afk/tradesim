@@ -30,6 +30,7 @@ import numpy as np
 import pandas as pd
 
 if TYPE_CHECKING:  # pragma: no cover
+    from tradesim.patterns import PatternReport
     from tradesim.simulator import BaseSimulator
 
 
@@ -133,6 +134,11 @@ class Observation:
     def closes(self, symbol: str, limit: int = 100) -> np.ndarray:
         """Last ``limit`` closes as a numpy array (fast path for indicator math; no future bars)."""
         return self._require_sim().recent_closes(symbol, limit)
+
+    def patterns(self, symbol: str, limit: int = 300, timeframe: str | None = None) -> "PatternReport":
+        """Technical patterns on completed bars: candlesticks, chart patterns, support/resistance, divergences.
+        See :mod:`tradesim.patterns`; ``.summary()`` gives a one-line description, ``.score()`` net bullishness."""
+        return self._require_sim().detect_patterns(symbol, limit, timeframe)
 
     def quote(self, symbol: str) -> dict[str, Any]:
         """Bid/ask/mid/spread. Buys pay the ask, sells receive the bid."""

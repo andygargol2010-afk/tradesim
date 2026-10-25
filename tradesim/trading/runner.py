@@ -5,6 +5,8 @@ A run (typically from a scheduler such as GitHub Actions) does, for every enable
 1. load the account (orders, positions, equity history) and the agent's learned state from disk;
 2. ``sync``: execute orders still pending whose market is now open, mark positions to market and
    record an equity point;
+0. in ``decide`` and ``research`` modes, refresh the market research first (news + Claude analysis, macro,
+   event calendar, technical patterns; see :mod:`tradesim.research`). ``research`` mode stops there;
 3. in ``decide`` mode, once per day and only when every market of the universe is open: build an
    :class:`~tradesim.agents.base.Observation` from live prices, call ``agent.act``, apply risk limits,
    send the orders and execute them immediately against the current quotes / order books;
@@ -65,6 +67,18 @@ def _count_orders(action: Any) -> int:
     return len(weights) if weights else 1
 
 
+def _research_digest(r: dict[str, Any] | None) -> dict[str, Any] | None:
+    if r is None:
+        return None
+    keep = ("status", "message", "llm", "macro", "calendar", "news", "technicals", "duration_s", "calendar_research")
+    out = {k: r[k] for k in keep if k in r}
+    if r.get("llm_usage"):
+        out["llm_cost_usd"] = r["llm_usage"].get("cost_usd_estimate")
+    if r.get("errors"):
+        out["errors"] = len(r["errors"])
+    return out
+
+
 class LiveRunner:
     """Runs the accounts of a :class:`LiveConfig` once (``run("decide")`` or ``run("mark")``).
 
@@ -72,14 +86,17 @@ class LiveRunner:
         config: accounts, symbols, data sources, risk limits and file locations.
         provider: market data (default: :func:`default_live_provider`).
         clock: current UTC time (inject for tests and replays).
+        llm_client: Anthropic client for research and LLM agents (``"auto"``: from ``ANTHROPIC_API_KEY``).
     """
 
     def __init__(self, config: LiveConfig, provider: DataProvider | None = None,
-                 universe: AssetUniverse | None = None, clock: Callable[[], datetime] | None = None):
+                 universe: AssetUniverse | None = None, clock: Callable[[], datetime] | None = None,
+                 llm_client: Any = "auto"):
         self.config = config
         self.universe = universe or AssetUniverse.default()
         self.base_provider = provider or default_live_provider(config.crypto_exchange, config.stocks_data)
         self.clock = clock or (lambda: datetime.now(timezone.utc))
+        self.llm_client: Any = llm_client
         unknown = [s for s in config.symbols if s not in self.universe]
         if unknown:
             raise ValueError(f"Unknown symbols in config: {unknown}")
@@ -161,17 +178,65 @@ class LiveRunner:
                 out[sym] = {"error": str(exc)[:300], "source": source, "market_open": is_market_open(asset, now)}
         return out
 
+    def research_store(self):
+        rc = self.config.research_config()
+        if not rc.enabled:
+            return None
+        from tradesim.research.refresh import ResearchStore
+
+        return ResearchStore(rc.dir)
+
+    def holdings(self) -> set[str]:
+        """Symbols held by any account (their news gets priority in the deep analysis)."""
+        out: set[str] = set()
+        for spec in self.config.accounts:
+            path = self.account_dir(spec) / "account.json"
+            if path.exists():
+                try:
+                    pf = read_json(path).get("portfolio", {})
+                    out |= {p.get("symbol") for p in pf.get("positions", []) if p.get("symbol")}
+                except (OSError, ValueError):
+                    continue
+        return out
+
+    def refresh_research(self, provider: DataProvider) -> dict[str, Any]:
+        store = self.research_store()
+        if store is None:
+            return {"status": "disabled"}
+        from tradesim.research.refresh import refresh_research
+
+        try:
+            return refresh_research(self.config.research_config(), list(self.config.symbols), self.universe, store,
+                                    provider=provider, now=self.clock(), client=self.llm_client,
+                                    holdings=self.holdings())
+        except Exception as exc:  # research must never block trading
+            log.exception("research refresh failed")
+            return {"status": "error", "message": f"{type(exc).__name__}: {exc}"}
+
     def run(self, mode: str = "decide", export: bool = True) -> dict[str, Any]:
-        """One pass over all accounts. ``mode``: ``"decide"`` (sync + daily decision) or ``"mark"`` (sync only)."""
-        if mode not in ("decide", "mark"):
-            raise ValueError("mode must be 'decide' or 'mark'")
+        """One pass. ``mode``: ``"decide"`` (research + sync + daily decision), ``"mark"`` (sync only) or
+        ``"research"`` (refresh news / macro / calendar / patterns and the dashboard, no account activity)."""
+        if mode not in ("decide", "mark", "research"):
+            raise ValueError("mode must be 'decide', 'mark' or 'research'")
         t0 = time.perf_counter()
         now = self.clock()
         provider = RunCacheProvider(self.base_provider)
+        research = self.refresh_research(provider) if mode in ("decide", "research") else None
+        if mode == "research":
+            record = {"started_at": now.isoformat(), "mode": mode, "research": _research_digest(research),
+                      "accounts": {}, "prices": {}, "data_errors": provider.errors,
+                      "duration_s": round(time.perf_counter() - t0, 2)}
+            if export:
+                from tradesim.trading.export import export_dashboard
+
+                export_dashboard(self.config, self.universe, now=self.clock())
+            return record
         prices = self.price_snapshot(provider)
         quoted = [s for s, p in prices.items() if "error" not in p]
         window_ok, window_msg = self.decision_window_open(now)
         record: dict[str, Any] = {"started_at": now.isoformat(), "mode": mode, "accounts": {}, "prices": prices}
+        if research is not None:
+            record["research"] = _research_digest(research)
         for spec in self.config.accounts:
             if not spec.enabled:
                 continue
@@ -236,6 +301,10 @@ class LiveRunner:
 
     def _decide(self, spec: AccountSpec, trader, now: datetime) -> dict[str, Any]:
         agent = self.load_agent(spec)
+        if hasattr(agent, "attach_research"):
+            agent.attach_research(self.research_store())
+        if getattr(agent, "client", "absent") is None and self.llm_client not in ("auto", None):
+            agent.client = self.llm_client
         pf = trader.portfolio
         entry: dict[str, Any] = {"time": now.isoformat(), "mode": "decide", "equity_before": float(pf.equity),
                                  "cash_before": float(pf.cash), "symbols": len(trader.symbols)}

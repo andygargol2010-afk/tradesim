@@ -7,7 +7,8 @@ plus that file to another environment reproduces the agent exactly as it is now.
 
 * :class:`OnlineLinearAgent` learns from data: recursive least squares with exponential forgetting
   predicts each asset's next-bar return in units of its own volatility from scale-free price
-  features, and allocates to the best predictions. It warm-starts on history the first time it runs.
+  features and technical-pattern features (breakouts, trend quality, candlesticks), and allocates
+  to the best predictions. It warm-starts on history the first time it runs.
 * :class:`WalkForwardRSIAgent` learns by simulation: every ``retune_days`` it backtests a grid of RSI
   settings over the recent past in the realistic simulator (costs, slippage, liquidity) and switches
   only when the best setting beats the current one by a margin (to avoid chasing noise).
@@ -28,15 +29,21 @@ from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent
 from tradesim.agents.examples import SimpleRSIAgent
 from tradesim.data.base import DataUnavailableError
 from tradesim.indicators import rsi_last
+from tradesim.patterns import PATTERN_FEATURES, pattern_features
 
 log = logging.getLogger(__name__)
 
-FEATURES = ["bias", "ret_1", "ret_5", "ret_20", "ret_60", "vol_ratio", "rsi_14", "dist_sma20", "dist_sma50"]
+FEATURES = ["bias", "ret_1", "ret_5", "ret_20", "ret_60", "vol_ratio", "rsi_14", "dist_sma20", "dist_sma50",
+            *PATTERN_FEATURES]
 MIN_BARS = 61
 
 
-def price_features(closes: np.ndarray) -> tuple[np.ndarray, float] | None:
-    """Scale-free features from daily closes (oldest first, last = most recent completed bar).
+def price_features(closes: np.ndarray, opens: np.ndarray | None = None, highs: np.ndarray | None = None,
+                   lows: np.ndarray | None = None) -> tuple[np.ndarray, float] | None:
+    """Scale-free features from daily bars (oldest first, last = most recent completed bar).
+
+    Price features come from the closes; the technical-pattern features (:data:`PATTERN_FEATURES`: 20-bar
+    breakout, trend quality, candlestick signal) also use opens/highs/lows when given.
 
     Returns ``(x, sigma)`` with ``sigma`` the 20-bar volatility of log returns, or ``None`` if there is
     not enough history. Every return-like feature is divided by ``sigma * sqrt(horizon)`` so that one
@@ -60,7 +67,22 @@ def price_features(closes: np.ndarray) -> tuple[np.ndarray, float] | None:
         (c[-1] / c[-20:].mean() - 1.0) / (sigma * math.sqrt(20)),
         (c[-1] / c[-50:].mean() - 1.0) / (sigma * math.sqrt(50)),
     ])
+    ohlc = [None if a is None else np.asarray(a, dtype=float)[-MIN_BARS:] for a in (opens, highs, lows)]
+    x = np.r_[x, pattern_features(c[-MIN_BARS:], *ohlc)]
     return np.clip(x, -5.0, 5.0), sigma
+
+
+def _frame_features(df: pd.DataFrame | pd.Series, end: int | None = None) -> tuple[np.ndarray, float] | None:
+    """:func:`price_features` of a closes Series or an OHLC frame, using rows up to ``end`` (exclusive)."""
+    sl = slice(max(0, (end if end is not None else len(df)) - MIN_BARS), end)
+    if isinstance(df, pd.Series):
+        return price_features(df.to_numpy(dtype=float)[sl])
+    cols = [df[k].to_numpy(dtype=float)[sl] if k in df else None for k in ("close", "open", "high", "low")]
+    return price_features(*cols)
+
+
+def _closes(df: pd.DataFrame | pd.Series) -> pd.Series:
+    return df if isinstance(df, pd.Series) else df["close"]
 
 
 class RecursiveLeastSquares:
@@ -142,11 +164,12 @@ class OnlineLinearAgent(Agent):
         self._last: dict[str, Any] | None = None
 
     # ------------------------------------------------------------------ learning
-    def _bars(self, obs: Observation, sym: str, n: int) -> pd.Series:
-        return obs.history(sym, limit=n)["close"]
+    def _bars(self, obs: Observation, sym: str, n: int) -> pd.DataFrame:
+        return obs.history(sym, limit=n)
 
-    def _learn_symbol(self, sym: str, closes: pd.Series) -> None:
+    def _learn_symbol(self, sym: str, bars: pd.DataFrame | pd.Series) -> None:
         """Consume bars completed since the symbol's pending sample, then refresh the pending sample."""
+        closes = _closes(bars)
         if len(closes) < MIN_BARS:
             return
         last_ts = closes.index[-1].isoformat()
@@ -159,18 +182,20 @@ class OnlineLinearAgent(Agent):
                 self.history.append([pred, float(y)])
                 del self.history[:-self.track]
         if pend is None or pend["ts"] != last_ts:
-            feats = price_features(closes.to_numpy())
+            feats = _frame_features(bars)
             if feats is not None:
                 self.pending[sym] = {"ts": last_ts, "x": feats[0].tolist(), "sigma": feats[1],
                                      "close": float(closes.iloc[-1])}
 
-    def pretrain(self, frames: dict[str, pd.Series]) -> int:
-        """Walk forward through historical closes (all symbols interleaved in time order). Returns samples."""
+    def pretrain(self, frames: dict[str, pd.DataFrame | pd.Series]) -> int:
+        """Walk forward through history (OHLC frames or closes; all symbols interleaved in time order).
+        Returns the number of samples learned."""
         samples: list[tuple[pd.Timestamp, str, np.ndarray, float]] = []
-        for sym, closes in frames.items():
+        for sym, bars in frames.items():
+            closes = _closes(bars)
             c = closes.to_numpy(dtype=float)
             for t in range(MIN_BARS - 1, len(c) - 1):
-                feats = price_features(c[: t + 1])
+                feats = _frame_features(bars, t + 1)
                 if feats is None:
                     continue
                 y = math.log(c[t + 1] / c[t]) / feats[1]
@@ -196,16 +221,17 @@ class OnlineLinearAgent(Agent):
                     log.warning("%s: no pretraining history for %s (%s)", self.name, s, exc)
             n = self.pretrain(frames)
             log.info("%s pretrained on %d samples", self.name, n)
-            for s, closes in frames.items():  # continue online from the last pretraining bar
-                self._learn_symbol(s, closes.tail(lookback))
+            for s, bars in frames.items():  # continue online from the last pretraining bar
+                self._learn_symbol(s, bars.tail(lookback))
         preds: dict[str, float] = {}
         for sym in symbols:
             try:
-                closes = self._bars(obs, sym, lookback)
+                bars = self._bars(obs, sym, lookback)
             except DataUnavailableError as exc:
                 log.warning("%s: skipping %s this step (%s)", self.name, sym, exc)
                 continue
-            self._learn_symbol(sym, closes)
+            self._learn_symbol(sym, bars)
+            closes = bars["close"]
             pend = self.pending.get(sym)
             if pend is not None and pend["ts"] == (closes.index[-1].isoformat() if len(closes) else None):
                 preds[sym] = self.model.predict(np.array(pend["x"]))
@@ -284,11 +310,16 @@ class OnlineLinearAgent(Agent):
     def load_state_dict(self, state: dict[str, Any]) -> None:
         if not state:
             return
+        self.entries = state.get("entries", {})
+        if len(state["model"]["w"]) != len(FEATURES):
+            # The feature set changed (e.g. pattern features added): relearn from history on the next act().
+            log.warning("%s: saved model has %d features, expected %d; it will be retrained",
+                        self.name, len(state["model"]["w"]), len(FEATURES))
+            return
         self.model = RecursiveLeastSquares.from_state(state["model"])
         self.pending = state.get("pending", {})
         self.history = state.get("history", [])
         self.pretrained_on = state.get("pretrained_on", 0)
-        self.entries = state.get("entries", {})
 
     def reset(self) -> None:
         self.entries = {}

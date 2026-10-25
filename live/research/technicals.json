@@ -1,0 +1,473 @@
+{
+ "generated_at": "2024-03-04T14:45:00+00:00",
+ "symbols": {
+  "SPY": {
+   "symbol": "SPY",
+   "as_of": "2024-03-01T00:00:00+00:00",
+   "close": 227.15,
+   "score": 0.31,
+   "trend": {
+    "direction": "neutral",
+    "change_pct": -3.86,
+    "r2": 0.221,
+    "quality": 0.0,
+    "ma_alignment": "below SMA200"
+   },
+   "support": [
+    {
+     "price": 225.23,
+     "touches": 4,
+     "bars_since_touch": 11
+    },
+    {
+     "price": 217.18,
+     "touches": 2,
+     "bars_since_touch": 8
+    },
+    {
+     "price": 212.19,
+     "touches": 1,
+     "bars_since_touch": 33
+    }
+   ],
+   "resistance": [
+    {
+     "price": 231.03,
+     "touches": 1,
+     "bars_since_touch": 209
+    },
+    {
+     "price": 235.52,
+     "touches": 4,
+     "bars_since_touch": 79
+    },
+    {
+     "price": 240.33,
+     "touches": 6,
+     "bars_since_touch": 57
+    }
+   ],
+   "indicators": {
+    "rsi_14": 56.9,
+    "atr_pct": 1.47,
+    "sma_20": 222.71,
+    "sma_50": 222.0,
+    "sma_200": 237.55,
+    "dist_sma200_pct": -4.37,
+    "high_52w": 274.61,
+    "low_52w": 212.19,
+    "volume_ratio_20": 1.04
+   },
+   "patterns": [
+    {
+     "name": "resistance_breakout",
+     "kind": "chart",
+     "direction": "bullish",
+     "strength": 0.64,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {
+      "level": 225.23
+     },
+     "note": "closed above a 4-touch resistance"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.225,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
+    }
+   ]
+  },
+  "AAPL": {
+   "symbol": "AAPL",
+   "as_of": "2024-03-01T00:00:00+00:00",
+   "close": 6.1282,
+   "score": 0.174,
+   "trend": {
+    "direction": "bullish",
+    "change_pct": 33.6,
+    "r2": 0.502,
+    "quality": 0.502,
+    "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
+   },
+   "support": [
+    {
+     "price": 5.8989,
+     "touches": 4,
+     "bars_since_touch": 18
+    },
+    {
+     "price": 5.4494,
+     "touches": 11,
+     "bars_since_touch": 7
+    },
+    {
+     "price": 4.9962,
+     "touches": 9,
+     "bars_since_touch": 41
+    }
+   ],
+   "resistance": [
+    {
+     "price": 6.4163,
+     "touches": 5,
+     "bars_since_touch": 4
+    },
+    {
+     "price": 6.7354,
+     "touches": 3,
+     "bars_since_touch": 24
+    },
+    {
+     "price": 7.1633,
+     "touches": 1,
+     "bars_since_touch": 227
+    }
+   ],
+   "indicators": {
+    "rsi_14": 56.9,
+    "atr_pct": 4.8,
+    "sma_20": 5.9255,
+    "sma_50": 5.464,
+    "sma_200": 5.4501,
+    "dist_sma200_pct": 12.44,
+    "high_52w": 7.1633,
+    "low_52w": 4.2549,
+    "volume_ratio_20": 0.78
+   },
+   "patterns": [
+    {
+     "name": "golden_cross",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.5,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "SMA50 crossed above SMA200"
+    },
+    {
+     "name": "double_top",
+     "kind": "chart",
+     "direction": "bearish",
+     "strength": 0.4,
+     "bars_ago": 4,
+     "status": "forming",
+     "levels": {
+      "neckline": 5.3348,
+      "target": 4.3122,
+      "invalidation": 6.3574
+     },
+     "note": "two peaks 11 bars apart; waiting for a close beyond the neckline"
+    }
+   ]
+  },
+  "MSFT": {
+   "symbol": "MSFT",
+   "as_of": "2024-03-01T00:00:00+00:00",
+   "close": 8.012,
+   "score": 0.206,
+   "trend": {
+    "direction": "bearish",
+    "change_pct": -8.92,
+    "r2": 0.362,
+    "quality": 0.362,
+    "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
+   },
+   "support": [
+    {
+     "price": 7.5974,
+     "touches": 1,
+     "bars_since_touch": 6
+    }
+   ],
+   "resistance": [
+    {
+     "price": 8.0935,
+     "touches": 4,
+     "bars_since_touch": 33
+    },
+    {
+     "price": 8.4152,
+     "touches": 6,
+     "bars_since_touch": 52
+    },
+    {
+     "price": 8.7488,
+     "touches": 8,
+     "bars_since_touch": 46
+    }
+   ],
+   "indicators": {
+    "rsi_14": 44.8,
+    "atr_pct": 2.82,
+    "sma_20": 8.1556,
+    "sma_50": 8.4439,
+    "sma_200": 8.6694,
+    "dist_sma200_pct": -7.58,
+    "high_52w": 12.927,
+    "low_52w": 7.5974,
+    "volume_ratio_20": 0.71
+   },
+   "patterns": [
+    {
+     "name": "bullish_rsi_divergence",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.5,
+     "bars_ago": 6,
+     "status": "confirmed",
+     "levels": {},
+     "note": "lower low in price, higher low in RSI: selling momentum fading"
+    },
+    {
+     "name": "macd_bullish_cross",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.4,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "MACD crossed above its signal below zero"
+    },
+    {
+     "name": "hanging_man",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.3,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {},
+     "note": "hammer shape after a rally: selling appeared intraday"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.15,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
+    },
+    {
+     "name": "inside_bar",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.1,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "range inside the previous bar: compression before a move"
+    }
+   ]
+  },
+  "BTC-USD": {
+   "symbol": "BTC-USD",
+   "as_of": "2024-03-03T00:00:00+00:00",
+   "close": 25532.0,
+   "score": -0.011,
+   "trend": {
+    "direction": "bullish",
+    "change_pct": 55.52,
+    "r2": 0.907,
+    "quality": 0.907,
+    "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
+   },
+   "support": [
+    {
+     "price": 23967.0,
+     "touches": 1,
+     "bars_since_touch": 27
+    },
+    {
+     "price": 19851.0,
+     "touches": 2,
+     "bars_since_touch": 18
+    },
+    {
+     "price": 17826.0,
+     "touches": 3,
+     "bars_since_touch": 40
+    }
+   ],
+   "resistance": [
+    {
+     "price": 27228.0,
+     "touches": 1,
+     "bars_since_touch": 5
+    }
+   ],
+   "indicators": {
+    "rsi_14": 65.9,
+    "atr_pct": 4.28,
+    "sma_20": 23494.0,
+    "sma_50": 21449.0,
+    "sma_200": 14912.0,
+    "dist_sma200_pct": 71.22,
+    "high_52w": 27228.0,
+    "low_52w": 6056.3,
+    "volume_ratio_20": 0.47
+   },
+   "patterns": [
+    {
+     "name": "hanging_man",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.3,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {},
+     "note": "hammer shape after a rally: selling appeared intraday"
+    },
+    {
+     "name": "bearish_harami",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.175,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bearish body inside a large bullish one"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.15,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
+    }
+   ]
+  },
+  "ETH-USD": {
+   "symbol": "ETH-USD",
+   "as_of": "2024-03-03T00:00:00+00:00",
+   "close": 12457.0,
+   "score": -0.595,
+   "trend": {
+    "direction": "neutral",
+    "change_pct": 1.05,
+    "r2": 0.002,
+    "quality": 0.0,
+    "ma_alignment": "below SMA200"
+   },
+   "support": [
+    {
+     "price": 11775.0,
+     "touches": 6,
+     "bars_since_touch": 15
+    },
+    {
+     "price": 9202.8,
+     "touches": 3,
+     "bars_since_touch": 85
+    },
+    {
+     "price": 7492.8,
+     "touches": 1,
+     "bars_since_touch": 178
+    }
+   ],
+   "resistance": [
+    {
+     "price": 13417.0,
+     "touches": 4,
+     "bars_since_touch": 20
+    },
+    {
+     "price": 14994.0,
+     "touches": 4,
+     "bars_since_touch": 45
+    },
+    {
+     "price": 16879.0,
+     "touches": 3,
+     "bars_since_touch": 6
+    }
+   ],
+   "indicators": {
+    "rsi_14": 44.2,
+    "atr_pct": 8.52,
+    "sma_20": 13449.0,
+    "sma_50": 13015.0,
+    "sma_200": 14801.0,
+    "dist_sma200_pct": -15.84,
+    "high_52w": 35985.0,
+    "low_52w": 3112.4,
+    "volume_ratio_20": 0.51
+   },
+   "patterns": [
+    {
+     "name": "support_breakdown",
+     "kind": "chart",
+     "direction": "bearish",
+     "strength": 0.672,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {
+      "level": 13417.0
+     },
+     "note": "closed below a 4-touch support on 1.8x volume"
+    },
+    {
+     "name": "macd_bearish_cross",
+     "kind": "indicator",
+     "direction": "bearish",
+     "strength": 0.4,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {},
+     "note": "MACD crossed below its signal above zero"
+    },
+    {
+     "name": "bearish_engulfing",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.375,
+     "bars_ago": 1,
+     "status": "confirmed",
+     "levels": {},
+     "note": "bearish body engulfs the previous bullish body"
+    },
+    {
+     "name": "bullish_harami",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bullish body inside a large bearish one"
+    },
+    {
+     "name": "shooting_star",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.275,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "long upper wick after a rally: higher prices rejected"
+    },
+    {
+     "name": "inside_bar",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.1,
+     "bars_ago": 2,
+     "status": "confirmed",
+     "levels": {},
+     "note": "range inside the previous bar: compression before a move"
+    }
+   ]
+  }
+ }
+}

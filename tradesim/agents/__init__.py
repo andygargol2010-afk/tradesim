@@ -4,11 +4,12 @@ from tradesim.agents.base import (
     HOLD, Action, Agent, CancelOrders, ClosePosition, FunctionAgent, Observation, OrderIntent, PolicyAgent,
     TargetWeights,
 )
+from tradesim.agents.discretionary import ClaudePortfolioManager
 from tradesim.agents.examples import BuyAndHoldAgent, MovingAverageCrossAgent, RandomAgent, SimpleRSIAgent
 from tradesim.agents.learning import OnlineLinearAgent, WalkForwardRSIAgent
 
 __all__ = [
-    "HOLD", "Action", "Agent", "BuyAndHoldAgent", "CancelOrders", "ClosePosition", "FunctionAgent",
+    "HOLD", "Action", "Agent", "BuyAndHoldAgent", "CancelOrders", "ClaudePortfolioManager", "ClosePosition", "FunctionAgent",
     "MovingAverageCrossAgent", "Observation", "OnlineLinearAgent", "OrderIntent", "PolicyAgent", "RandomAgent", "SimpleRSIAgent",
     "TargetWeights", "WalkForwardRSIAgent",
 ]

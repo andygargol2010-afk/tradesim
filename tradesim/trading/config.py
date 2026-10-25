@@ -70,6 +70,15 @@ class LiveConfig:
     dashboard_file: str = "dashboard/live.json"
     risk: RiskLimits = field(default_factory=RiskLimits)
     schedule: list[dict[str, str]] = field(default_factory=list)  # informative, shown on the dashboard
+    research: dict[str, Any] = field(default_factory=dict)  # see tradesim.research.refresh.ResearchConfig
+
+    def research_config(self):
+        """Research settings; research is off unless the config has a ``research`` section."""
+        from tradesim.research.refresh import ResearchConfig
+
+        if not self.research:
+            return ResearchConfig(enabled=False)
+        return ResearchConfig.from_dict(self.research)
 
     @classmethod
     def load(cls, path: str | Path) -> "LiveConfig":
@@ -88,4 +97,7 @@ class LiveConfig:
             p = Path(getattr(self, attr))
             if not p.is_absolute():
                 setattr(self, attr, str(base / p))
+        if self.research:
+            rdir = Path(self.research.get("dir", "live/research"))
+            self.research = {**self.research, "dir": str(rdir if rdir.is_absolute() else base / rdir)}
         return self

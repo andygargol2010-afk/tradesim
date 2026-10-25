@@ -274,6 +274,12 @@ class BaseSimulator:
         """Last ``limit`` completed closes of ``symbol`` as a numpy array."""
         return self.get_historical_data(symbol, limit=limit)["close"].to_numpy(dtype=float)
 
+    def detect_patterns(self, symbol: str, limit: int = 300, timeframe: Timeframe | str | None = None):
+        """Technical patterns on the last ``limit`` completed bars (see :mod:`tradesim.patterns`)."""
+        from tradesim.patterns import detect_patterns
+
+        return detect_patterns(self.get_historical_data(symbol, timeframe, limit), symbol)
+
     def apply_action(self, action: Any) -> list[dict[str, Any]]:
         """Execute an agent action (see :mod:`tradesim.agents.base` for the accepted forms).
 

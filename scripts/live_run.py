@@ -2,6 +2,7 @@
 
     python scripts/live_run.py --mode decide     # sync + daily decision (once per day, markets open)
     python scripts/live_run.py --mode mark       # sync + mark to market only
+    python scripts/live_run.py --mode research   # news / macro / calendar / patterns refresh, no trading
     python scripts/live_run.py --export-only     # just rebuild dashboard/live.json from the saved state
 
 Exit code 1 if any account failed (its state and the others' are still saved).
@@ -23,7 +24,7 @@ from tradesim.trading.export import export_dashboard  # noqa: E402
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--mode", choices=["decide", "mark"], default="mark")
+    ap.add_argument("--mode", choices=["decide", "mark", "research"], default="mark")
     ap.add_argument("--config", default=str(ROOT / "live" / "config.json"))
     ap.add_argument("--export-only", action="store_true")
     ap.add_argument("-v", "--verbose", action="store_true")
@@ -37,6 +38,8 @@ def main() -> int:
         return 0
     record = LiveRunner(config).run(args.mode)
     print(f"{record['mode']} run at {record['started_at']} took {record['duration_s']}s")
+    if record.get("research"):
+        print("  research:", record["research"])
     for sym, p in record["prices"].items():
         print(f"  {sym:8s} " + (f"{p['last']:>12.4f}  ({p.get('source')})" if "last" in p else f"ERROR {p['error'][:80]}"))
     failed = False

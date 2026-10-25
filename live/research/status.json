@@ -1,0 +1,53 @@
+{
+ "started_at": "2024-03-04T14:45:00+00:00",
+ "errors": {},
+ "llm": "no ANTHROPIC_API_KEY",
+ "macro": {
+  "indicators": 23
+ },
+ "calendar": {
+  "events": 39,
+  "researched_at": null
+ },
+ "news": {
+  "fetched": 633,
+  "new": 0,
+  "stored": 655,
+  "triaged": 0,
+  "deep_analyses": 0,
+  "untriaged_backlog": 655
+ },
+ "technicals": {
+  "symbols": 5
+ },
+ "llm_usage": {
+  "by_model": {},
+  "cost_usd_estimate": 0.0
+ },
+ "duration_s": 11.9,
+ "llm_usage_total": {
+  "by_model": {},
+  "cost_usd_estimate": 0.0
+ },
+ "config": {
+  "enabled": true,
+  "dir": "live/research",
+  "news": true,
+  "macro": true,
+  "calendar": true,
+  "technicals": true,
+  "analyze": true,
+  "triage_model": "claude-haiku-5-5",
+  "deep_model": "claude-sonnet-5-5",
+  "calendar_model": "claude-opus-5-5",
+  "max_triage_per_run": 300,
+  "max_deep_per_run": 12,
+  "deep_min_relevance": 0.6,
+  "read_articles": true,
+  "calendar_days": 30,
+  "keep_news_days": 7.0,
+  "news_max_age_days": 3.0,
+  "calendar_research_hours": 20.0,
+  "language": "es"
+ }
+}

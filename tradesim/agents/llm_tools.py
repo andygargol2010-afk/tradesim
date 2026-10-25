@@ -62,6 +62,24 @@ TOOLS: list[dict[str, Any]] = [
         },
     },
     {
+        "name": "detect_patterns",
+        "description": (
+            "Technical pattern recognition on completed bars: trend, support/resistance levels, candlesticks "
+            "(engulfing, hammer, stars...), chart patterns (double top/bottom, head and shoulders, triangles, wedges, "
+            "breakouts), and indicator events (golden/death cross, RSI divergence, MACD cross, Bollinger squeeze). "
+            "Each pattern has a direction, strength 0-1, status and key levels (neckline, target, invalidation)."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "symbol": _SYMBOL,
+                "timeframe": {"type": "string", "enum": ["1h", "4h", "1d", "1w"]},
+                "limit": {"type": "integer", "default": 300, "minimum": 60, "maximum": 1000},
+            },
+            "required": ["symbol"],
+        },
+    },
+    {
         "name": "place_order",
         "description": (
             "Submit an order. Size with exactly ONE of quantity (units; fractions allowed, e.g. 0.003 BTC or 1.75 shares), "
@@ -157,6 +175,8 @@ def dispatch(sim: Any, name: str, args: dict[str, Any] | None) -> str:
             records = [{"t": ts.isoformat(), **{k: _round(v) for k, v in row.items()}}
                        for ts, row in df.iterrows()]
             result = {"symbol": args["symbol"], "bars": records}
+        elif name == "detect_patterns":
+            result = sim.detect_patterns(args["symbol"], int(args.get("limit", 300)), args.get("timeframe")).to_dict()
         elif name == "place_order":
             result = sim.place_order(**args)
         elif name == "cancel_order":
