@@ -1,7 +1,7 @@
 /* Live operations page: reads live.json (written by scripts/live_run.py). Needs charts.js. */
 "use strict";
 
-const live = { data: null, account: 0, prices: {}, pricesAt: null, timer: null, rejected: {}, journalAll: false };
+const live = { data: null, source: null, account: 0, prices: {}, pricesAt: null, timer: null, rejected: {}, journalAll: false };
 const LIVE_REFRESH_MS = 30_000;
 const MAX_LIVE_DEVIATION = 0.5;  // a live price >50% away from the last valuation is treated as bad data
 
@@ -96,6 +96,7 @@ function renderStatus() {
       Object.values(last.accounts || {}).filter((a) => a.status === "error").length;
     bar.append(h("span", {}, "Última ejecución: ", h("strong", {}, fmtWhen(last.started_at)), ` (${fmtAgo(last.started_at)}, ${last.mode === "decide" ? "decisión" : "valoración"}, ${fmtNum(last.duration_s, 1)} s)`));
     bar.append(h("span", {}, errs ? `⚠ ${errs} incidencia${errs > 1 ? "s" : ""} en la última ejecución` : "✓ sin incidencias"));
+    if (live.source) bar.append(h("span", {}, `datos: ${live.source}`));
   }
   const next = nextRuns(d.meta.schedule);
   if (next.length) {
@@ -397,12 +398,26 @@ function renderAll() {
   renderAccount();
 }
 
+/** Fetch the repository copy (fresh after every run) and the deployed copy; keep the newest. */
+async function loadData() {
+  const remote = document.querySelector('meta[name="tradesim-data-url"]')?.content;
+  const sources = [["repositorio", remote], ["despliegue", "live.json"]].filter(([, url]) => url);
+  const got = await Promise.allSettled(sources.map(async ([name, url]) => {
+    const res = await fetch(url, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
+    return [name, await res.json()];
+  }));
+  const ok = got.filter((r) => r.status === "fulfilled").map((r) => r.value);
+  if (!ok.length) throw new Error(got.map((r) => r.reason?.message).join("; "));
+  ok.sort((a, b) => (b[1].meta?.generated_at || "").localeCompare(a[1].meta?.generated_at || ""));
+  live.source = ok[0][0];
+  return ok[0][1];
+}
+
 async function boot() {
   initTheme(() => { if (live.data) renderAll(); });
   try {
-    const res = await fetch("live.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    live.data = await res.json();
+    live.data = await loadData();
   } catch (err) {
     $("statusbar").textContent = "";
     $("app").replaceChildren(h("div", { class: "error" },
