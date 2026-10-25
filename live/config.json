@@ -41,7 +41,9 @@
       "agent": "OnlineLinearAgent",
       "params": {
         "top_k": 6,
-        "max_weight": 0.2
+        "max_weight": 0.2,
+        "horizon": 5,
+        "ic_gate": true
       },
       "initial_cash": 100,
       "fees": "alpaca",

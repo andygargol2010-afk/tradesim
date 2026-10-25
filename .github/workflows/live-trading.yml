@@ -36,7 +36,7 @@ jobs:
           cache: pip
 
       - name: Install
-        run: pip install -e ".[yfinance,crypto,alpaca,llm]"
+        run: pip install -e ".[yfinance,crypto,alpaca,llm,ml]"
 
       - name: Choose mode
         run: |

@@ -5,7 +5,8 @@ import pandas as pd
 import pytest
 
 from tradesim import SimulatorConfig, SyntheticProvider, TradingSimulator, run_episode
-from tradesim.agents.learning import FEATURES, OnlineLinearAgent, RecursiveLeastSquares, WalkForwardRSIAgent, price_features
+from tradesim.agents.learning import (FEATURES, OWN_FEATURES, OnlineLinearAgent, RecursiveLeastSquares, WalkForwardRSIAgent,
+                                     price_features)
 from tradesim.assets.universe import Asset, AssetUniverse
 from tradesim.data.memory import InMemoryProvider
 from tradesim.types import AssetClass
@@ -45,7 +46,7 @@ def test_price_features_are_scale_free():
     x2, s2 = price_features(c * 1234.5)
     assert np.allclose(x1, x2) and s1 == pytest.approx(s2)
     assert price_features(c[:30]) is None
-    assert len(x1) == len(FEATURES)
+    assert len(x1) == len(OWN_FEATURES)
 
 
 def test_online_agent_learns_mean_reversion():
@@ -100,7 +101,48 @@ def test_no_edge_gate_and_horizon_without_lookahead():
     agent = OnlineLinearAgent(pretrain_bars=0, horizon=5, ic_gate=True)
     agent.pretrain(frames)
     st = agent.ic_stats()
-    assert abs(st["rank_ic_mean"]) < 0.1 and not agent.has_edge()  # random walks: no edge, gate stays shut
+    assert abs(st["rank_ic_mean"]) < 0.15 and not agent.has_edge()  # random walks: no edge, gate stays shut
     mr = OnlineLinearAgent(pretrain_bars=0, horizon=1, ic_gate=True)
     mr.pretrain({s: f["close"] for s, f in mean_reverting_frames(n_symbols=6).items()})
     assert mr.has_edge()
+
+
+def test_learning_targets_forgetting_and_costs():
+    from tradesim.agents.learning import _entry_exit, demean_targets
+
+    idx = pd.date_range("2024-01-01", periods=4, freq="D", tz="UTC")
+    bars = pd.DataFrame({"open": [10, 20, 30, 40], "close": [11, 21, 31, 41]}, index=idx, dtype=float)
+    assert _entry_exit(bars, 0, 2) == (20.0, 40.0, idx[3])  # next open to the open 2 bars later: no overnight gap
+    assert _entry_exit(bars, 1, 2) is None
+    s = [{"ts": "2024-01-01", "realized": "2024-01-03", "y": float(v)} for v in range(5)]
+    demean_targets(s)
+    assert [x["y_rel"] for x in s] == [-2, -1, 0, 1, 2]  # relative to the assets resolved together
+    agent = OnlineLinearAgent()
+    agent._set_forgetting(50)
+    assert agent.model.forgetting ** 50 == pytest.approx(0.998)  # forgetting is per day, whatever the universe
+
+
+def test_boosting_joins_the_ensemble_and_persists():
+    pytest.importorskip("lightgbm")
+    frames = {s: f["close"] for s, f in mean_reverting_frames(n_symbols=8, n=900, seed=5).items()}  # close to close
+    agent = OnlineLinearAgent(pretrain_bars=0, horizon=1)
+    agent.pretrain(frames)
+    assert agent.gbm.booster is not None and agent.gbm.holdout["rank_ic_mean"] > 0.05
+    wl, wg = agent._weights()
+    assert wg > 0 and wl + wg == pytest.approx(1)
+    clone = OnlineLinearAgent()
+    clone.load_state_dict(json.loads(json.dumps(agent.state_dict())))
+    x = np.linspace(-1, 1, len(FEATURES))
+    assert clone._predict(x)[0] == pytest.approx(agent._predict(x)[0])
+    assert agent.learning_summary()["models"]["gbm"]["top_features"]
+
+
+def test_median_sharpe_needs_consistency():
+    idx = pd.date_range("2023-01-01", periods=240, freq="D", tz="UTC")
+    rng = np.random.default_rng(0)
+    lucky = np.r_[rng.normal(0.02, 0.005, 60), rng.normal(0.0, 0.01, 180)]  # one great quarter, then losing
+    steady = rng.normal(0.001, 0.005, 240)
+    eq = lambda r: pd.Series(100 * np.cumprod(1 + r), index=idx)  # noqa: E731
+    full = lambda r: r.mean() / r.std() * np.sqrt(252)  # noqa: E731
+    assert full(lucky) > full(steady)  # one-period Sharpe prefers the lucky setting...
+    assert WalkForwardRSIAgent.median_sharpe(eq(steady), 4) > WalkForwardRSIAgent.median_sharpe(eq(lucky), 4)

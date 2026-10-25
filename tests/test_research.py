@@ -392,11 +392,11 @@ def test_discretionary_agent_decides_and_remembers(tmp_path, offline):
     for section in ("TECHNICALS", "MACRO DATA", "EVENT CALENDAR", "NEWS ANALYSES", "OPEN POSITIONS"):
         assert section in prompt
     assert "ignored FAKE: not in the tradable universe" in agent.explain()["adjustments"]
-    assert agent.explain()["status"] == "ok" and agent.decisions and agent.lessons == ["No perseguir gaps."]
+    assert agent.explain()["status"] == "ok" and agent.decisions and agent.lessons == []  # unverified free-text lessons are not kept
     assert {t["type"] for t in client.calls[0]["tools"][:-1]} == {"web_search_20260209", "web_fetch_20260209"}
     # the second decision sees its theses, the review and its notes
     later = client.calls[-1]["messages"][0]["content"]
-    assert "Resultados fuertes" in later and "YOUR LESSONS SO FAR" in later and "Vigilar CPI." in later
+    assert "Resultados fuertes" in later and "YOUR TRACK RECORD" in later and "Vigilar CPI." in later
     restored = ClaudePortfolioManager()
     restored.load_state_dict(json.loads(json.dumps(agent.state_dict())))
     assert restored.theses.keys() == agent.theses.keys() and restored.usage_total["cost_usd_estimate"] > 0
@@ -507,3 +507,38 @@ def test_local_analysis_only_directs_named_assets():
     named = NewsItem("b", "Exxon beats estimates", "u", NOW.isoformat(), "yahoo")
     named.triage = la.triage_item(named, NOW)
     assert [(x["symbol"], x["direction"]) for x in la.analyse_item(named, NOW)["affected"]] == [("XOM", "up")]
+
+
+def test_forecast_book_and_signal_learner_only_keep_supported_lessons():
+    from datetime import datetime, timedelta, timezone
+
+    import numpy as np
+
+    from tradesim.agents.forecasts import ForecastBook, SignalLearner
+
+    t0 = datetime(2025, 1, 1, tzinfo=timezone.utc)
+    book = ForecastBook()
+    rng = np.random.default_rng(0)
+    for i in range(40):  # always says 80 % but only ~35 % go up: overconfident
+        now = t0 + timedelta(days=i)
+        book.record(now, [{"symbol": f"S{i}", "prob_up": 0.8, "horizon_days": 5, "conviction": "high"}],
+                    {f"S{i}": 100.0}, "risk_on", {})
+        book.resolve(now + timedelta(days=5), {f"S{i}": 100.0 * (1.01 if rng.random() < 0.35 else 0.99)})
+    st = book.stats()
+    assert st["overall"]["n"] == 40 and st["overall"]["brier"] > 0.25
+    assert any(x.startswith("Sobreestimo") for x in book.lessons())
+    few = ForecastBook()
+    few.closed = book.closed[:10]
+    assert few.lessons() == []  # n < 30: nothing is concluded
+
+    sl = SignalLearner(horizon_days=1, min_samples=200)
+    syms = [f"A{k}" for k in range(10)]
+    prices = {s: 100.0 for s in syms}
+    for d in range(120):  # the news score predicts tomorrow's relative return; technicals are noise
+        now = t0 + timedelta(days=d)
+        sl.resolve(now, prices)
+        sig = {s: {"tech": rng.normal(), "news": rng.normal(), "trend": 0.0} for s in syms}
+        sl.record(now, sig, prices, {s: 0.01 for s in syms})
+        prices = {s: prices[s] * float(np.exp(0.01 * sig[s]["news"] + rng.normal(0, 0.005))) for s in syms}
+    w, src = sl.weights()
+    assert src == "aprendidos" and w["news"] > abs(w["tech"])

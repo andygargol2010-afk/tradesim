@@ -31,6 +31,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Sequence
 
 from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent, SetExits
+from tradesim.agents.forecasts import ForecastBook, SignalLearner
 from tradesim.data.base import DataUnavailableError
 
 log = logging.getLogger(__name__)
@@ -63,15 +64,21 @@ DECISION_TOOL = {
                         "take_profit": {"type": "number",
                                         "description": "price at which to take profits (above the current price); "
                                                        "0 = let the system place it"},
+                        "prob_up": {"type": "number",
+                                    "description": "probability (0-1) that the price is higher after horizon_days; "
+                                                   "scored with the Brier score and fed back to you"},
+                        "expected_return_pct": {"type": "number",
+                                                "description": "expected return over horizon_days, in %"},
                     },
                     "required": ["symbol", "target_weight", "conviction", "thesis", "catalysts", "invalidation",
-                                 "horizon_days", "stop_loss", "take_profit"],
+                                 "horizon_days", "stop_loss", "take_profit", "prob_up", "expected_return_pct"],
                 },
             },
             "watchlist": {"type": "array", "items": {"type": "string"},
                           "description": "Assets you are watching and what would make you act"},
             "lessons": {"type": "array", "items": {"type": "string"},
-                        "description": "New lessons from reviewing past decisions (may be empty)"},
+                        "description": "Hypotheses from reviewing past decisions (not stored: only lessons backed by "
+                                       "your measured track record are kept)"},
             "notes_for_next_time": {"type": "string"},
             "diary": {
                 "type": "object",
@@ -86,8 +93,7 @@ DECISION_TOOL = {
                 "required": ["por_que", "segun_situacion"],
             },
         },
-        "required": ["market_view", "regime", "key_risks", "positions", "watchlist", "lessons", "notes_for_next_time",
-                     "diary"],
+        "required": ["market_view", "regime", "key_risks", "positions", "watchlist", "notes_for_next_time", "diary"],
     },
 }
 
@@ -144,8 +150,10 @@ class DiscretionaryAgent(Agent):
         # memory (persisted)
         self.theses: dict[str, dict[str, Any]] = {}
         self.decisions: list[dict[str, Any]] = []
-        self.lessons: list[str] = []
+        self.lessons: list[str] = []  # data-backed only (see tradesim.agents.forecasts)
         self.reviews: list[dict[str, Any]] = []
+        self.signal_learner = SignalLearner()
+        self.book = ForecastBook()
         self.notes = ""
         self.usage_total: dict[str, Any] = {}
         self.steps = 0
@@ -189,6 +197,11 @@ class DiscretionaryAgent(Agent):
         symbols = [s for s in (self.symbols or obs.symbols) if s in obs.prices and obs.prices[s] == obs.prices[s]]
         review = self._review(obs)
         reports = self._reports(obs, symbols)
+        prices = {s: float(obs.prices[s]) for s in symbols}
+        self.book.resolve(obs.timestamp, prices)
+        self.signal_learner.resolve(obs.timestamp, prices)
+        signals, news = self._signal_scores(obs.timestamp, symbols, reports)
+        self.signal_learner.record(obs.timestamp, signals, prices, self._sigmas(obs, symbols))
         usage, errors, sources = Usage(), [], []
         decision, engine, dossier = None, None, ""
         for b in self._backends():
@@ -223,12 +236,14 @@ class DiscretionaryAgent(Agent):
                               "message": ("sin motor de IA configurado: el analista no opera (mantiene)" if not errors
                                           else f"sin decisión: {errors[-1]}")}
                 return []
-            decision = self._local_decision(obs, symbols, reports)
+            decision = self._local_decision(obs, symbols, reports, signals, news)
             engine = "local (gratis, sin IA)"
         self.last_engine = engine
         targets, notes = self._targets(decision, obs, symbols)
         actions, changes = self._orders(obs, targets, decision, reports)
         self._remember(obs, decision, targets, review)
+        self.book.record(obs.timestamp, [p for p in decision.get("positions", []) if p.get("symbol") in targets],
+                         prices, decision.get("regime"), self._pattern_names(reports))
         self._last = {"status": "ok", "engine": engine, "engine_errors": errors,
                       "market_view": decision.get("market_view"), "regime": decision.get("regime"),
                       "key_risks": decision.get("key_risks"), "targets": {s: round(w, 4) for s, w in targets.items()},
@@ -270,7 +285,8 @@ class DiscretionaryAgent(Agent):
             "risk. Stops are only ever raised, never lowered. Use 0 to let the system derive them.\n"
             f"- Limits: at most {self.max_positions} positions, at most {self.max_weight:.0%} of equity each, total "
             f"invested at most {self.invested_fraction:.0%}.\n"
-            "- Be honest about uncertainty. Write lessons only when a past decision teaches something specific.\n"
+            "- Be honest about uncertainty: give every position a calibrated prob_up and expected return. They are "
+            "scored when the horizon ends and YOUR TRACK RECORD shows how calibrated you have been; adjust to it.\n"
             "- Use web search only to check something specific that matters for a decision (a fresh development, a "
             "figure you lack); the dossier already has news, macro and calendar.\n\n"
             f"Write every text field (market view, theses, catalysts, invalidation, risks, watchlist, lessons, notes) "
@@ -303,8 +319,10 @@ class DiscretionaryAgent(Agent):
             parts.append("YOUR RECENT DECISIONS:\n" + "\n".join(
                 f"- {d['date'][:10]} ({d.get('regime')}, equity {d.get('equity'):.0f}): {d.get('summary', '')[:300]}"
                 for d in self.decisions[-(3 if compact else 5):]))
+        parts.append("YOUR TRACK RECORD (measured, not opinions):\n" + self.book.summary_text())
         if self.lessons:
-            parts.append("YOUR LESSONS SO FAR:\n" + "\n".join(f"- {x}" for x in self.lessons[-(8 if compact else 12):]))
+            parts.append("LESSONS BACKED BY YOUR DATA (n>=30, |t|>2):\n"
+                         + "\n".join(f"- {x}" for x in self.lessons[-(8 if compact else 12):]))
         if self.notes:
             parts.append(f"YOUR NOTES FROM LAST TIME: {self.notes}")
         parts += self._research_sections(now, symbols, compact)
@@ -380,6 +398,41 @@ class DiscretionaryAgent(Agent):
         return "\n".join(lines)
 
     # ------------------------------------------------------------------ local engine (free, no AI)
+    def _signal_scores(self, now: datetime, symbols: list[str], reports: dict[str, Any]
+                       ) -> tuple[dict[str, dict[str, float]], dict[str, tuple[float, int, list[str]]]]:
+        """Technical, news and trend score of every asset (-1..1), plus the news details."""
+        news = self._news_scores(now, symbols)
+        out = {}
+        for sym, rep in reports.items():
+            trend = rep.trend or {}
+            out[sym] = {"tech": float(rep.score()), "news": float(news.get(sym, (0.0, 0, []))[0]),
+                        "trend": {"bullish": 1.0, "bearish": -1.0}.get(trend.get("direction"), 0.0)
+                        * float(trend.get("quality") or 0)}
+        return out, news
+
+    @staticmethod
+    def _sigmas(obs: Observation, symbols: list[str]) -> dict[str, float]:
+        import numpy as np
+
+        out = {}
+        for sym in symbols:
+            try:
+                c = obs.closes(sym, 21)
+            except (DataUnavailableError, KeyError, ValueError):
+                continue
+            if len(c) >= 10 and (c > 0).all():
+                sd = float(np.std(np.diff(np.log(c)), ddof=1))
+                if sd > 0:
+                    out[sym] = sd
+        return out
+
+    @staticmethod
+    def _pattern_names(reports: dict[str, Any]) -> dict[str, list[str]]:
+        from tradesim.patterns import PATTERN_NAMES_ES
+
+        return {sym: [PATTERN_NAMES_ES.get(p.name, p.name) for p in rep.patterns
+                      if getattr(p, "bars_ago", 0) <= 2][:4] for sym, rep in reports.items()}
+
     def _news_scores(self, now: datetime, symbols: list[str]) -> dict[str, tuple[float, int, list[str]]]:
         """Per symbol: relevance- and recency-weighted sentiment of the last 72 h (-1..1), item count, headlines."""
         out: dict[str, tuple[float, int, list[str]]] = {}
@@ -438,12 +491,18 @@ class DiscretionaryAgent(Agent):
 
         return upcoming(self.research.load("calendar") or {}, now, 30, "medium")
 
-    def _local_decision(self, obs: Observation, symbols: list[str], reports: dict[str, Any]) -> dict[str, Any]:
-        """Free decision: weigh technicals, news, trend, macro regime and the calendar for every asset."""
+    def _local_decision(self, obs: Observation, symbols: list[str], reports: dict[str, Any],
+                        signals: dict[str, dict[str, float]] | None = None,
+                        news: dict[str, tuple[float, int, list[str]]] | None = None) -> dict[str, Any]:
+        """Free decision: weigh technicals, news, trend, macro regime and the calendar for every asset. The weights of
+        the three signals are learned from the outcomes once they beat the fixed ones (see SignalLearner)."""
         from tradesim.patterns import PATTERN_NAMES_ES
 
         now = obs.timestamp
-        news = self._news_scores(now, symbols)
+        if signals is None or news is None:
+            signals, news = self._signal_scores(now, symbols, reports)
+        weights, weights_src = self.signal_learner.weights()
+        sigmas = self._sigmas(obs, symbols)
         regime, exposure, regime_why = self._regime()
         events = self._events(now)
         today = now.date().isoformat()
@@ -455,11 +514,10 @@ class DiscretionaryAgent(Agent):
             rep = reports.get(sym)
             if rep is None:
                 continue
-            tech = rep.score()
-            trend = rep.trend or {}
-            tr = {"bullish": 1.0, "bearish": -1.0}.get(trend.get("direction"), 0.0) * float(trend.get("quality") or 0)
+            sig = signals.get(sym) or {"tech": rep.score(), "news": 0.0, "trend": 0.0}
+            tech, tr = sig["tech"], sig["trend"]
             ns, nn, heads = news.get(sym, (0.0, 0, []))
-            score = 0.55 * tech + 0.3 * ns + 0.15 * tr
+            score = weights["tech"] * tech + weights["news"] * ns + weights["trend"] * tr
             sym_events = [e for e in events if sym in (e.get("symbols") or [])]
             binary_soon = [e for e in sym_events if today <= e["date"] <= soon and e["category"] == "earnings"]
             scored[sym] = {"score": score, "tech": tech, "news": ns, "n_news": nn, "heads": heads, "trend": tr,
@@ -485,8 +543,10 @@ class DiscretionaryAgent(Agent):
                       + f", noticias {d['news']:+.2f} ({d['n_news']} relevantes), tendencia "
                       + ("alcista" if d["trend"] > 0.1 else "bajista" if d["trend"] < -0.1 else "lateral")
                       + (f". Titular: «{d['heads'][0]}»" if d["heads"] else ""))
+            prob = 0.5 + 0.3 * max(-1.0, min(1.0, d["score"]))
             positions.append({
-                "symbol": s, "target_weight": round(w, 4),
+                "symbol": s, "target_weight": round(w, 4), "prob_up": round(prob, 3),
+                "expected_return_pct": round((2 * prob - 1) * sigmas.get(s, 0.02) * math.sqrt(14) * 100, 2),
                 "conviction": "high" if d["score"] >= 0.5 else "medium" if d["score"] >= 0.3 else "low",
                 "thesis": thesis, "catalysts": [f"{e['date']} {e['title']}" for e in d["events"][:3]],
                 "invalidation": f"pérdida del soporte {sup:g} (stop-loss justo debajo)" if sup
@@ -496,7 +556,9 @@ class DiscretionaryAgent(Agent):
         worst = [s for s in reversed(best) if scored[s]["score"] < -0.2][:3]
         regime_es = {"risk_on": "de apetito por el riesgo", "neutral": "neutral", "risk_off": "de aversión al riesgo"}
         fmt = lambda syms: ", ".join(f"{x} {scored[x]['score']:+.2f}" for x in syms)  # noqa: E731
-        view = (f"Decisión del motor local (sin IA). Régimen {regime_es[regime]} ({regime_why}); exposición máxima "
+        wtxt = "/".join(f"{weights[k]:.2f}" for k in ("tech", "news", "trend"))
+        view = (f"Decisión del motor local (sin IA; pesos técnico/noticias/tendencia {wtxt}, {weights_src}). "
+                f"Régimen {regime_es[regime]} ({regime_why}); exposición máxima "
                 f"{exposure:.0%}. Más fuertes: {fmt(best[:4])}"
                 + (f". Más débiles: {fmt(worst)}" if worst else "")
                 + (f". Evento clave en 24 h: {market_events[0]['title']} (posiciones nuevas a mitad de tamaño)."
@@ -673,10 +735,8 @@ class DiscretionaryAgent(Agent):
                 "take_profit": (getattr(self, "_exits", {}).get(sym) or (None, None))[1]}
         for sym in [s for s in self.theses if s not in targets and obs.position(s) <= 0]:
             del self.theses[sym]  # never bought (or sold now): nothing to track
-        known = {x.lower() for x in self.lessons}
-        new_lessons = [x.strip() for x in decision.get("lessons", []) if isinstance(x, str) and x.strip()
-                       and x.strip().lower() not in known]
-        self.lessons = (self.lessons + new_lessons)[-15:]
+        # lessons are derived from the measured track record only (n >= 30, |t| > 2), never stored as free text
+        self.lessons = (self.book.lessons() + self.signal_learner.lessons())[:15]
         self.notes = str(decision.get("notes_for_next_time", ""))[:1500]
         self.decisions.append({"date": now, "regime": decision.get("regime"), "equity": obs.equity,
                                "summary": str(decision.get("market_view", ""))[:600],
@@ -720,20 +780,26 @@ class DiscretionaryAgent(Agent):
                 "engines": self.engines, "last_engine": self.last_engine, "model": self.model, "decisions": len(self.decisions), "open_theses": len(self.theses),
                 "lessons": self.lessons[-8:], "last_regime": last.get("regime"), "last_view": last.get("summary"),
                 "recent_reviews": self.reviews[-5:], "llm_cost_usd_total": self.usage_total.get("cost_usd_estimate"),
+                "forecast_track_record": self.book.stats(),
+                "signal_weights": dict(zip(("weights", "source"), self.signal_learner.weights())),
+                "signal_ic": self.signal_learner.ic(),
                 "theses": self.theses}
 
     def state_dict(self) -> dict[str, Any]:
         return {"theses": self.theses, "decisions": self.decisions, "lessons": self.lessons, "reviews": self.reviews,
                 "notes": self.notes, "usage_total": self.usage_total, "steps": self.steps,
-                "last_engine": self.last_engine}
+                "last_engine": self.last_engine, "signal_learner": self.signal_learner.state_dict(),
+                "forecasts": self.book.state_dict()}
 
     def load_state_dict(self, state: dict[str, Any]) -> None:
         if not state:
             return
         self.theses = state.get("theses", {})
         self.decisions = state.get("decisions", [])
-        self.lessons = state.get("lessons", [])
         self.reviews = state.get("reviews", [])
+        self.signal_learner.load_state_dict(state.get("signal_learner"))
+        self.book.load_state_dict(state.get("forecasts"))
+        self.lessons = (self.book.lessons() + self.signal_learner.lessons())[:15]  # old free-text lessons dropped
         self.notes = state.get("notes", "")
         self.usage_total = state.get("usage_total", {})
         self.steps = state.get("steps", 0)
