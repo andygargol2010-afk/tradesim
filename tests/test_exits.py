@@ -192,3 +192,27 @@ def test_discretionary_agent_protects_every_position_and_trails(monkeypatch):
     th = next(iter(agent.theses.values()))
     assert th["stop_loss"] and th["take_profit"]
     env.close()
+
+
+def test_auto_trailing_stop_for_unprotected_positions():
+    sim = TradingSimulator(provider=SyntheticProvider(seed=2), config=SimulatorConfig(initial_cash=10_000, auto_stop_atr=2.5),
+                           symbols=["SPY", "AAPL"], start="2023-01-01", end="2023-12-31")
+    sim.reset(start_offset=60)
+    sim.buy("SPY", notional=3000)
+    sim.buy("AAPL", notional=3000)
+    sim.step()  # fills; SPY gets an automatic stop
+    ex = sim.get_exits("SPY")
+    assert ex["stop_loss"] is not None and ex["stop_loss"] < sim.get_price("SPY")["mid"] and ex["take_profit"] is None
+    sim.set_exits("AAPL", stop_loss=sim.get_price("AAPL")["mid"] * 0.8)  # the agent's own stop is respected
+    own = sim.get_exits("AAPL")["stop_loss"]
+    stops = [ex["stop_loss"]]
+    for _ in range(40):
+        sim.step()
+        if sim.portfolio.quantity("SPY") == 0:
+            break
+        stops.append(sim.get_exits("SPY")["stop_loss"])
+        assert sim.get_exits("AAPL")["stop_loss"] == own
+    assert all(b >= a for a, b in zip(stops, stops[1:]))  # trailing: never lowered
+    if sim.portfolio.quantity("SPY") == 0:
+        last = sim.portfolio.closed_trades[-1]
+        assert last.symbol == "SPY" and sim.orders[last.exit_order_id].tag.endswith("automático")

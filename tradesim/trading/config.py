@@ -19,11 +19,14 @@ class RiskLimits:
         max_position_pct: pre-trade cap on any single position, % of equity.
         halt_drawdown_pct: stop opening positions once the account is this far below its peak.
         max_orders_per_run: refuse to send more orders than this in one decision (runaway agent guard).
+        stop_loss_atr: automatic trailing stop-loss (ATR multiples) for every position an agent leaves
+            without its own stop; ``None`` disables it.
     """
 
     max_position_pct: float = 30.0
     halt_drawdown_pct: float = 35.0
     max_orders_per_run: int = 20
+    stop_loss_atr: float | None = 2.5
 
 
 @dataclass

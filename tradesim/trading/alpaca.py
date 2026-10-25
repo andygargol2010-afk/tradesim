@@ -248,6 +248,7 @@ class AlpacaTrader(LivePaperTrader):
         self._reconcile(now)  # broker-side interest and real fees show up here, through cash
         self._last_sync = now
         self._record_equity(now)
+        self.protect_positions()
         return [f.to_dict() for f in fills]
 
     def _check_local_exits(self, now: datetime) -> None:

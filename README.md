@@ -105,6 +105,9 @@ El stop solo sube, nunca baja (stop dinámico); si el precio ya está bajo el st
   mismas acciones ni stops en fracciones/cripto): al detectar el nivel se envía una orden a mercado, que se ejecuta al
   precio de ese momento. Con dinero real conviene sincronizar con más frecuencia (por ejemplo cada 15 minutos).
 
+**Stop-loss para todos.** Toda posición que su agente deja sin stop propio recibe uno automático a 2,5 ATR del precio
+(`risk.stop_loss_atr`; `null` lo desactiva), dinámico: sube con el precio y nunca baja. El analista usa los suyos.
+
 **Límites de riesgo** (`live/config.json` → `risk`): máximo 30 % por posición, la cuenta deja de abrir posiciones con un
 drawdown ≥ 35 %, máximo 60 órdenes por decisión. Una cuenta que falla no detiene a las demás.
 

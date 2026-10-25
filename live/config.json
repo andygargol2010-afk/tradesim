@@ -9,7 +9,8 @@
   "risk": {
     "max_position_pct": 30.0,
     "halt_drawdown_pct": 35.0,
-    "max_orders_per_run": 60
+    "max_orders_per_run": 60,
+    "stop_loss_atr": 2.5
   },
   "schedule": [
     {

@@ -252,6 +252,7 @@ class LivePaperTrader(BaseSimulator):
         self._last_sync = now
         self._record_equity(now)
         self._check_margin()
+        self.protect_positions()
         return [f.to_dict() for f in fills]
 
     def _replay_resting(self, asset: Asset, now: datetime) -> list[Fill]:

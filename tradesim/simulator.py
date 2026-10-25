@@ -32,7 +32,7 @@ import numpy as np
 import pandas as pd
 
 from tradesim.assets.universe import Asset, AssetUniverse
-from tradesim.data.base import DataProvider
+from tradesim.data.base import DataProvider, DataUnavailableError
 from tradesim.data.store import MarketData, dt_to_ns, ns_to_dt
 from tradesim.data.timeframes import Timeframe, resample_bars
 from tradesim.execution.engine import ExecutionConfig, ExecutionEngine, MarketContext
@@ -70,6 +70,8 @@ class SimulatorConfig:
         vol_lookback: bars used for the volatility / typical-volume estimates.
         scenario: market-condition preset name or ``Scenario`` applied to the episode window.
         max_position_pct: optional pre-trade cap on a single position's weight (0-100).
+        auto_stop_atr: if set, every position without its own protective orders gets a stop-loss this many
+            ATR(14) away from the price, raised (never lowered) as the price moves in its favour.
         risk_free_annual: used by Sharpe / Sortino.
         log_dir: if set, writes ``events.jsonl`` and ``trades.sqlite`` there.
     """
@@ -84,6 +86,7 @@ class SimulatorConfig:
     vol_lookback: int = 20
     scenario: str | Scenario | None = None
     max_position_pct: float | None = None
+    auto_stop_atr: float | None = None
     risk_free_annual: float = 0.0
     log_dir: str | None = None
 
@@ -103,6 +106,7 @@ class SimulatorConfig:
             "vol_lookback": self.vol_lookback,
             "scenario": self.scenario if isinstance(self.scenario, str) or self.scenario is None else self.scenario.name,
             "max_position_pct": self.max_position_pct,
+            "auto_stop_atr": self.auto_stop_atr,
             "risk_free_annual": self.risk_free_annual,
             "log_dir": self.log_dir,
         }
@@ -116,6 +120,7 @@ class SimulatorConfig:
             initial_cash=D(d["initial_cash"]), timeframe=Timeframe.parse(d["timeframe"]), fees=d["fees"],
             execution=ExecutionConfig(**ex), margin=margin, seed=d["seed"], warmup_bars=d["warmup_bars"],
             vol_lookback=d["vol_lookback"], scenario=d["scenario"], max_position_pct=d["max_position_pct"],
+            auto_stop_atr=d.get("auto_stop_atr"),
             risk_free_annual=d["risk_free_annual"], log_dir=d["log_dir"],
         )
 
@@ -719,6 +724,46 @@ class BaseSimulator:
                                             oco_group=group))
         return out
 
+    AUTO_STOP_TAG = "automático"
+
+    def protect_positions(self) -> list[dict[str, Any]]:
+        """Automatic trailing stop (``config.auto_stop_atr``) for positions the agent left unprotected.
+
+        Positions with the agent's own protective orders are left alone. The automatic stop is placed
+        ``auto_stop_atr`` x ATR(14) from the price and only moves in the position's favour, in steps of at
+        least 0.25 ATR (fewer order replacements).
+        """
+        k = self.config.auto_stop_atr
+        if not k:
+            return []
+        out: list[dict[str, Any]] = []
+        for pos in self.portfolio.open_positions():
+            sym = pos.symbol
+            exits = [o for o in self._open_orders(sym) if o.reduce_only]
+            if any(not (o.tag or "").endswith(self.AUTO_STOP_TAG) for o in exits):
+                continue  # the agent manages this position's exits
+            try:
+                bars = self.get_historical_data(sym, limit=15)
+            except (DataUnavailableError, KeyError, ValueError):
+                continue
+            if len(bars) < 5:
+                continue
+            prev = bars["close"].shift(1)
+            tr = pd.concat([bars["high"] - bars["low"], (bars["high"] - prev).abs(), (bars["low"] - prev).abs()],
+                           axis=1).max(axis=1)
+            atr = float(tr.tail(14).mean())
+            q = self._quote(self.universe.get(sym))
+            long = pos.quantity > 0
+            level = (q.bid - k * atr) if long else (q.ask + k * atr)
+            cur = next((float(o.stop_price) for o in exits if o.stop_price is not None), None)
+            if cur is not None and (level < cur + 0.25 * atr if long else level > cur - 0.25 * atr):
+                continue  # never loosen; only tighten by a meaningful step
+            if level <= 0:
+                continue
+            out += self.set_exits(sym, stop_loss=level, take_profit=None,
+                                  tag=f"{k:g} ATR, dinámico, {self.AUTO_STOP_TAG}")
+        return out
+
     def get_exits(self, symbol: str) -> dict[str, float | None]:
         """Current protective levels of ``symbol`` (``stop_loss`` / ``take_profit``, ``None`` if absent)."""
         out: dict[str, float | None] = {"stop_loss": None, "take_profit": None}
@@ -951,6 +996,7 @@ class TradingSimulator(BaseSimulator):
             self._mark_all(ts_ns)
             self._record_equity(self.now)
             self._check_margin()
+            self.protect_positions()
         return [f.to_dict() for f in fills]
 
     def run(self, agent: Callable[["TradingSimulator"], None], max_steps: int | None = None) -> dict[str, Any]:
