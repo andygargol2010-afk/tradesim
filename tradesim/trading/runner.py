@@ -441,6 +441,15 @@ class LiveRunner:
         explain = agent.explain()
         if explain is not None:
             entry["explain"] = json.loads(dumps(explain))
+        try:  # the agent's own note for the daily chronicle (what it did given today's situation)
+            from tradesim.trading.chronicle import situation_now
+
+            situation = situation_now(self.research_store(), stocks_open=restrict is None)
+            note = agent.diary(situation, entry["orders"])
+            if note:
+                entry["diary"] = {**{k: str(v)[:700] for k, v in note.items()}, "situation": situation}
+        except Exception as exc:  # noqa: BLE001 - never lose a decision over its diary note
+            log.warning("%s: diary note failed: %s", spec.id, exc)
         if not results and entry["status"] == "ok":
             entry["message"] = "no trades"
         self._save_agent(spec, agent)

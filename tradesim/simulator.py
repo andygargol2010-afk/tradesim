@@ -196,6 +196,11 @@ class BaseSimulator:
     def get_asset(self, symbol: str) -> dict[str, Any]:
         return self.universe.get(symbol).to_dict()
 
+    def pending_entries(self) -> int:
+        """Working orders that are not protective exits (reduce-only stop-loss / take-profit). Agents wait while
+        these are pending; protective exits rest for the life of a position and must not block decisions."""
+        return sum(1 for i in self.open_order_ids if not self.orders[i].reduce_only)
+
     def get_price(self, symbol: str) -> dict[str, Any]:
         """Latest quote: ``bid``, ``ask``, ``mid``, ``last``, ``spread_bps``, ``timestamp`` (+ ``modelled`` flag)."""
         return self._quote(self.universe.get(symbol)).to_dict()
@@ -273,7 +278,7 @@ class BaseSimulator:
             timestamp=self.now, step=0, steps_remaining=0, symbols=symbols, prices=prices,
             cash=float(self.portfolio.cash), equity=float(self.portfolio.equity),
             positions={p.symbol: p.quantity for p in self.portfolio.open_positions()},
-            open_orders=len(self.open_order_ids), _sim=self,
+            open_orders=self.pending_entries(), _sim=self,
         )
 
     def recent_closes(self, symbol: str, limit: int = 100) -> np.ndarray:
@@ -961,7 +966,7 @@ class TradingSimulator(BaseSimulator):
             symbols=list(self.symbols), prices=prices, cash=float(self.portfolio.cash),
             equity=float(self.portfolio.equity),
             positions={p.symbol: p.quantity for p in self.portfolio.open_positions()},
-            open_orders=len(self.open_order_ids), _sim=self,
+            open_orders=self.pending_entries(), _sim=self,
         )
 
     def recent_closes(self, symbol: str, limit: int = 100) -> np.ndarray:

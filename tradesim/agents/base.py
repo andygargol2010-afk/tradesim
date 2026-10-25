@@ -120,7 +120,7 @@ class Observation:
         prices: last close per symbol (``nan`` before a symbol's first bar).
         cash / equity: account values in USD.
         positions: signed quantity per symbol with an open position (exact ``Decimal``).
-        open_orders: number of working orders.
+        open_orders: number of working orders, not counting protective exits (stop-loss / take-profit).
         tradable: ``None`` normally; when some markets are closed (weekends, holidays), the symbols whose
             orders can execute now. Decide as usual: only the part of the decision on these symbols is sent.
     """
@@ -220,6 +220,15 @@ class Agent(abc.ABC):
     def learning_summary(self) -> dict[str, Any] | None:
         """Short description of what the agent has learned so far (shown on the dashboard)."""
         return None
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        """The agent's own note for the daily chronicle, written after each live decision, in the first person and
+        in Spanish: ``que_hice``, ``por_que`` and ``segun_situacion`` (how it behaved given ``situation``: ``tag``,
+        ``regime``, ``trend``, ``vix``, ``stocks_open``). ``orders`` are the decision's orders as they ended up.
+        The default describes the orders and the reasons in :meth:`explain`; see :mod:`tradesim.agents.diary`."""
+        from tradesim.agents import diary
+
+        return diary.default(self, situation, orders)
 
     def __str__(self) -> str:
         return self.name or type(self).__name__

@@ -65,6 +65,27 @@ class SimpleRSIAgent(Agent):
     def explain(self) -> dict[str, Any] | None:
         return getattr(self, "_last", None)
 
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        from tradesim.agents import diary as d
+
+        last = getattr(self, "_last", None) or {}
+        rsi = last.get("rsi") or {}
+        rule = (f"Compro cuando el RSI({self.period}) baja de {self.oversold:g} (sobreventa) y vendo cuando supera "
+                f"{self.overbought:g} (sobrecompra), con un {self.position_pct:g} % del capital por posición.")
+        if "open orders pending: waiting" in last.get("signals", []):
+            return d.entry(d.did(orders), rule + " Hoy tenía órdenes pendientes y esperé.", "")
+        done = {(o["side"], o["symbol"]) for o in orders if o.get("status") in d.DONE}
+        acts = [f"{'compré' if side == 'buy' else 'vendí'} {s} (RSI {rsi[s]:.0f})" for side, s in sorted(done) if s in rsi]
+        low = sum(v < self.oversold for v in rsi.values())
+        high = sum(v > self.overbought for v in rsi.values())
+        mean = sum(rsi.values()) / len(rsi) if rsi else float("nan")
+        segun = (f"Con el mercado {d.tag(situation)} había {low} activos en sobreventa y {high} en sobrecompra "
+                 f"(RSI medio {mean:.0f}). ")
+        segun += {"bajista": "En las caídas aparecen más sobreventas, así que compro más.",
+                  "alcista": "En las subidas casi no hay sobreventas: compro poco y vendo lo sobrecomprado."}.get(
+            d.trend(situation) or "", "En mercados laterales opero poco: solo en los extremos.")
+        return d.entry(d.did(orders), rule + (" Hoy: " + "; ".join(acts) + "." if acts else ""), segun)
+
 
 class MovingAverageCrossAgent(Agent):
     """Trend following: hold equal weights in symbols whose fast SMA is above the slow SMA.
@@ -87,6 +108,7 @@ class MovingAverageCrossAgent(Agent):
 
     def act(self, obs: Observation) -> Any:
         if obs.open_orders:
+            self._last = {"waiting": True}
             return []
         up = []
         for sym in self.symbols or obs.symbols:
@@ -95,7 +117,7 @@ class MovingAverageCrossAgent(Agent):
                 up.append(sym)
         chosen = frozenset(up)
         held = frozenset(s for s, q in obs.positions.items() if q > 0)
-        self._last = {"uptrend": sorted(chosen), "held": sorted(held)}
+        self._last = {"uptrend": sorted(chosen), "held": sorted(held), "checked": len(self.symbols or obs.symbols)}
         if chosen == held:
             return []
         w = min(self.max_weight, self.invested_fraction / len(chosen)) if chosen else 0.0
@@ -103,6 +125,29 @@ class MovingAverageCrossAgent(Agent):
 
     def explain(self) -> dict[str, Any] | None:
         return getattr(self, "_last", None)
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        from tradesim.agents import diary as d
+
+        last = getattr(self, "_last", None) or {}
+        if last.get("waiting"):
+            return d.entry(d.did(orders), "Tenía órdenes pendientes de ejecutar y esperé.", "")
+        up, held, n = last.get("uptrend", []), last.get("held", []), last.get("checked") or 1
+        new, gone = sorted(set(up) - set(held)), sorted(set(held) - set(up))
+        por = (f"Mantengo a partes iguales los activos cuya media de {self.fast} sesiones está por encima de la de "
+               f"{self.slow}: hoy {len(up)} de {n}.")
+        if new:
+            por += " Entran en tendencia: " + ", ".join(new) + "."
+        if gone:
+            por += " Pierden la tendencia: " + ", ".join(gone) + "."
+        if not new and not gone:
+            por += " Las tendencias no cambiaron, así que no toqué la cartera."
+        share = len(up) / n
+        segun = (f"Con el mercado {d.tag(situation)}, el {share:.0%} del universo está en tendencia alcista: "
+                 + ("estoy muy invertido, sigo la subida." if share > 0.6 else
+                    "me quedo con poca exposición hasta que vuelvan las tendencias." if share < 0.3 else
+                    "tengo una exposición intermedia."))
+        return d.entry(d.did(orders), por, segun)
 
 
 class RandomAgent(Agent):
@@ -161,6 +206,15 @@ class BuyAndHoldAgent(Agent):
             return []
         self._done = obs.tradable is None  # partial session (weekend crypto): finish the rest on the next full one
         return TargetWeights({s: self.invested_fraction / len(syms) for s in syms})
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        from tradesim.agents import diary as d
+
+        por = ("Hoy hice mi única compra: todos los activos a partes iguales." if orders else
+               "Compré todos los activos a partes iguales el primer día y los mantengo; nunca vendo.")
+        return d.entry(d.did(orders) if orders else "Mantuve la cartera sin tocarla.", por,
+                       f"La situación {d.tag(situation)} no cambia nada: soy la referencia pasiva con la que "
+                       "se compara a los demás.")
 
     def state_dict(self) -> dict[str, Any]:
         return {"done": self._done}

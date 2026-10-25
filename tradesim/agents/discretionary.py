@@ -73,8 +73,21 @@ DECISION_TOOL = {
             "lessons": {"type": "array", "items": {"type": "string"},
                         "description": "New lessons from reviewing past decisions (may be empty)"},
             "notes_for_next_time": {"type": "string"},
+            "diary": {
+                "type": "object",
+                "description": "Your own entry in the public daily journal, in the first person and in Spanish "
+                               "(<= 60 words each). Orders are listed separately, so do not repeat them.",
+                "properties": {
+                    "por_que": {"type": "string", "description": "why you changed (or kept) the portfolio today"},
+                    "segun_situacion": {"type": "string",
+                                        "description": "how today's market situation (volatility, trend, macro, "
+                                                       "events) shaped your decision"},
+                },
+                "required": ["por_que", "segun_situacion"],
+            },
         },
-        "required": ["market_view", "regime", "key_risks", "positions", "watchlist", "lessons", "notes_for_next_time"],
+        "required": ["market_view", "regime", "key_risks", "positions", "watchlist", "lessons", "notes_for_next_time",
+                     "diary"],
     },
 }
 
@@ -222,7 +235,8 @@ class DiscretionaryAgent(Agent):
                       "positions": [p for p in decision.get("positions", []) if p.get("symbol") in targets],
                       "changes": changes, "watchlist": decision.get("watchlist"), "lessons_new": decision.get("lessons"),
                       "adjustments": notes, "sources": sources[:15], "usage": usage.to_dict(),
-                      "dossier_chars": len(dossier)}
+                      "dossier_chars": len(dossier),
+                      "diary": decision.get("diary") if isinstance(decision.get("diary"), dict) else None}
         return actions
 
     def _reports(self, obs: Observation, symbols: list[str]) -> dict[str, Any]:
@@ -680,6 +694,25 @@ class DiscretionaryAgent(Agent):
     # ------------------------------------------------------------------ Agent hooks
     def explain(self) -> dict[str, Any] | None:
         return self._last
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        """Written by the analyst's own AI engine in the same decision call; composed locally otherwise."""
+        from tradesim.agents import diary as d
+
+        last = self._last or {}
+        if last.get("status") != "ok":
+            return d.entry(d.did(orders), last.get("message") or "Hoy no decidí.", "")
+        own = last.get("diary") or {}
+        if own.get("por_que") and own.get("segun_situacion"):
+            return d.entry(d.did(orders), str(own["por_que"]), str(own["segun_situacion"]))
+        regime = {"risk_on": "favorable al riesgo", "risk_off": "defensivo", "neutral": "neutral"}.get(
+            last.get("regime"), last.get("regime") or "neutral")
+        changes = "; ".join(last.get("changes") or [])
+        por = (str(last.get("market_view") or "")[:350] + (f" Cambios: {changes}." if changes else
+                                                          " Mis tesis siguen en pie: mantengo la cartera."))
+        segun = (f"Leo un régimen {regime} con el mercado {d.tag(situation)}: exposición objetivo "
+                 f"{sum((last.get('targets') or {}).values()):.0%} del capital.")
+        return d.entry(d.did(orders), por, segun)
 
     def learning_summary(self) -> dict[str, Any] | None:
         last = self.decisions[-1] if self.decisions else {}

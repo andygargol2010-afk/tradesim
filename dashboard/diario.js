@@ -47,8 +47,9 @@ function entryCard(e) {
     const f = names[a.id] || {};
     return h("div", { class: "card agent-day" },
       h("h4", {}, f.name || a.id, " ", pctCell(f.day_pnl_pct)),
+      a.autor === "agente" ? h("p", { class: "hint" }, "Escrito por el propio agente") : null,
       h("dl", {},
-        h("dt", {}, "Qué hizo"), h("dd", {}, a.que_hizo),
+        h("dt", {}, a.autor === "agente" ? "Qué hice" : "Qué hizo"), h("dd", {}, a.que_hizo),
         h("dt", {}, "Por qué"), h("dd", {}, a.por_que),
         h("dt", {}, "Según la situación"), h("dd", {}, a.segun_situacion),
         h("dt", {}, "Resultado"), h("dd", {}, a.resultado)));
@@ -63,7 +64,7 @@ function entryCard(e) {
     t.comparativa ? h("p", {}, h("strong", {}, "Comparativa. "), t.comparativa) : null,
     list("Patrones recurrentes", t.patrones_recurrentes),
     list("A vigilar", t.a_vigilar),
-    h("p", { class: "hint" }, `Escrito con ${e.engine} el ${shortDate(e.written_at).slice(0, 16)} UTC.`));
+    h("p", { class: "hint" }, `Compilado el ${shortDate(e.written_at).slice(0, 16)} UTC.`));
 }
 
 function renderEntries() {

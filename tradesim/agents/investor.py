@@ -119,6 +119,7 @@ class TraditionalInvestorAgent(Agent):
     # ------------------------------------------------------------------ act
     def act(self, obs: Observation) -> Any:
         if obs.tradable is not None or obs.open_orders or obs.equity <= 0:
+            self._last = {}
             return []  # an investor does not use weekend sessions; wait for pending orders
         universe = [s for s in (self.symbols or obs.symbols) if obs.prices.get(s, 0) > 0]
         now = obs.timestamp
@@ -177,6 +178,23 @@ class TraditionalInvestorAgent(Agent):
     # ------------------------------------------------------------------ state
     def explain(self) -> dict[str, Any] | None:
         return self._last or None
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        from tradesim.agents import diary as d
+
+        last = self._last or {}
+        reasons = last.get("reasons") or []
+        drift = last.get("drift_by_class") or {}
+        worst = max(drift.items(), key=lambda kv: abs(kv[1]), default=None)
+        por = ("Motivo: " + "; ".join(reasons) + "." if reasons else
+               "Ninguna clase de activo salió de su banda ni empezó trimestre: no toqué la cartera.")
+        if self.basket:
+            por += " Mis acciones de calidad: " + ", ".join(self.basket) + "."
+        segun = (f"No reacciono a la situación {d.tag(situation)}: solo rebalanceo cada trimestre o si una clase se "
+                 "desvía de su peso. " + (f"La mayor desviación hoy es {worst[0]} ({worst[1]:+.1%})." if worst else ""))
+        if situation.get("stocks_open") is False:
+            segun = "Con la bolsa cerrada no opero: un inversor no usa las sesiones de fin de semana. " + segun
+        return d.entry(d.did(orders) if orders else "Mantuve la cartera sin cambios.", por, segun)
 
     def state_dict(self) -> dict[str, Any]:
         return {"basket": self.basket, "reviewed_year": self.reviewed_year,

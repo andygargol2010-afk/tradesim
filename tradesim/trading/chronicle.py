@@ -1,6 +1,8 @@
 """Daily chronicle of the live simulation: what the market did, which patterns showed up and what each agent did
-given that situation. Written once per UTC day by an AI engine (free Gemini/Groq, or Claude) with a local fallback,
-into ``dashboard/diario.json`` (read by ``diario.html``) and ``dashboard/diario.md`` (the same text as a document).
+given that situation. The market part is compiled from the research data; the part of each agent is written by the
+agent itself (:meth:`tradesim.agents.base.Agent.diary`, stored with every decision in its journal; the analyst writes
+it with its own AI engine). Compiled once per UTC day into ``dashboard/diario.json`` (read by ``diario.html``) and
+``dashboard/diario.md`` (the same text as a document).
 
 Each entry tags the day with a situation (``calma · alcista``, ``tensión · bajista``, ``solo cripto``...) and the
 running statistics count, per agent and situation, how often it bought, sold or stayed put and how it did: the
@@ -10,15 +12,12 @@ behavioural patterns of every agent build up day after day.
 from __future__ import annotations
 
 import json
-import logging
 from collections import defaultdict
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 from tradesim.persistence import read_json, write_json
-
-log = logging.getLogger(__name__)
 
 WEEKDAYS_ES = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 KEY_SYMBOLS = ["SPY", "QQQ", "TLT", "GLD", "BTC-USD", "ETH-USD"]
@@ -29,40 +28,6 @@ DIRECTION_ES = {"bullish": "alcista", "bearish": "bajista", "neutral": "neutral"
 
 def _r(x: Any) -> Any:
     return round(x, 2) if isinstance(x, float) else x
-
-SCHEMA: dict[str, Any] = {
-    "type": "object",
-    "properties": {
-        "titulo": {"type": "string"},
-        "situacion": {"type": "string"},
-        "patrones_mercado": {"type": "array", "items": {"type": "object", "properties": {
-            "patron": {"type": "string"}, "activos": {"type": "array", "items": {"type": "string"}},
-            "lectura": {"type": "string"}}, "required": ["patron", "activos", "lectura"]}},
-        "agentes": {"type": "array", "items": {"type": "object", "properties": {
-            "id": {"type": "string"}, "que_hizo": {"type": "string"}, "por_que": {"type": "string"},
-            "segun_situacion": {"type": "string"}, "resultado": {"type": "string"}},
-            "required": ["id", "que_hizo", "por_que", "segun_situacion", "resultado"]}},
-        "comparativa": {"type": "string"},
-        "patrones_recurrentes": {"type": "array", "items": {"type": "string"}},
-        "a_vigilar": {"type": "array", "items": {"type": "string"}},
-    },
-    "required": ["titulo", "situacion", "patrones_mercado", "agentes", "comparativa", "patrones_recurrentes",
-                 "a_vigilar"],
-}
-
-SYSTEM = """Eres el cronista de una simulación de trading con varios agentes autónomos, cada uno con 100 USD.
-Cada día escribes en español la entrada del diario: qué situación de mercado hubo, qué patrones aparecieron y qué hizo
-cada agente según esa situación. Usa solo los datos que recibes (no inventes precios, noticias ni operaciones).
-- situacion: 2-3 frases sobre el día (índices, cripto, macro, eventos, noticias relevantes).
-- patrones_mercado: los patrones técnicos más relevantes del día, agrupados, con su lectura.
-- agentes: una entrada por agente (todos, con su id): que_hizo (operaciones concretas o que no operó), por_que (sus
-  motivos según sus señales), segun_situacion (cómo encaja su comportamiento con la situación del día y con lo que
-  suele hacer en situaciones parecidas según las estadísticas acumuladas), resultado (cambio de valor del día).
-- comparativa: qué estilo funcionó mejor hoy y por qué.
-- patrones_recurrentes: comportamientos que se repiten en los agentes a lo largo de los días (usa las estadísticas y
-  los días anteriores; si aún hay pocos datos, dilo).
-- a_vigilar: eventos o niveles de los próximos días.
-Frases cortas y concretas, con cifras."""
 
 
 # ------------------------------------------------------------------ facts
@@ -97,8 +62,8 @@ def _equity_at(curve: dict[str, Any], until: datetime) -> float | None:
     return last
 
 
-def situation_tag(market: dict[str, Any]) -> str:
-    """Short label of the day: volatility regime · direction (or "solo cripto" when stock markets were shut)."""
+def situation(market: dict[str, Any]) -> dict[str, Any]:
+    """Volatility regime (VIX), direction (SPY, or BTC with the stock market shut) and a short label of both."""
     vix = (market.get("macro", {}).get("vix") or {}).get("value")
     regime = None if vix is None else "calma" if vix < 16 else "normal" if vix <= 24 else "tensión"
     ref = "SPY" if market.get("stocks_open") else "BTC-USD"
@@ -109,7 +74,21 @@ def situation_tag(market: dict[str, Any]) -> str:
     else:
         trend = "alcista" if chg > 0.5 else "bajista" if chg < -0.5 else "lateral"
     parts = ([] if market.get("stocks_open") else ["solo cripto"]) + [x for x in (regime, trend) if x]
-    return " · ".join(parts) or "sin referencia"
+    return {"tag": " · ".join(parts) or "sin referencia", "regime": regime, "trend": trend, "vix": vix,
+            "stocks_open": bool(market.get("stocks_open"))}
+
+
+def situation_tag(market: dict[str, Any]) -> str:
+    return situation(market)["tag"]
+
+
+def situation_now(store, stocks_open: bool) -> dict[str, Any]:
+    """The situation an agent sees when it decides (latest research data), passed to its ``diary``."""
+    macro = store.load("macro").get("indicators", {}) if store is not None else {}
+    techs = store.load("technicals").get("symbols", {}) if store is not None else {}
+    return situation({"stocks_open": stocks_open, "macro": {"vix": macro.get("vix") or {}},
+                      "technicals": {s: {"trend_change_pct": (t.get("trend") or {}).get("change_pct")}
+                                     for s, t in techs.items() if s in ("SPY", "BTC-USD")}})
 
 
 def collect_facts(config, day: date, data: dict[str, Any], previous: dict[str, Any] | None) -> dict[str, Any]:
@@ -168,7 +147,8 @@ def collect_facts(config, day: date, data: dict[str, Any], previous: dict[str, A
             decisions.append({"time": e.get("time", "")[11:16], "status": e.get("status"),
                               "message": (e.get("message") or "")[:200], "orders": orders[:20],
                               "signals": [str(s)[:160] for s in why[:6]],
-                              "market_view": (ex.get("market_view") or "")[:500] or None})
+                              "market_view": (ex.get("market_view") or "")[:500] or None,
+                              "diary": e.get("diary")})
         curve = acc.get("equity_curve") or {}
         eq0 = _equity_at(curve, start - timedelta(microseconds=1)) or acc.get("initial_cash")
         eq1 = _equity_at(curve, end) or (acc.get("summary") or {}).get("equity")
@@ -222,7 +202,7 @@ def _fmt_pct(x: float | None) -> str:
 
 
 def local_text(facts: dict[str, Any], stats: dict[str, Any]) -> dict[str, Any]:
-    """Deterministic entry, used when no AI engine is available (same structure as the AI one)."""
+    """The day's entry: market part compiled from the data, each agent's part from its own diary notes."""
     m = facts["market"]
     ch = ", ".join(f"{s} {_fmt_pct(v)}" for s, v in m["changes_pct"].items()) or "sin variaciones registradas aún"
     macro = ", ".join(f"{v['name']} {v['value']}" for v in m["macro"].values() if v.get("value") is not None)
@@ -233,23 +213,44 @@ def local_text(facts: dict[str, Any], stats: dict[str, Any]) -> dict[str, Any]:
     pats = sorted(by_pattern.items(), key=lambda kv: -len(kv[1]))[:6]
     agents = []
     for a in facts["agents"]:
-        did = []
-        if a["buys"]:
-            did.append("compró " + ", ".join(a["buys"]))
-        if a["sells"]:
-            did.append("vendió " + ", ".join(a["sells"]))
-        msgs = [d["message"] for d in a["decisions"] if d["message"] and d["status"] != "skipped"]
-        if not msgs and a["decisions"] and all(d["status"] == "skipped" for d in a["decisions"]):
-            msgs = ["no tocaba decidir: bolsa cerrada o ya había decidido hoy"]
-        why = [s for d in a["decisions"] for s in d["signals"]][:3] or [o["tag"] for d in a["decisions"]
-                                                                        for o in d["orders"] if o["tag"]][:3]
         hist = stats.get(a["id"], {}).get("by_situation", {}).get(m["tag"])
-        habit = (f"En días «{m['tag']}» ha operado {hist['days_traded']} de {hist['days']} veces "
-                 f"(resultado medio {_fmt_pct(hist['avg_day_pnl_pct'])})." if hist else "Primer día con esta situación.")
-        agents.append({"id": a["id"], "que_hizo": "; ".join(did) or ("no operó" + (f" ({msgs[0]})" if msgs else "")),
-                       "por_que": "; ".join(why) or "sin señales para operar", "segun_situacion": habit,
+        habit = (f"Historial en días «{m['tag']}»: operó {hist['days_traded']} de {hist['days']} "
+                 f"(resultado medio {_fmt_pct(hist['avg_day_pnl_pct'])})." if hist else "")
+        notes = [d["diary"] for d in a["decisions"] if d.get("diary")]
+        extra = sorted({f"{'compra' if o['side'] == 'buy' else 'venta'} de {o['symbol']} ({o['tag'] or 'orden'})"
+                        for d in a["decisions"] if not d.get("diary") for o in d["orders"]
+                        if o["status"] in ("filled", "partially_filled")})
+        if notes:  # written by the agent itself when it decided
+            que = " ".join(n["que_hice"] for n in notes)
+            por = " ".join(n["por_que"] for n in notes if n.get("por_que"))
+            segun = notes[-1].get("segun_situacion", "")
+            author = "agente"
+        else:
+            skipped = [d["message"] for d in a["decisions"] if d["status"] == "skipped"]
+            que = "No tomó ninguna decisión hoy."
+            por = ("No le tocaba decidir: bolsa cerrada o ya había decidido hoy." if skipped
+                   else "No hubo ejecución de decisión este día.")
+            segun = ""
+            author = "registro"
+        if extra:
+            que += " Además se ejecutaron órdenes que tenía puestas: " + "; ".join(extra) + "."
+        agents.append({"id": a["id"], "autor": author, "que_hizo": que, "por_que": por,
+                       "segun_situacion": " ".join(x for x in (segun, habit) if x) or "—",
                        "resultado": f"{_fmt_pct(a['day_pnl_pct'])} (valor {a['equity_end']:.2f} USD)"
                        if a.get("equity_end") else _fmt_pct(a["day_pnl_pct"])})
+    recurring = []
+    for aid, st in stats.items():
+        rows = st["by_situation"]
+        days = sum(v["days"] for v in rows.values())
+        if days < 3:
+            continue
+        traded = sum(v["days_traded"] for v in rows.values())
+        best = max((kv for kv in rows.items() if kv[1]["avg_day_pnl_pct"] is not None),
+                   key=lambda kv: kv[1]["avg_day_pnl_pct"], default=None)
+        busiest = max(rows.items(), key=lambda kv: kv[1]["days_traded"] / kv[1]["days"])
+        recurring.append(f"{st['name']}: opera en {traded} de {days} días; donde más opera es en «{busiest[0]}»"
+                         + (f"; le va mejor en «{best[0]}» ({_fmt_pct(best[1]['avg_day_pnl_pct'])} de media)."
+                            if best else "."))
     ranked = sorted([a for a in facts["agents"] if a["day_pnl_pct"] is not None], key=lambda a: -a["day_pnl_pct"])
     return {
         "titulo": f"{m['weekday'].capitalize()}: {m['tag']}",
@@ -260,35 +261,12 @@ def local_text(facts: dict[str, Any], stats: dict[str, Any]) -> dict[str, Any]:
         "agentes": agents,
         "comparativa": (f"Mejor: {ranked[0]['name']} ({_fmt_pct(ranked[0]['day_pnl_pct'])}); peor: {ranked[-1]['name']} "
                         f"({_fmt_pct(ranked[-1]['day_pnl_pct'])}).") if ranked else "Sin resultados aún.",
-        "patrones_recurrentes": [],
+        "patrones_recurrentes": recurring or ["Aún hay pocos días para ver patrones de comportamiento."],
         "a_vigilar": [f"{e['date']}: {e['title']}" for e in m["events_next_days"][:5]],
     }
 
 
-def _ai_text(config, facts: dict[str, Any], stats: dict[str, Any], recent: list[dict[str, Any]]):
-    from tradesim.research.llm import Budget, LLMError, Usage, json_with_fallback, make_backends
-
-    rc = config.research_config()
-    if not rc.enabled or not rc.analyze:
-        return None, None
-    backends = make_backends(list(rc.engines), rc.free_models, Budget(Path(rc.dir) / "llm_budget.json",
-                                                                      rc.daily_requests))
-    if not backends:
-        return None, None
-    payload = {"hoy": {k: v for k, v in facts.items() if k != "closes"}, "estadisticas_acumuladas": stats,
-               "dias_anteriores": [{"fecha": e["date"], "situacion": e["situation_tag"],
-                                    "titulo": e["text"].get("titulo"), "comparativa": e["text"].get("comparativa")}
-                                   for e in recent]}
-    try:
-        text, backend = json_with_fallback(backends, SYSTEM, json.dumps(payload, ensure_ascii=False, default=str),
-                                           SCHEMA, Usage(), max_tokens=6000, effort="low")
-        return text, backend.name
-    except LLMError as exc:
-        log.warning("chronicle: AI engines failed (%s); local text", exc)
-        return None, None
-
-
-def write_entry(config, day: date, use_ai: bool = True) -> dict[str, Any]:
+def write_entry(config, day: date) -> dict[str, Any]:
     """Write (or rewrite) the chronicle entry of ``day`` and regenerate diario.json / diario.md."""
     out_dir = Path(config.dashboard_file).parent
     store = read_json(out_dir / "diario.json") if (out_dir / "diario.json").exists() else {"entries": []}
@@ -299,14 +277,8 @@ def write_entry(config, day: date, use_ai: bool = True) -> dict[str, Any]:
     tag = facts["market"]["tag"]
     stats = running_stats([e for e in entries if e["date"] < day.isoformat()]
                           + [{"situation_tag": tag, "facts": facts}])
-    text, engine = _ai_text(config, facts, stats, [e for e in entries if e["date"] < day.isoformat()][:5]) \
-        if use_ai else (None, None)
-    local = local_text(facts, stats)
-    if text:  # every agent must appear even if the model skipped one
-        have = {a.get("id") for a in text.get("agentes", [])}
-        text["agentes"] = text.get("agentes", []) + [a for a in local["agentes"] if a["id"] not in have]
-    entry = {"date": day.isoformat(), "written_at": datetime.now(timezone.utc).isoformat(), "engine": engine or "local",
-             "situation_tag": tag, "text": text or local, "facts": facts}
+    entry = {"date": day.isoformat(), "written_at": datetime.now(timezone.utc).isoformat(), "engine": "agentes",
+             "situation_tag": tag, "text": local_text(facts, stats), "facts": facts}
     entries = sorted(entries + [entry], key=lambda e: e["date"], reverse=True)[:KEEP_ENTRIES]
     store = {"updated_at": entry["written_at"], "stats": running_stats(entries), "entries": entries}
     write_json(out_dir / "diario.json", store)
@@ -333,7 +305,8 @@ def maybe_write(config, now: datetime) -> dict[str, Any] | None:
 def to_markdown(store: dict[str, Any], names: dict[str, str]) -> str:
     lines = ["# Diario de la simulación", "",
              f"_Actualizado: {store['updated_at'][:16].replace('T', ' ')} UTC. Una entrada por día, la más reciente "
-             "primero. Escrito por un agente de IA a partir de los datos de la simulación._", "",
+             "primero. Cada agente escribe su propia parte al decidir; la situación del mercado se compila de los "
+             "datos._", "",
              "## Patrones acumulados: qué hace cada agente según la situación", "",
              "| Agente | Situación | Días | Días con operaciones | Compras | Ventas | Resultado medio del día |",
              "|---|---|---:|---:|---:|---:|---:|"]
@@ -351,12 +324,12 @@ def to_markdown(store: dict[str, Any], names: dict[str, str]) -> str:
             lines.append("")
         lines += ["**Qué hizo cada agente**", ""]
         for a in t.get("agentes", []):
-            lines += [f"### {names.get(a['id'], a['id'])}", "",
+            lines += [f"### {names.get(a['id'], a['id'])}" + (" (escrito por el agente)" if a.get("autor") == "agente"
+                                                              else ""), "",
                       f"- **Qué hizo:** {a['que_hizo']}", f"- **Por qué:** {a['por_que']}",
                       f"- **Según la situación:** {a['segun_situacion']}", f"- **Resultado:** {a['resultado']}", ""]
         lines += [f"**Comparativa.** {t.get('comparativa', '')}", ""]
         for title, key in (("Patrones recurrentes", "patrones_recurrentes"), ("A vigilar", "a_vigilar")):
             if t.get(key):
                 lines += [f"**{title}**", ""] + [f"- {x}" for x in t[key]] + [""]
-        lines.append(f"_Escrito con: {e['engine']}._")
     return "\n".join(lines) + "\n"

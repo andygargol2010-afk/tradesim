@@ -327,37 +327,40 @@ def test_daily_chronicle(tmp_path, universe, monkeypatch):
     store = json.loads((tmp_path / "diario.json").read_text())
     assert [e["date"] for e in store["entries"]] == ["2024-03-06", "2024-03-05", "2024-03-04"]  # yesterday, once
     e = store["entries"][-1]
-    assert e["engine"] == "local" and {a["id"] for a in e["text"]["agentes"]} == {"rsi", "ma", "bh"}
+    assert e["engine"] == "agentes" and {a["id"] for a in e["text"]["agentes"]} == {"rsi", "ma", "bh"}
     bh = next(a for a in e["facts"]["agents"] if a["id"] == "bh")
     assert bh["buys"] == sorted(SYMBOLS) and bh["day_pnl_pct"] is not None
     assert store["stats"]["bh"]["by_situation"]
     md = (tmp_path / "diario.md").read_text()
-    assert "## Patrones acumulados" in md and "### Buy & hold" in md and "**Qué hizo:** compró" in md
-    write_entry(runner.config, datetime(2024, 3, 6).date(), use_ai=False)  # rewriting a day replaces it
+    assert "## Patrones acumulados" in md and "### Buy & hold (escrito por el agente)" in md and "Compré" in md
+    write_entry(runner.config, datetime(2024, 3, 6).date())  # rewriting a day replaces it
     assert len(json.loads((tmp_path / "diario.json").read_text())["entries"]) == 3
 
 
-def test_chronicle_ai_text_keeps_every_agent(tmp_path, universe, monkeypatch):
-    import tradesim.research.llm as llm
+def test_agents_write_their_own_diary(tmp_path, universe):
     from tradesim.trading.chronicle import write_entry
 
-    seen = {}
-
-    class Fake:
-        name = "gemini"
-
-        def json(self, system, user, schema, usage, max_tokens=0, effort=None):
-            seen["payload"] = json.loads(user)
-            return {"titulo": "Día tranquilo", "situacion": "SPY sube.", "patrones_mercado": [],
-                    "agentes": [{"id": "bh", "que_hizo": "compró todo", "por_que": "es su regla",
-                                 "segun_situacion": "igual que siempre", "resultado": "+0,1 %"}],
-                    "comparativa": "empate", "patrones_recurrentes": ["bh nunca vende"], "a_vigilar": []}
-
-    monkeypatch.setattr(llm, "make_backends", lambda *a, **k: [Fake()])
-    runner, clock = make_runner(tmp_path, universe)
-    runner.config.research = {"dir": str(tmp_path / "research")}
+    runner, clock = make_runner(tmp_path, universe, accounts=[
+        AccountSpec("rsi", "RSI", "WalkForwardRSIAgent", {}), AccountSpec("ma", "Medias", "MovingAverageCrossAgent", {}),
+        AccountSpec("bh", "Buy & hold", "BuyAndHoldAgent", {}), AccountSpec("inv", "Inversor", "TraditionalInvestorAgent", {}),
+        AccountSpec("ap", "Aprendiz", "OnlineLinearAgent", {"pretrain_bars": 300}),
+        AccountSpec("an", "Analista", "DiscretionaryAgent", {"engines": []})])
     runner.run("decide", export=True)
+    for aid in ("rsi", "ma", "bh", "inv", "ap", "an"):
+        line = (tmp_path / "accounts" / aid / "journal.jsonl").read_text().splitlines()[-1]
+        note = json.loads(line)["diary"]
+        assert note["que_hice"] and note["por_que"] and "tag" in note["situation"], aid
+    bh = json.loads((tmp_path / "accounts" / "bh" / "journal.jsonl").read_text().splitlines()[-1])["diary"]
+    assert bh["que_hice"].startswith("Compré") and "referencia pasiva" in bh["segun_situacion"]
     e = write_entry(runner.config, clock.t.date())
-    assert e["engine"] == "gemini" and e["text"]["titulo"] == "Día tranquilo"
-    assert [a["id"] for a in e["text"]["agentes"]] == ["bh", "rsi", "ma"]  # missing ones filled locally
-    assert {"hoy", "estadisticas_acumuladas", "dias_anteriores"} <= set(seen["payload"])
+    by_id = {a["id"]: a for a in e["text"]["agentes"]}
+    assert by_id["bh"]["autor"] == "agente" and by_id["bh"]["que_hizo"].startswith("Compré")
+    assert "(escrito por el agente)" in (tmp_path / "diario.md").read_text()
+
+
+def test_protective_stops_do_not_block_decisions(tmp_path, universe):
+    runner, clock = make_runner(tmp_path, universe, accounts=[AccountSpec("ma", "MA", "MovingAverageCrossAgent", {})])
+    runner.run("decide", export=False)
+    trader = runner.load_trader(runner.config.accounts[0], runner.base_provider)
+    assert trader.open_order_ids and all(trader.orders[i].reduce_only for i in trader.open_order_ids)
+    assert trader.observe().open_orders == 0  # automatic stops rest for the life of a position

@@ -353,6 +353,29 @@ class OnlineLinearAgent(Agent):
     def explain(self) -> dict[str, Any] | None:
         return self._last
 
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        from tradesim.agents import diary as d
+
+        last = getattr(self, "_last", None) or {}
+        preds = last.get("predictions") or {}
+        sig = (last.get("signals") or [""])[0]
+        if sig.startswith("learning"):
+            por = f"Todavía estoy aprendiendo ({self.model.n} ejemplos de {self.min_samples}); no opero hasta tener bastantes."
+        elif sig.startswith("no statistical edge"):
+            por = "Mis predicciones recientes no muestran ventaja estadística, así que me quedo en efectivo."
+        elif sig.startswith("open orders"):
+            por = "Tenía órdenes pendientes y esperé."
+        else:
+            top = ", ".join(f"{s} ({v:+.2f}σ)" for s, v in list(preds.items())[:3])
+            por = (f"Mi modelo, aprendido con {self.model.n} ejemplos, predice el rendimiento de los próximos "
+                   f"{self.horizon} días y me quedo con los {self.top_k} mejores; hoy los más prometedores: {top}.")
+        pos = sum(v > 0 for v in preds.values())
+        mean = sum(preds.values()) / len(preds) if preds else 0.0
+        segun = (f"Con el mercado {d.tag(situation)}, {pos} de {len(preds)} activos tienen predicción positiva "
+                 f"(media {mean:+.2f}σ): " + ("veo más oportunidades que riesgos." if mean > 0 else
+                                              "soy prudente y solo entro en los mejores."))
+        return d.entry(d.did(orders), por, segun)
+
     def learning_summary(self) -> dict[str, Any] | None:
         st = self.ic_stats()
         h = np.array([r[:2] for r in self.history[-2000:]], dtype=float) if self.history else np.zeros((0, 2))
@@ -487,6 +510,17 @@ class WalkForwardRSIAgent(Agent):
         if self._tuned_now and self.tunes:
             out["retuned"] = self.tunes[-1]
         return out
+
+    def diary(self, situation: dict[str, Any], orders: list[dict[str, Any]]) -> dict[str, str] | None:
+        note = self._inner.diary(situation, orders) or {}
+        if self._tuned_now and self.tunes:
+            t = self.tunes[-1]
+            note["por_que"] = (f"Hoy reajusté mis parámetros simulando el pasado reciente: "
+                               + (f"cambio a RSI({t['best'][0]}) {t['best'][1]:g}/{t['best'][2]:g} (Sharpe "
+                                  f"{t['best_sharpe']:.2f} frente a {t['current_sharpe']:.2f})." if t["switched"]
+                                  else "mantengo los actuales, ninguno era claramente mejor.")
+                               + " " + note.get("por_que", ""))
+        return note
 
     def learning_summary(self) -> dict[str, Any] | None:
         return {"method": "Walk-forward re-tuning in the simulator (Sharpe after costs)",
