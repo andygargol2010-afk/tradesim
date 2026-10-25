@@ -1,0 +1,35 @@
+# Reliable scheduler: dispatches live-trading.yml at the times in live/config.json -> schedule, then
+# re-dispatches itself (GITHUB_TOKEN may trigger workflow_dispatch). The cron below only restarts the
+# chain if it ever breaks. Free on public repositories.
+name: Clock
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 */6 * * *"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: clock
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/clock.py
+            live/config.json
+          sparse-checkout-cone-mode: false
+
+      - name: Dispatch live runs on schedule
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 scripts/clock.py --hours 5.5
