@@ -48,6 +48,11 @@ def _tail_jsonl(path: Path, n: int) -> list[dict[str, Any]]:
     return out
 
 
+def _exit_kind(reason: str | None) -> str:
+    r = (reason or "").lower()
+    return "stop_loss" if r.startswith("stop-loss") else "take_profit" if r.startswith("take-profit") else "agent"
+
+
 def _equity_at(curve: pd.Series, ts: datetime | None) -> float | None:
     if ts is None or curve.empty:
         return None
@@ -85,6 +90,11 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
                         exposure=None) if len(daily) >= 2 else {}
     enough = len(daily) >= 20  # ratios on fewer days are noise
 
+    exits: dict[str, dict[str, Any]] = {}  # protective stop-loss / take-profit orders per symbol
+    for o in st.get("orders", []):
+        if o.get("reduce_only") and o.get("status") in ("new", "partially_filled"):
+            key = "stop_loss" if o.get("order_type") == "stop" else "take_profit"
+            exits.setdefault(o["symbol"], {})[key] = float(o.get("stop_price") or o.get("limit_price") or 0) or None
     positions = []
     for p in pf.open_positions():
         cost = p.quantity * p.avg_price
@@ -102,6 +112,8 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
             if cost else None,
             "weight_pct": _num(float(p.market_value) / equity * 100, 4) if equity else None,
             "entry_fees": _num(p.open_fees, 6), "entry_reason": tag(p.entry_order_id),
+            "stop_loss": _num((exits.get(p.symbol) or {}).get("stop_loss")),
+            "take_profit": _num((exits.get(p.symbol) or {}).get("take_profit")),
         })
     positions.sort(key=lambda r: -(r["market_value"] or 0))
 
@@ -119,6 +131,7 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
             "proceeds": _num(t.quantity * t.exit_price), "pnl": _num(t.pnl, 6),
             "return_pct": _num(t.return_pct * 100, 5), "fees": _num(t.fees, 6),
             "entry_reason": tag(t.entry_order_id), "exit_reason": tag(t.exit_order_id),
+            "exit_kind": _exit_kind(tag(t.exit_order_id)),
         })
 
     open_orders = [{k: o.get(k) for k in ("id", "symbol", "side", "quantity", "order_type", "limit_price",

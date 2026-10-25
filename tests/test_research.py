@@ -433,12 +433,12 @@ def test_runner_research_mode_exports_dashboard(tmp_path, offline):
                      research={"dir": str(tmp_path / "research"), "technicals": False})
     runner = LiveRunner(cfg, provider=SyntheticProvider(seed=1), clock=lambda: NOW, llm_client=FakeClient())
     rec = runner.run("research")
-    assert rec["mode"] == "research" and rec["research"]["llm"] == "enabled" and not rec["accounts"]
+    assert rec["mode"] == "research" and rec["research"]["llm"] == "enabled"
+    assert rec["accounts"]["analista"]["status"] == "synced"  # research runs also sync (stops checked hourly)
     data = json.loads((tmp_path / "live.json").read_text())
     r = data["research"]
     assert r["news"]["analyses"] and r["calendar"]["events"] and r["macro"]["indicators"]
     assert r["status"]["llm"] == "enabled" and r["llm_cost_usd_total"] > 0
-    assert not (tmp_path / "runs.jsonl").exists()  # research runs do not touch the trading log
     # research is off unless the config has a research section
     assert LiveConfig(symbols=["AAPL"], accounts=[]).research_config().enabled is False
 

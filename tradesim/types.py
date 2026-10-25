@@ -150,6 +150,8 @@ class Order:
     updated_at: datetime | None = None
     reject_reason: str | None = None
     tag: str | None = None  # free-form label from the agent (strategy id, rationale, ...)
+    reduce_only: bool = False  # may only shrink the position (protective stop-loss / take-profit)
+    oco_group: str | None = None  # one-cancels-other: when one order of the group fills, the others are cancelled
 
     @property
     def remaining(self) -> Decimal:
@@ -174,6 +176,8 @@ class Order:
             "updated_at": self.updated_at.isoformat() if self.updated_at else None,
             "reject_reason": self.reject_reason,
             "tag": self.tag,
+            "reduce_only": self.reduce_only,
+            "oco_group": self.oco_group,
         }
 
     @classmethod
@@ -196,6 +200,8 @@ class Order:
             updated_at=datetime.fromisoformat(d["updated_at"]) if d.get("updated_at") else None,
             reject_reason=d.get("reject_reason"),
             tag=d.get("tag"),
+            reduce_only=bool(d.get("reduce_only", False)),
+            oco_group=d.get("oco_group"),
         )
 
 

@@ -81,13 +81,29 @@ tendencia, señal de velas) y aprende por sí mismo cuáles anticipan subidas.
   Una sola decisión por día y cuenta, aunque el workflow se relance.
 - **19:45 UTC laborables y 02:15 UTC diario** (`mark`): valoración a mercado (las cripto cotizan 24/7).
 - **Cada hora, minuto 20** (`research`): noticias analizadas, datos macro, calendario del próximo mes y
-  patrones técnicos (ver *Investigación* abajo). La decisión diaria también refresca la investigación antes de decidir.
+  patrones técnicos (ver *Investigación* abajo), y valoración de las cuentas (ejecuta los stop-loss y objetivos que el
+  mercado haya alcanzado). La decisión diaria también refresca la investigación antes de decidir.
 - Cada ejecución hace commit de `live/` (estado de cuentas, modelos aprendidos, diarios, `runs.jsonl`) y de
   `dashboard/live.json`; Vercel redespliega solo. El historial de git es el registro auditable de todo.
 - Se puede lanzar a mano: GitHub → Actions → *Live trading* → *Run workflow* (`mark` o `decide`).
 
 **Datos.** Cripto: Coinbase vía ccxt (bid/ask y libro L2 reales, sin claves). Acciones: Yahoo Finance (último precio,
 spread modelado) o, si defines los secretos `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` en GitHub, Alpaca (bid/ask reales).
+
+**Stop-loss y objetivo de beneficio.** El analista protege cada posición con dos órdenes reales que se ejecutan
+solas, sin esperar a la siguiente decisión: un **stop-loss** (venta si el precio cae al nivel que invalida la tesis,
+normalmente justo bajo un soporte o a 2 ATR) y un **objetivo** (venta en una resistencia o a 2 veces el riesgo). Son
+órdenes *one-cancels-other* (al ejecutarse una se cancela la otra) y *reduce-only* (solo pueden cerrar la posición).
+El stop solo sube, nunca baja (stop dinámico); si el precio ya está bajo el stop, la posición se cierra.
+
+- Cada sincronización (cada hora, más la decisión y las valoraciones) repasa las velas de 5 minutos desde la anterior
+  comprobación, vela a vela: un stop tocado a las 16:10 se ejecuta al precio y a la hora en que se tocó (con huecos
+  incluidos, como en un bróker), aunque la cuenta se revise más tarde.
+- Cualquier agente puede usarlo: `OrderIntent.buy(..., stop_loss=, take_profit=)` o la acción `SetExits(símbolo,
+  stop_loss, take_profit)`; en el simulador, `sim.set_exits()` / `sim.get_exits()`.
+- Con Alpaca (dinero real) los stops se gestionan desde tradesim, no en el bróker (Alpaca no admite dos ventas de las
+  mismas acciones ni stops en fracciones/cripto): al detectar el nivel se envía una orden a mercado, que se ejecuta al
+  precio de ese momento. Con dinero real conviene sincronizar con más frecuencia (por ejemplo cada 15 minutos).
 
 **Límites de riesgo** (`live/config.json` → `risk`): máximo 30 % por posición, la cuenta deja de abrir posiciones con un
 drawdown ≥ 35 %, máximo 60 órdenes por decisión. Una cuenta que falla no detiene a las demás.

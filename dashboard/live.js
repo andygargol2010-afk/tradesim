@@ -231,8 +231,9 @@ function renderAccount() {
     { label: "Resultado", get: (t) => signed(t.pnl) },
     { label: "Rendimiento", get: (t) => fmtPct(t.return_pct) },
     { label: "Comisiones", get: (t) => fmtMoney(t.fees) },
-    { label: "Motivo entrada", get: (t) => t.entry_reason || "—", cls: () => "reason" },
-    { label: "Motivo salida", get: (t) => t.exit_reason || "—", cls: () => "reason" },
+    { label: "Motivo entrada", get: (t) => reasonCell(t.entry_reason), cls: () => "reason" },
+    { label: "Salida por", get: (t) => ({ stop_loss: "stop-loss", take_profit: "objetivo" }[t.exit_kind] || "decisión") },
+    { label: "Motivo salida", get: (t) => reasonCell(t.exit_reason), cls: () => "reason" },
   ], a.closed_trades);
   if (!a.closed_trades.length) $("trades-table").append(h("caption", { class: "empty" }, "Aún no hay operaciones cerradas."));
 
@@ -241,12 +242,23 @@ function renderAccount() {
     { label: "Lado", get: (o) => (o.side === "buy" ? "compra" : "venta"), cls: (o) => `side-${o.side}` },
     { label: "Activo", get: (o) => o.symbol },
     { label: "Cantidad", get: (o) => o.quantity },
-    { label: "Tipo", get: (o) => o.order_type },
-    { label: "Motivo", get: (o) => o.tag || "—", cls: () => "reason" },
+    { label: "Tipo", get: (o) => ({ stop: "stop-loss", limit: "límite / objetivo", market: "mercado", stop_limit: "stop límite" }[o.order_type] || o.order_type) },
+    { label: "Precio", get: (o) => { const v = parseFloat(o.stop_price || o.limit_price); return isNum(v) ? fmtPrice(v) : "—"; } },
+    { label: "Motivo", get: (o) => reasonCell(o.tag), cls: () => "reason" },
   ], a.open_orders);
   if (!a.open_orders.length) $("orders-table").append(h("caption", { class: "empty" }, "Sin órdenes pendientes."));
   renderLearning(a);
   renderJournal(a);
+}
+
+/** Long rationales: two lines in the table, the full text on hover. */
+const reasonCell = (text) => (text ? h("span", { class: "clamp", title: text }, text) : "—");
+
+/** Protective level with its distance from the current price ("—" when the position has none). */
+function exitCell(p, level) {
+  if (!isNum(level)) return "—";
+  const px = livePrice(p.symbol) ?? p.last_price;
+  return isNum(px) && px > 0 ? `${fmtPrice(level)} (${fmtPct((level / px - 1) * 100, true, 1)})` : fmtPrice(level);
 }
 
 /** Tiles and open positions: the parts that move with live crypto prices. */
@@ -284,7 +296,9 @@ function renderAccountLive() {
     { label: "Resultado", get: (p) => signed(parseFloat(p.quantity) * (livePrice(p.symbol) ?? p.last_price) - p.allocated) },
     { label: "Rendimiento", get: (p) => fmtPct((parseFloat(p.quantity) * (livePrice(p.symbol) ?? p.last_price) / p.allocated - 1) * 100) },
     { label: "Peso", get: (p) => fmtPct(p.weight_pct, false, 1) },
-    { label: "Motivo entrada", get: (p) => p.entry_reason || "—", cls: () => "reason" },
+    { label: "Stop-loss", get: (p) => exitCell(p, p.stop_loss) },
+    { label: "Objetivo", get: (p) => exitCell(p, p.take_profit) },
+    { label: "Motivo entrada", get: (p) => reasonCell(p.entry_reason), cls: () => "reason" },
   ], a.positions);
   if (!a.positions.length) $("positions-table").append(h("caption", { class: "empty" }, "Sin posiciones abiertas: todo en cash."));
 }
@@ -429,7 +443,7 @@ function renderJournal(a) {
         { label: "Cantidad", get: (o) => o.quantity },
         { label: "Precio medio", get: (o) => (parseFloat(o.avg_fill_price) ? fmtPrice(parseFloat(o.avg_fill_price)) : "—") },
         { label: "Estado", get: (o) => o.status + (o.reject_reason ? `: ${o.reject_reason}` : "") },
-        { label: "Motivo", get: (o) => o.tag || "—", cls: () => "reason" },
+        { label: "Motivo", get: (o) => reasonCell(o.tag), cls: () => "reason" },
       ], e.orders);
       li.append(h("div", { class: "table-scroll" }, tbl));
     }

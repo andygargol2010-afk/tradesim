@@ -162,6 +162,7 @@ class BaseSimulator:
         self.events = EventLog(Path(cfg.log_dir) / "events.jsonl" if cfg.log_dir else None)
         self.store = TradeStore(Path(cfg.log_dir) / "trades.sqlite", self.run_id) if cfg.log_dir else None
         self._bp_starved: set[str] = set()
+        self._pending_exits: dict[str, tuple[float | None, float | None, str | None]] = {}  # entry id -> exits
         self.bankrupt = False
 
     # -------------------------------------------------------- abstract hooks
@@ -286,7 +287,7 @@ class BaseSimulator:
         Returns the resulting order dicts; rejected orders carry ``status == "rejected"``
         and a ``reject_reason`` instead of raising, so agents can learn from them.
         """
-        from tradesim.agents.base import CancelOrders, ClosePosition, OrderIntent, TargetWeights
+        from tradesim.agents.base import CancelOrders, ClosePosition, OrderIntent, SetExits, TargetWeights
 
         if action is None or (isinstance(action, str) and action.lower() == "hold"):
             return []
@@ -296,7 +297,17 @@ class BaseSimulator:
                 out.extend(self.apply_action(a))
             return out
         if isinstance(action, OrderIntent):
-            return [self.place_order(**action.kwargs())]
+            kw = action.kwargs()
+            sl, tp = kw.pop("stop_loss", None), kw.pop("take_profit", None)
+            res = self.place_order(**kw)
+            if (sl is not None or tp is not None) and res.get("status") not in ("rejected", None):
+                if res["status"] == "filled":
+                    self.set_exits(action.symbol, sl, tp, action.tag)
+                else:  # attach the exits once the entry fills
+                    self._pending_exits[res["id"]] = (sl, tp, action.tag)
+            return [res]
+        if isinstance(action, SetExits):
+            return self.set_exits(action.symbol, action.stop_loss, action.take_profit, action.tag)
         if isinstance(action, TargetWeights):
             return self.target_weights(action.weights)
         if isinstance(action, ClosePosition):
@@ -350,14 +361,21 @@ class BaseSimulator:
         notional: float | str | Decimal | None = None,
         percent_of_equity: float | None = None,
         tag: str | None = None,
+        reduce_only: bool = False,
+        oco_group: str | None = None,
     ) -> dict[str, Any]:
         """Submit an order. Size with exactly one of ``quantity`` (units, fractional OK),
         ``notional`` (USD) or ``percent_of_equity`` (0-100).
 
+        ``reduce_only`` orders can only shrink the current position (they are capped to it at execution
+        and ignored by buying-power checks): use them for protective exits. Orders sharing an
+        ``oco_group`` cancel each other: when one fills, the rest of the group is cancelled.
+
         Returns the order as a dict; ``status == "rejected"`` with ``reject_reason`` if invalid.
         The order executes on the next :meth:`step` (historical) or :meth:`sync` (live).
         """
-        order = Order(symbol=symbol, side=Side.BUY, quantity=ZERO, id=self.order_ids(), created_at=self.now, tag=tag)
+        order = Order(symbol=symbol, side=Side.BUY, quantity=ZERO, id=self.order_ids(), created_at=self.now, tag=tag,
+                      reduce_only=reduce_only, oco_group=oco_group)
         try:
             self._fill_in_order(order, side, quantity, order_type, limit_price, stop_price, time_in_force,
                                 notional, percent_of_equity)
@@ -518,7 +536,13 @@ class BaseSimulator:
 
         # Position / shorting checks against the projected position (incl. other open orders).
         held = self.portfolio.quantity(order.symbol)
-        pending = sum((o.remaining * o.side.sign for o in self._open_orders(order.symbol)), ZERO)
+        if order.reduce_only:
+            if held == 0 or (held > 0) == (order.side is Side.BUY):
+                raise OrderRejected(f"reduce-only order needs an opposite position in {asset.symbol}")
+            if qty > abs(held):
+                order.quantity = qty = quantize_down(abs(held), step)
+            return  # only shrinks the position: no buying power or exposure checks
+        pending = sum((o.remaining * o.side.sign for o in self._open_orders(order.symbol) if not o.reduce_only), ZERO)
         projected = held + pending
         new = projected + qty * order.side.sign
         closes_position = new == 0
@@ -562,6 +586,8 @@ class BaseSimulator:
         for sym, orders in by_symbol.items():
             projected = self.portfolio.quantity(sym)
             for o in orders:
+                if o.reduce_only:
+                    continue
                 new = projected + o.remaining * o.side.sign
                 inc = max(abs(new) - abs(projected), ZERO)
                 if inc > 0:
@@ -603,8 +629,8 @@ class BaseSimulator:
         self.events.emit(f"order_{status.value}", self.now, order=order.to_dict())
         self._persist_order(order)
 
-    def _execute_symbol(self, asset: Asset, ctx: MarketContext) -> list[Fill]:
-        orders = self._open_orders(asset.symbol)
+    def _execute_symbol(self, asset: Asset, ctx: MarketContext, orders: list[Order] | None = None) -> list[Fill]:
+        orders = self._open_orders(asset.symbol) if orders is None else orders
         if not orders:
             return []
         self._bp_starved.clear()
@@ -617,6 +643,7 @@ class BaseSimulator:
         if self.store:
             for t in self.portfolio.closed_trades[n_closed:]:
                 self.store.add_closed_trade(t.to_dict())
+        self._after_fills(asset.symbol, orders, fills)
         for o in orders:
             if not o.status.is_open:
                 if o.id in self.open_order_ids:
@@ -628,6 +655,79 @@ class BaseSimulator:
                 # A market order the account can no longer afford (price moved) is cancelled, like a broker would.
                 self._close_order(o, OrderStatus.CANCELLED, "insufficient buying power / position at execution")
         return fills
+
+    def _after_fills(self, symbol: str, orders: list[Order], fills: list[Fill]) -> None:
+        """One-cancels-other groups, orphaned protective orders, and exits waiting for their entry to fill."""
+        filled_ids = {f.order_id for f in fills}
+        for o in orders:
+            if o.id in filled_ids and o.oco_group:
+                for other in self._open_orders(symbol):
+                    if other.oco_group == o.oco_group and other.id != o.id and other.status.is_open:
+                        self._close_order(other, OrderStatus.CANCELLED, f"OCO: {o.tag or o.id} filled")
+        if self.portfolio.quantity(symbol) == 0:
+            for other in self._open_orders(symbol):
+                if other.reduce_only and other.status.is_open:
+                    self._close_order(other, OrderStatus.CANCELLED, "position closed")
+        for oid in filled_ids & set(self._pending_exits):
+            if not self.orders[oid].status.is_open or self.orders[oid].filled_quantity > 0:
+                sl, tp, tag = self._pending_exits.pop(oid)
+                res = self.set_exits(symbol, sl, tp, tag)
+                if any(r.get("status") == "rejected" and r.get("order_type") == "stop" for r in res):
+                    # The market is already through the stop when the entry fills (e.g. a gap): the position
+                    # starts beyond its invalidation level, so it is closed instead of left unprotected.
+                    self.close_position(symbol, tag=f"stop-loss{': ' + tag if tag else ''} (superado al entrar)")
+
+    # ============================================================ protective exits
+    def set_exits(self, symbol: str, stop_loss: float | None = None, take_profit: float | None = None,
+                  tag: str | None = None) -> list[dict[str, Any]]:
+        """Protect the whole current position in ``symbol`` with a stop-loss and/or a take-profit.
+
+        Replaces the symbol's previous protective orders. Both are reduce-only, GTC and one-cancels-other:
+        whichever fills first cancels the other. A long position gets a sell stop below the price and a
+        sell limit above it (the reverse for a short). Levels on the wrong side of the market are rejected.
+        """
+        for o in self._open_orders(symbol):
+            if o.reduce_only:
+                self._close_order(o, OrderStatus.CANCELLED, "exits replaced")
+        qty = self.portfolio.quantity(symbol)
+        if qty == 0 or (stop_loss is None and take_profit is None):
+            return []
+        side = Side.SELL if qty > 0 else Side.BUY
+        q = self._quote(self.universe.get(symbol))
+        ref = q.bid if qty > 0 else q.ask
+        group = f"exits-{symbol}-{self.order_ids.counter}"
+        out = []
+        label = f": {tag}" if tag else ""
+        if stop_loss is not None:
+            wrong = stop_loss >= ref if qty > 0 else stop_loss <= ref
+            if wrong:
+                out.append({"symbol": symbol, "status": "rejected", "order_type": "stop", "stop_price": stop_loss,
+                            "reject_reason": f"stop-loss {stop_loss:g} is not {'below' if qty > 0 else 'above'} "
+                                             f"the market ({ref:g})"})
+            else:
+                out.append(self.place_order(symbol, side, abs(qty), order_type=OrderType.STOP, stop_price=stop_loss,
+                                            tag=f"stop-loss{label}", reduce_only=True, oco_group=group))
+        if take_profit is not None:
+            wrong = take_profit <= ref if qty > 0 else take_profit >= ref
+            if wrong:
+                out.append({"symbol": symbol, "status": "rejected", "order_type": "limit", "limit_price": take_profit,
+                            "reject_reason": f"take-profit {take_profit:g} is not {'above' if qty > 0 else 'below'} "
+                                             f"the market ({ref:g})"})
+            else:
+                out.append(self.place_order(symbol, side, abs(qty), order_type=OrderType.LIMIT,
+                                            limit_price=take_profit, tag=f"take-profit{label}", reduce_only=True,
+                                            oco_group=group))
+        return out
+
+    def get_exits(self, symbol: str) -> dict[str, float | None]:
+        """Current protective levels of ``symbol`` (``stop_loss`` / ``take_profit``, ``None`` if absent)."""
+        out: dict[str, float | None] = {"stop_loss": None, "take_profit": None}
+        for o in self._open_orders(symbol):
+            if o.reduce_only and o.order_type is OrderType.STOP and o.stop_price is not None:
+                out["stop_loss"] = float(o.stop_price)
+            elif o.reduce_only and o.order_type is OrderType.LIMIT and o.limit_price is not None:
+                out["take_profit"] = float(o.limit_price)
+        return out
 
     def _check_margin(self) -> None:
         pf = self.portfolio

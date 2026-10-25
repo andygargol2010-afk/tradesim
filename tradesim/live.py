@@ -46,7 +46,7 @@ from tradesim.market.liquidity import liquidity_profile
 from tradesim.persistence import read_json, write_json
 from tradesim.portfolio.portfolio import Portfolio
 from tradesim.simulator import NY, BaseSimulator, SimulatorConfig
-from tradesim.types import Fill, Order, OrderStatus, Quote, TimeInForce
+from tradesim.types import Fill, Order, OrderStatus, OrderType, Quote, TimeInForce
 
 log = logging.getLogger(__name__)
 
@@ -118,12 +118,20 @@ class LivePaperTrader(BaseSimulator):
         use_order_book: fetch L2 books for execution when the provider supports it.
         clock: returns the current UTC time (default: the wall clock); inject one for tests / replays.
         symbols: the symbols agents may trade (what ``observe()`` reports).
+        path_timeframes: intraday bars used to replay what happened to resting stop / limit orders
+            between two syncs (first available wins); empty disables the replay.
+
+    Resting orders (stop-loss, take-profit, limits) are checked on every :meth:`sync` against the
+    intraday bars since the previous check, bar by bar, so they fill at the price and time the market
+    actually reached them (gaps included), as a broker's resting order would, even if the account is
+    only synced a few times a day.
     """
 
     def __init__(self, provider: DataProvider, universe: AssetUniverse | None = None,
                  config: SimulatorConfig | None = None, history_provider: DataProvider | None = None,
                  quote_ttl: float = 2.0, use_order_book: bool = True,
-                 clock: Callable[[], datetime] | None = None, symbols: list[str] | None = None):
+                 clock: Callable[[], datetime] | None = None, symbols: list[str] | None = None,
+                 path_timeframes: tuple[str, ...] = ("5m", "1h")):
         self._clock = clock
         super().__init__(universe, provider, config)
         self.history_provider = history_provider or provider
@@ -133,6 +141,8 @@ class LivePaperTrader(BaseSimulator):
         self._quotes: dict[str, tuple[float, Quote]] = {}
         self._stats: dict[str, tuple[float, float, float]] = {}  # symbol -> (fetched_at, sigma_bar, typical_volume)
         self._last_sync: datetime | None = None
+        self.path_timeframes = tuple(path_timeframes)
+        self._path_checked: dict[str, str] = {}  # symbol -> ISO time up to which resting orders were replayed
         self._record_equity(self.now)
 
     @property
@@ -218,7 +228,8 @@ class LivePaperTrader(BaseSimulator):
         fills: list[Fill] = []
         for sym in list(dict.fromkeys(self.orders[i].symbol for i in self.open_order_ids)):
             asset = self.universe.get(sym)
-            if not is_market_open(asset, now):
+            fills.extend(self._replay_resting(asset, now))
+            if not is_market_open(asset, now) or not self._open_orders(sym):
                 continue
             try:
                 ctx = self._live_context(asset)
@@ -242,6 +253,51 @@ class LivePaperTrader(BaseSimulator):
         self._record_equity(now)
         self._check_margin()
         return [f.to_dict() for f in fills]
+
+    def _replay_resting(self, asset: Asset, now: datetime) -> list[Fill]:
+        """Walk the intraday bars since the last check through the resting (non-market) orders."""
+        sym = asset.symbol
+        resting = [o for o in self._open_orders(sym) if o.order_type is not OrderType.MARKET
+                   and o.created_at is not None and o.created_at < now]
+        if not resting or not self.path_timeframes:
+            return []
+        first = min(o.created_at for o in resting)
+        checked = self._path_checked.get(sym)
+        start = max(first, datetime.fromisoformat(checked)) if checked else first
+        bars, tf = None, None
+        for name in self.path_timeframes:
+            try:
+                tf = Timeframe.parse(name)
+                bars = self.history_provider.get_bars(asset, tf, start - timedelta(seconds=tf.seconds), now)
+                break
+            except (DataUnavailableError, ValueError) as exc:
+                log.debug("no %s bars for %s: %s", name, sym, exc)
+        if bars is None or tf is None or bars.empty:
+            return []
+        step = pd.Timedelta(seconds=tf.seconds)
+        bars = bars[(bars.index >= pd.Timestamp(start)) & (bars.index + step <= pd.Timestamp(now))]
+        if bars.empty:
+            return []
+        sigma_day, typical_day = self._bar_stats(asset)
+        session = 86400.0 if asset.is_24_7 else 6.5 * 3600
+        frac = min(1.0, tf.seconds / session)
+        prof = liquidity_profile(asset.asset_class, asset.liquidity_tier)
+        sigma_typ = prof.annual_vol / math.sqrt(self.timeframe.bars_per_year(asset.is_24_7)) * math.sqrt(frac)
+        fills: list[Fill] = []
+        for ts, row in bars.iterrows():
+            end = (ts + step).to_pydatetime()
+            orders = [o for o in self._open_orders(sym) if o.order_type is not OrderType.MARKET
+                      and o.created_at is not None and o.created_at <= ts.to_pydatetime()]
+            if not orders:
+                continue
+            vol = float(row.get("volume", float("nan")))
+            ctx = MarketContext(asset=asset, timestamp=end, open=float(row["open"]), high=float(row["high"]),
+                                low=float(row["low"]), close=float(row["close"]),
+                                volume=vol if vol > 0 else float("nan"), sigma=sigma_day * math.sqrt(frac),
+                                sigma_typical=sigma_typ, typical_volume=typical_day * frac)
+            fills.extend(self._execute_symbol(asset, ctx, orders))
+        self._path_checked[sym] = (bars.index[-1] + step).isoformat()
+        return fills
 
     def _live_context(self, asset: Asset) -> MarketContext:
         self._quotes.pop(asset.symbol, None)  # always use a fresh quote for execution
@@ -285,6 +341,7 @@ class LivePaperTrader(BaseSimulator):
             "open_order_ids": self.open_order_ids, "order_id_counter": self.order_ids.counter,
             "fill_id_counter": self.fill_ids.counter, "rng_exec": self.rng_exec.bit_generator.state,
             "last_sync": self._last_sync.isoformat() if self._last_sync else None, "bankrupt": self.bankrupt,
+            "path_checked": self._path_checked,
         }
 
     def restore(self, st: dict[str, Any]) -> None:
@@ -298,6 +355,7 @@ class LivePaperTrader(BaseSimulator):
         self.rng_exec.bit_generator.state = st["rng_exec"]
         self._last_sync = datetime.fromisoformat(st["last_sync"]) if st.get("last_sync") else None
         self.bankrupt = st["bankrupt"]
+        self._path_checked = dict(st.get("path_checked") or {})
 
     def save_state(self, path: str | Path) -> None:
         write_json(path, self.state())

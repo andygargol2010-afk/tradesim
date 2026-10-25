@@ -15,6 +15,7 @@ Actions accepted by ``TradingSimulator.apply_action``:
   (``{"symbol": "BTC-USD", "side": "buy", "quantity": 0.003}``);
 * :class:`TargetWeights` or ``{"weights": {"SPY": 0.5, "BTC-USD": 0.1}}``: rebalance;
 * :class:`ClosePosition`, :class:`CancelOrders`;
+* :class:`SetExits`: stop-loss / take-profit for a position (an :class:`OrderIntent` can carry them too);
 * a list mixing any of the above.
 """
 
@@ -50,6 +51,8 @@ class OrderIntent:
     stop_price: float | None = None
     time_in_force: str = "gtc"
     tag: str | None = None
+    stop_loss: float | None = None  # protective exits attached once the order fills (see SetExits)
+    take_profit: float | None = None
 
     @classmethod
     def buy(cls, symbol: str, **kw: Any) -> "OrderIntent":
@@ -78,6 +81,20 @@ class ClosePosition:
 
 
 @dataclass(frozen=True)
+class SetExits:
+    """Protect the whole position in ``symbol``: a stop-loss and/or a take-profit (prices).
+
+    Both are resting, reduce-only orders that cancel each other (one-cancels-other) and replace any
+    previous ones, so sending it every day with a higher stop gives a trailing stop.
+    """
+
+    symbol: str
+    stop_loss: float | None = None
+    take_profit: float | None = None
+    tag: str | None = None
+
+
+@dataclass(frozen=True)
 class CancelOrders:
     """Cancel open orders (all, or only ``symbol``'s)."""
 
@@ -86,7 +103,7 @@ class CancelOrders:
 
 HOLD: list = []
 
-Action = Union[None, OrderIntent, TargetWeights, ClosePosition, CancelOrders, dict, list]
+Action = Union[None, OrderIntent, TargetWeights, ClosePosition, CancelOrders, SetExits, dict, list]
 
 
 # ----------------------------------------------------------------------- observation

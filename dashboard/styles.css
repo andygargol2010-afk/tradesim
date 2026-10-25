@@ -234,3 +234,5 @@ details.analysis[open] > summary { border-bottom: 1px solid var(--grid); }
 .data-table.theses td:nth-child(n+4) { white-space: normal; min-width: 180px; }
 .journal ul.signals li { border: 0; padding: 2px 0; }
 .data-table td.reason { white-space: normal; text-align: left; min-width: 240px; max-width: 420px; }
+.clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.data-table td.reason { min-width: 280px; }

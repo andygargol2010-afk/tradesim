@@ -14,6 +14,11 @@ How it works:
   metrics, trade history and the dashboard work identically for paper and real accounts.
 * Every sync reconciles the ledger with the broker: cash is set to the broker's cash and position
   mismatches are reported in ``reconciliation`` (the broker is always the source of truth).
+* Protective exits (stop-loss / take-profit, ``reduce_only`` orders) are managed here, not at the
+  broker: Alpaca refuses two sell orders for the same shares and has no stops for fractional shares
+  and crypto. Each sync replays the intraday bars since the last check; when a level was reached the
+  other exit is cancelled and a **market order** is sent. It fills at the price of that moment, so
+  sync often (e.g. every 15 min during the session) when real money is at stake.
 
 Safety: real money (``paper=False``) is refused unless ``allow_live=True`` or the environment
 variable ``TRADESIM_ALLOW_LIVE=1`` is set. Credentials come from ``ALPACA_API_KEY`` /
@@ -167,8 +172,8 @@ class AlpacaTrader(LivePaperTrader):
 
     def place_order(self, symbol: str, side: Any, quantity: Any = None, **kw: Any) -> dict[str, Any]:
         res = super().place_order(symbol, side, quantity, **kw)  # local pre-trade checks
-        if res["status"] != "new":
-            return res
+        if res["status"] != "new" or kw.get("reduce_only"):
+            return res  # protective exits stay local (see the module docstring)
         order = self.orders[res["id"]]
         try:
             bo = self.client.submit_order(self._request(order, self.universe.get(symbol)))
@@ -239,10 +244,69 @@ class AlpacaTrader(LivePaperTrader):
             if status in _STATUS:
                 self._close_order(order, OrderStatus.FILLED if filled >= order.quantity else _STATUS[status],
                                   None if status == "filled" else f"broker status: {status}")
+        self._check_local_exits(now)
         self._reconcile(now)  # broker-side interest and real fees show up here, through cash
         self._last_sync = now
         self._record_equity(now)
         return [f.to_dict() for f in fills]
+
+    def _check_local_exits(self, now: datetime) -> None:
+        """Fire local stop-loss / take-profit orders whose level the market reached since the last check."""
+        import pandas as pd
+
+        from tradesim.data.base import DataUnavailableError
+        from tradesim.data.timeframes import Timeframe
+
+        symbols = dict.fromkeys(self.orders[i].symbol for i in self.open_order_ids
+                                if self.orders[i].reduce_only and i not in self.broker_ids)
+        for sym in symbols:
+            asset = self.universe.get(sym)
+            local = [o for o in self._open_orders(sym) if o.reduce_only and o.id not in self.broker_ids]
+            first = min(o.created_at or now for o in local)
+            checked = self._path_checked.get(sym)
+            start = max(first, datetime.fromisoformat(checked)) if checked else first
+            bars, tf = None, None
+            for name in self.path_timeframes:
+                try:
+                    tf = Timeframe.parse(name)
+                    bars = self.history_provider.get_bars(asset, tf, start, now)
+                    break
+                except (DataUnavailableError, ValueError):
+                    continue
+            if bars is None or tf is None:
+                continue
+            step = pd.Timedelta(seconds=tf.seconds)
+            bars = bars[(bars.index >= pd.Timestamp(start)) & (bars.index + step <= pd.Timestamp(now))]
+            hit = None
+            for ts, row in bars.iterrows():
+                for o in local:
+                    if o.created_at and o.created_at > ts.to_pydatetime():
+                        continue
+                    long_exit = o.side is Side.SELL
+                    if o.order_type is OrderType.STOP and o.stop_price is not None:
+                        lvl = float(o.stop_price)
+                        if (row["low"] <= lvl) if long_exit else (row["high"] >= lvl):
+                            hit = (o, ts, lvl)
+                    elif o.order_type is OrderType.LIMIT and o.limit_price is not None:
+                        lvl = float(o.limit_price)
+                        if (row["high"] >= lvl) if long_exit else (row["low"] <= lvl):
+                            hit = (o, ts, lvl)
+                    if hit:
+                        break
+                if hit:
+                    break
+            if len(bars):
+                self._path_checked[sym] = (bars.index[-1] + step).isoformat()
+            if hit is None:
+                continue
+            order, ts, lvl = hit
+            for o in local:
+                reason = (f"level {lvl:g} reached at {ts.isoformat()}: market order sent" if o is order
+                          else f"OCO: {order.tag or order.id} triggered")
+                self._close_order(o, OrderStatus.CANCELLED, reason)
+            qty = abs(self.portfolio.quantity(sym))
+            if qty > 0:
+                self.place_order(sym, order.side, qty, tag=f"{order.tag} (nivel {lvl:g} alcanzado)")
 
     def _reconcile(self, now: datetime) -> None:
         acct = self.client.get_account()

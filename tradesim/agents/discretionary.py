@@ -30,7 +30,7 @@ import math
 from datetime import datetime, timedelta, timezone
 from typing import Any, Sequence
 
-from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent
+from tradesim.agents.base import Agent, ClosePosition, Observation, OrderIntent, SetExits
 from tradesim.data.base import DataUnavailableError
 
 log = logging.getLogger(__name__)
@@ -57,9 +57,15 @@ DECISION_TOOL = {
                         "catalysts": {"type": "array", "items": {"type": "string"}},
                         "invalidation": {"type": "string", "description": "price level or condition that proves you wrong"},
                         "horizon_days": {"type": "integer"},
+                        "stop_loss": {"type": "number",
+                                      "description": "price of the protective stop (below the current price); "
+                                                     "0 = let the system place it from support / volatility"},
+                        "take_profit": {"type": "number",
+                                        "description": "price at which to take profits (above the current price); "
+                                                       "0 = let the system place it"},
                     },
                     "required": ["symbol", "target_weight", "conviction", "thesis", "catalysts", "invalidation",
-                                 "horizon_days"],
+                                 "horizon_days", "stop_loss", "take_profit"],
                 },
             },
             "watchlist": {"type": "array", "items": {"type": "string"},
@@ -203,7 +209,7 @@ class DiscretionaryAgent(Agent):
             engine = "local (gratis, sin IA)"
         self.last_engine = engine
         targets, notes = self._targets(decision, obs, symbols)
-        actions, changes = self._orders(obs, targets, decision)
+        actions, changes = self._orders(obs, targets, decision, reports)
         self._remember(obs, decision, targets, review)
         self._last = {"status": "ok", "engine": engine, "engine_errors": errors,
                       "market_view": decision.get("market_view"), "regime": decision.get("regime"),
@@ -239,6 +245,10 @@ class DiscretionaryAgent(Agent):
             "- Mind the calendar: size down or wait before binary events (FOMC, CPI, payrolls, earnings) unless the "
             "position is the bet on that event and the risk is acceptable.\n"
             "- Costs are real: do not trade for small changes; holding is a valid decision. Cash is a position.\n"
+            "- Every position gets a real stop-loss and take-profit order that executes during the session without "
+            "you: give stop_loss at the level that invalidates the thesis (usually just below a support) and "
+            "take_profit at a realistic target (a resistance or a pattern target), aiming for at least twice the "
+            "risk. Stops are only ever raised, never lowered. Use 0 to let the system derive them.\n"
             f"- Limits: at most {self.max_positions} positions, at most {self.max_weight:.0%} of equity each, total "
             f"invested at most {self.invested_fraction:.0%}.\n"
             "- Be honest about uncertainty. Write lessons only when a past decision teaches something specific.\n"
@@ -260,8 +270,10 @@ class DiscretionaryAgent(Agent):
         for p in pf.get("positions", []):
             sym = p["symbol"]
             th = self.theses.get(sym, {})
+            ex = obs.sim.get_exits(sym) if hasattr(obs.sim, "get_exits") else {}
             rows.append(f"- {sym}: weight {p['weight']:.1%}, qty {p['quantity']}, avg {p.get('avg_price')}, "
-                        f"uPnL {p.get('unrealized_pnl')}"
+                        f"uPnL {p.get('unrealized_pnl')}, stop-loss {ex.get('stop_loss') or 'none'}, "
+                        f"take-profit {ex.get('take_profit') or 'none'}"
                         + (f", held since {th['opened_at'][:10]}, thesis: {th.get('thesis')}; invalidation: "
                            f"{th.get('invalidation')}; catalysts: {', '.join(th.get('catalysts') or [])}" if th else ""))
         parts.append("OPEN POSITIONS:\n" + ("\n".join(rows) or "(none, all cash)"))
@@ -458,8 +470,9 @@ class DiscretionaryAgent(Agent):
                 "symbol": s, "target_weight": round(w, 4),
                 "conviction": "high" if d["score"] >= 0.5 else "medium" if d["score"] >= 0.3 else "low",
                 "thesis": thesis, "catalysts": [f"{e['date']} {e['title']}" for e in d["events"][:3]],
-                "invalidation": f"cierre bajo el soporte {sup:g}" if sup else "caída del 8 % desde la entrada",
-                "horizon_days": 20})
+                "invalidation": f"pérdida del soporte {sup:g} (stop-loss justo debajo)" if sup
+                else "stop-loss a 2 ATR bajo la entrada",
+                "horizon_days": 20, "stop_loss": 0, "take_profit": 0})
         best = sorted(scored, key=lambda x: -scored[x]["score"])
         worst = [s for s in reversed(best) if scored[s]["score"] < -0.2][:3]
         regime_es = {"risk_on": "de apetito por el riesgo", "neutral": "neutral", "risk_off": "de aversión al riesgo"}
@@ -508,12 +521,67 @@ class DiscretionaryAgent(Agent):
             notes.append(f"scaled weights by {k:.2f} to stay within {self.invested_fraction:.0%} invested")
         return targets, notes
 
-    def _orders(self, obs: Observation, targets: dict[str, float], decision: dict[str, Any]) -> tuple[list[Any], list[str]]:
+    def _exit_levels(self, obs: Observation, sym: str, p: dict[str, Any] | None,
+                     rep: Any) -> tuple[float | None, float | None, str]:
+        """Stop-loss and take-profit for ``sym``: the model's levels when valid, else support / resistance and
+        volatility (ATR) based ones; the stop never moves down (trailing). Returns (stop, target, note)."""
+        price = obs.prices.get(sym, float("nan"))
+        if not price > 0:
+            return None, None, ""
+        ind = getattr(rep, "indicators", {}) or {}
+        atr = (ind.get("atr_pct") or 3.0) / 100 * price
+        p = p or {}
+
+        def num(k: str) -> float | None:
+            try:
+                v = float(p.get(k) or 0)
+            except (TypeError, ValueError):
+                return None
+            return v if v > 0 else None
+
+        stop, target, src = num("stop_loss"), num("take_profit"), "modelo"
+        if stop is None or not (price * 0.6 < stop < price - 0.3 * atr):
+            sup = (getattr(rep, "support", None) or [{}])[0].get("price") if rep is not None else None
+            stop = sup - 0.25 * atr if sup and 0.5 * atr <= price - sup <= 4 * atr else price - 2 * atr
+            src = "soporte/ATR"
+        risk = price - stop
+        if target is None or not (price + 0.3 * atr < target < price * 2):
+            res = (getattr(rep, "resistance", None) or [{}])[0].get("price") if rep is not None else None
+            target = res - 0.1 * atr if res and res - price >= 1.5 * risk else price + 2 * risk
+        current = obs.sim.get_exits(sym) if hasattr(obs.sim, "get_exits") else {}
+        held = obs.position(sym) > 0  # the stop only trails within one position, not across re-entries
+        old = (current.get("stop_loss") or (self.theses.get(sym) or {}).get("stop_loss")) if held else None
+        note = f"stop {stop:.4g} ({src}), objetivo {target:.4g}"
+        if old and old > stop:
+            stop, note = old, f"stop {old:.4g} (se mantiene: nunca se baja), objetivo {target:.4g}"
+            if target <= price:
+                target = price + 2 * max(price - stop, 0.5 * atr)
+        return round(stop, 6), round(target, 6), note
+
+    def _orders(self, obs: Observation, targets: dict[str, float], decision: dict[str, Any],
+                reports: dict[str, Any] | None = None) -> tuple[list[Any], list[str]]:
         by_sym = {p.get("symbol"): p for p in decision.get("positions", [])}
+        reports = reports or {}
         actions: list[Any] = []
         changes: list[str] = []
+        self._exits: dict[str, tuple[float | None, float | None]] = {}
         held = {s for s, q in obs.positions.items() if q > 0}
+        for sym in sorted(held & set(targets)):
+            # The price is already through the stop (the order executes on the next update): stops are never
+            # lowered, so the position is closed instead of re-protected lower.
+            stop = (obs.sim.get_exits(sym) if hasattr(obs.sim, "get_exits") else {}).get("stop_loss") \
+                or (self.theses.get(sym) or {}).get("stop_loss")
+            try:
+                bid = float(obs.quote(sym).get("bid") or obs.prices.get(sym, float("inf")))
+            except Exception:  # noqa: BLE001 - no quote: fall back to the last price
+                bid = obs.prices.get(sym, float("inf"))
+            if stop and bid <= stop:
+                targets.pop(sym)
+                actions.append(ClosePosition(sym))
+                changes.append(f"vender {sym}: el precio está bajo su stop-loss {stop:.4g}")
         for sym in sorted(held - set(targets)):
+            if any(isinstance(a, ClosePosition) and a.symbol == sym for a in actions):
+                continue
             actions.append(ClosePosition(sym))
             changes.append(f"vender {sym} (fuera de la cartera objetivo)")
         for sym in sorted(set(targets) & held):
@@ -525,10 +593,18 @@ class DiscretionaryAgent(Agent):
                 changes.append(f"reducir {sym} {cur:.1%} -> {tgt:.1%}")
         for sym in sorted(targets, key=lambda s: -targets[s]):
             cur, tgt = obs.weight(sym), targets[sym]
-            if tgt > cur + self.min_change:
+            stop, take, note = self._exit_levels(obs, sym, by_sym.get(sym), reports.get(sym))
+            self._exits[sym] = (stop, take)
+            if tgt > cur + self.min_change:  # exits are attached when the purchase fills
                 actions.append(OrderIntent.buy(sym, notional=round((tgt - cur) * obs.equity, 2),
-                                               tag=_tag("comprar" if sym not in held else "ampliar", by_sym.get(sym))))
-                changes.append(f"{'comprar' if sym not in held else 'ampliar'} {sym} {cur:.1%} -> {tgt:.1%}")
+                                               tag=_tag("comprar" if sym not in held else "ampliar", by_sym.get(sym)),
+                                               stop_loss=stop, take_profit=take))
+                changes.append(f"{'comprar' if sym not in held else 'ampliar'} {sym} {cur:.1%} -> {tgt:.1%}; {note}")
+            elif sym in held and stop is not None:  # held position: (re)set its exits, raising the stop if due
+                actions.append(SetExits(sym, stop, take, tag=(by_sym.get(sym) or {}).get("thesis", "")[:120]))
+                prev = obs.sim.get_exits(sym) if hasattr(obs.sim, "get_exits") else {}
+                if prev.get("stop_loss") != stop or prev.get("take_profit") != take:
+                    changes.append(f"salidas de {sym}: {note}")
         return actions, changes
 
     # ------------------------------------------------------------------ memory
@@ -566,7 +642,9 @@ class DiscretionaryAgent(Agent):
                 "opened_at": old.get("opened_at", now), "entry_price": old.get("entry_price") or obs.prices.get(sym),
                 "target_weight": round(targets[sym], 4), "conviction": p.get("conviction"),
                 "thesis": p.get("thesis", ""), "catalysts": p.get("catalysts") or [],
-                "invalidation": p.get("invalidation", ""), "horizon_days": p.get("horizon_days"), "updated_at": now}
+                "invalidation": p.get("invalidation", ""), "horizon_days": p.get("horizon_days"), "updated_at": now,
+                "stop_loss": (getattr(self, "_exits", {}).get(sym) or (None, None))[0],
+                "take_profit": (getattr(self, "_exits", {}).get(sym) or (None, None))[1]}
         for sym in [s for s in self.theses if s not in targets and obs.position(s) <= 0]:
             del self.theses[sym]  # never bought (or sold now): nothing to track
         known = {x.lower() for x in self.lessons}

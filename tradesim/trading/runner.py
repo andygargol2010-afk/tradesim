@@ -5,8 +5,8 @@ A run (typically from a scheduler such as GitHub Actions) does, for every enable
 1. load the account (orders, positions, equity history) and the agent's learned state from disk;
 2. ``sync``: execute orders still pending whose market is now open, mark positions to market and
    record an equity point;
-0. in ``decide`` and ``research`` modes, refresh the market research first (news + Claude analysis, macro,
-   event calendar, technical patterns; see :mod:`tradesim.research`). ``research`` mode stops there;
+0. in ``decide`` and ``research`` modes, refresh the market research first (news analysis, macro, event
+   calendar, technical patterns; see :mod:`tradesim.research`);
 3. in ``decide`` mode, once per day and only when every market of the universe is open: build an
    :class:`~tradesim.agents.base.Observation` from live prices, call ``agent.act``, apply risk limits,
    send the orders and execute them immediately against the current quotes / order books;
@@ -215,22 +215,16 @@ class LiveRunner:
 
     def run(self, mode: str = "decide", export: bool = True) -> dict[str, Any]:
         """One pass. ``mode``: ``"decide"`` (research + sync + daily decision), ``"mark"`` (sync only) or
-        ``"research"`` (refresh news / macro / calendar / patterns and the dashboard, no account activity)."""
+        ``"research"`` (refresh news / macro / calendar / patterns, then sync like ``mark``). Every sync
+        executes pending orders and the protective stop-loss / take-profit orders the market reached."""
         if mode not in ("decide", "mark", "research"):
             raise ValueError("mode must be 'decide', 'mark' or 'research'")
         t0 = time.perf_counter()
         now = self.clock()
         provider = RunCacheProvider(self.base_provider)
         research = self.refresh_research(provider) if mode in ("decide", "research") else None
-        if mode == "research":
-            record = {"started_at": now.isoformat(), "mode": mode, "research": _research_digest(research),
-                      "accounts": {}, "prices": {}, "data_errors": provider.errors,
-                      "duration_s": round(time.perf_counter() - t0, 2)}
-            if export:
-                from tradesim.trading.export import export_dashboard
-
-                export_dashboard(self.config, self.universe, now=self.clock())
-            return record
+        # research mode also syncs the accounts like "mark": resting stop-loss / take-profit orders are
+        # checked every hour and the equity curve gets an hourly point.
         prices = self.price_snapshot(provider)
         quoted = [s for s, p in prices.items() if "error" not in p]
         window_ok, window_msg = self.decision_window_open(now)
