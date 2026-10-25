@@ -107,13 +107,19 @@ class CCXTProvider(DataProvider):
         since = int(pd.Timestamp(start).timestamp() * 1000)
         end_ms = int(pd.Timestamp(end).timestamp() * 1000)
         rows: list[list[float]] = []
+        empty_jumps = 0
         while since < end_ms:
             try:
                 batch = self.exchange.fetch_ohlcv(sym, tf.value, since=since, limit=self.page_limit)
             except Exception as exc:
                 raise DataUnavailableError(f"{self.name} fetch_ohlcv({sym}): {exc}") from exc
             if not batch:
-                break
+                # Nothing in this window (e.g. the market was listed later): jump ahead a window.
+                empty_jumps += 1
+                if rows or empty_jumps > 40:
+                    break
+                since += min(self.page_limit, 300) * tf.seconds * 1000
+                continue
             rows.extend(batch)
             last = batch[-1][0]
             if last < since:  # exchange ignored `since` (e.g. Kraken's 720-candle window)

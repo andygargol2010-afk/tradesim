@@ -178,6 +178,23 @@ class Agent(abc.ABC):
     def reset(self) -> None:
         """Called at the start of each episode (clear any per-episode state)."""
 
+    # Optional hooks used by live operation (tradesim.trading). Defaults make any agent usable live.
+    def state_dict(self) -> dict[str, Any]:
+        """JSON-serialisable learned state (weights, tuned parameters...). Saved after every live run, so
+        the same agent can be restored elsewhere (e.g. in a real-money account) exactly as it is now."""
+        return {}
+
+    def load_state_dict(self, state: dict[str, Any]) -> None:
+        """Restore what :meth:`state_dict` returned."""
+
+    def explain(self) -> dict[str, Any] | None:
+        """Why the last ``act`` did what it did (stored in the live decision journal)."""
+        return None
+
+    def learning_summary(self) -> dict[str, Any] | None:
+        """Short description of what the agent has learned so far (shown on the dashboard)."""
+        return None
+
     def __str__(self) -> str:
         return self.name or type(self).__name__
 

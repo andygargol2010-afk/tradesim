@@ -5,9 +5,10 @@ from tradesim.agents.base import (
     TargetWeights,
 )
 from tradesim.agents.examples import BuyAndHoldAgent, MovingAverageCrossAgent, RandomAgent, SimpleRSIAgent
+from tradesim.agents.learning import OnlineLinearAgent, WalkForwardRSIAgent
 
 __all__ = [
     "HOLD", "Action", "Agent", "BuyAndHoldAgent", "CancelOrders", "ClosePosition", "FunctionAgent",
-    "MovingAverageCrossAgent", "Observation", "OrderIntent", "PolicyAgent", "RandomAgent", "SimpleRSIAgent",
-    "TargetWeights",
+    "MovingAverageCrossAgent", "Observation", "OnlineLinearAgent", "OrderIntent", "PolicyAgent", "RandomAgent", "SimpleRSIAgent",
+    "TargetWeights", "WalkForwardRSIAgent",
 ]

@@ -40,7 +40,9 @@ class SimpleRSIAgent(Agent):
         self.name = f"SimpleRSIAgent({period}, {oversold:g}/{overbought:g})"
 
     def act(self, obs: Observation) -> list[Any]:
+        self._last: dict[str, Any] = {"rsi": {}, "signals": []}
         if obs.open_orders:  # previous orders still working (e.g. market closed): wait
+            self._last["signals"].append("open orders pending: waiting")
             return []
         actions: list[Any] = []
         n_positions = len(obs.positions)
@@ -48,32 +50,40 @@ class SimpleRSIAgent(Agent):
             value = rsi_last(obs.closes(sym, self.period * 3), self.period)
             if value != value:  # not enough history yet
                 continue
+            self._last["rsi"][sym] = round(value, 1)
             held = obs.position(sym)
             if held > 0 and value > self.overbought:
                 actions.append(ClosePosition(sym))
+                self._last["signals"].append(f"sell {sym}: RSI {value:.1f} > {self.overbought:g}")
                 n_positions -= 1
             elif held == 0 and value < self.oversold and n_positions < self.max_positions:
                 actions.append(OrderIntent.buy(sym, percent_of_equity=self.position_pct, tag=f"RSI {value:.1f}"))
+                self._last["signals"].append(f"buy {sym}: RSI {value:.1f} < {self.oversold:g}")
                 n_positions += 1
         return actions
+
+    def explain(self) -> dict[str, Any] | None:
+        return getattr(self, "_last", None)
 
 
 class MovingAverageCrossAgent(Agent):
     """Trend following: hold equal weights in symbols whose fast SMA is above the slow SMA.
 
-    Rebalances only when the set of "uptrend" symbols changes, to limit trading costs.
+    Rebalances only when the set of "uptrend" symbols differs from the symbols actually held, to
+    limit trading costs. Comparing with the real positions (not with what it last asked for) keeps
+    the agent in sync with its account even when an order is rejected or only partly filled.
+
+    Args:
+        max_weight: cap per symbol (fraction of equity), e.g. to respect a broker / risk limit.
     """
 
     def __init__(self, symbols: Sequence[str] | None = None, fast: int = 20, slow: int = 50,
-                 invested_fraction: float = 0.95):
+                 invested_fraction: float = 0.95, max_weight: float = 1.0):
         self.symbols = list(symbols) if symbols else None
         self.fast, self.slow = fast, slow
         self.invested_fraction = invested_fraction
+        self.max_weight = max_weight
         self.name = f"MovingAverageCrossAgent({fast}/{slow})"
-        self._current: frozenset[str] = frozenset()
-
-    def reset(self) -> None:
-        self._current = frozenset()
 
     def act(self, obs: Observation) -> Any:
         if obs.open_orders:
@@ -84,11 +94,15 @@ class MovingAverageCrossAgent(Agent):
             if len(closes) == self.slow and closes[-self.fast:].mean() > closes.mean():
                 up.append(sym)
         chosen = frozenset(up)
-        if chosen == self._current:
+        held = frozenset(s for s, q in obs.positions.items() if q > 0)
+        self._last = {"uptrend": sorted(chosen), "held": sorted(held)}
+        if chosen == held:
             return []
-        self._current = chosen
-        w = self.invested_fraction / len(chosen) if chosen else 0.0
+        w = min(self.max_weight, self.invested_fraction / len(chosen)) if chosen else 0.0
         return TargetWeights({s: w for s in chosen})
+
+    def explain(self) -> dict[str, Any] | None:
+        return getattr(self, "_last", None)
 
 
 class RandomAgent(Agent):
@@ -142,6 +156,14 @@ class BuyAndHoldAgent(Agent):
     def act(self, obs: Observation) -> Any:
         if self._done:
             return []
-        self._done = True
         syms = self.symbols or obs.symbols
+        if obs.open_orders or not syms:
+            return []
+        self._done = True
         return TargetWeights({s: self.invested_fraction / len(syms) for s in syms})
+
+    def state_dict(self) -> dict[str, Any]:
+        return {"done": self._done}
+
+    def load_state_dict(self, state: dict[str, Any]) -> None:
+        self._done = bool(state.get("done", False))

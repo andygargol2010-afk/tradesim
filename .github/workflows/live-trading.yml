@@ -1,0 +1,67 @@
+# Daily live paper trading: runs the agents in live/config.json on real-time prices and commits
+# their state (accounts, journals, learned models) back to the repo, which redeploys the dashboard.
+name: Live trading
+
+on:
+  schedule:
+    - cron: "45 14 * * *"    # daily decision (NYSE open; weekends/holidays are skipped by the runner)
+    - cron: "45 19 * * 1-5"  # mark to market before the New York close
+    - cron: "15 2 * * *"     # overnight mark (crypto trades 24/7)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "decide = daily decision, mark = valuation only"
+        type: choice
+        options: [mark, decide]
+        default: mark
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-trading
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[yfinance,crypto,alpaca]"
+
+      - name: Choose mode
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            if [ "${{ github.event.schedule }}" = "45 14 * * *" ]; then MODE=decide; else MODE=mark; fi
+          fi
+          echo "MODE=$MODE" >> "$GITHUB_ENV"
+
+      - name: Run agents
+        env:
+          # Optional: Alpaca keys give real bid/ask for stocks (free paper account). Without them Yahoo is used.
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python scripts/live_run.py --mode "$MODE"
+
+      - name: Commit state
+        if: always()
+        run: |
+          git config user.name "tradesim-bot"
+          git config user.email "tradesim-bot@users.noreply.github.com"
+          git add live dashboard/live.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "live: $MODE run $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 10
+          done
+          exit 1

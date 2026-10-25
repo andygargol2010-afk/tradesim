@@ -27,9 +27,12 @@ from __future__ import annotations
 import logging
 import math
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Callable
+
+from dateutil.easter import easter
 
 import numpy as np
 import pandas as pd
@@ -48,7 +51,46 @@ from tradesim.types import Fill, Order, OrderStatus, Quote, TimeInForce
 log = logging.getLogger(__name__)
 
 
+@lru_cache(maxsize=32)
+def nyse_holidays(year: int) -> frozenset[date]:
+    """NYSE full-day closures for ``year`` (rules in force since 2022; early closes are not modelled).
+
+    Saturday holidays are observed on Friday and Sunday holidays on Monday, except New Year's Day
+    falling on a Saturday, which is not observed (NYSE rule 7.2).
+    """
+    def nth_weekday(month: int, weekday: int, n: int) -> date:
+        d = date(year, month, 1)
+        d += timedelta(days=(weekday - d.weekday()) % 7)
+        return d + timedelta(weeks=n - 1)
+
+    def last_weekday(month: int, weekday: int) -> date:
+        d = date(year + (month == 12), month % 12 + 1, 1) - timedelta(days=1)
+        return d - timedelta(days=(d.weekday() - weekday) % 7)
+
+    def observed(d: date, saturday_rolls_back: bool = True) -> date | None:
+        if d.weekday() == 5:
+            return d - timedelta(days=1) if saturday_rolls_back else None
+        if d.weekday() == 6:
+            return d + timedelta(days=1)
+        return d
+
+    days = [
+        observed(date(year, 1, 1), saturday_rolls_back=False),
+        nth_weekday(1, 0, 3),  # Martin Luther King Jr. Day
+        nth_weekday(2, 0, 3),  # Washington's Birthday
+        easter(year) - timedelta(days=2),  # Good Friday
+        last_weekday(5, 0),  # Memorial Day
+        observed(date(year, 6, 19)),  # Juneteenth
+        observed(date(year, 7, 4)),
+        nth_weekday(9, 0, 1),  # Labor Day
+        nth_weekday(11, 3, 4),  # Thanksgiving
+        observed(date(year, 12, 25)),
+    ]
+    return frozenset(d for d in days if d is not None)
+
+
 def is_market_open(asset: Asset, now: datetime) -> bool:
+    """Whether ``asset`` trades at ``now``: 24/7 crypto, 24/5 FX, NYSE regular session (holidays included)."""
     session = asset.effective_session
     if session == "24/7":
         return True
@@ -58,7 +100,7 @@ def is_market_open(asset: Asset, now: datetime) -> bool:
         if wd == 5 or (wd == 4 and minutes >= 17 * 60) or (wd == 6 and minutes < 17 * 60):
             return False
         return True
-    if local.weekday() >= 5:
+    if local.weekday() >= 5 or local.date() in nyse_holidays(local.year):
         return False
     minutes = local.hour * 60 + local.minute
     return 9 * 60 + 30 <= minutes < 16 * 60
@@ -74,15 +116,20 @@ class LivePaperTrader(BaseSimulator):
             ``get_historical_data``); defaults to ``provider``.
         quote_ttl: seconds a fetched quote is reused by ``get_price``.
         use_order_book: fetch L2 books for execution when the provider supports it.
+        clock: returns the current UTC time (default: the wall clock); inject one for tests / replays.
+        symbols: the symbols agents may trade (what ``observe()`` reports).
     """
 
     def __init__(self, provider: DataProvider, universe: AssetUniverse | None = None,
                  config: SimulatorConfig | None = None, history_provider: DataProvider | None = None,
-                 quote_ttl: float = 2.0, use_order_book: bool = True):
+                 quote_ttl: float = 2.0, use_order_book: bool = True,
+                 clock: Callable[[], datetime] | None = None, symbols: list[str] | None = None):
+        self._clock = clock
         super().__init__(universe, provider, config)
         self.history_provider = history_provider or provider
         self.quote_ttl = quote_ttl
         self.use_order_book = use_order_book
+        self.symbols: list[str] = list(symbols or [])
         self._quotes: dict[str, tuple[float, Quote]] = {}
         self._stats: dict[str, tuple[float, float, float]] = {}  # symbol -> (fetched_at, sigma_bar, typical_volume)
         self._last_sync: datetime | None = None
@@ -90,7 +137,11 @@ class LivePaperTrader(BaseSimulator):
 
     @property
     def now(self) -> datetime:
-        return datetime.now(timezone.utc)
+        return self._clock() if getattr(self, "_clock", None) else datetime.now(timezone.utc)
+
+    def is_open(self, symbol: str) -> bool:
+        """Whether ``symbol``'s market is open right now."""
+        return is_market_open(self.universe.get(symbol), self.now)
 
     # --------------------------------------------------------------- market
     def _quote(self, asset: Asset) -> Quote:
@@ -222,27 +273,35 @@ class LivePaperTrader(BaseSimulator):
             log.info("live loop interrupted")
 
     # ------------------------------------------------------------ persistence
-    def save_state(self, path: str | Path) -> None:
-        write_json(path, {
+    def state(self) -> dict[str, Any]:
+        """Everything needed to resume this account (JSON-serialisable)."""
+        return {
             "version": 1, "kind": "live", "run_id": self.run_id, "config": self.config.to_dict(),
             "portfolio": self.portfolio.state(), "orders": [o.to_dict() for o in self.orders.values()],
             "open_order_ids": self.open_order_ids, "order_id_counter": self.order_ids.counter,
             "fill_id_counter": self.fill_ids.counter, "rng_exec": self.rng_exec.bit_generator.state,
             "last_sync": self._last_sync.isoformat() if self._last_sync else None, "bankrupt": self.bankrupt,
-        })
+        }
+
+    def restore(self, st: dict[str, Any]) -> None:
+        """Load what :meth:`state` returned into this instance."""
+        self.run_id = st["run_id"]
+        self.portfolio = Portfolio.from_state(st["portfolio"])
+        self.orders = {d["id"]: Order.from_dict(d) for d in st["orders"]}
+        self.open_order_ids = list(st["open_order_ids"])
+        self.order_ids.counter = st["order_id_counter"]
+        self.fill_ids.counter = st["fill_id_counter"]
+        self.rng_exec.bit_generator.state = st["rng_exec"]
+        self._last_sync = datetime.fromisoformat(st["last_sync"]) if st.get("last_sync") else None
+        self.bankrupt = st["bankrupt"]
+
+    def save_state(self, path: str | Path) -> None:
+        write_json(path, self.state())
 
     @classmethod
     def load_state(cls, path: str | Path, provider: DataProvider, universe: AssetUniverse | None = None,
                    config: SimulatorConfig | None = None, **kw: Any) -> "LivePaperTrader":
         st = read_json(path)
         trader = cls(provider, universe, config or SimulatorConfig.from_dict(st["config"]), **kw)
-        trader.run_id = st["run_id"]
-        trader.portfolio = Portfolio.from_state(st["portfolio"])
-        trader.orders = {d["id"]: Order.from_dict(d) for d in st["orders"]}
-        trader.open_order_ids = list(st["open_order_ids"])
-        trader.order_ids.counter = st["order_id_counter"]
-        trader.fill_ids.counter = st["fill_id_counter"]
-        trader.rng_exec.bit_generator.state = st["rng_exec"]
-        trader._last_sync = datetime.fromisoformat(st["last_sync"]) if st.get("last_sync") else None
-        trader.bankrupt = st["bankrupt"]
+        trader.restore(st)
         return trader

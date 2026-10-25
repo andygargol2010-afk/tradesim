@@ -36,6 +36,7 @@ class Position:
     realized_pnl: Decimal = ZERO  # gross of fees, lifetime for this symbol
     fees_paid: Decimal = ZERO  # lifetime for this symbol
     mark_price: Decimal = ZERO
+    entry_order_id: str | None = None  # order that opened the current position
 
     @property
     def is_flat(self) -> bool:
@@ -71,6 +72,7 @@ class Position:
             "realized_pnl": str(self.realized_pnl.quantize(Decimal("0.01"))),
             "fees_paid": str(self.fees_paid.quantize(Decimal("0.01"))),
             "opened_at": self.opened_at.isoformat() if self.opened_at else None,
+            "entry_order_id": self.entry_order_id,
         }
         if equity:
             d["weight"] = float(self.market_value / equity)
@@ -86,6 +88,7 @@ class Position:
             symbol=d["symbol"], quantity=D(d["quantity"]), avg_price=D(d["avg_price"]), open_fees=D(d["open_fees"]),
             opened_at=datetime.fromisoformat(d["opened_at"]) if d.get("opened_at") else None,
             realized_pnl=D(d["realized_pnl"]), fees_paid=D(d["fees_paid"]), mark_price=D(d["mark_price"]),
+            entry_order_id=d.get("entry_order_id"),
         )
 
 
@@ -226,10 +229,12 @@ class Portfolio:
                 entry_price=pos.avg_price, exit_price=fill.price,
                 pnl=realized - entry_fee_part - exit_fee_part, fees=entry_fee_part + exit_fee_part,
                 opened_at=pos.opened_at, closed_at=fill.timestamp,
+                entry_order_id=pos.entry_order_id, exit_order_id=fill.order_id,
             ))
             new_qty = qty_before + signed
             if new_qty == 0:
                 pos.quantity, pos.avg_price, pos.open_fees, pos.opened_at = ZERO, ZERO, ZERO, None
+                pos.entry_order_id = None
             elif (new_qty > 0) == (qty_before > 0):
                 pos.quantity = new_qty  # partial reduction: avg price unchanged
             else:  # flipped through zero: remainder opens a new position at the fill price
@@ -237,6 +242,7 @@ class Portfolio:
                 pos.avg_price = fill.price
                 pos.open_fees = fill.fee - exit_fee_part
                 pos.opened_at = fill.timestamp
+                pos.entry_order_id = fill.order_id
         else:  # opening or adding
             new_qty = qty_before + signed
             pos.avg_price = (pos.avg_price * abs(qty_before) + fill.price * fill.quantity) / abs(new_qty)
@@ -244,6 +250,7 @@ class Portfolio:
             pos.open_fees += fill.fee
             if qty_before == 0:
                 pos.opened_at = fill.timestamp
+                pos.entry_order_id = fill.order_id
         if pos.mark_price == 0:
             pos.mark_price = fill.price
 

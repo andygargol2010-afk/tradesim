@@ -269,6 +269,13 @@ class ClosedTrade:
     fees: Decimal
     opened_at: datetime | None
     closed_at: datetime
+    entry_order_id: str | None = None  # order that opened the position (its tag = entry rationale)
+    exit_order_id: str | None = None  # order that closed this quantity
+
+    @property
+    def allocated(self) -> Decimal:
+        """Capital committed to the closed quantity at entry (quantity x entry price)."""
+        return self.quantity * self.entry_price
 
     @property
     def return_pct(self) -> float:
@@ -287,6 +294,8 @@ class ClosedTrade:
             "return_pct": self.return_pct,
             "opened_at": self.opened_at.isoformat() if self.opened_at else None,
             "closed_at": self.closed_at.isoformat(),
+            "entry_order_id": self.entry_order_id,
+            "exit_order_id": self.exit_order_id,
         }
 
     @classmethod
@@ -301,6 +310,8 @@ class ClosedTrade:
             fees=Decimal(d["fees"]),
             opened_at=datetime.fromisoformat(d["opened_at"]) if d.get("opened_at") else None,
             closed_at=datetime.fromisoformat(d["closed_at"]),
+            entry_order_id=d.get("entry_order_id"),
+            exit_order_id=d.get("exit_order_id"),
         )
 
 
