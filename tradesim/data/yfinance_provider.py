@@ -42,7 +42,8 @@ def _utc(dt: datetime) -> datetime:
 class YFinanceProvider(DataProvider):
     name = "yfinance"
 
-    def __init__(self, max_retries: int = 4, backoff_seconds: float = 2.0, batch_size: int = 100):
+    def __init__(self, max_retries: int = 4, backoff_seconds: float = 2.0, batch_size: int = 100,
+                 max_observed_spread_bps: float = 100.0):
         try:
             import yfinance  # noqa: F401
         except ImportError as exc:  # pragma: no cover - import guard
@@ -50,6 +51,7 @@ class YFinanceProvider(DataProvider):
         self.max_retries = max_retries
         self.backoff_seconds = backoff_seconds
         self.batch_size = batch_size
+        self.max_observed_spread_bps = max_observed_spread_bps
 
     def supports(self, asset: Asset) -> bool:
         return asset.asset_class in (AssetClass.EQUITY, AssetClass.ETF, AssetClass.CRYPTO, AssetClass.FOREX, AssetClass.INDEX)
@@ -160,12 +162,17 @@ class YFinanceProvider(DataProvider):
         fi = self._retry(lambda: t.fast_info, f"fast_info({asset.symbol})")
         last = float(fi["last_price"])
         bid = ask = None
+        state = None
         try:
             info = t.info  # slow, but the only place Yahoo exposes bid/ask
-            bid, ask = info.get("bid"), info.get("ask")
+            bid, ask, state = info.get("bid"), info.get("ask"), info.get("marketState")
         except Exception:  # noqa: BLE001 - quotes are best effort
             pass
-        observed = bool(bid and ask and 0 < bid <= ask)
+        # Outside the regular session Yahoo serves stale bid/ask (spreads of several %, mid away from the last
+        # trade): only trust them in session, bracketing the last price and reasonably tight; else model the spread.
+        observed = bool(bid and ask and 0 < bid <= ask and state in (None, "REGULAR")
+                        and bid <= last * 1.001 and ask >= last * 0.999
+                        and (ask - bid) / last * 1e4 <= self.max_observed_spread_bps)
         return Quote(
             symbol=asset.symbol, timestamp=datetime.now(timezone.utc),
             bid=float(bid) if observed else last, ask=float(ask) if observed else last, last=last,

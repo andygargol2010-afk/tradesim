@@ -6,10 +6,12 @@ from types import SimpleNamespace
 import pytest
 
 from tradesim import SyntheticProvider
+from tradesim.assets.universe import Asset
 from tradesim.data.replay import ReplayLiveProvider
 from tradesim.live import is_market_open, nyse_holidays
 from tradesim.trading import AccountSpec, LiveConfig, LiveRunner, RiskLimits
 from tradesim.trading.export import export_dashboard
+from tradesim.types import AssetClass
 
 SYMBOLS = ["SPY", "AAPL", "MSFT", "BTC-USD", "ETH-USD"]
 
@@ -221,3 +223,27 @@ def test_sells_fund_buys_in_the_same_decision(tmp_path, universe):
     acc = data["accounts"][0]
     assert [p["symbol"] for p in acc["positions"]] == ["AAPL"]
     assert acc["closed_trades"][0]["entry_reason"] == "day 1" and acc["closed_trades"][0]["exit_reason"] == "close_position"
+
+
+def test_yfinance_ignores_stale_out_of_session_quotes(monkeypatch):
+    yf = pytest.importorskip("yfinance")
+    from tradesim.data.yfinance_provider import YFinanceProvider
+
+    class FakeTicker:
+        info_by_symbol = {
+            "AAA": {"bid": 99.98, "ask": 100.02, "marketState": "REGULAR"},  # good, in session
+            "BBB": {"bid": 92.0, "ask": 108.0, "marketState": "REGULAR"},   # absurd spread
+            "CCC": {"bid": 99.98, "ask": 100.02, "marketState": "CLOSED"},  # after hours
+            "DDD": {"bid": 95.0, "ask": 95.1, "marketState": "REGULAR"},    # does not bracket the last trade
+        }
+
+        def __init__(self, symbol):
+            self.fast_info = {"last_price": 100.0}
+            self.info = self.info_by_symbol[symbol]
+
+    monkeypatch.setattr(yf, "Ticker", FakeTicker)
+    provider = YFinanceProvider()
+    quotes = {s: provider.get_quote(Asset(s, AssetClass.EQUITY)) for s in FakeTicker.info_by_symbol}
+    assert not quotes["AAA"].modelled and quotes["AAA"].bid == 99.98
+    for s in ("BBB", "CCC", "DDD"):
+        assert quotes[s].modelled and quotes[s].bid == quotes[s].ask == 100.0

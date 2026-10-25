@@ -105,7 +105,8 @@ class CCXTProvider(DataProvider):
         if tf.value not in (self.exchange.timeframes or {}):
             raise DataUnavailableError(f"{self.name} does not support timeframe {tf.value}")
         since = int(pd.Timestamp(start).timestamp() * 1000)
-        end_ms = int(pd.Timestamp(end).timestamp() * 1000)
+        # Never ask for windows in the future (some exchanges reject them, e.g. Coinbase).
+        end_ms = min(int(pd.Timestamp(end).timestamp() * 1000), int(time.time() * 1000))
         rows: list[list[float]] = []
         empty_jumps = 0
         while since < end_ms:

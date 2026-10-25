@@ -1,27 +1,46 @@
 {
-  "symbols": ["SPY", "QQQ", "AAPL", "MSFT", "NVDA", "JPM", "XOM", "GLD", "BTC-USD", "ETH-USD"],
+  "symbols": ["SPY", "QQQ", "IWM", "DIA", "GLD", "SLV", "TLT", "EEM", "XLE", "XLF", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "AVGO", "AMD", "NFLX", "ORCL", "CRM", "JPM", "BAC", "GS", "V", "MA", "XOM", "CVX", "JNJ", "UNH", "LLY", "PFE", "PG", "KO", "PEP", "WMT", "COST", "HD", "MCD", "CAT", "BA", "BTC-USD", "ETH-USD", "SOL-USD", "XRP-USD", "ADA-USD", "DOGE-USD", "LINK-USD", "LTC-USD"],
   "timeframe": "1d",
   "crypto_exchange": "coinbase",
   "stocks_data": "auto",
   "state_dir": "live/accounts",
   "runs_log": "live/runs.jsonl",
   "dashboard_file": "dashboard/live.json",
-  "risk": {"max_position_pct": 30.0, "halt_drawdown_pct": 35.0, "max_orders_per_run": 20},
+  "risk": {
+    "max_position_pct": 30.0,
+    "halt_drawdown_pct": 35.0,
+    "max_orders_per_run": 60
+  },
   "schedule": [
-    {"cron": "45 14 * * *", "mode": "decide", "label": "Decisión diaria: 14:45 UTC (15 min tras la apertura de Nueva York en invierno, 75 min en verano)"},
-    {"cron": "45 19 * * 1-5", "mode": "mark", "label": "Valoración antes del cierre de Nueva York: 19:45 UTC, lunes a viernes"},
-    {"cron": "15 2 * * *", "mode": "mark", "label": "Valoración nocturna (las cripto cotizan 24/7): 02:15 UTC"}
+    {
+      "cron": "45 14 * * *",
+      "mode": "decide",
+      "label": "Decisión diaria: 14:45 UTC (15 min tras la apertura de Nueva York en invierno, 75 min en verano)"
+    },
+    {
+      "cron": "45 19 * * 1-5",
+      "mode": "mark",
+      "label": "Valoración antes del cierre de Nueva York: 19:45 UTC, lunes a viernes"
+    },
+    {
+      "cron": "15 2 * * *",
+      "mode": "mark",
+      "label": "Valoración nocturna (las cripto cotizan 24/7): 02:15 UTC"
+    }
   ],
   "accounts": [
     {
       "id": "aprendiz",
       "name": "Aprendiz lineal",
       "agent": "OnlineLinearAgent",
-      "params": {},
+      "params": {
+        "top_k": 6,
+        "max_weight": 0.2
+      },
       "initial_cash": 10000,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Aprende cada día qué patrones de precio preceden a las subidas (mínimos cuadrados recursivos con olvido) y compra los activos con mejor predicción. Se pre-entrena con ~3 años de historia."
+      "description": "Aprende cada día qué patrones de precio preceden a las subidas (mínimos cuadrados recursivos con olvido) y compra los 6 activos con mejor predicción (máx. 20% cada uno). Se pre-entrena con ~3 años de historia."
     },
     {
       "id": "rsi-adaptativo",
@@ -37,11 +56,13 @@
       "id": "cruce-medias",
       "name": "Cruce de medias",
       "agent": "MovingAverageCrossAgent",
-      "params": {"max_weight": 0.25},
+      "params": {
+        "max_weight": 0.15
+      },
       "initial_cash": 10000,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 días está sobre la de 50 (máx. 25% por activo). Sirve de referencia."
+      "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 días está sobre la de 50 (máx. 15% por activo). Sirve de referencia."
     },
     {
       "id": "buy-hold",
@@ -51,7 +72,7 @@
       "initial_cash": 10000,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Compra los 10 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor."
+      "description": "Compra los 50 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor."
     }
   ]
 }
