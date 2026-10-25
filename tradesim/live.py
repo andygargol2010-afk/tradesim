@@ -208,6 +208,10 @@ class LivePaperTrader(BaseSimulator):
         return df.tail(limit)
 
     # -------------------------------------------------------------- execution
+    def _settle(self) -> None:
+        if self.open_order_ids:
+            self.sync()
+
     def sync(self) -> list[dict[str, Any]]:
         """Execute open orders against fresh quotes / books, mark to market, record equity."""
         now = self.now

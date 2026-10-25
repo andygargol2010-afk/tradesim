@@ -28,7 +28,7 @@ def test_build_dashboard_data(tmp_path):
 
 
 def test_dashboard_files_exist():
-    for name in ("index.html", "app.js", "styles.css"):
+    for name in ("index.html", "live.js", "backtest.html", "backtest.js", "charts.js", "styles.css"):
         assert (ROOT / "dashboard" / name).exists()
     cfg = json.loads((ROOT / "vercel.json").read_text())
     assert cfg["outputDirectory"] == "dashboard"

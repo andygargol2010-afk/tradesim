@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tradesim · Backtest</title>
+  <meta name="description" content="Resultados de agentes de trading evaluados en el simulador tradesim: métricas, curvas de equity, drawdown y operaciones.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="viz-root">
+    <header class="page-head">
+      <div>
+        <nav class="nav" aria-label="Secciones"><a href="/">Operativa diaria</a><a href="backtest.html" aria-current="page">Backtest</a></nav>
+        <h1>tradesim · Backtest de agentes</h1>
+        <p class="subtitle" id="subtitle">Cargando resultados…</p>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">◐ Tema</button>
+    </header>
+    <div id="notice"></div>
+
+    <main id="app" aria-busy="true">
+      <section class="card" aria-labelledby="h-compare">
+        <h2 id="h-compare">Comparación de agentes</h2>
+        <p class="hint" id="compare-hint"></p>
+        <div class="table-scroll"><table id="compare-table" class="data-table"></table></div>
+      </section>
+
+      <div class="grid-2">
+        <section class="card" aria-labelledby="h-path">
+          <h2 id="h-path">Retorno medio a lo largo del episodio</h2>
+          <p class="hint">Media de todos los episodios, barra a barra, frente a buy &amp; hold (sin costes).</p>
+          <div class="chart" id="chart-path"></div>
+          <details class="data-view"><summary>Ver como tabla</summary><div class="table-scroll" id="path-table"></div></details>
+        </section>
+        <section class="card" aria-labelledby="h-strip">
+          <h2 id="h-strip">Retorno de cada episodio</h2>
+          <p class="hint">Cada punto es un episodio; la marca vertical es la media. Haz clic en un punto para abrirlo abajo.</p>
+          <div class="chart" id="chart-strip"></div>
+        </section>
+      </div>
+
+      <section class="card" aria-labelledby="h-agent" id="agent-section">
+        <h2 id="h-agent">Detalle por agente y episodio</h2>
+        <div class="filters" role="group" aria-label="Filtros del detalle">
+          <label>Agente <select id="sel-agent"></select></label>
+          <label>Episodio <select id="sel-episode"></select></label>
+        </div>
+        <div class="tiles" id="agent-tiles"></div>
+        <h3>Episodios de este agente</h3>
+        <div class="table-scroll"><table id="episodes-table" class="data-table clickable"></table></div>
+
+        <h3 id="episode-title">Episodio</h3>
+        <div class="tiles" id="episode-tiles"></div>
+        <div class="chart-title">Equity del agente frente a buy &amp; hold</div>
+        <div class="chart" id="chart-equity"></div>
+        <div class="chart-title">Drawdown</div>
+        <div class="chart" id="chart-dd"></div>
+        <div class="chart-title row">
+          <span>Precio y operaciones</span>
+          <label class="inline">Símbolo <select id="sel-symbol"></select></label>
+        </div>
+        <div class="chart" id="chart-price"></div>
+        <div class="grid-2 tables">
+          <div>
+            <h3>Trades cerrados</h3>
+            <div class="table-scroll tall"><table id="trades-table" class="data-table"></table></div>
+          </div>
+          <div>
+            <h3>Ejecuciones (fills)</h3>
+            <div class="table-scroll tall"><table id="fills-table" class="data-table"></table></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-foot" id="footer"></footer>
+  </div>
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite" hidden></div>
+  <script src="charts.js"></script>
+  <script src="backtest.js"></script>
+</body>
+</html>

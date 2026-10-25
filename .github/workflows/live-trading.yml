@@ -50,6 +50,8 @@ jobs:
           # Optional: Alpaca keys give real bid/ask for stocks (free paper account). Without them Yahoo is used.
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          # Real money stays disabled unless the repository variable TRADESIM_ALLOW_LIVE is set to 1.
+          TRADESIM_ALLOW_LIVE: ${{ vars.TRADESIM_ALLOW_LIVE }}
         run: python scripts/live_run.py --mode "$MODE"
 
       - name: Commit state

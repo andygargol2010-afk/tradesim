@@ -53,9 +53,67 @@ env.plot_results(path="runs/episode.png")   # equity vs buy & hold, drawdown, co
 Ejemplo completo ejecutable: `python examples/practice.py` (crea el entorno, corre un episodio con render, 10
 episodios de evaluación, gráficas en `runs/practice/` y comparación contra baselines).
 
+## Operativa diaria en vivo
+
+Cuatro agentes operan **cada día con precios reales**, cada uno en su propia cuenta de práctica de $10.000, y el
+dashboard (`dashboard/index.html`, la portada en Vercel) muestra por cuenta: equity, P&L total y del día, operaciones
+abiertas (cantidad fraccionaria, **capital asignado y % de la cuenta al entrar**, precio medio, precio actual, resultado
+no realizado, días abierta, motivo de entrada), operaciones cerradas (asignado, entrada/salida, resultado neto,
+rendimiento, comisiones, motivos de entrada y salida), órdenes pendientes, el **diario de decisiones** (qué vio el agente
+y por qué hizo lo que hizo), su **aprendizaje** y los precios. Las cripto se actualizan en tiempo real en el navegador.
+
+| Cuenta | Agente | Cómo decide / aprende |
+|---|---|---|
+| Aprendiz lineal | `OnlineLinearAgent` | Mínimos cuadrados recursivos con olvido: aprende cada día qué patrones de precio preceden a las subidas (pre-entrenado con ~3 años) y compra las mejores predicciones |
+| RSI adaptativo | `WalkForwardRSIAgent` | RSI cuyo ajuste se re-optimiza cada semana simulando variantes en el último año (con costes) |
+| Cruce de medias | `MovingAverageCrossAgent` | Seguidor de tendencia fijo (referencia sin aprendizaje) |
+| Buy & hold | `BuyAndHoldAgent` | Compra todo el primer día y mantiene: la vara de medir |
+
+**Cómo funciona.** `.github/workflows/live-trading.yml` ejecuta `scripts/live_run.py` con GitHub Actions:
+
+- **14:45 UTC todos los días** (`decide`): sincroniza, y si la bolsa de Nueva York está abierta (lunes a viernes, sin
+  festivos NYSE) cada agente observa precios actuales, decide y sus órdenes se ejecutan al momento contra la cotización
+  y el libro reales (spread, impacto y comisiones de Alpaca). Primero ventas, luego compras con lo liberado.
+  Una sola decisión por día y cuenta, aunque el workflow se relance.
+- **19:45 UTC laborables y 02:15 UTC diario** (`mark`): valoración a mercado (las cripto cotizan 24/7).
+- Cada ejecución hace commit de `live/` (estado de cuentas, modelos aprendidos, diarios, `runs.jsonl`) y de
+  `dashboard/live.json`; Vercel redespliega solo. El historial de git es el registro auditable de todo.
+- Se puede lanzar a mano: GitHub → Actions → *Live trading* → *Run workflow* (`mark` o `decide`).
+
+**Datos.** Cripto: Coinbase vía ccxt (bid/ask y libro L2 reales, sin claves). Acciones: Yahoo Finance (último precio,
+spread modelado) o, si defines los secretos `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` en GitHub, Alpaca (bid/ask reales).
+
+**Límites de riesgo** (`live/config.json` → `risk`): máximo 30 % por posición, la cuenta deja de abrir posiciones con un
+drawdown ≥ 35 %, máximo 20 órdenes por decisión. Una cuenta que falla no detiene a las demás.
+
+**Añadir o cambiar agentes**: edita `accounts` en `live/config.json` (`agent` es una clase de `tradesim.agents` o
+`"paquete.modulo:MiAgente"`, `params` sus argumentos). Cualquier `Agent` sirve; si aprende, implementa
+`state_dict()` / `load_state_dict()` y su estado se guarda en `live/accounts/<id>/agent.json` tras cada ejecución.
+
+### Pasar un agente a dinero real (Alpaca)
+
+El agente no cambia: solo cambia quién ejecuta sus órdenes. `AlpacaTrader` ofrece la misma interfaz que el simulador,
+envía las órdenes a Alpaca, registra los fills reales y se reconcilia con el bróker en cada ejecución (el bróker manda).
+
+1. Crea una cuenta en Alpaca (la de *paper trading* es gratuita) y genera claves API.
+2. GitHub → Settings → Secrets and variables → Actions: secretos `ALPACA_API_KEY` y `ALPACA_SECRET_KEY`.
+3. En `live/config.json`, añade una cuenta nueva con el mismo `agent`/`params` y `"broker": "alpaca-paper"`, y copia
+   `live/accounts/<id-original>/agent.json` a `live/accounts/<id-nuevo>/agent.json` para que empiece con lo aprendido.
+   Una cuenta de Alpaca por agente.
+4. Tras validarlo en `alpaca-paper`, cambia a `"broker": "alpaca-live"` (claves de la cuenta real) y crea la **variable**
+   de repositorio `TRADESIM_ALLOW_LIVE` = `1`. Sin esa variable, el sistema se niega a operar con dinero real.
+
+Ensayo local (sin esperar días reales): `ReplayLiveProvider` reproduce datos históricos o sintéticos como si fueran en
+vivo, con un reloj inyectable; los tests de `tests/test_live_trading.py` lo usan para simular semanas de operativa.
+
+**Limitaciones.** En las cuentas `paper` la ejecución es simulada (sobre precios reales); los horarios de GitHub
+Actions pueden retrasarse unos minutos; la cadencia es diaria (no es trading intradía); y que un agente aprenda no
+significa que tenga ventaja: el panel de aprendizaje muestra la correlación entre predicción y realidad (cerca de 0 =
+sin ventaja). Compara siempre con *Buy & hold* después de costes antes de arriesgar dinero.
+
 ## Dashboard de resultados (web)
 
-`dashboard/` es una página estática que compara agentes y permite explorar cada episodio: tabla comparativa,
+`dashboard/backtest.html` es una página estática que compara agentes y permite explorar cada episodio: tabla comparativa,
 retorno medio barra a barra frente a buy & hold, retorno de cada episodio, y por episodio equity, drawdown,
 precio con compras/ventas, trades cerrados y ejecuciones. Modo claro/oscuro, tooltips y enlaces directos
 (`#agent=1&episode=3`).

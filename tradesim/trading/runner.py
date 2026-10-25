@@ -35,6 +35,27 @@ from tradesim.trading.provider import RunCacheProvider, default_live_provider
 log = logging.getLogger(__name__)
 
 
+def _flatten(action: Any) -> list[Any]:
+    if action is None:
+        return []
+    if isinstance(action, (list, tuple)):
+        return [x for a in action for x in _flatten(a)]
+    return [action]
+
+
+def _is_exit(action: Any) -> bool:
+    """Sells and closes run first so that their proceeds can fund the buys of the same decision."""
+    from tradesim.agents.base import ClosePosition, OrderIntent
+
+    if isinstance(action, ClosePosition):
+        return True
+    if isinstance(action, OrderIntent):
+        return action.side.lower() == "sell"
+    if isinstance(action, dict):
+        return "close" in action or str(action.get("side", "")).lower() == "sell"
+    return False
+
+
 def _count_orders(action: Any) -> int:
     if action is None:
         return 0
@@ -242,8 +263,13 @@ class LiveRunner:
                                                     f"{self.config.risk.max_orders_per_run}; nothing sent")
             results = []
         else:
-            results = trader.apply_action(action)
+            items = _flatten(action)
+            results = trader.apply_action([a for a in items if _is_exit(a)])
+            trader._settle()  # execute the exits now: their cash funds the entries below
+            results += trader.apply_action([a for a in items if not _is_exit(a)])
             trader.sync()  # execute now against the current quotes / order books
+            # Journal the orders as they ended up (filled / rejected...), not as they were submitted.
+            results = [trader.orders[r["id"]].to_dict() if r.get("id") in trader.orders else r for r in results]
             entry["status"] = "ok"
         entry["orders"] = [{k: r.get(k) for k in ("id", "symbol", "side", "quantity", "order_type", "limit_price",
                                                   "stop_price", "status", "reject_reason", "tag", "filled_quantity",

@@ -428,8 +428,14 @@ class BaseSimulator:
                 orders.append((sym, Side.BUY if delta > 0 else Side.SELL, qty))
         self.cancel_all_orders()
         results = [self.place_order(s, side, q, tag=tag) for s, side, q in orders if side is Side.SELL]
+        if any(side is Side.SELL for _, side, _ in orders):
+            self._settle()  # live: let the sells execute so their proceeds can fund the buys
         results += [self.place_order(s, side, q, tag=tag) for s, side, q in orders if side is Side.BUY]
         return results
+
+    def _settle(self) -> None:
+        """Execute what can execute right now. Backtests: nothing (orders fill on the next bar);
+        live accounts override it to sync with the market."""
 
     def get_metrics(self) -> dict[str, Any]:
         """Sharpe, Sortino, max drawdown, CAGR, win rate, profit factor, fees..."""

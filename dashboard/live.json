@@ -1,0 +1,120 @@
+{
+ "meta": {
+  "generated_at": "2026-10-25T05:29:00.146665+00:00",
+  "symbols": [
+   "SPY",
+   "QQQ",
+   "AAPL",
+   "MSFT",
+   "NVDA",
+   "JPM",
+   "XOM",
+   "GLD",
+   "BTC-USD",
+   "ETH-USD"
+  ],
+  "names": {
+   "SPY": "SPDR S&P 500 ETF Trust",
+   "QQQ": "Invesco QQQ Trust",
+   "AAPL": "Apple Inc.",
+   "MSFT": "Microsoft",
+   "NVDA": "Nvidia",
+   "JPM": "JPMorgan Chase",
+   "XOM": "ExxonMobil",
+   "GLD": "SPDR Gold Shares",
+   "BTC-USD": "Bitcoin",
+   "ETH-USD": "Ethereum"
+  },
+  "asset_class": {
+   "SPY": "etf",
+   "QQQ": "etf",
+   "AAPL": "equity",
+   "MSFT": "equity",
+   "NVDA": "equity",
+   "JPM": "equity",
+   "XOM": "equity",
+   "GLD": "etf",
+   "BTC-USD": "crypto",
+   "ETH-USD": "crypto"
+  },
+  "schedule": [
+   {
+    "cron": "45 14 * * *",
+    "mode": "decide",
+    "label": "Decisi\u00f3n diaria: 14:45 UTC (15 min tras la apertura de Nueva York en invierno, 75 min en verano)"
+   },
+   {
+    "cron": "45 19 * * 1-5",
+    "mode": "mark",
+    "label": "Valoraci\u00f3n antes del cierre de Nueva York: 19:45 UTC, lunes a viernes"
+   },
+   {
+    "cron": "15 2 * * *",
+    "mode": "mark",
+    "label": "Valoraci\u00f3n nocturna (las cripto cotizan 24/7): 02:15 UTC"
+   }
+  ],
+  "risk": {
+   "max_position_pct": 30.0,
+   "halt_drawdown_pct": 35.0,
+   "max_orders_per_run": 20
+  },
+  "crypto_exchange": "coinbase",
+  "stocks_data": "auto"
+ },
+ "last_run": null,
+ "prices": {},
+ "runs": [],
+ "accounts": [
+  {
+   "id": "aprendiz",
+   "name": "Aprendiz lineal",
+   "description": "Aprende cada d\u00eda qu\u00e9 patrones de precio preceden a las subidas (m\u00ednimos cuadrados recursivos con olvido) y compra los activos con mejor predicci\u00f3n. Se pre-entrena con ~3 a\u00f1os de historia.",
+   "agent": "OnlineLinearAgent",
+   "params": {},
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 10000,
+   "meta": {},
+   "status": "not started"
+  },
+  {
+   "id": "rsi-adaptativo",
+   "name": "RSI adaptativo",
+   "description": "Compra sobreventa (RSI bajo) y vende sobrecompra. Cada semana simula variantes en el \u00faltimo a\u00f1o con costes reales y adopta la mejor solo si mejora con claridad.",
+   "agent": "WalkForwardRSIAgent",
+   "params": {},
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 10000,
+   "meta": {},
+   "status": "not started"
+  },
+  {
+   "id": "cruce-medias",
+   "name": "Cruce de medias",
+   "description": "Seguidor de tendencia sin aprendizaje: mantiene a partes iguales los activos cuya media de 20 d\u00edas est\u00e1 sobre la de 50 (m\u00e1x. 25% por activo). Sirve de referencia.",
+   "agent": "MovingAverageCrossAgent",
+   "params": {
+    "max_weight": 0.25
+   },
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 10000,
+   "meta": {},
+   "status": "not started"
+  },
+  {
+   "id": "buy-hold",
+   "name": "Buy & hold",
+   "description": "Compra los 10 activos a partes iguales el primer d\u00eda y no hace nada m\u00e1s. Es la vara de medir: un agente que no lo supera no aporta valor.",
+   "agent": "BuyAndHoldAgent",
+   "params": {},
+   "broker": "paper",
+   "fees": "alpaca",
+   "initial_cash": 10000,
+   "meta": {},
+   "status": "not started"
+  }
+ ]
+}

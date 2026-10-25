@@ -194,6 +194,17 @@ class AlpacaTrader(LivePaperTrader):
         return len(ids)
 
     # ------------------------------------------------------------- sync
+    def _settle(self, timeout_s: float = 20.0) -> None:
+        """Wait (briefly) for working orders to fill at the broker, booking fills as they arrive."""
+        import time as _time
+
+        deadline = _time.monotonic() + timeout_s
+        while True:
+            self.sync()
+            if not self.open_order_ids or _time.monotonic() > deadline:
+                return
+            _time.sleep(1.0)
+
     def sync(self) -> list[dict[str, Any]]:
         """Book new broker fills into the ledger, reconcile cash / positions, mark, record equity."""
         now = self.now

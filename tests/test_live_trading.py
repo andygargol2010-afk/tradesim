@@ -190,3 +190,34 @@ def test_real_money_requires_explicit_opt_in(universe, monkeypatch):
     monkeypatch.delenv("TRADESIM_ALLOW_LIVE", raising=False)
     with pytest.raises(PermissionError):
         AlpacaTrader(paper=False, client=FakeAlpaca(), universe=universe, data_provider=SyntheticProvider())
+
+
+from tradesim.agents.base import Agent, ClosePosition, OrderIntent  # noqa: E402
+
+
+class SwapAgent(Agent):
+    """Day 1: put 90% in SPY. Day 2: sell it all and put 90% in AAPL (needs the sale's cash)."""
+
+    def act(self, obs):
+        if obs.position("SPY") == 0 and obs.position("AAPL") == 0:
+            return OrderIntent.buy("SPY", percent_of_equity=90, tag="day 1")
+        if obs.position("SPY") > 0:
+            return [OrderIntent.buy("AAPL", percent_of_equity=90, tag="swap"), ClosePosition("SPY")]
+        return []
+
+
+def test_sells_fund_buys_in_the_same_decision(tmp_path, universe):
+    runner, clock = make_runner(tmp_path, universe, risk=RiskLimits(max_position_pct=100),
+                                accounts=[AccountSpec("swap", "Swap", "test_live_trading:SwapAgent", {})])
+    runner.run("decide", export=False)
+    clock.t = clock.t + timedelta(days=1)
+    runner.run("decide", export=False)
+    journal = [json.loads(x) for x in (tmp_path / "accounts" / "swap" / "journal.jsonl").read_text().splitlines()]
+    day2 = journal[-1]
+    by_symbol = {o["symbol"]: o for o in day2["orders"]}
+    assert by_symbol["SPY"]["status"] == "filled" and by_symbol["AAPL"]["status"] == "filled"
+    assert float(by_symbol["AAPL"]["avg_fill_price"]) > 0  # journal shows the executed price, not "new"
+    data = export_dashboard(runner.config, universe, now=clock.t)
+    acc = data["accounts"][0]
+    assert [p["symbol"] for p in acc["positions"]] == ["AAPL"]
+    assert acc["closed_trades"][0]["entry_reason"] == "day 1" and acc["closed_trades"][0]["exit_reason"] == "close_position"
