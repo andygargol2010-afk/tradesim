@@ -10,7 +10,7 @@ if [ -z "$base" ] || ! git cat-file -e "${base}^{commit}" 2>/dev/null; then
   echo "no previous deployment to compare with: build"
   exit 1
 fi
-if git diff --quiet "$base" HEAD -- . ':(exclude)live' ':(exclude)dashboard/live.json'; then
+if git diff --quiet "$base" HEAD -- . ':(exclude)live' ':(exclude)dashboard/live.json' ':(exclude)dashboard/ganancias.csv' ':(exclude)dashboard/ganancias.md'; then
   echo "only live data changed since ${base:0:7}: skip build (the dashboard reads it from the repository)"
   exit 0
 fi

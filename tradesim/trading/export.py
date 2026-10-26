@@ -186,6 +186,7 @@ def account_payload(spec: AccountSpec, account_dir: Path, universe: AssetUnivers
         "journal": list(reversed(_tail_jsonl(account_dir / "journal.jsonl", JOURNAL_ENTRIES))),
         "learning": json.loads(json.dumps(learning, default=str)) if learning is not None else None,
         "_daily_returns": daily.pct_change().dropna(),  # for the significance stats (removed before writing)
+        "_daily_equity": daily,  # for the daily P&L file (removed before writing)
     }
 
 
@@ -270,6 +271,7 @@ def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
             log.exception("export failed for %s", spec.id)
             accounts.append({"id": spec.id, "name": spec.name, "status": "error", "error": f"{type(exc).__name__}: {exc}"})
     _add_significance(accounts, config)
+    write_daily_pnl(accounts, config, Path(config.dashboard_file).parent)
     data = {
         "meta": {
             "generated_at": now.isoformat(),
@@ -314,3 +316,40 @@ def _add_significance(accounts: list[dict[str, Any]], config: LiveConfig) -> Non
             a["significance"] = significance(daily, None if is_bench else bench, a.get("learning"))
         except Exception as exc:  # noqa: BLE001
             a["significance"] = {"error": str(exc)[:200]}
+
+
+def write_daily_pnl(accounts: list[dict[str, Any]], config: LiveConfig, out_dir: Path) -> None:
+    """``ganancias.csv`` (one row per day and account) and ``ganancias.md`` (table: days x accounts) with what each
+    account gained or lost each UTC day (equity at the end of the day minus the previous day's; the first day against
+    its initial cash)."""
+    rows = []
+    for a in accounts:
+        daily = a.pop("_daily_equity", None)
+        if daily is None or not len(daily):
+            continue
+        prev = float(a.get("initial_cash") or 0)
+        for t, eq in daily.items():
+            eq = float(eq)
+            rows.append({"date": t.date().isoformat(), "id": a["id"], "name": a["name"], "equity": round(eq, 2),
+                         "pnl": round(eq - prev, 2), "pnl_pct": round((eq / prev - 1) * 100, 2) if prev else None,
+                         "total_pnl": round(eq - float(a.get("initial_cash") or eq), 2)})
+            prev = eq
+    if not rows:
+        return
+    lines = ["date,account,name,equity_usd,day_pnl_usd,day_pnl_pct,total_pnl_usd"]
+    lines += [f'{r["date"]},{r["id"]},"{r["name"]}",{r["equity"]},{r["pnl"]},{r["pnl_pct"]},{r["total_pnl"]}' for r in rows]
+    (out_dir / "ganancias.csv").write_text("\n".join(lines) + "\n")
+    names = list(dict.fromkeys(r["name"] for r in rows))
+    days = sorted({r["date"] for r in rows}, reverse=True)
+    by = {(r["date"], r["name"]): r for r in rows}
+    fmt = lambda r: "—" if r is None else f'{r["pnl"]:+.2f} ({r["pnl_pct"]:+.2f} %)'.replace(".", ",")  # noqa: E731
+    md = ["# Ganancia diaria de cada agente", "",
+          f"_Actualizado: {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC. USD ganados o perdidos cada día (UTC), "
+          "valor al cierre del día menos el del día anterior; el día en curso se va actualizando. "
+          "Datos en `ganancias.csv`._", "",
+          "| Día | " + " | ".join(names) + " |", "|---|" + "---:|" * len(names)]
+    md += [f"| {d} | " + " | ".join(fmt(by.get((d, n))) for n in names) + " |" for d in days]
+    total = {n: next((by[(d, n)] for d in days if (d, n) in by), None) for n in names}
+    md += ["", "**Total desde el inicio:** " + " · ".join(
+        f'{n} {t["total_pnl"]:+.2f} USD'.replace(".", ",") for n, t in total.items() if t)]
+    (out_dir / "ganancias.md").write_text("\n".join(md) + "\n")
