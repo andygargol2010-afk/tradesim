@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tradesim · Ganancias</title>
+  <meta name="description" content="Cuánto ganó o perdió cada agente cada día.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="tradesim-data-url" content="https://raw.githubusercontent.com/andygargol2010-afk/tradesim/main/ganancias/ganancias.csv">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="viz-root">
+    <header class="page-head">
+      <div>
+        <nav class="nav" aria-label="Secciones"><a href="/">Operativa diaria</a><a href="research.html">Investigación</a><a href="diario.html">Diario</a><a href="ganancias.html" aria-current="page">Ganancias</a><a href="backtest.html">Backtest</a></nav>
+        <h1>tradesim · Ganancias</h1>
+        <p class="subtitle">USD ganados o perdidos por cada agente cada día (UTC): valor al cierre del día menos el del día anterior. El día en curso se actualiza cada hora.</p>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">◐ Tema</button>
+    </header>
+    <div class="statusbar" id="statusbar">Cargando…</div>
+    <div id="notice"></div>
+
+    <main id="app" aria-busy="true">
+      <section class="card" aria-labelledby="h-total">
+        <h2 id="h-total">Total desde el inicio</h2>
+        <div class="table-scroll"><table id="total-table" class="data-table"></table></div>
+      </section>
+      <section class="card" aria-labelledby="h-days">
+        <h2 id="h-days">Por día</h2>
+        <p class="hint">Cada celda: ganancia del día en USD y en %. Descarga los datos en <a id="csv-link" href="#">CSV</a>.</p>
+        <div class="table-scroll"><table id="days-table" class="data-table"></table></div>
+      </section>
+    </main>
+
+    <footer class="page-foot" id="footer"></footer>
+  </div>
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite" hidden></div>
+  <script src="charts.js"></script>
+  <script src="ganancias.js"></script>
+</body>
+</html>
