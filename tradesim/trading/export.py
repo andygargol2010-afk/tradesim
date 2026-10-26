@@ -271,7 +271,7 @@ def export_dashboard(config: LiveConfig, universe: AssetUniverse | None = None,
             log.exception("export failed for %s", spec.id)
             accounts.append({"id": spec.id, "name": spec.name, "status": "error", "error": f"{type(exc).__name__}: {exc}"})
     _add_significance(accounts, config)
-    write_daily_pnl(accounts, config, Path(config.dashboard_file).parent)
+    write_daily_pnl(accounts, config, Path(config.pnl_dir))
     data = {
         "meta": {
             "generated_at": now.isoformat(),
@@ -336,6 +336,7 @@ def write_daily_pnl(accounts: list[dict[str, Any]], config: LiveConfig, out_dir:
             prev = eq
     if not rows:
         return
+    out_dir.mkdir(parents=True, exist_ok=True)
     lines = ["date,account,name,equity_usd,day_pnl_usd,day_pnl_pct,total_pnl_usd"]
     lines += [f'{r["date"]},{r["id"]},"{r["name"]}",{r["equity"]},{r["pnl"]},{r["pnl_pct"]},{r["total_pnl"]}' for r in rows]
     (out_dir / "ganancias.csv").write_text("\n".join(lines) + "\n")
@@ -346,7 +347,7 @@ def write_daily_pnl(accounts: list[dict[str, Any]], config: LiveConfig, out_dir:
     md = ["# Ganancia diaria de cada agente", "",
           f"_Actualizado: {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC. USD ganados o perdidos cada día (UTC), "
           "valor al cierre del día menos el del día anterior; el día en curso se va actualizando. "
-          "Datos en `ganancias.csv`._", "",
+          "Datos en `ganancias.csv` (misma carpeta)._", "",
           "| Día | " + " | ".join(names) + " |", "|---|" + "---:|" * len(names)]
     md += [f"| {d} | " + " | ".join(fmt(by.get((d, n))) for n in names) + " |" for d in days]
     total = {n: next((by[(d, n)] for d in days if (d, n) in by), None) for n in names}

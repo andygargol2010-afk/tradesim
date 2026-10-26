@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name "tradesim-bot"
           git config user.email "tradesim-bot@users.noreply.github.com"
-          git add live dashboard/live.json $(ls dashboard/diario.json dashboard/diario.md dashboard/ganancias.csv dashboard/ganancias.md 2>/dev/null)
+          git add live dashboard/live.json $(ls dashboard/diario.json dashboard/diario.md 2>/dev/null) ganancias
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "live: $MODE run $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do

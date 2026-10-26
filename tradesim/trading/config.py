@@ -87,6 +87,7 @@ class LiveConfig:
     weekend_crypto: bool = False
     # Daily AI chronicle of the simulation (dashboard/diario.json + diario.md), see tradesim.trading.chronicle.
     chronicle: bool = False
+    pnl_dir: str = "ganancias"  # daily gain of every account (ganancias.md / ganancias.csv)
 
     def research_config(self):
         """Research settings; research is off unless the config has a ``research`` section."""
@@ -109,7 +110,7 @@ class LiveConfig:
     def resolve(self, base: str | Path) -> "LiveConfig":
         """Make relative paths relative to ``base`` (the repository root)."""
         base = Path(base)
-        for attr in ("state_dir", "runs_log", "dashboard_file"):
+        for attr in ("state_dir", "runs_log", "dashboard_file", "pnl_dir"):
             p = Path(getattr(self, attr))
             if not p.is_absolute():
                 setattr(self, attr, str(base / p))

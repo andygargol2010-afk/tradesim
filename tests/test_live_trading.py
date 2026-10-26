@@ -32,7 +32,7 @@ def make_runner(tmp_path, universe, accounts=None, clock=None, risk=None):
         AccountSpec("ma", "Medias", "MovingAverageCrossAgent", {"max_weight": 0.25}),
         AccountSpec("bh", "Buy & hold", "BuyAndHoldAgent", {}),
     ], state_dir=str(tmp_path / "accounts"), runs_log=str(tmp_path / "runs.jsonl"),
-        dashboard_file=str(tmp_path / "live.json"), risk=risk or RiskLimits())
+        dashboard_file=str(tmp_path / "live.json"), pnl_dir=str(tmp_path / "ganancias"), risk=risk or RiskLimits())
     provider = ReplayLiveProvider(SyntheticProvider(seed=3), clock)
     return LiveRunner(cfg, provider=provider, universe=universe, clock=clock), clock
 
@@ -402,3 +402,13 @@ def test_drawdown_scales_exposure_and_reactivates(tmp_path, universe):
     assert scale == 1 and dd == 0 and meta["risk_peak"] == 60.0 and "reactivated" in note
     bh = AccountSpec("bh", "BH", "BuyAndHoldAgent", {}, drawdown_control=False)
     assert runner._exposure(bh, {"risk_peak": 100.0}, 50.0, 100.0, now)[0] == 1.0
+
+
+def test_daily_pnl_file(tmp_path, universe):
+    runner, clock = make_runner(tmp_path, universe, accounts=[AccountSpec("bh", "Buy & hold", "BuyAndHoldAgent", {})])
+    for d in range(3):
+        clock.t = datetime(2024, 3, 4, 14, 45, tzinfo=timezone.utc) + timedelta(days=d)
+        runner.run("decide", export=True)
+    md = (tmp_path / "ganancias" / "ganancias.md").read_text()
+    csv = (tmp_path / "ganancias" / "ganancias.csv").read_text().splitlines()
+    assert "| Día | Buy & hold |" in md and "2024-03-06" in md and len(csv) == 4
