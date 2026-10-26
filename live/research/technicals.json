@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T20:20:40.014641+00:00",
+ "generated_at": "2026-10-26T20:37:27.274346+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -139,7 +139,7 @@
   "IWM": {
    "symbol": "IWM",
    "as_of": "2026-10-26T00:00:00+00:00",
-   "close": 276.97,
+   "close": 276.99,
    "score": -0.464,
    "trend": {
     "direction": "bearish",
@@ -188,7 +188,7 @@
     "sma_20": 277.04,
     "sma_50": 285.54,
     "sma_200": 277.27,
-    "dist_sma200_pct": -0.11,
+    "dist_sma200_pct": -0.1,
     "high_52w": 304.39,
     "low_52w": 226.6,
     "volume_ratio_20": 0.6
@@ -906,8 +906,8 @@
      "bars_since_touch": 10
     },
     {
-     "price": 78.564,
-     "touches": 11,
+     "price": 78.553,
+     "touches": 10,
      "bars_since_touch": 38
     },
     {
@@ -980,8 +980,8 @@
      "bars_since_touch": 38
     },
     {
-     "price": 107.98,
-     "touches": 12,
+     "price": 107.96,
+     "touches": 13,
      "bars_since_touch": 43
     }
    ],
@@ -1286,12 +1286,12 @@
   "XLK": {
    "symbol": "XLK",
    "as_of": "2026-10-26T00:00:00+00:00",
-   "close": 186.39,
+   "close": 186.32,
    "score": 0.0,
    "trend": {
     "direction": "neutral",
     "change_pct": 4.82,
-    "r2": 0.201,
+    "r2": 0.2,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
    },
@@ -1330,12 +1330,12 @@
     }
    ],
    "indicators": {
-    "rsi_14": 44.0,
+    "rsi_14": 43.9,
     "atr_pct": 2.08,
     "sma_20": 192.82,
-    "sma_50": 189.47,
+    "sma_50": 189.46,
     "sma_200": 168.4,
-    "dist_sma200_pct": 10.68,
+    "dist_sma200_pct": 10.64,
     "high_52w": 203.25,
     "low_52w": 126.38,
     "volume_ratio_20": 0.83
@@ -1583,11 +1583,11 @@
   "USO": {
    "symbol": "USO",
    "as_of": "2026-10-26T00:00:00+00:00",
-   "close": 166.19,
+   "close": 166.23,
    "score": 0.514,
    "trend": {
     "direction": "bullish",
-    "change_pct": 34.23,
+    "change_pct": 34.24,
     "r2": 0.774,
     "quality": 0.774,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -1611,12 +1611,12 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 66.2,
+    "rsi_14": 66.3,
     "atr_pct": 3.05,
     "sma_20": 153.56,
     "sma_50": 147.26,
     "sma_200": 122.08,
-    "dist_sma200_pct": 36.13,
+    "dist_sma200_pct": 36.16,
     "high_52w": 169.96,
     "low_52w": 65.99,
     "volume_ratio_20": 1.09
@@ -1935,6 +1935,16 @@
      "status": "confirmed",
      "levels": {},
      "note": "MACD crossed below its signal above zero"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.3,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
     }
    ]
   },
@@ -2491,7 +2501,7 @@
     "dist_sma200_pct": -19.78,
     "high_52w": 283.4,
     "low_52w": 114.08,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 0.73
    },
    "patterns": [
     {
@@ -3023,9 +3033,9 @@
     "sma_50": 166.27,
     "sma_200": 152.2,
     "dist_sma200_pct": 21.24,
-    "high_52w": 184.59,
+    "high_52w": 184.58,
     "low_52w": 109.34,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 0.95
    },
    "patterns": [
     {
@@ -3113,7 +3123,7 @@
     "dist_sma200_pct": 22.23,
     "high_52w": 234.08,
     "low_52w": 142.51,
-    "volume_ratio_20": 0.91
+    "volume_ratio_20": 0.94
    },
    "patterns": [
     {
@@ -3407,7 +3417,7 @@
     "dist_sma200_pct": 13.66,
     "high_52w": 30.44,
     "low_52w": 22.567,
-    "volume_ratio_20": 0.83
+    "volume_ratio_20": 0.85
    },
    "patterns": [
     {
@@ -3471,7 +3481,7 @@
     "dist_sma200_pct": 9.19,
     "high_52w": 165.75,
     "low_52w": 133.74,
-    "volume_ratio_20": 0.72
+    "volume_ratio_20": 0.88
    },
    "patterns": [
     {
@@ -4989,7 +4999,7 @@
     "dist_sma200_pct": 7.12,
     "high_52w": 115.42,
     "low_52w": 91.489,
-    "volume_ratio_20": 0.78
+    "volume_ratio_20": 0.85
    },
    "patterns": [
     {
@@ -5230,7 +5240,7 @@
     "dist_sma200_pct": -11.7,
     "high_52w": 288.04,
     "low_52w": 177.33,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 0.77
    },
    "patterns": [
     {
@@ -5314,7 +5324,7 @@
     "dist_sma200_pct": -0.66,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 0.66
+    "volume_ratio_20": 0.68
    },
    "patterns": [
     {
@@ -5418,7 +5428,7 @@
     "dist_sma200_pct": -4.98,
     "high_52w": 230.98,
     "low_52w": 151.15,
-    "volume_ratio_20": 1.0
+    "volume_ratio_20": 1.01
    },
    "patterns": [
     {
@@ -5582,7 +5592,7 @@
     "dist_sma200_pct": -3.12,
     "high_52w": 383.18,
     "low_52w": 288.37,
-    "volume_ratio_20": 0.99
+    "volume_ratio_20": 1.04
    },
    "patterns": [
     {
@@ -5647,7 +5657,7 @@
     "dist_sma200_pct": 12.69,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 1.32
+    "volume_ratio_20": 1.35
    },
    "patterns": [
     {
@@ -5751,7 +5761,7 @@
     "dist_sma200_pct": 23.2,
     "high_52w": 291.4,
     "low_52w": 188.25,
-    "volume_ratio_20": 0.78
+    "volume_ratio_20": 0.81
    },
    "patterns": [
     {
@@ -5955,7 +5965,7 @@
     "dist_sma200_pct": 4.02,
     "high_52w": 128.83,
     "low_52w": 80.892,
-    "volume_ratio_20": 0.75
+    "volume_ratio_20": 0.77
    },
    "patterns": [
     {
@@ -6702,7 +6712,7 @@
     "dist_sma200_pct": -14.83,
     "high_52w": 28.429,
     "low_52w": 19.408,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.15
    },
    "patterns": [
     {
