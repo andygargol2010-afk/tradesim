@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T16:20:47.872963+00:00",
+ "generated_at": "2026-10-26T17:20:46.450041+00:00",
  "indicators": {
   "fed_funds": {
    "id": "fed_funds",
@@ -12,7 +12,7 @@
    "source": "fred",
    "series": "DFF",
    "trend": "flat",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "ust_2y": {
    "id": "ust_2y",
@@ -25,7 +25,7 @@
    "source": "fred",
    "series": "DGS2",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "ust_10y": {
    "id": "ust_10y",
@@ -38,7 +38,7 @@
    "source": "fred",
    "series": "DGS10",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "curve_10y_2y": {
    "id": "curve_10y_2y",
@@ -51,7 +51,7 @@
    "source": "fred",
    "series": "T10Y2Y",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "real_10y": {
    "id": "real_10y",
@@ -64,20 +64,20 @@
    "source": "fred",
    "series": "DFII10",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "hy_spread": {
    "id": "hy_spread",
    "name": "Diferencial high yield",
-   "value": 3.4,
-   "previous": 3.27,
-   "change": 0.13,
-   "as_of": "2026-10-22",
+   "value": 3.38,
+   "previous": 3.4,
+   "change": -0.02,
+   "as_of": "2026-10-23",
    "unit": "pp",
    "source": "fred",
    "series": "BAMLH0A0HYM2",
    "trend": "up",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "cpi_yoy": {
    "id": "cpi_yoy",
@@ -90,7 +90,7 @@
    "source": "fred",
    "series": "CPIAUCSL",
    "trend": "up",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "core_cpi_yoy": {
    "id": "core_cpi_yoy",
@@ -103,7 +103,7 @@
    "source": "fred",
    "series": "CPILFESL",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "core_pce_yoy": {
    "id": "core_pce_yoy",
@@ -116,7 +116,7 @@
    "source": "fred",
    "series": "PCEPILFE",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "unemployment": {
    "id": "unemployment",
@@ -129,7 +129,7 @@
    "source": "fred",
    "series": "UNRATE",
    "trend": "flat",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "payrolls_change": {
    "id": "payrolls_change",
@@ -142,7 +142,7 @@
    "source": "fred",
    "series": "PAYEMS",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "jobless_claims": {
    "id": "jobless_claims",
@@ -155,7 +155,7 @@
    "source": "fred",
    "series": "ICSA",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "gdp_growth": {
    "id": "gdp_growth",
@@ -168,7 +168,7 @@
    "source": "fred",
    "series": "A191RL1Q225SBEA",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "retail_sales_yoy": {
    "id": "retail_sales_yoy",
@@ -181,7 +181,7 @@
    "source": "fred",
    "series": "RSAFS",
    "trend": "up",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "consumer_sentiment": {
    "id": "consumer_sentiment",
@@ -194,7 +194,7 @@
    "source": "fred",
    "series": "UMCSENT",
    "trend": "down",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "m2_yoy": {
    "id": "m2_yoy",
@@ -207,21 +207,21 @@
    "source": "fred",
    "series": "M2SL",
    "trend": "up",
-   "fetched_at": "2026-10-26T05:20:41.205071+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "vix": {
    "id": "vix",
    "name": "VIX (volatilidad S&P 500)",
-   "value": 18.4,
+   "value": 18.25,
    "previous": 19.45,
-   "change": -1.05,
+   "change": -1.2,
    "as_of": "2026-10-26",
    "unit": "",
    "source": "yahoo",
    "series": "^VIX",
-   "change_1m_pct": 23.74,
+   "change_1m_pct": 22.73,
    "trend": "up",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "ust_10y_live": {
    "id": "ust_10y_live",
@@ -235,77 +235,77 @@
    "series": "^TNX",
    "change_1m_pct": -3.9,
    "trend": "down",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "ust_3m_live": {
    "id": "ust_3m_live",
    "name": "Letra 3 meses (mercado)",
-   "value": 4.035,
+   "value": 4.028,
    "previous": 4.032,
-   "change": 0.003,
+   "change": -0.004,
    "as_of": "2026-10-26",
    "unit": "%",
    "source": "yahoo",
    "series": "^IRX",
-   "change_1m_pct": -0.86,
+   "change_1m_pct": -1.03,
    "trend": "down",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "dxy": {
    "id": "dxy",
    "name": "\u00cdndice d\u00f3lar (DXY)",
-   "value": 101.992,
+   "value": 101.961,
    "previous": 101.81,
-   "change": 0.182,
+   "change": 0.151,
    "as_of": "2026-10-26",
    "unit": "",
    "source": "yahoo",
    "series": "DX-Y.NYB",
-   "change_1m_pct": 1.01,
+   "change_1m_pct": 0.98,
    "trend": "up",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "wti": {
    "id": "wti",
    "name": "Petr\u00f3leo WTI",
-   "value": 102.82,
+   "value": 102.48,
    "previous": 103.27,
-   "change": -0.45,
+   "change": -0.79,
    "as_of": "2026-10-26",
    "unit": "USD",
    "source": "yahoo",
    "series": "CL=F",
-   "change_1m_pct": 11.27,
+   "change_1m_pct": 10.9,
    "trend": "up",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "gold": {
    "id": "gold",
    "name": "Oro (futuro)",
-   "value": 4034.8,
+   "value": 4039.3,
    "previous": 4007.8999,
-   "change": 26.9001,
+   "change": 31.4001,
    "as_of": "2026-10-26",
    "unit": "USD",
    "source": "yahoo",
    "series": "GC=F",
-   "change_1m_pct": -6.63,
+   "change_1m_pct": -6.52,
    "trend": "down",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   },
   "copper": {
    "id": "copper",
    "name": "Cobre (futuro)",
-   "value": 6.5445,
+   "value": 6.554,
    "previous": 6.476,
-   "change": 0.0685,
+   "change": 0.078,
    "as_of": "2026-10-26",
    "unit": "USD",
    "source": "yahoo",
    "series": "HG=F",
-   "change_1m_pct": -2.26,
+   "change_1m_pct": -2.11,
    "trend": "up",
-   "fetched_at": "2026-10-26T16:20:47.872963+00:00"
+   "fetched_at": "2026-10-26T17:20:46.450041+00:00"
   }
  },
  "errors": {}
