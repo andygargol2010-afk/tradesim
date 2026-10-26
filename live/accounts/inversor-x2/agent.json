@@ -1,0 +1,35 @@
+{
+ "agent": "TraditionalInvestorAgent",
+ "params": {
+  "n_stocks": 4
+ },
+ "saved_at": "2026-10-26T16:04:10.627972+00:00",
+ "state": {
+  "basket": [
+   "XOM",
+   "MU",
+   "MRK",
+   "KO"
+  ],
+  "reviewed_year": 2026,
+  "rebalanced_q": [
+   2026,
+   3
+  ],
+  "log": [
+   {
+    "date": "2026-10-26T16:04:10.568580+00:00",
+    "reasons": [
+     "inversi\u00f3n inicial",
+     "revisi\u00f3n anual de la cartera de acciones: XOM, MU, MRK, KO",
+     "core fuera de banda (0.0% vs objetivo 43.0%)",
+     "bonds fuera de banda (0.0% vs objetivo 15.0%)",
+     "gold fuera de banda (0.0% vs objetivo 7.0%)",
+     "crypto fuera de banda (0.0% vs objetivo 5.0%)",
+     "stocks fuera de banda (0.0% vs objetivo 28.0%)"
+    ],
+    "orders": 11
+   }
+  ]
+ }
+}

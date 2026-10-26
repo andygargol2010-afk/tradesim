@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "100.0000000000000000000000000000000",
+  "cash": "79.99607461128000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -49,8 +49,35 @@
    "short_borrow_fee_annual": "0.005",
    "cash_interest_annual": "0"
   },
-  "positions": [],
-  "fills": [],
+  "positions": [
+   {
+    "symbol": "BAC",
+    "quantity": "0.392541707",
+    "avg_price": "50.96",
+    "open_fees": "0",
+    "opened_at": "2026-10-26T16:03:31.636290+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "50.945",
+    "entry_order_id": "O00000001"
+   }
+  ],
+  "fills": [
+   {
+    "id": "F00000001",
+    "order_id": "O00000001",
+    "symbol": "BAC",
+    "side": "buy",
+    "quantity": "0.392541707",
+    "price": "50.96",
+    "notional": "20.00392539",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.02551503",
+    "realized_pnl": "0",
+    "timestamp": "2026-10-26T16:03:31.636290+00:00"
+   }
+  ],
   "closed_trades": [],
   "equity_curve": [
    [
@@ -192,18 +219,77 @@
     "100.0000000000000000000000000000000",
     "0",
     "0"
+   ],
+   [
+    "2026-10-26T16:03:20.275430+00:00",
+    "100.0000000000000000000000000000000",
+    "100.0000000000000000000000000000000",
+    "0",
+    "0"
+   ],
+   [
+    "2026-10-26T16:04:09.243692+00:00",
+    "99.99411187439500000000000000000000",
+    "79.99607461128000000000000000000000",
+    "19.998037263115",
+    "19.998037263115"
    ]
   ],
   "total_fees": "0",
-  "total_slippage": "0",
+  "total_slippage": "0.02551503",
   "total_financing": "0E-42",
   "peak_equity": "100",
-  "max_drawdown": "0"
+  "max_drawdown": "0.00005888125605000000000000000000"
  },
- "orders": [],
- "open_order_ids": [],
- "order_id_counter": 1,
- "fill_id_counter": 1,
+ "orders": [
+  {
+   "id": "O00000001",
+   "symbol": "BAC",
+   "side": "buy",
+   "quantity": "0.392541707",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.392541707",
+   "avg_fill_price": "50.96",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-26T16:04:09.243533+00:00",
+   "updated_at": "2026-10-26T16:03:31.636290+00:00",
+   "reject_reason": null,
+   "tag": "RSI 23.5",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000002",
+   "symbol": "BAC",
+   "side": "sell",
+   "quantity": "0.392541707",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "47.68",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-26T16:04:09.246300+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-BAC-2"
+  }
+ ],
+ "open_order_ids": [
+  "O00000002"
+ ],
+ "order_id_counter": 3,
+ "fill_id_counter": 2,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -213,7 +299,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-26T15:21:45.561906+00:00",
+ "last_sync": "2026-10-26T16:04:09.243692+00:00",
  "bankrupt": false,
  "path_checked": {}
 }
