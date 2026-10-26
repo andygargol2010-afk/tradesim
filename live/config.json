@@ -1,5 +1,5 @@
 {
-  "symbols": ["SPY", "QQQ", "IWM", "DIA", "GLD", "SLV", "TLT", "EEM", "XLE", "XLF", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "AVGO", "AMD", "NFLX", "ORCL", "CRM", "JPM", "BAC", "GS", "V", "MA", "XOM", "CVX", "JNJ", "UNH", "LLY", "PFE", "PG", "KO", "PEP", "WMT", "COST", "HD", "MCD", "CAT", "BA", "BTC-USD", "ETH-USD", "SOL-USD", "XRP-USD", "ADA-USD", "DOGE-USD", "LINK-USD", "LTC-USD"],
+  "symbols": ["SPY", "QQQ", "IWM", "DIA", "GLD", "SLV", "TLT", "EEM", "XLE", "XLF", "IEF", "HYG", "TIP", "EFA", "EWJ", "FXI", "INDA", "XLK", "XLV", "XLU", "VNQ", "USO", "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "AVGO", "AMD", "NFLX", "ORCL", "CRM", "JPM", "BAC", "GS", "V", "MA", "XOM", "CVX", "JNJ", "UNH", "LLY", "PFE", "PG", "KO", "PEP", "WMT", "COST", "HD", "MCD", "CAT", "BA", "ADBE", "INTC", "QCOM", "CSCO", "IBM", "TXN", "MU", "NOW", "UBER", "PLTR", "DIS", "NKE", "SBUX", "LOW", "WFC", "MS", "BLK", "AXP", "MRK", "ABBV", "TMO", "ABT", "PM", "COP", "SLB", "HON", "GE", "DE", "LMT", "NEE", "T", "LIN", "BTC-USD", "ETH-USD", "SOL-USD", "XRP-USD", "ADA-USD", "DOGE-USD", "LINK-USD", "LTC-USD", "AVAX-USD", "DOT-USD", "BCH-USD", "UNI-USD", "AAVE-USD", "XLM-USD"],
   "timeframe": "1d",
   "crypto_exchange": "coinbase",
   "stocks_data": "auto",
@@ -81,7 +81,7 @@
       "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Compra los 50 activos a partes iguales el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor.",
+      "description": "Compra a partes iguales los 50 activos con los que empezó la simulación el primer día y no hace nada más. Es la vara de medir: un agente que no lo supera no aporta valor.",
       "auto_stop": false,
       "drawdown_control": false
     },
@@ -105,7 +105,7 @@
       "initial_cash": 100,
       "fees": "alpaca",
       "broker": "paper",
-      "description": "Sin reglas fijas: cada día estudia los patrones técnicos de los 50 activos, los datos macro relevantes para cada tipo de activo, las noticias analizadas y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidación por posición. Decide con IA gratuita (Gemini o Groq) si hay clave; si no, o si se agota el cupo, con el motor local gratuito que combina las mismas señales. Revisa sus decisiones pasadas y anota lecciones."
+      "description": "Sin reglas fijas: cada día estudia los patrones técnicos de los 100 activos, los datos macro relevantes para cada tipo de activo, las noticias analizadas y el calendario de eventos del mes, y decide la cartera completa con una tesis, catalizadores y un nivel de invalidación por posición. Decide con IA gratuita (Gemini o Groq) si hay clave; si no, o si se agota el cupo, con el motor local gratuito que combina las mismas señales. Revisa sus decisiones pasadas y anota lecciones."
     },
     {
       "id": "inversor",

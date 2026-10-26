@@ -55,7 +55,7 @@ episodios de evaluación, gráficas en `runs/practice/` y comparación contra ba
 
 ## Operativa diaria en vivo
 
-Cinco agentes operan **cada día con precios reales** sobre 50 activos (ETF, acciones y cripto), cada uno en su propia cuenta de práctica de 100 $ (`initial_cash` en `live/config.json`), y el
+Los agentes operan **cada día con precios reales** sobre 100 activos (ETF, acciones y cripto), cada uno en su propia cuenta de práctica de 100 $ (`initial_cash` en `live/config.json`), y el
 dashboard (`dashboard/index.html`, la portada en Vercel) muestra por cuenta: equity, P&L total y del día, operaciones
 abiertas (cantidad fraccionaria, **capital asignado y % de la cuenta al entrar**, precio medio, precio actual, resultado
 no realizado, días abierta, motivo de entrada), operaciones cerradas (asignado, entrada/salida, resultado neto,
@@ -163,7 +163,7 @@ en fin de semana. Prueba a 1 año con 100 USD: 120,8 (oct-24→oct-25, caída m�
 máx. 7,0 %), frente a 130,2 y 103,1 de buy & hold.
 
 **Cripto en fin de semana y festivos** (`"weekend_crypto": true`). Con la bolsa cerrada cada agente decide igual que
-un día laborable, comparando los 50 activos (acciones a su último precio), y solo se ejecuta la parte cripto: una
+un día laborable, comparando los 100 activos (acciones a su último precio), y solo se ejecuta la parte cripto: una
 compra de cripto ocurre solo si entra en su selección frente a las acciones, es decir, si la prefiere a lo que podría
 comprar el lunes; si no, espera. Las ventas de cripto se ejecutan; las compras usan solo efectivo libre (nunca se venden
 acciones para financiarlas) y se reducen si no alcanza. El resto de la decisión queda en el diario como aplazado.
