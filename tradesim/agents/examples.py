@@ -97,12 +97,14 @@ class MovingAverageCrossAgent(Agent):
 
     Args:
         max_weight: cap per symbol (fraction of equity), e.g. to respect a broker / risk limit.
+        max_positions: hold at most this many (current holdings still in trend first, then the strongest trends).
     """
 
     def __init__(self, symbols: Sequence[str] | None = None, fast: int = 20, slow: int = 50,
                  invested_fraction: float = 0.95, max_weight: float = 1.0, target_vol: float | None = 0.15,
-                 group_cap: float = 0.30, crypto_cap: float = 0.30):
+                 group_cap: float = 0.30, crypto_cap: float = 0.30, max_positions: int | None = None):
         self.symbols = list(symbols) if symbols else None
+        self.max_positions = max_positions
         self.fast, self.slow = fast, slow
         self.invested_fraction = invested_fraction
         self.max_weight = max_weight
@@ -113,13 +115,16 @@ class MovingAverageCrossAgent(Agent):
         if obs.open_orders:
             self._last = {"waiting": True}
             return []
-        up = []
+        strength = {}
         for sym in self.symbols or obs.symbols:
             closes = obs.closes(sym, self.slow)
             if len(closes) == self.slow and closes[-self.fast:].mean() > closes.mean():
-                up.append(sym)
-        chosen = frozenset(up)
+                strength[sym] = closes[-self.fast:].mean() / closes.mean()
         held = frozenset(s for s, q in obs.positions.items() if q > 0)
+        up = list(strength)
+        if self.max_positions and len(up) > self.max_positions:  # concentrate: holdings still in trend first
+            up = sorted(up, key=lambda s: (s not in held, -strength[s]))[: self.max_positions]
+        chosen = frozenset(up)
         self._last = {"uptrend": sorted(chosen), "held": sorted(held), "checked": len(self.symbols or obs.symbols)}
         if chosen == held:
             return []

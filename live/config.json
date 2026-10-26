@@ -119,6 +119,85 @@
       "auto_stop": false
     },
     {
+      "id": "aprendiz-x2",
+      "name": "Aprendiz ×2",
+      "agent": "OnlineLinearAgent",
+      "params": {
+        "top_k": 3,
+        "max_weight": 0.3,
+        "target_vol": 0.21,
+        "horizon": 5,
+        "ic_gate": true
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Copia concentrada (×2 capital por operación): como el aprendiz, pero con 3 posiciones en lugar de 6 y una volatilidad objetivo mayor."
+    },
+    {
+      "id": "rsi-x2",
+      "name": "RSI adaptativo ×2",
+      "agent": "WalkForwardRSIAgent",
+      "params": {
+        "position_pct": 20.0,
+        "max_positions": 4
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Copia concentrada (×2 capital por operación): como el RSI adaptativo, pero con un 20 % del capital por compra (en lugar de 10 %) y como máximo 4 posiciones."
+    },
+    {
+      "id": "cruce-medias-x2",
+      "name": "Cruce de medias ×2",
+      "agent": "MovingAverageCrossAgent",
+      "params": {
+        "max_weight": 0.3,
+        "max_positions": 12,
+        "target_vol": 0.21
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "stop_loss_atr": 4.5,
+      "description": "Copia concentrada (×2 capital por operación): como el cruce de medias, pero solo con las 12 tendencias más fuertes y el doble de peso máximo por posición."
+    },
+    {
+      "id": "analista-x2",
+      "name": "Analista ×2",
+      "agent": "DiscretionaryAgent",
+      "params": {
+        "engines": [
+          "gemini",
+          "groq",
+          "anthropic"
+        ],
+        "model": "claude-opus-5-5",
+        "effort": "high",
+        "max_weight": 0.3,
+        "max_positions": 6,
+        "web_searches": 5,
+        "web_fetches": 3
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Copia concentrada (×2 capital por operación): como el analista discrecional, pero con hasta un 30 % por posición (en lugar de 15 %) y como máximo 6 posiciones."
+    },
+    {
+      "id": "inversor-x2",
+      "name": "Inversor tradicional ×2",
+      "agent": "TraditionalInvestorAgent",
+      "params": {
+        "n_stocks": 4
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "auto_stop": false,
+      "description": "Copia concentrada (×2 capital por operación): misma cartera de política que el inversor tradicional, pero con 4 acciones de calidad en lugar de 8 (el doble de peso cada una)."
+    },
+    {
       "id": "combinador",
       "name": "Combinador de señales",
       "agent": "SignalStackingAgent",
@@ -127,6 +206,20 @@
       "fees": "alpaca",
       "broker": "paper",
       "description": "Modelo de segundo nivel: combina las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias), con pesos distintos en mercados de tensión, aprendiendo de los resultados cuál conviene en cada situación. Solo opera cuando su acierto (IC) es significativo."
+    },
+    {
+      "id": "combinador-x2",
+      "name": "Combinador ×2",
+      "agent": "SignalStackingAgent",
+      "params": {
+        "top_k": 3,
+        "max_weight": 0.3,
+        "target_vol": 0.21
+      },
+      "initial_cash": 100,
+      "fees": "alpaca",
+      "broker": "paper",
+      "description": "Copia concentrada (×2 capital por operación): como el combinador de señales, pero con 3 posiciones en lugar de 5 y el doble de peso máximo."
     },
     {
       "id": "meta",
