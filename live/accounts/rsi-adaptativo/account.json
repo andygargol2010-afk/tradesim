@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:00:56.338231+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "32.385000000000005",
+    "mark_price": "32.425",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.55500030517578",
+    "mark_price": "50.655",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:01:09.776314+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "704.7149999999999",
+    "mark_price": "708.219970703125",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "293.5199890136719",
+    "mark_price": "295.5249938964844",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "20.934999465942383",
+    "mark_price": "21.045",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:01:20.770000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500976",
-    "mark_price": "2317.42",
+    "mark_price": "2344.445",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:01:19.774000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500270",
-    "mark_price": "99.995",
+    "mark_price": "100.91499999999999",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:01:20.875000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500579",
-    "mark_price": "1.3099",
+    "mark_price": "1.319",
     "entry_order_id": "O00000008"
    }
   ],
@@ -709,12 +709,19 @@
     "19.90839567874000000000000000000000",
     "80.061034429040446416985288",
     "80.061034429040446416985288"
+   ],
+   [
+    "2026-10-27T15:21:46.090999+00:00",
+    "100.4506297807347471971332000000000",
+    "19.90839567874000000000000000000000",
+    "80.5422341019947471971332",
+    "80.5422341019947471971332"
    ]
   ],
   "total_fees": "0.07501825",
   "total_slippage": "0.05904961",
   "total_financing": "0E-43",
-  "peak_equity": "100",
+  "peak_equity": "100.4506297807347471971332000000000",
   "max_drawdown": "0.00695800896559603881329979000000"
  },
  "orders": [
@@ -1000,14 +1007,14 @@
    "limit_price": null,
    "stop_price": "2064.14",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-26T16:02:44.224445+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-27T15:21:47.164820+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-ETH-USD-14"
@@ -1116,19 +1123,40 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-GE-19"
+  },
+  {
+   "id": "O00000020",
+   "symbol": "ETH-USD",
+   "side": "sell",
+   "quantity": "0.00430442",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "2100.75",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-27T15:21:47.164893+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-ETH-USD-20"
   }
  ],
  "open_order_ids": [
   "O00000009",
   "O00000010",
   "O00000013",
-  "O00000014",
   "O00000015",
   "O00000017",
   "O00000018",
-  "O00000019"
+  "O00000019",
+  "O00000020"
  ],
- "order_id_counter": 20,
+ "order_id_counter": 21,
  "fill_id_counter": 9,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -1139,16 +1167,16 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-27T14:22:22.645410+00:00",
+ "last_sync": "2026-10-27T15:21:46.090999+00:00",
  "bankrupt": false,
  "path_checked": {
-  "FXI": "2026-10-27T14:20:00+00:00",
-  "BAC": "2026-10-27T14:20:00+00:00",
-  "CAT": "2026-10-27T14:20:00+00:00",
-  "GE": "2026-10-27T14:20:00+00:00",
-  "T": "2026-10-27T14:20:00+00:00",
-  "ETH-USD": "2026-10-27T14:20:00+00:00",
-  "SOL-USD": "2026-10-27T14:20:00+00:00",
-  "XRP-USD": "2026-10-27T14:20:00+00:00"
+  "FXI": "2026-10-27T15:20:00+00:00",
+  "BAC": "2026-10-27T15:20:00+00:00",
+  "CAT": "2026-10-27T15:20:00+00:00",
+  "GE": "2026-10-27T15:20:00+00:00",
+  "T": "2026-10-27T15:20:00+00:00",
+  "ETH-USD": "2026-10-27T15:20:00+00:00",
+  "SOL-USD": "2026-10-27T15:20:00+00:00",
+  "XRP-USD": "2026-10-27T15:20:00+00:00"
  }
 }
