@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:48.548000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.01083434",
-    "mark_price": "131.845",
+    "mark_price": "130.775",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "286.3900146484375",
+    "mark_price": "286.445",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:29.972746+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "560.260009765625",
+    "mark_price": "562.0",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:47.866000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00893969",
-    "mark_price": "8.8575",
+    "mark_price": "8.785",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:03:29.142946+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "620.1900024414062",
+    "mark_price": "615.2849731445312",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:03:27.756271+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "531.3300170898438",
+    "mark_price": "529.25",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:03:40.747845+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "154.77999877929688",
+    "mark_price": "152.91000366210938",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:03:41.344774+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "198.72999572753906",
+    "mark_price": "195.00289916992188",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-26T16:03:44.987954+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "693.02001953125",
+    "mark_price": "708.9199829101562",
     "entry_order_id": "O00000009"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:03:40.167726+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "308.9100036621094",
+    "mark_price": "308.9800109863281",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "163.8800048828125",
+    "mark_price": "167.52000427246094",
     "entry_order_id": "O00000011"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-10-26T16:03:33.009833+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "179.91000366210938",
+    "mark_price": "181.6999969482422",
     "entry_order_id": "O00000012"
    }
   ],
@@ -984,6 +984,13 @@
     "4.968268304710000000000000000000000",
     "95.17269023556774802110184",
     "95.17269023556774802110184"
+   ],
+   [
+    "2026-10-28T14:22:06.465810+00:00",
+    "100.3285780708177424336055000000000",
+    "4.968268304710000000000000000000000",
+    "95.36030976610774243360550",
+    "95.36030976610774243360550"
    ]
   ],
   "total_fees": "0.01977403",
@@ -1716,14 +1723,14 @@
    "limit_price": null,
    "stop_price": "601.88",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-27T15:21:50.681815+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-28T14:22:06.721022+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-TMO-35"
@@ -1853,6 +1860,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-ABBV-41"
+  },
+  {
+   "id": "O00000042",
+   "symbol": "TMO",
+   "side": "sell",
+   "quantity": "0.012955577",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "614.24",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-28T14:22:06.721082+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-TMO-42"
   }
  ],
  "open_order_ids": [
@@ -1862,14 +1890,14 @@
   "O00000027",
   "O00000029",
   "O00000034",
-  "O00000035",
   "O00000037",
   "O00000038",
   "O00000039",
   "O00000040",
-  "O00000041"
+  "O00000041",
+  "O00000042"
  ],
- "order_id_counter": 42,
+ "order_id_counter": 43,
  "fill_id_counter": 13,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -1880,20 +1908,20 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-28T13:22:03.164418+00:00",
+ "last_sync": "2026-10-28T14:22:06.465810+00:00",
  "bankrupt": false,
  "path_checked": {
-  "AAVE-USD": "2026-10-28T13:20:00+00:00",
-  "ABBV": "2026-10-27T20:00:00+00:00",
-  "AMD": "2026-10-27T20:00:00+00:00",
-  "AVAX-USD": "2026-10-28T13:20:00+00:00",
-  "META": "2026-10-27T20:00:00+00:00",
-  "MSFT": "2026-10-27T20:00:00+00:00",
-  "NOW": "2026-10-27T20:00:00+00:00",
-  "PLTR": "2026-10-27T20:00:00+00:00",
-  "TMO": "2026-10-27T20:00:00+00:00",
-  "TXN": "2026-10-27T20:00:00+00:00",
-  "USO": "2026-10-27T20:00:00+00:00",
-  "XOM": "2026-10-27T20:00:00+00:00"
+  "AAVE-USD": "2026-10-28T14:20:00+00:00",
+  "ABBV": "2026-10-28T14:20:00+00:00",
+  "AMD": "2026-10-28T14:20:00+00:00",
+  "AVAX-USD": "2026-10-28T14:20:00+00:00",
+  "META": "2026-10-28T14:20:00+00:00",
+  "MSFT": "2026-10-28T14:20:00+00:00",
+  "NOW": "2026-10-28T14:20:00+00:00",
+  "PLTR": "2026-10-28T14:20:00+00:00",
+  "TMO": "2026-10-28T14:20:00+00:00",
+  "TXN": "2026-10-28T14:20:00+00:00",
+  "USO": "2026-10-28T14:20:00+00:00",
+  "XOM": "2026-10-28T14:20:00+00:00"
  }
 }
