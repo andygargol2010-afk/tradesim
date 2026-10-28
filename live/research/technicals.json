@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T20:20:45.233640+00:00",
+ "generated_at": "2026-10-28T20:32:28.003095+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -133,7 +133,7 @@
   "IWM": {
    "symbol": "IWM",
    "as_of": "2026-10-28T00:00:00+00:00",
-   "close": 281.36,
+   "close": 281.29,
    "score": -0.345,
    "trend": {
     "direction": "bearish",
@@ -177,12 +177,12 @@
     }
    ],
    "indicators": {
-    "rsi_14": 54.0,
+    "rsi_14": 53.9,
     "atr_pct": 1.25,
     "sma_20": 277.27,
     "sma_50": 284.72,
     "sma_200": 277.49,
-    "dist_sma200_pct": 1.4,
+    "dist_sma200_pct": 1.37,
     "high_52w": 304.39,
     "low_52w": 226.6,
     "volume_ratio_20": 0.73
@@ -287,7 +287,7 @@
   "GLD": {
    "symbol": "GLD",
    "as_of": "2026-10-28T00:00:00+00:00",
-   "close": 373.57,
+   "close": 373.51,
    "score": 0.384,
    "trend": {
     "direction": "bearish",
@@ -326,7 +326,7 @@
     "sma_20": 377.69,
     "sma_50": 392.67,
     "sma_200": 413.54,
-    "dist_sma200_pct": -9.66,
+    "dist_sma200_pct": -9.68,
     "high_52w": 509.7,
     "low_52w": 360.12,
     "volume_ratio_20": 1.14
@@ -581,7 +581,7 @@
   "XLE": {
    "symbol": "XLE",
    "as_of": "2026-10-28T00:00:00+00:00",
-   "close": 68.48,
+   "close": 68.45,
    "score": 0.157,
    "trend": {
     "direction": "bullish",
@@ -609,12 +609,12 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 62.2,
+    "rsi_14": 62.1,
     "atr_pct": 2.03,
-    "sma_20": 66.46,
-    "sma_50": 64.535,
+    "sma_20": 66.458,
+    "sma_50": 64.534,
     "sma_200": 57.924,
-    "dist_sma200_pct": 18.22,
+    "dist_sma200_pct": 18.17,
     "high_52w": 69.86,
     "low_52w": 41.988,
     "volume_ratio_20": 0.87
@@ -896,8 +896,8 @@
      "bars_since_touch": 4
     },
     {
-     "price": 107.96,
-     "touches": 13,
+     "price": 107.98,
+     "touches": 12,
      "bars_since_touch": 45
     }
    ],
@@ -1525,11 +1525,11 @@
   "USO": {
    "symbol": "USO",
    "as_of": "2026-10-28T00:00:00+00:00",
-   "close": 166.53,
+   "close": 166.57,
    "score": 0.33,
    "trend": {
     "direction": "bullish",
-    "change_pct": 33.12,
+    "change_pct": 33.13,
     "r2": 0.77,
     "quality": 0.77,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -1558,7 +1558,7 @@
     "sma_20": 155.63,
     "sma_50": 148.65,
     "sma_200": 123.02,
-    "dist_sma200_pct": 35.36,
+    "dist_sma200_pct": 35.4,
     "high_52w": 169.96,
     "low_52w": 65.99,
     "volume_ratio_20": 1.13
@@ -2367,7 +2367,7 @@
    "symbol": "ORCL",
    "as_of": "2026-10-28T00:00:00+00:00",
    "close": 144.54,
-   "score": 0.251,
+   "score": 0.252,
    "trend": {
     "direction": "bearish",
     "change_pct": -12.75,
@@ -2418,7 +2418,7 @@
     "dist_sma200_pct": -7.66,
     "high_52w": 281.69,
     "low_52w": 114.08,
-    "volume_ratio_20": 2.8
+    "volume_ratio_20": 2.85
    },
    "patterns": [
     {
@@ -2435,11 +2435,11 @@
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.34,
+     "strength": 0.343,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "volume 2.8x its 20-bar average"
+     "note": "volume 2.9x its 20-bar average"
     },
     {
      "name": "doji",
@@ -3007,7 +3007,7 @@
     "dist_sma200_pct": 19.13,
     "high_52w": 184.88,
     "low_52w": 109.34,
-    "volume_ratio_20": 0.98
+    "volume_ratio_20": 1.03
    },
    "patterns": [
     {
@@ -3061,7 +3061,7 @@
     "dist_sma200_pct": 20.3,
     "high_52w": 234.08,
     "low_52w": 142.51,
-    "volume_ratio_20": 0.85
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -3296,7 +3296,7 @@
     "dist_sma200_pct": 18.63,
     "high_52w": 1321.2,
     "low_52w": 804.56,
-    "volume_ratio_20": 0.84
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -3370,7 +3370,7 @@
     "dist_sma200_pct": 12.12,
     "high_52w": 30.44,
     "low_52w": 22.567,
-    "volume_ratio_20": 0.81
+    "volume_ratio_20": 0.89
    },
    "patterns": [
     {
@@ -3449,7 +3449,7 @@
     "dist_sma200_pct": 7.91,
     "high_52w": 165.75,
     "low_52w": 133.74,
-    "volume_ratio_20": 0.48
+    "volume_ratio_20": 0.51
    },
    "patterns": [
     {
@@ -4974,7 +4974,7 @@
     "dist_sma200_pct": 5.84,
     "high_52w": 115.42,
     "low_52w": 91.489,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 0.73
    },
    "patterns": [
     {
@@ -5300,7 +5300,7 @@
     "dist_sma200_pct": 0.69,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 0.85
+    "volume_ratio_20": 0.88
    },
    "patterns": [
     {
@@ -5380,7 +5380,7 @@
     "dist_sma200_pct": -1.57,
     "high_52w": 230.98,
     "low_52w": 151.15,
-    "volume_ratio_20": 0.84
+    "volume_ratio_20": 0.88
    },
    "patterns": []
   },
@@ -5503,7 +5503,7 @@
     "dist_sma200_pct": -2.08,
     "high_52w": 383.18,
     "low_52w": 288.37,
-    "volume_ratio_20": 0.62
+    "volume_ratio_20": 0.65
    },
    "patterns": [
     {
@@ -5598,7 +5598,7 @@
     "dist_sma200_pct": 12.65,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 0.8
+    "volume_ratio_20": 0.82
    },
    "patterns": [
     {
@@ -5668,7 +5668,7 @@
     "dist_sma200_pct": 22.5,
     "high_52w": 291.4,
     "low_52w": 188.25,
-    "volume_ratio_20": 0.56
+    "volume_ratio_20": 0.59
    },
    "patterns": [
     {
@@ -5824,7 +5824,7 @@
     "dist_sma200_pct": 1.99,
     "high_52w": 128.83,
     "low_52w": 80.892,
-    "volume_ratio_20": 0.52
+    "volume_ratio_20": 0.54
    },
    "patterns": [
     {
@@ -6539,7 +6539,7 @@
     "dist_sma200_pct": -15.37,
     "high_52w": 28.429,
     "low_52w": 19.408,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 1.01
    },
    "patterns": [
     {
