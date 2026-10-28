@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:01:20.770000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500976",
-    "mark_price": "2350.145",
+    "mark_price": "2362.865",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:01:19.774000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500270",
-    "mark_price": "101.81",
+    "mark_price": "102.35",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:01:20.875000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500579",
-    "mark_price": "1.32335",
+    "mark_price": "1.3288",
     "entry_order_id": "O00000008"
    }
   ],
@@ -898,12 +898,19 @@
     "19.90839567874000000000000000000000",
     "80.813821340689035615385612",
     "80.813821340689035615385612"
+   ],
+   [
+    "2026-10-28T08:22:00.681260+00:00",
+    "100.8721508387335356153856120000000",
+    "19.90839567874000000000000000000000",
+    "80.963755159993535615385612",
+    "80.963755159993535615385612"
    ]
   ],
   "total_fees": "0.07501825",
   "total_slippage": "0.05904961",
   "total_financing": "0E-46",
-  "peak_equity": "100.8548741989770384514710140000000",
+  "peak_equity": "100.8721508387335356153856120000000",
   "max_drawdown": "0.00695800896559603881329979000000"
  },
  "orders": [
@@ -1399,14 +1406,14 @@
    "limit_price": null,
    "stop_price": "91.1554",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T00:22:22.096652+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-28T08:22:01.613662+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-SOL-USD-24"
@@ -1473,6 +1480,27 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-XRP-USD-27"
+  },
+  {
+   "id": "O00000028",
+   "symbol": "SOL-USD",
+   "side": "sell",
+   "quantity": "0.09830908",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "92.3454",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-28T08:22:01.613720+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-SOL-USD-28"
   }
  ],
  "open_order_ids": [
@@ -1480,12 +1508,12 @@
   "O00000010",
   "O00000013",
   "O00000023",
-  "O00000024",
   "O00000025",
   "O00000026",
-  "O00000027"
+  "O00000027",
+  "O00000028"
  ],
- "order_id_counter": 28,
+ "order_id_counter": 29,
  "fill_id_counter": 9,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -1496,7 +1524,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-28T07:22:00.261773+00:00",
+ "last_sync": "2026-10-28T08:22:00.681260+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-10-27T20:00:00+00:00",
@@ -1504,8 +1532,8 @@
   "CAT": "2026-10-27T20:00:00+00:00",
   "GE": "2026-10-27T20:00:00+00:00",
   "T": "2026-10-27T20:00:00+00:00",
-  "ETH-USD": "2026-10-28T07:20:00+00:00",
-  "SOL-USD": "2026-10-28T07:20:00+00:00",
-  "XRP-USD": "2026-10-28T07:20:00+00:00"
+  "ETH-USD": "2026-10-28T08:20:00+00:00",
+  "SOL-USD": "2026-10-28T08:20:00+00:00",
+  "XRP-USD": "2026-10-28T08:20:00+00:00"
  }
 }
