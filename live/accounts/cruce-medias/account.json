@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:23.067000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00487880",
-    "mark_price": "81086.995",
+    "mark_price": "81545.715",
     "entry_order_id": "O00000004"
    },
    {
@@ -498,7 +498,7 @@
     "opened_at": "2026-10-27T15:42:08.319000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00250547",
-    "mark_price": "135.46499999999997",
+    "mark_price": "136.21",
     "entry_order_id": "O00000147"
    },
    {
@@ -1847,6 +1847,13 @@
     "11.54685863834000000000000000000000",
     "88.611947862283950073024669",
     "88.611947862283950073024669"
+   ],
+   [
+    "2026-10-28T08:36:56.114495+00:00",
+    "100.1756036852239503005530690000000",
+    "11.54685863834000000000000000000000",
+    "88.628745046883950300553069",
+    "88.628745046883950300553069"
    ]
   ],
   "total_fees": "0.00761531",
@@ -5078,14 +5085,14 @@
    "limit_price": null,
    "stop_price": "71693.2",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T00:22:26.727417+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-28T08:37:04.525689+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-BTC-USD-154"
@@ -5099,14 +5106,14 @@
    "limit_price": null,
    "stop_price": "93.2018",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T00:22:26.750315+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-28T08:37:04.559806+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AAVE-USD-155"
@@ -5152,6 +5159,48 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-QCOM-157"
+  },
+  {
+   "id": "O00000158",
+   "symbol": "BTC-USD",
+   "side": "sell",
+   "quantity": "0.0000243",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "72582.2",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-28T08:37:04.525774+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-BTC-USD-158"
+  },
+  {
+   "id": "O00000159",
+   "symbol": "AAVE-USD",
+   "side": "sell",
+   "quantity": "0.00758428",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "95.9918",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-28T08:37:04.559877+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AAVE-USD-159"
   }
  ],
  "open_order_ids": [
@@ -5190,12 +5239,12 @@
   "O00000146",
   "O00000151",
   "O00000153",
-  "O00000154",
-  "O00000155",
   "O00000156",
-  "O00000157"
+  "O00000157",
+  "O00000158",
+  "O00000159"
  ],
- "order_id_counter": 158,
+ "order_id_counter": 160,
  "fill_id_counter": 46,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5206,13 +5255,13 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-28T08:22:01.617953+00:00",
+ "last_sync": "2026-10-28T08:36:56.114495+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-10-27T20:00:00+00:00",
   "ABBV": "2026-10-27T20:00:00+00:00",
   "AMD": "2026-10-27T20:00:00+00:00",
-  "BTC-USD": "2026-10-28T08:20:00+00:00",
+  "BTC-USD": "2026-10-28T08:35:00+00:00",
   "COP": "2026-10-27T20:00:00+00:00",
   "COST": "2026-10-27T20:00:00+00:00",
   "CRM": "2026-10-27T20:00:00+00:00",
@@ -5249,7 +5298,7 @@
   "XLK": "2026-10-27T20:00:00+00:00",
   "XLV": "2026-10-27T20:00:00+00:00",
   "XOM": "2026-10-27T20:00:00+00:00",
-  "AAVE-USD": "2026-10-28T08:20:00+00:00",
+  "AAVE-USD": "2026-10-28T08:35:00+00:00",
   "HON": "2026-10-27T20:00:00+00:00"
  }
 }
