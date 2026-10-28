@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:48.548000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.01083434",
-    "mark_price": "134.68",
+    "mark_price": "136.86",
     "entry_order_id": "O00000001"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:47.866000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00893969",
-    "mark_price": "8.932500000000001",
+    "mark_price": "9.051",
     "entry_order_id": "O00000004"
    },
    {
@@ -1075,12 +1075,19 @@
     "4.968268304710000000000000000000000",
     "95.57201252133680659314344",
     "95.57201252133680659314344"
+   ],
+   [
+    "2026-10-28T21:22:12.164509+00:00",
+    "100.6567571101168061948948200000000",
+    "4.968268304710000000000000000000000",
+    "95.68848880540680619489482",
+    "95.68848880540680619489482"
    ]
   ],
   "total_fees": "0.01977403",
   "total_slippage": "0.02257850",
   "total_financing": "0E-46",
-  "peak_equity": "100.6017749774337387981796500000000",
+  "peak_equity": "100.6567571101168061948948200000000",
   "max_drawdown": "0.005306442712819294311306687082658135"
  },
  "orders": [
@@ -1681,14 +1688,14 @@
    "limit_price": null,
    "stop_price": "94.3096",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-27T00:22:31.035530+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-28T21:22:12.465326+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AAVE-USD-29"
@@ -2007,6 +2014,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AMD-44"
+  },
+  {
+   "id": "O00000045",
+   "symbol": "AAVE-USD",
+   "side": "sell",
+   "quantity": "0.03178157",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "96.6418",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-28T21:22:12.465401+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AAVE-USD-45"
   }
  ],
  "open_order_ids": [
@@ -2014,16 +2042,16 @@
   "O00000023",
   "O00000024",
   "O00000027",
-  "O00000029",
   "O00000034",
   "O00000037",
   "O00000038",
   "O00000040",
   "O00000042",
   "O00000043",
-  "O00000044"
+  "O00000044",
+  "O00000045"
  ],
- "order_id_counter": 45,
+ "order_id_counter": 46,
  "fill_id_counter": 13,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -2034,13 +2062,13 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-28T20:34:02.544357+00:00",
+ "last_sync": "2026-10-28T21:22:12.164509+00:00",
  "bankrupt": false,
  "path_checked": {
-  "AAVE-USD": "2026-10-28T20:30:00+00:00",
+  "AAVE-USD": "2026-10-28T21:20:00+00:00",
   "ABBV": "2026-10-28T20:00:00+00:00",
   "AMD": "2026-10-28T20:00:00+00:00",
-  "AVAX-USD": "2026-10-28T20:30:00+00:00",
+  "AVAX-USD": "2026-10-28T21:20:00+00:00",
   "META": "2026-10-28T20:00:00+00:00",
   "MSFT": "2026-10-28T20:00:00+00:00",
   "NOW": "2026-10-28T20:00:00+00:00",
