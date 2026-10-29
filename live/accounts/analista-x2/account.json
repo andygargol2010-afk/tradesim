@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "25.33583993755000000000000000000000",
+  "cash": "35.36990995062000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "285.989990234375",
+    "mark_price": "290.5201110839844",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:46.262189+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "53.75",
+    "mark_price": "53.84",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:26.192121+00:00",
     "realized_pnl": "0.03833105440",
     "fees_paid": "0.00012423",
-    "mark_price": "179.72000122070312",
+    "mark_price": "183.57000732421875",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:27.409887+00:00",
     "realized_pnl": "0.02461485276",
     "fees_paid": "0.00010555",
-    "mark_price": "343.8299865722656",
+    "mark_price": "349.55499267578125",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,19 +102,19 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "166.57000732421875",
+    "mark_price": "165.22",
     "entry_order_id": "O00000005"
    },
    {
     "symbol": "CRM",
-    "quantity": "0.043414339",
-    "avg_price": "244.39",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:03:30.964603+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.57567413514",
+    "fees_paid": "0.00028616",
     "mark_price": "242.11000061035156",
-    "entry_order_id": "O00000006"
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -257,6 +257,20 @@
     "slippage_cost": "0.00019478",
     "realized_pnl": "0",
     "timestamp": "2026-10-28T15:41:57.459514+00:00"
+   },
+   {
+    "id": "F00000011",
+    "order_id": "O00000039",
+    "symbol": "CRM",
+    "side": "sell",
+    "quantity": "0.043414339",
+    "price": "231.13",
+    "notional": "10.03435617",
+    "fee": "0.00028616",
+    "liquidity": "taker",
+    "slippage_cost": "0.00086802",
+    "realized_pnl": "-0.57567413514",
+    "timestamp": "2026-10-29T13:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -287,6 +301,20 @@
     "closed_at": "2026-10-28T15:41:55.512833+00:00",
     "entry_order_id": "O00000003",
     "exit_order_id": "O00000032"
+   },
+   {
+    "symbol": "CRM",
+    "direction": "long",
+    "quantity": "0.043414339",
+    "entry_price": "244.39",
+    "exit_price": "231.13",
+    "pnl": "-0.57596029514",
+    "fees": "0.00028616",
+    "return_pct": -0.05428450988441797,
+    "opened_at": "2026-10-26T16:03:30.964603+00:00",
+    "closed_at": "2026-10-29T13:35:00+00:00",
+    "entry_order_id": "O00000006",
+    "exit_order_id": "O00000039"
    }
   ],
   "equity_curve": [
@@ -1150,10 +1178,17 @@
     "25.33583993755000000000000000000000",
     "74.90914430527473327872172",
     "74.90914430527473327872172"
+   ],
+   [
+    "2026-10-29T14:21:35.769938+00:00",
+    "100.3567122123912075880634500000000",
+    "35.36990995062000000000000000000000",
+    "64.98680226177120758806345",
+    "64.98680226177120758806345"
    ]
   ],
-  "total_fees": "0.00022978",
-  "total_slippage": "0.02619222",
+  "total_fees": "0.00051594",
+  "total_slippage": "0.02706024",
   "total_financing": "0E-47",
   "peak_equity": "100.6159123577917477439785900000000",
   "max_drawdown": "0.003715552923188256232601610446962447"
@@ -1966,13 +2001,13 @@
    "limit_price": null,
    "stop_price": "234.72",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.043414339",
+   "avg_fill_price": "231.13",
+   "fees_paid": "0.00028616",
+   "triggered": true,
    "created_at": "2026-10-28T15:43:09.413701+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-29T13:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market",
    "reduce_only": true,
@@ -1987,14 +2022,14 @@
    "limit_price": "275.32",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T15:43:09.413722+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-29T14:21:35.773412+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market",
    "reduce_only": true,
    "oco_group": "exits-CRM-39"
@@ -2131,8 +2166,6 @@
   "O00000035",
   "O00000037",
   "O00000038",
-  "O00000039",
-  "O00000040",
   "O00000041",
   "O00000042",
   "O00000043",
@@ -2141,7 +2174,7 @@
   "O00000046"
  ],
  "order_id_counter": 47,
- "fill_id_counter": 11,
+ "fill_id_counter": 12,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2151,14 +2184,14 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-29T13:22:06.335172+00:00",
+ "last_sync": "2026-10-29T14:21:35.769938+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-10-28T20:00:00+00:00",
-  "SLB": "2026-10-28T20:00:00+00:00",
-  "XLV": "2026-10-28T20:00:00+00:00",
-  "AAPL": "2026-10-28T20:00:00+00:00",
-  "USO": "2026-10-28T20:00:00+00:00",
-  "CRM": "2026-10-28T20:00:00+00:00"
+  "ABBV": "2026-10-29T14:20:00+00:00",
+  "SLB": "2026-10-29T14:20:00+00:00",
+  "XLV": "2026-10-29T14:20:00+00:00",
+  "AAPL": "2026-10-29T14:20:00+00:00",
+  "USO": "2026-10-29T14:20:00+00:00",
+  "CRM": "2026-10-29T14:20:00+00:00"
  }
 }

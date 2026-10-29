@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "22.72860394507000000000000000000000",
+  "cash": "28.77390248457000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:01:19.472222+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "285.989990234375",
+    "mark_price": "290.5201110839844",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:21.195635+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "53.75",
+    "mark_price": "53.84",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:00:57.250424+00:00",
     "realized_pnl": "0.02848456393",
     "fees_paid": "0.00009913",
-    "mark_price": "179.72000122070312",
+    "mark_price": "183.57000732421875",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:00:58.749740+00:00",
     "realized_pnl": "0.01649053476",
     "fees_paid": "0.00006426",
-    "mark_price": "343.8299865722656",
+    "mark_price": "349.55499267578125",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,19 +102,19 @@
     "opened_at": "2026-10-26T16:00:58.428435+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "166.57000732421875",
+    "mark_price": "165.22",
     "entry_order_id": "O00000005"
    },
    {
     "symbol": "CRM",
-    "quantity": "0.026156150",
-    "avg_price": "244.69",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:01:02.360646+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.3546773940",
+    "fees_paid": "0.00017241",
     "mark_price": "242.11000061035156",
-    "entry_order_id": "O00000006"
+    "entry_order_id": null
    },
    {
     "symbol": "PG",
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:01:07.399072+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "158.25999450683594",
+    "mark_price": "158.93",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:01:07.037349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "29.450000762939453",
+    "mark_price": "29.69499969482422",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-26T16:01:11.093817+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "182.97000122070312",
+    "mark_price": "181.33999633789062",
     "entry_order_id": "O00000009"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "1288.300048828125",
+    "mark_price": "1378.52001953125",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-10-26T16:01:11.782355+00:00",
     "realized_pnl": "-0.05466966700",
     "fees_paid": "0.00009873",
-    "mark_price": "253.22000122070312",
+    "mark_price": "253.3616943359375",
     "entry_order_id": "O00000011"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-10-26T16:01:12.108893+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "309.8299865722656",
+    "mark_price": "308.9700012207031",
     "entry_order_id": "O00000012"
    }
   ],
@@ -449,6 +449,20 @@
     "slippage_cost": "0.00016284",
     "realized_pnl": "0",
     "timestamp": "2026-10-28T15:42:15.262166+00:00"
+   },
+   {
+    "id": "F00000020",
+    "order_id": "O00000079",
+    "symbol": "CRM",
+    "side": "sell",
+    "quantity": "0.02615615",
+    "price": "231.13",
+    "notional": "6.04547095",
+    "fee": "0.00017241",
+    "liquidity": "taker",
+    "slippage_cost": "0.00052296",
+    "realized_pnl": "-0.354677394",
+    "timestamp": "2026-10-29T13:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -493,6 +507,20 @@
     "closed_at": "2026-10-28T15:41:55.512833+00:00",
     "entry_order_id": "O00000003",
     "exit_order_id": "O00000064"
+   },
+   {
+    "symbol": "CRM",
+    "direction": "long",
+    "quantity": "0.02615615",
+    "entry_price": "244.69",
+    "exit_price": "231.13",
+    "pnl": "-0.354849804",
+    "fees": "0.00017241",
+    "return_pct": -0.055443996756791736,
+    "opened_at": "2026-10-26T16:01:02.360646+00:00",
+    "closed_at": "2026-10-29T13:35:00+00:00",
+    "entry_order_id": "O00000006",
+    "exit_order_id": "O00000079"
    }
   ],
   "equity_curve": [
@@ -1426,12 +1454,19 @@
     "22.72860394507000000000000000000000",
     "77.681091396072157437170876",
     "77.681091396072157437170876"
+   ],
+   [
+    "2026-10-29T14:21:35.070345+00:00",
+    "100.7128719663066274637597000000000",
+    "28.77390248457000000000000000000000",
+    "71.93896948173662746375970",
+    "71.93896948173662746375970"
    ]
   ],
-  "total_fees": "0.00026212",
-  "total_slippage": "0.02570837",
+  "total_fees": "0.00043453",
+  "total_slippage": "0.02623133",
   "total_financing": "0E-46",
-  "peak_equity": "100.5344875911890650701440200000000",
+  "peak_equity": "100.7128719663066274637597000000000",
   "max_drawdown": "0.002234529814582422209419575041680389"
  },
  "orders": [
@@ -3082,13 +3117,13 @@
    "limit_price": null,
    "stop_price": "234.72",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.02615615",
+   "avg_fill_price": "231.13",
+   "fees_paid": "0.00017241",
+   "triggered": true,
    "created_at": "2026-10-28T15:43:06.576724+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-29T13:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market",
    "reduce_only": true,
@@ -3103,14 +3138,14 @@
    "limit_price": "275.32",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T15:43:06.576747+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-29T14:21:35.141560+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.37 (doble suelo), noticias +0.08 (19 relevantes), tendencia alcista. Titular: \u00abStock Market",
    "reduce_only": true,
    "oco_group": "exits-CRM-79"
@@ -3360,8 +3395,6 @@
   "O00000076",
   "O00000077",
   "O00000078",
-  "O00000079",
-  "O00000080",
   "O00000081",
   "O00000082",
   "O00000083",
@@ -3374,7 +3407,7 @@
   "O00000091"
  ],
  "order_id_counter": 92,
- "fill_id_counter": 20,
+ "fill_id_counter": 21,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -3384,20 +3417,20 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-29T13:22:05.452580+00:00",
+ "last_sync": "2026-10-29T14:21:35.070345+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-10-28T20:00:00+00:00",
-  "SLB": "2026-10-28T20:00:00+00:00",
-  "XLV": "2026-10-28T20:00:00+00:00",
-  "AAPL": "2026-10-28T20:00:00+00:00",
-  "USO": "2026-10-28T20:00:00+00:00",
-  "CRM": "2026-10-28T20:00:00+00:00",
-  "PG": "2026-10-28T20:00:00+00:00",
-  "PFE": "2026-10-28T20:00:00+00:00",
-  "QCOM": "2026-10-28T20:00:00+00:00",
-  "LLY": "2026-10-28T20:00:00+00:00",
-  "IBM": "2026-10-28T20:00:00+00:00",
-  "TXN": "2026-10-28T20:00:00+00:00"
+  "ABBV": "2026-10-29T14:20:00+00:00",
+  "SLB": "2026-10-29T14:20:00+00:00",
+  "XLV": "2026-10-29T14:20:00+00:00",
+  "AAPL": "2026-10-29T14:20:00+00:00",
+  "USO": "2026-10-29T14:20:00+00:00",
+  "CRM": "2026-10-29T14:20:00+00:00",
+  "PG": "2026-10-29T14:20:00+00:00",
+  "PFE": "2026-10-29T14:20:00+00:00",
+  "QCOM": "2026-10-29T14:20:00+00:00",
+  "LLY": "2026-10-29T14:20:00+00:00",
+  "IBM": "2026-10-29T14:20:00+00:00",
+  "TXN": "2026-10-29T14:20:00+00:00"
  }
 }

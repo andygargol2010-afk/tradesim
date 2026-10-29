@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "4.968268304710000000000000000000000",
+  "cash": "10.04200618543000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:48.548000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.01083434",
-    "mark_price": "132.92",
+    "mark_price": "133.255",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "285.989990234375",
+    "mark_price": "290.5201110839844",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:29.972746+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "578.4400024414062",
+    "mark_price": "569.9099731445312",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:47.866000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00893969",
-    "mark_price": "8.806000000000001",
+    "mark_price": "8.831",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:03:29.142946+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "612.489990234375",
+    "mark_price": "623.7849731445312",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,19 +113,19 @@
     "opened_at": "2026-10-26T16:03:27.756271+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "531.010009765625",
+    "mark_price": "524.4199829101562",
     "entry_order_id": "O00000006"
    },
    {
     "symbol": "NOW",
-    "quantity": "0.041974569",
-    "avg_price": "155.58",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:03:40.747845+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-1.45651754430",
+    "fees_paid": "0.00014802",
     "mark_price": "150.1300048828125",
-    "entry_order_id": "O00000007"
+    "entry_order_id": null
    },
    {
     "symbol": "PLTR",
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:03:41.344774+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "196.80999755859375",
+    "mark_price": "195.47659301757812",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-26T16:03:44.987954+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "704.1500244140625",
+    "mark_price": "703.6599731445312",
     "entry_order_id": "O00000009"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:03:40.167726+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "309.8299865722656",
+    "mark_price": "308.9700012207031",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "166.57000732421875",
+    "mark_price": "165.22",
     "entry_order_id": "O00000011"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-10-26T16:03:33.009833+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "182.02000427246094",
+    "mark_price": "183.20339965820312",
     "entry_order_id": "O00000012"
    }
   ],
@@ -351,9 +351,38 @@
     "slippage_cost": "0.00151764",
     "realized_pnl": "0",
     "timestamp": "2026-10-26T16:03:33.009833+00:00"
+   },
+   {
+    "id": "F00000013",
+    "order_id": "O00000027",
+    "symbol": "NOW",
+    "side": "sell",
+    "quantity": "0.041974569",
+    "price": "120.88",
+    "notional": "5.0738859",
+    "fee": "0.00014802",
+    "liquidity": "taker",
+    "slippage_cost": "0.00104931",
+    "realized_pnl": "-1.4565175443",
+    "timestamp": "2026-10-29T13:35:00+00:00"
    }
   ],
-  "closed_trades": [],
+  "closed_trades": [
+   {
+    "symbol": "NOW",
+    "direction": "long",
+    "quantity": "0.041974569",
+    "entry_price": "155.58",
+    "exit_price": "120.88",
+    "pnl": "-1.4566655643",
+    "fees": "0.00014802",
+    "return_pct": -0.22305904628462642,
+    "opened_at": "2026-10-26T16:03:40.747845+00:00",
+    "closed_at": "2026-10-29T13:35:00+00:00",
+    "entry_order_id": "O00000007",
+    "exit_order_id": "O00000027"
+   }
+  ],
   "equity_curve": [
    [
     "2026-10-26T00:21:31.342712+00:00",
@@ -1215,13 +1244,20 @@
     "4.968268304710000000000000000000000",
     "95.46569850770680659314344",
     "95.46569850770680659314344"
+   ],
+   [
+    "2026-10-29T14:21:35.324990+00:00",
+    "99.23523998377549008942482000000000",
+    "10.04200618543000000000000000000000",
+    "89.19323379834549008942482",
+    "89.19323379834549008942482"
    ]
   ],
-  "total_fees": "0.01977403",
-  "total_slippage": "0.02257850",
+  "total_fees": "0.01992205",
+  "total_slippage": "0.02362781",
   "total_financing": "0E-46",
   "peak_equity": "100.6567571101168061948948200000000",
-  "max_drawdown": "0.005306442712819294311306687082658135"
+  "max_drawdown": "0.01412242125768268275159205918886450"
  },
  "orders": [
   {
@@ -1779,13 +1815,13 @@
    "limit_price": null,
    "stop_price": "129.67",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.041974569",
+   "avg_fill_price": "120.88",
+   "fees_paid": "0.00014802",
+   "triggered": true,
    "created_at": "2026-10-26T19:46:53.735245+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-29T13:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -2115,14 +2151,14 @@
    "limit_price": null,
    "stop_price": "257.8",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-28T15:22:22.175650+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-29T14:21:35.759464+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-ABBV-43"
@@ -2168,24 +2204,44 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AAVE-USD-45"
+  },
+  {
+   "id": "O00000046",
+   "symbol": "ABBV",
+   "side": "sell",
+   "quantity": "0.040712117",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "259.84",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-29T14:21:35.759511+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-ABBV-46"
   }
  ],
  "open_order_ids": [
   "O00000017",
   "O00000023",
   "O00000024",
-  "O00000027",
   "O00000034",
   "O00000037",
   "O00000038",
   "O00000040",
   "O00000042",
-  "O00000043",
   "O00000044",
-  "O00000045"
+  "O00000045",
+  "O00000046"
  ],
- "order_id_counter": 46,
- "fill_id_counter": 13,
+ "order_id_counter": 47,
+ "fill_id_counter": 14,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2195,20 +2251,20 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-29T13:22:05.858133+00:00",
+ "last_sync": "2026-10-29T14:21:35.324990+00:00",
  "bankrupt": false,
  "path_checked": {
-  "AAVE-USD": "2026-10-29T13:20:00+00:00",
-  "ABBV": "2026-10-28T20:00:00+00:00",
-  "AMD": "2026-10-28T20:00:00+00:00",
-  "AVAX-USD": "2026-10-29T13:20:00+00:00",
-  "META": "2026-10-28T20:00:00+00:00",
-  "MSFT": "2026-10-28T20:00:00+00:00",
-  "NOW": "2026-10-28T20:00:00+00:00",
-  "PLTR": "2026-10-28T20:00:00+00:00",
-  "TMO": "2026-10-28T20:00:00+00:00",
-  "TXN": "2026-10-28T20:00:00+00:00",
-  "USO": "2026-10-28T20:00:00+00:00",
-  "XOM": "2026-10-28T20:00:00+00:00"
+  "AAVE-USD": "2026-10-29T14:20:00+00:00",
+  "ABBV": "2026-10-29T14:20:00+00:00",
+  "AMD": "2026-10-29T14:20:00+00:00",
+  "AVAX-USD": "2026-10-29T14:20:00+00:00",
+  "META": "2026-10-29T14:20:00+00:00",
+  "MSFT": "2026-10-29T14:20:00+00:00",
+  "NOW": "2026-10-29T14:20:00+00:00",
+  "PLTR": "2026-10-29T14:20:00+00:00",
+  "TMO": "2026-10-29T14:20:00+00:00",
+  "TXN": "2026-10-29T14:20:00+00:00",
+  "USO": "2026-10-29T14:20:00+00:00",
+  "XOM": "2026-10-29T14:20:00+00:00"
  }
 }
