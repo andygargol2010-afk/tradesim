@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T19:20:43.291729+00:00",
+ "generated_at": "2026-10-29T19:43:49.097608+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -105,7 +105,7 @@
     "dist_sma200_pct": 7.09,
     "high_52w": 762.86,
     "low_52w": 554.41,
-    "volume_ratio_20": 0.82
+    "volume_ratio_20": 0.84
    },
    "patterns": [
     {
@@ -329,7 +329,7 @@
     "dist_sma200_pct": -9.68,
     "high_52w": 509.7,
     "low_52w": 360.12,
-    "volume_ratio_20": 1.15
+    "volume_ratio_20": 1.16
    },
    "patterns": [
     {
@@ -559,7 +559,7 @@
     "dist_sma200_pct": -0.24,
     "high_52w": 71.57,
     "low_52w": 51.374,
-    "volume_ratio_20": 1.14
+    "volume_ratio_20": 1.15
    },
    "patterns": [
     {
@@ -697,7 +697,7 @@
     "dist_sma200_pct": 5.16,
     "high_52w": 58.393,
     "low_52w": 47.336,
-    "volume_ratio_20": 0.73
+    "volume_ratio_20": 0.74
    },
    "patterns": [
     {
@@ -822,14 +822,9 @@
    ],
    "resistance": [
     {
-     "price": 78.553,
-     "touches": 10,
+     "price": 78.615,
+     "touches": 12,
      "bars_since_touch": 40
-    },
-    {
-     "price": 79.182,
-     "touches": 1,
-     "bars_since_touch": 43
     }
    ],
    "indicators": {
@@ -1070,7 +1065,7 @@
     "dist_sma200_pct": 3.88,
     "high_52w": 99.98,
     "low_52w": 76.199,
-    "volume_ratio_20": 0.86
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -1551,7 +1546,7 @@
     "dist_sma200_pct": 35.4,
     "high_52w": 169.96,
     "low_52w": 65.99,
-    "volume_ratio_20": 1.16
+    "volume_ratio_20": 1.18
    },
    "patterns": [
     {
@@ -1758,7 +1753,7 @@
     "dist_sma200_pct": 21.73,
     "high_52w": 551.15,
     "low_52w": 348.54,
-    "volume_ratio_20": 1.38
+    "volume_ratio_20": 1.42
    },
    "patterns": [
     {
@@ -1908,7 +1903,7 @@
     "dist_sma200_pct": 4.61,
     "high_52w": 287.2,
     "low_52w": 196.0,
-    "volume_ratio_20": 0.96
+    "volume_ratio_20": 0.97
    },
    "patterns": []
   },
@@ -1916,7 +1911,7 @@
    "symbol": "GOOGL",
    "as_of": "2026-10-28T00:00:00+00:00",
    "close": 324.89,
-   "score": -0.358,
+   "score": -0.207,
    "trend": {
     "direction": "neutral",
     "change_pct": -3.7,
@@ -1967,7 +1962,7 @@
     "dist_sma200_pct": -4.69,
     "high_52w": 408.1,
     "low_52w": 265.81,
-    "volume_ratio_20": 2.48
+    "volume_ratio_20": 2.6
    },
    "patterns": [
     {
@@ -1983,6 +1978,16 @@
       "invalidation": 359.4
      },
      "note": "two peaks 9 bars apart; neckline broken"
+    },
+    {
+     "name": "volume_spike",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.33,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "volume 2.6x its 20-bar average"
     }
    ]
   },
@@ -2041,7 +2046,7 @@
     "dist_sma200_pct": -2.98,
     "high_52w": 779.82,
     "low_52w": 519.37,
-    "volume_ratio_20": 1.68
+    "volume_ratio_20": 1.69
    },
    "patterns": [
     {
@@ -2127,7 +2132,7 @@
     "dist_sma200_pct": 4.8,
     "high_52w": 498.83,
     "low_52w": 297.38,
-    "volume_ratio_20": 0.94
+    "volume_ratio_20": 0.95
    },
    "patterns": [
     {
@@ -2367,7 +2372,7 @@
    "symbol": "ORCL",
    "as_of": "2026-10-28T00:00:00+00:00",
    "close": 144.54,
-   "score": 0.254,
+   "score": 0.255,
    "trend": {
     "direction": "bearish",
     "change_pct": -12.75,
@@ -2418,7 +2423,7 @@
     "dist_sma200_pct": -7.66,
     "high_52w": 281.69,
     "low_52w": 114.08,
-    "volume_ratio_20": 2.94
+    "volume_ratio_20": 2.95
    },
    "patterns": [
     {
@@ -2435,11 +2440,11 @@
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.347,
+     "strength": 0.348,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "volume 2.9x its 20-bar average"
+     "note": "volume 3.0x its 20-bar average"
     },
     {
      "name": "doji",
@@ -2503,7 +2508,7 @@
     "dist_sma200_pct": 22.45,
     "high_52w": 267.8,
     "low_52w": 146.06,
-    "volume_ratio_20": 0.88
+    "volume_ratio_20": 0.89
    },
    "patterns": [
     {
@@ -3983,7 +3988,7 @@
     "dist_sma200_pct": -11.56,
     "high_52w": 1068.9,
     "low_52w": 517.27,
-    "volume_ratio_20": 1.28
+    "volume_ratio_20": 1.29
    },
    "patterns": [
     {
@@ -4240,7 +4245,7 @@
     "dist_sma200_pct": 10.37,
     "high_52w": 142.35,
     "low_52w": 32.89,
-    "volume_ratio_20": 0.84
+    "volume_ratio_20": 0.85
    },
    "patterns": [
     {
@@ -4310,7 +4315,7 @@
     "dist_sma200_pct": 8.75,
     "high_52w": 257.56,
     "low_52w": 120.88,
-    "volume_ratio_20": 0.93
+    "volume_ratio_20": 0.94
    },
    "patterns": [
     {
@@ -4432,7 +4437,7 @@
     "dist_sma200_pct": 10.07,
     "high_52w": 129.38,
     "low_52w": 69.258,
-    "volume_ratio_20": 0.76
+    "volume_ratio_20": 0.77
    },
    "patterns": [
     {
@@ -4763,7 +4768,7 @@
     "dist_sma200_pct": 30.23,
     "high_52w": 192.97,
     "low_52w": 81.24,
-    "volume_ratio_20": 2.41
+    "volume_ratio_20": 2.49
    },
    "patterns": [
     {
@@ -5300,7 +5305,7 @@
     "dist_sma200_pct": 0.69,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 0.88
+    "volume_ratio_20": 0.89
    },
    "patterns": [
     {
@@ -5598,7 +5603,7 @@
     "dist_sma200_pct": 12.65,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 0.82
+    "volume_ratio_20": 0.83
    },
    "patterns": [
     {
