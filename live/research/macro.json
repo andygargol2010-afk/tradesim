@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T11:20:47.697412+00:00",
+ "generated_at": "2026-10-30T12:20:46.153386+00:00",
  "indicators": {
   "fed_funds": {
    "id": "fed_funds",
@@ -212,16 +212,16 @@
   "vix": {
    "id": "vix",
    "name": "VIX (volatilidad S&P 500)",
-   "value": 18.45,
+   "value": 18.68,
    "previous": 17.2,
-   "change": 1.25,
+   "change": 1.48,
    "as_of": "2026-10-30",
    "unit": "",
    "source": "yahoo",
    "series": "^VIX",
-   "change_1m_pct": 12.57,
+   "change_1m_pct": 13.97,
    "trend": "up",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "ust_10y_live": {
    "id": "ust_10y_live",
@@ -235,7 +235,7 @@
    "series": "^TNX",
    "change_1m_pct": -5.74,
    "trend": "up",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "ust_3m_live": {
    "id": "ust_3m_live",
@@ -249,63 +249,63 @@
    "series": "^IRX",
    "change_1m_pct": -0.79,
    "trend": "down",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "dxy": {
    "id": "dxy",
    "name": "\u00cdndice d\u00f3lar (DXY)",
-   "value": 101.622,
+   "value": 101.696,
    "previous": 102.04,
-   "change": -0.418,
+   "change": -0.344,
    "as_of": "2026-10-30",
    "unit": "",
    "source": "yahoo",
    "series": "DX-Y.NYB",
-   "change_1m_pct": -0.47,
+   "change_1m_pct": -0.4,
    "trend": "down",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "wti": {
    "id": "wti",
    "name": "Petr\u00f3leo WTI",
-   "value": 104.13,
+   "value": 103.91,
    "previous": 102.0,
-   "change": 2.13,
+   "change": 1.91,
    "as_of": "2026-10-30",
    "unit": "USD",
    "source": "yahoo",
    "series": "CL=F",
-   "change_1m_pct": 12.12,
+   "change_1m_pct": 11.89,
    "trend": "up",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "gold": {
    "id": "gold",
    "name": "Oro (futuro)",
-   "value": 3989.0,
+   "value": 3975.3999,
    "previous": 4031.3999,
-   "change": -42.3999,
+   "change": -56.0,
    "as_of": "2026-10-30",
    "unit": "USD",
    "source": "yahoo",
    "series": "GC=F",
-   "change_1m_pct": -5.08,
+   "change_1m_pct": -5.4,
    "trend": "down",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   },
   "copper": {
    "id": "copper",
    "name": "Cobre (futuro)",
-   "value": 6.528,
+   "value": 6.51,
    "previous": 6.581,
-   "change": -0.053,
+   "change": -0.071,
    "as_of": "2026-10-30",
    "unit": "USD",
    "source": "yahoo",
    "series": "HG=F",
-   "change_1m_pct": 0.71,
+   "change_1m_pct": 0.43,
    "trend": "down",
-   "fetched_at": "2026-10-30T11:20:47.697412+00:00"
+   "fetched_at": "2026-10-30T12:20:46.153386+00:00"
   }
  },
  "errors": {}
