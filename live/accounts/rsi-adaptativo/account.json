@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "19.04749597934000000000000000000000",
+  "cash": "37.40255387014630000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -113,30 +113,30 @@
     "opened_at": "2026-10-26T16:01:20.770000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500976",
-    "mark_price": "2214.925",
+    "mark_price": "2205.9049999999997",
     "entry_order_id": "O00000006"
    },
    {
     "symbol": "SOL-USD",
-    "quantity": "0.09830908",
-    "avg_price": "101.731",
-    "open_fees": "0.02500270",
-    "opened_at": "2026-10-26T16:01:19.774000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.02500270",
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.924419941056",
+    "fees_paid": "0.04769435",
     "mark_price": "93.22999999999999",
-    "entry_order_id": "O00000007"
+    "entry_order_id": null
    },
    {
     "symbol": "XRP-USD",
-    "quantity": "7.72379701",
-    "avg_price": "1.295",
-    "open_fees": "0.02500579",
-    "opened_at": "2026-10-26T16:01:20.875000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.02500579",
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.6779176635677",
+    "fees_paid": "0.04831679",
     "mark_price": "1.2190500000000002",
-    "entry_order_id": "O00000008"
+    "entry_order_id": null
    },
    {
     "symbol": "SLV",
@@ -290,6 +290,34 @@
     "slippage_cost": "0.00318028",
     "realized_pnl": "0",
     "timestamp": "2026-10-29T15:41:45.479132+00:00"
+   },
+   {
+    "id": "F00000011",
+    "order_id": "O00000027",
+    "symbol": "XRP-USD",
+    "side": "sell",
+    "quantity": "7.72379701",
+    "price": "1.20723",
+    "notional": "9.32439946",
+    "fee": "0.023311",
+    "liquidity": "taker",
+    "slippage_cost": "0.00193095",
+    "realized_pnl": "-0.677917663568",
+    "timestamp": "2026-10-30T00:25:00+00:00"
+   },
+   {
+    "id": "F00000012",
+    "order_id": "O00000028",
+    "symbol": "SOL-USD",
+    "side": "sell",
+    "quantity": "0.09830908",
+    "price": "92.3278",
+    "notional": "9.07666108",
+    "fee": "0.02269165",
+    "liquidity": "taker",
+    "slippage_cost": "0.00173024",
+    "realized_pnl": "-0.924419941056",
+    "timestamp": "2026-10-30T00:25:00+00:00"
    }
   ],
   "closed_trades": [
@@ -306,6 +334,34 @@
     "closed_at": "2026-10-29T13:35:00+00:00",
     "entry_order_id": "O00000003",
     "exit_order_id": "O00000025"
+   },
+   {
+    "symbol": "XRP-USD",
+    "direction": "long",
+    "quantity": "7.72379701",
+    "entry_price": "1.295",
+    "exit_price": "1.20723",
+    "pnl": "-0.726234453568",
+    "fees": "0.04831679",
+    "return_pct": -0.07260662147357286,
+    "opened_at": "2026-10-26T16:01:20.875000+00:00",
+    "closed_at": "2026-10-30T00:25:00+00:00",
+    "entry_order_id": "O00000008",
+    "exit_order_id": "O00000027"
+   },
+   {
+    "symbol": "SOL-USD",
+    "direction": "long",
+    "quantity": "0.09830908",
+    "entry_price": "101.731",
+    "exit_price": "92.3278",
+    "pnl": "-0.972114291056",
+    "fees": "0.04769435",
+    "return_pct": -0.0972009215160769,
+    "opened_at": "2026-10-26T16:01:19.774000+00:00",
+    "closed_at": "2026-10-30T00:25:00+00:00",
+    "entry_order_id": "O00000007",
+    "exit_order_id": "O00000028"
    }
   ],
   "equity_curve": [
@@ -1365,13 +1421,20 @@
     "19.04749597934000000000000000000000",
     "78.986682329570500561668602",
     "78.986682329570500561668602"
+   ],
+   [
+    "2026-10-30T01:22:25.888048+00:00",
+    "97.76936005787629870867400000000000",
+    "37.40255387014630000000000000000000",
+    "60.366806187729998708674",
+    "60.366806187729998708674"
    ]
   ],
-  "total_fees": "0.07527589",
-  "total_slippage": "0.06324025",
+  "total_fees": "0.12127854",
+  "total_slippage": "0.06690144",
   "total_financing": "0E-46",
   "peak_equity": "101.0701900319420356153856120000000",
-  "max_drawdown": "0.03003864662836826103993361518290571"
+  "max_drawdown": "0.03265878864007823391659679293216612"
  },
  "orders": [
   {
@@ -1929,13 +1992,13 @@
    "limit_price": null,
    "stop_price": "1.20748",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "7.72379701",
+   "avg_fill_price": "1.20723",
+   "fees_paid": "0.023311",
+   "triggered": true,
    "created_at": "2026-10-28T02:16:23.067297+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-30T00:25:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -1950,13 +2013,13 @@
    "limit_price": null,
    "stop_price": "92.3454",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.09830908",
+   "avg_fill_price": "92.3278",
+   "fees_paid": "0.02269165",
+   "triggered": true,
    "created_at": "2026-10-28T08:22:01.613720+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-30T00:25:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -2134,15 +2197,13 @@
  "open_order_ids": [
   "O00000013",
   "O00000026",
-  "O00000027",
-  "O00000028",
   "O00000031",
   "O00000033",
   "O00000035",
   "O00000036"
  ],
  "order_id_counter": 37,
- "fill_id_counter": 11,
+ "fill_id_counter": 13,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2152,7 +2213,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-30T00:22:31.274964+00:00",
+ "last_sync": "2026-10-30T01:22:25.888048+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-10-29T20:00:00+00:00",
@@ -2160,9 +2221,9 @@
   "CAT": "2026-10-29T14:20:00+00:00",
   "GE": "2026-10-29T20:00:00+00:00",
   "T": "2026-10-29T20:00:00+00:00",
-  "ETH-USD": "2026-10-30T00:20:00+00:00",
-  "SOL-USD": "2026-10-30T00:20:00+00:00",
-  "XRP-USD": "2026-10-30T00:20:00+00:00",
+  "ETH-USD": "2026-10-30T01:20:00+00:00",
+  "SOL-USD": "2026-10-30T01:20:00+00:00",
+  "XRP-USD": "2026-10-30T01:20:00+00:00",
   "SLV": "2026-10-29T20:00:00+00:00"
  }
 }
