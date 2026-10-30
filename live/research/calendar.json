@@ -1,65 +1,10 @@
 {
- "generated_at": "2026-10-30T03:20:33.128910+00:00",
+ "generated_at": "2026-10-30T04:20:38.800814+00:00",
  "window": [
-  "2026-10-22",
-  "2026-11-28"
+  "2026-10-23",
+  "2026-11-29"
  ],
  "events": [
-  {
-   "date": "2026-10-22",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2026-10-22T12:30:00+00:00",
-   "symbols": [
-    "*equities",
-    "TLT"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "1dca4259c999"
-  },
-  {
-   "date": "2026-10-22",
-   "title": "HON quarterly earnings",
-   "category": "earnings",
-   "importance": "high",
-   "country": "US",
-   "when": null,
-   "symbols": [
-    "HON"
-   ],
-   "forecast": "EPS 2.45, revenue 5.2B",
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "yahoo",
-   "notes": "consensus estimates from Yahoo",
-   "id": "1a828c9dd7e1"
-  },
-  {
-   "date": "2026-10-22",
-   "title": "LMT quarterly earnings",
-   "category": "earnings",
-   "importance": "high",
-   "country": "US",
-   "when": null,
-   "symbols": [
-    "LMT"
-   ],
-   "forecast": "EPS 8.35, revenue 22.7B",
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "yahoo",
-   "notes": "consensus estimates from Yahoo",
-   "id": "563fcbffea56"
-  },
   {
    "date": "2026-10-23",
    "title": "AXP quarterly earnings",
@@ -425,11 +370,29 @@
   },
   {
    "date": "2026-10-29",
+   "title": "BOJ Outlook Report",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "JP",
+   "when": "2026-10-30T03:02:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "74b9f78d1373"
+  },
+  {
+   "date": "2026-10-29",
    "title": "BOJ Policy Rate",
    "category": "central_bank",
    "importance": "high",
    "country": "JP",
-   "when": "2026-10-30T02:30:00+00:00",
+   "when": "2026-10-30T03:02:00+00:00",
    "symbols": [
     "*equities"
    ],
@@ -447,7 +410,7 @@
    "category": "central_bank",
    "importance": "high",
    "country": "JP",
-   "when": "2026-10-30T02:30:00+00:00",
+   "when": "2026-10-30T03:02:00+00:00",
    "symbols": [
     "*equities"
    ],
@@ -458,24 +421,6 @@
    "source": "forexfactory",
    "notes": "",
    "id": "2d5a1263e662"
-  },
-  {
-   "date": "2026-10-29",
-   "title": "BOJ Outlook Report",
-   "category": "central_bank",
-   "importance": "high",
-   "country": "JP",
-   "when": "2026-10-30T02:31:00+00:00",
-   "symbols": [
-    "*equities"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "forexfactory",
-   "notes": "",
-   "id": "74b9f78d1373"
   },
   {
    "date": "2026-10-29",
@@ -1475,7 +1420,7 @@
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "19 events this week",
-  "companies": "45 earnings/dividend events"
+  "companies": "43 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
