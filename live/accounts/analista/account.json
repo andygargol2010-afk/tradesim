@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "7.131410357070000000000000000000000",
+  "cash": "16.10381574382000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:01:19.472222+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "290.7900085449219",
+    "mark_price": "295.68",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:21.195635+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "53.810001373291016",
+    "mark_price": "53.5099983215332",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:00:57.250424+00:00",
     "realized_pnl": "0.02848456393",
     "fees_paid": "0.00009913",
-    "mark_price": "184.0399932861328",
+    "mark_price": "185.97",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:00:58.749740+00:00",
     "realized_pnl": "0.06435894726",
     "fees_paid": "0.00016639",
-    "mark_price": "348.9100036621094",
+    "mark_price": "348.7",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:00:58.428435+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "168.19000244140625",
+    "mark_price": "170.52000427246094",
     "entry_order_id": "O00000005"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:01:07.399072+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "160.58999633789062",
+    "mark_price": "162.52999877929688",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,19 +135,19 @@
     "opened_at": "2026-10-26T16:01:07.037349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "29.950000762939453",
+    "mark_price": "30.345",
     "entry_order_id": "O00000008"
    },
    {
     "symbol": "QCOM",
-    "quantity": "0.051345713",
-    "avg_price": "180.5467552897746302597842978633873",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:01:11.093817+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.2976385334399999999999999999999975",
+    "fees_paid": "0.00025796",
     "mark_price": "185.41000366210938",
-    "entry_order_id": "O00000009"
+    "entry_order_id": null
    },
    {
     "symbol": "LLY",
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "1373.699951171875",
+    "mark_price": "1430.9300537109375",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-10-26T16:01:11.782355+00:00",
     "realized_pnl": "-0.05466966700",
     "fees_paid": "0.00009873",
-    "mark_price": "258.2799987792969",
+    "mark_price": "256.0",
     "entry_order_id": "O00000011"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-10-26T16:01:12.108893+00:00",
     "realized_pnl": "0.2482837728356370310035298121860670",
     "fees_paid": "0.00015264",
-    "mark_price": "312.94000244140625",
+    "mark_price": "300.9800109863281",
     "entry_order_id": "O00000012"
    },
    {
@@ -190,7 +190,7 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "709.1799926757812",
+    "mark_price": "697.7000122070312",
     "entry_order_id": "O00000095"
    }
   ],
@@ -586,6 +586,20 @@
     "slippage_cost": "0.01559339",
     "realized_pnl": "0",
     "timestamp": "2026-10-29T15:42:14.231933+00:00"
+   },
+   {
+    "id": "F00000029",
+    "order_id": "O00000096",
+    "symbol": "QCOM",
+    "side": "sell",
+    "quantity": "0.051345713",
+    "price": "174.75",
+    "notional": "8.97266335",
+    "fee": "0.00025796",
+    "liquidity": "taker",
+    "slippage_cost": "0.00128333",
+    "realized_pnl": "-0.29763853344",
+    "timestamp": "2026-10-30T13:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -672,6 +686,20 @@
     "closed_at": "2026-10-29T15:42:08.099770+00:00",
     "entry_order_id": "O00000012",
     "exit_order_id": "O00000093"
+   },
+   {
+    "symbol": "QCOM",
+    "direction": "long",
+    "quantity": "0.051345713",
+    "entry_price": "180.546755289775",
+    "exit_price": "174.75",
+    "pnl": "-0.29789649344",
+    "fees": "0.00025796",
+    "return_pct": -0.03213449759134429,
+    "opened_at": "2026-10-26T16:01:11.093817+00:00",
+    "closed_at": "2026-10-30T13:35:00+00:00",
+    "entry_order_id": "O00000009",
+    "exit_order_id": "O00000096"
    }
   ],
   "equity_curve": [
@@ -1843,12 +1871,19 @@
     "7.131410357070000000000000000000000",
     "94.346194210197307873699517",
     "94.346194210197307873699517"
+   ],
+   [
+    "2026-10-30T15:22:12.648691+00:00",
+    "101.5485365011851012446849800000000",
+    "16.10381574382000000000000000000000",
+    "85.44472075736510124468498",
+    "85.44472075736510124468498"
    ]
   ],
-  "total_fees": "0.00068930",
-  "total_slippage": "0.03896354",
+  "total_fees": "0.00094726",
+  "total_slippage": "0.04024687",
   "total_financing": "0E-46",
-  "peak_equity": "101.4776045672673078736995170000000",
+  "peak_equity": "101.5485365011851012446849800000000",
   "max_drawdown": "0.002234529814582422209419575041680389"
  },
  "orders": [
@@ -3856,13 +3891,13 @@
    "limit_price": null,
    "stop_price": "177.57",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.051345713",
+   "avg_fill_price": "174.75",
+   "fees_paid": "0.00025796",
+   "triggered": true,
    "created_at": "2026-10-29T15:42:48.660209+00:00",
-   "updated_at": null,
+   "updated_at": "2026-10-30T13:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.34: t\u00e9cnico +0.51 (divergencia alcista RSI, ruptura de resistencia), noticias -0.00 (25 relevantes), tende",
    "reduce_only": true,
@@ -3877,14 +3912,14 @@
    "limit_price": "193.56",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-29T15:42:48.660303+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-30T15:22:12.785924+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.34: t\u00e9cnico +0.51 (divergencia alcista RSI, ruptura de resistencia), noticias -0.00 (25 relevantes), tende filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.34: t\u00e9cnico +0.51 (divergencia alcista RSI, ruptura de resistencia), noticias -0.00 (25 relevantes), tende",
    "reduce_only": true,
    "oco_group": "exits-QCOM-96"
@@ -4437,8 +4472,6 @@
   }
  ],
  "open_order_ids": [
-  "O00000096",
-  "O00000097",
   "O00000098",
   "O00000099",
   "O00000101",
@@ -4463,7 +4496,7 @@
   "O00000123"
  ],
  "order_id_counter": 124,
- "fill_id_counter": 29,
+ "fill_id_counter": 30,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4473,21 +4506,21 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-30T13:22:03.737582+00:00",
+ "last_sync": "2026-10-30T15:22:12.648691+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-10-29T20:00:00+00:00",
-  "SLB": "2026-10-29T20:00:00+00:00",
-  "XLV": "2026-10-29T20:00:00+00:00",
-  "AAPL": "2026-10-29T20:00:00+00:00",
-  "USO": "2026-10-29T20:00:00+00:00",
+  "ABBV": "2026-10-30T15:20:00+00:00",
+  "SLB": "2026-10-30T15:20:00+00:00",
+  "XLV": "2026-10-30T15:20:00+00:00",
+  "AAPL": "2026-10-30T15:20:00+00:00",
+  "USO": "2026-10-30T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "PG": "2026-10-29T20:00:00+00:00",
-  "PFE": "2026-10-29T20:00:00+00:00",
-  "QCOM": "2026-10-29T20:00:00+00:00",
-  "LLY": "2026-10-29T20:00:00+00:00",
-  "IBM": "2026-10-29T20:00:00+00:00",
-  "TXN": "2026-10-29T20:00:00+00:00",
-  "TMO": "2026-10-29T20:00:00+00:00"
+  "PG": "2026-10-30T15:20:00+00:00",
+  "PFE": "2026-10-30T15:20:00+00:00",
+  "QCOM": "2026-10-30T15:20:00+00:00",
+  "LLY": "2026-10-30T15:20:00+00:00",
+  "IBM": "2026-10-30T15:20:00+00:00",
+  "TXN": "2026-10-30T15:20:00+00:00",
+  "TMO": "2026-10-30T15:20:00+00:00"
  }
 }
