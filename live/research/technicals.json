@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-10-30T20:05:42.242192+00:00",
+ "generated_at": "2026-10-30T20:20:37.858967+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 755.78,
+   "close": 755.72,
    "score": -0.762,
    "trend": {
     "direction": "neutral",
@@ -51,12 +51,12 @@
     "rsi_14": 40.4,
     "atr_pct": 1.02,
     "sma_20": 770.47,
-    "sma_50": 766.78,
+    "sma_50": 766.77,
     "sma_200": 725.98,
     "dist_sma200_pct": 4.1,
     "high_52w": 781.62,
     "low_52w": 626.11,
-    "volume_ratio_20": 1.73
+    "volume_ratio_20": 1.8
    },
    "patterns": [
     {
@@ -69,7 +69,7 @@
      "levels": {
       "level": 758.74
      },
-     "note": "closed below a 6-touch support on 1.7x volume"
+     "note": "closed below a 6-touch support on 1.8x volume"
     },
     {
      "name": "double_top",
@@ -154,7 +154,7 @@
     "dist_sma200_pct": 1.79,
     "high_52w": 762.86,
     "low_52w": 554.41,
-    "volume_ratio_20": 1.98
+    "volume_ratio_20": 2.18
    },
    "patterns": [
     {
@@ -167,7 +167,7 @@
      "levels": {
       "level": 701.43
      },
-     "note": "closed below a 6-touch support on 2.0x volume"
+     "note": "closed below a 6-touch support on 2.2x volume"
     },
     {
      "name": "evening_star",
@@ -258,7 +258,7 @@
     "dist_sma200_pct": 0.6,
     "high_52w": 304.39,
     "low_52w": 226.6,
-    "volume_ratio_20": 0.92
+    "volume_ratio_20": 0.96
    },
    "patterns": []
   },
@@ -335,11 +335,11 @@
   "GLD": {
    "symbol": "GLD",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 355.86,
+   "close": 355.78,
    "score": -0.871,
    "trend": {
     "direction": "bearish",
-    "change_pct": -11.4,
+    "change_pct": -11.41,
     "r2": 0.749,
     "quality": 0.749,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
@@ -363,15 +363,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 30.4,
+    "rsi_14": 30.3,
     "atr_pct": 1.75,
-    "sma_20": 375.77,
+    "sma_20": 375.76,
     "sma_50": 390.57,
     "sma_200": 412.92,
-    "dist_sma200_pct": -13.82,
+    "dist_sma200_pct": -13.84,
     "high_52w": 509.7,
     "low_52w": 354.67,
-    "volume_ratio_20": 1.9
+    "volume_ratio_20": 2.01
    },
    "patterns": [
     {
@@ -384,7 +384,7 @@
      "levels": {
       "level": 365.26
      },
-     "note": "closed below a 5-touch support on 1.9x volume"
+     "note": "closed below a 5-touch support on 2.0x volume"
     },
     {
      "name": "evening_star",
@@ -433,11 +433,11 @@
   "SLV": {
    "symbol": "SLV",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 44.585,
+   "close": 44.6,
    "score": -0.376,
    "trend": {
     "direction": "bearish",
-    "change_pct": -20.44,
+    "change_pct": -20.43,
     "r2": 0.734,
     "quality": 0.734,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
@@ -451,11 +451,6 @@
    ],
    "resistance": [
     {
-     "price": 44.76,
-     "touches": 1,
-     "bars_since_touch": 235
-    },
-    {
      "price": 49.658,
      "touches": 4,
      "bars_since_touch": 12
@@ -464,18 +459,23 @@
      "price": 51.42,
      "touches": 2,
      "bars_since_touch": 63
+    },
+    {
+     "price": 52.89,
+     "touches": 1,
+     "bars_since_touch": 8
     }
    ],
    "indicators": {
     "rsi_14": 23.9,
     "atr_pct": 3.62,
-    "sma_20": 51.342,
-    "sma_50": 55.819,
+    "sma_20": 51.343,
+    "sma_50": 55.82,
     "sma_200": 64.232,
-    "dist_sma200_pct": -30.59,
+    "dist_sma200_pct": -30.56,
     "high_52w": 109.83,
     "low_52w": 42.51,
-    "volume_ratio_20": 2.31
+    "volume_ratio_20": 2.38
    },
    "patterns": [
     {
@@ -488,7 +488,7 @@
      "levels": {
       "upper": 51.437,
       "lower": 49.305,
-      "target": 37.57
+      "target": 37.585
      },
      "note": "closed below the lower trendline"
     },
@@ -586,7 +586,7 @@
     "dist_sma200_pct": -1.67,
     "high_52w": 88.133,
     "low_52w": 76.43,
-    "volume_ratio_20": 1.0
+    "volume_ratio_20": 1.03
    },
    "patterns": [
     {
@@ -656,7 +656,7 @@
     "dist_sma200_pct": -4.2,
     "high_52w": 71.57,
     "low_52w": 51.374,
-    "volume_ratio_20": 1.76
+    "volume_ratio_20": 1.78
    },
    "patterns": [
     {
@@ -688,7 +688,7 @@
   "XLE": {
    "symbol": "XLE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 70.01,
+   "close": 70.02,
    "score": 0.366,
    "trend": {
     "direction": "bullish",
@@ -718,13 +718,13 @@
    "indicators": {
     "rsi_14": 67.9,
     "atr_pct": 1.97,
-    "sma_20": 67.118,
+    "sma_20": 67.119,
     "sma_50": 64.777,
     "sma_200": 58.152,
-    "dist_sma200_pct": 20.39,
+    "dist_sma200_pct": 20.41,
     "high_52w": 70.15,
     "low_52w": 41.988,
-    "volume_ratio_20": 0.97
+    "volume_ratio_20": 0.99
    },
    "patterns": [
     {
@@ -762,7 +762,7 @@
   "XLF": {
    "symbol": "XLF",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 56.53,
+   "close": 56.51,
    "score": -0.425,
    "trend": {
     "direction": "bearish",
@@ -801,15 +801,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 58.6,
+    "rsi_14": 58.4,
     "atr_pct": 1.27,
-    "sma_20": 55.333,
+    "sma_20": 55.332,
     "sma_50": 55.865,
-    "sma_200": 53.407,
-    "dist_sma200_pct": 5.85,
+    "sma_200": 53.406,
+    "dist_sma200_pct": 5.81,
     "high_52w": 58.393,
     "low_52w": 47.336,
-    "volume_ratio_20": 1.07
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -884,7 +884,7 @@
     "dist_sma200_pct": -0.81,
     "high_52w": 95.475,
     "low_52w": 88.64,
-    "volume_ratio_20": 1.88
+    "volume_ratio_20": 1.89
    },
    "patterns": [
     {
@@ -948,7 +948,7 @@
     "dist_sma200_pct": -0.59,
     "high_52w": 79.182,
     "low_52w": 75.777,
-    "volume_ratio_20": 1.06
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -1000,21 +1000,16 @@
   "TIP": {
    "symbol": "TIP",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 106.72,
-   "score": 0.173,
+   "close": 106.69,
+   "score": -0.173,
    "trend": {
     "direction": "neutral",
-    "change_pct": -2.17,
-    "r2": 0.359,
+    "change_pct": -2.18,
+    "r2": 0.36,
     "quality": 0.0,
     "ma_alignment": "below SMA200"
    },
    "support": [
-    {
-     "price": 106.67,
-     "touches": 25,
-     "bars_since_touch": 6
-    },
     {
      "price": 103.76,
      "touches": 1,
@@ -1029,29 +1024,17 @@
     }
    ],
    "indicators": {
-    "rsi_14": 69.9,
+    "rsi_14": 69.6,
     "atr_pct": 0.36,
     "sma_20": 105.35,
-    "sma_50": 105.7,
+    "sma_50": 105.69,
     "sma_200": 106.93,
-    "dist_sma200_pct": -0.19,
+    "dist_sma200_pct": -0.22,
     "high_52w": 108.35,
     "low_52w": 103.76,
-    "volume_ratio_20": 1.27
+    "volume_ratio_20": 1.33
    },
    "patterns": [
-    {
-     "name": "resistance_breakout",
-     "kind": "chart",
-     "direction": "bullish",
-     "strength": 0.7,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {
-      "level": 106.67
-     },
-     "note": "closed above a 25-touch resistance"
-    },
     {
      "name": "bearish_engulfing",
      "kind": "candlestick",
@@ -1129,7 +1112,7 @@
     "dist_sma200_pct": 0.92,
     "high_52w": 108.89,
     "low_52w": 88.191,
-    "volume_ratio_20": 1.64
+    "volume_ratio_20": 1.86
    },
    "patterns": [
     {
@@ -1213,7 +1196,7 @@
     "dist_sma200_pct": 1.48,
     "high_52w": 99.98,
     "low_52w": 76.199,
-    "volume_ratio_20": 1.9
+    "volume_ratio_20": 1.98
    },
    "patterns": [
     {
@@ -1226,7 +1209,7 @@
      "levels": {
       "level": 93.494
      },
-     "note": "closed below a 7-touch support on 1.9x volume"
+     "note": "closed below a 7-touch support on 2.0x volume"
     },
     {
      "name": "double_top",
@@ -1316,7 +1299,7 @@
     "dist_sma200_pct": -6.77,
     "high_52w": 40.863,
     "low_52w": 31.19,
-    "volume_ratio_20": 1.12
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -1336,13 +1319,13 @@
   "INDA": {
    "symbol": "INDA",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 47.735,
+   "close": 47.72,
    "score": -0.182,
    "trend": {
     "direction": "bearish",
     "change_pct": -7.83,
-    "r2": 0.735,
-    "quality": 0.735,
+    "r2": 0.736,
+    "quality": 0.736,
     "ma_alignment": "below SMA200"
    },
    "support": [
@@ -1380,15 +1363,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 54.8,
+    "rsi_14": 54.7,
     "atr_pct": 1.04,
     "sma_20": 46.939,
-    "sma_50": 47.875,
+    "sma_50": 47.874,
     "sma_200": 49.173,
-    "dist_sma200_pct": -2.92,
+    "dist_sma200_pct": -2.95,
     "high_52w": 55.1,
     "low_52w": 45.21,
-    "volume_ratio_20": 0.99
+    "volume_ratio_20": 1.04
    },
    "patterns": [
     {
@@ -1458,7 +1441,7 @@
     "dist_sma200_pct": 6.08,
     "high_52w": 203.25,
     "low_52w": 126.38,
-    "volume_ratio_20": 2.15
+    "volume_ratio_20": 2.19
    },
    "patterns": [
     {
@@ -1526,7 +1509,7 @@
     "dist_sma200_pct": 17.23,
     "high_52w": 187.99,
     "low_52w": 140.35,
-    "volume_ratio_20": 2.0
+    "volume_ratio_20": 2.12
    },
    "patterns": [
     {
@@ -1580,7 +1563,7 @@
   "XLU": {
    "symbol": "XLU",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 43.45,
+   "close": 43.43,
    "score": 0.0,
    "trend": {
     "direction": "neutral",
@@ -1624,15 +1607,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 65.7,
+    "rsi_14": 65.6,
     "atr_pct": 1.39,
-    "sma_20": 41.95,
-    "sma_50": 41.627,
-    "sma_200": 43.804,
-    "dist_sma200_pct": -0.81,
+    "sma_20": 41.949,
+    "sma_50": 41.626,
+    "sma_200": 43.803,
+    "dist_sma200_pct": -0.85,
     "high_52w": 47.061,
     "low_52w": 39.03,
-    "volume_ratio_20": 0.96
+    "volume_ratio_20": 1.0
    },
    "patterns": [
     {
@@ -1650,11 +1633,11 @@
   "VNQ": {
    "symbol": "VNQ",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 93.96,
+   "close": 93.94,
    "score": -0.238,
    "trend": {
     "direction": "bearish",
-    "change_pct": -7.61,
+    "change_pct": -7.62,
     "r2": 0.603,
     "quality": 0.603,
     "ma_alignment": "above SMA200"
@@ -1694,15 +1677,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 59.3,
+    "rsi_14": 59.2,
     "atr_pct": 1.39,
-    "sma_20": 91.441,
-    "sma_50": 92.823,
+    "sma_20": 91.44,
+    "sma_50": 92.822,
     "sma_200": 93.237,
-    "dist_sma200_pct": 0.78,
+    "dist_sma200_pct": 0.75,
     "high_52w": 100.92,
     "low_52w": 84.658,
-    "volume_ratio_20": 1.08
+    "volume_ratio_20": 1.1
    },
    "patterns": [
     {
@@ -1742,11 +1725,11 @@
   "USO": {
    "symbol": "USO",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 168.81,
+   "close": 168.83,
    "score": 0.261,
    "trend": {
     "direction": "bullish",
-    "change_pct": 31.46,
+    "change_pct": 31.47,
     "r2": 0.77,
     "quality": 0.77,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -1778,13 +1761,13 @@
    "indicators": {
     "rsi_14": 67.0,
     "atr_pct": 2.92,
-    "sma_20": 157.61,
-    "sma_50": 150.08,
+    "sma_20": 157.62,
+    "sma_50": 150.09,
     "sma_200": 123.98,
-    "dist_sma200_pct": 36.16,
+    "dist_sma200_pct": 36.18,
     "high_52w": 171.81,
     "low_52w": 65.99,
-    "volume_ratio_20": 1.02
+    "volume_ratio_20": 1.05
    },
    "patterns": [
     {
@@ -1893,7 +1876,7 @@
     "dist_sma200_pct": 16.32,
     "high_52w": 351.73,
     "low_52w": 242.76,
-    "volume_ratio_20": 1.57
+    "volume_ratio_20": 1.74
    },
    "patterns": [
     {
@@ -2000,7 +1983,7 @@
     "dist_sma200_pct": 19.47,
     "high_52w": 551.15,
     "low_52w": 348.54,
-    "volume_ratio_20": 1.5
+    "volume_ratio_20": 1.64
    },
    "patterns": [
     {
@@ -2123,7 +2106,7 @@
    "symbol": "AMZN",
    "as_of": "2026-10-30T00:00:00+00:00",
    "close": 240.35,
-   "score": -0.431,
+   "score": -0.43,
    "trend": {
     "direction": "bearish",
     "change_pct": -5.7,
@@ -2174,7 +2157,7 @@
     "dist_sma200_pct": -1.25,
     "high_52w": 287.2,
     "low_52w": 196.0,
-    "volume_ratio_20": 2.62
+    "volume_ratio_20": 2.7
    },
    "patterns": [
     {
@@ -2205,11 +2188,11 @@
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.331,
+     "strength": 0.335,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "volume 2.6x its 20-bar average"
+     "note": "volume 2.7x its 20-bar average"
     }
    ]
   },
@@ -2258,7 +2241,7 @@
     "dist_sma200_pct": -17.78,
     "high_52w": 408.1,
     "low_52w": 270.0,
-    "volume_ratio_20": 2.07
+    "volume_ratio_20": 2.08
    },
    "patterns": [
     {
@@ -2374,7 +2357,7 @@
     "dist_sma200_pct": -2.58,
     "high_52w": 779.82,
     "low_52w": 519.37,
-    "volume_ratio_20": 1.05
+    "volume_ratio_20": 1.1
    },
    "patterns": [
     {
@@ -2458,7 +2441,7 @@
     "dist_sma200_pct": 3.77,
     "high_52w": 498.83,
     "low_52w": 297.38,
-    "volume_ratio_20": 1.08
+    "volume_ratio_20": 1.12
    },
    "patterns": [
     {
@@ -2535,7 +2518,7 @@
     "dist_sma200_pct": -11.06,
     "high_52w": 493.32,
     "low_52w": 288.98,
-    "volume_ratio_20": 1.59
+    "volume_ratio_20": 1.68
    },
    "patterns": [
     {
@@ -2617,7 +2600,7 @@
     "dist_sma200_pct": 22.98,
     "high_52w": 658.52,
     "low_52w": 188.22,
-    "volume_ratio_20": 2.01
+    "volume_ratio_20": 2.02
    },
    "patterns": [
     {
@@ -2693,7 +2676,7 @@
     "dist_sma200_pct": -23.92,
     "high_52w": 116.73,
     "low_52w": 61.39,
-    "volume_ratio_20": 1.08
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -2711,7 +2694,7 @@
   "ORCL": {
    "symbol": "ORCL",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 130.68,
+   "close": 130.67,
    "score": -0.341,
    "trend": {
     "direction": "bearish",
@@ -2751,14 +2734,14 @@
    ],
    "indicators": {
     "rsi_14": 45.8,
-    "atr_pct": 5.83,
+    "atr_pct": 5.85,
     "sma_20": 134.63,
     "sma_50": 141.43,
     "sma_200": 155.92,
-    "dist_sma200_pct": -16.19,
+    "dist_sma200_pct": -16.2,
     "high_52w": 266.2,
     "low_52w": 114.08,
-    "volume_ratio_20": 1.14
+    "volume_ratio_20": 1.24
    },
    "patterns": [
     {
@@ -2796,7 +2779,7 @@
   "CRM": {
    "symbol": "CRM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 229.1,
+   "close": 229.17,
    "score": -0.635,
    "trend": {
     "direction": "neutral",
@@ -2845,10 +2828,10 @@
     "sma_20": 237.39,
     "sma_50": 238.75,
     "sma_200": 197.64,
-    "dist_sma200_pct": 15.92,
+    "dist_sma200_pct": 15.95,
     "high_52w": 267.8,
     "low_52w": 146.06,
-    "volume_ratio_20": 0.81
+    "volume_ratio_20": 1.1
    },
    "patterns": [
     {
@@ -2896,13 +2879,13 @@
   "JPM": {
    "symbol": "JPM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 337.09,
+   "close": 337.04,
    "score": 0.014,
    "trend": {
     "direction": "bearish",
     "change_pct": -8.7,
-    "r2": 0.744,
-    "quality": 0.744,
+    "r2": 0.745,
+    "quality": 0.745,
     "ma_alignment": "above SMA200"
    },
    "support": [
@@ -2943,12 +2926,12 @@
     "rsi_14": 49.6,
     "atr_pct": 1.88,
     "sma_20": 334.71,
-    "sma_50": 342.22,
+    "sma_50": 342.21,
     "sma_200": 320.3,
-    "dist_sma200_pct": 5.24,
+    "dist_sma200_pct": 5.23,
     "high_52w": 364.68,
     "low_52w": 275.06,
-    "volume_ratio_20": 0.72
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -2970,8 +2953,8 @@
   "BAC": {
    "symbol": "BAC",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 50.025,
-   "score": -0.089,
+   "close": 50.01,
+   "score": -0.088,
    "trend": {
     "direction": "bearish",
     "change_pct": -24.35,
@@ -3009,22 +2992,22 @@
     }
    ],
    "indicators": {
-    "rsi_14": 27.8,
+    "rsi_14": 27.7,
     "atr_pct": 2.32,
-    "sma_20": 51.953,
+    "sma_20": 51.952,
     "sma_50": 56.373,
     "sma_200": 54.553,
-    "dist_sma200_pct": -8.3,
+    "dist_sma200_pct": -8.33,
     "high_52w": 64.899,
     "low_52w": 45.649,
-    "volume_ratio_20": 0.78
+    "volume_ratio_20": 1.03
    },
    "patterns": [
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.287,
+     "strength": 0.288,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -3045,11 +3028,11 @@
   "GS": {
    "symbol": "GS",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 894.45,
+   "close": 894.55,
    "score": -0.334,
    "trend": {
     "direction": "bearish",
-    "change_pct": -18.21,
+    "change_pct": -18.2,
     "r2": 0.823,
     "quality": 0.823,
     "ma_alignment": "below SMA200"
@@ -3092,12 +3075,12 @@
     "rsi_14": 45.0,
     "atr_pct": 2.79,
     "sma_20": 893.88,
-    "sma_50": 946.96,
+    "sma_50": 946.97,
     "sma_200": 951.6,
-    "dist_sma200_pct": -6.01,
+    "dist_sma200_pct": -6.0,
     "high_52w": 1148.4,
     "low_52w": 739.46,
-    "volume_ratio_20": 0.74
+    "volume_ratio_20": 0.95
    },
    "patterns": [
     {
@@ -3137,7 +3120,7 @@
   "V": {
    "symbol": "V",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 413.48,
+   "close": 413.59,
    "score": 0.124,
    "trend": {
     "direction": "bullish",
@@ -3176,21 +3159,21 @@
     "sma_20": 396.12,
     "sma_50": 381.31,
     "sma_200": 341.45,
-    "dist_sma200_pct": 21.09,
+    "dist_sma200_pct": 21.13,
     "high_52w": 416.99,
     "low_52w": 292.74,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 1.15
    },
    "patterns": []
   },
   "MA": {
    "symbol": "MA",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 637.77,
+   "close": 638.01,
    "score": 0.094,
    "trend": {
     "direction": "neutral",
-    "change_pct": 8.04,
+    "change_pct": 8.05,
     "r2": 0.326,
     "quality": 0.0,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -3216,13 +3199,13 @@
    "indicators": {
     "rsi_14": 70.7,
     "atr_pct": 1.82,
-    "sma_20": 606.1,
+    "sma_20": 606.11,
     "sma_50": 586.14,
     "sma_200": 534.24,
-    "dist_sma200_pct": 19.38,
+    "dist_sma200_pct": 19.42,
     "high_52w": 644.21,
     "low_52w": 463.04,
-    "volume_ratio_20": 1.12
+    "volume_ratio_20": 1.46
    },
    "patterns": [
     {
@@ -3239,7 +3222,7 @@
      "name": "rsi_overbought",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.261,
+     "strength": 0.262,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -3250,7 +3233,7 @@
   "XOM": {
    "symbol": "XOM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 187.24,
+   "close": 187.25,
    "score": 0.236,
    "trend": {
     "direction": "bullish",
@@ -3286,7 +3269,7 @@
     "dist_sma200_pct": 22.07,
     "high_52w": 188.5,
     "low_52w": 109.34,
-    "volume_ratio_20": 1.3
+    "volume_ratio_20": 1.69
    },
    "patterns": [
     {
@@ -3324,7 +3307,7 @@
   "CVX": {
    "symbol": "CVX",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 235.59,
+   "close": 235.52,
    "score": 0.245,
    "trend": {
     "direction": "bullish",
@@ -3357,10 +3340,10 @@
     "sma_20": 221.75,
     "sma_50": 213.15,
     "sma_200": 191.25,
-    "dist_sma200_pct": 23.18,
-    "high_52w": 236.46,
+    "dist_sma200_pct": 23.15,
+    "high_52w": 236.48,
     "low_52w": 142.51,
-    "volume_ratio_20": 1.03
+    "volume_ratio_20": 1.4
    },
    "patterns": [
     {
@@ -3377,7 +3360,7 @@
      "name": "rsi_overbought",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.299,
+     "strength": 0.298,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -3408,7 +3391,7 @@
   "JNJ": {
    "symbol": "JNJ",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 273.18,
+   "close": 273.2,
    "score": 0.0,
    "trend": {
     "direction": "neutral",
@@ -3452,10 +3435,10 @@
     "sma_20": 260.8,
     "sma_50": 265.55,
     "sma_200": 245.33,
-    "dist_sma200_pct": 11.35,
+    "dist_sma200_pct": 11.36,
     "high_52w": 282.0,
     "low_52w": 181.04,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 1.16
    },
    "patterns": [
     {
@@ -3473,7 +3456,7 @@
   "UNH": {
    "symbol": "UNH",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 406.93,
+   "close": 406.97,
    "score": 0.0,
    "trend": {
     "direction": "neutral",
@@ -3517,15 +3500,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 56.1,
+    "rsi_14": 56.2,
     "atr_pct": 2.69,
     "sma_20": 398.67,
     "sma_50": 389.47,
     "sma_200": 359.62,
-    "dist_sma200_pct": 13.16,
+    "dist_sma200_pct": 13.17,
     "high_52w": 458.79,
     "low_52w": 252.96,
-    "volume_ratio_20": 0.54
+    "volume_ratio_20": 0.71
    },
    "patterns": [
     {
@@ -3543,11 +3526,11 @@
   "LLY": {
    "symbol": "LLY",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 1416.5,
+   "close": 1417.5,
    "score": 0.603,
    "trend": {
     "direction": "neutral",
-    "change_pct": 6.48,
+    "change_pct": 6.49,
     "r2": 0.138,
     "quality": 0.0,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -3571,15 +3554,15 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 77.8,
+    "rsi_14": 77.9,
     "atr_pct": 3.17,
     "sma_20": 1246.0,
     "sma_50": 1197.1,
     "sma_200": 1089.3,
-    "dist_sma200_pct": 30.04,
+    "dist_sma200_pct": 30.14,
     "high_52w": 1449.7,
     "low_52w": 807.16,
-    "volume_ratio_20": 1.63
+    "volume_ratio_20": 1.86
    },
    "patterns": [
     {
@@ -3622,7 +3605,7 @@
      "name": "rsi_overbought",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.38,
+     "strength": 0.381,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -3633,7 +3616,7 @@
   "PFE": {
    "symbol": "PFE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 30.505,
+   "close": 30.52,
    "score": 0.728,
    "trend": {
     "direction": "bullish",
@@ -3661,15 +3644,15 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 66.5,
+    "rsi_14": 66.6,
     "atr_pct": 1.88,
-    "sma_20": 29.168,
-    "sma_50": 28.546,
+    "sma_20": 29.169,
+    "sma_50": 28.547,
     "sma_200": 26.327,
-    "dist_sma200_pct": 15.87,
+    "dist_sma200_pct": 15.93,
     "high_52w": 30.66,
     "low_52w": 22.567,
-    "volume_ratio_20": 0.99
+    "volume_ratio_20": 1.26
    },
    "patterns": [
     {
@@ -3743,7 +3726,7 @@
   "PG": {
    "symbol": "PG",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 161.55,
+   "close": 161.57,
    "score": 0.332,
    "trend": {
     "direction": "bullish",
@@ -3782,10 +3765,10 @@
     "sma_20": 155.45,
     "sma_50": 149.13,
     "sma_200": 146.86,
-    "dist_sma200_pct": 10.0,
+    "dist_sma200_pct": 10.02,
     "high_52w": 165.75,
     "low_52w": 133.74,
-    "volume_ratio_20": 0.81
+    "volume_ratio_20": 1.17
    },
    "patterns": [
     {
@@ -3805,11 +3788,11 @@
   "KO": {
    "symbol": "KO",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 94.12,
+   "close": 94.08,
    "score": 0.314,
    "trend": {
     "direction": "neutral",
-    "change_pct": 5.31,
+    "change_pct": 5.3,
     "r2": 0.305,
     "quality": 0.0,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -3839,15 +3822,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 62.8,
+    "rsi_14": 62.7,
     "atr_pct": 1.73,
-    "sma_20": 91.104,
-    "sma_50": 89.296,
+    "sma_20": 91.102,
+    "sma_50": 89.295,
     "sma_200": 81.383,
-    "dist_sma200_pct": 15.65,
+    "dist_sma200_pct": 15.6,
     "high_52w": 95.37,
     "low_52w": 65.908,
-    "volume_ratio_20": 0.8
+    "volume_ratio_20": 1.09
    },
    "patterns": [
     {
@@ -3939,7 +3922,7 @@
     "dist_sma200_pct": -4.43,
     "high_52w": 166.41,
     "low_52w": 123.47,
-    "volume_ratio_20": 1.49
+    "volume_ratio_20": 1.97
    },
    "patterns": [
     {
@@ -4011,7 +3994,7 @@
     "dist_sma200_pct": 4.54,
     "high_52w": 134.84,
     "low_52w": 98.054,
-    "volume_ratio_20": 1.38
+    "volume_ratio_20": 1.51
    },
    "patterns": [
     {
@@ -4115,7 +4098,7 @@
     "dist_sma200_pct": 4.43,
     "high_52w": 1094.8,
     "low_52w": 840.35,
-    "volume_ratio_20": 1.47
+    "volume_ratio_20": 1.61
    },
    "patterns": [
     {
@@ -4155,12 +4138,12 @@
   "HD": {
    "symbol": "HD",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 329.25,
+   "close": 329.2,
    "score": 0.173,
    "trend": {
     "direction": "neutral",
     "change_pct": -11.12,
-    "r2": 0.32,
+    "r2": 0.321,
     "quality": 0.0,
     "ma_alignment": "below SMA200"
    },
@@ -4204,10 +4187,10 @@
     "sma_20": 306.9,
     "sma_50": 307.97,
     "sma_200": 330.61,
-    "dist_sma200_pct": -0.41,
+    "dist_sma200_pct": -0.43,
     "high_52w": 389.18,
     "low_52w": 277.15,
-    "volume_ratio_20": 0.59
+    "volume_ratio_20": 0.83
    },
    "patterns": [
     {
@@ -4237,7 +4220,7 @@
   "MCD": {
    "symbol": "MCD",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 258.18,
+   "close": 258.12,
    "score": 0.046,
    "trend": {
     "direction": "bearish",
@@ -4276,15 +4259,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 68.3,
+    "rsi_14": 68.2,
     "atr_pct": 1.83,
     "sma_20": 243.33,
     "sma_50": 248.01,
     "sma_200": 280.32,
-    "dist_sma200_pct": -7.9,
+    "dist_sma200_pct": -7.92,
     "high_52w": 335.18,
     "low_52w": 229.2,
-    "volume_ratio_20": 0.94
+    "volume_ratio_20": 1.2
    },
    "patterns": [
     {
@@ -4304,7 +4287,7 @@
   "CAT": {
    "symbol": "CAT",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 622.68,
+   "close": 622.75,
    "score": -0.406,
    "trend": {
     "direction": "bearish",
@@ -4346,12 +4329,12 @@
     "rsi_14": 24.0,
     "atr_pct": 4.87,
     "sma_20": 742.68,
-    "sma_50": 781.6,
+    "sma_50": 781.61,
     "sma_200": 806.63,
     "dist_sma200_pct": -22.8,
     "high_52w": 1068.9,
     "low_52w": 532.55,
-    "volume_ratio_20": 1.43
+    "volume_ratio_20": 1.69
    },
    "patterns": [
     {
@@ -4391,7 +4374,7 @@
   "BA": {
    "symbol": "BA",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 171.56,
+   "close": 171.55,
    "score": 0.028,
    "trend": {
     "direction": "bearish",
@@ -4427,7 +4410,7 @@
     "dist_sma200_pct": -20.94,
     "high_52w": 254.35,
     "low_52w": 165.01,
-    "volume_ratio_20": 0.78
+    "volume_ratio_20": 0.86
    },
    "patterns": [
     {
@@ -4507,7 +4490,7 @@
     "dist_sma200_pct": -0.08,
     "high_52w": 362.71,
     "low_52w": 190.12,
-    "volume_ratio_20": 1.27
+    "volume_ratio_20": 1.33
    },
    "patterns": [
     {
@@ -4528,7 +4511,7 @@
    "symbol": "INTC",
    "as_of": "2026-10-30T00:00:00+00:00",
    "close": 65.76,
-   "score": -0.612,
+   "score": -0.613,
    "trend": {
     "direction": "neutral",
     "change_pct": -0.51,
@@ -4579,7 +4562,7 @@
     "dist_sma200_pct": -24.3,
     "high_52w": 142.35,
     "low_52w": 32.89,
-    "volume_ratio_20": 4.52
+    "volume_ratio_20": 4.56
    },
    "patterns": [
     {
@@ -4598,11 +4581,11 @@
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.426,
+     "strength": 0.428,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "volume 4.5x its 20-bar average"
+     "note": "volume 4.6x its 20-bar average"
     },
     {
      "name": "gap_down",
@@ -4693,7 +4676,7 @@
     "dist_sma200_pct": -2.13,
     "high_52w": 257.56,
     "low_52w": 120.88,
-    "volume_ratio_20": 2.4
+    "volume_ratio_20": 2.43
    },
    "patterns": [
     {
@@ -4827,7 +4810,7 @@
     "dist_sma200_pct": 3.96,
     "high_52w": 129.38,
     "low_52w": 69.258,
-    "volume_ratio_20": 1.4
+    "volume_ratio_20": 1.58
    },
    "patterns": [
     {
@@ -4845,11 +4828,11 @@
   "IBM": {
    "symbol": "IBM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 257.86,
-   "score": 0.096,
+   "close": 257.81,
+   "score": 0.097,
    "trend": {
     "direction": "neutral",
-    "change_pct": 3.2,
+    "change_pct": 3.19,
     "r2": 0.052,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
@@ -4889,15 +4872,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 71.0,
+    "rsi_14": 70.9,
     "atr_pct": 2.77,
     "sma_20": 238.88,
     "sma_50": 235.17,
     "sma_200": 247.01,
-    "dist_sma200_pct": 4.39,
+    "dist_sma200_pct": 4.37,
     "high_52w": 330.09,
     "low_52w": 197.77,
-    "volume_ratio_20": 0.68
+    "volume_ratio_20": 0.99
    },
    "patterns": [
     {
@@ -4936,7 +4919,7 @@
      "name": "rsi_overbought",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.267,
+     "strength": 0.265,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -5004,7 +4987,7 @@
     "dist_sma200_pct": 16.46,
     "high_52w": 332.33,
     "low_52w": 150.2,
-    "volume_ratio_20": 1.7
+    "volume_ratio_20": 1.87
    },
    "patterns": [
     {
@@ -5074,7 +5057,7 @@
     "dist_sma200_pct": 18.5,
     "high_52w": 1254.6,
     "low_52w": 192.37,
-    "volume_ratio_20": 1.14
+    "volume_ratio_20": 1.17
    },
    "patterns": [
     {
@@ -5161,7 +5144,7 @@
     "dist_sma200_pct": -8.58,
     "high_52w": 192.97,
     "low_52w": 81.24,
-    "volume_ratio_20": 1.97
+    "volume_ratio_20": 2.2
    },
    "patterns": [
     {
@@ -5201,7 +5184,7 @@
   "UBER": {
    "symbol": "UBER",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 65.235,
+   "close": 65.25,
    "score": -0.211,
    "trend": {
     "direction": "bearish",
@@ -5229,15 +5212,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 35.7,
+    "rsi_14": 35.8,
     "atr_pct": 2.59,
     "sma_20": 68.647,
     "sma_50": 71.211,
     "sma_200": 73.337,
-    "dist_sma200_pct": -11.05,
+    "dist_sma200_pct": -11.03,
     "high_52w": 100.35,
     "low_52w": 64.04,
-    "volume_ratio_20": 0.84
+    "volume_ratio_20": 1.06
    },
    "patterns": [
     {
@@ -5317,7 +5300,7 @@
     "dist_sma200_pct": 19.89,
     "high_52w": 212.94,
     "low_52w": 106.37,
-    "volume_ratio_20": 1.15
+    "volume_ratio_20": 1.19
    },
    "patterns": [
     {
@@ -5345,7 +5328,7 @@
   "DIS": {
    "symbol": "DIS",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 110.96,
+   "close": 110.94,
    "score": -0.197,
    "trend": {
     "direction": "neutral",
@@ -5389,10 +5372,10 @@
     "sma_20": 109.25,
     "sma_50": 107.35,
     "sma_200": 103.01,
-    "dist_sma200_pct": 7.71,
+    "dist_sma200_pct": 7.7,
     "high_52w": 115.42,
     "low_52w": 91.489,
-    "volume_ratio_20": 0.55
+    "volume_ratio_20": 0.71
    },
    "patterns": [
     {
@@ -5410,11 +5393,11 @@
   "NKE": {
    "symbol": "NKE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 38.68,
+   "close": 38.67,
    "score": -0.096,
    "trend": {
     "direction": "bearish",
-    "change_pct": -10.45,
+    "change_pct": -10.46,
     "r2": 0.387,
     "quality": 0.387,
     "ma_alignment": "below SMA200"
@@ -5456,13 +5439,13 @@
    "indicators": {
     "rsi_14": 61.9,
     "atr_pct": 2.73,
-    "sma_20": 36.53,
-    "sma_50": 36.887,
+    "sma_20": 36.529,
+    "sma_50": 36.886,
     "sma_200": 45.371,
-    "dist_sma200_pct": -14.75,
+    "dist_sma200_pct": -14.77,
     "high_52w": 67.36,
     "low_52w": 31.97,
-    "volume_ratio_20": 0.57
+    "volume_ratio_20": 0.75
    },
    "patterns": [
     {
@@ -5480,7 +5463,7 @@
   "SBUX": {
    "symbol": "SBUX",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 103.65,
+   "close": 103.67,
    "score": -0.462,
    "trend": {
     "direction": "neutral",
@@ -5514,15 +5497,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 63.4,
+    "rsi_14": 63.5,
     "atr_pct": 2.35,
-    "sma_20": 97.857,
+    "sma_20": 97.858,
     "sma_50": 99.258,
     "sma_200": 99.139,
-    "dist_sma200_pct": 4.55,
+    "dist_sma200_pct": 4.57,
     "high_52w": 109.88,
     "low_52w": 76.049,
-    "volume_ratio_20": 1.43
+    "volume_ratio_20": 1.46
    },
    "patterns": [
     {
@@ -5560,13 +5543,13 @@
   "LOW": {
    "symbol": "LOW",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 209.22,
-   "score": 0.319,
+   "close": 209.07,
+   "score": 0.318,
    "trend": {
     "direction": "bearish",
     "change_pct": -11.99,
-    "r2": 0.404,
-    "quality": 0.404,
+    "r2": 0.405,
+    "quality": 0.405,
     "ma_alignment": "below SMA200"
    },
    "support": [
@@ -5604,15 +5587,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 67.9,
-    "atr_pct": 2.35,
-    "sma_20": 193.32,
+    "rsi_14": 67.8,
+    "atr_pct": 2.36,
+    "sma_20": 193.31,
     "sma_50": 195.15,
     "sma_200": 223.23,
-    "dist_sma200_pct": -6.27,
+    "dist_sma200_pct": -6.34,
     "high_52w": 288.04,
     "low_52w": 177.33,
-    "volume_ratio_20": 0.97
+    "volume_ratio_20": 1.31
    },
    "patterns": [
     {
@@ -5644,13 +5627,13 @@
   "WFC": {
    "symbol": "WFC",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 83.42,
+   "close": 83.4,
    "score": -0.108,
    "trend": {
     "direction": "bearish",
-    "change_pct": -7.67,
-    "r2": 0.432,
-    "quality": 0.432,
+    "change_pct": -7.68,
+    "r2": 0.433,
+    "quality": 0.433,
     "ma_alignment": "above SMA200"
    },
    "support": [
@@ -5677,7 +5660,7 @@
      "bars_since_touch": 14
     },
     {
-     "price": 86.852,
+     "price": 86.851,
      "touches": 9,
      "bars_since_touch": 37
     },
@@ -5690,13 +5673,13 @@
    "indicators": {
     "rsi_14": 51.2,
     "atr_pct": 2.26,
-    "sma_20": 82.47,
-    "sma_50": 84.323,
+    "sma_20": 82.469,
+    "sma_50": 84.322,
     "sma_200": 83.036,
-    "dist_sma200_pct": 0.46,
+    "dist_sma200_pct": 0.44,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 0.46
+    "volume_ratio_20": 0.62
    },
    "patterns": [
     {
@@ -5766,7 +5749,7 @@
     "dist_sma200_pct": -4.63,
     "high_52w": 230.98,
     "low_52w": 151.15,
-    "volume_ratio_20": 0.97
+    "volume_ratio_20": 1.17
    },
    "patterns": [
     {
@@ -5786,7 +5769,7 @@
   "BLK": {
    "symbol": "BLK",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 1147.3,
+   "close": 1147.5,
    "score": 0.0,
    "trend": {
     "direction": "neutral",
@@ -5825,15 +5808,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 58.2,
+    "rsi_14": 58.3,
     "atr_pct": 2.29,
     "sma_20": 1112.3,
     "sma_50": 1102.5,
     "sma_200": 1055.5,
-    "dist_sma200_pct": 8.7,
+    "dist_sma200_pct": 8.72,
     "high_52w": 1182.6,
     "low_52w": 907.59,
-    "volume_ratio_20": 0.72
+    "volume_ratio_20": 0.94
    },
    "patterns": []
   },
@@ -5892,7 +5875,7 @@
     "dist_sma200_pct": -1.62,
     "high_52w": 383.18,
     "low_52w": 288.37,
-    "volume_ratio_20": 0.58
+    "volume_ratio_20": 0.83
    },
    "patterns": [
     {
@@ -5920,7 +5903,7 @@
   "MRK": {
    "symbol": "MRK",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 149.54,
+   "close": 149.52,
    "score": 0.149,
    "trend": {
     "direction": "neutral",
@@ -5959,10 +5942,10 @@
     "sma_20": 144.59,
     "sma_50": 146.58,
     "sma_200": 125.51,
-    "dist_sma200_pct": 19.14,
+    "dist_sma200_pct": 19.13,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 0.85
+    "volume_ratio_20": 1.04
    },
    "patterns": [
     {
@@ -5990,11 +5973,11 @@
   "ABBV": {
    "symbol": "ABBV",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 294.82,
+   "close": 294.89,
    "score": 0.261,
    "trend": {
     "direction": "bullish",
-    "change_pct": 15.74,
+    "change_pct": 15.75,
     "r2": 0.78,
     "quality": 0.78,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -6018,15 +6001,15 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 73.3,
+    "rsi_14": 73.4,
     "atr_pct": 2.18,
     "sma_20": 280.96,
     "sma_50": 268.07,
     "sma_200": 234.25,
-    "dist_sma200_pct": 25.86,
+    "dist_sma200_pct": 25.89,
     "high_52w": 298.74,
     "low_52w": 188.25,
-    "volume_ratio_20": 0.86
+    "volume_ratio_20": 1.11
    },
    "patterns": [
     {
@@ -6064,11 +6047,11 @@
   "TMO": {
    "symbol": "TMO",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 696.97,
+   "close": 697.0,
    "score": 0.004,
    "trend": {
     "direction": "bullish",
-    "change_pct": 18.15,
+    "change_pct": 18.16,
     "r2": 0.818,
     "quality": 0.818,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -6106,7 +6089,7 @@
     "dist_sma200_pct": 26.57,
     "high_52w": 711.85,
     "low_52w": 434.5,
-    "volume_ratio_20": 0.68
+    "volume_ratio_20": 0.88
    },
    "patterns": [
     {
@@ -6134,7 +6117,7 @@
   "ABT": {
    "symbol": "ABT",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 106.24,
+   "close": 106.2,
    "score": 0.278,
    "trend": {
     "direction": "bearish",
@@ -6183,10 +6166,10 @@
     "sma_20": 102.09,
     "sma_50": 103.85,
     "sma_200": 100.47,
-    "dist_sma200_pct": 5.74,
+    "dist_sma200_pct": 5.7,
     "high_52w": 128.83,
     "low_52w": 80.892,
-    "volume_ratio_20": 0.61
+    "volume_ratio_20": 0.79
    },
    "patterns": [
     {
@@ -6230,11 +6213,11 @@
   "PM": {
    "symbol": "PM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 208.8,
+   "close": 208.79,
    "score": 0.612,
    "trend": {
     "direction": "bullish",
-    "change_pct": 10.4,
+    "change_pct": 10.39,
     "r2": 0.646,
     "quality": 0.646,
     "ma_alignment": "bullish stack (price > SMA20 > SMA50 > SMA200)"
@@ -6269,10 +6252,10 @@
     "sma_20": 200.52,
     "sma_50": 193.21,
     "sma_200": 179.4,
-    "dist_sma200_pct": 16.39,
+    "dist_sma200_pct": 16.38,
     "high_52w": 214.35,
     "low_52w": 137.25,
-    "volume_ratio_20": 0.57
+    "volume_ratio_20": 1.0
    },
    "patterns": [
     {
@@ -6312,7 +6295,7 @@
   "COP": {
    "symbol": "COP",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 154.04,
+   "close": 154.03,
    "score": 0.524,
    "trend": {
     "direction": "bullish",
@@ -6345,10 +6328,10 @@
     "sma_20": 142.53,
     "sma_50": 136.13,
     "sma_200": 120.33,
-    "dist_sma200_pct": 28.02,
+    "dist_sma200_pct": 28.01,
     "high_52w": 154.28,
     "low_52w": 82.955,
-    "volume_ratio_20": 0.74
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -6418,11 +6401,11 @@
   "SLB": {
    "symbol": "SLB",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 53.75,
+   "close": 53.74,
    "score": 0.245,
    "trend": {
     "direction": "neutral",
-    "change_pct": -8.14,
+    "change_pct": -8.15,
     "r2": 0.217,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
@@ -6457,15 +6440,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 61.6,
+    "rsi_14": 61.5,
     "atr_pct": 2.94,
     "sma_20": 50.567,
     "sma_50": 52.438,
-    "sma_200": 51.099,
-    "dist_sma200_pct": 5.19,
+    "sma_200": 51.098,
+    "dist_sma200_pct": 5.17,
     "high_52w": 60.148,
     "low_52w": 33.823,
-    "volume_ratio_20": 0.74
+    "volume_ratio_20": 1.07
    },
    "patterns": [
     {
@@ -6555,7 +6538,7 @@
     "dist_sma200_pct": -4.87,
     "high_52w": 258.09,
     "low_52w": 193.26,
-    "volume_ratio_20": 1.0
+    "volume_ratio_20": 1.13
    },
    "patterns": [
     {
@@ -6583,7 +6566,7 @@
   "GE": {
    "symbol": "GE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 301.83,
+   "close": 301.8,
    "score": -0.195,
    "trend": {
     "direction": "bearish",
@@ -6627,7 +6610,7 @@
     }
    ],
    "indicators": {
-    "rsi_14": 46.0,
+    "rsi_14": 45.9,
     "atr_pct": 3.16,
     "sma_20": 303.53,
     "sma_50": 317.01,
@@ -6635,7 +6618,7 @@
     "dist_sma200_pct": -6.26,
     "high_52w": 388.25,
     "low_52w": 268.17,
-    "volume_ratio_20": 0.64
+    "volume_ratio_20": 0.97
    },
    "patterns": [
     {
@@ -6663,11 +6646,11 @@
   "DE": {
    "symbol": "DE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 675.7,
+   "close": 675.48,
    "score": 0.609,
    "trend": {
     "direction": "neutral",
-    "change_pct": 5.32,
+    "change_pct": 5.31,
     "r2": 0.104,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
@@ -6704,13 +6687,13 @@
    "indicators": {
     "rsi_14": 59.8,
     "atr_pct": 2.76,
-    "sma_20": 648.18,
+    "sma_20": 648.17,
     "sma_50": 662.93,
     "sma_200": 602.29,
-    "dist_sma200_pct": 12.19,
+    "dist_sma200_pct": 12.15,
     "high_52w": 719.5,
     "low_52w": 449.37,
-    "volume_ratio_20": 0.94
+    "volume_ratio_20": 1.18
    },
    "patterns": [
     {
@@ -6760,12 +6743,12 @@
   "LMT": {
    "symbol": "LMT",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 637.27,
-   "score": -0.378,
+   "close": 636.95,
+   "score": -0.377,
    "trend": {
     "direction": "neutral",
-    "change_pct": -2.36,
-    "r2": 0.01,
+    "change_pct": -2.37,
+    "r2": 0.011,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
    },
@@ -6799,15 +6782,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 75.8,
+    "rsi_14": 75.6,
     "atr_pct": 2.78,
-    "sma_20": 558.38,
+    "sma_20": 558.37,
     "sma_50": 543.62,
-    "sma_200": 563.36,
-    "dist_sma200_pct": 13.12,
+    "sma_200": 563.35,
+    "dist_sma200_pct": 13.06,
     "high_52w": 683.27,
     "low_52w": 429.47,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 1.25
    },
    "patterns": [
     {
@@ -6824,7 +6807,7 @@
      "name": "rsi_overbought",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.346,
+     "strength": 0.343,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -6845,13 +6828,13 @@
   "NEE": {
    "symbol": "NEE",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 83.75,
-   "score": 0.281,
+   "close": 83.71,
+   "score": 0.37,
    "trend": {
     "direction": "bearish",
     "change_pct": -7.7,
-    "r2": 0.381,
-    "quality": 0.381,
+    "r2": 0.382,
+    "quality": 0.382,
     "ma_alignment": "below SMA200"
    },
    "support": [
@@ -6889,17 +6872,29 @@
     }
    ],
    "indicators": {
-    "rsi_14": 65.4,
+    "rsi_14": 65.3,
     "atr_pct": 1.83,
-    "sma_20": 79.526,
-    "sma_50": 80.174,
+    "sma_20": 79.523,
+    "sma_50": 80.173,
     "sma_200": 86.391,
-    "dist_sma200_pct": -3.06,
+    "dist_sma200_pct": -3.1,
     "high_52w": 97.3,
     "low_52w": 74.41,
-    "volume_ratio_20": 1.49
+    "volume_ratio_20": 2.04
    },
    "patterns": [
+    {
+     "name": "resistance_breakout",
+     "kind": "chart",
+     "direction": "bullish",
+     "strength": 0.78,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {
+      "level": 82.656
+     },
+     "note": "closed above a 3-touch resistance on 2.0x volume"
+    },
     {
      "name": "morning_star",
      "kind": "candlestick",
@@ -6909,18 +6904,6 @@
      "status": "confirmed",
      "levels": {},
      "note": "large bearish bar, small pause, strong bullish bar"
-    },
-    {
-     "name": "resistance_breakout",
-     "kind": "chart",
-     "direction": "bullish",
-     "strength": 0.58,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {
-      "level": 82.656
-     },
-     "note": "closed above a 3-touch resistance"
     },
     {
      "name": "shooting_star",
@@ -6937,11 +6920,11 @@
   "T": {
    "symbol": "T",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 21.43,
+   "close": 21.41,
    "score": -0.402,
    "trend": {
     "direction": "bearish",
-    "change_pct": -13.53,
+    "change_pct": -13.54,
     "r2": 0.472,
     "quality": 0.472,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
@@ -6971,15 +6954,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 38.8,
+    "rsi_14": 38.6,
     "atr_pct": 3.38,
-    "sma_20": 22.573,
-    "sma_50": 24.16,
+    "sma_20": 22.572,
+    "sma_50": 24.159,
     "sma_200": 24.445,
-    "dist_sma200_pct": -12.34,
+    "dist_sma200_pct": -12.42,
     "high_52w": 28.429,
     "low_52w": 19.408,
-    "volume_ratio_20": 0.69
+    "volume_ratio_20": 0.82
    },
    "patterns": [
     {
@@ -7059,7 +7042,7 @@
     "dist_sma200_pct": 4.81,
     "high_52w": 546.4,
     "low_52w": 384.0,
-    "volume_ratio_20": 1.44
+    "volume_ratio_20": 1.5
    },
    "patterns": [
     {
