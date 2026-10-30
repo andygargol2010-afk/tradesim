@@ -1,6 +1,17 @@
 {
- "started_at": "2026-10-30T15:20:46.212921+00:00",
- "errors": {},
+ "started_at": "2026-10-30T15:40:47.458093+00:00",
+ "errors": {
+  "news:google:fed": "https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+OR+Powell+rates+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+",
+  "news:google:inflation": "https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+United+States+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+",
+  "news:google:jobs": "https://news.google.com/rss/search?q=%22jobs+report%22+OR+payrolls+OR+unemployment+rate+OR+%22jobless+claims%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%",
+  "news:google:growth": "https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+OR+%22retail+sales%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+",
+  "news:google:yields": "https://news.google.com/rss/search?q=Treasury+yields+OR+bond+market+OR+%2210-year+yield%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=Treasury+yields+OR+bon",
+  "news:google:oil": "https://news.google.com/rss/search?q=oil+prices+OR+OPEC+OR+crude+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=oil+prices+OR+OPEC+OR+crude+when%3A2d&hl=en-US&g",
+  "news:google:trade": "https://news.google.com/rss/search?q=tariffs+OR+%22trade+war%22+OR+sanctions+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=tariffs+OR+%22trade+war%22+O",
+  "news:google:crypto_policy": "https://news.google.com/rss/search?q=SEC+crypto+OR+bitcoin+ETF+OR+stablecoin+regulation+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=SEC+crypto+OR+bitcoin+ETF",
+  "news:google:geopolitics": "https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+election+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+e",
+  "news:google:dollar": "https://news.google.com/rss/search?q=%22US+dollar%22+OR+%22dollar+index%22+currency+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 503 for https://news.google.com/rss/search?q=%22US+dollar%22+OR+%2"
+ },
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -13,13 +24,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 264
+  "local": 62
  },
  "news": {
-  "fetched": 1934,
-  "new": 239,
-  "stored": 10122,
-  "triaged": 239,
+  "fetched": 1222,
+  "new": 37,
+  "stored": 10150,
+  "triaged": 37,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -30,7 +41,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 54.5,
+ "duration_s": 229.4,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
