@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T20:20:37.858967+00:00",
+ "generated_at": "2026-10-30T21:20:31.557033+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -56,7 +56,7 @@
     "dist_sma200_pct": 4.1,
     "high_52w": 781.62,
     "low_52w": 626.11,
-    "volume_ratio_20": 1.8
+    "volume_ratio_20": 2.05
    },
    "patterns": [
     {
@@ -69,7 +69,7 @@
      "levels": {
       "level": 758.74
      },
-     "note": "closed below a 6-touch support on 1.8x volume"
+     "note": "closed below a 6-touch support on 2.0x volume"
     },
     {
      "name": "double_top",
@@ -154,7 +154,7 @@
     "dist_sma200_pct": 1.79,
     "high_52w": 762.86,
     "low_52w": 554.41,
-    "volume_ratio_20": 2.18
+    "volume_ratio_20": 2.31
    },
    "patterns": [
     {
@@ -167,7 +167,7 @@
      "levels": {
       "level": 701.43
      },
-     "note": "closed below a 6-touch support on 2.2x volume"
+     "note": "closed below a 6-touch support on 2.3x volume"
     },
     {
      "name": "evening_star",
@@ -206,7 +206,7 @@
   "IWM": {
    "symbol": "IWM",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 279.37,
+   "close": 279.33,
    "score": -0.211,
    "trend": {
     "direction": "bearish",
@@ -251,11 +251,11 @@
    ],
    "indicators": {
     "rsi_14": 49.5,
-    "atr_pct": 1.36,
+    "atr_pct": 1.37,
     "sma_20": 277.41,
     "sma_50": 284.03,
     "sma_200": 277.7,
-    "dist_sma200_pct": 0.6,
+    "dist_sma200_pct": 0.59,
     "high_52w": 304.39,
     "low_52w": 226.6,
     "volume_ratio_20": 0.96
@@ -265,13 +265,13 @@
   "DIA": {
    "symbol": "DIA",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 517.01,
+   "close": 517.13,
    "score": -0.11,
    "trend": {
     "direction": "bearish",
     "change_pct": -3.57,
-    "r2": 0.443,
-    "quality": 0.443,
+    "r2": 0.442,
+    "quality": 0.442,
     "ma_alignment": "above SMA200"
    },
    "support": [
@@ -309,15 +309,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 45.4,
+    "rsi_14": 45.6,
     "atr_pct": 0.97,
     "sma_20": 519.27,
-    "sma_50": 521.13,
+    "sma_50": 521.14,
     "sma_200": 503.29,
-    "dist_sma200_pct": 2.73,
+    "dist_sma200_pct": 2.75,
     "high_52w": 544.92,
     "low_52w": 447.15,
-    "volume_ratio_20": 1.34
+    "volume_ratio_20": 1.37
    },
    "patterns": [
     {
@@ -371,7 +371,7 @@
     "dist_sma200_pct": -13.84,
     "high_52w": 509.7,
     "low_52w": 354.67,
-    "volume_ratio_20": 2.01
+    "volume_ratio_20": 2.02
    },
    "patterns": [
     {
@@ -384,7 +384,7 @@
      "levels": {
       "level": 365.26
      },
-     "note": "closed below a 5-touch support on 2.0x volume"
+     "note": "closed below a 5-touch support on 2.1x volume"
     },
     {
      "name": "evening_star",
@@ -475,7 +475,7 @@
     "dist_sma200_pct": -30.56,
     "high_52w": 109.83,
     "low_52w": 42.51,
-    "volume_ratio_20": 2.38
+    "volume_ratio_20": 2.39
    },
    "patterns": [
     {
@@ -586,7 +586,7 @@
     "dist_sma200_pct": -1.67,
     "high_52w": 88.133,
     "low_52w": 76.43,
-    "volume_ratio_20": 1.03
+    "volume_ratio_20": 1.04
    },
    "patterns": [
     {
@@ -656,7 +656,7 @@
     "dist_sma200_pct": -4.2,
     "high_52w": 71.57,
     "low_52w": 51.374,
-    "volume_ratio_20": 1.78
+    "volume_ratio_20": 1.79
    },
    "patterns": [
     {
@@ -809,7 +809,7 @@
     "dist_sma200_pct": 5.81,
     "high_52w": 58.393,
     "low_52w": 47.336,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.15
    },
    "patterns": [
     {
@@ -884,7 +884,7 @@
     "dist_sma200_pct": -0.81,
     "high_52w": 95.475,
     "low_52w": 88.64,
-    "volume_ratio_20": 1.89
+    "volume_ratio_20": 1.9
    },
    "patterns": [
     {
@@ -929,14 +929,9 @@
      "bars_since_touch": 14
     },
     {
-     "price": 78.553,
-     "touches": 10,
+     "price": 78.615,
+     "touches": 12,
      "bars_since_touch": 42
-    },
-    {
-     "price": 79.182,
-     "touches": 1,
-     "bars_since_touch": 45
     }
    ],
    "indicators": {
@@ -948,7 +943,7 @@
     "dist_sma200_pct": -0.59,
     "high_52w": 79.182,
     "low_52w": 75.777,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.15
    },
    "patterns": [
     {
@@ -1018,8 +1013,8 @@
    ],
    "resistance": [
     {
-     "price": 107.96,
-     "touches": 13,
+     "price": 107.98,
+     "touches": 12,
      "bars_since_touch": 47
     }
    ],
@@ -1144,12 +1139,12 @@
   "EWJ": {
    "symbol": "EWJ",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 92.9,
+   "close": 92.91,
    "score": -0.762,
    "trend": {
     "direction": "neutral",
     "change_pct": -1.06,
-    "r2": 0.043,
+    "r2": 0.042,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
    },
@@ -1190,10 +1185,10 @@
    "indicators": {
     "rsi_14": 34.4,
     "atr_pct": 1.37,
-    "sma_20": 96.005,
+    "sma_20": 96.006,
     "sma_50": 96.545,
     "sma_200": 91.542,
-    "dist_sma200_pct": 1.48,
+    "dist_sma200_pct": 1.49,
     "high_52w": 99.98,
     "low_52w": 76.199,
     "volume_ratio_20": 1.98
@@ -1252,11 +1247,11 @@
   "FXI": {
    "symbol": "FXI",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 33.12,
+   "close": 33.08,
    "score": -0.029,
    "trend": {
     "direction": "bearish",
-    "change_pct": -8.81,
+    "change_pct": -8.82,
     "r2": 0.817,
     "quality": 0.817,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
@@ -1291,15 +1286,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 45.5,
+    "rsi_14": 44.9,
     "atr_pct": 1.21,
-    "sma_20": 33.351,
-    "sma_50": 34.189,
-    "sma_200": 35.525,
-    "dist_sma200_pct": -6.77,
+    "sma_20": 33.349,
+    "sma_50": 34.188,
+    "sma_200": 35.524,
+    "dist_sma200_pct": -6.88,
     "high_52w": 40.863,
     "low_52w": 31.19,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.15
    },
    "patterns": [
     {
@@ -1389,7 +1384,7 @@
   "XLK": {
    "symbol": "XLK",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 179.52,
+   "close": 179.51,
    "score": -0.555,
    "trend": {
     "direction": "neutral",
@@ -1433,12 +1428,12 @@
     }
    ],
    "indicators": {
-    "rsi_14": 36.9,
+    "rsi_14": 36.8,
     "atr_pct": 2.39,
     "sma_20": 190.86,
     "sma_50": 189.6,
     "sma_200": 169.24,
-    "dist_sma200_pct": 6.08,
+    "dist_sma200_pct": 6.07,
     "high_52w": 203.25,
     "low_52w": 126.38,
     "volume_ratio_20": 2.19
@@ -1454,7 +1449,7 @@
      "levels": {
       "level": 179.96
      },
-     "note": "closed below a 8-touch support on 2.1x volume"
+     "note": "closed below a 8-touch support on 2.2x volume"
     },
     {
      "name": "gap_down",
@@ -1473,7 +1468,7 @@
   "XLV": {
    "symbol": "XLV",
    "as_of": "2026-10-30T00:00:00+00:00",
-   "close": 184.84,
+   "close": 184.87,
    "score": 0.557,
    "trend": {
     "direction": "neutral",
@@ -1504,12 +1499,12 @@
     "rsi_14": 72.6,
     "atr_pct": 1.67,
     "sma_20": 175.69,
-    "sma_50": 171.95,
+    "sma_50": 171.96,
     "sma_200": 157.67,
-    "dist_sma200_pct": 17.23,
+    "dist_sma200_pct": 17.25,
     "high_52w": 187.99,
     "low_52w": 140.35,
-    "volume_ratio_20": 2.12
+    "volume_ratio_20": 2.13
    },
    "patterns": [
     {
@@ -1615,7 +1610,7 @@
     "dist_sma200_pct": -0.85,
     "high_52w": 47.061,
     "low_52w": 39.03,
-    "volume_ratio_20": 1.0
+    "volume_ratio_20": 1.01
    },
    "patterns": [
     {
@@ -1685,7 +1680,7 @@
     "dist_sma200_pct": 0.75,
     "high_52w": 100.92,
     "low_52w": 84.658,
-    "volume_ratio_20": 1.1
+    "volume_ratio_20": 1.12
    },
    "patterns": [
     {
@@ -1767,7 +1762,7 @@
     "dist_sma200_pct": 36.18,
     "high_52w": 171.81,
     "low_52w": 65.99,
-    "volume_ratio_20": 1.05
+    "volume_ratio_20": 1.06
    },
    "patterns": [
     {
@@ -1876,7 +1871,7 @@
     "dist_sma200_pct": 16.32,
     "high_52w": 351.73,
     "low_52w": 242.76,
-    "volume_ratio_20": 1.74
+    "volume_ratio_20": 1.75
    },
    "patterns": [
     {
@@ -1983,7 +1978,7 @@
     "dist_sma200_pct": 19.47,
     "high_52w": 551.15,
     "low_52w": 348.54,
-    "volume_ratio_20": 1.64
+    "volume_ratio_20": 1.68
    },
    "patterns": [
     {
@@ -2073,7 +2068,7 @@
     "dist_sma200_pct": 0.27,
     "high_52w": 243.37,
     "low_52w": 163.9,
-    "volume_ratio_20": 1.66
+    "volume_ratio_20": 1.67
    },
    "patterns": [
     {
@@ -2086,7 +2081,7 @@
      "levels": {
       "level": 210.84
      },
-     "note": "closed below a 7-touch support on 1.6x volume"
+     "note": "closed below a 7-touch support on 1.7x volume"
     },
     {
      "name": "gap_down",
@@ -2106,7 +2101,7 @@
    "symbol": "AMZN",
    "as_of": "2026-10-30T00:00:00+00:00",
    "close": 240.35,
-   "score": -0.43,
+   "score": -0.429,
    "trend": {
     "direction": "bearish",
     "change_pct": -5.7,
@@ -2157,7 +2152,7 @@
     "dist_sma200_pct": -1.25,
     "high_52w": 287.2,
     "low_52w": 196.0,
-    "volume_ratio_20": 2.7
+    "volume_ratio_20": 2.75
    },
    "patterns": [
     {
@@ -2188,7 +2183,7 @@
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.335,
+     "strength": 0.337,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -2241,7 +2236,7 @@
     "dist_sma200_pct": -17.78,
     "high_52w": 408.1,
     "low_52w": 270.0,
-    "volume_ratio_20": 2.08
+    "volume_ratio_20": 2.11
    },
    "patterns": [
     {
@@ -2357,7 +2352,7 @@
     "dist_sma200_pct": -2.58,
     "high_52w": 779.82,
     "low_52w": 519.37,
-    "volume_ratio_20": 1.1
+    "volume_ratio_20": 1.11
    },
    "patterns": [
     {
@@ -2600,7 +2595,7 @@
     "dist_sma200_pct": 22.98,
     "high_52w": 658.52,
     "low_52w": 188.22,
-    "volume_ratio_20": 2.02
+    "volume_ratio_20": 2.03
    },
    "patterns": [
     {
@@ -2676,7 +2671,7 @@
     "dist_sma200_pct": -23.92,
     "high_52w": 116.73,
     "low_52w": 61.39,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.16
    },
    "patterns": [
     {
@@ -2734,14 +2729,14 @@
    ],
    "indicators": {
     "rsi_14": 45.8,
-    "atr_pct": 5.85,
+    "atr_pct": 5.83,
     "sma_20": 134.63,
     "sma_50": 141.43,
     "sma_200": 155.92,
     "dist_sma200_pct": -16.2,
     "high_52w": 266.2,
     "low_52w": 114.08,
-    "volume_ratio_20": 1.24
+    "volume_ratio_20": 1.28
    },
    "patterns": [
     {
@@ -2831,7 +2826,7 @@
     "dist_sma200_pct": 15.95,
     "high_52w": 267.8,
     "low_52w": 146.06,
-    "volume_ratio_20": 1.1
+    "volume_ratio_20": 1.11
    },
    "patterns": [
     {
@@ -2931,7 +2926,7 @@
     "dist_sma200_pct": 5.23,
     "high_52w": 364.68,
     "low_52w": 275.06,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.14
    },
    "patterns": [
     {
@@ -3000,7 +2995,7 @@
     "dist_sma200_pct": -8.33,
     "high_52w": 64.899,
     "low_52w": 45.649,
-    "volume_ratio_20": 1.03
+    "volume_ratio_20": 1.04
    },
    "patterns": [
     {
@@ -3269,7 +3264,7 @@
     "dist_sma200_pct": 22.07,
     "high_52w": 188.5,
     "low_52w": 109.34,
-    "volume_ratio_20": 1.69
+    "volume_ratio_20": 1.84
    },
    "patterns": [
     {
@@ -3341,9 +3336,9 @@
     "sma_50": 213.15,
     "sma_200": 191.25,
     "dist_sma200_pct": 23.15,
-    "high_52w": 236.48,
+    "high_52w": 236.46,
     "low_52w": 142.51,
-    "volume_ratio_20": 1.4
+    "volume_ratio_20": 1.52
    },
    "patterns": [
     {
@@ -3562,7 +3557,7 @@
     "dist_sma200_pct": 30.14,
     "high_52w": 1449.7,
     "low_52w": 807.16,
-    "volume_ratio_20": 1.86
+    "volume_ratio_20": 2.12
    },
    "patterns": [
     {
@@ -3650,9 +3645,9 @@
     "sma_50": 28.547,
     "sma_200": 26.327,
     "dist_sma200_pct": 15.93,
-    "high_52w": 30.66,
+    "high_52w": 30.65,
     "low_52w": 22.567,
-    "volume_ratio_20": 1.26
+    "volume_ratio_20": 1.27
    },
    "patterns": [
     {
@@ -3830,7 +3825,7 @@
     "dist_sma200_pct": 15.6,
     "high_52w": 95.37,
     "low_52w": 65.908,
-    "volume_ratio_20": 1.09
+    "volume_ratio_20": 1.1
    },
    "patterns": [
     {
@@ -3922,7 +3917,7 @@
     "dist_sma200_pct": -4.43,
     "high_52w": 166.41,
     "low_52w": 123.47,
-    "volume_ratio_20": 1.97
+    "volume_ratio_20": 1.98
    },
    "patterns": [
     {
@@ -4098,7 +4093,7 @@
     "dist_sma200_pct": 4.43,
     "high_52w": 1094.8,
     "low_52w": 840.35,
-    "volume_ratio_20": 1.61
+    "volume_ratio_20": 1.63
    },
    "patterns": [
     {
@@ -4410,7 +4405,7 @@
     "dist_sma200_pct": -20.94,
     "high_52w": 254.35,
     "low_52w": 165.01,
-    "volume_ratio_20": 0.86
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -4490,7 +4485,7 @@
     "dist_sma200_pct": -0.08,
     "high_52w": 362.71,
     "low_52w": 190.12,
-    "volume_ratio_20": 1.33
+    "volume_ratio_20": 1.38
    },
    "patterns": [
     {
@@ -4562,7 +4557,7 @@
     "dist_sma200_pct": -24.3,
     "high_52w": 142.35,
     "low_52w": 32.89,
-    "volume_ratio_20": 4.56
+    "volume_ratio_20": 4.58
    },
    "patterns": [
     {
@@ -4575,13 +4570,13 @@
      "levels": {
       "level": 83.86
      },
-     "note": "closed below a 3-touch support on 4.6x volume"
+     "note": "closed below a 3-touch support on 4.7x volume"
     },
     {
      "name": "volume_spike",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.428,
+     "strength": 0.429,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -4676,7 +4671,7 @@
     "dist_sma200_pct": -2.13,
     "high_52w": 257.56,
     "low_52w": 120.88,
-    "volume_ratio_20": 2.43
+    "volume_ratio_20": 2.44
    },
    "patterns": [
     {
@@ -4810,7 +4805,7 @@
     "dist_sma200_pct": 3.96,
     "high_52w": 129.38,
     "low_52w": 69.258,
-    "volume_ratio_20": 1.58
+    "volume_ratio_20": 1.61
    },
    "patterns": [
     {
@@ -4880,7 +4875,7 @@
     "dist_sma200_pct": 4.37,
     "high_52w": 330.09,
     "low_52w": 197.77,
-    "volume_ratio_20": 0.99
+    "volume_ratio_20": 1.0
    },
    "patterns": [
     {
@@ -5057,7 +5052,7 @@
     "dist_sma200_pct": 18.5,
     "high_52w": 1254.6,
     "low_52w": 192.37,
-    "volume_ratio_20": 1.17
+    "volume_ratio_20": 1.18
    },
    "patterns": [
     {
@@ -5375,7 +5370,7 @@
     "dist_sma200_pct": 7.7,
     "high_52w": 115.42,
     "low_52w": 91.489,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 0.79
    },
    "patterns": [
     {
@@ -5505,7 +5500,7 @@
     "dist_sma200_pct": 4.57,
     "high_52w": 109.88,
     "low_52w": 76.049,
-    "volume_ratio_20": 1.46
+    "volume_ratio_20": 1.47
    },
    "patterns": [
     {
@@ -5595,7 +5590,7 @@
     "dist_sma200_pct": -6.34,
     "high_52w": 288.04,
     "low_52w": 177.33,
-    "volume_ratio_20": 1.31
+    "volume_ratio_20": 1.37
    },
    "patterns": [
     {
@@ -5660,7 +5655,7 @@
      "bars_since_touch": 14
     },
     {
-     "price": 86.851,
+     "price": 86.852,
      "touches": 9,
      "bars_since_touch": 37
     },
@@ -5679,7 +5674,7 @@
     "dist_sma200_pct": 0.44,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 0.62
+    "volume_ratio_20": 0.73
    },
    "patterns": [
     {
@@ -5749,7 +5744,7 @@
     "dist_sma200_pct": -4.63,
     "high_52w": 230.98,
     "low_52w": 151.15,
-    "volume_ratio_20": 1.17
+    "volume_ratio_20": 1.27
    },
    "patterns": [
     {
@@ -5945,7 +5940,7 @@
     "dist_sma200_pct": 19.13,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 1.04
+    "volume_ratio_20": 1.21
    },
    "patterns": [
     {
@@ -6009,7 +6004,7 @@
     "dist_sma200_pct": 25.89,
     "high_52w": 298.74,
     "low_52w": 188.25,
-    "volume_ratio_20": 1.11
+    "volume_ratio_20": 1.32
    },
    "patterns": [
     {
@@ -6169,7 +6164,7 @@
     "dist_sma200_pct": 5.7,
     "high_52w": 128.83,
     "low_52w": 80.892,
-    "volume_ratio_20": 0.79
+    "volume_ratio_20": 0.85
    },
    "patterns": [
     {
@@ -6538,7 +6533,7 @@
     "dist_sma200_pct": -4.87,
     "high_52w": 258.09,
     "low_52w": 193.26,
-    "volume_ratio_20": 1.13
+    "volume_ratio_20": 1.16
    },
    "patterns": [
     {
@@ -6618,7 +6613,7 @@
     "dist_sma200_pct": -6.26,
     "high_52w": 388.25,
     "low_52w": 268.17,
-    "volume_ratio_20": 0.97
+    "volume_ratio_20": 0.98
    },
    "patterns": [
     {
@@ -6880,7 +6875,7 @@
     "dist_sma200_pct": -3.1,
     "high_52w": 97.3,
     "low_52w": 74.41,
-    "volume_ratio_20": 2.04
+    "volume_ratio_20": 2.05
    },
    "patterns": [
     {
@@ -6962,7 +6957,7 @@
     "dist_sma200_pct": -12.42,
     "high_52w": 28.429,
     "low_52w": 19.408,
-    "volume_ratio_20": 0.82
+    "volume_ratio_20": 0.94
    },
    "patterns": [
     {
@@ -7042,7 +7037,7 @@
     "dist_sma200_pct": 4.81,
     "high_52w": 546.4,
     "low_52w": 384.0,
-    "volume_ratio_20": 1.5
+    "volume_ratio_20": 1.52
    },
    "patterns": [
     {
