@@ -1,14 +1,14 @@
 # Ganancia diaria de cada agente
 
-_Actualizado: 2026-10-30 18:43 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
+_Actualizado: 2026-10-30 19:22 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
 
 | Día | Aprendiz lineal | RSI adaptativo | Cruce de medias | Buy & hold | Analista discrecional | Inversor tradicional | Aprendiz ×2 | RSI adaptativo ×2 | Cruce de medias ×2 | Analista ×2 | Inversor tradicional ×2 | Combinador de señales | Combinador ×2 | Meta-agente (Hedge) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-10-30 | +0,00 (+0,00 %) | -2,13 (-2,16 %) | -0,84 (-0,83 %) | -1,24 (-1,25 %) | -0,22 (-0,21 %) | -1,47 (-1,46 %) | +0,00 (+0,00 %) | -0,48 (-0,48 %) | -1,32 (-1,33 %) | -0,22 (-0,21 %) | -1,66 (-1,65 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | -0,18 (-0,18 %) |
+| 2026-10-30 | +0,00 (+0,00 %) | -2,15 (-2,18 %) | -0,82 (-0,81 %) | -1,26 (-1,27 %) | -0,33 (-0,32 %) | -1,50 (-1,49 %) | +0,00 (+0,00 %) | -0,50 (-0,50 %) | -1,28 (-1,29 %) | -0,31 (-0,30 %) | -1,70 (-1,69 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | -0,21 (-0,21 %) |
 | 2026-10-29 | +0,00 (+0,00 %) | -2,18 (-2,16 %) | +0,31 (+0,31 %) | -1,05 (-1,05 %) | +1,07 (+1,06 %) | -0,29 (-0,28 %) | +0,00 (+0,00 %) | +0,11 (+0,11 %) | -1,39 (-1,38 %) | +0,53 (+0,53 %) | -0,51 (-0,51 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,08 (+0,08 %) |
 | 2026-10-28 | +0,00 (+0,00 %) | +0,15 (+0,15 %) | +0,00 (+0,00 %) | +0,53 (+0,53 %) | +0,03 (+0,03 %) | +0,44 (+0,43 %) | +0,00 (+0,00 %) | +0,07 (+0,07 %) | +0,32 (+0,32 %) | +0,08 (+0,08 %) | +0,69 (+0,68 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,07 (+0,07 %) |
 | 2026-10-27 | +0,00 (+0,00 %) | +1,28 (+1,29 %) | +0,11 (+0,11 %) | +0,33 (+0,33 %) | +0,16 (+0,16 %) | +0,48 (+0,48 %) | +0,00 (+0,00 %) | +0,06 (+0,06 %) | -0,04 (-0,04 %) | -0,11 (-0,11 %) | +0,47 (+0,47 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | -0,03 (-0,03 %) |
 | 2026-10-26 | +0,00 (+0,00 %) | -0,57 (-0,57 %) | +0,03 (+0,03 %) | -0,20 (-0,20 %) | +0,22 (+0,22 %) | -0,01 (-0,01 %) | +0,00 (+0,00 %) | -0,17 (-0,17 %) | +0,28 (+0,28 %) | +0,27 (+0,27 %) | -0,07 (-0,07 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | -0,04 (-0,04 %) |
 | 2026-10-25 | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | — | — | — | — | — | +0,00 (+0,00 %) | — | +0,00 (+0,00 %) |
 
-**Total desde el inicio:** Aprendiz lineal +0,00 USD · RSI adaptativo -3,45 USD · Cruce de medias -0,39 USD · Buy & hold -1,64 USD · Analista discrecional +1,26 USD · Inversor tradicional -0,86 USD · Aprendiz ×2 +0,00 USD · RSI adaptativo ×2 -0,41 USD · Cruce de medias ×2 -2,16 USD · Analista ×2 +0,56 USD · Inversor tradicional ×2 -1,09 USD · Combinador de señales +0,00 USD · Combinador ×2 +0,00 USD · Meta-agente (Hedge) -0,10 USD
+**Total desde el inicio:** Aprendiz lineal +0,00 USD · RSI adaptativo -3,47 USD · Cruce de medias -0,37 USD · Buy & hold -1,66 USD · Analista discrecional +1,15 USD · Inversor tradicional -0,89 USD · Aprendiz ×2 +0,00 USD · RSI adaptativo ×2 -0,43 USD · Cruce de medias ×2 -2,11 USD · Analista ×2 +0,47 USD · Inversor tradicional ×2 -1,12 USD · Combinador de señales +0,00 USD · Combinador ×2 +0,00 USD · Meta-agente (Hedge) -0,13 USD
