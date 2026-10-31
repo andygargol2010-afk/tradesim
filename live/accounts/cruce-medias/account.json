@@ -498,7 +498,7 @@
     "opened_at": "2026-10-27T15:42:08.319000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00250547",
-    "mark_price": "132.425",
+    "mark_price": "133.96499999999997",
     "entry_order_id": "O00000147"
    },
    {
@@ -2861,6 +2861,13 @@
     "3.632521872500000000000000000000000",
     "96.256696534198313835778114",
     "96.256696534198313835778114"
+   ],
+   [
+    "2026-10-31T12:22:04.534432+00:00",
+    "99.90089819789831360824971400000000",
+    "3.632521872500000000000000000000000",
+    "96.268376325398313608249714",
+    "96.268376325398313608249714"
    ]
   ],
   "total_fees": "0.01267612",
@@ -11006,17 +11013,38 @@
    "limit_price": null,
    "stop_price": "88.1621",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-31T01:22:20.555576+00:00",
+   "updated_at": "2026-10-31T12:22:08.447766+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AAVE-USD-388"
+  },
+  {
+   "id": "O00000389",
+   "symbol": "AAVE-USD",
+   "side": "sell",
+   "quantity": "0.00758428",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "91.3821",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-31T12:22:08.447852+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-AAVE-USD-388"
+   "oco_group": "exits-AAVE-USD-389"
   }
  ],
  "open_order_ids": [
@@ -11060,9 +11088,9 @@
   "O00000384",
   "O00000385",
   "O00000387",
-  "O00000388"
+  "O00000389"
  ],
- "order_id_counter": 389,
+ "order_id_counter": 390,
  "fill_id_counter": 57,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -11073,7 +11101,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-31T10:21:40.993478+00:00",
+ "last_sync": "2026-10-31T12:22:04.534432+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-10-30T20:00:00+00:00",
@@ -11116,7 +11144,7 @@
   "XLK": "2026-10-30T20:00:00+00:00",
   "XLV": "2026-10-30T20:00:00+00:00",
   "XOM": "2026-10-30T20:00:00+00:00",
-  "AAVE-USD": "2026-10-31T10:20:00+00:00",
+  "AAVE-USD": "2026-10-31T12:20:00+00:00",
   "HON": "2026-10-30T20:00:00+00:00",
   "AMZN": "2026-10-30T20:00:00+00:00",
   "BLK": "2026-10-30T20:00:00+00:00",
