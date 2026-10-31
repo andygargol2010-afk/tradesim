@@ -498,7 +498,7 @@
     "opened_at": "2026-10-27T15:42:08.319000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00250547",
-    "mark_price": "129.875",
+    "mark_price": "130.73",
     "entry_order_id": "O00000147"
    },
    {
@@ -2770,6 +2770,13 @@
     "3.632521872500000000000000000000000",
     "96.23735660729000",
     "96.23735660729000"
+   ],
+   [
+    "2026-10-31T01:22:15.997291+00:00",
+    "99.87636303919000000000000000000000",
+    "3.632521872500000000000000000000000",
+    "96.24384116669000",
+    "96.24384116669000"
    ]
   ],
   "total_fees": "0.01267612",
@@ -10873,14 +10880,14 @@
    "limit_price": null,
    "stop_price": "85.4461",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-30T20:07:26.252171+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-31T01:22:20.555495+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AAVE-USD-386"
@@ -10905,6 +10912,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-IBM-387"
+  },
+  {
+   "id": "O00000388",
+   "symbol": "AAVE-USD",
+   "side": "sell",
+   "quantity": "0.00758428",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "88.1621",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-10-31T01:22:20.555576+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AAVE-USD-388"
   }
  ],
  "open_order_ids": [
@@ -10947,10 +10975,10 @@
   "O00000383",
   "O00000384",
   "O00000385",
-  "O00000386",
-  "O00000387"
+  "O00000387",
+  "O00000388"
  ],
- "order_id_counter": 388,
+ "order_id_counter": 389,
  "fill_id_counter": 57,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -10961,7 +10989,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-31T00:22:34.213423+00:00",
+ "last_sync": "2026-10-31T01:22:15.997291+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-10-30T20:00:00+00:00",
@@ -11004,7 +11032,7 @@
   "XLK": "2026-10-30T20:00:00+00:00",
   "XLV": "2026-10-30T20:00:00+00:00",
   "XOM": "2026-10-30T20:00:00+00:00",
-  "AAVE-USD": "2026-10-31T00:20:00+00:00",
+  "AAVE-USD": "2026-10-31T01:20:00+00:00",
   "HON": "2026-10-30T20:00:00+00:00",
   "AMZN": "2026-10-30T20:00:00+00:00",
   "BLK": "2026-10-30T20:00:00+00:00",
