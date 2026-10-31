@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "3.632521872500000000000000000000000",
+  "cash": "4.656109576500000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -492,14 +492,14 @@
    },
    {
     "symbol": "AAVE-USD",
-    "quantity": "0.00758428",
-    "avg_price": "132.14",
-    "open_fees": "0.00250547",
-    "opened_at": "2026-10-27T15:42:08.319000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.00250547",
-    "mark_price": "134.9",
-    "entry_order_id": "O00000147"
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "0.0239663248",
+    "fees_paid": "0.00507085",
+    "mark_price": "135.4",
+    "entry_order_id": null
    },
    {
     "symbol": "HON",
@@ -1352,6 +1352,20 @@
     "slippage_cost": "0.00105201",
     "realized_pnl": "0",
     "timestamp": "2026-10-30T15:44:44.076872+00:00"
+   },
+   {
+    "id": "F00000057",
+    "order_id": "O00000390",
+    "symbol": "AAVE-USD",
+    "side": "sell",
+    "quantity": "0.00758428",
+    "price": "135.3",
+    "notional": "1.02615308",
+    "fee": "0.00256538",
+    "liquidity": "taker",
+    "slippage_cost": "0.00128933",
+    "realized_pnl": "0.0239663248",
+    "timestamp": "2026-10-31T15:42:03.576000+00:00"
    }
   ],
   "closed_trades": [
@@ -1452,6 +1466,20 @@
     "closed_at": "2026-10-30T15:44:48.920088+00:00",
     "entry_order_id": "O00000007",
     "exit_order_id": "O00000336"
+   },
+   {
+    "symbol": "AAVE-USD",
+    "direction": "long",
+    "quantity": "0.00758428",
+    "entry_price": "132.14",
+    "exit_price": "135.3",
+    "pnl": "0.0188954748",
+    "fees": "0.00507085",
+    "return_pct": 0.018854245106055278,
+    "opened_at": "2026-10-27T15:42:08.319000+00:00",
+    "closed_at": "2026-10-31T15:42:03.576000+00:00",
+    "entry_order_id": "O00000147",
+    "exit_order_id": "O00000390"
    }
   ],
   "equity_curve": [
@@ -2889,10 +2917,31 @@
     "3.632521872500000000000000000000000",
     "96.275467627198313835778114",
     "96.275467627198313835778114"
+   ],
+   [
+    "2026-10-31T15:42:22.256712+00:00",
+    "99.91178163969831383577811400000000",
+    "3.632521872500000000000000000000000",
+    "96.279259767198313835778114",
+    "96.279259767198313835778114"
+   ],
+   [
+    "2026-10-31T15:42:27.511901+00:00",
+    "99.90845783169831383577811400000000",
+    "4.656109576500000000000000000000000",
+    "95.252348255198313835778114",
+    "95.252348255198313835778114"
+   ],
+   [
+    "2026-10-31T15:42:27.754048+00:00",
+    "99.90845783169831383577811400000000",
+    "4.656109576500000000000000000000000",
+    "95.252348255198313835778114",
+    "95.252348255198313835778114"
    ]
   ],
-  "total_fees": "0.01267612",
-  "total_slippage": "0.06475394",
+  "total_fees": "0.01524150",
+  "total_slippage": "0.06604327",
   "total_financing": "0E-45",
   "peak_equity": "100.5364097259396419705839710000000",
   "max_drawdown": "0.009194271426146762388487645576714583"
@@ -11055,17 +11104,38 @@
    "limit_price": null,
    "stop_price": "91.3821",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-31T12:22:08.447852+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-10-31T15:42:27.692761+00:00",
+   "reject_reason": "position closed",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AAVE-USD-389"
+  },
+  {
+   "id": "O00000390",
+   "symbol": "AAVE-USD",
+   "side": "sell",
+   "quantity": "0.00758428",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.00758428",
+   "avg_fill_price": "135.3",
+   "fees_paid": "0.00256538",
+   "triggered": false,
+   "created_at": "2026-10-31T15:42:27.511758+00:00",
+   "updated_at": "2026-10-31T15:42:03.576000+00:00",
+   "reject_reason": null,
+   "tag": "rebalance (solo cripto)",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [
@@ -11108,11 +11178,10 @@
   "O00000383",
   "O00000384",
   "O00000385",
-  "O00000387",
-  "O00000389"
+  "O00000387"
  ],
- "order_id_counter": 390,
- "fill_id_counter": 57,
+ "order_id_counter": 391,
+ "fill_id_counter": 58,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -11122,7 +11191,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-10-31T15:21:50.265312+00:00",
+ "last_sync": "2026-10-31T15:42:27.754048+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-10-30T20:00:00+00:00",
@@ -11165,7 +11234,7 @@
   "XLK": "2026-10-30T20:00:00+00:00",
   "XLV": "2026-10-30T20:00:00+00:00",
   "XOM": "2026-10-30T20:00:00+00:00",
-  "AAVE-USD": "2026-10-31T15:20:00+00:00",
+  "AAVE-USD": "2026-10-31T15:40:00+00:00",
   "HON": "2026-10-30T20:00:00+00:00",
   "AMZN": "2026-10-30T20:00:00+00:00",
   "BLK": "2026-10-30T20:00:00+00:00",
