@@ -1,53 +1,208 @@
 # Diario de la simulación
 
-_Actualizado: 2026-10-30 00:01 UTC. Una entrada por día, la más reciente primero. Cada agente escribe su propia parte al decidir; la situación del mercado se compila de los datos._
+_Actualizado: 2026-10-31 00:22 UTC. Una entrada por día, la más reciente primero. Cada agente escribe su propia parte al decidir; la situación del mercado se compila de los datos._
 
 ## Patrones acumulados: qué hace cada agente según la situación
 
 | Agente | Situación | Días | Días con operaciones | Compras | Ventas | Resultado medio del día |
 |---|---|---:|---:|---:|---:|---:|
 | Aprendiz lineal | normal · alcista | 2 | 0 | 0 | 0 | +0,00 % |
+| Aprendiz lineal | normal · bajista | 1 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz lineal | normal · lateral | 2 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz lineal | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | RSI adaptativo | normal · alcista | 2 | 1 | 8 | 0 | +0,36 % |
+| RSI adaptativo | normal · bajista | 1 | 1 | 2 | 0 | -1,88 % |
 | RSI adaptativo | normal · lateral | 2 | 1 | 1 | 0 | -1,01 % |
 | RSI adaptativo | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Cruce de medias | normal · alcista | 2 | 2 | 22 | 3 | +0,07 % |
+| Cruce de medias | normal · bajista | 1 | 1 | 1 | 1 | -0,59 % |
 | Cruce de medias | normal · lateral | 2 | 2 | 6 | 2 | +0,15 % |
 | Cruce de medias | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Buy & hold | normal · alcista | 2 | 1 | 20 | 0 | +0,07 % |
+| Buy & hold | normal · bajista | 1 | 0 | 0 | 0 | -0,84 % |
 | Buy & hold | normal · lateral | 2 | 0 | 0 | 0 | -0,26 % |
 | Buy & hold | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Analista discrecional | normal · alcista | 2 | 2 | 13 | 2 | +0,19 % |
+| Analista discrecional | normal · bajista | 1 | 1 | 2 | 5 | -0,24 % |
 | Analista discrecional | normal · lateral | 2 | 2 | 8 | 3 | +0,55 % |
 | Analista discrecional | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Inversor tradicional | normal · alcista | 2 | 1 | 15 | 0 | +0,23 % |
+| Inversor tradicional | normal · bajista | 1 | 0 | 0 | 0 | -1,15 % |
 | Inversor tradicional | normal · lateral | 2 | 0 | 0 | 0 | +0,07 % |
 | Inversor tradicional | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz ×2 | normal · alcista | 2 | 0 | 0 | 0 | +0,00 % |
+| Aprendiz ×2 | normal · bajista | 1 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz ×2 | normal · lateral | 2 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | RSI adaptativo ×2 | normal · alcista | 2 | 1 | 1 | 0 | -0,06 % |
+| RSI adaptativo ×2 | normal · bajista | 1 | 0 | 0 | 0 | -0,44 % |
 | RSI adaptativo ×2 | normal · lateral | 2 | 0 | 0 | 0 | +0,09 % |
 | RSI adaptativo ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Cruce de medias ×2 | normal · alcista | 2 | 1 | 12 | 0 | +0,12 % |
+| Cruce de medias ×2 | normal · bajista | 1 | 1 | 2 | 3 | -1,03 % |
 | Cruce de medias ×2 | normal · lateral | 2 | 1 | 2 | 5 | -0,53 % |
 | Cruce de medias ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Analista ×2 | normal · alcista | 2 | 2 | 6 | 1 | +0,08 % |
+| Analista ×2 | normal · bajista | 1 | 1 | 1 | 3 | -0,13 % |
 | Analista ×2 | normal · lateral | 2 | 2 | 6 | 3 | +0,30 % |
 | Analista ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Inversor tradicional ×2 | normal · alcista | 2 | 1 | 11 | 0 | +0,20 % |
+| Inversor tradicional ×2 | normal · bajista | 1 | 0 | 0 | 0 | -1,26 % |
 | Inversor tradicional ×2 | normal · lateral | 2 | 0 | 0 | 0 | +0,09 % |
 | Inversor tradicional ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | normal · alcista | 2 | 0 | 0 | 0 | +0,00 % |
+| Combinador de señales | normal · bajista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | normal · lateral | 2 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | normal · alcista | 2 | 0 | 0 | 0 | +0,00 % |
+| Combinador ×2 | normal · bajista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | normal · lateral | 2 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Meta-agente (Hedge) | normal · alcista | 2 | 1 | 7 | 0 | -0,04 % |
+| Meta-agente (Hedge) | normal · bajista | 1 | 0 | 0 | 0 | -0,14 % |
 | Meta-agente (Hedge) | normal · lateral | 2 | 1 | 2 | 0 | +0,08 % |
 | Meta-agente (Hedge) | solo cripto · normal · alcista | 1 | 0 | 0 | 0 | +0,00 % |
+
+## 2026-10-30 · Viernes: normal · bajista
+
+**Situación (normal · bajista).** Sesión normal. SPY -1,77 %, QQQ -3,47 %, TLT +0,43 %, GLD -3,47 %, BTC-USD -0,73 %, ETH-USD -0,12 %. Bono EE. UU. 10 años 4.98, Diferencial high yield 3.26, VIX (volatilidad S&P 500) 19.42, Rendimiento 10 años (mercado) 4.93, Índice dólar (DXY) 101.96, Petróleo WTI 102.95, Oro (futuro) 3884.9.
+
+**Patrones del mercado**
+
+- **doji (neutral)** (DIA, GLD, SLV, TLT, XLE, TIP, EWJ, INDA): aparece en 33 activos
+- **barra interior (neutral)** (XLE, XLF, HYG, TIP, TSLA, AMD, BAC, XOM): aparece en 17 activos
+- **envolvente bajista (bajista)** (XLF, TIP, CSCO, AXP, T, LIN, BTC-USD, ETH-USD): aparece en 16 activos
+- **ruptura de resistencia (alcista)** (EFA, VNQ, JPM, GS, LLY, IBM, TXN, LOW): aparece en 11 activos
+- **envolvente alcista (alcista)** (AAPL, JNJ, QCOM, IBM, AXP, DE, LMT, AVAX-USD): aparece en 10 activos
+- **pérdida de soporte (bajista)** (AMZN, GOOGL, META, CRM, CAT, BA, NOW, BTC-USD): aparece en 10 activos
+
+**Qué hizo cada agente**
+
+### Aprendiz lineal (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mis predicciones recientes no muestran ventaja estadística, así que me quedo en efectivo.
+- **Según la situación:** Con el mercado «normal · lateral», 31 de 97 activos tienen predicción positiva (media -0.00σ): soy prudente y solo entro en los mejores. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### RSI adaptativo (escrito por el agente)
+
+- **Qué hizo:** Compré CAT, GOOGL.
+- **Por qué:** Compro cuando el RSI(14) baja de 30 (sobreventa) y vendo cuando supera 70 (sobrecompra), con un 10 % del capital por posición. Hoy: compré CAT (RSI 29); compré GOOGL (RSI 23).
+- **Según la situación:** Con el mercado «normal · lateral» había 7 activos en sobreventa y 11 en sobrecompra (RSI medio 53). En mercados laterales opero poco: solo en los extremos. Historial en días «normal · bajista»: operó 1 de 1 (resultado medio -1,88 %).
+- **Resultado:** -1,88 % (valor 96.83 USD)
+
+### Cruce de medias (escrito por el agente)
+
+- **Qué hizo:** Compré XLU; vendí CRM.
+- **Por qué:** Mantengo a partes iguales los activos cuya media de 20 sesiones está por encima de la de 50: hoy 40 de 100. Entran en tendencia: XLU. Pierden la tendencia: AAVE-USD, CRM.
+- **Según la situación:** Con el mercado «normal · lateral», el 40% del universo está en tendencia alcista: tengo una exposición intermedia. Historial en días «normal · bajista»: operó 1 de 1 (resultado medio -0,59 %).
+- **Resultado:** -0,59 % (valor 99.86 USD)
+
+### Buy & hold (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin tocarla.
+- **Por qué:** Compré todos los activos a partes iguales el primer día y los mantengo; nunca vendo.
+- **Según la situación:** La situación «normal · lateral» no cambia nada: soy la referencia pasiva con la que se compara a los demás. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio -0,84 %).
+- **Resultado:** -0,84 % (valor 98.76 USD)
+
+### Analista discrecional (escrito por el agente)
+
+- **Qué hizo:** Compré AAPL, PLTR; vendí ABBV, IBM, PFE, PG, SLB; dejé 20 órdenes esperando a que abra su mercado.
+- **Por qué:** Decisión del motor local (sin IA; pesos técnico/noticias/tendencia 0.55/0.30/0.15, fijos). Régimen neutral (VIX 19.4, diferencial high yield 3.14 pp); exposición máxima 76%. Más fuertes: TMO +0.65, LLY +0.50, PFE +0.44, PLTR +0.43. Más débiles: GOOGL -0.55, LTC-USD -0.53, AMZN -0.43. Cambios: reducir ABBV 8.7% -> 6.0%; reducir IBM 7.9% -> 4.5%; reducir PFE 11.9% -> 8.1%; reducir PG 8.7% -> 4.3%; reducir SLB 8.3% -> 4.3%; salidas de TMO: stop 666.3 (se mantiene: nunca se baja), objetivo 772.2; salidas de LLY: stop 1296 (soporte/ATR), objetivo 1682; salidas de PFE: stop 28.94 (se mantiene: nunca se baja), objetivo 33.33; comprar PLTR 0.0% -> 8.0%; stop 171 (soporte/ATR), objetivo 214.7; salida
+- **Según la situación:** Leo un régimen neutral con el mercado «normal · lateral»: exposición objetivo 76% del capital. Historial en días «normal · bajista»: operó 1 de 1 (resultado medio -0,24 %).
+- **Resultado:** -0,24 % (valor 101.23 USD)
+
+### Inversor tradicional (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin cambios.
+- **Por qué:** Ninguna clase de activo salió de su banda ni empezó trimestre: no toqué la cartera. Mis acciones de calidad: XOM, MU, MRK, KO, DE, V, LIN, SBUX.
+- **Según la situación:** No reacciono a la situación «normal · lateral»: solo rebalanceo cada trimestre o si una clase se desvía de su peso. La mayor desviación hoy es stocks (+0.7%). Historial en días «normal · bajista»: operó 0 de 1 (resultado medio -1,15 %).
+- **Resultado:** -1,15 % (valor 99.46 USD)
+
+### Aprendiz ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mis predicciones recientes no muestran ventaja estadística, así que me quedo en efectivo.
+- **Según la situación:** Con el mercado «normal · lateral», 31 de 97 activos tienen predicción positiva (media -0.00σ): soy prudente y solo entro en los mejores. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### RSI adaptativo ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Compro cuando el RSI(21) baja de 25 (sobreventa) y vendo cuando supera 65 (sobrecompra), con un 20 % del capital por posición.
+- **Según la situación:** Con el mercado «normal · lateral» había 0 activos en sobreventa y 16 en sobrecompra (RSI medio 54). En mercados laterales opero poco: solo en los extremos. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio -0,44 %).
+- **Resultado:** -0,44 % (valor 99.63 USD)
+
+### Cruce de medias ×2 (escrito por el agente)
+
+- **Qué hizo:** Compré COP, USO; vendí AAVE-USD, NOW, XOM.
+- **Por qué:** Mantengo a partes iguales los activos cuya media de 20 sesiones está por encima de la de 50: hoy 12 de 100. Entran en tendencia: COP. Pierden la tendencia: AAVE-USD.
+- **Según la situación:** Con el mercado «normal · lateral», el 12% del universo está en tendencia alcista: me quedo con poca exposición hasta que vuelvan las tendencias. Historial en días «normal · bajista»: operó 1 de 1 (resultado medio -1,03 %).
+- **Resultado:** -1,03 % (valor 98.14 USD)
+
+### Analista ×2 (escrito por el agente)
+
+- **Qué hizo:** Compré AAPL; vendí ABBV, SLB, USO; dejé 10 órdenes esperando a que abra su mercado.
+- **Por qué:** Decisión del motor local (sin IA; pesos técnico/noticias/tendencia 0.55/0.30/0.15, fijos). Régimen neutral (VIX 19.4, diferencial high yield 3.14 pp); exposición máxima 76%. Más fuertes: TMO +0.65, LLY +0.50, PFE +0.44, PLTR +0.43. Más débiles: GOOGL -0.55, LTC-USD -0.53, AMZN -0.43. Cambios: reducir ABBV 15.2% -> 11.3%; reducir SLB 16.1% -> 8.1%; reducir USO 18.4% -> 10.7%; salidas de TMO: stop 666.3 (se mantiene: nunca se baja), objetivo 772.2; salidas de XLV: stop 181.5 (soporte/ATR), objetivo 193.7; salidas de ABBV: stop 276.4 (se mantiene: nunca se baja), objetivo 333.3; salidas de USO: stop 162.1 (se mantiene: nunca se baja), objetivo 186.4; ampliar AAPL 3.2% -> 8.9%; stop 337.1 (se ma
+- **Según la situación:** Leo un régimen neutral con el mercado «normal · lateral»: exposición objetivo 76% del capital. Historial en días «normal · bajista»: operó 1 de 1 (resultado medio -0,13 %).
+- **Resultado:** -0,13 % (valor 100.65 USD)
+
+### Inversor tradicional ×2 (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin cambios.
+- **Por qué:** Ninguna clase de activo salió de su banda ni empezó trimestre: no toqué la cartera. Mis acciones de calidad: XOM, MU, MRK, KO.
+- **Según la situación:** No reacciono a la situación «normal · lateral»: solo rebalanceo cada trimestre o si una clase se desvía de su peso. La mayor desviación hoy es stocks (+0.6%). Historial en días «normal · bajista»: operó 0 de 1 (resultado medio -1,26 %).
+- **Resultado:** -1,26 % (valor 99.31 USD)
+
+### Combinador de señales (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Combino las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias) con pesos que aprendo de los resultados. Las que más pesan ahora: learner_pred +0.00, analyst_tech +0.00, analyst_news +0.00. sin ventaja demostrada todavía (IC +0.000, 0 ejemplos): efectivo
+- **Según la situación:** Con el mercado «normal · lateral»: cada señal tiene además un peso propio para los regímenes de tensión, así aprendo cuándo conviene cada una. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### Combinador ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Combino las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias) con pesos que aprendo de los resultados. Las que más pesan ahora: learner_pred +0.00, analyst_tech +0.00, analyst_news +0.00. sin ventaja demostrada todavía (IC +0.000, 0 ejemplos): efectivo
+- **Según la situación:** Con el mercado «normal · lateral»: cada señal tiene además un peso propio para los regímenes de tensión, así aprendo cuándo conviene cada una. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### Meta-agente (Hedge) (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Reparto mi capital entre los agentes con pesos multiplicativos (Hedge): cada día gana peso quien más rinde. Pesos hoy: Analista discrecional 8%, Analista ×2 8%, Cruce de medias 8%, Aprendiz lineal 8%. Ayer rindió más Analista discrecional.
+- **Según la situación:** Con el mercado «normal · lateral» no elijo activos: copio la cartera combinada de los agentes, así que me adapto a la situación a través de los que mejor la están leyendo. Historial en días «normal · bajista»: operó 0 de 1 (resultado medio -0,14 %).
+- **Resultado:** -0,14 % (valor 99.94 USD)
+
+**Comparativa.** Mejor: Aprendiz lineal (+0,00 %); peor: RSI adaptativo (-1,88 %).
+
+**Patrones recurrentes**
+
+- Aprendiz lineal: opera en 0 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- RSI adaptativo: opera en 3 de 6 días; donde más opera es en «normal · bajista»; le va mejor en «normal · alcista» (+0,36 % de media).
+- Cruce de medias: opera en 5 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · lateral» (+0,15 % de media).
+- Buy & hold: opera en 1 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,07 % de media).
+- Analista discrecional: opera en 5 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · lateral» (+0,55 % de media).
+- Inversor tradicional: opera en 1 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,23 % de media).
+- Aprendiz ×2: opera en 0 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- RSI adaptativo ×2: opera en 1 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · lateral» (+0,09 % de media).
+- Cruce de medias ×2: opera en 3 de 6 días; donde más opera es en «normal · bajista»; le va mejor en «normal · alcista» (+0,12 % de media).
+- Analista ×2: opera en 5 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · lateral» (+0,30 % de media).
+- Inversor tradicional ×2: opera en 1 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,20 % de media).
+- Combinador de señales: opera en 0 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- Combinador ×2: opera en 0 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- Meta-agente (Hedge): opera en 2 de 6 días; donde más opera es en «normal · alcista»; le va mejor en «normal · lateral» (+0,08 % de media).
+
+**A vigilar**
+
+- 2026-10-30: BOJ Press Conference
+- 2026-10-30: XOM quarterly earnings
+- 2026-10-30: CVX quarterly earnings
+- 2026-10-30: ABBV quarterly earnings
+- 2026-11-02: AAPL quarterly earnings
+
 
 ## 2026-10-29 · Jueves: normal · lateral
 
