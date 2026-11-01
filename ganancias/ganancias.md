@@ -1,6 +1,6 @@
 # Ganancia diaria de cada agente
 
-_Actualizado: 2026-11-01 09:19 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
+_Actualizado: 2026-11-01 09:21 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
 
 | Día | Aprendiz lineal | RSI adaptativo | Cruce de medias | Buy & hold | Analista discrecional | Inversor tradicional | Aprendiz ×2 | RSI adaptativo ×2 | Cruce de medias ×2 | Analista ×2 | Inversor tradicional ×2 | Combinador de señales | Combinador ×2 | Meta-agente (Hedge) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
