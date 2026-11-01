@@ -1,6 +1,6 @@
 # Ganancia diaria de cada agente
 
-_Actualizado: 2026-11-01 19:50 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
+_Actualizado: 2026-11-01 19:55 UTC. USD ganados o perdidos cada día (UTC), valor al cierre del día menos el del día anterior; el día en curso se va actualizando. Datos en `ganancias.csv` (misma carpeta)._
 
 | Día | Aprendiz lineal | RSI adaptativo | Cruce de medias | Buy & hold | Analista discrecional | Inversor tradicional | Aprendiz ×2 | RSI adaptativo ×2 | Cruce de medias ×2 | Analista ×2 | Inversor tradicional ×2 | Combinador de señales | Combinador ×2 | Meta-agente (Hedge) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -13,4 +13,4 @@ _Actualizado: 2026-11-01 19:50 UTC. USD ganados o perdidos cada día (UTC), valo
 | 2026-10-26 | +0,00 (+0,00 %) | -0,57 (-0,57 %) | +0,03 (+0,03 %) | -0,20 (-0,20 %) | +0,22 (+0,22 %) | -0,01 (-0,01 %) | +0,00 (+0,00 %) | -0,17 (-0,17 %) | +0,28 (+0,28 %) | +0,27 (+0,27 %) | -0,07 (-0,07 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | -0,04 (-0,04 %) |
 | 2026-10-25 | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | +0,00 (+0,00 %) | — | — | — | — | — | +0,00 (+0,00 %) | — | +0,00 (+0,00 %) |
 
-**Total desde el inicio:** Aprendiz lineal +0,00 USD · RSI adaptativo -3,08 USD · Cruce de medias -0,09 USD · Buy & hold -1,31 USD · Analista discrecional +1,23 USD · Inversor tradicional -0,50 USD · Aprendiz ×2 +0,00 USD · RSI adaptativo ×2 -0,37 USD · Cruce de medias ×2 -1,86 USD · Analista ×2 +0,65 USD · Inversor tradicional ×2 -0,65 USD · Combinador de señales +0,00 USD · Combinador ×2 +0,00 USD · Meta-agente (Hedge) -0,06 USD
+**Total desde el inicio:** Aprendiz lineal +0,00 USD · RSI adaptativo -3,08 USD · Cruce de medias -0,09 USD · Buy & hold -1,30 USD · Analista discrecional +1,23 USD · Inversor tradicional -0,50 USD · Aprendiz ×2 +0,00 USD · RSI adaptativo ×2 -0,37 USD · Cruce de medias ×2 -1,86 USD · Analista ×2 +0,65 USD · Inversor tradicional ×2 -0,65 USD · Combinador de señales +0,00 USD · Combinador ×2 +0,00 USD · Meta-agente (Hedge) -0,06 USD
