@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-01T02:20:43.103725+00:00",
+ "generated_at": "2026-11-01T06:20:37.871946+00:00",
  "window": [
-  "2026-10-24",
-  "2026-11-30"
+  "2026-10-25",
+  "2026-12-01"
  ],
  "events": [
   {
@@ -568,20 +568,20 @@
   },
   {
    "date": "2026-11-02",
-   "title": "ISM manufacturing PMI",
+   "title": "ISM Manufacturing PMI",
    "category": "growth",
    "importance": "medium",
    "country": "US",
    "when": "2026-11-02T15:00:00+00:00",
    "symbols": [
-    "*equities"
+    "*all"
    ],
-   "forecast": null,
-   "previous": null,
+   "forecast": "54.7",
+   "previous": "54.5",
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
    "id": "5515568278fd"
   },
   {
@@ -622,6 +622,42 @@
   },
   {
    "date": "2026-11-03",
+   "title": "JOLTS Job Openings",
+   "category": "employment",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-03T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "7.11M",
+   "previous": "7.08M",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "01a133a67012"
+  },
+  {
+   "date": "2026-11-03",
+   "title": "Congressional Elections",
+   "category": "politics",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-03T15:16:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "d974576cde28"
+  },
+  {
+   "date": "2026-11-03",
    "title": "AMD quarterly earnings",
    "category": "earnings",
    "importance": "high",
@@ -658,20 +694,20 @@
   },
   {
    "date": "2026-11-04",
-   "title": "ISM services PMI",
+   "title": "ISM Services PMI",
    "category": "growth",
    "importance": "medium",
    "country": "US",
    "when": "2026-11-04T15:00:00+00:00",
    "symbols": [
-    "*equities"
+    "*all"
    ],
-   "forecast": null,
-   "previous": null,
+   "forecast": "54.9",
+   "previous": "54.9",
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
    "id": "93f5e7f46b8e"
   },
   {
@@ -730,22 +766,111 @@
   },
   {
    "date": "2026-11-05",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
-   "country": "US",
-   "when": "2026-11-05T13:30:00+00:00",
+   "title": "BOE Monetary Policy Report",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-05T12:00:00+00:00",
    "symbols": [
-    "*equities",
-    "TLT"
+    "*equities"
    ],
    "forecast": null,
    "previous": null,
    "actual": null,
    "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "0c72e809fdb5"
+   "source": "forexfactory",
+   "notes": "",
+   "id": "674184391cc0"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Monetary Policy Summary",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-05T12:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "4ae54f0255a0"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "MPC Official Bank Rate Votes",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-05T12:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "7-0-2",
+   "previous": "3-0-6",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "133267d5c38d"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Official Bank Rate",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-05T12:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "4.00%",
+   "previous": "3.75%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "b31a30a99c54"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "BOE Gov Bailey Speaks",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-05T12:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "90dd20956c71"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Unemployment Claims",
+   "category": "employment",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-05T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "197K",
+   "previous": "194K",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "644ede480a4d"
   },
   {
    "date": "2026-11-05",
@@ -767,7 +892,43 @@
   },
   {
    "date": "2026-11-06",
-   "title": "Employment Situation (nonfarm payrolls, unemployment rate)",
+   "title": "Employment Change",
+   "category": "employment",
+   "importance": "high",
+   "country": "CA",
+   "when": "2026-11-06T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "14.5K",
+   "previous": "-68.3K",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "2b0280f42b76"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Unemployment Rate",
+   "category": "employment",
+   "importance": "high",
+   "country": "CA",
+   "when": "2026-11-06T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "6.5%",
+   "previous": "6.5%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "fb9ab3611561"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Average Hourly Earnings m/m",
    "category": "employment",
    "importance": "high",
    "country": "US",
@@ -775,13 +936,103 @@
    "symbols": [
     "*all"
    ],
+   "forecast": "0.3%",
+   "previous": "0.1%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "6a76b0f9e391"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Non-Farm Employment Change",
+   "category": "employment",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-06T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "63K",
+   "previous": "29K",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "3939e421416d"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Unemployment Rate",
+   "category": "employment",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-06T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "4.2%",
+   "previous": "4.2%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "b2236d173800"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Prelim UoM Consumer Sentiment",
+   "category": "consumer",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-06T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "47.8",
+   "previous": "46.3",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "0420f9e15ee1"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Prelim UoM Inflation Expectations",
+   "category": "inflation",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-06T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": "4.7%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "ad38d15bf954"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "BOJ Gov Ueda Speaks",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "JP",
+   "when": "2026-11-06T16:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
    "forecast": null,
    "previous": null,
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "f657cafafaa9"
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "533b59caa109"
   },
   {
    "date": "2026-11-06",
@@ -1307,12 +1558,84 @@
    "source": "yahoo",
    "notes": "buyers from this date do not receive the next dividend",
    "id": "f5c20b198ed8"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "ISM manufacturing PMI",
+   "category": "growth",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-12-01T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "507df0096e52"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "KO ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "KO"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "5b6173bdecde"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "MCD ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MCD"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "542a99ed83b4"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "LMT ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "LMT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "7bf62286be8a"
   }
  ],
  "sources": {
   "fomc": "federalreserve.gov",
-  "forexfactory": "19 events this week",
-  "companies": "37 earnings/dividend events"
+  "forexfactory": "18 events this week",
+  "companies": "40 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
