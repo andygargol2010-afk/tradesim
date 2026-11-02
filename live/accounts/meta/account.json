@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "76.45903967943000000000000000000000",
+  "cash": "71.99889626755000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "287.8900146484375",
+    "mark_price": "288.96500000000003",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:31.636290+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.154998779296875",
+    "mark_price": "50.155",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:20.980282+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "697.22998046875",
+    "mark_price": "697.8300170898438",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:20.681411+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "762.22998046875",
+    "mark_price": "762.8200073242188",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:03:22.576094+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "81.9000015258789",
+    "mark_price": "81.8550033569336",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "159.06",
+    "mark_price": "159.2100067138672",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:03:33.009833+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "184.02999877929688",
+    "mark_price": "183.33499999999998",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "684.685",
+    "mark_price": "684.1599731445312",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,8 +146,30 @@
     "opened_at": "2026-10-29T15:41:50.618745+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "183.70970153808594",
+    "mark_price": "184.22",
     "entry_order_id": "O00000009"
+   },
+   {
+    "symbol": "COP",
+    "quantity": "0.013683086",
+    "avg_price": "149.83",
+    "open_fees": "0",
+    "opened_at": "2026-11-02T15:42:18.772820+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "149.785",
+    "entry_order_id": "O00000010"
+   },
+   {
+    "symbol": "GOOGL",
+    "quantity": "0.008435445",
+    "avg_price": "285.70",
+    "open_fees": "0",
+    "opened_at": "2026-11-02T15:41:59.410441+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "285.6700134277344",
+    "entry_order_id": "O00000011"
    }
   ],
   "fills": [
@@ -276,6 +298,34 @@
     "slippage_cost": "0.0001118",
     "realized_pnl": "0",
     "timestamp": "2026-10-29T15:41:50.618745+00:00"
+   },
+   {
+    "id": "F00000010",
+    "order_id": "O00000010",
+    "symbol": "COP",
+    "side": "buy",
+    "quantity": "0.013683086",
+    "price": "149.83",
+    "notional": "2.05013678",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00041045",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-02T15:42:18.772820+00:00"
+   },
+   {
+    "id": "F00000011",
+    "order_id": "O00000011",
+    "symbol": "GOOGL",
+    "side": "buy",
+    "quantity": "0.008435445",
+    "price": "285.7",
+    "notional": "2.41000664",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00025295",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-02T15:41:59.410441+00:00"
    }
   ],
   "closed_trades": [],
@@ -2022,10 +2072,24 @@
     "76.45903967943000000000000000000000",
     "23.238728121819156707883065",
     "23.238728121819156707883065"
+   ],
+   [
+    "2026-11-02T15:43:35.431555+00:00",
+    "99.70944830577599577749892000000000",
+    "76.45903967943000000000000000000000",
+    "23.25040862634599577749892",
+    "23.25040862634599577749892"
+   ],
+   [
+    "2026-11-02T15:43:35.584231+00:00",
+    "99.70857961682491078330692000000000",
+    "71.99889626755000000000000000000000",
+    "27.70968334927491078330692",
+    "27.70968334927491078330692"
    ]
   ],
   "total_fees": "0",
-  "total_slippage": "0.01244785",
+  "total_slippage": "0.01311125",
   "total_financing": "0E-45",
   "peak_equity": "100.0837805049300000000000000000000",
   "max_drawdown": "0.003856895710107881029395199020535417"
@@ -2219,11 +2283,53 @@
    "tag": "Hedge: m\u00e1s peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000010",
+   "symbol": "COP",
+   "side": "buy",
+   "quantity": "0.013683086",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.013683086",
+   "avg_fill_price": "149.83",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-02T15:43:35.584036+00:00",
+   "updated_at": "2026-11-02T15:42:18.772820+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000011",
+   "symbol": "GOOGL",
+   "side": "buy",
+   "quantity": "0.008435445",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.008435445",
+   "avg_fill_price": "285.7",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-02T15:43:35.584161+00:00",
+   "updated_at": "2026-11-02T15:41:59.410441+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 10,
- "fill_id_counter": 10,
+ "order_id_counter": 12,
+ "fill_id_counter": 12,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2233,7 +2339,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-02T15:22:33.297947+00:00",
+ "last_sync": "2026-11-02T15:43:35.584231+00:00",
  "bankrupt": false,
  "path_checked": {}
 }

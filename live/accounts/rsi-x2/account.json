@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "79.99607461128000000000000000000000",
+  "cash": "60.05921750398000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,8 +58,19 @@
     "opened_at": "2026-10-26T16:03:31.636290+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.154998779296875",
+    "mark_price": "50.155",
     "entry_order_id": "O00000001"
+   },
+   {
+    "symbol": "GOOGL",
+    "quantity": "0.069782489",
+    "avg_price": "285.70",
+    "open_fees": "0",
+    "opened_at": "2026-11-02T15:41:59.410441+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "285.6700134277344",
+    "entry_order_id": "O00000004"
    }
   ],
   "fills": [
@@ -76,6 +87,20 @@
     "slippage_cost": "0.02551503",
     "realized_pnl": "0",
     "timestamp": "2026-10-26T16:03:31.636290+00:00"
+   },
+   {
+    "id": "F00000002",
+    "order_id": "O00000004",
+    "symbol": "GOOGL",
+    "side": "buy",
+    "quantity": "0.069782489",
+    "price": "285.7",
+    "notional": "19.93685711",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00209254",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-02T15:41:59.410441+00:00"
    }
   ],
   "closed_trades": [],
@@ -1836,10 +1861,31 @@
     "79.99607461128000000000000000000000",
     "19.687928835408111572265625",
     "19.687928835408111572265625"
+   ],
+   [
+    "2026-11-02T15:43:16.662424+00:00",
+    "99.68400392586500000000000000000000",
+    "79.99607461128000000000000000000000",
+    "19.687929314585",
+    "19.687929314585"
+   ],
+   [
+    "2026-11-02T15:43:33.065428+00:00",
+    "99.68400392586500000000000000000000",
+    "79.99607461128000000000000000000000",
+    "19.687929314585",
+    "19.687929314585"
+   ],
+   [
+    "2026-11-02T15:43:33.067892+00:00",
+    "99.68191138821572806292160000000000",
+    "60.05921750398000000000000000000000",
+    "39.6226938842357280629216",
+    "39.6226938842357280629216"
    ]
   ],
   "total_fees": "0",
-  "total_slippage": "0.02551503",
+  "total_slippage": "0.02760757",
   "total_financing": "0E-47",
   "peak_equity": "100.3670264960449984298331720000000",
   "max_drawdown": "0.007998128646540519736540944972923757"
@@ -1907,13 +1953,56 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-BAC-3"
+  },
+  {
+   "id": "O00000004",
+   "symbol": "GOOGL",
+   "side": "buy",
+   "quantity": "0.069782489",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.069782489",
+   "avg_fill_price": "285.7",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-02T15:43:33.067759+00:00",
+   "updated_at": "2026-11-02T15:41:59.410441+00:00",
+   "reject_reason": null,
+   "tag": "RSI 22.3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000005",
+   "symbol": "GOOGL",
+   "side": "sell",
+   "quantity": "0.069782489",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "258.54",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-02T15:43:33.071848+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-GOOGL-5"
   }
  ],
  "open_order_ids": [
-  "O00000003"
+  "O00000003",
+  "O00000005"
  ],
- "order_id_counter": 4,
- "fill_id_counter": 2,
+ "order_id_counter": 6,
+ "fill_id_counter": 3,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -1923,9 +2012,9 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-02T15:22:33.239889+00:00",
+ "last_sync": "2026-11-02T15:43:33.067892+00:00",
  "bankrupt": false,
  "path_checked": {
-  "BAC": "2026-11-02T15:20:00+00:00"
+  "BAC": "2026-11-02T15:40:00+00:00"
  }
 }
