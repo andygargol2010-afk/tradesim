@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T22:20:44.407554+00:00",
+ "generated_at": "2026-11-02T23:12:38.212521+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -411,7 +411,7 @@
    "symbol": "SLV",
    "as_of": "2026-11-02T00:00:00+00:00",
    "close": 45.57,
-   "score": -0.386,
+   "score": -0.228,
    "trend": {
     "direction": "bearish",
     "change_pct": -21.85,
@@ -473,6 +473,18 @@
       "target": 38.555
      },
      "note": "closed below the lower trendline"
+    },
+    {
+     "name": "gap_up",
+     "kind": "chart",
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {
+      "gap_fill": 45.06
+     },
+     "note": "opened above the previous high"
     },
     {
      "name": "rsi_oversold",
@@ -864,8 +876,8 @@
      "bars_since_touch": 15
     },
     {
-     "price": 78.553,
-     "touches": 10,
+     "price": 78.564,
+     "touches": 11,
      "bars_since_touch": 43
     },
     {
