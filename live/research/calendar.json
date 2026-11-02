@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-02T04:20:38.907449+00:00",
+ "generated_at": "2026-11-02T06:20:43.597585+00:00",
  "window": [
-  "2026-10-25",
-  "2026-12-01"
+  "2026-10-26",
+  "2026-12-02"
  ],
  "events": [
   {
@@ -432,7 +432,7 @@
    "symbols": [
     "MRK"
    ],
-   "forecast": "EPS 1.80, revenue 16.4B",
+   "forecast": "EPS 1.79, revenue 16.4B",
    "previous": null,
    "actual": null,
    "confirmed": true,
@@ -504,7 +504,7 @@
    "symbols": [
     "ABBV"
    ],
-   "forecast": "EPS 3.90, revenue 18.4B",
+   "forecast": "EPS 3.89, revenue 18.4B",
    "previous": null,
    "actual": null,
    "confirmed": true,
@@ -1630,12 +1630,66 @@
    "source": "yahoo",
    "notes": "buyers from this date do not receive the next dividend",
    "id": "7bf62286be8a"
+  },
+  {
+   "date": "2026-12-02",
+   "title": "CRM quarterly earnings",
+   "category": "earnings",
+   "importance": "high",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "CRM"
+   ],
+   "forecast": "EPS 3.45, revenue 11.5B",
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "consensus estimates from Yahoo",
+   "id": "3de7a1517ca2"
+  },
+  {
+   "date": "2026-12-02",
+   "title": "GS ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "GS"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "2f285e2bacb3"
+  },
+  {
+   "date": "2026-12-02",
+   "title": "SLB ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "SLB"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "6f50392112a5"
   }
  ],
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "18 events this week",
-  "companies": "40 earnings/dividend events"
+  "companies": "43 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
