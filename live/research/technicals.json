@@ -1,15 +1,15 @@
 {
- "generated_at": "2026-11-03T21:14:18.814897+00:00",
+ "generated_at": "2026-11-03T21:20:50.015620+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 754.42,
+   "close": 754.35,
    "score": -0.095,
    "trend": {
     "direction": "neutral",
     "change_pct": 0.07,
-    "r2": 0.001,
+    "r2": 0.0,
     "quality": 0.0,
     "ma_alignment": "above SMA200"
    },
@@ -48,15 +48,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 40.4,
+    "rsi_14": 40.3,
     "atr_pct": 1.04,
-    "sma_20": 768.1,
+    "sma_20": 768.09,
     "sma_50": 766.4,
     "sma_200": 726.65,
-    "dist_sma200_pct": 3.82,
+    "dist_sma200_pct": 3.81,
     "high_52w": 781.62,
     "low_52w": 626.11,
-    "volume_ratio_20": 0.73
+    "volume_ratio_20": 0.8
    },
    "patterns": [
     {
@@ -220,7 +220,7 @@
     "dist_sma200_pct": 0.7,
     "high_52w": 304.39,
     "low_52w": 226.6,
-    "volume_ratio_20": 0.69
+    "volume_ratio_20": 0.71
    },
    "patterns": [
     {
@@ -248,7 +248,7 @@
   "DIA": {
    "symbol": "DIA",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 517.06,
+   "close": 517.0,
    "score": -0.289,
    "trend": {
     "direction": "bearish",
@@ -292,12 +292,12 @@
     }
    ],
    "indicators": {
-    "rsi_14": 45.8,
+    "rsi_14": 45.7,
     "atr_pct": 0.98,
     "sma_20": 519.77,
     "sma_50": 520.6,
     "sma_200": 503.59,
-    "dist_sma200_pct": 2.68,
+    "dist_sma200_pct": 2.66,
     "high_52w": 544.92,
     "low_52w": 447.15,
     "volume_ratio_20": 0.88
@@ -328,7 +328,7 @@
   "GLD": {
    "symbol": "GLD",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 359.26,
+   "close": 359.3,
    "score": -0.749,
    "trend": {
     "direction": "bearish",
@@ -356,7 +356,7 @@
     }
    ],
    "indicators": {
-    "rsi_14": 35.4,
+    "rsi_14": 35.5,
     "atr_pct": 1.7,
     "sma_20": 373.72,
     "sma_50": 387.99,
@@ -377,7 +377,7 @@
      "levels": {
       "upper": 366.62,
       "lower": 360.63,
-      "target": 330.44
+      "target": 330.48
      },
      "note": "closed below the lower trendline"
     },
@@ -603,14 +603,14 @@
     "dist_sma200_pct": -4.16,
     "high_52w": 71.57,
     "low_52w": 51.374,
-    "volume_ratio_20": 0.96
+    "volume_ratio_20": 0.97
    },
    "patterns": []
   },
   "XLE": {
    "symbol": "XLE",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 66.71,
+   "close": 66.68,
    "score": -0.047,
    "trend": {
     "direction": "bullish",
@@ -638,15 +638,15 @@
    ],
    "resistance": [],
    "indicators": {
-    "rsi_14": 50.2,
-    "atr_pct": 2.17,
-    "sma_20": 67.457,
+    "rsi_14": 50.0,
+    "atr_pct": 2.18,
+    "sma_20": 67.455,
     "sma_50": 64.936,
     "sma_200": 58.354,
-    "dist_sma200_pct": 14.32,
+    "dist_sma200_pct": 14.27,
     "high_52w": 70.15,
     "low_52w": 41.988,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 0.93
    },
    "patterns": [
     {
@@ -941,8 +941,8 @@
      "bars_since_touch": 8
     },
     {
-     "price": 107.96,
-     "touches": 13,
+     "price": 107.98,
+     "touches": 12,
      "bars_since_touch": 49
     }
    ],
@@ -1118,7 +1118,7 @@
     "dist_sma200_pct": 1.06,
     "high_52w": 99.98,
     "low_52w": 76.199,
-    "volume_ratio_20": 0.93
+    "volume_ratio_20": 0.94
    },
    "patterns": [
     {
@@ -1422,7 +1422,7 @@
   "XLV": {
    "symbol": "XLV",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 184.02,
+   "close": 184.04,
    "score": -0.177,
    "trend": {
     "direction": "bullish",
@@ -1455,7 +1455,7 @@
     "sma_20": 177.4,
     "sma_50": 172.37,
     "sma_200": 157.97,
-    "dist_sma200_pct": 16.49,
+    "dist_sma200_pct": 16.5,
     "high_52w": 187.99,
     "low_52w": 140.48,
     "volume_ratio_20": 1.16
@@ -1538,7 +1538,7 @@
     "dist_sma200_pct": -0.9,
     "high_52w": 47.061,
     "low_52w": 39.03,
-    "volume_ratio_20": 0.89
+    "volume_ratio_20": 0.92
    },
    "patterns": [
     {
@@ -1576,13 +1576,13 @@
   "VNQ": {
    "symbol": "VNQ",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 95.01,
-   "score": -0.278,
+   "close": 95.02,
+   "score": -0.277,
    "trend": {
     "direction": "bearish",
     "change_pct": -6.64,
-    "r2": 0.474,
-    "quality": 0.474,
+    "r2": 0.473,
+    "quality": 0.473,
     "ma_alignment": "above SMA200"
    },
    "support": [
@@ -1625,7 +1625,7 @@
     "sma_20": 91.99,
     "sma_50": 92.706,
     "sma_200": 93.292,
-    "dist_sma200_pct": 1.84,
+    "dist_sma200_pct": 1.85,
     "high_52w": 100.92,
     "low_52w": 84.658,
     "volume_ratio_20": 1.03
@@ -2632,7 +2632,7 @@
     "dist_sma200_pct": -18.73,
     "high_52w": 262.11,
     "low_52w": 114.08,
-    "volume_ratio_20": 2.44
+    "volume_ratio_20": 2.4
    },
    "patterns": [
     {
@@ -3123,7 +3123,7 @@
     "dist_sma200_pct": 15.3,
     "high_52w": 188.5,
     "low_52w": 109.34,
-    "volume_ratio_20": 0.94
+    "volume_ratio_20": 0.86
    },
    "patterns": [
     {
@@ -3187,7 +3187,7 @@
     "dist_sma200_pct": 17.39,
     "high_52w": 236.48,
     "low_52w": 142.51,
-    "volume_ratio_20": 0.95
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -3407,7 +3407,7 @@
     "dist_sma200_pct": 28.94,
     "high_52w": 1449.7,
     "low_52w": 847.83,
-    "volume_ratio_20": 1.03
+    "volume_ratio_20": 0.87
    },
    "patterns": [
     {
@@ -3474,14 +3474,14 @@
    ],
    "indicators": {
     "rsi_14": 58.0,
-    "atr_pct": 2.11,
+    "atr_pct": 2.12,
     "sma_20": 29.457,
     "sma_50": 28.639,
     "sma_200": 26.385,
     "dist_sma200_pct": 13.7,
-    "high_52w": 31.05,
+    "high_52w": 31.06,
     "low_52w": 22.577,
-    "volume_ratio_20": 1.71
+    "volume_ratio_20": 1.52
    },
    "patterns": [
     {
@@ -3551,7 +3551,7 @@
     "dist_sma200_pct": 10.18,
     "high_52w": 165.75,
     "low_52w": 133.74,
-    "volume_ratio_20": 1.01
+    "volume_ratio_20": 0.71
    },
    "patterns": [
     {
@@ -5102,7 +5102,7 @@
     "dist_sma200_pct": 10.82,
     "high_52w": 115.42,
     "low_52w": 91.489,
-    "volume_ratio_20": 1.45
+    "volume_ratio_20": 1.34
    },
    "patterns": [
     {
@@ -5465,7 +5465,7 @@
     "dist_sma200_pct": 3.02,
     "high_52w": 96.177,
     "low_52w": 72.365,
-    "volume_ratio_20": 1.17
+    "volume_ratio_20": 1.08
    },
    "patterns": [
     {
@@ -5493,7 +5493,7 @@
   "MS": {
    "symbol": "MS",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 186.1,
+   "close": 186.09,
    "score": -0.212,
    "trend": {
     "direction": "bearish",
@@ -5542,10 +5542,10 @@
     "sma_20": 184.25,
     "sma_50": 195.81,
     "sma_200": 192.08,
-    "dist_sma200_pct": -3.11,
+    "dist_sma200_pct": -3.12,
     "high_52w": 229.58,
     "low_52w": 150.24,
-    "volume_ratio_20": 0.45
+    "volume_ratio_20": 0.63
    },
    "patterns": []
   },
@@ -5594,7 +5594,7 @@
     "dist_sma200_pct": 10.0,
     "high_52w": 1182.6,
     "low_52w": 907.59,
-    "volume_ratio_20": 0.88
+    "volume_ratio_20": 0.97
    },
    "patterns": [
     {
@@ -5664,7 +5664,7 @@
     "dist_sma200_pct": 0.45,
     "high_52w": 383.18,
     "low_52w": 288.37,
-    "volume_ratio_20": 0.76
+    "volume_ratio_20": 0.72
    },
    "patterns": [
     {
@@ -5702,7 +5702,7 @@
   "MRK": {
    "symbol": "MRK",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 144.68,
+   "close": 144.67,
    "score": 0.336,
    "trend": {
     "direction": "neutral",
@@ -5744,7 +5744,7 @@
     "dist_sma200_pct": 14.91,
     "high_52w": 156.0,
     "low_52w": 79.671,
-    "volume_ratio_20": 0.64
+    "volume_ratio_20": 0.8
    },
    "patterns": [
     {
@@ -5828,7 +5828,7 @@
     "dist_sma200_pct": 21.69,
     "high_52w": 298.74,
     "low_52w": 188.25,
-    "volume_ratio_20": 0.97
+    "volume_ratio_20": 1.0
    },
    "patterns": [
     {
@@ -5882,7 +5882,7 @@
     "dist_sma200_pct": 26.65,
     "high_52w": 711.85,
     "low_52w": 434.5,
-    "volume_ratio_20": 0.67
+    "volume_ratio_20": 0.68
    },
    "patterns": [
     {
@@ -5972,7 +5972,7 @@
     "dist_sma200_pct": 9.0,
     "high_52w": 128.83,
     "low_52w": 80.892,
-    "volume_ratio_20": 0.72
+    "volume_ratio_20": 0.74
    },
    "patterns": [
     {
@@ -6056,7 +6056,7 @@
     "dist_sma200_pct": 15.7,
     "high_52w": 214.35,
     "low_52w": 137.25,
-    "volume_ratio_20": 0.63
+    "volume_ratio_20": 0.68
    },
    "patterns": []
   },
@@ -6105,7 +6105,7 @@
     "dist_sma200_pct": 19.52,
     "high_52w": 154.28,
     "low_52w": 82.955,
-    "volume_ratio_20": 1.29
+    "volume_ratio_20": 1.39
    },
    "patterns": [
     {
@@ -6175,7 +6175,7 @@
     "dist_sma200_pct": 1.89,
     "high_52w": 60.148,
     "low_52w": 33.823,
-    "volume_ratio_20": 0.71
+    "volume_ratio_20": 0.72
    },
    "patterns": [
     {
@@ -6361,7 +6361,7 @@
     "dist_sma200_pct": -0.39,
     "high_52w": 388.25,
     "low_52w": 268.17,
-    "volume_ratio_20": 0.75
+    "volume_ratio_20": 0.9
    },
    "patterns": [
     {
@@ -6426,7 +6426,7 @@
     "dist_sma200_pct": 10.26,
     "high_52w": 719.5,
     "low_52w": 449.37,
-    "volume_ratio_20": 0.79
+    "volume_ratio_20": 0.81
    },
    "patterns": [
     {
@@ -6533,7 +6533,7 @@
     "dist_sma200_pct": 13.28,
     "high_52w": 683.27,
     "low_52w": 429.47,
-    "volume_ratio_20": 0.76
+    "volume_ratio_20": 0.81
    },
    "patterns": [
     {
@@ -6616,14 +6616,14 @@
    ],
    "indicators": {
     "rsi_14": 65.0,
-    "atr_pct": 1.85,
+    "atr_pct": 1.86,
     "sma_20": 80.283,
     "sma_50": 80.23,
     "sma_200": 86.426,
     "dist_sma200_pct": -2.43,
     "high_52w": 97.3,
     "low_52w": 74.41,
-    "volume_ratio_20": 0.88
+    "volume_ratio_20": 0.93
    },
    "patterns": [
     {
@@ -6663,11 +6663,11 @@
   "T": {
    "symbol": "T",
    "as_of": "2026-11-03T00:00:00+00:00",
-   "close": 21.4,
-   "score": -0.048,
+   "close": 21.39,
+   "score": -0.22,
    "trend": {
     "direction": "bearish",
-    "change_pct": -15.83,
+    "change_pct": -15.84,
     "r2": 0.594,
     "quality": 0.594,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
@@ -6702,15 +6702,15 @@
     }
    ],
    "indicators": {
-    "rsi_14": 38.7,
+    "rsi_14": 38.6,
     "atr_pct": 3.17,
-    "sma_20": 22.308,
+    "sma_20": 22.307,
     "sma_50": 24.008,
     "sma_200": 24.431,
-    "dist_sma200_pct": -12.41,
+    "dist_sma200_pct": -12.45,
     "high_52w": 28.429,
     "low_52w": 19.408,
-    "volume_ratio_20": 0.53
+    "volume_ratio_20": 0.62
    },
    "patterns": [
     {
@@ -6722,6 +6722,16 @@
      "status": "confirmed",
      "levels": {},
      "note": "lower low in price, higher low in RSI: selling momentum fading"
+    },
+    {
+     "name": "bearish_harami",
+     "kind": "candlestick",
+     "direction": "bearish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bearish body inside a large bullish one"
     },
     {
      "name": "doji",
@@ -6742,16 +6752,6 @@
      "status": "confirmed",
      "levels": {},
      "note": "SMA50 crossed below SMA200"
-    },
-    {
-     "name": "inside_bar",
-     "kind": "candlestick",
-     "direction": "neutral",
-     "strength": 0.2,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {},
-     "note": "range inside the previous bar: compression before a move"
     }
    ]
   },
