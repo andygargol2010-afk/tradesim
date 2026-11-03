@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "71.99889626755000000000000000000000",
+  "cash": "74.12321143531000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "288.8800048828125",
+    "mark_price": "288.975",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:31.636290+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "49.79999923706055",
+    "mark_price": "49.935001373291016",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:20.980282+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "686.469970703125",
+    "mark_price": "685.375",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:20.681411+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "754.6799926757812",
+    "mark_price": "754.36",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:03:22.576094+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "81.10990142822266",
+    "mark_price": "81.12000274658203",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "157.75999450683594",
+    "mark_price": "157.51519775390625",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,18 +124,18 @@
     "opened_at": "2026-10-26T16:03:33.009833+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "178.6300048828125",
+    "mark_price": "178.30499267578125",
     "entry_order_id": "O00000007"
    },
    {
     "symbol": "TMO",
-    "quantity": "0.004716914",
+    "quantity": "0.001663818",
     "avg_price": "708.10",
     "open_fees": "0",
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
-    "mark_price": "698.4099731445312",
+    "realized_pnl": "-0.03752254984",
+    "fees_paid": "0.00005956",
+    "mark_price": "695.8599853515625",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:50.618745+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "185.16000366210938",
+    "mark_price": "185.075",
     "entry_order_id": "O00000009"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-11-02T15:42:18.772820+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "145.30999755859375",
+    "mark_price": "145.29500000000002",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-02T15:41:59.410441+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "278.66180419921875",
+    "mark_price": "277.6300048828125",
     "entry_order_id": "O00000011"
    }
   ],
@@ -326,9 +326,38 @@
     "slippage_cost": "0.00025295",
     "realized_pnl": "0",
     "timestamp": "2026-11-02T15:41:59.410441+00:00"
+   },
+   {
+    "id": "F00000012",
+    "order_id": "O00000012",
+    "symbol": "TMO",
+    "side": "sell",
+    "quantity": "0.003053096",
+    "price": "695.81",
+    "notional": "2.12437473",
+    "fee": "0.00005956",
+    "liquidity": "taker",
+    "slippage_cost": "0.00015261",
+    "realized_pnl": "-0.03752254984",
+    "timestamp": "2026-11-03T15:42:20.084220+00:00"
    }
   ],
-  "closed_trades": [],
+  "closed_trades": [
+   {
+    "symbol": "TMO",
+    "direction": "long",
+    "quantity": "0.003053096",
+    "entry_price": "708.1",
+    "exit_price": "695.81",
+    "pnl": "-0.03758210984",
+    "fees": "0.00005956",
+    "return_pct": -0.017383855481663428,
+    "opened_at": "2026-10-29T15:42:14.231933+00:00",
+    "closed_at": "2026-11-03T15:42:20.084220+00:00",
+    "entry_order_id": "O00000008",
+    "exit_order_id": "O00000012"
+   }
+  ],
   "equity_curve": [
    [
     "2026-10-25T21:21:36.252241+00:00",
@@ -2247,11 +2276,32 @@
     "71.99889626755000000000000000000000",
     "27.47734279024702054345922",
     "27.47734279024702054345922"
+   ],
+   [
+    "2026-11-03T15:43:01.333465+00:00",
+    "99.44975722637943400163067200000000",
+    "71.99889626755000000000000000000000",
+    "27.450860958829434001630672",
+    "27.450860958829434001630672"
+   ],
+   [
+    "2026-11-03T15:43:01.449456+00:00",
+    "99.44954505630251993913067200000000",
+    "74.12321143531000000000000000000000",
+    "25.326333620992519939130672",
+    "25.326333620992519939130672"
+   ],
+   [
+    "2026-11-03T15:43:01.449706+00:00",
+    "99.44954505630251993913067200000000",
+    "74.12321143531000000000000000000000",
+    "25.326333620992519939130672",
+    "25.326333620992519939130672"
    ]
   ],
-  "total_fees": "0",
-  "total_slippage": "0.01311125",
-  "total_financing": "0E-45",
+  "total_fees": "0.00005956",
+  "total_slippage": "0.01326386",
+  "total_financing": "0E-48",
   "peak_equity": "100.0837805049300000000000000000000",
   "max_drawdown": "0.006870080735711307476979881411838646"
  },
@@ -2486,11 +2536,32 @@
    "tag": "Hedge: m\u00e1s peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000012",
+   "symbol": "TMO",
+   "side": "sell",
+   "quantity": "0.003053096",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.003053096",
+   "avg_fill_price": "695.81",
+   "fees_paid": "0.00005956",
+   "triggered": false,
+   "created_at": "2026-11-03T15:43:01.449367+00:00",
+   "updated_at": "2026-11-03T15:42:20.084220+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: menos peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 12,
- "fill_id_counter": 12,
+ "order_id_counter": 13,
+ "fill_id_counter": 13,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2500,7 +2571,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-03T15:22:04.935247+00:00",
+ "last_sync": "2026-11-03T15:43:01.449706+00:00",
  "bankrupt": false,
  "path_checked": {}
 }
