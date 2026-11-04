@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "74.12321143531000000000000000000000",
+  "cash": "68.41305990739000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,7 +58,7 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "284.755",
+    "mark_price": "285.02",
     "entry_order_id": "O00000001"
    },
    {
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:03:31.636290+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.974999999999994",
+    "mark_price": "51.275001525878906",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:20.980282+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "699.4749755859375",
+    "mark_price": "697.469970703125",
     "entry_order_id": "O00000003"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:20.681411+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "767.68",
+    "mark_price": "767.5599975585938",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:03:22.576094+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "80.8949966430664",
+    "mark_price": "81.15499877929688",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:03:27.115349+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "153.665",
+    "mark_price": "154.005",
     "entry_order_id": "O00000006"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:03:33.009833+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "172.60000610351562",
+    "mark_price": "172.1699981689453",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "-0.03752254984",
     "fees_paid": "0.00005956",
-    "mark_price": "697.8900146484375",
+    "mark_price": "697.8400268554688",
     "entry_order_id": "O00000008"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:50.618745+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "186.265",
+    "mark_price": "186.86000061035156",
     "entry_order_id": "O00000009"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-11-02T15:42:18.772820+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "140.47000122070312",
+    "mark_price": "139.52000427246094",
     "entry_order_id": "O00000010"
    },
    {
@@ -168,8 +168,30 @@
     "opened_at": "2026-11-02T15:41:59.410441+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "295.3949890136719",
+    "mark_price": "293.2799987792969",
     "entry_order_id": "O00000011"
+   },
+   {
+    "symbol": "HON",
+    "quantity": "0.013976466",
+    "avg_price": "225.38",
+    "open_fees": "0",
+    "opened_at": "2026-11-04T15:42:19.969774+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "225.34500122070312",
+    "entry_order_id": "O00000013"
+   },
+   {
+    "symbol": "MRK",
+    "quantity": "0.017352146",
+    "avg_price": "147.54",
+    "open_fees": "0",
+    "opened_at": "2026-11-04T15:42:17.245543+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "147.52000427246094",
+    "entry_order_id": "O00000014"
    }
   ],
   "fills": [
@@ -340,6 +362,34 @@
     "slippage_cost": "0.00015261",
     "realized_pnl": "-0.03752254984",
     "timestamp": "2026-11-03T15:42:20.084220+00:00"
+   },
+   {
+    "id": "F00000013",
+    "order_id": "O00000013",
+    "symbol": "HON",
+    "side": "buy",
+    "quantity": "0.013976466",
+    "price": "225.38",
+    "notional": "3.15001591",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00048916",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-04T15:42:19.969774+00:00"
+   },
+   {
+    "id": "F00000014",
+    "order_id": "O00000014",
+    "symbol": "MRK",
+    "side": "buy",
+    "quantity": "0.017352146",
+    "price": "147.54",
+    "notional": "2.56013562",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00034697",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-04T15:42:17.245543+00:00"
    }
   ],
   "closed_trades": [
@@ -2507,10 +2557,24 @@
     "74.12321143531000000000000000000000",
     "25.424363907978532656145918",
     "25.424363907978532656145918"
+   ],
+   [
+    "2026-11-04T15:43:03.678901+00:00",
+    "99.53997403736653956728028200000000",
+    "74.12321143531000000000000000000000",
+    "25.416762602056539567280282",
+    "25.416762602056539567280282"
+   ],
+   [
+    "2026-11-04T15:43:03.862505+00:00",
+    "99.53913790933402123023144200000000",
+    "68.41305990739000000000000000000000",
+    "31.126078001944021230231442",
+    "31.126078001944021230231442"
    ]
   ],
   "total_fees": "0.00005956",
-  "total_slippage": "0.01326386",
+  "total_slippage": "0.01409999",
   "total_financing": "0E-48",
   "peak_equity": "100.0837805049300000000000000000000",
   "max_drawdown": "0.006870080735711307476979881411838646"
@@ -2767,11 +2831,53 @@
    "tag": "Hedge: menos peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000013",
+   "symbol": "HON",
+   "side": "buy",
+   "quantity": "0.013976466",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.013976466",
+   "avg_fill_price": "225.38",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-04T15:43:03.862293+00:00",
+   "updated_at": "2026-11-04T15:42:19.969774+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000014",
+   "symbol": "MRK",
+   "side": "buy",
+   "quantity": "0.017352146",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.017352146",
+   "avg_fill_price": "147.54",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-04T15:43:03.862423+00:00",
+   "updated_at": "2026-11-04T15:42:17.245543+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 13,
- "fill_id_counter": 13,
+ "order_id_counter": 15,
+ "fill_id_counter": 15,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -2781,7 +2887,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-04T15:22:13.179131+00:00",
+ "last_sync": "2026-11-04T15:43:03.862505+00:00",
  "bankrupt": false,
  "path_checked": {}
 }
