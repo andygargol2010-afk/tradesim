@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "51.195",
+    "mark_price": "51.630001068115234",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-30T15:44:56.014598+00:00",
     "realized_pnl": "-0.81877079628",
     "fees_paid": "0.00025764",
-    "mark_price": "586.260009765625",
+    "mark_price": "591.2999877929688",
     "entry_order_id": "O00000041"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "330.5450134277344",
+    "mark_price": "329.45001220703125",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "21.785",
+    "mark_price": "21.829999923706055",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:01:20.770000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500976",
-    "mark_price": "2413.3050000000003",
+    "mark_price": "2417.51",
     "entry_order_id": "O00000006"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:45.479132+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "47.078800201416016",
+    "mark_price": "47.15999984741211",
     "entry_order_id": "O00000034"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-30T15:44:46.507242+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "291.45001220703125",
+    "mark_price": "288.92999267578125",
     "entry_order_id": "O00000040"
    }
   ],
@@ -2706,6 +2706,13 @@
     "17.97589554707630000000000000000000",
     "81.858763469809312347685672",
     "81.858763469809312347685672"
+   ],
+   [
+    "2026-11-04T21:30:14.198681+00:00",
+    "99.92939934606169354354885000000000",
+    "17.97589554707630000000000000000000",
+    "81.953503798985393543548850",
+    "81.953503798985393543548850"
    ]
   ],
   "total_fees": "0.12127854",
@@ -3354,14 +3361,14 @@
    "limit_price": null,
    "stop_price": "48.79",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-10-29T14:21:32.464013+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-04T21:30:15.004545+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-BAC-31"
@@ -3827,19 +3834,40 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-GE-53"
+  },
+  {
+   "id": "O00000054",
+   "symbol": "BAC",
+   "side": "sell",
+   "quantity": "0.1965602",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "49.06",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-04T21:30:15.004614+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-BAC-54"
   }
  ],
  "open_order_ids": [
-  "O00000031",
   "O00000035",
   "O00000042",
   "O00000049",
   "O00000050",
   "O00000051",
   "O00000052",
-  "O00000053"
+  "O00000053",
+  "O00000054"
  ],
- "order_id_counter": 54,
+ "order_id_counter": 55,
  "fill_id_counter": 15,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -3850,18 +3878,18 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-04T19:46:22.732736+00:00",
+ "last_sync": "2026-11-04T21:30:14.198681+00:00",
  "bankrupt": false,
  "path_checked": {
-  "FXI": "2026-11-04T19:45:00+00:00",
-  "BAC": "2026-11-04T19:45:00+00:00",
-  "CAT": "2026-11-04T19:45:00+00:00",
-  "GE": "2026-11-04T19:45:00+00:00",
-  "T": "2026-11-04T19:45:00+00:00",
-  "ETH-USD": "2026-11-04T19:45:00+00:00",
+  "FXI": "2026-11-04T21:00:00+00:00",
+  "BAC": "2026-11-04T21:00:00+00:00",
+  "CAT": "2026-11-04T21:00:00+00:00",
+  "GE": "2026-11-04T21:00:00+00:00",
+  "T": "2026-11-04T21:00:00+00:00",
+  "ETH-USD": "2026-11-04T21:30:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-04T19:45:00+00:00",
-  "GOOGL": "2026-11-04T19:45:00+00:00"
+  "SLV": "2026-11-04T21:00:00+00:00",
+  "GOOGL": "2026-11-04T21:00:00+00:00"
  }
 }
