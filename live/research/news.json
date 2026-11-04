@@ -1,6 +1,450 @@
 {
  "items": [
   {
+   "id": "75d4738269c876c1",
+   "title": "CNN nails election night with gas prices highlighted on \u2018magic wall\u2019 during midterms returns",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaXhIemw4c2FWbjE5VzVQQ1I4XzlkTzBXWnhlTm5sc1I1STRqT3gzYXZrdjZRTWRNWWhNYWtvZ1c5TUg5LXpacVEtMjI5VjRrbk5mNDNOUXJZeE9STUE1ZWwzZHFuR0w3STFtQWZKdjJEMmdEZGxlVmxYMEtVWXI0ZnM2SGNfcTlxbkJlQ0dpVUxwSHNpMWwtajBYX09NaWRoWnlldzVB?oc=5",
+   "published": "2026-11-04T04:10:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "The Independent",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.5,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "geopolitics",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "CNN nails election night with gas prices highlighted on \u2018magic wall\u2019 during midterms returns",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "17f12f284d88fea2",
+   "title": "Stock Market Election Night: Dow Futures Fall, Techs Tumble In Blue Wave; CoreWeave, SpaceX, Tesla Hit",
+   "url": "https://finance.yahoo.com/m/e5be454d-07fd-3d94-8114-a4e8ff2910de/stock-market-election-night%3A.html?.tsrc=rss",
+   "published": "2026-11-04T04:07:09+00:00",
+   "source": "yahoo",
+   "summary": "AI stocks are sliding, even with Arista Networks and AMD rising on earnings.",
+   "publisher": "",
+   "symbols": [
+    "AMD",
+    "MSFT",
+    "NVDA",
+    "TSLA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.725,
+    "sentiment": -0.762,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "TSLA",
+     "AMD"
+    ],
+    "named": [
+     "TSLA",
+     "AMD"
+    ],
+    "summary": "Stock Market Election Night: Dow Futures Fall, Techs Tumble In Blue Wave; CoreWeave, SpaceX, Tesla Hit. AI stocks are sliding, even with Arista Networks and AMD rising on earnings.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": {
+    "id": "17f12f284d88fea2",
+    "headline": "Stock Market Election Night: Dow Futures Fall, Techs Tumble In Blue Wave; CoreWeave, SpaceX, Tesla Hit",
+    "what_happened": "AI stocks are sliding, even with Arista Networks and AMD rising on earnings.",
+    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+    "affected": [
+     {
+      "symbol": "TSLA",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono negativo en el titular (-0.76)."
+     },
+     {
+      "symbol": "AMD",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono negativo en el titular (-0.76)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+    "related_events": [
+     "ef82f1a1d8cd"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
+  },
+  {
+   "id": "1dfd1c9255d09e08",
+   "title": "Amazon cuts more jobs as CEO touts record margins, retail gains",
+   "url": "https://www.thestreet.com/employment/amazon-cuts-more-jobs-as-jassy-touts-record-margins-retail-gains?.tsrc=rss",
+   "published": "2026-11-04T04:07:00+00:00",
+   "source": "yahoo",
+   "summary": "The e-commerce giant eliminated more positions in October, even as its overall workforce and sales grow.",
+   "publisher": "",
+   "symbols": [
+    "AMZN"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.55,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "corporate",
+    "symbols": [
+     "AMZN"
+    ],
+    "named": [
+     "AMZN"
+    ],
+    "summary": "Amazon cuts more jobs as CEO touts record margins, retail gains. The e-commerce giant eliminated more positions in October, even as its overall workforce and sales grow.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": {
+    "id": "1dfd1c9255d09e08",
+    "headline": "Amazon cuts more jobs as CEO touts record margins, retail gains",
+    "what_happened": "The e-commerce giant eliminated more positions in October, even as its overall workforce and sales grow.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "AMZN",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.32)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
+  },
+  {
+   "id": "7337e7d3a028be8d",
+   "title": "Oil Prices Fall to Lowest Level in Nearly a Month",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE40NXlzWXVKU0dhMmJidmhHYzV1WkxSQlJ0X0EwVXFSUTZuTzQ5QjRBVXNVNVM4YnZlU29Bekl5dnIwLTVrNUpMWUk5WDg0UHVlTTVVOHl4THBPbXpaSXM5VXlLRHVvZndJVVg4al9tTHpzbG1aMGVBaWJDYTk?oc=5",
+   "published": "2026-11-04T04:05:55+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "8AM Media",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.505,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "commodities",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Oil Prices Fall to Lowest Level in Nearly a Month",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "0c4e63e8495c2a82",
+   "title": "Schwab's Dividend ETF Keeps Hitting Records. I'd Still Buy It Now.",
+   "url": "https://www.fool.com/investing/2026/11/03/schwab-s-dividend-etf-keeps-hitting-records-i-d-still-buy-it-now/?.tsrc=rss",
+   "published": "2026-11-04T04:01:01+00:00",
+   "source": "yahoo",
+   "summary": "Its yield has slipped under 3%. How did buyers do the last time a strong year left it there?",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.55,
+    "sentiment": 0.762,
+    "impact": "medium",
+    "category": "corporate",
+    "symbols": [
+     "NOW",
+     "TLT",
+     "XLF",
+     "QQQ"
+    ],
+    "named": [
+     "NOW"
+    ],
+    "summary": "Schwab's Dividend ETF Keeps Hitting Records. I'd Still Buy It Now.. Its yield has slipped under 3%. How did buyers do the last time a strong year left it there?",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": {
+    "id": "0c4e63e8495c2a82",
+    "headline": "Schwab's Dividend ETF Keeps Hitting Records. I'd Still Buy It Now.",
+    "what_happened": "Its yield has slipped under 3%. How did buyers do the last time a strong year left it there?",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "NOW",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.76)."
+     },
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "ffce9af0ff14",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
+  },
+  {
+   "id": "11509be1819073b9",
+   "title": "Democrats Win the House: What It Means for Crypto",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5uekVrRmc2YzFFOGh0UXAwQ2pwbkViRHcwWGhYNkpfeFRqNFhGZ3Izb096UVM4RDFXYXdYRWh6WDRvTlBWTC1Bb2kzZTJBdENZbGVHVHFPcmg1ZGRUakZhZDVMaUcxZE9wUUpNakpKT21Bd3Y1VUFz?oc=5",
+   "published": "2026-11-04T03:48:17+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CryptoTicker.io",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.505,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "crypto",
+    "symbols": [
+     "BTC-USD",
+     "ETH-USD",
+     "SOL-USD",
+     "XRP-USD"
+    ],
+    "named": [],
+    "summary": "Democrats Win the House: What It Means for Crypto",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "13c6f50091eddf5d",
+   "title": "5 tech stock stalwarts have tumbled over 50%",
+   "url": "https://www.thestreet.com/investing/5-tech-stock-stalwarts-have-tumbled-over-50?.tsrc=rss",
+   "published": "2026-11-04T03:47:00+00:00",
+   "source": "yahoo",
+   "summary": "Technology stocks are in correction territory. Are some leaders in the bargain bin after 50% plus drops?",
+   "publisher": "",
+   "symbols": [
+    "INTC",
+    "ORCL"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.185,
+    "sentiment": -0.583,
+    "impact": "low",
+    "category": "opinion",
+    "symbols": [
+     "XLK"
+    ],
+    "named": [
+     "XLK"
+    ],
+    "summary": "5 tech stock stalwarts have tumbled over 50%. Technology stocks are in correction territory. Are some leaders in the bargain bin after 50% plus drops?",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "d3dff16f66f0de60",
+   "title": "$Crude Oil Futures (DEC6) (CLmain.US)$$Brent Last Day Financial Futures Current Contract (JAN7) (BZcurrent.US)$ Democrats lead with 45 seats in the Senate, 102 in the House and 15 governorships, while Republicans have secured 36 Senate seats, 58",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTHJRMG1fd0ZYSHotNmFVcGJHbDZMYWZseEp3TXM1WGROdmFMaHFzdVhtS3FRaFRoZTA2ZFFacFFzZjQwV0FmQkxESHdZejhWcmJ2SzR0YTQyUnpsZ0FDZDBDd0MteEVFUDdVbU5JWmN3US1EX3l2OXAtQ3l2Vmk4b0c0TFM2ajJEdjNtNmZNYnZybDFzUzlxTmxBSFBzRXJZM0ZuS3UxcG5QdGREdm9YaA?oc=5",
+   "published": "2026-11-04T03:35:27+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Moomoo",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.465,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "commodities",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "$Crude Oil Futures (DEC6) (CLmain.US)$$Brent Last Day Financial Futures Current Contract (JAN7) (BZcurrent.US)$ Democrats lead with 45 seats in the Senate, 102 in the House and 15 governorships, while Republicans have secured 36 Senate seats, 58",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "22471cdb80143a3a",
+   "title": "Honeywell Aerospace vs. GE Aerospace: Which Pure-Play Aerospace Stock Is the Better Buy Now That Both Stand Alone?",
+   "url": "https://www.fool.com/investing/2026/11/03/honeywell-aerospace-vs-ge-aerospace-which-pure-pla/?.tsrc=rss",
+   "published": "2026-11-04T03:35:00+00:00",
+   "source": "yahoo",
+   "summary": "One looks like it has hit the ground running, while the other is still trying to get its footing.",
+   "publisher": "",
+   "symbols": [
+    "GE",
+    "HON"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.105,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "opinion",
+    "symbols": [
+     "NOW",
+     "HON",
+     "GE"
+    ],
+    "named": [
+     "NOW",
+     "HON",
+     "GE"
+    ],
+    "summary": "Honeywell Aerospace vs. GE Aerospace: Which Pure-Play Aerospace Stock Is the Better Buy Now That Both Stand Alone?. One looks like it has hit the ground running, while the other is still trying to get its footing.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "4b72d96781e32d90",
+   "title": "Aptiv (APTV) Deepens Its Push Into Production Ready Automated Driving",
+   "url": "https://finance.yahoo.com/technology/articles/aptiv-aptv-deepens-push-production-031701541.html?.tsrc=rss",
+   "published": "2026-11-04T03:17:01+00:00",
+   "source": "yahoo",
+   "summary": "Aptiv (NYSE:APTV) announced an expanded collaboration with NVIDIA to supply scalable automated-driving solutions using NVIDIA Hyperion and Halos. The partners plan to offer production-ready systems that automakers can integrate into next-generation vehicles using modular hardware and software architectures. Aptiv highlighted thermal management and system modularity as core technical features intended to support a wide range of vehicle platforms. The new Aptiv and NVIDIA Hyperion and Halos...",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "NVDA"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "Aptiv (APTV) Deepens Its Push Into Production Ready Automated Driving. Aptiv (NYSE:APTV) announced an expanded collaboration with NVIDIA to supply scalable automated-driving solutions using NVIDIA Hyperion and Halos. The partners plan to offer production-ready systems that automakers can in",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "39989867f6fa3216",
+   "title": "Verizon and AT&T quietly make major workforce shift amid pressure",
+   "url": "https://www.thestreet.com/retail/verizon-att-q3-2026-layoffs-workforce-changes?.tsrc=rss",
+   "published": "2026-11-04T03:17:00+00:00",
+   "source": "yahoo",
+   "summary": "Both carriers are reassessing their operations as competitive pressures mount across the telecom industry.",
+   "publisher": "",
+   "symbols": [
+    "T"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "T"
+    ],
+    "named": [
+     "T"
+    ],
+    "summary": "Verizon and AT&T quietly make major workforce shift amid pressure. Both carriers are reassessing their operations as competitive pressures mount across the telecom industry.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "03080b6e7fce3c97",
    "title": "Stock Market Election Night: Dow Futures Fall, Techs Tumble In Blue Wave; AMD, Arista Rise On Earnings",
    "url": "https://finance.yahoo.com/m/e5be454d-07fd-3d94-8114-a4e8ff2910de/stock-market-election-night%3A.html?.tsrc=rss",
@@ -155,6 +599,35 @@
     "summary": "Tom Lee says AI investors may be selling at the wrong time. Lee says the sell-off might be near a bottom.",
     "model": "local",
     "at": "2026-11-04T03:20:44.373131+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "66f1689ed5023524",
+   "title": "AUD/USD Remains Vulnerable Despite US Dollar Weakness Amid Midterms",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWjFjNk84WjF1ajdHMEpyUmRObW90aUF6RGMyYzg0eGNpdG0wTWU2RU9DZHRQOUpaS2ZVUF9YUFFnV01XUFRTSUhaVXlQbDFZamR0TGxNbU5mLTY3V0dqQ09vWDV0UXhUSTJmN2N4MjF3TF82dHpra1UtQ0EzNDdwTld2OU80blo1c3gtcUpSVzBzOVRRRG5Wc3RFMkwwaFZpeG5EOEdabDlKa1JYcHBKOThiNTNLNWpFNk5UbtIBvAFBVV95cUxNWjFjNk84WjF1ajdHMEpyUmRObW90aUF6RGMyYzg0eGNpdG0wTWU2RU9DZHRQOUpaS2ZVUF9YUFFnV01XUFRTSUhaVXlQbDFZamR0TGxNbU5mLTY3V0dqQ09vWDV0UXhUSTJmN2N4MjF3TF82dHpra1UtQ0EzNDdwTld2OU80blo1c3gtcUpSVzBzOVRRRG5Wc3RFMkwwaFZpeG5EOEdabDlKa1JYcHBKOThiNTNLNWpFNk5Ubg?oc=5",
+   "published": "2026-11-04T02:59:38+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "FOREX.com",
+   "symbols": [],
+   "topics": [
+    "dollar"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.325,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "GLD",
+     "EEM"
+    ],
+    "named": [],
+    "summary": "AUD/USD Remains Vulnerable Despite US Dollar Weakness Amid Midterms",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -491,6 +964,32 @@
     "model": "local",
     "at": "2026-11-04T03:20:44.373131+00:00"
    }
+  },
+  {
+   "id": "053d183ad68f92e5",
+   "title": "DeFi Compliance: SEC Guidance Shapes 2026 Landscape",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5pWndnakt4YXhDekZ0MmRZRzVvdWNlbXJtV2F3eGxTSzEwSG5ra1ZZWXIwMGNaOVFEM3RvVlJiS0JsRHhXV1Q0MUpFVXg3UEFNUGpVRmVYdlBlZmp4ZGFsa2FQS0Q3N1UzcklsYUFR?oc=5",
+   "published": "2026-11-04T02:26:15+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "OneSafe",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.275,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "earnings",
+    "symbols": [],
+    "named": [],
+    "summary": "DeFi Compliance: SEC Guidance Shapes 2026 Landscape",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
   },
   {
    "id": "0f277adbf8c5ed5d",
@@ -1010,6 +1509,32 @@
    }
   },
   {
+   "id": "d99d9a67a7b1b3ec",
+   "title": "BITO Trailed IBIT by $6,240 on $300,000 Over 12 Months. Futures Rolls Are a Big Reason Why",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNUxGcHJ6OTh0bVdSNkJZWnEyWFQ2WkRSbkN0SThuSl9UOGZuUEJGYVJQQS14WFIydXdEdncyQmtWNVZWeGNBaG1oV19lZnhhTmplMC1GaVFTMlNEcF9ZN1V4Ujh1dFZEUHBudnFmM1puOEk0dE41SHJjbEZpZVdEVU53YVpJa1laNzBaNEFFUFY5MFNYb1NDNDJhWUthM2FPaW5TMHVfVU9sMkoyd2VjWVVxQ0M1NjA0bkFGajA4ZXJHSkhBRU1XcURxSUc3dw?oc=5",
+   "published": "2026-11-04T02:03:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "24/7 Wall St.",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.0,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [],
+    "named": [],
+    "summary": "BITO Trailed IBIT by $6,240 on $300,000 Over 12 Months. Futures Rolls Are a Big Reason Why",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "3a9380a2f5b2db20",
    "title": "1Finity, a Fujitsu Company, Announces Availability of Full-Stack Enterprise AI-Native vRAN Solution",
    "url": "https://finance.yahoo.com/technology/ai/articles/1finity-fujitsu-company-announces-availability-020000548.html?.tsrc=rss",
@@ -1443,6 +1968,36 @@
    "analysis": null
   },
   {
+   "id": "be8ef31c2661da0c",
+   "title": "PM Carney says Canada-U.S. trade talks have intensified",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMndBMmhoYVZHdzRFRGpGTUoxSUxkNkNnTDhFN0ZrbVV5VU15cjFacnB1WjQ2MTBOUXJQZlN2V3RDZXF4OUg5b19NQm9ENHhZZURKaWgyNlZVSU0zLW5ZMWpjVzlCMHVGZ3lwV0xpV1lNcXBMRzN3VjdzdTJOZDd6bG5jOXgwUnNRWEE0Q1d5bTNmVnp3NmVMdVFiVjJjeFZ2OFdBYXFBY1ZZY1k?oc=5",
+   "published": "2026-11-04T01:33:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "BNN Bloomberg",
+   "symbols": [],
+   "topics": [
+    "trade"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.26,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "PM"
+    ],
+    "named": [
+     "PM"
+    ],
+    "summary": "PM Carney says Canada-U.S. trade talks have intensified",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "792f63cc4978786c",
    "title": "China\u2019s Crypto Ban Pushed $104 Billion in Stablecoin Payments Outside Regulated Firms",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOanJQX0dfeUREUGF0ZTMxQjhyNU4tVjE3VmFOV2xkeW5QdFQwWEIxWmhsUDQ0Z1ZXcEQtQ2NKR09uM3RyMGpOcUhHS0F0Tk8xckhyQUxKTzE3cTNiLUdaMjdBOXhFMHg3blBveTFZUU1yc2Fhc2JtZFZCMXJ3dXNlcGZPRFMwdUxnRC1UM0dB?oc=5",
@@ -1639,6 +2194,36 @@
     "summary": "Unemployed For A Long Time, Not A Good Time - Scoop",
     "model": "local",
     "at": "2026-11-04T02:20:38.187937+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "31b84f9d61749d1c",
+   "title": "DeFi Compliance After Aave's SEC Push: What to Do",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA4VTVxNnRVZ0JfWGdUNWF1b1hmbmptaEFZTWhUSHJHaFlDaVNVb2ZjM2cxNldCMGN5ZHlrY3NJZUZXNzBuT2FFU3l5SG5lWHVDV2d4Wk82Wmw1Yzg0cG1LWDdWdmRwZlNsM2E4?oc=5",
+   "published": "2026-11-04T01:12:29+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "OneSafe",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.5,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "regulation",
+    "symbols": [
+     "AAVE-USD"
+    ],
+    "named": [
+     "AAVE-USD"
+    ],
+    "summary": "DeFi Compliance After Aave's SEC Push: What to Do",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -1948,6 +2533,38 @@
    }
   },
   {
+   "id": "f0eed49d93928f4f",
+   "title": "BlackRock IBIT Flashes Golden Cross: What It Signals",
+   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPWXl5dVFNbXliTGV1ZTBWMDZJZVVpVWZGSTlURjRqMC1YZ3ZMX2xBcGhVTnZjbFUyQlo5ZjFJNWluaUE2T1VFN1ZSM29BMngtZ1hYMXNIQjZxeVdGbVRhMHBKcHdpWXNpQ09QbW1UV293Snl1eE5HLWRMOE81Sy1OT0Qtam83by1UUV9YNl85eDhHYXVVNVpKVUt5UGJRcjhKN1F2Q2FNdmdDcnM0dFo3NjhBTWQ3VkZqeGdNWVc3eHhabFFudTRUZlo2N2w2ZGhkZTJpTVlROC1MR2FLY1hMbDE1WmNIcUprSWkxOHJ3Z0NZRlNFQ1ZuM1BaaDdlLUth?oc=5",
+   "published": "2026-11-04T01:03:52+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Stocktwits",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "BLK",
+     "GLD",
+     "SLV"
+    ],
+    "named": [
+     "BLK"
+    ],
+    "summary": "BlackRock IBIT Flashes Golden Cross: What It Signals",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "96ccab6bc84b65bc",
    "title": "Kiwi falls as New Zealand unemployment rises to 5.7%",
    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQkl3SHktb3JwVVBUVmpadnVkVk1meHNicWhwazhzZTl6M0dON09rQXpUODNkQ3J6b3NtR0pkRzBaMEVFekl3LVFsNFl5N2FhQ18tbnhldEVhblZQTG5FRnN3VXdJNkhmTXp6NEtfUHpqelppRERBVlQySzlELUdBY01waTN1bzN2QTdpdk16TjdUbHFxN3VRQ3RwS3AwSGlZc00zekwyaWZzMDVNeW52N1hTdEVVckk?oc=5",
@@ -1970,6 +2587,32 @@
     "summary": "Kiwi falls as New Zealand unemployment rises to 5.7%",
     "model": "local",
     "at": "2026-11-04T02:28:27.654645+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "87363768323ff782",
+   "title": "New Zealand\u2019s Unemployment Rate climbs to 5.7% in Q3 vs. 5.5% expected",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYXcyUTgzeC12TElodEI4cDVDYi10Mk91UmMzc3dMZ0NPUldGTHdiaDRzeWtGRFFIcUs1M1VrVHBlc2pnQ0MyWGFJV0lKR3B6VmZYWXYyREhXSFlyWV83Z1R3akxWY1JEYlVNcndiT1pBQ3hvQUNDdjZaY3FZSkR0Sk9JbUU2UldTd2w2dWZpbU9oR1dYWldCci1WNkNpeVpGREswaC1Sdk5RM1FVczVYZEFwaDhXSlN6NXRpNTRESElRWnE2SERCT0xn?oc=5",
+   "published": "2026-11-04T01:02:30+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "www.tmgm.com",
+   "symbols": [],
+   "topics": [
+    "jobs"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.6,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [],
+    "named": [],
+    "summary": "New Zealand\u2019s Unemployment Rate climbs to 5.7% in Q3 vs. 5.5% expected",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -2110,6 +2753,80 @@
    "analysis": null
   },
   {
+   "id": "1854b74f4a9a4546",
+   "title": "Gold rises as dollar weakens ahead of US midterm election results",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
+   "published": "2026-11-04T00:58:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Reuters",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.66,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "geopolitics",
+    "symbols": [
+     "GLD",
+     "EEM",
+     "XLE",
+     "XOM"
+    ],
+    "named": [],
+    "summary": "Gold rises as dollar weakens ahead of US midterm election results",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": {
+    "id": "1854b74f4a9a4546",
+    "headline": "Gold rises as dollar weakens ahead of US midterm election results",
+    "what_happened": "Gold rises as dollar weakens ahead of US midterm election results",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "EEM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
+  },
+  {
    "id": "6715a67efb61865e",
    "title": "Review & Preview: A Divided Market on Election Day",
    "url": "https://finance.yahoo.com/m/d01706ed-bcdd-34f3-a5ca-4605fa78c17b/review-%26-preview%3A-a-divided.html?.tsrc=rss",
@@ -2152,6 +2869,7 @@
    "publisher": "93.3 The Drive",
    "symbols": [],
    "topics": [
+    "fed",
     "oil"
    ],
    "fetched_at": "2026-11-04T01:20:44.170153+00:00",
@@ -3823,6 +4541,36 @@
     "summary": "Midterm Election Results 2026 Live: House, Senate, Bitcoin",
     "model": "local",
     "at": "2026-11-04T01:20:44.170153+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "0204d698851fe8ff",
+   "title": "Agenda with Keynotes 1789 Capital, Better Home: 6th Palm Beach CorpGov Forum Nov 4-5",
+   "url": "https://finance.yahoo.com/news/preliminary-agenda-6th-palm-beach-224834498.html?.tsrc=rss",
+   "published": "2026-11-03T23:45:34+00:00",
+   "source": "yahoo",
+   "summary": "Watch Highlights From the 2025 Palm Beach CorpGov Forum: CorpGov will host the sixth annual Palm Beach CorpGov Forum on Nov. 4-5, 2026, at the Palm Beach Lake Pavilion and The Cove Club, both located waterfront with sweeping views of Palm Beach Island, along with a reception at Cucina Palm Beach. The Forum will feature a [\u2026] The post Agenda with Keynotes 1789 Capital, Better Home: 6th Palm Beach CorpGov Forum Nov 4-5 appeared first on CorpGov.",
+   "publisher": "",
+   "symbols": [
+    "GS"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "HD"
+    ],
+    "named": [
+     "HD"
+    ],
+    "summary": "Agenda with Keynotes 1789 Capital, Better Home: 6th Palm Beach CorpGov Forum Nov 4-5. Watch Highlights From the 2025 Palm Beach CorpGov Forum: CorpGov will host the sixth annual Palm Beach CorpGov Forum on Nov. 4-5, 2026, at the Palm Beach Lake Pavilion and The Cove Club, both located waterfront with swee",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -8890,6 +9638,36 @@
    "analysis": null
   },
   {
+   "id": "cc50a2da57fc6c60",
+   "title": "Dear Uber Stock Fans, Mark Your Calendars for November 4",
+   "url": "https://www.barchart.com/story/news/8630298/dear-uber-stock-fans-mark-your-calendars-for-november-4?.tsrc=rss",
+   "published": "2026-11-03T21:45:16+00:00",
+   "source": "yahoo",
+   "summary": "Uber is set to report Q3 earnings, with investors watching closely for growth, profits, and its future outlook.",
+   "publisher": "",
+   "symbols": [
+    "UBER"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.685,
+    "sentiment": 0.583,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "UBER"
+    ],
+    "named": [
+     "UBER"
+    ],
+    "summary": "Dear Uber Stock Fans, Mark Your Calendars for November 4. Uber is set to report Q3 earnings, with investors watching closely for growth, profits, and its future outlook.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "65aaa0d6ecff227f",
    "title": "Home Depot (HD) Stock Falls Amid Market Uptick: What Investors Need to Know",
    "url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-hd-stock-falls-214502737.html?.tsrc=rss",
@@ -9920,6 +10698,7 @@
    "publisher": "Forbes",
    "symbols": [],
    "topics": [
+    "fed",
     "yields"
    ],
    "fetched_at": "2026-11-04T03:20:44.373131+00:00",
@@ -10024,6 +10803,60 @@
     "at": "2026-11-03T21:51:44.160717+00:00"
    },
    "analysis": null
+  },
+  {
+   "id": "95afb588728f24d7",
+   "title": "Ahead of Qualcomm Earnings, Here's What Barchart Data Says Comes Next for QCOM Stock",
+   "url": "https://www.barchart.com/story/news/8629320/ahead-of-qualcomm-earnings-here-s-what-barchart-data-says-comes-next-for-qcom-stock?.tsrc=rss",
+   "published": "2026-11-03T21:16:52+00:00",
+   "source": "yahoo",
+   "summary": "Qualcomm is set to report its fiscal Q4 earnings on Nov. 4. Options data and Bernstein are dovish heading into QCOM\u2019s financial release.",
+   "publisher": "",
+   "symbols": [
+    "QCOM"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.645,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "QCOM"
+    ],
+    "named": [
+     "QCOM"
+    ],
+    "summary": "Ahead of Qualcomm Earnings, Here's What Barchart Data Says Comes Next for QCOM Stock. Qualcomm is set to report its fiscal Q4 earnings on Nov. 4. Options data and Bernstein are dovish heading into QCOM\u2019s financial release.",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": {
+    "id": "95afb588728f24d7",
+    "headline": "Ahead of Qualcomm Earnings, Here's What Barchart Data Says Comes Next for QCOM Stock",
+    "what_happened": "Qualcomm is set to report its fiscal Q4 earnings on Nov. 4. Options data and Bernstein are dovish heading into QCOM\u2019s financial release.",
+    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+    "affected": [
+     {
+      "symbol": "QCOM",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono positivo en el titular (+0.32)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+    "related_events": [
+     "cc9847fe86b0"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "7c2c7f6a31a0b812",
@@ -10963,7 +11796,29 @@
     "model": "local",
     "at": "2026-11-03T21:20:50.015620+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "7fdbca2d50eccc26",
+    "headline": "Home Depot Has Raised Its Dividend 17 Straight Years. Here's What $10,000 Invested Pays Annually.",
+    "what_happened": "The home improvement retailer remains a resilient income play in a rough market.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "HD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.76)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "205b7474ebba0d6d",
@@ -11436,6 +12291,32 @@
    "analysis": null
   },
   {
+   "id": "a7f04c7176c38278",
+   "title": "How U.S. midterm results could impact financial markets and your retirement",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VSE94Z2o3SnBxVHlXMFNlZnZyZHVoWHBOQWp3cGJaNEplZWRra2FISmo4Y3phT1FCYWdlOTV6VjRKSmViTWlucU5XZldCTTBUZnYwYVktQ18zUDVvUXJvcXJzTmtKckJ1cllRZmI5NVR2MF81THVkbg?oc=5",
+   "published": "2026-11-03T20:55:23+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Global News",
+   "symbols": [],
+   "topics": [
+    "trade"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.0,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "opinion",
+    "symbols": [],
+    "named": [],
+    "summary": "How U.S. midterm results could impact financial markets and your retirement",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "5be972fb48601420",
    "title": "J.P. Morgan Recruits Financial Advisor From Merrill Who Oversaw $940 Million in Assets",
    "url": "https://finance.yahoo.com/m/56633fc3-463c-30a4-a73d-88b03eb9bc85/j.p.-morgan-recruits.html?.tsrc=rss",
@@ -11704,7 +12585,29 @@
     "model": "local",
     "at": "2026-11-03T21:14:18.814897+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "7e95bcc615ad1c76",
+    "headline": "4 Companies Just Raised Their Dividends. Which Payout Has the Most Room to Grow?",
+    "what_happened": "Visa, Entergy, Tennant, and Fortis all just lifted their quarterly payouts, but a dividend raise is only as good as the cash flow standing behind it. One of these four companies raised its payout while its earnings coverage was already running thin.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "V",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "fcc753c9cf4e4e31",
@@ -12309,6 +13212,46 @@
     "summary": "McDonald's Q3 sales expected to slow amid tough consumer backdrop, new drinks push. McDonald's faces another tough quarter as consumers pull back.",
     "model": "local",
     "at": "2026-11-03T21:14:18.814897+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "9e8a94cdcf5ea31c",
+   "title": "JP Morgan Chase & (JPM): JPMorgan notes linked to iShares Bitcoin Trust ETF with automatic call",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOTU5rS3ZjdTQ2VmJMNF9STWNJQ0RmRVhGRm01dnl0TXhDNHRyYVV3UFRpNUNUZFhDellPRUJyZ1Job0JsVnMwTDFBOFRFcjVqeDNJLUVsREd3d3FkZkFfUC1ya21wQV85OUlYemxQNG1uMU1VSFpLaHZkNEZtLWZsUFU0YTFVQQ?oc=5",
+   "published": "2026-11-03T20:32:35+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Quantisnow",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.465,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "crypto",
+    "symbols": [
+     "JPM",
+     "MS",
+     "BTC-USD",
+     "BCH-USD",
+     "ETH-USD",
+     "SOL-USD",
+     "XRP-USD",
+     "ADA-USD"
+    ],
+    "named": [
+     "JPM",
+     "MS",
+     "BTC-USD",
+     "BCH-USD"
+    ],
+    "summary": "JP Morgan Chase & (JPM): JPMorgan notes linked to iShares Bitcoin Trust ETF with automatic call",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -14423,7 +15366,43 @@
     "model": "local",
     "at": "2026-11-03T20:20:47.334989+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "66c5f151c4924a46",
+    "headline": "A Top Oil Bull Says Take Profits as Crude Prices Slide",
+    "what_happened": "A Top Oil Bull Says Take Profits as Crude Prices Slide",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "7b15615a57a46fb0",
@@ -15564,7 +16543,60 @@
     "model": "local",
     "at": "2026-11-03T20:20:47.334989+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "ecbc8f5d511d9536",
+    "headline": "A 4% Dividend Isn\u2019t Always Worth More Than a 3% Tax-Free Bond Yield",
+    "what_happened": "A higher dividend yield sounds like a win, but taxes, Medicare surcharges, and bond mechanics can quietly flip the math against you before you collect your first payment.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "KO",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     },
+     {
+      "symbol": "PEP",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     },
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "ffce9af0ff14",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "9b8bb9c78cf5ecac",
@@ -17620,7 +18652,45 @@
     "model": "local",
     "at": "2026-11-03T19:20:46.799446+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "c31276bea2b2f125",
+    "headline": "NVIDIA Rises 3% Despite AI CEO\u2019s Warning on Chinese Chip Competition; AMD Climbs 5%, Broadcom Gains 3%",
+    "what_happened": "A startup CEO backed by NVIDIA just called Chinese open-source AI models a Trojan horse for Chinese chips, yet semiconductor investors shrugged off the warning and sent chip stocks higher anyway. Here is what explains the disconnect.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     },
+     {
+      "symbol": "AVGO",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     },
+     {
+      "symbol": "AMD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "ef82f1a1d8cd"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "fbdd575e126961d7",
@@ -19976,7 +21046,36 @@
     "model": "local",
     "at": "2026-11-03T19:20:46.799446+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "8fefb48322fcda5a",
+    "headline": "Disney Plans Thousands of Layoffs, Targeting 20% Cost Savings",
+    "what_happened": "Walt Disney is moving toward thousands of job cuts with the entertainment giant asking some managers to target 20% in annual cost savings, according to people familiar with the matter. The savings could come from job eliminations as well as from expense reductions, said the people, who asked to not be identified because the discussions are private. Bloomberg's Geetha Ranganathan joins to discuss.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "COST",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.87)."
+     },
+     {
+      "symbol": "DIS",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.87)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "aa52d2c8272e5d02",
@@ -22281,7 +23380,29 @@
     "model": "local",
     "at": "2026-11-03T18:20:45.828158+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "cc9a9839b45184b1",
+    "headline": "Applied Digital Surges 9% as AI Data Center Stocks Rebound From Financing Jitters; IREN Jumps 9%, Nebius Climbs 7%",
+    "what_happened": "A CEO financing warning and an Elon Musk broadside sent AI data center stocks into a steep slide, but buyers are rushing back in today and one developer is leading the charge despite carrying more debt than it collects in rent.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "TSLA",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "4650cf47a20cf8c1",
@@ -25159,7 +26280,36 @@
     "model": "local",
     "at": "2026-11-03T18:20:45.828158+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "37dde69439dfc421",
+    "headline": "Berkshire Hathaway (BRK.A) Gets Bigger Annual Dividends From A 64th Straight Raise",
+    "what_happened": "Berkshire Hathaway (NYSE:BRK.A) is set to receive higher annual income from Coca-Cola after the drink maker\u2019s 64th consecutive dividend increase. Coca-Cola, one of Berkshire\u2019s longest held equity positions, now provides the conglomerate with sizeable yearly cash payouts from a relatively small original outlay. The Coca-Cola dividend track record is emerging as a reference point for Greg Abel\u2019s expected stewardship of Berkshire\u2019s long-term holdings. Coca-Cola\u2019s 64th straight dividend raise is...",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "KO",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.98)."
+     },
+     {
+      "symbol": "NOW",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.98)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "8eda4ab18bdda084",
@@ -25315,6 +26465,42 @@
    }
   },
   {
+   "id": "d5931e92fdb33cf9",
+   "title": "Midterm Result Will Be 'Non-Event' for Bitcoin in 6 Months, Bitwise Exec Says",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORERiNzJuR1B2LWJiM0J5QVlXWVN5dGEzSTFraG9hWVFWVTF3NlNpaTBDVGVPREhGUkJkTVhVdVAzdE9MNXluRTRrSjl6UXJDQXFZVzhDUDByTnUwMG5PNzZ2ZkNYTmdaWE5LWWxQcDdKanYyRmYwVEo1WWgtazlQQlViZHlNRjZ1OVNmanRNVF8zdVZtSk5HT3htdGhzaEZFWmNKWFdIaWM3YnloR1FJbTdoa0djLUl4czhjUnBYNkdqaVZySXVhbVY1Q0lxQQ?oc=5",
+   "published": "2026-11-03T17:09:39+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "TradingView",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.465,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "crypto",
+    "symbols": [
+     "BTC-USD",
+     "BCH-USD",
+     "ETH-USD",
+     "SOL-USD",
+     "XRP-USD",
+     "ADA-USD"
+    ],
+    "named": [
+     "BTC-USD",
+     "BCH-USD"
+    ],
+    "summary": "Midterm Result Will Be 'Non-Event' for Bitcoin in 6 Months, Bitwise Exec Says",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "c162f7d41defa70e",
    "title": "Salesforce Is Down 16% This Year. Another AI Deal Didn\u2019t Help.",
    "url": "https://finance.yahoo.com/m/2c8ccdcf-8f21-3f47-8d63-60477d85e33c/salesforce-is-down-16%25-this.html?.tsrc=rss",
@@ -25342,7 +26528,29 @@
     "model": "local",
     "at": "2026-11-03T18:20:45.828158+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "c162f7d41defa70e",
+    "headline": "Salesforce Is Down 16% This Year. Another AI Deal Didn\u2019t Help.",
+    "what_happened": "Salesforce stock falls and is on pace to close lower for a fourth consecutive trading session after the company makes its latest AI acquisition.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "CRM",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "ab300479306e7f3e",
@@ -28681,6 +29889,36 @@
    "analysis": null
   },
   {
+   "id": "d40c99336d8ed350",
+   "title": "I bonds now pay 5.51%: What to know before you buy",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOX21tMFU4ZEtyNWYxTkFsbnpCQmJFbmdvN2hWMkFqNm4xVENnQVdhMmN6YXhCbjBPeUtid3lwaFhaaFk5MkFfY0NiNDR3a3hKeEdOazY3Sk81dUhqRVNubV9tdjFQbEpaVk5vaU9oRjJKdGVNU2RWdFQ2TGREVXZISjV4REdHZUJLTHZvVy0yZXpta0xhdzRaVGNGLWJaOU93WU4wSmFTdndhYXFEaU9kQi14bDZOX1NRN1VUNlJjSHU?oc=5",
+   "published": "2026-11-03T16:18:12+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Yahoo Finance",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "NOW"
+    ],
+    "named": [
+     "NOW"
+    ],
+    "summary": "I bonds now pay 5.51%: What to know before you buy",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "71d8ea560a94489f",
    "title": "Is AI Platform Launch Altering The Investment Case For Honeywell (HON)?",
    "url": "https://finance.yahoo.com/technology/ai/articles/ai-platform-launch-altering-investment-161811070.html?.tsrc=rss",
@@ -30031,7 +31269,43 @@
     "model": "local",
     "at": "2026-11-03T16:20:47.064372+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "8e3ac693754fe09b",
+    "headline": "Oil Continues To Fall Up As U.S. Bombs Iran Before Election Day",
+    "what_happened": "Crude oil futures fell about 1% to under $96 a barrel.",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XOM",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "e60f4386d14eb839",
@@ -37374,7 +38648,50 @@
     "model": "local",
     "at": "2026-11-03T15:20:43.929359+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "93ba32492b5a4dc0",
+    "headline": "Assessment of the China Non-Alcoholic Beverage Market 2026 Report Now Available \u2014 Reveals Why Growth Is Selective, as Ready-to-Drink Tea, Zero-Sugar Drinks and Functional Hydration Stand Out",
+    "what_happened": "56-Page Analysis of Nongfu Spring, Tingyi, Uni-President China, Eastroc Beverage and Coca-Cola Finds Beverage Sales at Larger Enterprises Rose 5.5% in January-August 2026 as Health-Conscious, Occasion-Driven Buying Reshapes Pricing and DistributionDublin, Nov. 03, 2026 (GLOBE NEWSWIRE) -- \"Assessment of the China Non-Alcoholic Beverage Market 2026\" has been added to ResearchAndMarkets.com's offering. China's non-alcoholic beverage market is entering a new phase of competition as health-conscious",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLV",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "KO",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "NOW",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "UNI-USD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono positivo en el titular (+0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "0aa98335b2eec19b",
@@ -38753,7 +40070,29 @@
     "model": "local",
     "at": "2026-11-03T15:20:43.929359+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "838dad76de1184fe",
+    "headline": "Tesla\u2019s China-Made EV Sales Rise For 12th Straight Month \u2013 European Recovery Adds To Momentum",
+    "what_happened": "According to a report by CNEVPost, Tesla sold 67,829 vehicles manufactured at its Shanghai facility in October.",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "TSLA",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Geopol\u00edtica: tono positivo en el titular (+0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "4f74028e65d793fb",
@@ -39098,7 +40437,46 @@
     "model": "local",
     "at": "2026-11-03T15:20:43.929359+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "0ae981675b54f6d9",
+    "headline": "US Treasury Yield Nears 5% as AI Stock Crash and Midterm Election Risks Collide",
+    "what_happened": "US Treasury Yield Nears 5% as AI Stock Crash and Midterm Election Risks Collide",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "ffce9af0ff14",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "a571f21ffb4ca9bf",
@@ -39391,7 +40769,43 @@
     "model": "local",
     "at": "2026-11-03T15:20:43.929359+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "e7702dc86bdb30a7",
+    "headline": "Stocks erase losses, oil tumbles after Trump says US will end $4 billion funding to Israel",
+    "what_happened": "Stocks erase losses, oil tumbles after Trump says US will end $4 billion funding to Israel",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "52f16f9d0c053774",
@@ -42307,6 +43721,32 @@
     "summary": "U.S. consumers confront the highest gas prices ever on an Election Day",
     "model": "local",
     "at": "2026-11-03T15:20:43.929359+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "c26a3ce36f4d3769",
+   "title": "Federal Reserve: One further hike in 2026 before policy path becomes less clear \u2013 BNY",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQd0ZURHgtZU9lNUNyeWRCaG1mX1VKa1JSZkxsTEQ5TjUyVVVIbnFlZWJISjNRTV9jWF9qVTNNWHhGRXZiVFVqa0haMV82dkstLUlBN1g1VFZjbUZPYXZkZU1NQ3d3TEF2Mm93U3dROW91QmhPWWQ5X05MSVl6NWtraGpIVjRHZEhQV1NMMGpBQktWM3pMMDA4MmZjVXBNYnhkVTBBaVZ4RlRwTHVFTldFdXBHU1k4YlJiTncxQVRVLUxSTTg?oc=5",
+   "published": "2026-11-03T13:48:31+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "www.tmgm.com",
+   "symbols": [],
+   "topics": [
+    "fed"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.595,
+    "sentiment": 0.0,
+    "impact": "medium",
+    "category": "central_bank",
+    "symbols": [],
+    "named": [],
+    "summary": "Federal Reserve: One further hike in 2026 before policy path becomes less clear \u2013 BNY",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -46779,7 +48219,50 @@
     "model": "local",
     "at": "2026-11-03T14:20:43.932445+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "fcd36a3d381463b0",
+    "headline": "Binance net outflows reach $5.3 billion after record hack. CEO says recovery underway",
+    "what_happened": "Nearly $11 billion left the exchange over 46 hours, although CEO Richard Teng said hourly deposits were beginning to exceed withdrawals.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "BTC-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "3002cb094efc5de5",
@@ -48575,7 +50058,25 @@
     "model": "local",
     "at": "2026-11-03T14:20:43.932445+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "dc22e2259788cc92",
+    "headline": "Brazil economists raise inflation, rate forecasts after Lula reelection",
+    "what_happened": "Brazil economists raise inflation, rate forecasts after Lula reelection",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "f3ba3e78ac751354",
@@ -56083,7 +57584,43 @@
     "model": "local",
     "at": "2026-11-03T14:20:43.932445+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "3007de8cf2941aee",
+    "headline": "Crude oil trims losses as US strikes Iran's Qeshm Island while CIA Director calls for continued economic pressure",
+    "what_happened": "Crude oil trims losses as US strikes Iran's Qeshm Island while CIA Director calls for continued economic pressure",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "c9054096c38cac79",
@@ -57344,7 +58881,64 @@
     "model": "local",
     "at": "2026-11-03T21:14:18.814897+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "0d048576f28dab50",
+    "headline": "Live updates: Bitcoin and tech stocks edge higher as U.S. voters head to the polls",
+    "what_happened": "Bitcoin is currently on pace for a fifth straight weekly decline, which would tie for its third-longest losing streak ever.",
+    "why_it_matters": "Las noticias de flujos, regulaci\u00f3n o adopci\u00f3n mueven el sentimiento de todo el mercado cripto.",
+    "affected": [
+     {
+      "symbol": "BTC-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Cripto: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "BCH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Cripto: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "ADA-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Los flujos de los ETF y la reacci\u00f3n de BTC/ETH.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "60c7c866ec37298f",
@@ -57677,6 +59271,32 @@
     "summary": "Here's How Many Shares of Coca-Cola You'd Need for $1,000 in Monthly Dividend Income. The iconic dividend stock can be part of a larger retirement portfolio.",
     "model": "local",
     "at": "2026-11-03T14:20:43.932445+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "eb4759cfe1ac1577",
+   "title": "Nearly 70% of OKXICE\u2019s original stock picks object to tokenization of U.S. stocks",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1adkZ3aHVTUlN2ZVAxY2tEZ2R6aUdDNHpXN3R5b0hZZ2xUNUZzeG1zd3ZkWm45ZXN1TUtjN0dJZmptcFdIbkgwYkp6Snh1eTVWNEh4bXIzMUlhNHZ1OFVvWTNWbmhmekxEM3JhRDF4TndoTUROS2swelJZMlU?oc=5",
+   "published": "2026-11-03T09:32:37+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "The Cryptonomist",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.0,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [],
+    "named": [],
+    "summary": "Nearly 70% of OKXICE\u2019s original stock picks object to tokenization of U.S. stocks",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -60118,7 +61738,64 @@
     "model": "local",
     "at": "2026-11-03T14:20:43.932445+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "007f27e0baf6daab",
+    "headline": "Bitcoin dips to over 1-mth low below $77k as U.S. midterm caution weighs",
+    "what_happened": "Investing.com-- Bitcoin dropped to an over one-month low on Tuesday, extending recent declines as uncertainty over the U.S. regulatory outlook after the midterm elections saw traders steer clear of cryptocurrencies.",
+    "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
+    "affected": [
+     {
+      "symbol": "LOW",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "BTC-USD",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "BCH-USD",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "2e651a6f60592944",
@@ -60156,7 +61833,64 @@
     "model": "local",
     "at": "2026-11-03T15:40:42.187042+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "2e651a6f60592944",
+    "headline": "Bitcoin slips to over 1-mth low of $77.3k as U.S. midterm caution weighs",
+    "what_happened": "Investing.com-- Bitcoin slid to an over one-month low on Tuesday, extending recent declines as uncertainty over the U.S. regulatory outlook after the midterm elections saw traders steer clear of cryptocurrencies.",
+    "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
+    "affected": [
+     {
+      "symbol": "LOW",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "BTC-USD",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "BCH-USD",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   }
   },
   {
    "id": "6b570fe86074abf9",
@@ -65094,6 +66828,36 @@
     "summary": "EU unemployment rises to 6.2% in September as jobless numbers increase",
     "model": "local",
     "at": "2026-11-03T05:20:31.623352+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "79e288cdf0b41ff8",
+   "title": "CLARITY Act Stablecoin Yield Draft Delayed, Idle Balance Ban Intact",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbks3ZnduSVFwS0ZQNXFPNnFfdHFYX1RnT1R6VWVwUU1MZjV6QmMydktxUk5haFVpUF9zVGRaY3MtWkt5WU50U0pUdHdLenctNlQyY2ExYUxTOWtMN0o0OUk4X0xrdUZYQUxfVEU3M2s4VkMtLTQybWNWRDNxX1FiZ1JoWDlBaUt1cHdrZW5NSFlnNEJVR1lwUzhKQWNmM3J0RzgwZC1uNHVOcEFY?oc=5",
+   "published": "2026-11-03T03:25:59+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CoinMarketCap",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.54,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "regulation",
+    "symbols": [
+     "TLT",
+     "XLF",
+     "QQQ"
+    ],
+    "named": [],
+    "summary": "CLARITY Act Stablecoin Yield Draft Delayed, Idle Balance Ban Intact",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
    },
    "analysis": null
   },
@@ -74717,6 +76481,32 @@
    }
   },
   {
+   "id": "2c201390a1d67e89",
+   "title": "SEC Staff Says Independent Token Voting Generally Does Not Make Voters a Central Party",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9RMFBpVnlZMXNqVjhTdVN3eld3bEVBRXZuUnlKbEhhYmxjaC1HX0JqcGR6MXBpWXktUWEwanJMWE12ZDN6emtnR1F4UFg4S2dROVlNelgzNWhQRUU?oc=5",
+   "published": "2026-11-02T22:22:10+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "TOKENPOST",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.17,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "regulation",
+    "symbols": [],
+    "named": [],
+    "summary": "SEC Staff Says Independent Token Voting Generally Does Not Make Voters a Central Party",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "e4c1d67aa903d27a",
    "title": "Marvell Technology Is Acquiring Lumentum. Why Does the Market Hate the Move?",
    "url": "https://www.fool.com/investing/2026/11/02/marvell-technology-is-acquiring-lumentum-why-does-the-market-hate-the-move/?.tsrc=rss",
@@ -82988,6 +84778,32 @@
    }
   },
   {
+   "id": "57c261967b4c0588",
+   "title": "Public Keys at NYSE",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1adEd0MkNqOXpMbGhKVWN3d3p3RFJLR1pBd0tXZDdlOUVkdEY4eTJYWGpiZUhrMW41WDYzQ0xlNm9mX0hQZWIxT0NEa1hiVDRyOXVEdnZaWWhETnJJSmw4VTd6aw?oc=5",
+   "published": "2026-11-02T20:22:35+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CoinDesk",
+   "symbols": [],
+   "topics": [
+    "crypto_policy"
+   ],
+   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
+   "triage": {
+    "relevance": 0.01,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [],
+    "named": [],
+    "summary": "Public Keys at NYSE",
+    "model": "local",
+    "at": "2026-11-04T04:20:39.381871+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "352dcb0d1f3eb8b6",
    "title": "CVX Q3 deep dive: operational discipline, Venezuela expansion, and AI adoption drive results",
    "url": "https://finance.yahoo.com/energy/articles/cvx-q3-deep-dive-operational-202136087.html?.tsrc=rss",
@@ -86058,7 +87874,9 @@
     "BTC-USD",
     "GOOGL"
    ],
-   "topics": [],
+   "topics": [
+    "crypto_policy"
+   ],
    "fetched_at": "2026-11-02T20:20:43.653432+00:00",
    "triage": {
     "relevance": 0.585,
@@ -484488,2523 +486306,6 @@
     "at": "2026-10-28T08:20:35.469357+00:00"
    },
    "analysis": null
-  },
-  {
-   "id": "5ce225c9160b4d72",
-   "title": "AMD CFO Delivers Bullish Update That Investors Will Want to Hear",
-   "url": "https://www.fool.com/investing/2026/10/28/amd-cfo-delivers-bullish-update-that-investors-wil/?.tsrc=rss",
-   "published": "2026-10-28T04:20:00+00:00",
-   "source": "yahoo",
-   "summary": "AMD has massive AI growth opportunities ahead.",
-   "publisher": "",
-   "symbols": [
-    "AMD",
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.22,
-    "sentiment": 0.583,
-    "impact": "low",
-    "category": "other",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "AMD CFO Delivers Bullish Update That Investors Will Want to Hear. AMD has massive AI growth opportunities ahead.",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "1e7e8b4f5b0d71ae",
-   "title": "Hot inflation data pushes Australian Dollar higher as RBA rate hike bets increase",
-   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPR2tSZ0JmcVRzbW1XZXlZbXdhdHZGc2RZUkZaelNHeUNramx4dmEzZDVCVHh5eWUxcm5MMkRTb1UtZjEzbThfanlrV2d0S2FYNXk1b21hZHZJR0lQU2xMXzl1eG00Vm0tMVNSMXExLWNhSWZyb2xlX1BDYm9qeFRFQ3hMdWJzUHRQYmQtd1VsdlpOSXo5QkhxLTVYTWM1Sll6SXoxb1dEdW4yZGNMeHRxU04zd2plNU54cHFmTG1paGd4U1FGOGFxcUQ1azRpV1hvSjlUd0E1Vm9GTDJWb0Rr?oc=5",
-   "published": "2026-10-28T04:15:24+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-10-28T20:20:45.233640+00:00",
-   "triage": {
-    "relevance": 0.795,
-    "sentiment": -0.583,
-    "impact": "high",
-    "category": "central_bank",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "Hot inflation data pushes Australian Dollar higher as RBA rate hike bets increase",
-    "model": "local",
-    "at": "2026-10-28T20:20:45.233640+00:00"
-   },
-   "analysis": {
-    "id": "1e7e8b4f5b0d71ae",
-    "headline": "Hot inflation data pushes Australian Dollar higher as RBA rate hike bets increase",
-    "what_happened": "Hot inflation data pushes Australian Dollar higher as RBA rate hike bets increase",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T20:20:45.233640+00:00"
-   }
-  },
-  {
-   "id": "e7d7d40618b08cac",
-   "title": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%",
-   "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8",
-   "published": "2026-10-28T04:15:20+00:00",
-   "source": "coindesk",
-   "summary": "Majors outpaced bitcoin across the board as tech stocks extended a climb.",
-   "publisher": "",
-   "symbols": [],
-   "topics": [
-    "crypto"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.875,
-    "sentiment": 0.583,
-    "impact": "high",
-    "category": "central_bank",
-    "symbols": [
-     "BTC-USD",
-     "BCH-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD",
-     "ADA-USD"
-    ],
-    "named": [
-     "BTC-USD",
-     "BCH-USD"
-    ],
-    "summary": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%. Majors outpaced bitcoin across the board as tech stocks extended a climb.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "e7d7d40618b08cac",
-    "headline": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%",
-    "what_happened": "Majors outpaced bitcoin across the board as tech stocks extended a climb.",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [
-     {
-      "symbol": "BTC-USD",
-      "direction": "up",
-      "magnitude": "high",
-      "horizon": "weeks",
-      "rationale": "Banco central: tono positivo en el titular (+0.58)."
-     },
-     {
-      "symbol": "BCH-USD",
-      "direction": "up",
-      "magnitude": "high",
-      "horizon": "weeks",
-      "rationale": "Banco central: tono positivo en el titular (+0.58)."
-     },
-     {
-      "symbol": "ETH-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "SOL-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XRP-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "ADA-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "2d2ec54329d560b8",
-   "title": "Rupee rises 4 paise to 95.03 against US dollar in early trade",
-   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMHdfTEZwT0dFZGZIWnotV1lneS1CMmNiSkljZFZLUGM1UWNtRnlOUWd0dmZvUG9MdVNzMm51R2lwMDIySEt5cmpPdnFUd0EzWjYxOG9qRWdCbUY0RV92SlFIUWRQaHI2RldqYUZZNGxvYVN3NnlYazhGZ2h6Y0dVMjZyQ3FRVTFUaFdESnV5TzE3Zjh2bnE3UjVTZUhHOEwycXZjbXE2d3NuX2NkU1J5SXM3Nkhnai1NcW83Qkc0NDNMT3VsNnh2cdIBzgFBVV95cUxOOUFwaUpCbVdFam5qQ1hzQW12bjVIUU1TVW5QM05XdWtxSVFkRG9RZ2tXc1pUN0VxVG5DaFNSaHdZQWpfTlJCQ2N2Rlh1V0FDZXpnTWZVY1ZBcWQ4eXZpR196T0w3c1pZRzNXMVctTEhxTkpDUlVtdDZRTjZHazlSV2FZRzBiZXBWX2RUVWN4VnBTMERnUUJrcTM1VnRGeHBmcXhCMGQwNDV6LW8tU2pMUzQ5ODE4THN0amJEckIxVzRqN3hpVFFlaHh3NkdpZw?oc=5",
-   "published": "2026-10-28T04:15:05+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "The Economic Times",
-   "symbols": [],
-   "topics": [
-    "dollar"
-   ],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.365,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "Rupee rises 4 paise to 95.03 against US dollar in early trade",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "71c8dfadf2051766",
-   "title": "Stablecoin News: U.S. and Canada Push New Rules, What\u2019s Next?",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbk1ERTI2dzB0T1FLZTZuNjFKdTZHbjkzNWU3dG5ETmJxc1lPb0dNb2pYWFhiN2xTLTh1VEZLbklCSW56YXR6QTlyR3g0SzJLOE9qWm9SRzZ4emtUNWZncE9oVXlEWkNZY1JDRTlPYS0yOVk5U3RjYzlEaldNSkZmTlktU05tQnA4ZFNzV1dNZU9XUzRMR3JjZ1ZIcHZ6dFpLQV9yR0ZlMNIBpwFBVV95cUxNbk1ERTI2dzB0T1FLZTZuNjFKdTZHbjkzNWU3dG5ETmJxc1lPb0dNb2pYWFhiN2xTLTh1VEZLbklCSW56YXR6QTlyR3g0SzJLOE9qWm9SRzZ4emtUNWZncE9oVXlEWkNZY1JDRTlPYS0yOVk5U3RjYzlEaldNSkZmTlktU05tQnA4ZFNzV1dNZU9XUzRMR3JjZ1ZIcHZ6dFpLQV9yR0ZlMA?oc=5",
-   "published": "2026-10-28T04:12:38+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "The Coin Republic",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-10-28T10:20:32.939811+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "crypto",
-    "symbols": [
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD"
-    ],
-    "named": [],
-    "summary": "Stablecoin News: U.S. and Canada Push New Rules, What\u2019s Next?",
-    "model": "local",
-    "at": "2026-10-28T10:20:32.939811+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "19517edf926b89a9",
-   "title": "Core PCE Inflation Forecast to Accelerate in September, Truflation Says - News and Statistics",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRkYtNTl3aFRwd1FUODZvb05qLUlNb21KVVhmOFh2QzJodTlXSkk2WVR0TmRoWmdadFlHVkd4UU9reWVnRFNQZVh3QlpfOGN3dm9pWklzeWI1bGlFaUxGWk9pUWJqUGF4MnBGR0I1eUlwT1Y5SlRnck1vTk9TUC1vaWpEQlEtZUpiRE9Oc19RemZhZl9PeXpzVkhmZzlsemotZ0FuT2l6dl9SQ1ZHcjV5ZzYzSQ?oc=5",
-   "published": "2026-10-28T04:12:20+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "IndexBox",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.64,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Core PCE Inflation Forecast to Accelerate in September, Truflation Says - News and Statistics",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": {
-    "id": "19517edf926b89a9",
-    "headline": "Core PCE Inflation Forecast to Accelerate in September, Truflation Says - News and Statistics",
-    "what_happened": "Core PCE Inflation Forecast to Accelerate in September, Truflation Says - News and Statistics",
-    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-    "related_events": [
-     "888616539e84",
-     "b42cb75ef90c"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T06:20:47.629420+00:00"
-   }
-  },
-  {
-   "id": "c8d15a052517c1c8",
-   "title": "Federal Reserve likely to skip rate hike despite elevated inflation - Jacksonville Journal-Courier",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUWNkbGxCVW1ST1RMV2xUMzQ2bG55WGFVR081X3dDSFdxSk5XQ1g4NUNLUWxBdlFfUEtzZkhSWmJmYnRLTEtrdENvSU9WWGo1aWZNUmtRckRwelBwSjRLUFdIZXM0am9qV2hid1FVZDZhc1Z0ZjQ3NVBEV1pKWFpYdWI2Zi0yNEdMRklaTE5heHczbWR2NVJZNFMzcGx0TTZRMHAwUFY5ZEhFOVV3c2RyVw?oc=5",
-   "published": "2026-10-28T04:12:17+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Jacksonville Journal-Courier",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T15:40:34.338331+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated inflation - Jacksonville Journal-Courier",
-    "model": "local",
-    "at": "2026-10-28T15:40:34.338331+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0fba1192e0ff155b",
-   "title": "Indian Equity Markets Open Sharply Lower Amid Rising Crude Oil Prices",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdl9wTEtueGVDdG4zUUs5WGEyVUVFRTdoWk91bS1Cd0Z1SW52VkFfUFlBeUdRNmpSSmgwSzc0NC1aM0g0UW5uU0hqRkF4bHZWSUxVOHdDeXZ6NWF0elFtRW9lN09QZjNnalVna0pCbWg1YmlWWVdJUjFBbUhMcmF1TUt5U3J6Tmd3UmtHaG1mVXI3ZkJiVklFYnRSUlRLME9NVDB6U003YWhzNXBwbktFVlA2cHZRRjhCQXZpNGJtQjgxcENGQnUzcXdMZ9IB0AFBVV95cUxNY3VRWUtweXpnR2tLeWwzLVhxc1pVNjFRQWRQaEd1MDVRa2k3VHVoTGg2RDZ2RkNkdWF3RUxhc2FJdlhaalcyLWttNGZuejZVS1ZYUEdwQy0wcjJwcENwaUJwSmIwcW1hcmc2SmVVNnNQLVNEU3Ywa0pyUGNCejRWa2FHUGVzWnUwYTZJMVc1ZklGRm53SndlSXJDUUdtbUJldEJsRFpYNS1GTVBZcHdPN3FoVHBzb3pTQnFNWkFhdEhuZVJpLXphWHlGa2RnYjI4?oc=5",
-   "published": "2026-10-28T04:11:13+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Asianet Newsable",
-   "symbols": [],
-   "topics": [
-    "geopolitics"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.505,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Indian Equity Markets Open Sharply Lower Amid Rising Crude Oil Prices",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "0fba1192e0ff155b",
-    "headline": "Indian Equity Markets Open Sharply Lower Amid Rising Crude Oil Prices",
-    "what_happened": "Indian Equity Markets Open Sharply Lower Amid Rising Crude Oil Prices",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "e7b38bb4725ecdff",
-   "title": "Israel Election Too Close to Call as Netanyahu Vows With Trump to Eliminate Iran Threat",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1pT0tSdThGZ3pHMDBFSnNhZUprWW5NNUpqUHZ2U1pXQV9SdjVWeFVZUHUzRE5VQ1hVS01oSTh0UDN1VVJDTlR0c2ExWVFWa1ptY3lFaQ?oc=5",
-   "published": "2026-10-28T04:10:56+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "bloomingbit",
-   "symbols": [],
-   "topics": [
-    "geopolitics"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.42,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "geopolitics",
-    "symbols": [],
-    "named": [],
-    "summary": "Israel Election Too Close to Call as Netanyahu Vows With Trump to Eliminate Iran Threat",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "d589538b55e3ef8d",
-   "title": "Sensex sheds 691 points, Nifty falls below 22,600 on rising crude prices, FPI concerns",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPd2U4QnNYZmx6SjhaU3FuWHFvbXpSMHI0bGYzRHBMWmV5U0hFQzVfdTRNSFgyYVpJVWhmWUFCS1ZneXY3N1pNRExXS0duLVB3XzFIUXRKWE4zblNBRkZHcEhWa3lnc0xQUnBLR3dwVFVpQnNQTlRnQkdUcm9JQTF5TEIyZnRMdjQtV0x5VE1uNDRseEwwTklINllQV0JTUVltZ3RKZ2VZSkNaTnZ0blROWVpxTjB2WWdLdVdGYUh6U2F3OVBIUmdDdUkzNlpvUkE?oc=5",
-   "published": "2026-10-28T04:09:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "ANI News",
-   "symbols": [],
-   "topics": [
-    "geopolitics"
-   ],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": -0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Sensex sheds 691 points, Nifty falls below 22,600 on rising crude prices, FPI concerns",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": {
-    "id": "d589538b55e3ef8d",
-    "headline": "Sensex sheds 691 points, Nifty falls below 22,600 on rising crude prices, FPI concerns",
-    "what_happened": "Sensex sheds 691 points, Nifty falls below 22,600 on rising crude prices, FPI concerns",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   }
-  },
-  {
-   "id": "46705d731facd51c",
-   "title": "Brent crude oil crosses $115, WTI tops $101 after Houthis claim missile strike on Saudi Arabia\u2019s largest...",
-   "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPOUtFRTRvWEV0UHNkYVg4TC1uY0VsVkY3REtNV2NBRE5pMUJPQXhZakY0WEdKYUMwZXlESTF6Q2FJeVp5d2RkTHJmMXNTQnFLOVIwT2tUUUFRWkpGOTZXMDNaMXloOFZXVTJ4ZjFhRDZaNHFwcmFZd0ZFQlRId0oxclZ1OS1zamFLc3hfUTB2elpTay1iT1AxbGY3Q21Vdk5iaVhFUUc1cW9RVVQ4ajdnUFlMNGd4aTA3ZWZIalZHMU1yMG13Ymp3Z2lJZWN2WHd5RnFRN21IVFFlR1JiTVBDYzVqdlZ4R2lHbmhTNWE0QlpJNkp1b0hVaGJPOXd3b09qTEJjM29aZmpKenPSAZACQVVfeXFMTUFOVTNXXzhIbmR3dWo1ZkZ0Q0s4WDFmV1FYckR5dUZRX1R0cXNTalZpbFJnSnFFN1U1V3JMaDdPQVE2dlV2MU5fMk9yWm1lRXEtMUFfMS1HRjZISGpIYTViMVRvTDJ3VUhDZ0RsUWJ1OVFUZ2NUSER0YnhjNk9ZTG14ejZJc1BhY3EzNlNuQU9DeGhOSmRhWHIyWnNqZW5odlRrM25kWkYwOUhFRFFvdVhqNVJDdFplOWRmdlQwR3RScU9BLWc4VHhzaXpBV2hPQjd2RmVuQWZ5VHR0RnZKMUFIT0YweWw0STJLVmJSTlZ1RDgzLTYxZ3J2UW9qT2R6WHN3dmR5ZmtVaGI2OHVkcUI?oc=5",
-   "published": "2026-10-28T04:08:20+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Moneycontrol.com",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T05:56:39.302560+00:00",
-   "triage": {
-    "relevance": 0.505,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Brent crude oil crosses $115, WTI tops $101 after Houthis claim missile strike on Saudi Arabia\u2019s largest...",
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   },
-   "analysis": {
-    "id": "46705d731facd51c",
-    "headline": "Brent crude oil crosses $115, WTI tops $101 after Houthis claim missile strike on Saudi Arabia\u2019s largest...",
-    "what_happened": "Brent crude oil crosses $115, WTI tops $101 after Houthis claim missile strike on Saudi Arabia\u2019s largest...",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   }
-  },
-  {
-   "id": "b29dd0d29c28606d",
-   "title": "Nifty Outlook - Federal Reserve likely to hold rates by Geojit Investments Ltd",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPa0FHcnFHUHhHemJHc1NPQUY4aHdDRG8zd2Y1Q0FtVUcza09OWjJLS3gtVTRkdU1qazRKa3J4Vk5UeURabDhSUnI1c0RRNnR1ME1jdzdVOG43dWUwNVllUWRzekExOUhlZU1IWFNrOWlrcUVxaHBOQlYzOXFPVU5GMTdJZm01SF8yY2g3R2lqMFVHaFZRSzBLeTJveTROY1NyYjdnRDkyUUIxRlYtN3Iwam10T2RHUHFvX0pxWDlNMXJ0bGFTUnc?oc=5",
-   "published": "2026-10-28T04:07:24+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Investment Guru India",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T13:20:42.123892+00:00",
-   "triage": {
-    "relevance": 0.595,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Nifty Outlook - Federal Reserve likely to hold rates by Geojit Investments Ltd",
-    "model": "local",
-    "at": "2026-10-28T13:20:42.123892+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "92ad43120686d4f6",
-   "title": "Federal Reserve likely to skip rate hike despite elevated in...",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSXh3MHoyazdfbkVCSnlORHlNbzNWcFh2UV9OSDh5Q1NkMU42MHh2R1N2aHZaRXRYTDl6aTJPd2hHSTlWZzVKSFcyN0JuOFVBNDhOZEVBMW1pSk01dmIwYzhGUVhxSk02a1ozODVjaDZJRHBvR3JoNjJBTTRfRkpYQThZU05EdFM5YzNFdUJEc2FZeGJ6RkJuQms3cU5XLUdjWVoyZjdRQ0xHYmRWQzhiVWNvM3pKQQ?oc=5",
-   "published": "2026-10-28T04:07:07+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "seMissourian",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T10:20:32.939811+00:00",
-   "triage": {
-    "relevance": 0.635,
-    "sentiment": -0.583,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated in...",
-    "model": "local",
-    "at": "2026-10-28T10:20:32.939811+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "bcf7881a6d73d460",
-   "title": "Tirajana breaks two decades of labor cycles and reduces unemployment to 10,45% in September 2026",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMGdDekk5QUtCTElVeDdqQXlPZzBNU0Q0Wk1IYUR1b1BjYndrZlVhVmtIdFF2anZTaGFKUk93WW1ybDJSbERwY2hfR29qd1B1TndvbHp2bS1ha010eFZMZUFpbW05Y0ktM3hNYm5KNnZHUmhEaFU2ZzY1c0NIVEFrRk8zT0ptbTZ6cl8yejVuYVhsZHdrOW56dnR1X0ZDdFVaVXdnakVLWUpSNTd5QXQ2bV9UYWhhdG5XVnJIc0lLMFdHVl83bEdv?oc=5",
-   "published": "2026-10-28T04:03:28+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Maspalomas24h",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-10-28T10:20:32.939811+00:00",
-   "triage": {
-    "relevance": 0.56,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Tirajana breaks two decades of labor cycles and reduces unemployment to 10,45% in September 2026",
-    "model": "local",
-    "at": "2026-10-28T10:20:32.939811+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "bca731d4b5fe2248",
-   "title": "SEC to Focus on Conflicts, Complex Products, Private Markets in 2027 Exams",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUkpOOFhDS01RR2JYSHY3WFN1bUFxU0NvbGh1ZEpqdlhqaUtVRHF2eDdPeGlKWEVVTGk0QzVzTHZ2X2xYYVdMdnYtTGV5TDdHRW44cUdKZmtqVlZyRU5zeWhtdUthSThVVEhYRExvV3lMZk9ZMFV5ZV9seTJUajRQNWw5VGZkcHRhZkV4T1ZkMmFGUzBiVmg0VXA2dHlWS3JKM0Npa1Y0b2c0eDRpUWpsdG1pdUJlLVNEYXk2Z1U1cW5WTVo0SElWU1Z1RQ?oc=5",
-   "published": "2026-10-28T04:03:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "The Daily Upside",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.17,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "regulation",
-    "symbols": [],
-    "named": [],
-    "summary": "SEC to Focus on Conflicts, Complex Products, Private Markets in 2027 Exams",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "1ec0d6b2fb0f47d1",
-   "title": "AI worries expose dollar's hot-money problem",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQY0NWaVVKX3pobnFkV1YzZUZicHYzOEU2M0R3NHdqZTQ0emFvQl9pQzhMZGV3dzNHckp6MldEd1Q3WjZlRnpfeUdMQTc4YnRCMldzTWJscGpYRnpPQ25JZDhoQ0VzSnlDMndZZTFuNGRlb2R3LUVGU3AxS0NkX1ozbmlhbS1ia2pFRU5hQzlra1FPLVlhU1FjQS1zRHZwUnM?oc=5",
-   "published": "2026-10-28T04:03:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "dollar"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.445,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "AI worries expose dollar's hot-money problem",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0589a9aa41fe0e6a",
-   "title": "Indian Stocks Open Lower as Crude Oil Prices Climb By Investing.com",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTDJIX1JudzNGUGNuMVY1RWUxRHVJYVZ0V3JhajZwX2Y2ZVNWQzhnWFZOa01oM21oRUV0cFY2anRsZWtaaU5lUUt2ZUI2Y1pIMlZqc3RVUVFoN2hsdUhoYkp6VzlPRVRHYXlUakltWk9qOE9VT2RvMUJQWVgwcjdmQWk4YTVOMWNKM1A2azdvbmxqb3ZrSjVKaXM2MjBEUUVnLXJIeWRmYnE0UQ?oc=5",
-   "published": "2026-10-28T04:02:48+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Investing.com India",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T05:56:39.302560+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Indian Stocks Open Lower as Crude Oil Prices Climb By Investing.com",
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   },
-   "analysis": {
-    "id": "0589a9aa41fe0e6a",
-    "headline": "Indian Stocks Open Lower as Crude Oil Prices Climb By Investing.com",
-    "what_happened": "Indian Stocks Open Lower as Crude Oil Prices Climb By Investing.com",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   }
-  },
-  {
-   "id": "f0552a170a192a85",
-   "title": "Global shares are mixed after US stock rally, and oil prices gain more than 1%",
-   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNOGI2LU9OdGFrb3hlakQyZ2hESmdibDVpZWN0TWJsMTY1eTIydUd2aTB3ZkVoc1BBXzM4dFF2dWVWQlFwVk9TcDNRNDhrbWdnUUNhcjdTNWsyNTd1WDNmUmNKMHU2VDRBYkFjMUwySHBPaVNQeEpwRzZqNzZtS2t2anpjWGpMNGFHVHBlTHo0dkdLMFdrZl9kb3B5eUFRZTloSkxidzdhdkJ4U013bHZOZjVRMFhpYXJ5QzFtaEdidXlLcFlCV1N5SHhKVENYRnY5TzJHU0FIQk1jWkp5bjNYTkJTUTVQWTFMaVJGNXFNa2FQR25WNFp1RVktMFlKNmFZ?oc=5",
-   "published": "2026-10-28T04:02:14+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Ottumwa Courier",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T10:20:32.939811+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Global shares are mixed after US stock rally, and oil prices gain more than 1%",
-    "model": "local",
-    "at": "2026-10-28T10:20:32.939811+00:00"
-   },
-   "analysis": {
-    "id": "f0552a170a192a85",
-    "headline": "Global shares are mixed after US stock rally, and oil prices gain more than 1%",
-    "what_happened": "Global shares are mixed after US stock rally, and oil prices gain more than 1%",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T13:20:42.123892+00:00"
-   }
-  },
-  {
-   "id": "06bfad4e320f72c1",
-   "title": "Shares in Asia rise after a rally on Wall Street, and oil prices gain more than 1%",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY1BuMXh6TmQ4ZXRWRElQTDVyNWtXd0FMOFl2Sko4eEpBRmVWWEZqbFRzNmNNTzJ1dm5CcmlWZzdndllTNEJUQnFoRVVrOE5lMFhDelcxeHlyZUFBby04a2diUnUyVnNya3BjaWEya2Z3endBTVMzdmlEN0c1bVJMcFdmd2RhZmFaVENFR3pUY0s1MjNxQVZiSkhKTlVSbHZkZTM1X0tLc0ZmSE51MmFpdXk4VW9OMWx5SG5DMXVkcmFJQQ?oc=5",
-   "published": "2026-10-28T04:02:14+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Barchart.com",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T08:20:35.469357+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Shares in Asia rise after a rally on Wall Street, and oil prices gain more than 1%",
-    "model": "local",
-    "at": "2026-10-28T08:20:35.469357+00:00"
-   },
-   "analysis": {
-    "id": "06bfad4e320f72c1",
-    "headline": "Shares in Asia rise after a rally on Wall Street, and oil prices gain more than 1%",
-    "what_happened": "Shares in Asia rise after a rally on Wall Street, and oil prices gain more than 1%",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T08:20:35.469357+00:00"
-   }
-  },
-  {
-   "id": "2cb0b56551797496",
-   "title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdmpNR3hXT3B1c2RacHY4TFZnNjlfaTY2c0tXMXZjSWE5Z2JCZlNDZTE0dGRQYjNEejl5ZXFILTNPQ05pX0NyRWpwNW1YVzdpREhYblpHWTZMZkkzNFZnVTZ1NWV4M3FtR0VMUmRNTjczY1NGaTEtSFptWEY0NF9RZ1otWWdjMTZDYXE3SHRWM0NhdEtyczFDeXFYT3RWVF9DTmdGTHdGWHR1QQ?oc=5",
-   "published": "2026-10-28T04:01:33+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "AP News",
-   "symbols": [],
-   "topics": [
-    "fed",
-    "inflation"
-   ],
-   "fetched_at": "2026-10-28T20:20:45.233640+00:00",
-   "triage": {
-    "relevance": 0.755,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve keeps rates unchanged despite elevated inflation",
-    "model": "local",
-    "at": "2026-10-28T20:20:45.233640+00:00"
-   },
-   "analysis": {
-    "id": "2cb0b56551797496",
-    "headline": "Federal Reserve keeps rates unchanged despite elevated inflation",
-    "what_happened": "Federal Reserve keeps rates unchanged despite elevated inflation",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-29T02:20:45.235656+00:00"
-   }
-  },
-  {
-   "id": "08693a8d9fb39d36",
-   "title": "Federal Reserve likely to skip rate hike despite elevated inflation - Traverse City Record-Eagle",
-   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQLVhPYkVvZ0lyanB1cXJSTVUycWNSRy1jTEV4TWhpY29pUjFWR214c2VqZHhyUk91cENCbDhERWxuQ0FFcG1IZlVZVlN0Tnh2UGNiVVduZGtjSGJrWDRybVFfNHhSeWp3WlZrX3VmRjRSbVhrajk3RDA5bjRMUFBhbE5tdFVZbVhqdVliMWlBSFl3LUROeVFtbkJlMWhYZGZKcDYycFFORzlucGEyTGc4T0Vaa3hkcG5nYWNWc0VIR3VEMGpUT0xfNVRzMnVpby1Fa0o5RFRVZGhDLUd5SjRoV0otd0doeS04NVhydEZ0OA?oc=5",
-   "published": "2026-10-28T04:01:06+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Traverse City Record-Eagle",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated inflation - Traverse City Record-Eagle",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "08693a8d9fb39d36",
-    "headline": "Federal Reserve likely to skip rate hike despite elevated inflation - Traverse City Record-Eagle",
-    "what_happened": "Federal Reserve likely to skip rate hike despite elevated inflation - Traverse City Record-Eagle",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "ba02da9e2b15a2cd",
-   "title": "Federal Reserve likely to skip rate hike despite elevated inflation - Eagle-Tribune",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOcmFoZnFza1lhSXRzTE9sVGE1TVVRSUxRZmxUaExUYWNWRUM2V2x0U0xSM1U5MkUta01kTlZEUEp3N05aNWpKQV92TmItNXNWcEFPSXpBak1QTEdEU0xiWkV2VXhKcW5wbUlaemdqbllaNzBhZUJCalZOdzBLWFRkNkJwRXhUY3RMb1lnVnhGeVU1bkh4Nk45NE80cnhVSXRXd2haMWQ1dng4aW9JTGZaVHFfejZ4Rk95b0ZhRnBJWlF3TTFvVHFnaHhuNGZMaG5YUThBNzBKOTFkRkdTR1Z5ZndGSUEzd2Ju?oc=5",
-   "published": "2026-10-28T04:01:06+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Eagle-Tribune",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated inflation - Eagle-Tribune",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "ba02da9e2b15a2cd",
-    "headline": "Federal Reserve likely to skip rate hike despite elevated inflation - Eagle-Tribune",
-    "what_happened": "Federal Reserve likely to skip rate hike despite elevated inflation - Eagle-Tribune",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "ef245b684f9fffab",
-   "title": "Federal Reserve likely to skip rate hike despite elevated inflation - morning-times.com",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOM3dEQ08tR2l4eWtlbG5kaWx4YVRJSlFPOVpSVUJmeUxXWFItZ1dEUjl2WDlMTTVBVTlkMkZ2cUZZRXhKTkNTUmdlRHFwNFFNMm1sd1RvNmZ5RnAybDlJYmZ0R1JLRDh5WUlzVGNjcVlqY3FGZGJKZjZOOG1Za1Yycl8wYTZZTU1yejAzajdmN1lGbWx0VDJFUHo4ZkNLbGphdlpTNnlDWmh4MzlKbGhXdHRhN0p2Y0hYcVdFVUd4WUl3akVEVWZuTkw4QVNpVDRHZFk1VUtnaFpucjZKWXRPNHFudjctVEN0VVdEclRsXzY?oc=5",
-   "published": "2026-10-28T04:01:06+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "morning-times.com",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T10:20:32.939811+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated inflation - morning-times.com",
-    "model": "local",
-    "at": "2026-10-28T10:20:32.939811+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "ee514e666ad4db99",
-   "title": "Federal Reserve likely to skip rate hike despite elevated inflation | Associated Press | syndication news",
-   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNTGhZVWNxc2EyeVhQWVpFS3Jad2cyVjZEbzVSV1hWNmd6c3BWWGd1Vm1jNUpWSUM0TDZET044cG1NaVVQZ1VEUl9FZkxCMXlWVW16ay1Ed1czWlpjODZuY0xjeGtOcGM5V3dMamJiSlczNnVYRi0tbjhRWnZGWmowQlR3eGNXZnJyMXRGeU1BcjJleGhuMGU5Z0l2NUVkdXdFUTh5T3lkX3NNVkR4QnNJYnV1dGI2WWNiT3cxcnI4OE5SS0FiUGphT0ktYVhTN2VTbnd3UGRYYzAtcTlsQzRydDVMMA?oc=5",
-   "published": "2026-10-28T04:01:06+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Enidnews.com",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T13:14:54.596535+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Federal Reserve likely to skip rate hike despite elevated inflation | Associated Press | syndication news",
-    "model": "local",
-    "at": "2026-10-28T13:14:54.596535+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "397cd9c133c05916",
-   "title": "Brands turning strength into action pull ahead in Interbrand's Best Global Brands 2026",
-   "url": "https://finance.yahoo.com/media-advertising/articles/brands-turning-strength-action-pull-040100021.html?.tsrc=rss",
-   "published": "2026-10-28T04:01:00+00:00",
-   "source": "yahoo",
-   "summary": "Interbrand, the world's leading brand consultancy, today unveiled their annual Best Global Brands report, revealing a widening gap between brands turning brand strength into growth, and those relying on reputation alone.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.4,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "product",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "Brands turning strength into action pull ahead in Interbrand's Best Global Brands 2026. Interbrand, the world's leading brand consultancy, today unveiled their annual Best Global Brands report, revealing a widening gap between brands turning brand strength into growth, and those relying on reputation alone.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "dce6a6bc1e18d71e",
-   "title": "Made in America? Anduril and Qualcomm Are Looking to Bring Back Laptop Manufacturing",
-   "url": "https://www.thedailyupside.com/technology/made-in-america-anduril-and-qualcomm-are-looking-to-bring-back-laptop-manufacturing/?.tsrc=rss",
-   "published": "2026-10-28T04:01:00+00:00",
-   "source": "yahoo",
-   "summary": "Qualcomm CEO Cristiano Amon said the chips will be manufactured at the Taiwan Semiconductor Manufacturing Company\u2019s Arizona plant.",
-   "publisher": "",
-   "symbols": [
-    "INTC"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T17:20:43.569069+00:00",
-   "triage": {
-    "relevance": 0.43,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "corporate",
-    "symbols": [
-     "QCOM"
-    ],
-    "named": [
-     "QCOM"
-    ],
-    "summary": "Made in America? Anduril and Qualcomm Are Looking to Bring Back Laptop Manufacturing. Qualcomm CEO Cristiano Amon said the chips will be manufactured at the Taiwan Semiconductor Manufacturing Company\u2019s Arizona plant.",
-    "model": "local",
-    "at": "2026-10-28T17:20:43.569069+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "d86dbd0ba02fede3",
-   "title": "Coca-Cola Flexes Volume Growth, but Posts Fizzless Quarter on Home Turf",
-   "url": "https://www.thedailyupside.com/industries/consumer/coca-cola-flexes-volume-growth-but-posts-fizzless-quarter-on-home-turf/?.tsrc=rss",
-   "published": "2026-10-28T04:01:00+00:00",
-   "source": "yahoo",
-   "summary": "Coca-Cola\u2019s stock is up 32% this year, more than double the 14% gain of the S&P 500 Consumer Staples sector.",
-   "publisher": "",
-   "symbols": [
-    "PEP",
-    "PG"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-29T04:20:40.249963+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": 0.583,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "KO",
-     "HD"
-    ],
-    "named": [
-     "KO",
-     "HD"
-    ],
-    "summary": "Coca-Cola Flexes Volume Growth, but Posts Fizzless Quarter on Home Turf. Coca-Cola\u2019s stock is up 32% this year, more than double the 14% gain of the S&P 500 Consumer Staples sector.",
-    "model": "local",
-    "at": "2026-10-29T04:20:40.249963+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "530ec727759ebb6a",
-   "title": "Indian shares open lower as oil rise weighs; Jio market debut in focus",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNaXBFOFpPS1VSODczdm1QZlJxeXpLRjV2Yl84enZtRGtrUjdIWndadFMzNjRLQVQxTF80TTBfOVZvWkdpWjA3ZUc5TmpqN2NtV29QYVBzT3kyTU9GUTZWMjRuTW5ZMWtBV1JHMDRTQkVTS2RRNUhsYjJMMmIxOFREYktYa0FCWGtaWXFkMHJEQ2F2OEhaWGc0cHdfZnhOcmp5U2h4cEh4Rk5lS0JHV2NEWTc1Wk1kQ29TQmxIVEJMUjV0d2hDeUQxUFZJY2NOOUhIakRwV3paVTNlVWo3dkHSAeMBQVVfeXFMTnlGNmlockJ5Nk1QbVdBTktpb3RaRUFJZ2FXSEJwZnR4VTZmSVZrdnlHazNKc25BcnhSRVlLUnM1WmdQQm92YXl3TXR4ekdsaWJhdHFybVI2eTJDVnJRZkdwUnUxWHpmZUVxRF9Udm0tWlh6V0o1M2dWRHNwUldNMXdfN19RcG5ncXpEcWZZTGFDSkc1cENrOU1POWp5WkJNQXpjeWlwdDVTSjVSZ0ttd0lkLW1OVmtWVVBKVGFGMloyRmZDRkg5cVB6Q24tbDF0dDVldzJhQUJKUUs1bWM2UkZkRG8?oc=5",
-   "published": "2026-10-28T04:00:07+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "bfsi.economictimes.indiatimes.com",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T05:56:39.302560+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Indian shares open lower as oil rise weighs; Jio market debut in focus",
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   },
-   "analysis": {
-    "id": "530ec727759ebb6a",
-    "headline": "Indian shares open lower as oil rise weighs; Jio market debut in focus",
-    "what_happened": "Indian shares open lower as oil rise weighs; Jio market debut in focus",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   }
-  },
-  {
-   "id": "96a8280ee9c067cb",
-   "title": "Walker County unemployment rises to 3.6%",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOV05EMThPb3NTT3FVUWRlMzgzWl9XWjYzemZaaWJLNVVGZjFPQnp1dFpyZU1jOTRXNkJLWDAwQlpTMnVTVUhtcmhCZEZ1VGw3RDBJenV0aVI5d1RnYVhMaTVDajN0TlZWQVNzT1YzWUN3dFl4eHpobFBKeGJfQjNqYjFPRmJIWWV6VHRQTk9Jc01OdlpHa19uXzVIVE5PbzlfYWZydnphZUg0NnFTU2ZJZlRyMFhFZVJlUXpCSjR0RnlhZw?oc=5",
-   "published": "2026-10-28T04:00:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "MountainEagle.com",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Walker County unemployment rises to 3.6%",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "9b73bf106861c76e",
-   "title": "The Oil Market Should Brace for a Forever Stalemate in Iran",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdU9jeHlheXNiSXlPb0M2cXNKcFFxN21DUmQzMUswRm1yQUYyRE1ZSnN1Y0ZCRFAwTnBnX21oanc3TnNCb1RnU2lBZ2NqUFNHajNXRUF3RXBmT3c5NHNHR1BxN1BtUDlFRm5aSW9sNEtjZjVPY1c3SnJFRWZtWi1EREM4S3hyZlNROUk0ZXFMOXNvZkcydE5rRVg0Y3gwaUVhWHhnRzhkN0pQNFV6dVdoMXBSYw?oc=5",
-   "published": "2026-10-28T04:00:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Bloomberg",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.225,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "opinion",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "The Oil Market Should Brace for a Forever Stalemate in Iran",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "f091b41dfb3a3b75",
-   "title": "Silver Price Forecast: XAG/USD falls to near $54.00 due to higher oil prices",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTG9tc2tGVzQxV1FGNnJ1eWJBdTRoUGt3X0pFMU5oaDRJbGlQZ0FZU0xLY0w3T1kza3hWTlRMLU4zX3FIUDZRMTZuQjVxcWFsOGdabGFuLWRaWndkRE40MEwtV3NaNFdxaEpDNTFuc1ZYSHZWYkl5OVZQcXVLdGZCS3ZCV2EwNmRnYmo1M2RhSGVYUDZIWl9icmNocjE2QmVONXJuOVNTSlc4eld0bU1mcFJTcnBucEU?oc=5",
-   "published": "2026-10-28T03:58:18+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "FXStreet",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX",
-     "SLV"
-    ],
-    "named": [],
-    "summary": "Silver Price Forecast: XAG/USD falls to near $54.00 due to higher oil prices",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "f091b41dfb3a3b75",
-    "headline": "Silver Price Forecast: XAG/USD falls to near $54.00 due to higher oil prices",
-    "what_happened": "Silver Price Forecast: XAG/USD falls to near $54.00 due to higher oil prices",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "SLV",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "f49ef79dd6487060",
-   "title": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - News-Press NOW",
-   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQRjJSOGsyODFBZ0xrRTBIYktoSTlMTkNJMUJWUDJQZ2gwZVFBbGtzX2JnbmVUZ0NxcWpoU0t2bnROcG93bkJpVGFZTWZOMnByYVhYZkNIRFh2Y0x4ZnBMYzgtVlY3ZGNCZ1lOVFhzc0xfaHU4V3cwRjBzN0xnTEtNNkctVmJVd1JYbGNqSW5kMEhld0IwM0NuVVlzblA5ZkdJU1pBUzZkT01UMktjT1czUWEwa09wY1g3S2ZIOUlINmtCUzR1a3YwZ0Y0TGFYbGVtMnJIZE5LTG8zNEFyQWE4b1lPOG9VazdqQ3Y5V0FfdVpmS0Y0WnY3NmRLU3dabE0?oc=5",
-   "published": "2026-10-28T03:58:14+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "News-Press NOW",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "NOW",
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [
-     "NOW"
-    ],
-    "summary": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - News-Press NOW",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "f49ef79dd6487060",
-    "headline": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - News-Press NOW",
-    "what_happened": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - News-Press NOW",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "NOW",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "weeks",
-      "rationale": "Materias primas: tono positivo en el titular (+0.76)."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "db8070932898",
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "1dba4d13e9839dab",
-   "title": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - Eagle-Tribune",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSDNnTzV3dVhYNEdNaC1fZExNVUJFczRqVGpHUy1ud0N6UWk0X3VBR1JBdGdqcTlHNkthTTRQOTFxSFJSeERHUkEwMXNWa2o4S2tQc1ZfMEJOM3NUXzJWYTRIV3BoRXJmMWRmbVBrNTJENm9IMWlOZmhqYWJZTHJja2tXZkNlS2lEN21rNVpxejg3bWdSNXJfU0tTTzQ3OHpDYVN5VVFqa0tnTy1ncXI2TnhsX3dRUUVCRm5XWXUtVUN2dUtMZ1paUHdkS0VOSDk5bkw3VktnVi1lSWpjaTFLMi0tb2hXRmVaSk1NRW4yclYyS2c?oc=5",
-   "published": "2026-10-28T03:58:14+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Eagle-Tribune",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - Eagle-Tribune",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "1dba4d13e9839dab",
-    "headline": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - Eagle-Tribune",
-    "what_happened": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - Eagle-Tribune",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "5c2b4cc508427d51",
-   "title": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - morning-times.com",
-   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQZl9jbC1CV2pySUUxVlVIak5aeGR0OEdwVUNDaVo1SzhhNV95NTJYUHJQQi0wU1JPR3FNU2hvaTdVUzAzanFWOVdCdFNyUVJWdjlQdTlOQU5DaUdNNFlPUlM4YklZazNMQ2t2VmhRN1ZKYVltV0dJdVh3cUMtbzNCVDBhc3c2VHNwdjloWUJhZzlRMEVsYTJBbXdHeHdLd2RJS3lsWW9NQTJXSlhwVWZSQUlsZnVCdWs1Z3QyWjQyYmNmRTk3T3dsTDI5bHdmbnJtcWk5RldmeVBFQ2dSUjUtV05xZWl4WHVSSWI3SGx4RFBCbnlncWZwNkd6RQ?oc=5",
-   "published": "2026-10-28T03:58:14+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "morning-times.com",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - morning-times.com",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": {
-    "id": "5c2b4cc508427d51",
-    "headline": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - morning-times.com",
-    "what_happened": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher - morning-times.com",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   }
-  },
-  {
-   "id": "721bccebfd49453d",
-   "title": "Tech sector rally continues with Fed expected to leave benchmark interest rate alone",
-   "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-rise-rally-wall-035813504.html?.tsrc=rss",
-   "published": "2026-10-28T03:58:13+00:00",
-   "source": "yahoo",
-   "summary": "HONG KONG (AP) \u2014 Tech stocks have surged this week ahead of Wednesday's meeting of the U. Federal Reserve with markets anticipating no change to the benchmark U.",
-   "publisher": "",
-   "symbols": [
-    "INTC"
-   ],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T12:20:33.904477+00:00",
-   "triage": {
-    "relevance": 0.755,
-    "sentiment": 0.583,
-    "impact": "high",
-    "category": "central_bank",
-    "symbols": [
-     "INTC"
-    ],
-    "named": [
-     "INTC"
-    ],
-    "summary": "Tech sector rally continues with Fed expected to leave benchmark interest rate alone. HONG KONG (AP) \u2014 Tech stocks have surged this week ahead of Wednesday's meeting of the U. Federal Reserve with markets anticipating no change to the benchmark U.",
-    "model": "local",
-    "at": "2026-10-28T12:20:33.904477+00:00"
-   },
-   "analysis": {
-    "id": "721bccebfd49453d",
-    "headline": "Tech sector rally continues with Fed expected to leave benchmark interest rate alone",
-    "what_happened": "HONG KONG (AP) \u2014 Tech stocks have surged this week ahead of Wednesday's meeting of the U. Federal Reserve with markets anticipating no change to the benchmark U.",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [
-     {
-      "symbol": "INTC",
-      "direction": "up",
-      "magnitude": "high",
-      "horizon": "weeks",
-      "rationale": "Banco central: tono positivo en el titular (+0.58)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T12:20:33.904477+00:00"
-   }
-  },
-  {
-   "id": "a72f8f657c2c08d9",
-   "title": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUlNBY0h0YXJ5bkZtY0JKckpEX2FJLUx4Qmh5ZHFTcEZXYWROU1lXajRPWWhlcXBLNXczZHBLdHVXYWhSRGU5aDRwbTBGRkRteU54ZTc2dDFUYkoxcldsbTQ0d1hwY25vYmVtaGtxUTVlUmx3MTJjRW9CdUt4T1p5eVB4MXJodEdmbFQ2ZThTV21GaVN1WmI0YWR2a3ZJTS1IdExKRF85TkR2U1pRWU9v?oc=5",
-   "published": "2026-10-28T03:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "CT Insider",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "a72f8f657c2c08d9",
-    "headline": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher",
-    "what_happened": "Asian stocks rise after a rally on Wall Street, while oil prices edge higher",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "e269a80254b2c84e",
-   "title": "Oil Prices Climb as Houthi Attacks Reignite Saudi Supply Fears",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQb0I4Y1FvYjEzSmVqN205clo4TFpnSkU4WjdnQ3VzcUhLRnRvUTluTXZrbHMtQnZkaUdZZnRFbkRCYTJCeTdwY1pCejF0UU1aNUxIbWJFbzVsdVQ4R3hGWXhRSlVJU0gtZFVicmE3cVJGdlpDcDBVR0VpcGFqdS1seFRzZFMyUmxpRDVTX1EyeGNpcVBDa19kS1VEYWtjR2YzYUdwcEJLREVwV2tRN3NHT1ctTFJQRVV1d2fSAb8BQVVfeXFMTlJpYmRqako1bTB2MnRZZkNCdl84Vm80ZDZ5WVNwdXZ2YU1Kbm9nVUgyT2dOREpfX0F1NGRnRXNtMU9ld0Z1QU40TVlyTzdHVHJQUkpIaVBpSjNCZHMwSGZ3ZjZYRFdPTVNNSlhhY1lCZmk4Z1F0RWYwTnNIdkl5aGRCOWF2WUN1Rmh2M0ctN0F5aWMtcGhWZ1lqMHNUeE5rb3J0LUNzSGVFOFdjZWkwVk5kMDhyaWlMLU1uZTRtRTQ?oc=5",
-   "published": "2026-10-28T03:53:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Crude Oil Prices Today | OilPrice.com",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Oil Prices Climb as Houthi Attacks Reignite Saudi Supply Fears",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "e269a80254b2c84e",
-    "headline": "Oil Prices Climb as Houthi Attacks Reignite Saudi Supply Fears",
-    "what_happened": "Oil Prices Climb as Houthi Attacks Reignite Saudi Supply Fears",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "87cdccda6c67796a",
-   "title": "Rate rises won\u2019t bring down oil prices or stop the data centre boom",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNFlmMXQ1dDRJb3htOEdPcE41V1VXVXpST1ZzTVNsV0Q2TnVMNG9icm9UQ0xHRjUzSWZnVUJJc0JWTmlxQkZYMnNZYk5UVFZWU2dMNW1QcFAta21hVjRlRV9BMWdIVjJSeDltOHpjaWlueXdkT0tZR19fVklKYjNRUlk0TGNVSlJ5dldUa2dtLUJFc2ZFbzVXV0YtNUFEMWdBMWg2NUtyS1F1NE9uQlRKQlZB?oc=5",
-   "published": "2026-10-28T03:51:38+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "thepoint.com.au",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "Rate rises won\u2019t bring down oil prices or stop the data centre boom",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "87cdccda6c67796a",
-    "headline": "Rate rises won\u2019t bring down oil prices or stop the data centre boom",
-    "what_happened": "Rate rises won\u2019t bring down oil prices or stop the data centre boom",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "2ed5cbf2057334f5",
-   "title": "Is Anthropic a SaaS Stock? Here's How It Stacks Up With the Other Top Software Players",
-   "url": "https://www.fool.com/investing/2026/10/27/is-anthropic-a-saas-stock-here-s-how-it-stacks-up-with-the-other-top-software-players/?.tsrc=rss",
-   "published": "2026-10-28T03:50:02+00:00",
-   "source": "yahoo",
-   "summary": "Though Anthropic doesn't call itself a software company, it bears a strong resemblance to one.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.365,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "Is Anthropic a SaaS Stock? Here's How It Stacks Up With the Other Top Software Players. Though Anthropic doesn't call itself a software company, it bears a strong resemblance to one.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "04d9add7867d320b",
-   "title": "Boeing: 3 Key Takeaways for Long-Term Investors",
-   "url": "https://www.fool.com/earnings/takeaways/2026/10/27/boeing-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
-   "published": "2026-10-28T03:42:51+00:00",
-   "source": "yahoo",
-   "summary": "Factory delays on the 737 contrast with a major defense win, leaving investors to weigh near-term execution risk against long-term portfolio strength.",
-   "publisher": "",
-   "symbols": [
-    "BA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.26,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "other",
-    "symbols": [
-     "BA"
-    ],
-    "named": [
-     "BA"
-    ],
-    "summary": "Boeing: 3 Key Takeaways for Long-Term Investors. Factory delays on the 737 contrast with a major defense win, leaving investors to weigh near-term execution risk against long-term portfolio strength.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "10fd4dd798e2b4a6",
-   "title": "XRP Whales Now Control 68.5% of the Supply, the Most Since 2022. Could That Push XRP Back Above $2?",
-   "url": "https://247wallst.com/investing/cryptocurrency/2026/10/27/xrp-whales-now-control-68-5-of-the-supply-the-most-since-2022-could-that-push-xrp-back-above-2/?.tsrc=rss",
-   "published": "2026-10-28T03:37:32+00:00",
-   "source": "yahoo",
-   "summary": "XRP whales are quietly hoarding coins at levels not seen since crypto's darkest days in 2022, yet the price keeps sliding. Before you read that as a bullish signal, there is a catch that changes everything.",
-   "publisher": "",
-   "symbols": [
-    "XRP-USD"
-   ],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "crypto",
-    "symbols": [
-     "NOW",
-     "XRP-USD",
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "ADA-USD"
-    ],
-    "named": [
-     "NOW",
-     "XRP-USD"
-    ],
-    "summary": "XRP Whales Now Control 68.5% of the Supply, the Most Since 2022. Could That Push XRP Back Above $2?. XRP whales are quietly hoarding coins at levels not seen since crypto's darkest days in 2022, yet the price keeps sliding. Before you read that as a bullish signal, there is a catch that changes everything.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "10fd4dd798e2b4a6",
-    "headline": "XRP Whales Now Control 68.5% of the Supply, the Most Since 2022. Could That Push XRP Back Above $2?",
-    "what_happened": "XRP whales are quietly hoarding coins at levels not seen since crypto's darkest days in 2022, yet the price keeps sliding. Before you read that as a bullish signal, there is a catch that changes everything.",
-    "why_it_matters": "Las noticias de flujos, regulaci\u00f3n o adopci\u00f3n mueven el sentimiento de todo el mercado cripto.",
-    "affected": [
-     {
-      "symbol": "NOW",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Cripto: tono neutro en el titular (+0.00)."
-     },
-     {
-      "symbol": "XRP-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Cripto: tono neutro en el titular (+0.00)."
-     },
-     {
-      "symbol": "BTC-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "ETH-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "SOL-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "ADA-USD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Los flujos de los ETF y la reacci\u00f3n de BTC/ETH.",
-    "related_events": [
-     "db8070932898"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "41374b9d9dcfbd5b",
-   "title": "Ripple Trust Bank Approval Redefines Crypto Banking",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBEY2xDNDBFWWQ4UjAzNjlGVlFEcGhreURQajlmZVlBZzMtLUtBOHVxNnV4X2k2YzBRODhCd1JJanctc1ZmVUhVaXJJTlRaZll3Ym1iZUJ4REVVUlBQVW13Q0dhUGVHWTJldlRlMlVQQmtnamZfYW1Xbg?oc=5",
-   "published": "2026-10-28T03:35:34+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "OneSafe.io",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-10-29T17:20:40.448840+00:00",
-   "triage": {
-    "relevance": 0.54,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "regulation",
-    "symbols": [
-     "BAC",
-     "XRP-USD",
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "ADA-USD"
-    ],
-    "named": [
-     "BAC",
-     "XRP-USD"
-    ],
-    "summary": "Ripple Trust Bank Approval Redefines Crypto Banking",
-    "model": "local",
-    "at": "2026-10-29T17:20:40.448840+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0d84fe8bc09bb23a",
-   "title": "Ranking 4 AI Power Stocks By Balance Sheet After the Sell-off: Vertiv, GE Vernova, Bloom Energy, and Plug Power.",
-   "url": "https://www.fool.com/investing/2026/10/27/ranking-4-ai-power-stocks-by-balance-sheet-after-t/?.tsrc=rss",
-   "published": "2026-10-28T03:35:00+00:00",
-   "source": "yahoo",
-   "summary": "If the artificial intelligence investment boom flames out, which AI-tied company is best positioned to survive?",
-   "publisher": "",
-   "symbols": [
-    "GE",
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.145,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "opinion",
-    "symbols": [
-     "GE"
-    ],
-    "named": [
-     "GE"
-    ],
-    "summary": "Ranking 4 AI Power Stocks By Balance Sheet After the Sell-off: Vertiv, GE Vernova, Bloom Energy, and Plug Power.. If the artificial intelligence investment boom flames out, which AI-tied company is best positioned to survive?",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "e9024044f9b289c4",
-   "title": "Gold Price Forecast: XAU/USD drops as oil price rebounds, Fed\u2019s policy eyed",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdXVmTThYOWhLRGZMbDE0N19iMnFBYXo4cVRtR2pHVWhuWG1Ub2hxX1Q3RWZ0cVhoa2JMNThwb05YVHhwYWtadWR6WWNfaE54V3FNWDZBTTBpckh5NnJiWTNha3dZcW8wbHlkVUkzRFdPVmtXVHVYcEtiaWowNTdtMkhDc0Q0dWJtMmI2SExIbmJuOEY5T2RVdUdOU1VsNmZjQUZCYUtLYzdHcVkzMDZhUnJCNnlKaHloN1JB?oc=5",
-   "published": "2026-10-28T03:34:22+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "FXStreet",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.755,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX",
-     "GLD"
-    ],
-    "named": [],
-    "summary": "Gold Price Forecast: XAU/USD drops as oil price rebounds, Fed\u2019s policy eyed",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "e9024044f9b289c4",
-    "headline": "Gold Price Forecast: XAU/USD drops as oil price rebounds, Fed\u2019s policy eyed",
-    "what_happened": "Gold Price Forecast: XAU/USD drops as oil price rebounds, Fed\u2019s policy eyed",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "a3a681d6d8875ab8",
-   "title": "/C O R R E C T I O N - Lektra, Inc./",
-   "url": "https://finance.yahoo.com/technology/ai/articles/lektra-launches-edgestart-ai-server-195100795.html?.tsrc=rss",
-   "published": "2026-10-28T03:34:00+00:00",
-   "source": "yahoo",
-   "summary": "Lektra, Inc., a distributed energy and artificial intelligence company, today began taking orders for EdgeStart, a self-contained server cabinet that commercial and industrial building owners, solar and storage sites, and energy developers to house in underutilized facility space and power with existing solar arrays and batteries. Lektra installs the system, operates it remotely, sells its computing capacity to AI customers for inference and other GPU workloads through Lektra Cloud, and pays the",
-   "publisher": "",
-   "symbols": [
-    "HON",
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.14,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "/C O R R E C T I O N - Lektra, Inc./. Lektra, Inc., a distributed energy and artificial intelligence company, today began taking orders for EdgeStart, a self-contained server cabinet that commercial and industrial building owners, solar and storage sites, an",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "e7aecb41af5232a6",
-   "title": "Bonds Could Become the Hedge Against AI Selloff as Correlation Turns Negative",
-   "url": "https://beincrypto.com/bonds-hedge-ai-selloff-correlation-negative/?.tsrc=rss",
-   "published": "2026-10-28T03:30:00+00:00",
-   "source": "yahoo",
-   "summary": "Fidelity's Jurrien Timmer says the AI selloff flipped AI stocks' link to Treasuries negative, reviving the bond hedge.",
-   "publisher": "",
-   "symbols": [
-    "META"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": -0.583,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "LINK-USD"
-    ],
-    "named": [
-     "LINK-USD"
-    ],
-    "summary": "Bonds Could Become the Hedge Against AI Selloff as Correlation Turns Negative. Fidelity's Jurrien Timmer says the AI selloff flipped AI stocks' link to Treasuries negative, reviving the bond hedge.",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0c598d41fccdeb36",
-   "title": "Latin America\u2019s energy inflation reaches its highest level in a year",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT2tKdkE1ZzQwVGxyT2dQYlloSnZkaXdaalVpcjFKeGpsOGotWHlMbDdvSm5vbk9iSTQ4ODVrYm9ZMWVha1h1eWhoYnhxdDJSbXdBZmYyeC02R1RMdi0zZ1JiUlBkUnMzazNsenpPeWp6NHI3akpxZU5mSWpXb3ZyYXlWdW55eE9waW9NczNycG9FNElPUVZXM1FxTHlEZVkxMHB4eHkwc2s?oc=5",
-   "published": "2026-10-28T03:30:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "MercoPress",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Latin America\u2019s energy inflation reaches its highest level in a year",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0193d77b3d5d9a10",
-   "title": "Whoscall, GASA and Mastercard Release the 2026 Asia Scam Report: Hong Kong",
-   "url": "https://finance.yahoo.com/technology/ai/articles/whoscall-gasa-mastercard-release-2026-033000814.html?.tsrc=rss",
-   "published": "2026-10-28T03:30:00+00:00",
-   "source": "yahoo",
-   "summary": "The Global Anti-Scam Alliance (GASA), Whoscall, the anti-scam app developed by TrustTech company Gogolook, and Mastercard have jointly released the 2026 Asia Scam Report: Hong Kong. The report examines how people in Hong Kong encounter scams, the tactics scammers use, how victims are asked to pay, and the effects of being scammed. It finds that 81% of respondents encountered a scam in the past year, while 48% interacted with a scammer. Phone calls and SMS remain the most common points of contact",
-   "publisher": "",
-   "symbols": [
-    "MA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T07:20:30.152026+00:00",
-   "triage": {
-    "relevance": 0.36,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "product",
-    "symbols": [
-     "MA"
-    ],
-    "named": [
-     "MA"
-    ],
-    "summary": "Whoscall, GASA and Mastercard Release the 2026 Asia Scam Report: Hong Kong. The Global Anti-Scam Alliance (GASA), Whoscall, the anti-scam app developed by TrustTech company Gogolook, and Mastercard have jointly released the 2026 Asia Scam Report: Hong Kong. The report examines how people in Hong",
-    "model": "local",
-    "at": "2026-10-28T07:20:30.152026+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "dbd7b4f58735cd5d",
-   "title": "Indian central bank likely intervenes to support rupee as oil prices weigh, traders say",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaWx4YzZNbFJVcnZQUE43NDdSQUI2ekFvSTdTbFUwZmNIRjNrNFIwVGJkdkp5RzRid2J6eWZPaG5iZkVLNEc1cWNEc3E0RWZ3V0FVUzlQRWNDa1NvaE14N3pyZkl3ZUdXZGFXbFRIR2gzMU1ZR3AtcUJ6ZFZJbTRQeDBCdDRtbXd5TWdmWWl2YjFDcTRKOVpkOG1QdnctNkxxN2p6dm5FY0hSZG1sNVQ0aHNPUVAwYlRraU9WN3RKVWY1WF91TWZJ?oc=5",
-   "published": "2026-10-28T03:27:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.585,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "BAC",
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [
-     "BAC"
-    ],
-    "summary": "Indian central bank likely intervenes to support rupee as oil prices weigh, traders say",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "dbd7b4f58735cd5d",
-    "headline": "Indian central bank likely intervenes to support rupee as oil prices weigh, traders say",
-    "what_happened": "Indian central bank likely intervenes to support rupee as oil prices weigh, traders say",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "BAC",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Materias primas: tono neutro en el titular (+0.00)."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "82e0ce4fb2c0",
-     "faeec0f60115"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
-  },
-  {
-   "id": "f10aefd43212ae33",
-   "title": "Jim Cramer Says Micron Shouldn't Follow 'Whatever' SK Hynix Does As MU Shares Jump After Hours: 'I'm Hoping The Linkage Ends One Day'",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-micron-shouldnt-032617885.html?.tsrc=rss",
-   "published": "2026-10-28T03:26:17+00:00",
-   "source": "yahoo",
-   "summary": "Micron Technology Inc. (NASDAQ:MU) shares are trending on Tuesday night. Shares of the Idaho-based semiconductor company that designs and manufactures computer memory and data storage products rose 1.37% to $941.52 in after-hours trading on Tuesday. Cramer: Micron Stock Moves With SK Hynix CNBC\u2019s Jim Cramer said Micron\u2019s share price follows South Korea\u2019s SK Hynix (NASDAQ:SKHY), another major memory chipmaker. He made the remarks Tuesday on \"Mad Money\" while answering a caller. The caller asked w",
-   "publisher": "",
-   "symbols": [
-    "MU"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-28T05:20:39.094850+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": 0.583,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "XLK",
-     "MU"
-    ],
-    "named": [
-     "XLK",
-     "MU"
-    ],
-    "summary": "Jim Cramer Says Micron Shouldn't Follow 'Whatever' SK Hynix Does As MU Shares Jump After Hours: 'I'm Hoping The Linkage Ends One Day'. Micron Technology Inc. (NASDAQ:MU) shares are trending on Tuesday night. Shares of the Idaho-based semiconductor company that designs and manufactures computer memory and data storage products rose 1.37% to $941.52 in af",
-    "model": "local",
-    "at": "2026-10-28T05:20:39.094850+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "f07c2ebe4b398f0d",
-   "title": "Amid the consensus that the Federal Reserve will \"pause this week and raise rates in December,\" developments in Iran and the AI bubble have emerged as the most significant risks.",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOM19uZGtIQnpjTm82Y3RNQktwb0tBTTBDWWMtdnJ0aFZNWkI0cDV2ZU00ejVHWG44QkUxNlU3cTgwVlBaOE9USG5yNlBSSFFwZ3ljc0pZR0hSck4wVkE3U1dEQ1IxMGc5NzVUbllHdFVESFhNZE8tZHR6YnpxMDZZekNFQ0laWVN5TC1xS2ZHZWZ1SERyb19FWUJwU05uSWNsNEV1THZR?oc=5",
-   "published": "2026-10-28T03:25:11+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Moomoo",
-   "symbols": [],
-   "topics": [
-    "fed"
-   ],
-   "fetched_at": "2026-10-28T05:56:39.302560+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [],
-    "named": [],
-    "summary": "Amid the consensus that the Federal Reserve will \"pause this week and raise rates in December,\" developments in Iran and the AI bubble have emerged as the most significant risks.",
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   },
-   "analysis": {
-    "id": "f07c2ebe4b398f0d",
-    "headline": "Amid the consensus that the Federal Reserve will \"pause this week and raise rates in December,\" developments in Iran and the AI bubble have emerged as the most significant risks.",
-    "what_happened": "Amid the consensus that the Federal Reserve will \"pause this week and raise rates in December,\" developments in Iran and the AI bubble have emerged as the most significant risks.",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T05:56:39.302560+00:00"
-   }
-  },
-  {
-   "id": "cceaaf0cae45615c",
-   "title": "WTI Crude Oil Keeps Its Footing as Fed Uncertainty Builds",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNU0tTM1pnNDY2U2ZzZk8yZTBQOHgycVBac2tBbnFkN21FdVpTMG04YUZSSkNYSjdoMmVxRTYycUJ5SWlkRFB0OXJtZWl2YmpfRXNLbUM3YnNzSEJ5VkpSbk82MHZnNGZNRUk1aFhJdjg1b0RxYzhXUi1fSFdaODk3WFVwQ3Q5RlcxTXVUX2J0dG41ckx4Mk9SeWhMODl2VHpYOWhRNXRKcGg1VnM3eEdET3BDMHJZQkZuQmpPeHpyY21NQlE?oc=5",
-   "published": "2026-10-28T03:21:24+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Action Forex",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-10-28T04:20:33.632586+00:00",
-   "triage": {
-    "relevance": 0.675,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "central_bank",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "WTI Crude Oil Keeps Its Footing as Fed Uncertainty Builds",
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   },
-   "analysis": {
-    "id": "cceaaf0cae45615c",
-    "headline": "WTI Crude Oil Keeps Its Footing as Fed Uncertainty Builds",
-    "what_happened": "WTI Crude Oil Keeps Its Footing as Fed Uncertainty Builds",
-    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
-    "related_events": [
-     "10b7f3fa2f5c",
-     "4674b428ccae",
-     "f48c0eb34f1f",
-     "d8629fd9fd55",
-     "aa90fbbb0aa1"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-28T04:20:33.632586+00:00"
-   }
   }
  ]
 }
