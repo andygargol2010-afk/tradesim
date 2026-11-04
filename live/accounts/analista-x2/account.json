@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "25.02661761251000000000000000000000",
+  "cash": "52.04240741922000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -58,19 +58,19 @@
     "opened_at": "2026-10-26T16:03:44.699212+00:00",
     "realized_pnl": "0.1364541797801277028637367111438006",
     "fees_paid": "0.00018870",
-    "mark_price": "286.0",
+    "mark_price": "284.755",
     "entry_order_id": "O00000001"
    },
    {
     "symbol": "SLB",
-    "quantity": "0.152886382",
-    "avg_price": "52.21803303734750766500002082967831",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:03:46.262189+00:00",
-    "realized_pnl": "0.2046856660565313236191212145741560",
-    "fees_paid": "0.00024880",
+    "opened_at": null,
+    "realized_pnl": "-0.0258720489599999999999999999999990",
+    "fees_paid": "0.00048971",
     "mark_price": "52.130001068115234",
-    "entry_order_id": "O00000002"
+    "entry_order_id": null
    },
    {
     "symbol": "XLV",
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:03:26.192121+00:00",
     "realized_pnl": "0.2450595647908346510609143021765837",
     "fees_paid": "0.00039248",
-    "mark_price": "184.02000427246094",
+    "mark_price": "186.265",
     "entry_order_id": "O00000003"
    },
    {
@@ -124,19 +124,19 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "-0.50514922482",
     "fees_paid": "0.00050877",
-    "mark_price": "698.3400268554688",
+    "mark_price": "697.8900146484375",
     "entry_order_id": "O00000049"
    },
    {
     "symbol": "COP",
-    "quantity": "0.134720751",
-    "avg_price": "148.1683185000208319800711324716413",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-02T15:42:18.772820+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.6976269572400000000000000000000021",
+    "fees_paid": "0.00055790",
     "mark_price": "144.39999389648438",
-    "entry_order_id": "O00000105"
+    "entry_order_id": null
    },
    {
     "symbol": "HON",
@@ -146,7 +146,7 @@
     "opened_at": "2026-11-03T15:42:22.157453+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "224.0500030517578",
+    "mark_price": "223.66000366210938",
     "entry_order_id": "O00000122"
    }
   ],
@@ -612,6 +612,34 @@
     "slippage_cost": "0.00272323",
     "realized_pnl": "0",
     "timestamp": "2026-11-03T15:42:22.157453+00:00"
+   },
+   {
+    "id": "F00000034",
+    "order_id": "O00000123",
+    "symbol": "SLB",
+    "side": "sell",
+    "quantity": "0.152886382",
+    "price": "50.71",
+    "notional": "7.75286843",
+    "fee": "0.00024091",
+    "liquidity": "taker",
+    "slippage_cost": "0.00305773",
+    "realized_pnl": "-0.230557715017",
+    "timestamp": "2026-11-04T15:05:00+00:00"
+   },
+   {
+    "id": "F00000035",
+    "order_id": "O00000131",
+    "symbol": "COP",
+    "side": "sell",
+    "quantity": "0.134720751",
+    "price": "142.99",
+    "notional": "19.26372019",
+    "fee": "0.0005579",
+    "liquidity": "taker",
+    "slippage_cost": "0.00538883",
+    "realized_pnl": "-0.69762695724",
+    "timestamp": "2026-11-04T14:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -824,6 +852,34 @@
     "closed_at": "2026-11-03T15:42:20.084220+00:00",
     "entry_order_id": "O00000049",
     "exit_order_id": "O00000118"
+   },
+   {
+    "symbol": "SLB",
+    "direction": "long",
+    "quantity": "0.152886382",
+    "entry_price": "52.218033037348",
+    "exit_price": "50.71",
+    "pnl": "-0.230798625017",
+    "fees": "0.00024091",
+    "return_pct": -0.028909721313740987,
+    "opened_at": "2026-10-26T16:03:46.262189+00:00",
+    "closed_at": "2026-11-04T15:05:00+00:00",
+    "entry_order_id": "O00000002",
+    "exit_order_id": "O00000123"
+   },
+   {
+    "symbol": "COP",
+    "direction": "long",
+    "quantity": "0.134720751",
+    "entry_price": "148.168318500021",
+    "exit_price": "142.99",
+    "pnl": "-0.69818485724",
+    "fees": "0.0005579",
+    "return_pct": -0.0349768406033799,
+    "opened_at": "2026-11-02T15:42:18.772820+00:00",
+    "closed_at": "2026-11-04T14:35:00+00:00",
+    "entry_order_id": "O00000105",
+    "exit_order_id": "O00000131"
    }
   ],
   "equity_curve": [
@@ -2989,13 +3045,20 @@
     "25.02661761251000000000000000000000",
     "73.399348722349357767126808",
     "73.399348722349357767126808"
+   ],
+   [
+    "2026-11-04T15:22:13.138891+00:00",
+    "97.96043161948102935529130000000000",
+    "52.04240741922000000000000000000000",
+    "45.91802420026102935529130",
+    "45.91802420026102935529130"
    ]
   ],
-  "total_fees": "0.00274071",
-  "total_slippage": "0.11062511",
+  "total_fees": "0.00353952",
+  "total_slippage": "0.11907167",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
-  "max_drawdown": "0.02560876118474870544524813302428782"
+  "max_drawdown": "0.03021743270630367858194855681412550"
  },
  "orders": [
   {
@@ -5569,13 +5632,13 @@
    "limit_price": null,
    "stop_price": "50.73",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.152886382",
+   "avg_fill_price": "50.71",
+   "fees_paid": "0.00024091",
+   "triggered": true,
    "created_at": "2026-11-03T15:43:00.771643+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-04T15:05:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.13: t\u00e9cnico +0.24 (divergencia alcista RSI), noticias +0.00 (0 relevantes), tendencia lateral",
    "reduce_only": true,
@@ -5590,14 +5653,14 @@
    "limit_price": "56.22",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-03T15:43:00.771676+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-04T15:22:13.141285+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.13: t\u00e9cnico +0.24 (divergencia alcista RSI), noticias +0.00 (0 relevantes), tendencia lateral filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.13: t\u00e9cnico +0.24 (divergencia alcista RSI), noticias +0.00 (0 relevantes), tendencia lateral",
    "reduce_only": true,
    "oco_group": "exits-SLB-123"
@@ -5737,13 +5800,13 @@
    "limit_price": null,
    "stop_price": "143.03",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.134720751",
+   "avg_fill_price": "142.99",
+   "fees_paid": "0.0005579",
+   "triggered": true,
    "created_at": "2026-11-03T15:43:00.773027+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-04T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: ampliar: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.26 (estrella de la ma\u00f1ana), noticias +0.34 (14 relevantes), tendencia alcista. Titular: \u00abTop Stock Reports for Seagate, Chubb & Intercontinental\u00bb",
    "reduce_only": true,
@@ -5758,14 +5821,14 @@
    "limit_price": "152.4",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-03T15:43:00.773059+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-04T15:22:13.150681+00:00",
+   "reject_reason": "OCO: stop-loss: ampliar: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.26 (estrella de la ma\u00f1ana), noticias +0.34 (14 relevantes), tendencia alcista. Titular: \u00abTop Stock Reports for Seagate, Chubb & Intercontinental\u00bb filled",
    "tag": "take-profit: ampliar: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.26 (estrella de la ma\u00f1ana), noticias +0.34 (14 relevantes), tendencia alcista. Titular: \u00abTop Stock Reports for Seagate, Chubb & Intercontinental\u00bb",
    "reduce_only": true,
    "oco_group": "exits-COP-131"
@@ -5814,21 +5877,17 @@
   }
  ],
  "open_order_ids": [
-  "O00000123",
-  "O00000124",
   "O00000125",
   "O00000126",
   "O00000127",
   "O00000128",
   "O00000129",
   "O00000130",
-  "O00000131",
-  "O00000132",
   "O00000133",
   "O00000134"
  ],
  "order_id_counter": 135,
- "fill_id_counter": 34,
+ "fill_id_counter": 36,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -5838,17 +5897,17 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-04T14:22:14.036549+00:00",
+ "last_sync": "2026-11-04T15:22:13.138891+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-11-03T21:00:00+00:00",
-  "SLB": "2026-11-03T21:00:00+00:00",
-  "XLV": "2026-11-03T21:00:00+00:00",
+  "ABBV": "2026-11-04T15:20:00+00:00",
+  "SLB": "2026-11-04T15:20:00+00:00",
+  "XLV": "2026-11-04T15:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "TMO": "2026-11-03T21:00:00+00:00",
-  "COP": "2026-11-03T21:00:00+00:00",
-  "HON": "2026-11-03T21:00:00+00:00"
+  "TMO": "2026-11-04T15:20:00+00:00",
+  "COP": "2026-11-04T15:20:00+00:00",
+  "HON": "2026-11-04T15:20:00+00:00"
  }
 }
