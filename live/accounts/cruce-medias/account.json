@@ -366,7 +366,7 @@
     "opened_at": "2026-10-26T16:00:46.279014+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "766.8200073242188",
+    "mark_price": "766.8099975585938",
     "entry_order_id": "O00000029"
    },
    {
@@ -454,7 +454,7 @@
     "opened_at": "2026-10-26T16:00:54.258576+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "63.529998779296875",
+    "mark_price": "63.52000045776367",
     "entry_order_id": "O00000037"
    },
    {
@@ -476,7 +476,7 @@
     "opened_at": "2026-10-26T16:00:57.250424+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "189.67999267578125",
+    "mark_price": "189.66000366210938",
     "entry_order_id": "O00000039"
    },
    {
@@ -4067,6 +4067,13 @@
     "5.241136892320000000000000000000000",
     "95.545065825935924977929933",
     "95.545065825935924977929933"
+   ],
+   [
+    "2026-11-05T00:21:58.384277+00:00",
+    "100.7854373940460975611064680000000",
+    "5.241136892320000000000000000000000",
+    "95.544300501726097561106468",
+    "95.544300501726097561106468"
    ]
   ],
   "total_fees": "0.01550063",
@@ -17084,14 +17091,14 @@
    "limit_price": null,
    "stop_price": "605.24",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-04T17:21:57.813019+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-05T00:22:01.969383+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-TMO-620"
@@ -17410,6 +17417,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-HD-635"
+  },
+  {
+   "id": "O00000636",
+   "symbol": "TMO",
+   "side": "sell",
+   "quantity": "0.002743821",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "611.39",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-05T00:22:01.969474+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-TMO-636"
   }
  ],
  "open_order_ids": [
@@ -17439,7 +17467,6 @@
   "O00000610",
   "O00000613",
   "O00000619",
-  "O00000620",
   "O00000621",
   "O00000622",
   "O00000623",
@@ -17452,9 +17479,10 @@
   "O00000632",
   "O00000633",
   "O00000634",
-  "O00000635"
+  "O00000635",
+  "O00000636"
  ],
- "order_id_counter": 636,
+ "order_id_counter": 637,
  "fill_id_counter": 67,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -17465,7 +17493,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-04T21:30:15.027299+00:00",
+ "last_sync": "2026-11-05T00:21:58.384277+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-11-04T21:00:00+00:00",
