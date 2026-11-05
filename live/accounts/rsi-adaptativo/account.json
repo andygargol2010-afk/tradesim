@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "17.97589554707630000000000000000000",
+  "cash": "18.82394804567630000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -52,14 +52,14 @@
   "positions": [
    {
     "symbol": "FXI",
-    "quantity": "0.306654400",
-    "avg_price": "32.62",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:00:56.338231+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
-    "mark_price": "34.855000000000004",
-    "entry_order_id": "O00000001"
+    "opened_at": null,
+    "realized_pnl": "0.68383931200",
+    "fees_paid": "0.00034800",
+    "mark_price": "34.870000000000005",
+    "entry_order_id": null
    },
    {
     "symbol": "BAC",
@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "51.439998626708984",
+    "mark_price": "50.89500045776367",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-30T15:44:56.014598+00:00",
     "realized_pnl": "-0.81877079628",
     "fees_paid": "0.00025764",
-    "mark_price": "562.9349975585938",
+    "mark_price": "564.4425048828125",
     "entry_order_id": "O00000041"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "320.1300048828125",
+    "mark_price": "318.9599914550781",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "22.045000076293945",
+    "mark_price": "21.96500015258789",
     "entry_order_id": "O00000005"
    },
    {
@@ -113,7 +113,7 @@
     "opened_at": "2026-10-26T16:01:20.770000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02500976",
-    "mark_price": "2289.045",
+    "mark_price": "2275.79",
     "entry_order_id": "O00000006"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:45.479132+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "47.095",
+    "mark_price": "47.26499938964844",
     "entry_order_id": "O00000034"
    },
    {
@@ -157,8 +157,19 @@
     "opened_at": "2026-10-30T15:44:46.507242+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "284.29998779296875",
+    "mark_price": "283.55999755859375",
     "entry_order_id": "O00000040"
+   },
+   {
+    "symbol": "XLK",
+    "quantity": "0.059246690",
+    "avg_price": "166.06",
+    "open_fees": "0",
+    "opened_at": "2026-11-05T15:41:51.739734+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "166.0399932861328",
+    "entry_order_id": "O00000056"
    }
   ],
   "fills": [
@@ -357,6 +368,34 @@
     "slippage_cost": "0.00904898",
     "realized_pnl": "0",
     "timestamp": "2026-10-30T15:44:56.014598+00:00"
+   },
+   {
+    "id": "F00000015",
+    "order_id": "O00000055",
+    "symbol": "FXI",
+    "side": "sell",
+    "quantity": "0.3066544",
+    "price": "34.85",
+    "notional": "10.68690584",
+    "fee": "0.000348",
+    "liquidity": "taker",
+    "slippage_cost": "0.00153313",
+    "realized_pnl": "0.683839312",
+    "timestamp": "2026-11-05T15:41:50.907949+00:00"
+   },
+   {
+    "id": "F00000016",
+    "order_id": "O00000056",
+    "symbol": "XLK",
+    "side": "buy",
+    "quantity": "0.05924669",
+    "price": "166.06",
+    "notional": "9.83850534",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00118533",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-05T15:41:51.739734+00:00"
    }
   ],
   "closed_trades": [
@@ -401,6 +440,20 @@
     "closed_at": "2026-10-30T00:25:00+00:00",
     "entry_order_id": "O00000007",
     "exit_order_id": "O00000028"
+   },
+   {
+    "symbol": "FXI",
+    "direction": "long",
+    "quantity": "0.3066544",
+    "entry_price": "32.62",
+    "exit_price": "34.85",
+    "pnl": "0.683491312",
+    "fees": "0.000348",
+    "return_pct": 0.0683281781728444,
+    "opened_at": "2026-10-26T16:00:56.338231+00:00",
+    "closed_at": "2026-11-05T15:41:50.907949+00:00",
+    "entry_order_id": "O00000001",
+    "exit_order_id": "O00000055"
    }
   ],
   "equity_curve": [
@@ -2860,10 +2913,31 @@
     "17.97589554707630000000000000000000",
     "80.615412766365900514118120",
     "80.615412766365900514118120"
+   ],
+   [
+    "2026-11-05T15:42:21.948764+00:00",
+    "98.38691458211764879901152000000000",
+    "17.97589554707630000000000000000000",
+    "80.411019035041348799011520",
+    "80.411019035041348799011520"
+   ],
+   [
+    "2026-11-05T15:42:23.025319+00:00",
+    "98.38043349411764726573952000000000",
+    "28.66245338707630000000000000000000",
+    "69.71798010704134726573952",
+    "69.71798010704134726573952"
+   ],
+   [
+    "2026-11-05T15:42:23.033291+00:00",
+    "98.37924816254323856617152000000000",
+    "18.82394804567630000000000000000000",
+    "79.55530011686693856617152",
+    "79.55530011686693856617152"
    ]
   ],
-  "total_fees": "0.12127854",
-  "total_slippage": "0.07698347",
+  "total_fees": "0.12162654",
+  "total_slippage": "0.07970193",
   "total_financing": "0E-46",
   "peak_equity": "101.0701900319420356153856120000000",
   "max_drawdown": "0.04489791799337710166730318908536991"
@@ -3949,14 +4023,14 @@
    "limit_price": null,
    "stop_price": "33.69",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-04T17:21:54.705086+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-05T15:42:23.025164+00:00",
+   "reject_reason": "cancelled by agent",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-FXI-52"
@@ -4002,6 +4076,69 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-BAC-54"
+  },
+  {
+   "id": "O00000055",
+   "symbol": "FXI",
+   "side": "sell",
+   "quantity": "0.3066544",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.3066544",
+   "avg_fill_price": "34.85",
+   "fees_paid": "0.000348",
+   "triggered": false,
+   "created_at": "2026-11-05T15:42:23.025241+00:00",
+   "updated_at": "2026-11-05T15:41:50.907949+00:00",
+   "reject_reason": null,
+   "tag": "close_position",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000056",
+   "symbol": "XLK",
+   "side": "buy",
+   "quantity": "0.05924669",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.05924669",
+   "avg_fill_price": "166.06",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-05T15:42:23.033196+00:00",
+   "updated_at": "2026-11-05T15:41:51.739734+00:00",
+   "reject_reason": null,
+   "tag": "RSI 28.9",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000057",
+   "symbol": "XLK",
+   "side": "sell",
+   "quantity": "0.05924669",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "153.84",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-05T15:42:23.041324+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-XLK-57"
   }
  ],
  "open_order_ids": [
@@ -4010,12 +4147,12 @@
   "O00000049",
   "O00000050",
   "O00000051",
-  "O00000052",
   "O00000053",
-  "O00000054"
+  "O00000054",
+  "O00000057"
  ],
- "order_id_counter": 55,
- "fill_id_counter": 15,
+ "order_id_counter": 58,
+ "fill_id_counter": 17,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4025,18 +4162,18 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-05T15:22:38.377666+00:00",
+ "last_sync": "2026-11-05T15:42:23.033291+00:00",
  "bankrupt": false,
  "path_checked": {
-  "FXI": "2026-11-05T15:20:00+00:00",
-  "BAC": "2026-11-05T15:20:00+00:00",
-  "CAT": "2026-11-05T15:20:00+00:00",
-  "GE": "2026-11-05T15:20:00+00:00",
-  "T": "2026-11-05T15:20:00+00:00",
-  "ETH-USD": "2026-11-05T15:20:00+00:00",
+  "FXI": "2026-11-05T15:40:00+00:00",
+  "BAC": "2026-11-05T15:40:00+00:00",
+  "CAT": "2026-11-05T15:40:00+00:00",
+  "GE": "2026-11-05T15:40:00+00:00",
+  "T": "2026-11-05T15:40:00+00:00",
+  "ETH-USD": "2026-11-05T15:40:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-05T15:20:00+00:00",
-  "GOOGL": "2026-11-05T15:20:00+00:00"
+  "SLV": "2026-11-05T15:40:00+00:00",
+  "GOOGL": "2026-11-05T15:40:00+00:00"
  }
 }
