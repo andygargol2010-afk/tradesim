@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "33.00999938105000000000000000000000",
+  "cash": "37.99366853311000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:00:57.250424+00:00",
     "realized_pnl": "0.1653161277054719803004655513688287",
     "fees_paid": "0.00028413",
-    "mark_price": "188.31500244140625",
+    "mark_price": "185.33999633789062",
     "entry_order_id": "O00000003"
    },
    {
@@ -124,19 +124,19 @@
     "opened_at": "2026-10-26T16:01:07.399072+00:00",
     "realized_pnl": "0.08710006133548700712469673372954526",
     "fees_paid": "0.00019144",
-    "mark_price": "167.825",
+    "mark_price": "166.81",
     "entry_order_id": "O00000007"
    },
    {
     "symbol": "PFE",
-    "quantity": "0.164700431",
-    "avg_price": "30.56835552092771737694174625804023",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:01:07.037349+00:00",
-    "realized_pnl": "0.1845886594180245718284950705918643",
-    "fees_paid": "0.00046951",
+    "opened_at": null,
+    "realized_pnl": "0.1338023722200000000000000000000012",
+    "fees_paid": "0.00063540",
     "mark_price": "30.674999237060547",
-    "entry_order_id": "O00000008"
+    "entry_order_id": null
    },
    {
     "symbol": "QCOM",
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.1847984578933637919560744601395664",
     "fees_paid": "0.00007061",
-    "mark_price": "1409.1099853515625",
+    "mark_price": "1376.9300537109375",
     "entry_order_id": "O00000010"
    },
    {
@@ -190,7 +190,7 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "-0.2724768791513939040473830131091829",
     "fees_paid": "0.00033025",
-    "mark_price": "697.1500244140625",
+    "mark_price": "681.74",
     "entry_order_id": "O00000095"
    },
    {
@@ -245,7 +245,7 @@
     "opened_at": "2026-11-03T15:42:09.246900+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "96.06999969482422",
+    "mark_price": "95.73",
     "entry_order_id": "O00000237"
    },
    {
@@ -256,7 +256,7 @@
     "opened_at": "2026-11-03T15:42:09.737993+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "142.78550720214844",
+    "mark_price": "143.50999450683594",
     "entry_order_id": "O00000238"
    },
    {
@@ -267,7 +267,7 @@
     "opened_at": "2026-11-04T15:42:17.245543+00:00",
     "realized_pnl": "0.14125556250",
     "fees_paid": "0.00013219",
-    "mark_price": "150.675",
+    "mark_price": "147.3800048828125",
     "entry_order_id": "O00000260"
    },
    {
@@ -278,7 +278,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "-0.17524762102",
     "fees_paid": "0.00009104",
-    "mark_price": "104.96499633789062",
+    "mark_price": "102.0199966430664",
     "entry_order_id": "O00000261"
    },
    {
@@ -289,7 +289,7 @@
     "opened_at": "2026-11-05T15:42:14.880032+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "206.0800018310547",
+    "mark_price": "202.55999755859375",
     "entry_order_id": "O00000296"
    },
    {
@@ -300,7 +300,7 @@
     "opened_at": "2026-11-05T15:41:53.945761+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "544.2238159179688",
+    "mark_price": "535.22998046875",
     "entry_order_id": "O00000297"
    }
   ],
@@ -1396,6 +1396,20 @@
     "slippage_cost": "0.00181897",
     "realized_pnl": "-0.180850550647",
     "timestamp": "2026-11-05T16:05:00+00:00"
+   },
+   {
+    "id": "F00000079",
+    "order_id": "O00000311",
+    "symbol": "PFE",
+    "side": "sell",
+    "quantity": "0.164700431",
+    "price": "30.26",
+    "notional": "4.98383504",
+    "fee": "0.00016589",
+    "liquidity": "taker",
+    "slippage_cost": "0.001647",
+    "realized_pnl": "-0.050786287198",
+    "timestamp": "2026-11-05T19:40:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1888,6 +1902,20 @@
     "closed_at": "2026-11-05T16:05:00+00:00",
     "entry_order_id": "O00000234",
     "exit_order_id": "O00000289"
+   },
+   {
+    "symbol": "PFE",
+    "direction": "long",
+    "quantity": "0.164700431",
+    "entry_price": "30.568355520928",
+    "exit_price": "30.26",
+    "pnl": "-0.050952177198",
+    "fees": "0.00016589",
+    "return_pct": -0.010120359380738894,
+    "opened_at": "2026-10-26T16:01:07.037349+00:00",
+    "closed_at": "2026-11-05T19:40:00+00:00",
+    "entry_order_id": "O00000008",
+    "exit_order_id": "O00000311"
    }
   ],
   "equity_curve": [
@@ -4382,13 +4410,20 @@
     "33.00999938105000000000000000000000",
     "66.484840587977499518532017",
     "66.484840587977499518532017"
+   ],
+   [
+    "2026-11-05T20:22:35.742638+00:00",
+    "98.61777361507322246572825000000000",
+    "37.99366853311000000000000000000000",
+    "60.62410508196322246572825",
+    "60.62410508196322246572825"
    ]
   ],
-  "total_fees": "0.00479651",
-  "total_slippage": "0.12041122",
+  "total_fees": "0.00496240",
+  "total_slippage": "0.12205822",
   "total_financing": "0E-46",
   "peak_equity": "101.6251715784182113458884300000000",
-  "max_drawdown": "0.02331992402718360593324739771488542"
+  "max_drawdown": "0.02959304192686509231594788316028553"
  },
  "orders": [
   {
@@ -10910,13 +10945,13 @@
    "limit_price": null,
    "stop_price": "30.27",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.164700431",
+   "avg_fill_price": "30.26",
+   "fees_paid": "0.00016589",
+   "triggered": true,
    "created_at": "2026-11-05T15:42:50.120417+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-05T19:40:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: ampliar: Puntuaci\u00f3n +0.25: t\u00e9cnico +0.11 (m\u00e1ximo de 52 semanas), noticias +0.33 (64 relevantes), tendencia alcista. Titular: \u00abAdaptive Biotechnologies Corp (ADPT) Q3 2026 Earnings Call Highlights: First Profitable Qu\u00bb",
    "reduce_only": true,
@@ -10931,14 +10966,14 @@
    "limit_price": "32.99",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:50.120442+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-05T20:22:35.888181+00:00",
+   "reject_reason": "OCO: stop-loss: ampliar: Puntuaci\u00f3n +0.25: t\u00e9cnico +0.11 (m\u00e1ximo de 52 semanas), noticias +0.33 (64 relevantes), tendencia alcista. Titular: \u00abAdaptive Biotechnologies Corp (ADPT) Q3 2026 Earnings Call Highlights: First Profitable Qu\u00bb filled",
    "tag": "take-profit: ampliar: Puntuaci\u00f3n +0.25: t\u00e9cnico +0.11 (m\u00e1ximo de 52 semanas), noticias +0.33 (64 relevantes), tendencia alcista. Titular: \u00abAdaptive Biotechnologies Corp (ADPT) Q3 2026 Earnings Call Highlights: First Profitable Qu\u00bb",
    "reduce_only": true,
    "oco_group": "exits-PFE-311"
@@ -11045,15 +11080,13 @@
   "O00000308",
   "O00000309",
   "O00000310",
-  "O00000311",
-  "O00000312",
   "O00000313",
   "O00000314",
   "O00000315",
   "O00000316"
  ],
  "order_id_counter": 317,
- "fill_id_counter": 79,
+ "fill_id_counter": 80,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -11063,31 +11096,31 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-05T16:36:45.346733+00:00",
+ "last_sync": "2026-11-05T20:22:35.742638+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
   "SLB": "2026-11-04T15:20:00+00:00",
-  "XLV": "2026-11-05T16:35:00+00:00",
+  "XLV": "2026-11-05T20:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "PG": "2026-11-05T16:35:00+00:00",
-  "PFE": "2026-11-05T16:35:00+00:00",
+  "PG": "2026-11-05T20:20:00+00:00",
+  "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-05T16:35:00+00:00",
+  "LLY": "2026-11-05T20:20:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
   "TXN": "2026-10-30T17:20:00+00:00",
-  "TMO": "2026-11-05T16:35:00+00:00",
+  "TMO": "2026-11-05T20:20:00+00:00",
   "PLTR": "2026-11-02T21:00:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
   "DE": "2026-11-04T15:40:00+00:00",
   "HON": "2026-11-05T16:30:00+00:00",
-  "KO": "2026-11-05T16:35:00+00:00",
-  "PEP": "2026-11-05T16:35:00+00:00",
-  "MRK": "2026-11-05T16:35:00+00:00",
-  "NOW": "2026-11-05T16:35:00+00:00",
-  "PM": "2026-11-05T16:35:00+00:00",
-  "MSFT": "2026-11-05T16:35:00+00:00"
+  "KO": "2026-11-05T20:20:00+00:00",
+  "PEP": "2026-11-05T20:20:00+00:00",
+  "MRK": "2026-11-05T20:20:00+00:00",
+  "NOW": "2026-11-05T20:20:00+00:00",
+  "PM": "2026-11-05T20:20:00+00:00",
+  "MSFT": "2026-11-05T20:20:00+00:00"
  }
 }
