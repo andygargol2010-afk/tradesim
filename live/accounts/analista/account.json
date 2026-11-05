@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "22.46556926067000000000000000000000",
+  "cash": "28.87957146369000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -52,14 +52,14 @@
   "positions": [
    {
     "symbol": "ABBV",
-    "quantity": "0.021212329",
-    "avg_price": "289.0653785431961730340494219890592",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-02T15:42:17.280755+00:00",
-    "realized_pnl": "0.08259347835781793393918454149175951",
-    "fees_paid": "0.00035613",
+    "opened_at": null,
+    "realized_pnl": "0.3650276092100000000000000000000013",
+    "fees_paid": "0.00053797",
     "mark_price": "294.8299865722656",
-    "entry_order_id": "O00000202"
+    "entry_order_id": null
    },
    {
     "symbol": "SLB",
@@ -80,7 +80,7 @@
     "opened_at": "2026-10-26T16:00:57.250424+00:00",
     "realized_pnl": "0.1653161277054719803004655513688287",
     "fees_paid": "0.00028413",
-    "mark_price": "189.66000366210938",
+    "mark_price": "191.55999755859375",
     "entry_order_id": "O00000003"
    },
    {
@@ -124,7 +124,7 @@
     "opened_at": "2026-10-26T16:01:07.399072+00:00",
     "realized_pnl": "0.08710006133548700712469673372954526",
     "fees_paid": "0.00019144",
-    "mark_price": "167.32000732421875",
+    "mark_price": "169.53",
     "entry_order_id": "O00000007"
    },
    {
@@ -135,7 +135,7 @@
     "opened_at": "2026-10-26T16:01:07.037349+00:00",
     "realized_pnl": "0.1845886594180245718284950705918643",
     "fees_paid": "0.00046951",
-    "mark_price": "30.790000915527344",
+    "mark_price": "31.320999145507812",
     "entry_order_id": "O00000008"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.1847984578933637919560744601395664",
     "fees_paid": "0.00007061",
-    "mark_price": "1417.989990234375",
+    "mark_price": "1439.0050048828125",
     "entry_order_id": "O00000010"
    },
    {
@@ -190,7 +190,7 @@
     "opened_at": "2026-10-29T15:42:14.231933+00:00",
     "realized_pnl": "-0.26114155216",
     "fees_paid": "0.00025662",
-    "mark_price": "706.1599731445312",
+    "mark_price": "700.5150146484375",
     "entry_order_id": "O00000095"
    },
    {
@@ -234,7 +234,7 @@
     "opened_at": "2026-11-03T15:42:22.157453+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "228.47000122070312",
+    "mark_price": "223.63999938964844",
     "entry_order_id": "O00000234"
    },
    {
@@ -245,7 +245,7 @@
     "opened_at": "2026-11-03T15:42:09.246900+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "95.80000305175781",
+    "mark_price": "97.015",
     "entry_order_id": "O00000237"
    },
    {
@@ -256,7 +256,7 @@
     "opened_at": "2026-11-03T15:42:09.737993+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "142.4199981689453",
+    "mark_price": "144.63999938964844",
     "entry_order_id": "O00000238"
    },
    {
@@ -267,7 +267,7 @@
     "opened_at": "2026-11-04T15:42:17.245543+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "150.36000061035156",
+    "mark_price": "152.52000427246094",
     "entry_order_id": "O00000260"
    },
    {
@@ -278,7 +278,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "108.80999755859375",
+    "mark_price": "104.825",
     "entry_order_id": "O00000261"
    }
   ],
@@ -1220,6 +1220,20 @@
     "slippage_cost": "0.00747988",
     "realized_pnl": "0",
     "timestamp": "2026-11-04T15:42:12.876921+00:00"
+   },
+   {
+    "id": "F00000068",
+    "order_id": "O00000267",
+    "symbol": "ABBV",
+    "side": "sell",
+    "quantity": "0.021212329",
+    "price": "302.38",
+    "notional": "6.41418404",
+    "fee": "0.00018184",
+    "liquidity": "maker",
+    "slippage_cost": "0",
+    "realized_pnl": "0.282434130852",
+    "timestamp": "2026-11-05T15:15:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1628,6 +1642,20 @@
     "closed_at": "2026-11-04T15:42:17.583535+00:00",
     "entry_order_id": "O00000202",
     "exit_order_id": "O00000255"
+   },
+   {
+    "symbol": "ABBV",
+    "direction": "long",
+    "quantity": "0.021212329",
+    "entry_price": "289.065378543196",
+    "exit_price": "302.38",
+    "pnl": "0.282252290852",
+    "fees": "0.00018184",
+    "return_pct": 0.04603127898156476,
+    "opened_at": "2026-11-02T15:42:17.280755+00:00",
+    "closed_at": "2026-11-05T15:15:00+00:00",
+    "entry_order_id": "O00000202",
+    "exit_order_id": "O00000267"
    }
   ],
   "equity_curve": [
@@ -4080,9 +4108,16 @@
     "22.46556926067000000000000000000000",
     "77.818642321764745499194886",
     "77.818642321764745499194886"
+   ],
+   [
+    "2026-11-05T15:22:45.148926+00:00",
+    "100.2991399894756461081659880000000",
+    "28.87957146369000000000000000000000",
+    "71.419568525785646108165988",
+    "71.419568525785646108165988"
    ]
   ],
-  "total_fees": "0.00389842",
+  "total_fees": "0.00408026",
   "total_slippage": "0.10776847",
   "total_financing": "0E-46",
   "peak_equity": "101.6251715784182113458884300000000",
@@ -9663,14 +9698,14 @@
    "limit_price": null,
    "stop_price": "276.37",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-04T15:42:56.938264+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-05T15:22:45.338000+00:00",
+   "reject_reason": "OCO: take-profit: Puntuaci\u00f3n +0.19: t\u00e9cnico -0.00, noticias +0.25 (14 relevantes), tendencia alcista. Titular: \u00abExxon Mobil Just Raised It filled",
    "tag": "stop-loss: Puntuaci\u00f3n +0.19: t\u00e9cnico -0.00, noticias +0.25 (14 relevantes), tendencia alcista. Titular: \u00abExxon Mobil Just Raised It",
    "reduce_only": true,
    "oco_group": "exits-ABBV-266"
@@ -9684,13 +9719,13 @@
    "limit_price": "302.38",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
+   "status": "filled",
+   "filled_quantity": "0.021212329",
+   "avg_fill_price": "302.38",
+   "fees_paid": "0.00018184",
    "triggered": false,
    "created_at": "2026-11-04T15:42:56.938309+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-05T15:15:00+00:00",
    "reject_reason": null,
    "tag": "take-profit: Puntuaci\u00f3n +0.19: t\u00e9cnico -0.00, noticias +0.25 (14 relevantes), tendencia alcista. Titular: \u00abExxon Mobil Just Raised It",
    "reduce_only": true,
@@ -10038,8 +10073,6 @@
   "O00000263",
   "O00000264",
   "O00000265",
-  "O00000266",
-  "O00000267",
   "O00000268",
   "O00000269",
   "O00000270",
@@ -10058,7 +10091,7 @@
   "O00000283"
  ],
  "order_id_counter": 284,
- "fill_id_counter": 68,
+ "fill_id_counter": 69,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -10068,29 +10101,29 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-05T14:22:36.043855+00:00",
+ "last_sync": "2026-11-05T15:22:45.148926+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-11-04T21:00:00+00:00",
+  "ABBV": "2026-11-05T15:20:00+00:00",
   "SLB": "2026-11-04T15:20:00+00:00",
-  "XLV": "2026-11-04T21:00:00+00:00",
+  "XLV": "2026-11-05T15:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "PG": "2026-11-04T21:00:00+00:00",
-  "PFE": "2026-11-04T21:00:00+00:00",
+  "PG": "2026-11-05T15:20:00+00:00",
+  "PFE": "2026-11-05T15:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-04T21:00:00+00:00",
+  "LLY": "2026-11-05T15:20:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
   "TXN": "2026-10-30T17:20:00+00:00",
-  "TMO": "2026-11-04T21:00:00+00:00",
+  "TMO": "2026-11-05T15:20:00+00:00",
   "PLTR": "2026-11-02T21:00:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
   "DE": "2026-11-04T15:40:00+00:00",
-  "HON": "2026-11-04T21:00:00+00:00",
-  "KO": "2026-11-04T21:00:00+00:00",
-  "PEP": "2026-11-04T21:00:00+00:00",
-  "MRK": "2026-11-04T21:00:00+00:00",
-  "NOW": "2026-11-04T21:00:00+00:00"
+  "HON": "2026-11-05T15:20:00+00:00",
+  "KO": "2026-11-05T15:20:00+00:00",
+  "PEP": "2026-11-05T15:20:00+00:00",
+  "MRK": "2026-11-05T15:20:00+00:00",
+  "NOW": "2026-11-05T15:20:00+00:00"
  }
 }
