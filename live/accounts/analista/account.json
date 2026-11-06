@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.1847984578933637919560744601395664",
     "fees_paid": "0.00007061",
-    "mark_price": "1361.7220458984375",
+    "mark_price": "1354.489990234375",
     "entry_order_id": "O00000010"
    },
    {
@@ -278,7 +278,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "-0.17524762102",
     "fees_paid": "0.00009104",
-    "mark_price": "102.03",
+    "mark_price": "101.95999908447266",
     "entry_order_id": "O00000261"
    },
    {
@@ -300,7 +300,7 @@
     "opened_at": "2026-11-05T15:41:53.945761+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "533.5",
+    "mark_price": "530.6099853515625",
     "entry_order_id": "O00000297"
    }
   ],
@@ -4746,13 +4746,34 @@
     "80.97768840406000000000000000000000",
     "16.3456833049678125000000",
     "16.3456833049678125000000"
+   ],
+   [
+    "2026-11-06T21:03:11.005473+00:00",
+    "97.25711678655365251175312000000000",
+    "80.97768840406000000000000000000000",
+    "16.27942838249365251175312",
+    "16.27942838249365251175312"
+   ],
+   [
+    "2026-11-06T21:03:27.915317+00:00",
+    "97.25711678655365251175312000000000",
+    "80.97768840406000000000000000000000",
+    "16.27942838249365251175312",
+    "16.27942838249365251175312"
+   ],
+   [
+    "2026-11-06T21:03:27.917888+00:00",
+    "97.25711678655365251175312000000000",
+    "80.97768840406000000000000000000000",
+    "16.27942838249365251175312",
+    "16.27942838249365251175312"
    ]
   ],
   "total_fees": "0.00620058",
   "total_slippage": "0.12773023",
-  "total_financing": "0E-46",
+  "total_financing": "0E-47",
   "peak_equity": "101.6251715784182113458884300000000",
-  "max_drawdown": "0.04235337373921566699438293103661042"
+  "max_drawdown": "0.04298201640421326115722492065154411"
  },
  "orders": [
   {
@@ -10917,14 +10938,14 @@
    "limit_price": null,
    "stop_price": "1295.86",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:50.118741+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-06T21:03:27.917632+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.40 (doble suelo, m\u00e1ximo de 52 semanas), noticias +0.30 (33 relevantes), tendencia lateral. ",
    "reduce_only": true,
    "oco_group": "exits-LLY-294"
@@ -10938,14 +10959,14 @@
    "limit_price": "1706.1",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:50.118762+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-06T21:03:27.917700+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.40 (doble suelo, m\u00e1ximo de 52 semanas), noticias +0.30 (33 relevantes), tendencia lateral. ",
    "reduce_only": true,
    "oco_group": "exits-LLY-294"
@@ -11390,17 +11411,59 @@
    "tag": "take-profit: comprar: Puntuaci\u00f3n +0.55: t\u00e9cnico +0.73 (cu\u00f1a ascendente, m\u00e1ximo de 52 semanas), noticias +0.14 (190 relevantes), tendencia alcista. Titular: \u00abAmazon and Google Could Outperform Nvidia as AI Trade Enters New Phase, Says Joseph Carlso\u00bb",
    "reduce_only": true,
    "oco_group": "exits-MSFT-315"
+  },
+  {
+   "id": "O00000317",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.00460512",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "1295.86",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-06T21:03:27.917744+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.09: t\u00e9cnico +0.00, noticias +0.29 (32 relevantes), tendencia lateral. Titular: \u00abModerna (MRNA) Stock Hits ",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-317"
+  },
+  {
+   "id": "O00000318",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.00460512",
+   "order_type": "limit",
+   "limit_price": "1473.31",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-06T21:03:27.917830+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.09: t\u00e9cnico +0.00, noticias +0.29 (32 relevantes), tendencia lateral. Titular: \u00abModerna (MRNA) Stock Hits ",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-317"
   }
  ],
  "open_order_ids": [
-  "O00000294",
-  "O00000295",
   "O00000301",
   "O00000302",
   "O00000315",
-  "O00000316"
+  "O00000316",
+  "O00000317",
+  "O00000318"
  ],
- "order_id_counter": 317,
+ "order_id_counter": 319,
  "fill_id_counter": 87,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -11411,7 +11474,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-06T20:22:29.004858+00:00",
+ "last_sync": "2026-11-06T21:03:27.917888+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -11423,7 +11486,7 @@
   "PG": "2026-11-06T19:20:00+00:00",
   "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-06T20:20:00+00:00",
+  "LLY": "2026-11-06T21:00:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
   "TXN": "2026-10-30T17:20:00+00:00",
   "TMO": "2026-11-06T19:20:00+00:00",
@@ -11434,8 +11497,8 @@
   "KO": "2026-11-06T19:20:00+00:00",
   "PEP": "2026-11-06T19:20:00+00:00",
   "MRK": "2026-11-06T19:20:00+00:00",
-  "NOW": "2026-11-06T20:20:00+00:00",
+  "NOW": "2026-11-06T21:00:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
-  "MSFT": "2026-11-06T20:20:00+00:00"
+  "MSFT": "2026-11-06T21:00:00+00:00"
  }
 }
