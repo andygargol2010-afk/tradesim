@@ -4637,6 +4637,13 @@
     "0.8366182204500000000000000000000000",
     "97.108316388325819072986034",
     "97.108316388325819072986034"
+   ],
+   [
+    "2026-11-06T00:21:59.249575+00:00",
+    "97.94493460877581907298603400000000",
+    "0.8366182204500000000000000000000000",
+    "97.108316388325819072986034",
+    "97.108316388325819072986034"
    ]
   ],
   "total_fees": "0.01574893",
@@ -18851,14 +18858,14 @@
    "limit_price": null,
    "stop_price": "119.49",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:27.351481+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-06T00:22:03.596593+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-USO-677"
@@ -19555,6 +19562,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-AMZN-710"
+  },
+  {
+   "id": "O00000711",
+   "symbol": "USO",
+   "side": "sell",
+   "quantity": "0.009755244",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "121.18",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-06T00:22:03.596687+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-USO-711"
   }
  ],
  "open_order_ids": [
@@ -19578,7 +19606,6 @@
   "O00000673",
   "O00000674",
   "O00000676",
-  "O00000677",
   "O00000678",
   "O00000679",
   "O00000680",
@@ -19602,9 +19629,10 @@
   "O00000707",
   "O00000708",
   "O00000709",
-  "O00000710"
+  "O00000710",
+  "O00000711"
  ],
- "order_id_counter": 711,
+ "order_id_counter": 712,
  "fill_id_counter": 80,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -19615,7 +19643,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-05T22:45:30.876545+00:00",
+ "last_sync": "2026-11-06T00:21:59.249575+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAPL": "2026-11-05T21:00:00+00:00",
