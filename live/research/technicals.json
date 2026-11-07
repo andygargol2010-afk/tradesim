@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T11:20:44.022172+00:00",
+ "generated_at": "2026-11-07T12:20:47.545423+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -519,23 +519,18 @@
    "symbol": "TLT",
    "as_of": "2026-11-06T00:00:00+00:00",
    "close": 81.92,
-   "score": 0.559,
+   "score": 0.221,
    "trend": {
     "direction": "neutral",
-    "change_pct": -2.35,
-    "r2": 0.109,
+    "change_pct": -1.77,
+    "r2": 0.067,
     "quality": 0.0,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
-     "price": 81.787,
-     "touches": 3,
-     "bars_since_touch": 11
-    },
-    {
-     "price": 80.774,
-     "touches": 5,
+     "price": 80.678,
+     "touches": 6,
      "bars_since_touch": 7
     },
     {
@@ -546,29 +541,29 @@
    ],
    "resistance": [
     {
-     "price": 83.271,
-     "touches": 7,
-     "bars_since_touch": 44
+     "price": 82.05,
+     "touches": 4,
+     "bars_since_touch": 11
     },
     {
-     "price": 84.402,
-     "touches": 11,
-     "bars_since_touch": 79
+     "price": 83.676,
+     "touches": 14,
+     "bars_since_touch": 49
     },
     {
-     "price": 85.699,
-     "touches": 8,
-     "bars_since_touch": 148
+     "price": 85.197,
+     "touches": 10,
+     "bars_since_touch": 110
     }
    ],
    "indicators": {
-    "rsi_14": 61.3,
+    "rsi_14": 61.6,
     "atr_pct": 0.95,
     "sma_20": 80.716,
-    "sma_50": 80.366,
-    "sma_200": 83.445,
-    "dist_sma200_pct": -1.83,
-    "high_52w": 88.488,
+    "sma_50": 80.216,
+    "sma_200": 83.153,
+    "dist_sma200_pct": -1.48,
+    "high_52w": 88.133,
     "low_52w": 76.43,
     "volume_ratio_20": 1.01
    },
@@ -577,27 +572,15 @@
      "name": "inverse_head_and_shoulders",
      "kind": "chart",
      "direction": "bullish",
-     "strength": 0.8,
+     "strength": 0.45,
      "bars_ago": 7,
-     "status": "confirmed",
+     "status": "forming",
      "levels": {
-      "neckline": 81.91,
+      "neckline": 82.074,
       "target": 87.41,
       "invalidation": 76.43
      },
-     "note": "three troughs with the middle one most extreme; neckline broken"
-    },
-    {
-     "name": "resistance_breakout",
-     "kind": "chart",
-     "direction": "bullish",
-     "strength": 0.464,
-     "bars_ago": 1,
-     "status": "confirmed",
-     "levels": {
-      "level": 81.787
-     },
-     "note": "closed above a 3-touch resistance"
+     "note": "three troughs with the middle one most extreme; neckline not yet broken"
     },
     {
      "name": "doji",
@@ -918,47 +901,47 @@
    "symbol": "HYG",
    "as_of": "2026-11-06T00:00:00+00:00",
    "close": 77.23,
-   "score": -0.048,
+   "score": 0.033,
    "trend": {
-    "direction": "bearish",
-    "change_pct": -3.59,
-    "r2": 0.791,
-    "quality": 0.791,
+    "direction": "neutral",
+    "change_pct": -2.96,
+    "r2": 0.743,
+    "quality": 0.0,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
-     "price": 76.604,
-     "touches": 7,
+     "price": 76.434,
+     "touches": 8,
      "bars_since_touch": 13
     }
    ],
    "resistance": [
     {
-     "price": 77.884,
-     "touches": 14,
+     "price": 77.638,
+     "touches": 13,
      "bars_since_touch": 7
     },
     {
-     "price": 78.902,
+     "price": 78.553,
      "touches": 10,
      "bars_since_touch": 47
     },
     {
-     "price": 79.534,
+     "price": 79.182,
      "touches": 1,
      "bars_since_touch": 50
     }
    ],
    "indicators": {
-    "rsi_14": 47.2,
-    "atr_pct": 0.42,
+    "rsi_14": 48.2,
+    "atr_pct": 0.41,
     "sma_20": 77.163,
-    "sma_50": 77.787,
-    "sma_200": 78.183,
-    "dist_sma200_pct": -1.22,
-    "high_52w": 79.534,
-    "low_52w": 76.142,
+    "sma_50": 77.627,
+    "sma_200": 77.883,
+    "dist_sma200_pct": -0.84,
+    "high_52w": 79.182,
+    "low_52w": 75.805,
     "volume_ratio_20": 0.6
    },
    "patterns": [
@@ -971,6 +954,16 @@
      "status": "confirmed",
      "levels": {},
      "note": "large bearish bar, small pause, strong bullish bar"
+    },
+    {
+     "name": "death_cross",
+     "kind": "indicator",
+     "direction": "bearish",
+     "strength": 0.233,
+     "bars_ago": 8,
+     "status": "confirmed",
+     "levels": {},
+     "note": "SMA50 crossed below SMA200"
     },
     {
      "name": "inside_bar",
