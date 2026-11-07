@@ -1,6 +1,70 @@
 {
  "items": [
   {
+   "id": "8237d323574b1041",
+   "title": "Jonesboro Gas Prices Tumble as National Average Drops 12 Cents in a Single Week",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQjlfdGkxRTU4eWRVUHNGdHRKcEpveXduRUFnMEo5YmlHTTROc0dkcklqanBjbUxLRXFwQmFoSWdQU1ZKdjJ5ampsbXVyb0JkMk52TEkwdWxWaU5kYmVJQW1iRE9abzd5TllNX3FYT2d0ZWtnQUlSRDFzRi0xUUk5WUlwY1NsRGNPTl84cWFLRGpsWS1sMFp5bndBaTBlQnk4bGtsRndDc3BHdTV3RDFTaUN6SGxkMmN0SlBiM29rQQ?oc=5",
+   "published": "2026-11-07T18:15:16+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Jonesboro Right Now",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-07T18:20:37.800316+00:00",
+   "triage": {
+    "relevance": 0.22,
+    "sentiment": -0.583,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Jonesboro Gas Prices Tumble as National Average Drops 12 Cents in a Single Week",
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "4f4c5175101fd70d",
+   "title": "Amazon Prime members' new Uber Eats perk comes with a $25 minimum",
+   "url": "https://www.thestreet.com/retail/amazon-prime-uber-eats-grubhub-delivery-change?.tsrc=rss",
+   "published": "2026-11-07T18:07:00+00:00",
+   "source": "yahoo",
+   "summary": "Prime members can skip the delivery fee on qualifying Uber Eats orders of $25 or more. The switch comes as Walmart bundles Walmart+ and Sam\u2019s Club Plus for $120 a year.",
+   "publisher": "",
+   "symbols": [
+    "AMZN"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-07T18:20:37.800316+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "AMZN",
+     "WMT",
+     "UBER"
+    ],
+    "named": [
+     "AMZN",
+     "WMT",
+     "UBER"
+    ],
+    "summary": "Amazon Prime members' new Uber Eats perk comes with a $25 minimum. Prime members can skip the delivery fee on qualifying Uber Eats orders of $25 or more. The switch comes as Walmart bundles Walmart+ and Sam\u2019s Club Plus for $120 a year.",
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "577bf97df084527e",
    "title": "Trump-Backed Trade Corridor Advances Despite Geopolitical Resistance",
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNld0QXZUbGxFTGlfWkxKZFhWRnRfRks0ZmY5LTZYclJTZXowZldpMGNWNkxKd0xvVkZubFdPTEQtSDlwbEJTbHVQci1VakRwRENnMGZuVkZtRjFOU05EZ0V3WS01VTdJOHh1allrQkNPVW5UWld1WDdIS1FMeFo3SFJDYXl5eXJESHN3ZlhVb0hSeEI3RTNOdGpwbUNEUzUzcE9jdU54VkZrRVBHR09QaNIBtgFBVV95cUxPeGR4Q3lzc0VtY2dLbjhtRG5VVGxCXzBoN3pUMHNQb0ViZ3NWdTUtVlJlRHVJbWhpdGpadVdHaTJTejJBaWNIWTZiSE4tSWRXYzMtaWtOT1JDYXVEaGVjVi0ya2t5dlh3N0dIbDlNMk4xcjdYMzZHMWZncVBBTlgzbFJGM0wzVDBhZVBPT2tLTm55SFM2QnB2N0U2cUJoUXlQWmN3Z1drR2huXzBwdG9DYXh3OVJvUQ?oc=5",
@@ -28,7 +92,45 @@
     "model": "local",
     "at": "2026-11-07T18:07:59.306316+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "577bf97df084527e",
+    "headline": "Trump-Backed Trade Corridor Advances Despite Geopolitical Resistance",
+    "what_happened": "Trump-Backed Trade Corridor Advances Despite Geopolitical Resistance",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "77ea56fcf545900c",
@@ -1672,6 +1774,32 @@
     "summary": "Prediction markets weigh in GOP losses in midterms",
     "model": "local",
     "at": "2026-11-07T16:20:43.129648+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "c9380a037469f758",
+   "title": "Prediction markets weigh in: Was it the Iran war, tariffs or immigration that sank the GOP?",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcVBSQmNZakMwcmdDUGJXQkkxdHJKNkk4RWhuSzlvMWhzNDdXYTBkVUtYaGYxZDZvMUZjaGJsQmxyUHZmMGlTbTZpR0Y4WDlOcEEwYzBfWGJDX2V0QWhYcTdiamNfSGUtUklfNjRxLWlTYWo0czR0NzZtRnRFZzRxVXVtWUxjdXpSR3c1SndwdE1QaXl2cm5yR3huaEFzTXdHZVdQSHhUVQ?oc=5",
+   "published": "2026-11-07T16:16:46+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Knewz",
+   "symbols": [],
+   "topics": [
+    "trade"
+   ],
+   "fetched_at": "2026-11-07T18:20:37.800316+00:00",
+   "triage": {
+    "relevance": 0.5,
+    "sentiment": -0.583,
+    "impact": "medium",
+    "category": "geopolitics",
+    "symbols": [],
+    "named": [],
+    "summary": "Prediction markets weigh in: Was it the Iran war, tariffs or immigration that sank the GOP?",
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
    },
    "analysis": null
   },
@@ -3963,7 +4091,64 @@
     "model": "local",
     "at": "2026-11-07T14:20:41.829895+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "7eb54bce304459bb",
+    "headline": "Bitcoin withstands US regulatory pressures amid $1B ETF withdrawals",
+    "what_happened": "Bitcoin withstands US regulatory pressures amid $1B ETF withdrawals",
+    "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
+    "affected": [
+     {
+      "symbol": "BTC-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "BCH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Regulaci\u00f3n: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "ADA-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "62488a78c10a031e",
@@ -5796,7 +5981,45 @@
     "model": "local",
     "at": "2026-11-07T12:20:47.545423+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "24dbe56760d53c65",
+    "headline": "Survey Shows OPEC Output Neared Pre-War Levels",
+    "what_happened": "Survey Shows OPEC Output Neared Pre-War Levels",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "5b586d8f8b650e4f",
@@ -6066,7 +6289,45 @@
     "model": "local",
     "at": "2026-11-07T12:20:47.545423+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "9d7db2bc5f7cab79",
+    "headline": "Iran Reports Downing US Reaper Drones as Tanker Incidents Lift Oil Prices",
+    "what_happened": "Iran Reports Downing US Reaper Drones as Tanker Incidents Lift Oil Prices",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "8ceecd4b49003caa",
@@ -6927,7 +7188,38 @@
     "model": "local",
     "at": "2026-11-07T11:20:44.022172+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "108067a4f86dde63",
+    "headline": "Wall Street\u2019s Fear Gauge Jumped More Than 11 Points In A Day. Buffett\u2019s Most Famous Rule Says It Might Be Time To Get Greedy. Here\u2019s Where The Market Has Historically Gone Over The Next 6 Months.",
+    "what_happened": "Stocks cratered and the VIX exploded in a single session, yet Buffett's rule hides one overlooked word that changes how it applies. Bespoke's look at 19 similar panics reveals a surprising split between the next month and the months after.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "SPY",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "561a51c2eeb8"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "8f00a3089241d083",
@@ -10813,7 +11105,25 @@
     "model": "local",
     "at": "2026-11-07T13:19:08.851298+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "a68e7c888e7cd523",
+    "headline": "The Big Four Recession Indicators: Employment",
+    "what_happened": "The Big Four Recession Indicators: Employment",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "38b98d5e492e6f02",
@@ -11319,7 +11629,25 @@
     "model": "local",
     "at": "2026-11-07T06:14:39.303209+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "4fbeaca641238378",
+    "headline": "US employers added surprising 165,000 jobs in October; unemployment drops",
+    "what_happened": "US employers added surprising 165,000 jobs in October; unemployment drops",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "b89148c02e562437",
@@ -12709,7 +13037,25 @@
     "model": "local",
     "at": "2026-11-07T18:07:59.306316+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "6837186915e45368",
+    "headline": "Jobs Report Live Updates: U.S Adds 165,000 Jobs in October, Unemployment Falls to 4.1%",
+    "what_happened": "Jobs Report Live Updates: U.S Adds 165,000 Jobs in October, Unemployment Falls to 4.1%",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "14d7894c97b002e5",
@@ -13339,7 +13685,45 @@
     "model": "local",
     "at": "2026-11-07T00:09:49.038744+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "77f9aedae41e0bb0",
+    "headline": "Gas down 8 cents since election",
+    "what_happened": "Gas down 8 cents since election",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "63ebacd9a59cd994",
@@ -13633,7 +14017,25 @@
     "model": "local",
     "at": "2026-11-07T06:14:39.303209+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "7df60ae4c3194026",
+    "headline": "What to know about a better-than-expected jobs report amid AI bubble concerns",
+    "what_happened": "What to know about a better-than-expected jobs report amid AI bubble concerns",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "c2e8e97065186cd0",
@@ -13860,7 +14262,45 @@
     "model": "local",
     "at": "2026-11-07T00:20:42.644397+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "715a196575344c3c",
+    "headline": "The Affordability Agenda, Step One: End the War",
+    "what_happened": "The Affordability Agenda, Step One: End the War",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "a0634eeeb62d36b3",
@@ -14806,7 +15246,25 @@
     "model": "local",
     "at": "2026-11-07T06:14:39.303209+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "baed2aaf83880552",
+    "headline": "LSEG\u2019s Schwimmer: US Markets Are 2\u20133x Their GDP Share, and That Won\u2019t Last",
+    "what_happened": "LSEG\u2019s Schwimmer: US Markets Are 2\u20133x Their GDP Share, and That Won\u2019t Last",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "1e2f9a67fa99e88e",
@@ -15670,7 +16128,29 @@
     "model": "local",
     "at": "2026-11-06T23:20:48.787556+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "56153ae08ac260ac",
+    "headline": "Packaged-food company offers shares with 13.5% dividend",
+    "what_happened": "CEO Norma Chu paired the plan with a letter addressing the stock\u2019s slide since July.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "BTC-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "bdf0ef54b13cf736",
@@ -16786,7 +17266,25 @@
     "model": "local",
     "at": "2026-11-07T00:09:49.038744+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "ecac5e4daaf1512f",
+    "headline": "US continues to generate jobs, inflation eroding spending power of millions",
+    "what_happened": "US continues to generate jobs, inflation eroding spending power of millions",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "74ff52a73067e0c7",
@@ -16844,7 +17342,25 @@
     "model": "local",
     "at": "2026-11-06T22:20:37.117454+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "1d4467ad32789464",
+    "headline": "Unemployment rate dips to 4.1% as surge in hiring shatters expectations",
+    "what_happened": "Unemployment rate dips to 4.1% as surge in hiring shatters expectations",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "ad38d15bf954",
+     "562c8d2eaddd",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "2382ae0942947d5b",
@@ -22153,7 +22669,45 @@
     "model": "local",
     "at": "2026-11-06T20:20:38.810543+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "14a30fcc408d0726",
+    "headline": "5 Companies Buying Back Their Own Stock Hand Over Fist As the Stock Market Sells Off",
+    "what_happened": "When stock prices fall, every buyback dollar goes further. These five companies are taking advantage.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     },
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "EEM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "561a51c2eeb8"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "9be9fb4b479f9f84",
@@ -28200,7 +28754,29 @@
     "model": "local",
     "at": "2026-11-06T19:20:39.786632+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "3a7b8c38baeb8a06",
+    "headline": "The Average 1-Year CD Pays Just 1.76%. These Dividend Stocks Could Pay More",
+    "what_happened": "A guaranteed bank rate sounds safe until you weigh what it can't do. Six blue-chip payers offer income that can grow, but a board can cut it at any meeting, and the tax bill may decide which side comes out ahead.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "BAC",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "7826302e0c11a025",
@@ -46254,7 +46830,29 @@
     "model": "local",
     "at": "2026-11-06T19:20:39.786632+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "84a430dbd65de285",
+    "headline": "Big Investors Now Doubt Anthropic Can IPO at $1.5 Trillion After the AI Crash",
+    "what_happened": "Anthropic's record-setting IPO was supposed to be a victory lap, but three investors are quietly pushing back on price while one blank line in the filing worries them even more. Who absorbs the hit if the deal shrinks or slips?",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "NOW",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "795af3d23bf51012",
@@ -48236,7 +48834,31 @@
     "model": "local",
     "at": "2026-11-06T19:20:39.786632+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "4b2ef541fccf20fd",
+    "headline": "Buy, Sell, or Hold? Friday\u2019s Top Upgrades and Downgrades: Becton Dickinson, BJ\u2019s Wholesale Club, Cogent Communications, Fervo Energy, JinkoSolar, Molson-Coors, Pfizer, SiTime, Steven Madden, and More",
+    "what_happened": "After a brutal sell-off erased Wednesday's rally and dragged the Nasdaq back into correction territory, Wall Street analysts are still moving. Some reversed course on Pfizer, Molson Coors, and BJ's, while others spotted fresh opportunities worth a closer look.",
+    "why_it_matters": "Los cambios de recomendaci\u00f3n mueven flujos a corto plazo; su efecto suele diluirse en d\u00edas.",
+    "affected": [
+     {
+      "symbol": "PFE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Recomendaci\u00f3n de analistas: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "9704db90cb30"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "55988d8e2dcb4939",
@@ -52265,7 +52887,46 @@
     "model": "local",
     "at": "2026-11-06T12:16:10.893169+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "e9d74750c43507cf",
+    "headline": "Treasury Yields Turn Higher, Eurozone Bond Yields Drop",
+    "what_happened": "Treasury Yields Turn Higher, Eurozone Bond Yields Drop",
+    "why_it_matters": "Refleja el tono general del mercado m\u00e1s que un hecho concreto.",
+    "affected": [
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (mercado); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (mercado); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (mercado); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "ffce9af0ff14",
+     "d2896facfd3c"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "aedd31c02bd365d5",
@@ -55984,7 +56645,27 @@
     "model": "local",
     "at": "2026-11-06T19:20:39.786632+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "2641839f2398365b",
+    "headline": "Stable Labor Market Keeps Fed on Track to Raise Rates Gradually",
+    "what_happened": "Stable Labor Market Keeps Fed on Track to Raise Rates Gradually",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "674184391cc0",
+     "4ae54f0255a0",
+     "133267d5c38d",
+     "b31a30a99c54",
+     "90dd20956c71"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "3b52293f2bd03471",
@@ -61197,7 +61878,27 @@
     "model": "local",
     "at": "2026-11-06T19:20:39.786632+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "3a85f0b1ab7ddcac",
+    "headline": "With the U.S. Federal Reserve System (Fed) expected to raise interest rates further, Beth Hammack, p..",
+    "what_happened": "With the U.S. Federal Reserve System (Fed) expected to raise interest rates further, Beth Hammack, p..",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "674184391cc0",
+     "4ae54f0255a0",
+     "133267d5c38d",
+     "b31a30a99c54",
+     "90dd20956c71"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "0bb007b58a5e03bf",
@@ -62028,6 +62729,7 @@
    "publisher": "Investment Week",
    "symbols": [],
    "topics": [
+    "geopolitics",
     "yields"
    ],
    "fetched_at": "2026-11-07T18:07:59.306316+00:00",
@@ -64211,7 +64913,27 @@
     "model": "local",
     "at": "2026-11-06T19:34:08.773281+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "1eafb6133ab9de4b",
+    "headline": "Federal Reserve holds interest rates steady in face of persistent inflation",
+    "what_happened": "Federal Reserve holds interest rates steady in face of persistent inflation",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "674184391cc0",
+     "4ae54f0255a0",
+     "133267d5c38d",
+     "b31a30a99c54",
+     "90dd20956c71"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "0f9896653893c2b4",
@@ -66924,7 +67646,27 @@
     "model": "local",
     "at": "2026-11-06T07:20:33.110798+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "c84bb6fb1c3b1781",
+    "headline": "Implications for the Fed's rate hike outlook! U.S. October non-farm payrolls data due tonight\u2014could it become the \"savior\" of U.S. stocks?",
+    "what_happened": "Implications for the Fed's rate hike outlook! U.S. October non-farm payrolls data due tonight\u2014could it become the \"savior\" of U.S. stocks?",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "674184391cc0",
+     "4ae54f0255a0",
+     "133267d5c38d",
+     "b31a30a99c54",
+     "90dd20956c71"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "c107daf389584d93",
@@ -80476,6 +81218,36 @@
    "analysis": null
   },
   {
+   "id": "c87573b7a39850bc",
+   "title": "NY Harbor ULSD Futures Overview",
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9vaWJRUzNCc1REbXFWYjhJMlJSRVk0bTB2Mks1RFBGcDFrTTRRZDh3RjBfcEVpdkE5NHRGU3B6NTczZVIzSlJCeGZxVGtFU2dnbkc0ek1kaW8xUXFfSjF1WTRXSkUtRHRzeTFjOWZ6ZVBlaW9CM3dVVnlJTW1VQQ?oc=5",
+   "published": "2026-11-05T21:44:45+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CME Group",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-07T18:20:37.800316+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "NY Harbor ULSD Futures Overview",
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "6cd07b36223dec7f",
    "title": "Stocks slide as Wall Street's post-election rally fizzles",
    "url": "https://finance.yahoo.com/video/stocks-slide-as-wall-streets-post-election-rally-fizzles-214250142.html?.tsrc=rss",
@@ -80591,7 +81363,27 @@
     "model": "local",
     "at": "2026-11-05T22:20:48.373856+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "69dc0c7af8eef736",
+    "headline": "October Jobs Report Preview: 65K Jobs Expected, Fed Rate Hike Odds at 67% - News and Statistics",
+    "what_happened": "October Jobs Report Preview: 65K Jobs Expected, Fed Rate Hike Odds at 67% - News and Statistics",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "674184391cc0",
+     "4ae54f0255a0",
+     "133267d5c38d",
+     "b31a30a99c54",
+     "90dd20956c71"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-07T18:20:37.800316+00:00"
+   }
   },
   {
    "id": "cabd6488fe52f003",
@@ -425769,279 +426561,6 @@
     "read_full_article": false,
     "model": "local",
     "at": "2026-10-31T19:30:59.379491+00:00"
-   }
-  },
-  {
-   "id": "748fd1da089ae2da",
-   "title": "Inflation Eases To 14.63% As Food Prices Moderate, FAAC Shares N2.428trn For September",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPR0I5MjhFOFo0OTdtaWp6Ujh1VjRNYUh1Y2ZsNFpVdmo4cV9LWGloSDRLYVVja05SUHo2VjlpMkdVaXVaVFBSb2M4SDkydFo3dWsybWhsNW9ybXVjRVA1XzNGVndTdzB5VVlmMUU1NGMxUzJnYUpldW5ja3B3ZEt0TnlaSlR4dzdsemx3Yy1leFJLNkYxb2U5dFhqcTd3Q1ZjeEZISjA1eVZjTzQ?oc=5",
-   "published": "2026-10-31T18:20:35+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "LEADERSHIP Newspapers",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-11-01T12:20:43.212765+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Inflation Eases To 14.63% As Food Prices Moderate, FAAC Shares N2.428trn For September",
-    "model": "local",
-    "at": "2026-11-01T12:20:43.212765+00:00"
-   },
-   "analysis": {
-    "id": "748fd1da089ae2da",
-    "headline": "Inflation Eases To 14.63% As Food Prices Moderate, FAAC Shares N2.428trn For September",
-    "what_happened": "Inflation Eases To 14.63% As Food Prices Moderate, FAAC Shares N2.428trn For September",
-    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-    "affected": [],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-    "related_events": [
-     "888616539e84",
-     "b42cb75ef90c",
-     "ad38d15bf954"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-01T12:20:43.212765+00:00"
-   }
-  },
-  {
-   "id": "6de7a0e6c3fa5aba",
-   "title": "If a Recession Is Coming, History Says Utilities Aren't Safe, Just \"Less Bad.\" Here's the Data.",
-   "url": "https://www.fool.com/investing/2026/10/31/if-a-recession-is-coming-history-says-utilities/?.tsrc=rss",
-   "published": "2026-10-31T18:20:00+00:00",
-   "source": "yahoo",
-   "summary": "The State Street Utilities Select Sector SPDR ETF and utilities stocks offer some recession protection, but the details matter.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [
-    "growth"
-   ],
-   "fetched_at": "2026-10-31T19:30:59.379491+00:00",
-   "triage": {
-    "relevance": 0.72,
-    "sentiment": -0.583,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [
-     "XLU"
-    ],
-    "named": [
-     "XLU"
-    ],
-    "summary": "If a Recession Is Coming, History Says Utilities Aren't Safe, Just \"Less Bad.\" Here's the Data.. The State Street Utilities Select Sector SPDR ETF and utilities stocks offer some recession protection, but the details matter.",
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   },
-   "analysis": {
-    "id": "6de7a0e6c3fa5aba",
-    "headline": "If a Recession Is Coming, History Says Utilities Aren't Safe, Just \"Less Bad.\" Here's the Data.",
-    "what_happened": "The State Street Utilities Select Sector SPDR ETF and utilities stocks offer some recession protection, but the details matter.",
-    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-    "affected": [
-     {
-      "symbol": "XLU",
-      "direction": "down",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Dato macro: tono negativo en el titular (-0.58)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-    "related_events": [
-     "888616539e84",
-     "b42cb75ef90c"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   }
-  },
-  {
-   "id": "801b0c1ac8899583",
-   "title": "Suze Orman Says You Don\u2019t Have to Buy Every Market Dip. Here\u2019s Why",
-   "url": "https://247wallst.com/investing/2026/10/31/suze-orman-says-you-dont-have-to-buy-every-market-dip-heres-why/?.tsrc=rss",
-   "published": "2026-10-31T18:17:29+00:00",
-   "source": "yahoo",
-   "summary": "Suze Orman says sitting still during a market sell-off is a legitimate strategy, but retirees paying bills from a falling portfolio rarely get that luxury. A specific kind of stock changes that calculation.",
-   "publisher": "",
-   "symbols": [
-    "JNJ",
-    "KO",
-    "PEP",
-    "PG",
-    "XOM"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-31T19:30:59.379491+00:00",
-   "triage": {
-    "relevance": 0.145,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "opinion",
-    "symbols": [
-     "JNJ",
-     "KO",
-     "PEP",
-     "PG",
-     "XOM"
-    ],
-    "named": [
-     "JNJ",
-     "KO",
-     "PEP",
-     "PG",
-     "XOM"
-    ],
-    "summary": "Suze Orman Says You Don\u2019t Have to Buy Every Market Dip. Here\u2019s Why. Suze Orman says sitting still during a market sell-off is a legitimate strategy, but retirees paying bills from a falling portfolio rarely get that luxury. A specific kind of stock changes that calculation.",
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "7faaf839b74be6f4",
-   "title": "Tether Q3: excess reserves rise to $7.95 billion",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uZ3hLOEJKUXlYR3R4dDRubGU5alFmOVFzR3A5WldxUHpYbmhiWWVKbWFqQllwTXY2ZlR5ZHFfS2EwWHhKWEt2ckNERkwtQVhsNkNXQWxwcDE1bGdWRkgza2czbHBhekdnOXc?oc=5",
-   "published": "2026-10-31T18:15:33+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "CryptoTicker.io",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-10-31T19:30:59.379491+00:00",
-   "triage": {
-    "relevance": 0.0,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "other",
-    "symbols": [],
-    "named": [],
-    "summary": "Tether Q3: excess reserves rise to $7.95 billion",
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "99a7da17982c5ce1",
-   "title": "Zscaler (ZS) Stock May Be 14% Undervalued As AI Security Demand Builds",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-stock-may-14-181423417.html?.tsrc=rss",
-   "published": "2026-10-31T18:14:23+00:00",
-   "source": "yahoo",
-   "summary": "Zscaler has been pulled back into the spotlight as cybersecurity headlines and AI security concerns keep the sector in focus. This puts a fresh question on the table for you as an investor. With the share price resetting over recent years, the real issue is whether the current market value lines up with the cash flows the business can generate. Over the past 3 years, Zscaler has delivered a total return of 44.7%, which raises the question of how much future cash flow strength is already...",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-31T19:30:59.379491+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "Zscaler (ZS) Stock May Be 14% Undervalued As AI Security Demand Builds. Zscaler has been pulled back into the spotlight as cybersecurity headlines and AI security concerns keep the sector in focus. This puts a fresh question on the table for you as an investor. With the share price resetting",
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   },
-   "analysis": {
-    "id": "99a7da17982c5ce1",
-    "headline": "Zscaler (ZS) Stock May Be 14% Undervalued As AI Security Demand Builds",
-    "what_happened": "Zscaler has been pulled back into the spotlight as cybersecurity headlines and AI security concerns keep the sector in focus. This puts a fresh question on the table for you as an investor. With the share price resetting over recent years, the real issue is whether the current market value lines up with the cash flows the business can generate. Over the past 3 years, Zscaler has delivered a total return of 44.7%, which raises the question of how much future cash flow strength is already...",
-    "why_it_matters": "Refleja el tono general del mercado m\u00e1s que un hecho concreto.",
-    "affected": [
-     {
-      "symbol": "NVDA",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Mercado: tono neutro en el titular (+0.00)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-01T19:48:29.704979+00:00"
-   }
-  },
-  {
-   "id": "e5567a41200b999a",
-   "title": "What Is S&P Global (SPGI) Signaling With New Commodity And Onchain Data Deals?",
-   "url": "https://finance.yahoo.com/markets/commodities/articles/p-global-spgi-signaling-commodity-180847438.html?.tsrc=rss",
-   "published": "2026-10-31T18:08:47+00:00",
-   "source": "yahoo",
-   "summary": "S&P Global (NYSE:SPGI) unit S&P Dow Jones Indices has teamed up with Quantix Commodities to roll out co-branded commodity indices. The Quantix collaboration introduces new commodity benchmarks that use S&P Global\u2019s index governance framework to target differentiated exposure for investors. Chainlink has expanded its work with S&P Global Ratings to make S&P vault risk assessments available directly on blockchain networks. The Quantix commodity indices and Chainlink onchain risk assessment...",
-   "publisher": "",
-   "symbols": [
-    "LINK-USD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-10-31T19:30:59.379491+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": -0.583,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "LINK-USD"
-    ],
-    "named": [
-     "LINK-USD"
-    ],
-    "summary": "What Is S&P Global (SPGI) Signaling With New Commodity And Onchain Data Deals?. S&P Global (NYSE:SPGI) unit S&P Dow Jones Indices has teamed up with Quantix Commodities to roll out co-branded commodity indices. The Quantix collaboration introduces new commodity benchmarks that use S&P Global\u2019s index",
-    "model": "local",
-    "at": "2026-10-31T19:30:59.379491+00:00"
-   },
-   "analysis": {
-    "id": "e5567a41200b999a",
-    "headline": "What Is S&P Global (SPGI) Signaling With New Commodity And Onchain Data Deals?",
-    "what_happened": "S&P Global (NYSE:SPGI) unit S&P Dow Jones Indices has teamed up with Quantix Commodities to roll out co-branded commodity indices. The Quantix collaboration introduces new commodity benchmarks that use S&P Global\u2019s index governance framework to target differentiated exposure for investors. Chainlink has expanded its work with S&P Global Ratings to make S&P vault risk assessments available directly on blockchain networks. The Quantix commodity indices and Chainlink onchain risk assessment...",
-    "why_it_matters": "Refleja el tono general del mercado m\u00e1s que un hecho concreto.",
-    "affected": [
-     {
-      "symbol": "LINK-USD",
-      "direction": "down",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Mercado: tono negativo en el titular (-0.58)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-01T19:48:29.704979+00:00"
    }
   }
  ]
