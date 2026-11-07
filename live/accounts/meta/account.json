@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "68.41305990739000000000000000000000",
+  "cash": "66.27861838357400000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -192,6 +192,17 @@
     "fees_paid": "0",
     "mark_price": "146.72999572753906",
     "entry_order_id": "O00000014"
+   },
+   {
+    "symbol": "UNI-USD",
+    "quantity": "0.30388632",
+    "avg_price": "7.0063",
+    "open_fees": "0.00532280",
+    "opened_at": "2026-11-07T15:42:21.964000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.00532280",
+    "mark_price": "7.0083",
+    "entry_order_id": "O00000015"
    }
   ],
   "fills": [
@@ -390,6 +401,20 @@
     "slippage_cost": "0.00034697",
     "realized_pnl": "0",
     "timestamp": "2026-11-04T15:42:17.245543+00:00"
+   },
+   {
+    "id": "F00000015",
+    "order_id": "O00000015",
+    "symbol": "UNI-USD",
+    "side": "buy",
+    "quantity": "0.30388632",
+    "price": "7.0063",
+    "notional": "2.12911872",
+    "fee": "0.0053228",
+    "liquidity": "taker",
+    "slippage_cost": "-0.00091166",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-07T15:42:21.964000+00:00"
    }
   ],
   "closed_trades": [
@@ -3075,10 +3100,24 @@
     "68.41305990739000000000000000000000",
     "30.44734006974389653274834",
     "30.44734006974389653274834"
+   ],
+   [
+    "2026-11-07T15:43:15.126261+00:00",
+    "98.86039997713389653274834000000000",
+    "68.41305990739000000000000000000000",
+    "30.44734006974389653274834",
+    "30.44734006974389653274834"
+   ],
+   [
+    "2026-11-07T15:43:15.321843+00:00",
+    "98.85568494977389653274834000000000",
+    "66.27861838357400000000000000000000",
+    "32.57706656619989653274834",
+    "32.57706656619989653274834"
    ]
   ],
-  "total_fees": "0.00005956",
-  "total_slippage": "0.01409999",
+  "total_fees": "0.00538236",
+  "total_slippage": "0.01318833",
   "total_financing": "0E-48",
   "peak_equity": "100.0837805049300000000000000000000",
   "max_drawdown": "0.01399467353784668695102315637778547"
@@ -3377,11 +3416,32 @@
    "tag": "Hedge: m\u00e1s peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000015",
+   "symbol": "UNI-USD",
+   "side": "buy",
+   "quantity": "0.30388632",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.30388632",
+   "avg_fill_price": "7.0063",
+   "fees_paid": "0.0053228",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:15.321707+00:00",
+   "updated_at": "2026-11-07T15:42:21.964000+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 15,
- "fill_id_counter": 15,
+ "order_id_counter": 16,
+ "fill_id_counter": 16,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -3391,7 +3451,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-07T15:22:07.300721+00:00",
+ "last_sync": "2026-11-07T15:43:15.321843+00:00",
  "bankrupt": false,
  "path_checked": {}
 }

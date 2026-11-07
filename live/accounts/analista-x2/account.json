@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "84.16225458598000000000000000000000",
+  "cash": "67.19695179551000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -181,6 +181,17 @@
     "fees_paid": "0.00033917",
     "mark_price": "201.5",
     "entry_order_id": null
+   },
+   {
+    "symbol": "UNI-USD",
+    "quantity": "2.41539690",
+    "avg_price": "7.0063",
+    "open_fees": "0.04230749",
+    "opened_at": "2026-11-07T15:42:21.964000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.04230749",
+    "mark_price": "7.0083",
+    "entry_order_id": "O00000168"
    }
   ],
   "fills": [
@@ -883,6 +894,20 @@
     "slippage_cost": "0.00299569",
     "realized_pnl": "-0.6980981502",
     "timestamp": "2026-11-06T14:35:00+00:00"
+   },
+   {
+    "id": "F00000051",
+    "order_id": "O00000168",
+    "symbol": "UNI-USD",
+    "side": "buy",
+    "quantity": "2.4153969",
+    "price": "7.0063",
+    "notional": "16.9229953",
+    "fee": "0.04230749",
+    "liquidity": "taker",
+    "slippage_cost": "-0.00724619",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-07T15:42:21.964000+00:00"
    }
   ],
   "closed_trades": [
@@ -3960,13 +3985,34 @@
     "84.16225458598000000000000000000000",
     "11.19538422325216619909208",
     "11.19538422325216619909208"
+   ],
+   [
+    "2026-11-07T15:43:12.868618+00:00",
+    "95.35763880923216619909208000000000",
+    "84.16225458598000000000000000000000",
+    "11.19538422325216619909208",
+    "11.19538422325216619909208"
+   ],
+   [
+    "2026-11-07T15:43:14.226322+00:00",
+    "95.35763880923216619909208000000000",
+    "84.16225458598000000000000000000000",
+    "11.19538422325216619909208",
+    "11.19538422325216619909208"
+   ],
+   [
+    "2026-11-07T15:43:14.227468+00:00",
+    "95.32016211303216619909208000000000",
+    "67.19695179551000000000000000000000",
+    "28.12321031752216619909208",
+    "28.12321031752216619909208"
    ]
   ],
-  "total_fees": "0.00625793",
-  "total_slippage": "0.16535412",
+  "total_fees": "0.04856542",
+  "total_slippage": "0.15810793",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
-  "max_drawdown": "0.05604960997790561542579130754129657"
+  "max_drawdown": "0.05635540798858126650230393020186116"
  },
  "orders": [
   {
@@ -7338,14 +7384,14 @@
    "limit_price": null,
    "stop_price": "95.32",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:53.237584+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-07T15:43:14.227311+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.30 (estrella de la ma\u00f1ana, martillo invertido), noticias +0.23 (205 relevantes), tendencia ",
    "reduce_only": true,
    "oco_group": "exits-NOW-161"
@@ -7359,14 +7405,14 @@
    "limit_price": "135.91",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-05T15:42:53.237604+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-07T15:43:14.227334+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.30 (estrella de la ma\u00f1ana, martillo invertido), noticias +0.23 (205 relevantes), tendencia ",
    "reduce_only": true,
    "oco_group": "exits-NOW-161"
@@ -7475,14 +7521,121 @@
    "tag": "take-profit: comprar: Puntuaci\u00f3n +0.60: t\u00e9cnico +0.79 (ruptura de resistencia, divergencia alcista RSI), noticias +0.22 (9 relevantes), tendencia alcista. Titular: \u00abIs Altria's Dividend Enough To Make Up For Its Share Price?\u00bb",
    "reduce_only": true,
    "oco_group": "exits-PM-166"
+  },
+  {
+   "id": "O00000168",
+   "symbol": "UNI-USD",
+   "side": "buy",
+   "quantity": "2.4153969",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "2.4153969",
+   "avg_fill_price": "7.0063",
+   "fees_paid": "0.04230749",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:14.227187+00:00",
+   "updated_at": "2026-11-07T15:42:21.964000+00:00",
+   "reject_reason": null,
+   "tag": "comprar: Puntuaci\u00f3n +0.40: t\u00e9cnico +0.34 (martillo invertido, harami alcista), noticias +0.70 (1 relevantes), tendencia lateral. Titular: \u00abETHBEAT Launches CROPS Guide With Uniswap, Safe, and Tornado Cash\u00bb",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000169",
+   "symbol": "NOW",
+   "side": "sell",
+   "quantity": "0.109790959",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "95.32",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:14.227360+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.11: t\u00e9cnico +0.14 (RSI en sobreventa), noticias +0.11 (137 relevantes), tendencia lateral. Titular: \u00abMcDon",
+   "reduce_only": true,
+   "oco_group": "exits-NOW-169"
+  },
+  {
+   "id": "O00000170",
+   "symbol": "NOW",
+   "side": "sell",
+   "quantity": "0.109790959",
+   "order_type": "limit",
+   "limit_price": "118.88",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:14.227420+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.11: t\u00e9cnico +0.14 (RSI en sobreventa), noticias +0.11 (137 relevantes), tendencia lateral. Titular: \u00abMcDon",
+   "reduce_only": true,
+   "oco_group": "exits-NOW-169"
+  },
+  {
+   "id": "O00000171",
+   "symbol": "UNI-USD",
+   "side": "sell",
+   "quantity": "2.4153969",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "5.75604",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:14.228691+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: comprar: Puntuaci\u00f3n +0.40: t\u00e9cnico +0.34 (martillo invertido, harami alcista), noticias +0.70 (1 relevantes), tendencia lateral. Titular: \u00abETHBEAT Launches CROPS Guide With Uniswap, Safe, and Tornado Cash\u00bb",
+   "reduce_only": true,
+   "oco_group": "exits-UNI-USD-171"
+  },
+  {
+   "id": "O00000172",
+   "symbol": "UNI-USD",
+   "side": "sell",
+   "quantity": "2.4153969",
+   "order_type": "limit",
+   "limit_price": "9.51583",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-07T15:43:14.228759+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: comprar: Puntuaci\u00f3n +0.40: t\u00e9cnico +0.34 (martillo invertido, harami alcista), noticias +0.70 (1 relevantes), tendencia lateral. Titular: \u00abETHBEAT Launches CROPS Guide With Uniswap, Safe, and Tornado Cash\u00bb",
+   "reduce_only": true,
+   "oco_group": "exits-UNI-USD-171"
   }
  ],
  "open_order_ids": [
-  "O00000161",
-  "O00000162"
+  "O00000169",
+  "O00000170",
+  "O00000171",
+  "O00000172"
  ],
- "order_id_counter": 168,
- "fill_id_counter": 51,
+ "order_id_counter": 173,
+ "fill_id_counter": 52,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -7492,7 +7645,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-07T15:22:07.282040+00:00",
+ "last_sync": "2026-11-07T15:43:14.227468+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
