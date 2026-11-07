@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T12:20:47.545423+00:00",
+ "generated_at": "2026-11-07T13:19:08.851298+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -2927,7 +2927,7 @@
     {
      "price": 50.818,
      "touches": 4,
-     "bars_since_touch": 133
+     "bars_since_touch": 135
     },
     {
      "price": 52.454,
@@ -4598,57 +4598,57 @@
    "symbol": "CSCO",
    "as_of": "2026-11-06T00:00:00+00:00",
    "close": 93.85,
-   "score": -0.255,
+   "score": -0.257,
    "trend": {
     "direction": "neutral",
-    "change_pct": -5.45,
-    "r2": 0.167,
+    "change_pct": -4.92,
+    "r2": 0.136,
     "quality": 0.0,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
-     "price": 88.75,
+     "price": 88.408,
      "touches": 2,
      "bars_since_touch": 138
     },
     {
-     "price": 84.089,
+     "price": 83.765,
      "touches": 3,
      "bars_since_touch": 134
     },
     {
-     "price": 79.327,
+     "price": 79.021,
      "touches": 7,
      "bars_since_touch": 143
     }
    ],
    "resistance": [
     {
-     "price": 104.05,
+     "price": 103.84,
      "touches": 2,
      "bars_since_touch": 11
     },
     {
-     "price": 108.04,
+     "price": 107.62,
      "touches": 3,
      "bars_since_touch": 41
     },
     {
-     "price": 112.33,
+     "price": 111.97,
      "touches": 6,
      "bars_since_touch": 8
     }
    ],
    "indicators": {
-    "rsi_14": 28.3,
-    "atr_pct": 3.77,
+    "rsi_14": 28.5,
+    "atr_pct": 3.78,
     "sma_20": 106.8,
-    "sma_50": 108.82,
-    "sma_200": 101.52,
-    "dist_sma200_pct": -7.55,
-    "high_52w": 129.88,
-    "low_52w": 69.526,
+    "sma_50": 108.62,
+    "sma_200": 101.18,
+    "dist_sma200_pct": -7.24,
+    "high_52w": 129.38,
+    "low_52w": 69.258,
     "volume_ratio_20": 1.29
    },
    "patterns": [
@@ -4660,8 +4660,8 @@
      "bars_ago": 8,
      "status": "confirmed",
      "levels": {
-      "neckline": 103.12,
-      "target": 88.425,
+      "neckline": 103.32,
+      "target": 88.462,
       "invalidation": 118.65
      },
      "note": "three peaks with the middle one most extreme; neckline broken"
@@ -4670,7 +4670,7 @@
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.278,
+     "strength": 0.275,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -6159,34 +6159,34 @@
    "symbol": "PM",
    "as_of": "2026-11-06T00:00:00+00:00",
    "close": 197.88,
-   "score": -0.162,
+   "score": -0.384,
    "trend": {
     "direction": "bullish",
-    "change_pct": 10.41,
-    "r2": 0.645,
-    "quality": 0.645,
+    "change_pct": 11.78,
+    "r2": 0.683,
+    "quality": 0.683,
     "ma_alignment": "above SMA200"
    },
    "support": [
     {
-     "price": 193.33,
-     "touches": 6,
+     "price": 192.4,
+     "touches": 5,
      "bars_since_touch": 27
     },
     {
-     "price": 184.87,
+     "price": 184.6,
      "touches": 9,
      "bars_since_touch": 12
     },
     {
-     "price": 176.45,
-     "touches": 2,
-     "bars_since_touch": 81
+     "price": 176.46,
+     "touches": 3,
+     "bars_since_touch": 43
     }
    ],
    "resistance": [
     {
-     "price": 209.1,
+     "price": 208.22,
      "touches": 2,
      "bars_since_touch": 16
     },
@@ -6197,27 +6197,17 @@
     }
    ],
    "indicators": {
-    "rsi_14": 45.9,
+    "rsi_14": 46.2,
     "atr_pct": 2.87,
     "sma_20": 203.15,
-    "sma_50": 195.52,
-    "sma_200": 181.7,
-    "dist_sma200_pct": 8.9,
+    "sma_50": 194.75,
+    "sma_200": 180.38,
+    "dist_sma200_pct": 9.7,
     "high_52w": 214.35,
-    "low_52w": 142.56,
+    "low_52w": 141.35,
     "volume_ratio_20": 1.18
    },
    "patterns": [
-    {
-     "name": "bullish_rsi_divergence",
-     "kind": "indicator",
-     "direction": "bullish",
-     "strength": 0.5,
-     "bars_ago": 12,
-     "status": "confirmed",
-     "levels": {},
-     "note": "lower low in price, higher low in RSI: selling momentum fading"
-    },
     {
      "name": "double_top",
      "kind": "chart",
@@ -6237,7 +6227,7 @@
      "kind": "indicator",
      "direction": "bearish",
      "strength": 0.4,
-     "bars_ago": 0,
+     "bars_ago": 1,
      "status": "confirmed",
      "levels": {},
      "note": "MACD crossed below its signal above zero"
