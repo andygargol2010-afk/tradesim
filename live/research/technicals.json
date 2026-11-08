@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T02:20:31.114881+00:00",
+ "generated_at": "2026-11-08T03:20:37.597444+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -2927,7 +2927,7 @@
     {
      "price": 50.818,
      "touches": 4,
-     "bars_since_touch": 133
+     "bars_since_touch": 135
     },
     {
      "price": 52.454,
@@ -7199,158 +7199,6 @@
      "status": "confirmed",
      "levels": {},
      "note": "range inside the previous bar: compression before a move"
-    }
-   ]
-  },
-  "SOL-USD": {
-   "symbol": "SOL-USD",
-   "as_of": "2026-11-07T00:00:00+00:00",
-   "close": 89.67,
-   "score": 0.131,
-   "trend": {
-    "direction": "neutral",
-    "change_pct": -14.46,
-    "r2": 0.265,
-    "quality": 0.0,
-    "ma_alignment": "above SMA200"
-   },
-   "support": [
-    {
-     "price": 88.3,
-     "touches": 6,
-     "bars_since_touch": 170
-    },
-    {
-     "price": 81.92,
-     "touches": 6,
-     "bars_since_touch": 126
-    },
-    {
-     "price": 76.549,
-     "touches": 9,
-     "bars_since_touch": 83
-    }
-   ],
-   "resistance": [
-    {
-     "price": 96.456,
-     "touches": 7,
-     "bars_since_touch": 14
-    },
-    {
-     "price": 102.04,
-     "touches": 2,
-     "bars_since_touch": 10
-    },
-    {
-     "price": 109.05,
-     "touches": 3,
-     "bars_since_touch": 17
-    }
-   ],
-   "indicators": {
-    "rsi_14": 30.7,
-    "atr_pct": 5.02,
-    "sma_20": 98.12,
-    "sma_50": 107.69,
-    "sma_200": 88.993,
-    "dist_sma200_pct": 0.76,
-    "high_52w": 124.93,
-    "low_52w": 60.11,
-    "volume_ratio_20": 0.37
-   },
-   "patterns": [
-    {
-     "name": "bullish_harami",
-     "kind": "candlestick",
-     "direction": "bullish",
-     "strength": 0.262,
-     "bars_ago": 1,
-     "status": "confirmed",
-     "levels": {},
-     "note": "small bullish body inside a large bearish one"
-    }
-   ]
-  },
-  "XRP-USD": {
-   "symbol": "XRP-USD",
-   "as_of": "2026-11-07T00:00:00+00:00",
-   "close": 1.1624,
-   "score": -0.631,
-   "trend": {
-    "direction": "bearish",
-    "change_pct": -14.64,
-    "r2": 0.393,
-    "quality": 0.393,
-    "ma_alignment": "below SMA200"
-   },
-   "support": [
-    {
-     "price": 1.0328,
-     "touches": 7,
-     "bars_since_touch": 82
-    }
-   ],
-   "resistance": [
-    {
-     "price": 1.1685,
-     "touches": 4,
-     "bars_since_touch": 8
-    },
-    {
-     "price": 1.2872,
-     "touches": 11,
-     "bars_since_touch": 14
-    },
-    {
-     "price": 1.3708,
-     "touches": 7,
-     "bars_since_touch": 10
-    }
-   ],
-   "indicators": {
-    "rsi_14": 31.7,
-    "atr_pct": 5.0,
-    "sma_20": 1.2758,
-    "sma_50": 1.3767,
-    "sma_200": 1.2698,
-    "dist_sma200_pct": -8.45,
-    "high_52w": 1.6996,
-    "low_52w": 0.9873,
-    "volume_ratio_20": 0.81
-   },
-   "patterns": [
-    {
-     "name": "support_breakdown",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.64,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {
-      "level": 1.1685
-     },
-     "note": "closed below a 4-touch support"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.35,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
-    },
-    {
-     "name": "macd_bearish_cross",
-     "kind": "indicator",
-     "direction": "bearish",
-     "strength": 0.3,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "MACD crossed below its signal"
     }
    ]
   },

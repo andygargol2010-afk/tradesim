@@ -1,6 +1,9 @@
 {
- "started_at": "2026-11-08T02:20:31.114881+00:00",
- "errors": {},
+ "started_at": "2026-11-08T03:20:37.597444+00:00",
+ "errors": {
+  "technicals:SOL-USD": "ccxt:coinbase fetch_ohlcv(SOL/USD): coinbase GET https://api.coinbase.com/api/v3/brokerage/market/products/SOL-USD/candles?granularity=ONE_DAY&start=1757820037&end=1783740037 429 Too Many Requests ",
+  "technicals:XRP-USD": "ccxt:coinbase fetch_ohlcv(XRP/USD): coinbase GET https://api.coinbase.com/api/v3/brokerage/market/products/XRP-USD/candles?granularity=ONE_DAY&start=1757820037&end=1783740037 429 Too Many Requests "
+ },
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -13,24 +16,24 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 34
+  "local": 37
  },
  "news": {
-  "fetched": 1690,
-  "new": 9,
-  "stored": 9912,
-  "triaged": 9,
+  "fetched": 1692,
+  "new": 12,
+  "stored": 9908,
+  "triaged": 12,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
  "technicals": {
-  "symbols": 100
+  "symbols": 98
  },
  "llm_usage": {
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 69.2,
+ "duration_s": 37.3,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
