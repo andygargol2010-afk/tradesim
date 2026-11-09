@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.92499923706055",
+    "mark_price": "50.89",
     "entry_order_id": "O00000002"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "334.8900146484375",
+    "mark_price": "337.29998779296875",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "21.68",
+    "mark_price": "21.72410011291504",
     "entry_order_id": "O00000005"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:45.479132+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "48.08000183105469",
+    "mark_price": "48.185",
     "entry_order_id": "O00000034"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-30T15:44:46.507242+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "289.5889892578125",
+    "mark_price": "288.41999999999996",
     "entry_order_id": "O00000040"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-05T15:41:51.739734+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "170.83999633789062",
+    "mark_price": "171.41000366210938",
     "entry_order_id": "O00000056"
    }
   ],
@@ -3767,6 +3767,13 @@
     "36.95974191665630000000000000000000",
     "62.18968795345122277193478",
     "62.18968795345122277193478"
+   ],
+   [
+    "2026-11-09T20:21:56.727464+00:00",
+    "99.26270240674250328162181000000000",
+    "36.95974191665630000000000000000000",
+    "62.30296049008620328162181",
+    "62.30296049008620328162181"
    ]
   ],
   "total_fees": "0.14596245",
@@ -4982,17 +4989,38 @@
    "limit_price": null,
    "stop_price": "155.95",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-09T16:22:38.759039+00:00",
+   "updated_at": "2026-11-09T20:21:57.146072+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-XLK-58"
+  },
+  {
+   "id": "O00000059",
+   "symbol": "XLK",
+   "side": "sell",
+   "quantity": "0.05924669",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "157.57",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-09T20:21:57.146142+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-XLK-58"
+   "oco_group": "exits-XLK-59"
   }
  ],
  "open_order_ids": [
@@ -5001,9 +5029,9 @@
   "O00000051",
   "O00000053",
   "O00000054",
-  "O00000058"
+  "O00000059"
  ],
- "order_id_counter": 59,
+ "order_id_counter": 60,
  "fill_id_counter": 19,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5014,19 +5042,19 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-09T19:46:26.355615+00:00",
+ "last_sync": "2026-11-09T20:21:56.727464+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
-  "BAC": "2026-11-09T19:45:00+00:00",
+  "BAC": "2026-11-09T20:20:00+00:00",
   "CAT": "2026-11-05T16:30:00+00:00",
-  "GE": "2026-11-09T19:45:00+00:00",
-  "T": "2026-11-09T19:45:00+00:00",
+  "GE": "2026-11-09T20:20:00+00:00",
+  "T": "2026-11-09T20:20:00+00:00",
   "ETH-USD": "2026-11-05T16:30:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-09T19:45:00+00:00",
-  "GOOGL": "2026-11-09T19:45:00+00:00",
-  "XLK": "2026-11-09T19:45:00+00:00"
+  "SLV": "2026-11-09T20:20:00+00:00",
+  "GOOGL": "2026-11-09T20:20:00+00:00",
+  "XLK": "2026-11-09T20:20:00+00:00"
  }
 }
