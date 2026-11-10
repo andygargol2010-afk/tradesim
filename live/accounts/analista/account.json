@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "68.05959067649590000000000000000000",
+  "cash": "72.78967981355590000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.1847984578933637919560744601395664",
     "fees_paid": "0.00007061",
-    "mark_price": "1411.949951171875",
+    "mark_price": "1417.96",
     "entry_order_id": "O00000010"
    },
    {
@@ -278,7 +278,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "-0.17524762102",
     "fees_paid": "0.00009104",
-    "mark_price": "102.76000213623047",
+    "mark_price": "100.95999908447266",
     "entry_order_id": "O00000261"
    },
    {
@@ -300,7 +300,7 @@
     "opened_at": "2026-11-05T15:41:53.945761+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "545.1799926757812",
+    "mark_price": "542.1400146484375",
     "entry_order_id": "O00000297"
    },
    {
@@ -311,19 +311,19 @@
     "opened_at": "2026-11-07T15:42:21.964000+00:00",
     "realized_pnl": "-0.03175568018417462830999779303614306",
     "fees_paid": "0.05299338",
-    "mark_price": "6.9704999999999995",
+    "mark_price": "7.089700000000001",
     "entry_order_id": "O00000319"
    },
    {
     "symbol": "BCH-USD",
-    "quantity": "0.02043774",
-    "avg_price": "257.52",
-    "open_fees": "0.01315781493062287898651610746711290",
-    "opened_at": "2026-11-07T15:42:21.187000+00:00",
-    "realized_pnl": "-0.1605786042",
-    "fees_paid": "0.02353640",
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.68176141194",
+    "fees_paid": "0.03539126",
     "mark_price": "236.315",
-    "entry_order_id": "O00000320"
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -1600,6 +1600,20 @@
     "slippage_cost": "0.00266776",
     "realized_pnl": "-0.031755680184",
     "timestamp": "2026-11-09T23:52:40.677000+00:00"
+   },
+   {
+    "id": "F00000092",
+    "order_id": "O00000346",
+    "symbol": "BCH-USD",
+    "side": "sell",
+    "quantity": "0.02043774",
+    "price": "232.019",
+    "notional": "4.741944",
+    "fee": "0.01185486",
+    "liquidity": "taker",
+    "slippage_cost": "0.00122626",
+    "realized_pnl": "-0.52118280774",
+    "timestamp": "2026-11-10T13:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -2232,6 +2246,20 @@
     "closed_at": "2026-11-09T23:52:40.677000+00:00",
     "entry_order_id": "O00000319",
     "exit_order_id": "O00000341"
+   },
+   {
+    "symbol": "BCH-USD",
+    "direction": "long",
+    "quantity": "0.02043774",
+    "entry_price": "257.52",
+    "exit_price": "232.019",
+    "pnl": "-0.546195482671",
+    "fees": "0.025012674931",
+    "return_pct": -0.103777754731748,
+    "opened_at": "2026-11-07T15:42:21.187000+00:00",
+    "closed_at": "2026-11-10T13:35:00+00:00",
+    "entry_order_id": "O00000320",
+    "exit_order_id": "O00000346"
    }
   ],
   "equity_curve": [
@@ -5594,10 +5622,17 @@
     "68.05959067649590000000000000000000",
     "28.909516305041483387992645",
     "28.909516305041483387992645"
+   ],
+   [
+    "2026-11-10T15:22:07.674035+00:00",
+    "96.91080811340060044113711000000000",
+    "72.78967981355590000000000000000000",
+    "24.12112829984470044113711",
+    "24.12112829984470044113711"
    ]
   ],
-  "total_fees": "0.08273036",
-  "total_slippage": "0.13176573",
+  "total_fees": "0.09458522",
+  "total_slippage": "0.13299199",
   "total_financing": "0E-47",
   "peak_equity": "101.6251715784182113458884300000000",
   "max_drawdown": "0.05623338964132682512862760433802938"
@@ -12857,13 +12892,13 @@
    "limit_price": null,
    "stop_price": "232.079",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.02043774",
+   "avg_fill_price": "232.019",
+   "fees_paid": "0.01185486",
+   "triggered": true,
    "created_at": "2026-11-09T23:53:28.153852+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-10T13:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.37 (divergencia alcista RSI, cruce dorado), noticias -0.21 (90 relevantes), tendencia later",
    "reduce_only": true,
@@ -12878,14 +12913,14 @@
    "limit_price": "305.387",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-09T23:53:28.153895+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-10T15:22:07.983789+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.37 (divergencia alcista RSI, cruce dorado), noticias -0.21 (90 relevantes), tendencia later filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.37 (divergencia alcista RSI, cruce dorado), noticias -0.21 (90 relevantes), tendencia later",
    "reduce_only": true,
    "oco_group": "exits-BCH-USD-346"
@@ -12940,13 +12975,11 @@
   "O00000343",
   "O00000344",
   "O00000345",
-  "O00000346",
-  "O00000347",
   "O00000348",
   "O00000349"
  ],
  "order_id_counter": 350,
- "fill_id_counter": 92,
+ "fill_id_counter": 93,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -12956,7 +12989,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-10T10:07:17.259561+00:00",
+ "last_sync": "2026-11-10T15:22:07.674035+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -12968,7 +13001,7 @@
   "PG": "2026-11-06T19:20:00+00:00",
   "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-09T21:00:00+00:00",
+  "LLY": "2026-11-10T15:20:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
   "TXN": "2026-10-30T17:20:00+00:00",
   "TMO": "2026-11-06T19:20:00+00:00",
@@ -12979,10 +13012,10 @@
   "KO": "2026-11-06T19:20:00+00:00",
   "PEP": "2026-11-06T19:20:00+00:00",
   "MRK": "2026-11-06T19:20:00+00:00",
-  "NOW": "2026-11-09T21:00:00+00:00",
+  "NOW": "2026-11-10T15:20:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
-  "MSFT": "2026-11-09T21:00:00+00:00",
-  "UNI-USD": "2026-11-10T10:05:00+00:00",
-  "BCH-USD": "2026-11-10T10:05:00+00:00"
+  "MSFT": "2026-11-10T15:20:00+00:00",
+  "UNI-USD": "2026-11-10T15:20:00+00:00",
+  "BCH-USD": "2026-11-10T15:20:00+00:00"
  }
 }
