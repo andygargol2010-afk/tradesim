@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.525001525878906",
+    "mark_price": "50.584999084472656",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-11-10T15:41:40.684746+00:00",
     "realized_pnl": "-2.01060898857",
     "fees_paid": "0.00049708",
-    "mark_price": "593.3350219726562",
+    "mark_price": "594.61",
     "entry_order_id": "O00000061"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "340.45001220703125",
+    "mark_price": "341.0199890136719",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "21.889999389648438",
+    "mark_price": "21.875",
     "entry_order_id": "O00000005"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:45.479132+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "47.185",
+    "mark_price": "47.160099029541016",
     "entry_order_id": "O00000034"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-30T15:44:46.507242+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "290.7300109863281",
+    "mark_price": "290.7900085449219",
     "entry_order_id": "O00000040"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-05T15:41:51.739734+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "173.3699951171875",
+    "mark_price": "173.8699951171875",
     "entry_order_id": "O00000056"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-11-10T15:41:35.058951+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "173.0",
+    "mark_price": "174.16510009765625",
     "entry_order_id": "O00000060"
    }
   ],
@@ -4163,6 +4163,13 @@
     "17.24119349685630000000000000000000",
     "82.475657326098489685459918",
     "82.475657326098489685459918"
+   ],
+   [
+    "2026-11-11T15:28:20.129948+00:00",
+    "99.85647346671254321248117200000000",
+    "17.24119349685630000000000000000000",
+    "82.615279969856243212481172",
+    "82.615279969856243212481172"
    ]
   ],
   "total_fees": "0.14596245",
@@ -5399,14 +5406,14 @@
    "limit_price": null,
    "stop_price": "157.57",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-09T20:21:57.146142+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-11T15:28:20.794467+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-XLK-59"
@@ -5483,14 +5490,14 @@
    "limit_price": null,
    "stop_price": "148.04",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-10T15:41:52.431426+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-11T15:28:20.796328+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-NVDA-63"
@@ -5504,14 +5511,14 @@
    "limit_price": null,
    "stop_price": "307.42",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-11T00:16:11.333233+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-11T15:28:20.787664+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-GE-64"
@@ -5557,19 +5564,82 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-CAT-66"
+  },
+  {
+   "id": "O00000067",
+   "symbol": "GE",
+   "side": "sell",
+   "quantity": "0.034630835",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "310.53",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-11T15:28:20.787750+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-GE-67"
+  },
+  {
+   "id": "O00000068",
+   "symbol": "XLK",
+   "side": "sell",
+   "quantity": "0.05924669",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "159.31",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-11T15:28:20.794523+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-XLK-68"
+  },
+  {
+   "id": "O00000069",
+   "symbol": "NVDA",
+   "side": "sell",
+   "quantity": "0.057560548",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "150.92",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-11T15:28:20.796372+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-NVDA-69"
   }
  ],
  "open_order_ids": [
   "O00000035",
   "O00000051",
   "O00000054",
-  "O00000059",
-  "O00000063",
-  "O00000064",
   "O00000065",
-  "O00000066"
+  "O00000066",
+  "O00000067",
+  "O00000068",
+  "O00000069"
  ],
- "order_id_counter": 67,
+ "order_id_counter": 70,
  "fill_id_counter": 21,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5580,20 +5650,20 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-11T15:22:12.936218+00:00",
+ "last_sync": "2026-11-11T15:28:20.129948+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
-  "BAC": "2026-11-11T15:20:00+00:00",
+  "BAC": "2026-11-11T15:25:00+00:00",
   "CAT": "2026-11-11T15:20:00+00:00",
-  "GE": "2026-11-11T15:20:00+00:00",
-  "T": "2026-11-11T15:20:00+00:00",
+  "GE": "2026-11-11T15:25:00+00:00",
+  "T": "2026-11-11T15:25:00+00:00",
   "ETH-USD": "2026-11-05T16:30:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-11T15:20:00+00:00",
-  "GOOGL": "2026-11-11T15:20:00+00:00",
-  "XLK": "2026-11-11T15:20:00+00:00",
-  "NVDA": "2026-11-11T15:20:00+00:00"
+  "SLV": "2026-11-11T15:25:00+00:00",
+  "GOOGL": "2026-11-11T15:25:00+00:00",
+  "XLK": "2026-11-11T15:25:00+00:00",
+  "NVDA": "2026-11-11T15:25:00+00:00"
  }
 }
