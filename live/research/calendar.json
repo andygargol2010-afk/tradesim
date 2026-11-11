@@ -1,46 +1,10 @@
 {
- "generated_at": "2026-11-11T04:20:39.387575+00:00",
+ "generated_at": "2026-11-11T05:20:33.109045+00:00",
  "window": [
-  "2026-11-03",
-  "2026-12-10"
+  "2026-11-04",
+  "2026-12-11"
  ],
  "events": [
-  {
-   "date": "2026-11-03",
-   "title": "JOLTS Job Openings",
-   "category": "employment",
-   "importance": "medium",
-   "country": "US",
-   "when": "2026-11-03T15:00:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": "7.15M",
-   "previous": "7.08M",
-   "actual": null,
-   "confirmed": true,
-   "source": "forexfactory",
-   "notes": "",
-   "id": "01a133a67012"
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Congressional Elections",
-   "category": "politics",
-   "importance": "high",
-   "country": "US",
-   "when": "2026-11-03T15:16:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": true,
-   "source": "forexfactory",
-   "notes": "",
-   "id": "d974576cde28"
-  },
   {
    "date": "2026-11-04",
    "title": "ISM Services PMI",
@@ -1357,12 +1321,48 @@
    "source": "yahoo",
    "notes": "consensus estimates from Yahoo",
    "id": "a183f00ead63"
+  },
+  {
+   "date": "2026-12-11",
+   "title": "UMich consumer sentiment (preliminary)",
+   "category": "consumer",
+   "importance": "low",
+   "country": "US",
+   "when": "2026-12-11T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "cf793a2eeded"
+  },
+  {
+   "date": "2026-12-11",
+   "title": "WMT ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "WMT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "149fabd6e910"
   }
  ],
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "7 events this week",
-  "companies": "36 earnings/dividend events"
+  "companies": "37 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
