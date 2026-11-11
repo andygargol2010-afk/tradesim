@@ -1,6 +1,924 @@
 {
  "items": [
   {
+   "id": "22811dbf159a0dc4",
+   "title": "Dow Jones Futures Rise, CoreWave Jumps After Stocks Fall On Nvidia, Surging Treasury Yields",
+   "url": "https://finance.yahoo.com/m/656fca57-9896-3dfb-96e8-e0af2bc227df/dow-jones-futures-rise%2C.html?.tsrc=rss",
+   "published": "2026-11-11T01:15:40+00:00",
+   "source": "yahoo",
+   "summary": "The stock market fell Tuesday as Fed rate-hike fears sent Treasury yields soaring while Nvidia kept falling. Indexes did come off lows though. CoreWeave retreated late on results.",
+   "publisher": "",
+   "symbols": [
+    "MSFT",
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.795,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "central_bank",
+    "symbols": [
+     "NVDA",
+     "TLT",
+     "XLF",
+     "QQQ"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "Dow Jones Futures Rise, CoreWave Jumps After Stocks Fall On Nvidia, Surging Treasury Yields. The stock market fell Tuesday as Fed rate-hike fears sent Treasury yields soaring while Nvidia kept falling. Indexes did come off lows though. CoreWeave retreated late on results.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "22811dbf159a0dc4",
+    "headline": "Dow Jones Futures Rise, CoreWave Jumps After Stocks Fall On Nvidia, Surging Treasury Yields",
+    "what_happened": "The stock market fell Tuesday as Fed rate-hike fears sent Treasury yields soaring while Nvidia kept falling. Indexes did come off lows though. CoreWeave retreated late on results.",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Banco central: tono negativo en el titular (-0.32)."
+     },
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "a30e49c88ffd",
+     "561a51c2eeb8",
+     "b84ede22fb83",
+     "8f3e00b6ebcf"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "322cd4f8b76e1160",
+   "title": "U.S. stock futures tick higher after Wall St slips on hot CPI, Nvidia losses",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-tick-higher-011241932.html?.tsrc=rss",
+   "published": "2026-11-11T01:12:41+00:00",
+   "source": "yahoo",
+   "summary": "Investing.com-- U.S. stock futures edged higher on Tuesday evening after Wall Street ended modestly lower, as hotter-than-expected inflation data reinforced expectations of another Federal Reserve rate hike, while weakness in Nvidia weighed on technology shares.",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.795,
+    "sentiment": -0.762,
+    "impact": "high",
+    "category": "central_bank",
+    "symbols": [
+     "XLK",
+     "NVDA"
+    ],
+    "named": [
+     "XLK",
+     "NVDA"
+    ],
+    "summary": "U.S. stock futures tick higher after Wall St slips on hot CPI, Nvidia losses. Investing.com-- U.S. stock futures edged higher on Tuesday evening after Wall Street ended modestly lower, as hotter-than-expected inflation data reinforced expectations of another Federal Reserve rate hike, while weakne",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "322cd4f8b76e1160",
+    "headline": "U.S. stock futures tick higher after Wall St slips on hot CPI, Nvidia losses",
+    "what_happened": "Investing.com-- U.S. stock futures edged higher on Tuesday evening after Wall Street ended modestly lower, as hotter-than-expected inflation data reinforced expectations of another Federal Reserve rate hike, while weakness in Nvidia weighed on technology shares.",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [
+     {
+      "symbol": "XLK",
+      "direction": "down",
+      "magnitude": "high",
+      "horizon": "weeks",
+      "rationale": "Banco central: tono negativo en el titular (-0.76)."
+     },
+     {
+      "symbol": "NVDA",
+      "direction": "down",
+      "magnitude": "high",
+      "horizon": "weeks",
+      "rationale": "Banco central: tono negativo en el titular (-0.76)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "a30e49c88ffd",
+     "561a51c2eeb8",
+     "b84ede22fb83"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "b3fec03e8346ed57",
+   "title": "Middle East Oil Flows Far from Normal Despite Signs of Oversupply",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOU3hPVWNiMF8xTXNraTdfa3VmTXBDNmZrbWszd1BCb3ZmcFhIQWJIcWZoR2NVUVFpekNfTFpiX3E2OHh2WEEySDNJbUFTWWpvVEEzX1hoNEhIbUlnY1BoQV85S2hJclpFczl0NmxodWNRN3ROb2V2LVJQYkFDSWpmeERqNmhzc1ZLSkdqN3hiOER5YURMVlpQVWJrajRhVlEzUTBReTJMdVdidklM0gGyAUFVX3lxTE1TVHFPNzBqQ1A0MmJSXzJ2OGFkWTVlV1o0QmxFUGh0QmJxei1qUERnNXJZcmUwUmJWU0RCWVROd2tUbjg4VjBwQnYybXFGQzY2VjBUOVBNTmhJNi03Q1N0Zjg2VnpGNTAxMDRvb0p4YmF6eGNBOXZCeExPNUdYaTcyVE9Db0k5LXRqdkdUd2V6ZlFhRXpHZnMxallzWGs1dngyeWRhel9nTWtCeEtiUm4zb1E?oc=5",
+   "published": "2026-11-11T01:00:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Crude Oil Prices Today | OilPrice.com",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.465,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "commodities",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Middle East Oil Flows Far from Normal Despite Signs of Oversupply",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "44ab094af0bf8530",
+   "title": "Dollar Rises as Fed Signals Inflation Risks and Rate Hike Bets",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUnhteHBPQ3RaYXMxMDdBT1hpdTA3S3A2b0NIWmNhUnAwMzR0RmhEYkQtLVhkX2pFMHQyejN2aGg4NWplbWY2ajFCTWdQRkNtaEdzMkVMY1hsM0ttM1djRFN3Z0lHQ3NnZ0N1UjZRLTdFbEZRZ0VxM2owc0ZOUlBSMXZnd3RfY1ZMMHZ2ckJsZXRZUHY1Vmo1QVZrQnA?oc=5",
+   "published": "2026-11-11T00:59:06+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Global Banking & Finance Review",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.795,
+    "sentiment": -0.762,
+    "impact": "high",
+    "category": "central_bank",
+    "symbols": [
+     "GLD",
+     "EEM"
+    ],
+    "named": [],
+    "summary": "Dollar Rises as Fed Signals Inflation Risks and Rate Hike Bets",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "44ab094af0bf8530",
+    "headline": "Dollar Rises as Fed Signals Inflation Risks and Rate Hike Bets",
+    "what_happened": "Dollar Rises as Fed Signals Inflation Risks and Rate Hike Bets",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "EEM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "a30e49c88ffd",
+     "b84ede22fb83"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "ab6522898c1a5840",
+   "title": "Japanese bond yields rise as US Treasury selloff spills over to Tokyo",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSHk1UGl4NXlpTndLRmh3RXFmME10SlJQeklLelp0Wk1ib19MOVVzblk4Qi1kYmx1Wk1GWnlQb3hnR0xxS1F4NE16eUxQUzQ5NWdwU0NabmUyY05kVEZFcmFRckgwdzd2aHYwZEhRWWhLalA4Z0diREdjRjRMYzhMd1UyT2xldG1EYUt0bmNVT3FwZlRaRkVBdll5cjh1d2V2aGhacEFlbHBWaTJGcEtMUEtNUjl4WFlNbUV1N3JZMA?oc=5",
+   "published": "2026-11-11T00:58:12+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "marketscreener.com",
+   "symbols": [],
+   "topics": [
+    "yields"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.405,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "TLT",
+     "XLF",
+     "QQQ"
+    ],
+    "named": [],
+    "summary": "Japanese bond yields rise as US Treasury selloff spills over to Tokyo",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "c354f987787d9e62",
+   "title": "TradingKey Daily Market Briefing: US Stocks Retreat as CPI Tops Estimates; Nvidia Falls Over 5%, AMD and Broadcom Buck the Trend",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY184dmpRZUd2czRkNDBjeV9yc1JsdWNrUjB2N3hHZmQwVDJCMjQ5MTlIeDJYQTlodW5LZlJhZkNkY05lMmNNdTl0Q21wQXAwX29YdVJ5ZmpQTTQ1dXhFVFVnQ0NOZjZLTWZhbVJoQ29YUGxaZm9hMWVIMjQwT0VQWGFWTUZJRTRGYjZJd0RJdXUzeFhTR0lXVFJNaUVIbTBBM1BsUF95WlJUVE9ZWk1TOWZ0RGZ0LUxWc1RQUE00Vk5xX0xuRHVueW9rV2VNLWRyNjJqaw?oc=5",
+   "published": "2026-11-11T00:55:17+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "TradingKey",
+   "symbols": [],
+   "topics": [
+    "yields"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.72,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [
+     "NVDA",
+     "AVGO",
+     "AMD",
+     "TLT",
+     "XLF",
+     "QQQ"
+    ],
+    "named": [
+     "NVDA",
+     "AVGO",
+     "AMD"
+    ],
+    "summary": "TradingKey Daily Market Briefing: US Stocks Retreat as CPI Tops Estimates; Nvidia Falls Over 5%, AMD and Broadcom Buck the Trend",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "c354f987787d9e62",
+    "headline": "TradingKey Daily Market Briefing: US Stocks Retreat as CPI Tops Estimates; Nvidia Falls Over 5%, AMD and Broadcom Buck the Trend",
+    "what_happened": "TradingKey Daily Market Briefing: US Stocks Retreat as CPI Tops Estimates; Nvidia Falls Over 5%, AMD and Broadcom Buck the Trend",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Dato macro: tono positivo en el titular (+0.32)."
+     },
+     {
+      "symbol": "AVGO",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Dato macro: tono positivo en el titular (+0.32)."
+     },
+     {
+      "symbol": "AMD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Dato macro: tono positivo en el titular (+0.32)."
+     },
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "51707825bc10",
+     "63599eab1409",
+     "c72a5c9af7cd",
+     "9a35ff9feb1f",
+     "561a51c2eeb8"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "1a7e86bd5dad9271",
+   "title": "Review & Preview: Hot Inflation",
+   "url": "https://finance.yahoo.com/m/8065cdd2-0a3a-34ae-a497-8419a7ed9c28/review-%26-preview%3A-hot.html?.tsrc=rss",
+   "published": "2026-11-11T00:55:00+00:00",
+   "source": "yahoo",
+   "summary": "All three indexes fell after hot inflation data solidified expectations the Federal Reserve will raise rates.",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.795,
+    "sentiment": -0.583,
+    "impact": "high",
+    "category": "central_bank",
+    "symbols": [
+     "NVDA"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "Review & Preview: Hot Inflation. All three indexes fell after hot inflation data solidified expectations the Federal Reserve will raise rates.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "1a7e86bd5dad9271",
+    "headline": "Review & Preview: Hot Inflation",
+    "what_happened": "All three indexes fell after hot inflation data solidified expectations the Federal Reserve will raise rates.",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "down",
+      "magnitude": "high",
+      "horizon": "weeks",
+      "rationale": "Banco central: tono negativo en el titular (-0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "a30e49c88ffd",
+     "561a51c2eeb8",
+     "b84ede22fb83"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "9a81331dc32b9df1",
+   "title": "Amazon\u2019s Cloud Computing Business Already Brings in More Revenue Than 476 Companies in the S&P 500. Here\u2019s What It Would Take to Reach $1 Trillion.",
+   "url": "https://www.fool.com/investing/2026/11/10/amazon-cloud-computing-brings-in-more-revenue-than-476-companies-in-the-sp-500/?.tsrc=rss",
+   "published": "2026-11-11T00:51:02+00:00",
+   "source": "yahoo",
+   "summary": "CEO Andy Jassy thinks Amazon Web Services could reach $1 trillion in five to 10 years.",
+   "publisher": "",
+   "symbols": [
+    "AMZN"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.605,
+    "sentiment": 0.0,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "AMZN"
+    ],
+    "named": [
+     "AMZN"
+    ],
+    "summary": "Amazon\u2019s Cloud Computing Business Already Brings in More Revenue Than 476 Companies in the S&P 500. Here\u2019s What It Would Take to Reach $1 Trillion.. CEO Andy Jassy thinks Amazon Web Services could reach $1 trillion in five to 10 years.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "9a81331dc32b9df1",
+    "headline": "Amazon\u2019s Cloud Computing Business Already Brings in More Revenue Than 476 Companies in the S&P 500. Here\u2019s What It Would Take to Reach $1 Trillion.",
+    "what_happened": "CEO Andy Jassy thinks Amazon Web Services could reach $1 trillion in five to 10 years.",
+    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+    "affected": [
+     {
+      "symbol": "AMZN",
+      "direction": "unclear",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono neutro en el titular (+0.00)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.2,
+    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "5668f6bce569dd4b",
+   "title": "BYD's Profits Rebounded. These 2 Questions Will Decide What Comes Next.",
+   "url": "https://www.fool.com/investing/2026/11/10/byds-profits-rebounded-these-2-questions-will-deci/?.tsrc=rss",
+   "published": "2026-11-11T00:50:00+00:00",
+   "source": "yahoo",
+   "summary": "BYD had an important third quarter that brought investors relief on the top and bottom lines, but here are two important questions to ask.",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.22,
+    "sentiment": 0.583,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "NVDA"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "BYD's Profits Rebounded. These 2 Questions Will Decide What Comes Next.. BYD had an important third quarter that brought investors relief on the top and bottom lines, but here are two important questions to ask.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "deb87059c80fc255",
+   "title": "Rivian's Deliveries Jumped 58%. Why Didn't Gross Profit Follow?",
+   "url": "https://www.fool.com/investing/2026/11/10/rivians-deliveries-jumped-58-why-didnt-gross-profi/?.tsrc=rss",
+   "published": "2026-11-11T00:50:00+00:00",
+   "source": "yahoo",
+   "summary": "Don't hit the panic button yet! There are a couple of reasons Rivian's automotive gross profit deteriorated despite a spike in deliveries.",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.725,
+    "sentiment": 0.583,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "NVDA"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "Rivian's Deliveries Jumped 58%. Why Didn't Gross Profit Follow?. Don't hit the panic button yet! There are a couple of reasons Rivian's automotive gross profit deteriorated despite a spike in deliveries.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "deb87059c80fc255",
+    "headline": "Rivian's Deliveries Jumped 58%. Why Didn't Gross Profit Follow?",
+    "what_happened": "Don't hit the panic button yet! There are a couple of reasons Rivian's automotive gross profit deteriorated despite a spike in deliveries.",
+    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+    "affected": [
+     {
+      "symbol": "NVDA",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono positivo en el titular (+0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+    "related_events": [
+     "561a51c2eeb8"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
+   "id": "cde050edb761a8f1",
+   "title": "What Should Snap Stock Holders Take From Its Third-Quarter Report?",
+   "url": "https://www.trefis.com/stock/snap/articles/623978/what-should-snap-stock-holders-take-from-its-third-quarter-report/2026-11-10?.tsrc=rss",
+   "published": "2026-11-11T00:44:18+00:00",
+   "source": "yahoo",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "publisher": "",
+   "symbols": [
+    "AAPL",
+    "AMZN",
+    "GOOGL",
+    "META"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.325,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "AAPL",
+     "AMZN",
+     "GOOGL",
+     "META"
+    ],
+    "named": [
+     "AAPL",
+     "AMZN",
+     "GOOGL",
+     "META"
+    ],
+    "summary": "What Should Snap Stock Holders Take From Its Third-Quarter Report?. For questions about this article or underlying research, email help@trefis.com.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "c31df99782bccd09",
+   "title": "Is Uber Stock Paying You Enough For The Swings?",
+   "url": "https://www.trefis.com/stock/uber/articles/623983/is-uber-stock-paying-you-enough-for-the-swings/2026-11-10?.tsrc=rss",
+   "published": "2026-11-11T00:34:07+00:00",
+   "source": "yahoo",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "publisher": "",
+   "symbols": [
+    "UBER"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.325,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "UBER"
+    ],
+    "named": [
+     "UBER"
+    ],
+    "summary": "Is Uber Stock Paying You Enough For The Swings?. For questions about this article or underlying research, email help@trefis.com.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "cc38f80aae611490",
+   "title": "Should You Buy Zoetis Stock At This Price?",
+   "url": "https://www.trefis.com/stock/zts/articles/623948/should-you-buy-zoetis-stock-at-this-price/2026-11-10?.tsrc=rss",
+   "published": "2026-11-11T00:27:17+00:00",
+   "source": "yahoo",
+   "summary": "For questions about this article or underlying research, email help@trefis.com.",
+   "publisher": "",
+   "symbols": [
+    "MRK"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.105,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "opinion",
+    "symbols": [
+     "MRK"
+    ],
+    "named": [
+     "MRK"
+    ],
+    "summary": "Should You Buy Zoetis Stock At This Price?. For questions about this article or underlying research, email help@trefis.com.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "2b73680fa41e351a",
+   "title": "Gas prices slowly dropping in Illinois, Northwest Indiana, while other costs are up",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQREJDRzExajBKNGhqNXVYWU5uM3hUa2hwbEYwSXVvb2U4dHF5aEUwalJuNEhfb2F2aUxCTk5XMmtJNkN1NGZpVnNBb3B3NnFjWXlzUGxUYmNfejZ2YlBWbVZ1R2ptUmJFN1RZREZJUEZDVnVyWkhnV2c3a3BmaWhycnRVVDhzMFhuc2hhbg?oc=5",
+   "published": "2026-11-11T00:27:08+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CBS News",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.14,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Gas prices slowly dropping in Illinois, Northwest Indiana, while other costs are up",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "2aef0189254b6072",
+   "title": "Rupiah Today November 11, 2026, US Dollar Exchange Rate at Rp18,059 and Market Strengthening Signals",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORlgySk0zT2ZuMktrREhrVGhTc0lUellIX2ZLRG9LZmZET2gwTURDYkRRQmZHM1ZxckNJYk1lWE1yNGlUemNTaWxYNDY3ZEhBRUZxVm1LRHI0NzdUQkJaUEd5dEhPNVFMdUZIZEJjaXpSZTRfcFI1b2FWRXdrdWlPbDg3SzBENUlKclA5TGtPRGhjVjQ3SWMtMVQwY0pvR2pZX1ROX1h5dWRkR2pwNTdfc2hfTEpndFlSV3RVU0UxS0JlaUJZVE15WA?oc=5",
+   "published": "2026-11-11T00:26:05+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Aktualita.co",
+   "symbols": [],
+   "topics": [
+    "dollar"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.325,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "GLD",
+     "EEM"
+    ],
+    "named": [],
+    "summary": "Rupiah Today November 11, 2026, US Dollar Exchange Rate at Rp18,059 and Market Strengthening Signals",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "3c75ac298f676558",
+   "title": "AST SpaceMobile Has Fallen for 3 Straight Weeks and Sits More Than 75% Below Its High. Here's What $5,000 Invested Today Will Be Worth If It Gets Back There.",
+   "url": "https://www.fool.com/investing/2026/11/10/ast-spacemobile-has-fallen-for-3-straight-weeks-an/?.tsrc=rss",
+   "published": "2026-11-11T00:25:00+00:00",
+   "source": "yahoo",
+   "summary": "AST stock would deliver huge returns for buyers at today's prices if the stock were to rebound to its previous high.",
+   "publisher": "",
+   "symbols": [
+    "NVDA"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.365,
+    "sentiment": 0.322,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "NVDA"
+    ],
+    "named": [
+     "NVDA"
+    ],
+    "summary": "AST SpaceMobile Has Fallen for 3 Straight Weeks and Sits More Than 75% Below Its High. Here's What $5,000 Invested Today Will Be Worth If It Gets Back There.. AST stock would deliver huge returns for buyers at today's prices if the stock were to rebound to its previous high.",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "c79bfa18dbe7f89c",
+   "title": "Moody's (MCO) Tests On Chain Ratings, Is The Stock Already Expensive?",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/moodys-mco-tests-chain-ratings-001914672.html?.tsrc=rss",
+   "published": "2026-11-11T00:19:14+00:00",
+   "source": "yahoo",
+   "summary": "Moody's (MCO) is pushing further into digital assets after completing a pilot with Chainlink that sent sample credit ratings across multiple blockchains using Chainlink's interoperability protocol and Moody's Token Integration Engine. Over the past month, Moody's has seen a 10.0% 30 day share price return and a 6.9% 90 day share price return. The 3 year total shareholder return of 49.0% contrasts with a much more modest 4.5% outcome over the past year, which suggests momentum has cooled...",
+   "publisher": "",
+   "symbols": [
+    "LINK-USD"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.365,
+    "sentiment": 0.322,
+    "impact": "low",
+    "category": "markets",
+    "symbols": [
+     "LINK-USD"
+    ],
+    "named": [
+     "LINK-USD"
+    ],
+    "summary": "Moody's (MCO) Tests On Chain Ratings, Is The Stock Already Expensive?. Moody's (MCO) is pushing further into digital assets after completing a pilot with Chainlink that sent sample credit ratings across multiple blockchains using Chainlink's interoperability protocol and Moody's Token Integ",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "2f9faf8f2e7de704",
+   "title": "UnitedHealth Group (UNH) Will Drop Medicare Plans In 140 Counties And Leave Wyoming",
+   "url": "https://finance.yahoo.com/healthcare/articles/unitedhealth-group-unh-drop-medicare-001646439.html?.tsrc=rss",
+   "published": "2026-11-11T00:16:46+00:00",
+   "source": "yahoo",
+   "summary": "UnitedHealth Group (NYSE:UNH) plans to discontinue some UnitedHealthcare Medicare Advantage products across 140 counties for the 2027 plan year. The insurer will fully exit Medicare coverage in Wyoming in 2027, withdrawing both Medicare Advantage and Medicare Part D plans. About 390,000 UnitedHealthcare Medicare members are expected to be affected by these county and state level plan exits in 2027. UnitedHealthcare's 2027 Medicare Advantage pullback in 140 counties and Wyoming only captures...",
+   "publisher": "",
+   "symbols": [
+    "UNH"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.18,
+    "sentiment": -0.322,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "UNH"
+    ],
+    "named": [
+     "UNH"
+    ],
+    "summary": "UnitedHealth Group (UNH) Will Drop Medicare Plans In 140 Counties And Leave Wyoming. UnitedHealth Group (NYSE:UNH) plans to discontinue some UnitedHealthcare Medicare Advantage products across 140 counties for the 2027 plan year. The insurer will fully exit Medicare coverage in Wyoming in 2027, withdrawi",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "37a9ac1c80574317",
+   "title": "Federal Reserve Officials Consider 0.5% Rate Hike Amid Rising Inflation",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdHdmcVZYdnpkd1RYTHF3bkNBa1lCOW13UVg0WWhnTl9mcFZycXlvRUlseHFjTHVMSk16dG9UZkx4ZjZ2T1ctVERPSGF6blBrZ2dEaHMzNUQ0dDZ5dUVWNmhMeXNzNXc1eWNiNEsxYkYyLU9fRHhtWnlSYmJMam1GTU93b2lPdlQxaTNUbHRR?oc=5",
+   "published": "2026-11-11T00:16:30+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "\uc870\uc120\uc77c\ubcf4",
+   "symbols": [],
+   "topics": [
+    "fed"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.675,
+    "sentiment": -0.762,
+    "impact": "medium",
+    "category": "central_bank",
+    "symbols": [],
+    "named": [],
+    "summary": "Federal Reserve Officials Consider 0.5% Rate Hike Amid Rising Inflation",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "0f2c70678db7426c",
+   "title": "If the war winds down, the price of oil will plummet, says Jim Cramer",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdGYyeVdLekY4X0RheXZNTUlra3g0R2xDVkZfVnJ0TUgycFl5Qmxqak41V1R2TDAyVVdMdzFWc3VteVBCWHc4RnhLNFJabmhiTHZkX0lkdFBiUEtfLTlOc3lFS0NyZG5KMFllYmt3WXdqZGhuRV9MVFlvTl9LdmtWVmRHMjY4R2hLYVQyRFRJV1g2d3BGWkhFdWNOUi1iWERuUExIcG10VWlCYUJocmR3?oc=5",
+   "published": "2026-11-11T00:16:23+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "CNBC",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.62,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "geopolitics",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "If the war winds down, the price of oil will plummet, says Jim Cramer",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "8bd871b6117272b2",
+   "title": "Rigetti Computing CEO Says Focus on Quantum Milestones, Not Sales Numbers",
+   "url": "https://finance.yahoo.com/m/0c055226-baeb-3257-9de5-6e076ddf19fa/rigetti-computing-ceo-says.html?.tsrc=rss",
+   "published": "2026-11-11T00:16:00+00:00",
+   "source": "yahoo",
+   "summary": "As Rigetti Computing posts just $1.4 million in quarterly revenue, CEO Subodh Kulkarni says focusing on sales growth is \u201cpremature.\u201d",
+   "publisher": "",
+   "symbols": [
+    "IBM"
+   ],
+   "topics": [],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.645,
+    "sentiment": 0.322,
+    "impact": "medium",
+    "category": "earnings",
+    "symbols": [
+     "IBM"
+    ],
+    "named": [
+     "IBM"
+    ],
+    "summary": "Rigetti Computing CEO Says Focus on Quantum Milestones, Not Sales Numbers. As Rigetti Computing posts just $1.4 million in quarterly revenue, CEO Subodh Kulkarni says focusing on sales growth is \u201cpremature.\u201d",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "8bd871b6117272b2",
+    "headline": "Rigetti Computing CEO Says Focus on Quantum Milestones, Not Sales Numbers",
+    "what_happened": "As Rigetti Computing posts just $1.4 million in quarterly revenue, CEO Subodh Kulkarni says focusing on sales growth is \u201cpremature.\u201d",
+    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+    "affected": [
+     {
+      "symbol": "IBM",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Resultados: tono positivo en el titular (+0.32)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+    "related_events": [
+     "fff24606cc23"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
    "id": "1b4aa02976415723",
    "title": "Federal Reserve Discusses Economic Trends Ahead of Midterms",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObDJ0ZWdfdHVuZzFGUWx4N1JWWVpGTFNFYkRXVjVnZFJnLU1Md1RMbVFGUWhFQ2YzSVhNeVlHMk9UOHpTT1pCNFFjT2pVM0JQcW9ocTMzUDNsanR3UVhWcVBpbzZEUkF3WVduZ3VWQUdHRVBTNjFnSVp6NjJHT1huLTFsbVMwbFlzSFdIYQ?oc=5",
@@ -23,6 +941,32 @@
     "summary": "Federal Reserve Discusses Economic Trends Ahead of Midterms",
     "model": "local",
     "at": "2026-11-11T00:20:36.820729+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "a34ad235067f2014",
+   "title": "Unemployment rate falls to 5.1% in Q2: Rural sector improves at 4.3%, concern in urban areas",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQelNWb1VzUDlHWXVwVjZ4blNuUXVNN21XQjYxMTZ4eWJuX2NKRmpkYmxEVkotNENzeGhwZmRzM1RwbnY3MW9DNzBpZVVKZUVqbGpqbWRhUWxHcHo3cXd0SEJ4VDJ6UFpicTRqUFh5Ulc4MXBkTnRqTFNCMjVVVFgwN3gxMGxVTG5oU0hYZ3hxZXpqSXZFSmhqQ2pUdFIwaUlwNDN3WFg3ZHNHd2d5LWw3UmxaNFd3LS0zc1ZXZEJqN21FSFJLNTVGd9IBzgFBVV95cUxPTVpxNFRDM1BrU1pEZTVjRC1QTTVHYlBBUUFtOUpWT01YTm9LdVhyN3RwQWRBN3VwUkRCVnJzMzBfR2x4SzV0a05reFNVMl96QnhDWDM4QldPeW1NbHF0NTBmRWYyWHNTQldzSjdNUzVsTUNtODBxSHZzUkE4QmZUR3FUc0FBMjJaQl9QVEpfUXZnbU1MYnBvT1lSZUVCbHBqZjhuRTV5Wi1lYVBOWW56Zl9oVFppZUVZODFybGthaVJ2N2hTU3hxNC1IMjhDUQ?oc=5",
+   "published": "2026-11-11T00:13:16+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "News9live",
+   "symbols": [],
+   "topics": [
+    "jobs"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.64,
+    "sentiment": -0.583,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [],
+    "named": [],
+    "summary": "Unemployment rate falls to 5.1% in Q2: Rural sector improves at 4.3%, concern in urban areas",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
    },
    "analysis": null
   },
@@ -87,7 +1031,46 @@
     "model": "local",
     "at": "2026-11-11T00:20:36.820729+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "0a28962f8c21d45e",
+    "headline": "Oil slides below US$86 as weekly losses top 11%",
+    "what_happened": "Oil slides below US$86 as weekly losses top 11%",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "33446879847a8825",
@@ -146,7 +1129,36 @@
     "model": "local",
     "at": "2026-11-11T00:20:36.820729+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "8b1caedbc8cb9865",
+    "headline": "Russian Push to Escape Dollar for Yuan Collapses Under Sanctions",
+    "what_happened": "Russian Push to Escape Dollar for Yuan Collapses Under Sanctions",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "EEM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "f850b365df7c1eef",
@@ -435,6 +1447,32 @@
     "summary": "Bullish\u2019s New President Backs Issuer-First Model for Tokenized Stocks. Digital asset platform Bullish (NYSE: $BLSH) plans to build its tokenized stock business around the companies that ...",
     "model": "local",
     "at": "2026-11-11T00:20:36.820729+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "a2860dc8d5258c4a",
+   "title": "U.S. inflation report highlights strain of rising food, energy and housing costs",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSEJxWVBzUmhfNGE3UkswZ3pLQVJwcXM4ZzNZWjdIRDJXZnprRkxxZDd5cVRCVEJLblg2cWw3bnJhbGYwY3IxTlE1cDl3RnlMTDV4SHdQVEtYbFQtZkxkbk1tSzJxenNaUzFQWU0yMkpLNVh1N2dieWQ5WVBfWkJUNy1JZEFlNmJjaWxJbjhTcnVMcGVYZUdGVTNqUlhzYTl6WmlOc3Z5dkdRN3BCdmcza3ZR?oc=5",
+   "published": "2026-11-10T23:30:13+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "PBS",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.6,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [],
+    "named": [],
+    "summary": "U.S. inflation report highlights strain of rising food, energy and housing costs",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
    },
    "analysis": null
   },
@@ -1285,7 +2323,46 @@
     "model": "local",
     "at": "2026-11-11T00:20:36.820729+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "9cfcf66be555ef06",
+    "headline": "Shafaq News..China's crude oil and rare earth imports rise in October",
+    "what_happened": "Shafaq News..China's crude oil and rare earth imports rise in October",
+    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "1167bb4e02484f54",
@@ -1666,6 +2743,78 @@
     "at": "2026-11-10T23:20:48.955777+00:00"
    },
    "analysis": null
+  },
+  {
+   "id": "fc03ea80571d52d3",
+   "title": "Inflation remains stubbornly high across the economy",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdzdRUDBRZHNfME5NbFFidHBmWG9mNC1FY2pKV2swd1cwUG9PQjZtNmU3akJZZ2pHMWtxdFNrRVd6OGFRc0dhODdkTHRUSGRHQzJNdVNhX3Y0LXBlYVh1ckMwdVZCUndWTzZ3b2JGVXVCZ0xuUmJ4R01JYlpLMmswWmdIbFUyS19zT0VoVmpTVWJiQVp5aUNKVXhmSGthX2FwaG14TnpqU3Jhdw?oc=5",
+   "published": "2026-11-10T22:30:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Marketplace.org",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.68,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Inflation remains stubbornly high across the economy",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "fc03ea80571d52d3",
+    "headline": "Inflation remains stubbornly high across the economy",
+    "what_happened": "Inflation remains stubbornly high across the economy",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.36,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "51707825bc10",
+     "63599eab1409",
+     "c72a5c9af7cd",
+     "9a35ff9feb1f",
+     "a682a6166ebe"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "8242c3b56419cd10",
@@ -4253,7 +5402,46 @@
     "model": "local",
     "at": "2026-11-10T22:20:40.599609+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "e5b9773b9d12ada1",
+    "headline": "US Crude Production to Hit Record High for Fourth Straight Year in 2026, EIA Says",
+    "what_happened": "US Crude Production to Hit Record High for Fourth Straight Year in 2026, EIA Says",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.58,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "dc2629749d0a4085",
@@ -7347,6 +8535,36 @@
    "analysis": null
   },
   {
+   "id": "33d77b23a304798e",
+   "title": "Gas price falls below $4 for first time since July",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNckFycE5XR3VJelJINXN3ckk0NkJBMDZyLVZncDZ1ZFVmNkRNQTlsNDliZDYyaV9DY0ZudFhna3lNOTlqcGQ3enNfWUVuV29FX2FNb3Z2TTc1OG1lN2lFcnl2eHNYeV9aV0pTdk9sYWRxOE83THRtb09yWDVGRmtkYlQ4VU1QdndzSHZxRFBWcFVXWk5GQkI5QWFvZjdjdw?oc=5",
+   "published": "2026-11-10T20:20:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "The Washington Post",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.18,
+    "sentiment": -0.322,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "Gas price falls below $4 for first time since July",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "da4816e6c54a78bc",
    "title": "Goldman, Citi Commit $270M to Their Own Stablecoin: Can Tether and Circle Hold On?",
    "url": "https://beincrypto.com/goldman-citi-270m-stablecoin-tether-circle/?.tsrc=rss",
@@ -8724,7 +9942,46 @@
     "model": "local",
     "at": "2026-11-10T21:20:37.793559+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "decf5984b1fe7b36",
+    "headline": "Diesel Price Drop: Why Oil Markets Are Tumbling",
+    "what_happened": "Diesel Price Drop: Why Oil Markets Are Tumbling",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "8ce76087e6e7bd80",
@@ -12379,6 +13636,36 @@
    "analysis": null
   },
   {
+   "id": "786b6b1f9eecc4d7",
+   "title": "US Raises Forecasts for 2027 Gasoline and Diesel Prices",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNa3hQQ3lEMTBoVW5ZYnkxWlF3T05UWUVYY256UzZmVDRmTDU4UmZIN0tOTkc0QnU5eVoxMnlJZkFtOTBwbnNwbTZ5RTJyUTVSMTdBT2dMZnI0QWdnVm1vM0gyeWFQSjc5Q1g1U2E4WUc2U1l5Y3VwMWdGUW4xMm5wNm5iakhjal9mN19VM0pvTDBXOFp4Sm1MeEF6VHV3NU9JNDhSUWVYaFNQQQ?oc=5",
+   "published": "2026-11-10T18:46:41+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Bloomberg.com",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.18,
+    "sentiment": 0.322,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [],
+    "summary": "US Raises Forecasts for 2027 Gasoline and Diesel Prices",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "d27bc60590111f4e",
    "title": "Nvidia in the hot seat, Anthropic to test the IPO market, hotter-than-expected US inflation",
    "url": "https://finance.yahoo.com/video/nvidia-in-the-hot-seat-anthropic-to-test-the-ipo-market-hotter-than-expected-us-inflation-184626512.html?.tsrc=rss",
@@ -14503,6 +15790,39 @@
     "summary": "What Is Uber Technologies (UBER) Gaining From Its Expanded 14 Market Delivery Tie Up?. Uber Technologies (NYSE:UBER) and McDonald\u2019s agreed a multi-year expansion of their delivery and loyalty partnership across 14 global markets. Under the new agreement, Uber becomes the preferred integrated delivery provi",
     "model": "local",
     "at": "2026-11-10T19:20:37.083280+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "650f5d83398abf83",
+   "title": "Why Oil Markets and Geopolitics Now Move Together Beyond Brent",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaTI0RzlRSmVuRDBUTDkzRkpwZ3dXMFdjZVBBQ2I3TnJETWNvTXJJemZBQjNoSXgxY2s5TjFIMnMzcUxhc0huRVY3MlhZb0gwMkRabk10cG5vdENwSzFxcnlDb2RzQ3VjYkpjUWdUVHhWLS1fZWp1ak11aDBFYjVoLXEtN3JEbDFYenp2OXZFOUk?oc=5",
+   "published": "2026-11-10T18:10:53+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Discovery Alert",
+   "symbols": [],
+   "topics": [
+    "geopolitics"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.5,
+    "sentiment": 0.0,
+    "impact": "low",
+    "category": "geopolitics",
+    "symbols": [
+     "NOW",
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [
+     "NOW"
+    ],
+    "summary": "Why Oil Markets and Geopolitics Now Move Together Beyond Brent",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
    },
    "analysis": null
   },
@@ -18156,7 +19476,64 @@
     "model": "local",
     "at": "2026-11-10T17:58:37.548941+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "6f591d2dcf0e4dc5",
+    "headline": "2 Cryptocurrencies to Buy Before January 2027",
+    "what_happened": "Bitcoin and Ether should soar much higher over the next few years.",
+    "why_it_matters": "Las noticias de flujos, regulaci\u00f3n o adopci\u00f3n mueven el sentimiento de todo el mercado cripto.",
+    "affected": [
+     {
+      "symbol": "BTC-USD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Cripto: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "ETH-USD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Cripto: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "BCH-USD",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "days",
+      "rationale": "Cripto: tono positivo en el titular (+0.58)."
+     },
+     {
+      "symbol": "SOL-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XRP-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "ADA-USD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Los flujos de los ETF y la reacci\u00f3n de BTC/ETH.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "224230b999882e4a",
@@ -23751,6 +25128,39 @@
    "analysis": null
   },
   {
+   "id": "37ec6bcc8f198e13",
+   "title": "Average cost of gas drops below $4 per gallon for first time since July",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxObkQ5YUpnNDlRNTlqdkp6dkZ1TW5VdGJXYzlIS1Z6dHFfekxTVXkzZHA5YmpMcnh4MzBHajJZQnF1c0ljYUxTTENlMmtPTzd3cUc5T2YxdkNuaEczSVEzRXdISkY2blFvZnJ1NkNiYUpVeHU5YW1zSlhTWDhrMjN2S1g4NUJPS3NhUW9HMTRvcUZ3MVBMWHg3bWpmN3A4QdIBowFBVV95cUxOdk9RZlh3dWNhaUpDeV95TEJidUM5LTY1YWw1bVFQakVjdzhIWTFsYkVoTkdKYmJkNlBjdkdkT0ZEU0l5R1BxWU1UM1RsTFc5UzJrREVFN2xONDRVUFVNUVM1cXBEV3JxMG5OTkZKck85aWVUYWZPRlJwVnRybjJST1NrQ1JUOEpBUzVTQ2t4amxqUnY1YkZweU1Cb05JOUhxc1J3?oc=5",
+   "published": "2026-11-10T16:18:08+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "KTSM 9 News",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.18,
+    "sentiment": -0.322,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "COST",
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [
+     "COST"
+    ],
+    "summary": "Average cost of gas drops below $4 per gallon for first time since July",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "927a4e77bb1f5ffd",
    "title": "5 High-Yield Dividend Stocks That Can Actually Afford Their Payouts",
    "url": "https://247wallst.com/investing/2026/11/10/5-high-yield-dividend-stocks-that-can-actually-afford-their-payouts/?.tsrc=rss",
@@ -24192,32 +25602,6 @@
     "summary": "\u2018Our Best Product Ever\u2019: Elon Musk Bet Big on the Cybertruck \u2014 Now He\u2019s Winding It Down After Sales Fell to 20,237 Against a 250,000-a-Year Goal. Tesla will wind down Cybertruck production in 2027 to make room for Cybercab production as sales plunge, prices climb, and Musk\u2019s once-praised pickup falls short of expectations.",
     "model": "local",
     "at": "2026-11-10T23:20:48.955777+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "75270e8047681ff4",
-   "title": "Inflation Continues to Challenge U.S. Economy",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSmJfX29QNEQtZ0JiSTgzd2lPYVdyRFpUTnV0bjltajRsYzUtSE4zVWlVOHc2WVVPWFF4RklWNkpLaUJnaWVyLU9DNDA1RzlSTEstelFZQWhneXo2eXhqU3I3T1lpOXl0bUNUOEExN1FxY200SjI1a3N4Wi12MzJYbzB1bjNYMG5TMmYtNzBha2dvYUtEVTdvSlZ3?oc=5",
-   "published": "2026-11-10T16:15:05+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "The New York Times",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-11-10T17:20:46.264813+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Inflation Continues to Challenge U.S. Economy",
-    "model": "local",
-    "at": "2026-11-10T17:20:46.264813+00:00"
    },
    "analysis": null
   },
@@ -29026,6 +30410,39 @@
    }
   },
   {
+   "id": "7215af7232442879",
+   "title": "Average cost of gas drops to less than $4 per gallon for first time since July",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU2NtTXVVdXZDeDJsWjY1aV9ob1pTNzBZTnRzZUtsa1NVODcyNkxveGxaOGNLaWRKS3VuNkNhYlRHaDR6VmFTajRxTGl2Qk1KeVpvS0NPUmk1WWU0djlxWS15WVVlTDVNMVViOVl6Z040cXlWMDVxcEpjcXR4M1BidkhlTWJjeHF6N3p1ckpoTXdLMG1wd0FGOEpuLWFzMlJjV2VwZml2VXdkZlBQdWxactIBtgFBVV95cUxPNDdIXzdxRFIzOVNlZzE5QThhQ1hIUWxURmQtZTFabkJxNmF6OXBoZjVFaVJlMzNSRkF0MkxrYkh4Z0pVdDJCd0p4ck16QjhjMzdOaVdSMzFUVW0zN1hsYVVrV2xmSHVfSUZJazhnMTFGbkEtYTJ3eW42UEUxdHAtdGdfSGNIY0psbkNTX3BybGtHbElBVzhnZGFJWWJETkpxV1lpbnJZYVJPd3hYMGJORVFmXzNSQQ?oc=5",
+   "published": "2026-11-10T15:12:00+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "The Hill",
+   "symbols": [],
+   "topics": [
+    "oil"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.18,
+    "sentiment": -0.322,
+    "impact": "low",
+    "category": "other",
+    "symbols": [
+     "COST",
+     "XLE",
+     "XOM",
+     "CVX"
+    ],
+    "named": [
+     "COST"
+    ],
+    "summary": "Average cost of gas drops to less than $4 per gallon for first time since July",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": null
+  },
+  {
    "id": "ddc9aaa8aa6bff44",
    "title": "U.S. economy adds 165,000 jobs in October as unemployment holds at 4.1%",
    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdG93bF96SDliWE0zWmhWUXpwTnZ6WFlhUmZGeDRfQjZMQ0Vsa3kySm91VFpJQmtjUHBNdGdFVEJITldTZzhDaWdvR21XT1BBVnoyd1Y3SHpGUzBKenBfUlNqV3pHTFEwMm5leURxOC1ueDhSY2tKanA5S0dnV2JlTmktVUpod1V1Vng4WjB3N3U0d2hS?oc=5",
@@ -30966,7 +32383,53 @@
     "model": "local",
     "at": "2026-11-10T15:20:42.912589+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "fcff32c8f145c110",
+    "headline": "ConocoPhillips Just Raised Its Dividend 10.7%. Does Its Free Cash Flow Cover the 2.5% Yield?",
+    "what_happened": "Key TakeawaysConocoPhillips raised its quarterly dividend 10. 7% to $0.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "COP",
+      "direction": "up",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+     },
+     {
+      "symbol": "TLT",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XLF",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "QQQ",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.6,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "350a9d20c18d",
+     "8f3e00b6ebcf"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "143f27310d6df07b",
@@ -32334,7 +33797,53 @@
     "model": "local",
     "at": "2026-11-10T15:20:42.912589+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "eb513d32c5e02453",
+    "headline": "Canadian Dollar and Business Outlook: Loonie drops, crude oil falls",
+    "what_happened": "Canadian Dollar and Business Outlook: Loonie drops, crude oil falls",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "b0bf502e3b74f95f",
@@ -37976,6 +39485,69 @@
    "analysis": null
   },
   {
+   "id": "990ef05a73091c16",
+   "title": "US Dollar Index (DXY) trims losses ahead of US inflation data",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQc1FleVFHUWl1VGRkQkVYZ1l6OFFrdkFxTHJ2Y2lXVlQ5LUM4Sjd4bHR2Ullubm52Zk1vZE9hc3BFMEQyMnpISHpXNy1FZU1VMzlKRUs4UTVjcXVPcS1NZ2NMNEJTR3RYZWVqbDJMTVpzM2o3VGRNNG9OWDBYQnpGLWZ3N2NkemV5ZUROMnhKakxxcjlYeGljRE5VYUUxWjBpUFJRTQ?oc=5",
+   "published": "2026-11-10T13:49:52+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "FXStreet",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.72,
+    "sentiment": -0.583,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [
+     "GLD",
+     "EEM"
+    ],
+    "named": [],
+    "summary": "US Dollar Index (DXY) trims losses ahead of US inflation data",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "990ef05a73091c16",
+    "headline": "US Dollar Index (DXY) trims losses ahead of US inflation data",
+    "what_happened": "US Dollar Index (DXY) trims losses ahead of US inflation data",
+    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+    "affected": [
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "EEM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "days",
+      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+    "related_events": [
+     "51707825bc10",
+     "63599eab1409",
+     "c72a5c9af7cd",
+     "9a35ff9feb1f"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
+  },
+  {
    "id": "c0f7c6fe93544f2c",
    "title": "Salesforce Sinks as S&P Cuts Its Rating to A on Deals and a $25 Billion Buyback",
    "url": "https://www.tikr.com/blog/salesforce-sinks-as-sp-cuts-its-rating-to-a-on-deals-and-a-25-billion-buyback?ref=yahoofinance&tlnk=yf-261110-j7mwj89p&.tsrc=rss",
@@ -38004,7 +39576,29 @@
     "model": "local",
     "at": "2026-11-10T15:20:42.912589+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "c0f7c6fe93544f2c",
+    "headline": "Salesforce Sinks as S&P Cuts Its Rating to A on Deals and a $25 Billion Buyback",
+    "what_happened": "Key TakeawaysS&P cut Salesforce\u2019s credit rating to A from A+ last week, citing rising acquisition activity and shareholder returns, while keeping a stable outlook. Salesforce agreed to buy Braze for about $5.",
+    "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+    "affected": [
+     {
+      "symbol": "CRM",
+      "direction": "down",
+      "magnitude": "medium",
+      "horizon": "weeks",
+      "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.58)."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "d0bb5bd333d43abe",
@@ -49396,7 +50990,46 @@
     "model": "local",
     "at": "2026-11-10T15:20:42.912589+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "9c40f416b8c0b963",
+    "headline": "Oil Prices Drop On Improved Supply Outlook, Brent Falls To $91",
+    "what_happened": "Oil Prices Drop On Improved Supply Outlook, Brent Falls To $91",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "98046e77900874d8",
@@ -49546,6 +51179,32 @@
      "XLK"
     ],
     "summary": "Is Wall Street Bullish or Bearish on Skyworks Stock?. Although Skyworks has outpaced the broader market over the past year, Wall Street analysts remain cautious about the stock\u2019s prospects.",
+    "model": "local",
+    "at": "2026-11-10T17:20:46.264813+00:00"
+   },
+   "analysis": null
+  },
+  {
+   "id": "75270e8047681ff4",
+   "title": "Inflation Continues to Challenge U.S. Economy",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSmJfX29QNEQtZ0JiSTgzd2lPYVdyRFpUTnV0bjltajRsYzUtSE4zVWlVOHc2WVVPWFF4RklWNkpLaUJnaWVyLU9DNDA1RzlSTEstelFZQWhneXo2eXhqU3I3T1lpOXl0bUNUOEExN1FxY200SjI1a3N4Wi12MzJYbzB1bjNYMG5TMmYtNzBha2dvYUtEVTdvSlZ3?oc=5",
+   "published": "2026-11-10T10:45:25+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "The New York Times",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-10T17:20:46.264813+00:00",
+   "triage": {
+    "relevance": 0.6,
+    "sentiment": -0.322,
+    "impact": "medium",
+    "category": "macro",
+    "symbols": [],
+    "named": [],
+    "summary": "Inflation Continues to Challenge U.S. Economy",
     "model": "local",
     "at": "2026-11-10T17:20:46.264813+00:00"
    },
@@ -54026,7 +55685,46 @@
     "model": "local",
     "at": "2026-11-10T10:05:52.180473+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "29bfeb7dd66ba5f8",
+    "headline": "FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors",
+    "what_happened": "FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "40ce5084a8dd1632",
@@ -55083,7 +56781,46 @@
     "model": "local",
     "at": "2026-11-10T10:05:52.180473+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "6a976b3c7d8859de",
+    "headline": "Oil prices extend losses as fears of Middle East escalation ease",
+    "what_happened": "Oil prices extend losses as fears of Middle East escalation ease",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "5aba8ffde19384d3",
@@ -55206,7 +56943,46 @@
     "model": "local",
     "at": "2026-11-10T10:05:52.180473+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "2d6faf24127dac83",
+    "headline": "Oil Prices Fall as Brent Drops to $90.99",
+    "what_happened": "Oil Prices Fall as Brent Drops to $90.99",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "5e621b5e252c1694",
@@ -56882,7 +58658,7 @@
    "id": "5c15d18057eed5d0",
    "title": "Could an AI Spending Crunch Cause a US Recession?",
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaXo3MjVIOFMwUnZ6MEF2ZnlFOURObWdiVnpaUldPT2RrUzhtQUROdW5pQkNKQjlKZ2NNTFNDbUNwRmhrMmVPVGxOc3lwQWo3RlhDck5kRUo3bXRqeFNHZlVGRko5Yy0wQUtrNzRmN0dKd0l3Sk1HZUUxYkRMQ3RabV9sSEwtZERYd3otZm84WEJuamxRdVE?oc=5",
-   "published": "2026-11-10T07:16:21+00:00",
+   "published": "2026-11-10T07:15:48+00:00",
    "source": "google-news",
    "summary": "",
    "publisher": "Morningstar",
@@ -57800,7 +59576,46 @@
     "model": "local",
     "at": "2026-11-10T10:05:52.180473+00:00"
    },
-   "analysis": null
+   "analysis": {
+    "id": "8d9b389f189f95b2",
+    "headline": "Shafaq News..Basrah crudes sink amid global oil decline",
+    "what_happened": "Shafaq News..Basrah crudes sink amid global oil decline",
+    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+    "affected": [
+     {
+      "symbol": "XLE",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "XOM",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "CVX",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "Si otras fuentes confirman la noticia.",
+    "related_events": [
+     "a682a6166ebe",
+     "5ecabc334671"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   }
   },
   {
    "id": "b6233df7e6d61762",
@@ -65603,6 +67418,67 @@
     "read_full_article": false,
     "model": "local",
     "at": "2026-11-10T02:17:28.921845+00:00"
+   }
+  },
+  {
+   "id": "e9e9d7d1c69b8df4",
+   "title": "Gold prices drop after hot CPI, hawkish Waller spark supersized Fed hike bets",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSTZ3dHpzT1dDUFZDVUpCbGROTVJZRVQyZ3U3Sm5SVkFqLXlDMjFUV2VGS0ZXUFZXVlR2T2lra2I1T2pSRXIwdzY5UVpySWd4REs0bkZhallYVDRmcWM2cFZyNVJQNURwdVoxS3dlTXp4cWRYa3VaOFRFdllmc0FrWGl2azMxNjl4SEkxeE84enFQajhIazJaVGhfYndsemloWlFBblRIWUk3T1VlTXFudzlTc2gzTms?oc=5",
+   "published": "2026-11-10T01:14:25+00:00",
+   "source": "google-news",
+   "summary": "",
+   "publisher": "Investing.com",
+   "symbols": [],
+   "topics": [
+    "inflation"
+   ],
+   "fetched_at": "2026-11-11T01:20:49.464772+00:00",
+   "triage": {
+    "relevance": 0.755,
+    "sentiment": -0.583,
+    "impact": "high",
+    "category": "central_bank",
+    "symbols": [
+     "GLD",
+     "SLV"
+    ],
+    "named": [],
+    "summary": "Gold prices drop after hot CPI, hawkish Waller spark supersized Fed hike bets",
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
+   },
+   "analysis": {
+    "id": "e9e9d7d1c69b8df4",
+    "headline": "Gold prices drop after hot CPI, hawkish Waller spark supersized Fed hike bets",
+    "what_happened": "Gold prices drop after hot CPI, hawkish Waller spark supersized Fed hike bets",
+    "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+    "affected": [
+     {
+      "symbol": "GLD",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     },
+     {
+      "symbol": "SLV",
+      "direction": "unclear",
+      "magnitude": "low",
+      "horizon": "weeks",
+      "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+     }
+    ],
+    "macro_link": "",
+    "priced_in": "unknown",
+    "confidence": 0.49,
+    "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+    "related_events": [
+     "a30e49c88ffd",
+     "b84ede22fb83"
+    ],
+    "read_full_article": false,
+    "model": "local",
+    "at": "2026-11-11T01:20:49.464772+00:00"
    }
   },
   {
@@ -412167,2110 +414043,6 @@
     "summary": "Oil Prices Today: Brent Crude Hovers Near $104 Amid Uncertainty Over US-Iran Peace Talks",
     "model": "local",
     "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "4b36cc1392072c90",
-   "title": "Why Fiserv Stock Triumphed on Tuesday",
-   "url": "https://www.fool.com/investing/2026/11/03/why-fiserv-stock-triumphed-on-tuesday/?.tsrc=rss",
-   "published": "2026-11-04T01:18:56+00:00",
-   "source": "yahoo",
-   "summary": "The company showed signs of a potential turnaround in its third-quarter earnings.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.605,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "Why Fiserv Stock Triumphed on Tuesday. The company showed signs of a potential turnaround in its third-quarter earnings.",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": {
-    "id": "4b36cc1392072c90",
-    "headline": "Why Fiserv Stock Triumphed on Tuesday",
-    "what_happened": "The company showed signs of a potential turnaround in its third-quarter earnings.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "NVDA",
-      "direction": "unclear",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono neutro en el titular (+0.00)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   }
-  },
-  {
-   "id": "6afc466fc1c71f9e",
-   "title": "Recap: New Zealand jobless rate hits 11-year high, kiwi slips as RBNZ hike bets fade",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQb1FxSFJCMHo3WjE1Q2VvdW9nWWprcGlOUENHSmR1OWJhUW5SMVRjc0RmZFpZSE1Pd0JwdWVCbGo0bks1bDB3OW5uS3dvYlpjZjh6MHdqdWVtdFU3UlVDNnVyb2xGQm1kcEo3bzFWNVZQRl9KelQ2VlhTQ2Y5eFlCLXRIUjE2aXQxUjNlMkQ5Skw2MUw3VWR5S3ZOZ3VQQnFvLVVldlpxcVFhQ0ZQRmZxRUZ4MDI?oc=5",
-   "published": "2026-11-04T01:17:56+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "investingLive",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.0,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [],
-    "named": [],
-    "summary": "Recap: New Zealand jobless rate hits 11-year high, kiwi slips as RBNZ hike bets fade",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "3c2ab2205099497b",
-   "title": "Unemployed For A Long Time, Not A Good Time - Scoop",
-   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVXdBOUNLZmt4ZVloeXQ0dzNBdDkzVTlyNnYtYUhsZlE1dkpsdjBsWXB1Mkw1eklQejFHeDFWQUpBQmFxZlRGWHM3OUNmS2tWYWszeU5kcy1nMTVvSllWYnZMRjBKX0dsLXc5ODZaOVFBQ3V6TVV6dnZGUmJGMm9nLUNYZ1VBaUh3YXdKZ2w5UGlBTVctX044?oc=5",
-   "published": "2026-11-04T01:17:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Scoop - New Zealand News",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.0,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [],
-    "named": [],
-    "summary": "Unemployed For A Long Time, Not A Good Time - Scoop",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "31b84f9d61749d1c",
-   "title": "DeFi Compliance After Aave's SEC Push: What to Do",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA4VTVxNnRVZ0JfWGdUNWF1b1hmbmptaEFZTWhUSHJHaFlDaVNVb2ZjM2cxNldCMGN5ZHlrY3NJZUZXNzBuT2FFU3l5SG5lWHVDV2d4Wk82Wmw1Yzg0cG1LWDdWdmRwZlNsM2E4?oc=5",
-   "published": "2026-11-04T01:12:29+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "OneSafe",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
-   "triage": {
-    "relevance": 0.5,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "regulation",
-    "symbols": [
-     "AAVE-USD"
-    ],
-    "named": [
-     "AAVE-USD"
-    ],
-    "summary": "DeFi Compliance After Aave's SEC Push: What to Do",
-    "model": "local",
-    "at": "2026-11-04T04:20:39.381871+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "8f908225a0587bbc",
-   "title": "Unemployment hits 5.7 percent as National and Labour clash over economy",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQk1mMWtWZDg1YkI2OGRSSnYyM0hCcUFLNG0yYmItczJiUTMwMHF1X1VuUC03dGNxWVR5Zk9jRGtzQ2lzbkF0R2c2MWthNDl4NjJQNzFjNFdwd2U2bUR1eUtxaFU2czlabmRZek1nUlUxaDdkZHJiU2w0VFRRS281MDU3VGVpUy1MZ2VzakFQYnlVN3BjOEEtb3FON25uZzNEdlpxZE9LelFmZ3BtaV85cDJOWnpUQQ?oc=5",
-   "published": "2026-11-04T01:11:36+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Chris Lynch Media",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.56,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Unemployment hits 5.7 percent as National and Labour clash over economy",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "b935ee7f0ef155ec",
-   "title": "Stock Market Election Night: Futures Fall As Votes Pour In; AMD, Arista Rise On Earnings",
-   "url": "https://finance.yahoo.com/m/e5be454d-07fd-3d94-8114-a4e8ff2910de/stock-market-election-night%3A.html?.tsrc=rss",
-   "published": "2026-11-04T01:09:53+00:00",
-   "source": "yahoo",
-   "summary": "Arista Networks, AMD rise on earnings.",
-   "publisher": "",
-   "symbols": [
-    "AMD",
-    "MSFT",
-    "NVDA",
-    "TSLA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.725,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "Stock Market Election Night: Futures Fall As Votes Pour In; AMD, Arista Rise On Earnings. Arista Networks, AMD rise on earnings.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "b935ee7f0ef155ec",
-    "headline": "Stock Market Election Night: Futures Fall As Votes Pour In; AMD, Arista Rise On Earnings",
-    "what_happened": "Arista Networks, AMD rise on earnings.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "AMD",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono positivo en el titular (+0.32)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [
-     "ef82f1a1d8cd"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "ae9def3219950fec",
-   "title": "President Donald Trump Claims He'll \"Veto Everything\" if Democrats Retake Congress, and It Has Big Implications for the Stock Market",
-   "url": "https://www.fool.com/investing/2026/11/03/donald-trump-claims-veto-everything-democrats-retake-congress-big-implications-for-stock-market/?.tsrc=rss",
-   "published": "2026-11-04T01:07:01+00:00",
-   "source": "yahoo",
-   "summary": "Democrats are widely expected to retake one or both houses of Congress, creating potential friction points for Wall Street.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.325,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "President Donald Trump Claims He'll \"Veto Everything\" if Democrats Retake Congress, and It Has Big Implications for the Stock Market. Democrats are widely expected to retake one or both houses of Congress, creating potential friction points for Wall Street.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0666765f31f90a97",
-   "title": "U.S. stock futures steady with midterms in focus; AMD rallies on strong earnings",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com-- U.S. stock index futures moved little on Tuesday evening as markets awaited early results from the midterm elections, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.725,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures steady with midterms in focus; AMD rallies on strong earnings. Investing.com-- U.S. stock index futures moved little on Tuesday evening as markets awaited early results from the midterm elections, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "0666765f31f90a97",
-    "headline": "U.S. stock futures steady with midterms in focus; AMD rallies on strong earnings",
-    "what_happened": "Investing.com-- U.S. stock index futures moved little on Tuesday evening as markets awaited early results from the midterm elections, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "AMD",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono positivo en el titular (+0.76)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [
-     "ef82f1a1d8cd"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "503979b5534b7bd6",
-   "title": "U.S. stock futures slide as Dems lead early midterms results; AMD rises",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early midterm results showed the Democrats taking the lead in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.445,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures slide as Dems lead early midterms results; AMD rises. Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early midterm results showed the Democrats taking the lead in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "077dabd2ab5cc3a4",
-   "title": "U.S. stock futures slide as Dems lead early midterm results; AMD rises",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early midterm results showed the Democrats taking the lead in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:28:27.654645+00:00",
-   "triage": {
-    "relevance": 0.445,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures slide as Dems lead early midterm results; AMD rises. Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early midterm results showed the Democrats taking the lead in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "f584eb95c2fdb78a",
-   "title": "U.S. stock futures slide, Nasdaq down over 2% with Dems poised to take Congress",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early counting of the midterm election results pointed to a Democrat sweep in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T05:20:41.619790+00:00",
-   "triage": {
-    "relevance": 0.62,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "geopolitics",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures slide, Nasdaq down over 2% with Dems poised to take Congress. Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early counting of the midterm election results pointed to a Democrat sweep in Congress, while chipmaker AMD firmed on clocking strong third-quar",
-    "model": "local",
-    "at": "2026-11-04T05:20:41.619790+00:00"
-   },
-   "analysis": {
-    "id": "f584eb95c2fdb78a",
-    "headline": "U.S. stock futures slide, Nasdaq down over 2% with Dems poised to take Congress",
-    "what_happened": "Investing.com-- U.S. stock index futures fell sharply on Tuesday evening as early counting of the midterm election results pointed to a Democrat sweep in Congress, while chipmaker AMD firmed on clocking strong third-quarter earnings.",
-    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
-    "affected": [
-     {
-      "symbol": "AMD",
-      "direction": "down",
-      "magnitude": "medium",
-      "horizon": "weeks",
-      "rationale": "Geopol\u00edtica: tono negativo en el titular (-0.32)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [
-     "ef82f1a1d8cd"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T05:20:41.619790+00:00"
-   }
-  },
-  {
-   "id": "f919cdd5aeeeada3",
-   "title": "U.S. stock futures pare losses as Dems sweep Congress; AMD rises",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com-- U.S. stock index futures sharply pared losses early-Wednesday as investors welcomed some clarity in the political outlook after the Democrats swept both bodies of Congress in the midterm elections.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T07:20:40.797419+00:00",
-   "triage": {
-    "relevance": 0.445,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures pare losses as Dems sweep Congress; AMD rises. Investing.com-- U.S. stock index futures sharply pared losses early-Wednesday as investors welcomed some clarity in the political outlook after the Democrats swept both bodies of Congress in the midterm elections.",
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "b9ef5c69260e7246",
-   "title": "U.S. stock futures turn positive as Democrats sweep to power in Congress",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-midterms-010643358.html?.tsrc=rss",
-   "published": "2026-11-04T01:06:43+00:00",
-   "source": "yahoo",
-   "summary": "Investing.com - U.S. stock index futures turned higher on Wednesday, erasing earlier losses, as investors assessed a Democratic sweep of both chambers of Congress in the midterm elections.",
-   "publisher": "",
-   "symbols": [
-    "AMD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T11:13:34.692443+00:00",
-   "triage": {
-    "relevance": 0.405,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "AMD"
-    ],
-    "named": [
-     "AMD"
-    ],
-    "summary": "U.S. stock futures turn positive as Democrats sweep to power in Congress. Investing.com - U.S. stock index futures turned higher on Wednesday, erasing earlier losses, as investors assessed a Democratic sweep of both chambers of Congress in the midterm elections.",
-    "model": "local",
-    "at": "2026-11-04T11:13:34.692443+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "2bf4ec7420a03798",
-   "title": "People Inc (PPLI) Q3 2026 Earnings Call Highlights: Digital Revenue Extends Growth Streak to 12 ...",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/people-inc-ppli-q3-2026-010554012.html?.tsrc=rss",
-   "published": "2026-11-04T01:05:54+00:00",
-   "source": "yahoo",
-   "summary": "People Inc (PPLI) posted 2% digital revenue growth and 49% licensing gains while cutting overhead and workforce, even as web sessions fell 26% on Google AI overviews.",
-   "publisher": "",
-   "symbols": [
-    "GOOGL"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.725,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "GOOGL"
-    ],
-    "named": [
-     "GOOGL"
-    ],
-    "summary": "People Inc (PPLI) Q3 2026 Earnings Call Highlights: Digital Revenue Extends Growth Streak to 12 .... People Inc (PPLI) posted 2% digital revenue growth and 49% licensing gains while cutting overhead and workforce, even as web sessions fell 26% on Google AI overviews.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "2bf4ec7420a03798",
-    "headline": "People Inc (PPLI) Q3 2026 Earnings Call Highlights: Digital Revenue Extends Growth Streak to 12 ...",
-    "what_happened": "People Inc (PPLI) posted 2% digital revenue growth and 49% licensing gains while cutting overhead and workforce, even as web sessions fell 26% on Google AI overviews.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "GOOGL",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono positivo en el titular (+0.58)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "c5fdf5b6ad5d7793",
-   "title": "Why is the Kiwi falling as New Zealand unemployment climbs to 5.7%?",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWXUwNEpYT0hlQjA1bHUxVHNPX1MzWDg2cDgwRlE5MERKbE5iLTVKM3RhY3AybnRyT0RObWxpcmFVZEI0Sm5qcVJ1MlZaZTNXXzBiQXZNNmlDbVRDRDN4R0JCdG4yY01VQ0hlWmZWSUdGQ1FfLV9XNXpKOTI3Q3lsYkhQX00taWw3RExkMGVxcl84VzNEemhiWHNPS3ZCamxDeW1yVTVuTEVMMFBCeF9xNG04YVRpZHBRYkFN?oc=5",
-   "published": "2026-11-04T01:04:54+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T07:20:40.797419+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Why is the Kiwi falling as New Zealand unemployment climbs to 5.7%?",
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "f0eed49d93928f4f",
-   "title": "BlackRock IBIT Flashes Golden Cross: What It Signals",
-   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPWXl5dVFNbXliTGV1ZTBWMDZJZVVpVWZGSTlURjRqMC1YZ3ZMX2xBcGhVTnZjbFUyQlo5ZjFJNWluaUE2T1VFN1ZSM29BMngtZ1hYMXNIQjZxeVdGbVRhMHBKcHdpWXNpQ09QbW1UV293Snl1eE5HLWRMOE81Sy1OT0Qtam83by1UUV9YNl85eDhHYXVVNVpKVUt5UGJRcjhKN1F2Q2FNdmdDcnM0dFo3NjhBTWQ3VkZqeGdNWVc3eHhabFFudTRUZlo2N2w2ZGhkZTJpTVlROC1MR2FLY1hMbDE1WmNIcUprSWkxOHJ3Z0NZRlNFQ1ZuM1BaaDdlLUth?oc=5",
-   "published": "2026-11-04T01:03:52+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Stocktwits",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
-   "triage": {
-    "relevance": 0.14,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [
-     "BLK",
-     "GLD",
-     "SLV"
-    ],
-    "named": [
-     "BLK"
-    ],
-    "summary": "BlackRock IBIT Flashes Golden Cross: What It Signals",
-    "model": "local",
-    "at": "2026-11-04T04:20:39.381871+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0b86ffdac8595157",
-   "title": "Euro: Can the rebound against the US Dollar extend towards 1.1275? - Scotiabank",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSVR4X01JZEVWdFVkbVQ1ZmNRZHdUWWlGeGh0blFWYVRGYUo4UVhNQ1FuYm0xbG9hT1ZHb0J6dWFaS3JPUTVDWU5iamlxZUhVNy1Xc211UlJsZ2MyTU9iNjl5VlJMTTVERE9wamZHZWFFNGxrM0trNnlPenhSbDdNaG1oTW1sX2N3UXl0ZHZaV0llVTZfbjVOT3J6NU13YWk3WUt3ZkpPZlpSRzE5MmliNG04aWdzNDhBUzZxekJJRWw4bjlLVDQ5bktBNWU?oc=5",
-   "published": "2026-11-04T01:03:23+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "dollar"
-   ],
-   "fetched_at": "2026-11-05T11:20:45.403954+00:00",
-   "triage": {
-    "relevance": 0.365,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "Euro: Can the rebound against the US Dollar extend towards 1.1275? - Scotiabank",
-    "model": "local",
-    "at": "2026-11-05T11:20:45.403954+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "96ccab6bc84b65bc",
-   "title": "Kiwi falls as New Zealand unemployment rises to 5.7%",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQkl3SHktb3JwVVBUVmpadnVkVk1meHNicWhwazhzZTl6M0dON09rQXpUODNkQ3J6b3NtR0pkRzBaMEVFekl3LVFsNFl5N2FhQ18tbnhldEVhblZQTG5FRnN3VXdJNkhmTXp6NEtfUHpqelppRERBVlQySzlELUdBY01waTN1bzN2QTdpdk16TjdUbHFxN3VRQ3RwS3AwSGlZc00zekwyaWZzMDVNeW52N1hTdEVVckk?oc=5",
-   "published": "2026-11-04T01:02:30+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T02:28:27.654645+00:00",
-   "triage": {
-    "relevance": 0.64,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Kiwi falls as New Zealand unemployment rises to 5.7%",
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "87363768323ff782",
-   "title": "New Zealand\u2019s Unemployment Rate climbs to 5.7% in Q3 vs. 5.5% expected",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYXcyUTgzeC12TElodEI4cDVDYi10Mk91UmMzc3dMZ0NPUldGTHdiaDRzeWtGRFFIcUs1M1VrVHBlc2pnQ0MyWGFJV0lKR3B6VmZYWXYyREhXSFlyWV83Z1R3akxWY1JEYlVNcndiT1pBQ3hvQUNDdjZaY3FZSkR0Sk9JbUU2UldTd2w2dWZpbU9oR1dYWldCci1WNkNpeVpGREswaC1Sdk5RM1FVczVYZEFwaDhXSlN6NXRpNTRESElRWnE2SERCT0xn?oc=5",
-   "published": "2026-11-04T01:02:30+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "New Zealand\u2019s Unemployment Rate climbs to 5.7% in Q3 vs. 5.5% expected",
-    "model": "local",
-    "at": "2026-11-04T04:20:39.381871+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "50fae95d7e647477",
-   "title": "New XRP Wallets Just Hit Their Sixth-Highest Day of 2026. Are They New Buyers or Coins Leaving Binance?",
-   "url": "https://247wallst.com/investing/cryptocurrency/2026/11/03/new-xrp-wallets-just-hit-their-sixth-highest-day-of-2026-are-they-new-buyers-or-coins-leaving-binance/?.tsrc=rss",
-   "published": "2026-11-04T01:01:52+00:00",
-   "source": "yahoo",
-   "summary": "XRP's biggest wallet-creation day in months sent analysts buzzing about new buyers flooding the market, but the timing points to something far less bullish hiding behind the numbers.",
-   "publisher": "",
-   "symbols": [
-    "BTC-USD",
-    "ETH-USD",
-    "SOL-USD",
-    "XRP-USD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.505,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "crypto",
-    "symbols": [
-     "XRP-USD",
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "ADA-USD"
-    ],
-    "named": [
-     "XRP-USD"
-    ],
-    "summary": "New XRP Wallets Just Hit Their Sixth-Highest Day of 2026. Are They New Buyers or Coins Leaving Binance?. XRP's biggest wallet-creation day in months sent analysts buzzing about new buyers flooding the market, but the timing points to something far less bullish hiding behind the numbers.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "3c87f1837d8d45e9",
-   "title": "McDonald's and Qualcomm earnings, ADP labor data: What to Watch",
-   "url": "https://finance.yahoo.com/video/mcdonalds-qualcomm-earnings-adp-labor-010000492.html?.tsrc=rss",
-   "published": "2026-11-04T01:00:00+00:00",
-   "source": "yahoo",
-   "summary": "Market Domination Overtime Host Jake Conley previews several of the biggest stories to come tomorrow, Wednesday, November 4, including earnings out from Qualcomm (QCOM), McDonald's (MCD), and DoorDash (DASH), as well as the latest employment data out from ADP.",
-   "publisher": "",
-   "symbols": [
-    "AMZN",
-    "MCD",
-    "QCOM"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.605,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "MCD",
-     "QCOM"
-    ],
-    "named": [
-     "MCD",
-     "QCOM"
-    ],
-    "summary": "McDonald's and Qualcomm earnings, ADP labor data: What to Watch. Market Domination Overtime Host Jake Conley previews several of the biggest stories to come tomorrow, Wednesday, November 4, including earnings out from Qualcomm (QCOM), McDonald's (MCD), and DoorDash (DASH), as well as ",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "3c87f1837d8d45e9",
-    "headline": "McDonald's and Qualcomm earnings, ADP labor data: What to Watch",
-    "what_happened": "Market Domination Overtime Host Jake Conley previews several of the biggest stories to come tomorrow, Wednesday, November 4, including earnings out from Qualcomm (QCOM), McDonald's (MCD), and DoorDash (DASH), as well as the latest employment data out from ADP.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "MCD",
-      "direction": "unclear",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono neutro en el titular (+0.00)."
-     },
-     {
-      "symbol": "QCOM",
-      "direction": "unclear",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono neutro en el titular (+0.00)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [
-     "b1d7c6d8e388",
-     "cc9847fe86b0"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "2e28cd8a2dfd0fdf",
-   "title": "Anthropic S-1: Record Growth, but is the IPO a Buy?",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-1-record-growth-ipo-005900863.html?.tsrc=rss",
-   "published": "2026-11-04T00:59:00+00:00",
-   "source": "yahoo",
-   "summary": "Anthropic's S-1 filing confirms its dominance as the fastest-growing tech giant in history.",
-   "publisher": "",
-   "symbols": [
-    "AMZN",
-    "GOOGL"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.51,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "corporate",
-    "symbols": [
-     "AMZN",
-     "GOOGL"
-    ],
-    "named": [
-     "AMZN",
-     "GOOGL"
-    ],
-    "summary": "Anthropic S-1: Record Growth, but is the IPO a Buy?. Anthropic's S-1 filing confirms its dominance as the fastest-growing tech giant in history.",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "4e81cffbd311287b",
-   "title": "Gold jumps over 2% on softer dollar after Democratic midterm wins",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRTJyLW00OG9rZ3A2QTNvdkhPSS1pdHE3Z0lSV2pmS2tnaW1ubkI5RzN2SGNZRmcxOWlyQUp1bXNMUy1odVRLd1VtQ2VDODZBdDBUR0ZsWC1lUTNNQkFoQkQ4cUJTRGVZOHhyblh1OWdZRkJoY0lWdWNjaUItcy15SjA1SVNsd3ZCSGlYdFJwNXc?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "WHTC",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T07:20:40.797419+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "GLD",
-     "EEM",
-     "XLE",
-     "XOM"
-    ],
-    "named": [],
-    "summary": "Gold jumps over 2% on softer dollar after Democratic midterm wins",
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   },
-   "analysis": {
-    "id": "4e81cffbd311287b",
-    "headline": "Gold jumps over 2% on softer dollar after Democratic midterm wins",
-    "what_happened": "Gold jumps over 2% on softer dollar after Democratic midterm wins",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   }
-  },
-  {
-   "id": "1854b74f4a9a4546",
-   "title": "Gold rises as dollar weakens ahead of US midterm election results",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T04:20:39.381871+00:00",
-   "triage": {
-    "relevance": 0.66,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "geopolitics",
-    "symbols": [
-     "GLD",
-     "EEM",
-     "XLE",
-     "XOM"
-    ],
-    "named": [],
-    "summary": "Gold rises as dollar weakens ahead of US midterm election results",
-    "model": "local",
-    "at": "2026-11-04T04:20:39.381871+00:00"
-   },
-   "analysis": {
-    "id": "1854b74f4a9a4546",
-    "headline": "Gold rises as dollar weakens ahead of US midterm election results",
-    "what_happened": "Gold rises as dollar weakens ahead of US midterm election results",
-    "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T04:20:39.381871+00:00"
-   }
-  },
-  {
-   "id": "3112f7a1535a8f65",
-   "title": "Gold rises as dollar weakens; Democrats score early wins in US midterm elections",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T06:20:39.802669+00:00",
-   "triage": {
-    "relevance": 0.665,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "GLD",
-     "SLV",
-     "EEM",
-     "XLE"
-    ],
-    "named": [],
-    "summary": "Gold rises as dollar weakens; Democrats score early wins in US midterm elections",
-    "model": "local",
-    "at": "2026-11-04T06:20:39.802669+00:00"
-   },
-   "analysis": {
-    "id": "3112f7a1535a8f65",
-    "headline": "Gold rises as dollar weakens; Democrats score early wins in US midterm elections",
-    "what_happened": "Gold rises as dollar weakens; Democrats score early wins in US midterm elections",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "SLV",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T06:20:39.802669+00:00"
-   }
-  },
-  {
-   "id": "2fa6f1ad429f1c1f",
-   "title": "Gold jumps more than 2% on softer dollar after Democratic midterm sweep",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T09:20:41.333488+00:00",
-   "triage": {
-    "relevance": 0.625,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "GLD",
-     "EEM",
-     "XLE",
-     "XOM"
-    ],
-    "named": [],
-    "summary": "Gold jumps more than 2% on softer dollar after Democratic midterm sweep",
-    "model": "local",
-    "at": "2026-11-04T09:20:41.333488+00:00"
-   },
-   "analysis": {
-    "id": "2fa6f1ad429f1c1f",
-    "headline": "Gold jumps more than 2% on softer dollar after Democratic midterm sweep",
-    "what_happened": "Gold jumps more than 2% on softer dollar after Democratic midterm sweep",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T09:20:41.333488+00:00"
-   }
-  },
-  {
-   "id": "da250ab29ad48f74",
-   "title": "Gold gains 3% as dollar slides after Democratic midterm gains",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T11:13:34.692443+00:00",
-   "triage": {
-    "relevance": 0.705,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "GLD",
-     "EEM",
-     "SLV",
-     "XLE"
-    ],
-    "named": [],
-    "summary": "Gold gains 3% as dollar slides after Democratic midterm gains",
-    "model": "local",
-    "at": "2026-11-04T11:13:34.692443+00:00"
-   },
-   "analysis": {
-    "id": "da250ab29ad48f74",
-    "headline": "Gold gains 3% as dollar slides after Democratic midterm gains",
-    "what_happened": "Gold gains 3% as dollar slides after Democratic midterm gains",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "SLV",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T11:13:34.692443+00:00"
-   }
-  },
-  {
-   "id": "e2ec2b9f42c499e2",
-   "title": "Gold heads for biggest daily gain since August on weaker dollar",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQd0lHOUFsbExIR3lscDNTRy14T012UWd6UlBSLUtySlpjSTdFaEtYLW1hbnpOTHdrSm1fM1RGU2V0WmxNSWJGU3AxeV9PUDVRVm1BRjBBNXQxZVVacElvaE5IbGJFU2FZbnN1Tmg4dlVTZ3prY0U0SEh5X1VzWmxUYnQ3VWhtZGpGOXloc1R6X3BvNlprVmw0UGppaFE2VFcyYkl3SzJ3?oc=5",
-   "published": "2026-11-04T00:58:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Reuters",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T17:20:44.528194+00:00",
-   "triage": {
-    "relevance": 0.665,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX",
-     "GLD"
-    ],
-    "named": [],
-    "summary": "Gold heads for biggest daily gain since August on weaker dollar",
-    "model": "local",
-    "at": "2026-11-04T17:20:44.528194+00:00"
-   },
-   "analysis": {
-    "id": "e2ec2b9f42c499e2",
-    "headline": "Gold heads for biggest daily gain since August on weaker dollar",
-    "what_happened": "Gold heads for biggest daily gain since August on weaker dollar",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-05T06:20:32.604915+00:00"
-   }
-  },
-  {
-   "id": "6715a67efb61865e",
-   "title": "Review & Preview: A Divided Market on Election Day",
-   "url": "https://finance.yahoo.com/m/d01706ed-bcdd-34f3-a5ca-4605fa78c17b/review-%26-preview%3A-a-divided.html?.tsrc=rss",
-   "published": "2026-11-04T00:55:00+00:00",
-   "source": "yahoo",
-   "summary": "The Dow fell Tuesday while the S&P 500 and Nasdaq rallied. But midterms may not matter much for stocks over the long haul.",
-   "publisher": "",
-   "symbols": [
-    "AAPL",
-    "PLTR"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.58,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "geopolitics",
-    "symbols": [
-     "AAPL",
-     "PLTR"
-    ],
-    "named": [
-     "AAPL",
-     "PLTR"
-    ],
-    "summary": "Review & Preview: A Divided Market on Election Day. The Dow fell Tuesday while the S&P 500 and Nasdaq rallied. But midterms may not matter much for stocks over the long haul.",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "2045620b2b3ddd69",
-   "title": "Gold Edges Higher Amid Cooling Oil Prices",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOEVrTU1TLW5aMVJ1X09LNTk3TmVndE9rZ09IV0pJQkJOYkdTUUZILTNfeHVFOFQ0SkhjeFo4NHpOYkhSSldjdzlHZk1Jc2NKeEgxRUV1R0dXRmRlLVQ2bkRLTUt4NXViVVgycDlibUdxb2ZCeEhkOG1FcWZ3bkgtQzV6SDJITk10UEgwdlM5dlBERmpaUXFrdkZjR2daQmc?oc=5",
-   "published": "2026-11-04T00:54:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "WSJ",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T02:28:27.654645+00:00",
-   "triage": {
-    "relevance": 0.665,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX",
-     "GLD"
-    ],
-    "named": [],
-    "summary": "Gold Edges Higher Amid Cooling Oil Prices",
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
-   },
-   "analysis": {
-    "id": "2045620b2b3ddd69",
-    "headline": "Gold Edges Higher Amid Cooling Oil Prices",
-    "what_happened": "Gold Edges Higher Amid Cooling Oil Prices",
-    "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-    "affected": [
-     {
-      "symbol": "XLE",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XOM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "CVX",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "weeks",
-      "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.49,
-    "what_to_watch": "Si otras fuentes confirman la noticia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
-   }
-  },
-  {
-   "id": "d70e5fc252edc000",
-   "title": "Gold firms on softer oil prices, US midterm results awaited",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWkZzN1YyX2xYa2dzTjQ0Y2JtM2NIMnJWcXVGMnpBankzNzJKR2J4Y3AtZVpDYVR4bEVQWE5UWkMyT0t1TjN0XzNaX0hEeGVxa1FFNy1FUy1JbU5td09mVmF2bUJ6TWdBUTNNM0o0Sk5meXRfYl92RzlNZkcxV1NsTXNzWlk1UjNlcWdQY1VVRkxJUzljTF9GTkJqNHNzb2s?oc=5",
-   "published": "2026-11-04T00:53:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "93.3 The Drive",
-   "symbols": [],
-   "topics": [
-    "fed",
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX",
-     "GLD"
-    ],
-    "named": [],
-    "summary": "Gold firms on softer oil prices, US midterm results awaited",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "f971a4b3235a22f3",
-   "title": "OCC Opens Stablecoin Path: What It Means for Crypto Banking",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5mMTVTeTVoT1plaElnNEg1dXZ6ZkFLcUVPaHJDVjg5cUY4MGZvNHRzLTdLTmd3Z25XZnV2aVgxc0RKTjFsb1pTVlFYZmRQVzRQY21SNEVQLXpZampzR3VMa2hqWnpGUXBn?oc=5",
-   "published": "2026-11-04T00:52:29+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "OneSafe",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "crypto",
-    "symbols": [
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD"
-    ],
-    "named": [],
-    "summary": "OCC Opens Stablecoin Path: What It Means for Crypto Banking",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "2bbe6ed54962d973",
-   "title": "Apple: 3 Key Takeaways for Long-Term Investors",
-   "url": "https://www.fool.com/earnings/takeaways/2026/11/03/apple-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
-   "published": "2026-11-04T00:48:50+00:00",
-   "source": "yahoo",
-   "summary": "Rising memory chip costs are squeezing margins even as a massive device base opens new revenue paths.",
-   "publisher": "",
-   "symbols": [
-    "AAPL"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.605,
-    "sentiment": 0.0,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "AAPL"
-    ],
-    "named": [
-     "AAPL"
-    ],
-    "summary": "Apple: 3 Key Takeaways for Long-Term Investors. Rising memory chip costs are squeezing margins even as a massive device base opens new revenue paths.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "2bbe6ed54962d973",
-    "headline": "Apple: 3 Key Takeaways for Long-Term Investors",
-    "what_happened": "Rising memory chip costs are squeezing margins even as a massive device base opens new revenue paths.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "AAPL",
-      "direction": "unclear",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono neutro en el titular (+0.00)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.2,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "0057ec329adaf023",
-   "title": "Unemployment jumps in New Zealand to 11-year high",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaVd1ak94OHdLU0t5d0FVaXZUWTNEUTgyblBoRHhHTktaUW9MRnJNcmxCWDN3cUg0U0s2eGpnZFpHV2NfLU9ReXVfWnp3SWRVQlVEMlhmbnJ4UGRTdlpMclc5MVJtUUNtVmhpUDNLa0JXeXpIN203X0J6bWkwYlp1M214Zw?oc=5",
-   "published": "2026-11-04T00:48:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Michael West Media",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.6,
-    "sentiment": 0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Unemployment jumps in New Zealand to 11-year high",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "62d974042105a434",
-   "title": "Middle East oil supply said to outpace demand for first time since July (USO:NYSEARCA)",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOXRITEEwajg4RG5ZcV9iM3NGVURYdTVUZmNMZC0zRVprLTA3bVZ2MjFfUmw3VU1XanNUcFdaS0xrajFEdXlOVU5XNHpfR2x6SV9ySU9BMDYySUo5SklGSHBaU3QyM2VjejgtUXJsdzZzbGhFMVZIeElwMFRaanBJRVhscC04cW1ESDEtREtaamJSWExxazh5WHd4Z19RRGsycXRiWkh3MnJ5QmhDUHc?oc=5",
-   "published": "2026-11-04T00:45:45+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Seeking Alpha",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "USO",
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [
-     "USO"
-    ],
-    "summary": "Middle East oil supply said to outpace demand for first time since July (USO:NYSEARCA)",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "0258913ad5fc0a9c",
-   "title": "\"Middle East oil supply said to outpace demand for first time since July\"?",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOXRITEEwajg4RG5ZcV9iM3NGVURYdTVUZmNMZC0zRVprLTA3bVZ2MjFfUmw3VU1XanNUcFdaS0xrajFEdXlOVU5XNHpfR2x6SV9ySU9BMDYySUo5SklGSHBaU3QyM2VjejgtUXJsdzZzbGhFMVZIeElwMFRaanBJRVhscC04cW1ESDEtREtaamJSWExxazh5WHd4Z19RRGsycXRiWkh3MnJ5QmhDUHc?oc=5",
-   "published": "2026-11-04T00:45:45+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Seeking Alpha",
-   "symbols": [],
-   "topics": [
-    "oil"
-   ],
-   "fetched_at": "2026-11-04T11:20:51.834779+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "XLE",
-     "XOM",
-     "CVX"
-    ],
-    "named": [],
-    "summary": "\"Middle East oil supply said to outpace demand for first time since July\"?",
-    "model": "local",
-    "at": "2026-11-04T11:20:51.834779+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "67c1aab0c2ca879c",
-   "title": "What\u2019s happening this week in economics?",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOb0VZUU04cGt5bXR3d0U3MjUzVUw0MWlqbWg5aEw1OVl3YzMxUjFuSVluaEFYM3ZxbEtCZnpWeDJVeEY3NGtiR1Jhb2RIYVpnSlBISjJIN25rOFZoUHV1eTBEdTNtUkpGWUptXzVpdHpBUEt2bkNsMkVGblJ3Vnh1WGNSZllrS3Z1SUZ6RnRib3BQbnVIbjBnZGFIaEdxQkVHMHBxY1dhSmQ5M0VnTTFkQThEOGJjSkhvQ0V4YWxNUzI?oc=5",
-   "published": "2026-11-04T00:43:52+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Deloitte",
-   "symbols": [],
-   "topics": [
-    "inflation"
-   ],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.0,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [],
-    "named": [],
-    "summary": "What\u2019s happening this week in economics?",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "4176247e0d962377",
-   "title": "Chinese Yuan: UOB expects modest weakening against US Dollar",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTmU1UDRGeUwxUkxJMjhfSUo4SG1Id2RxU2pQMURRekUyYUtJWnRlYU82bVZUaFFHVkRPSG9DbUxXOHg2R1VlX3VjRmFsMTViZHVuaDdtQ1B2QmdaUDIzTE5JbnhTZUdtaVpRUGpzSExJMk1NNDU5dS0zNmpJdnpSaTJzVmpxdkdWT3dzQUdlLUl2a09tMnU2U3dydzZPVzFrcXpPLXhveWpjN1dTSGtlMUVrLTI5UGc1LVpSUDZoMlFGUDNsUFE?oc=5",
-   "published": "2026-11-04T00:43:51+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "www.tmgm.com",
-   "symbols": [],
-   "topics": [
-    "dollar"
-   ],
-   "fetched_at": "2026-11-04T07:20:40.797419+00:00",
-   "triage": {
-    "relevance": 0.325,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "Chinese Yuan: UOB expects modest weakening against US Dollar",
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "ce7db15dc5ace286",
-   "title": "Unemployment jumps in Canterbury, but south still outperforms north",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONVhMUjR0OWoxalJZN1VONnlqbl9rYkVhNjdnVHNVY3lldHhydjRQNXlsbzl1WXN3dTVDc2JhV3N6TWtmaDFzTmdvR3pkUk1sMUlRbHNnNW9sUnhkelhhdXRhWTdxaUx6b1I1MktEeW1oZi00a0Q3eVkyUlJaZWxHbGt1VEdqQk16VXhhN3BBRTZtbHAtZGcxYXRUOTJSS2FBQ2dOaVBYMGI?oc=5",
-   "published": "2026-11-04T00:39:30+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "The Press",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.64,
-    "sentiment": 0.583,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [],
-    "named": [],
-    "summary": "Unemployment jumps in Canterbury, but south still outperforms north",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "fb5c857c54d25612",
-   "title": "New Zealand Dollar Slips After Weak Jobs Report",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbmlDV3N2Vm9KTmJwTTJ0T1VZanFQR185RXh0XzE0a1ZiZUxjelFIbFFKNXlGWU1TTFNjcTQ4Wlc5RDVyMXRKbGdBS25Rak0ydk1Ua2NoOFVFejc5ZG80SFRLNXZrOGVwNEItMUNIcVpwbWtiSElXN3NlODhTWHVBSjI2dHpiRzZMSFZzWXNFTE50cjQ4QzYxa214cjNMcEE?oc=5",
-   "published": "2026-11-04T00:38:02+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "TradingView",
-   "symbols": [],
-   "topics": [
-    "jobs"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.68,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "macro",
-    "symbols": [
-     "GLD",
-     "EEM"
-    ],
-    "named": [],
-    "summary": "New Zealand Dollar Slips After Weak Jobs Report",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": {
-    "id": "fb5c857c54d25612",
-    "headline": "New Zealand Dollar Slips After Weak Jobs Report",
-    "what_happened": "New Zealand Dollar Slips After Weak Jobs Report",
-    "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-    "affected": [
-     {
-      "symbol": "GLD",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "EEM",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.36,
-    "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-    "related_events": [
-     "ad38d15bf954",
-     "562c8d2eaddd",
-     "d2896facfd3c"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   }
-  },
-  {
-   "id": "34836642aef43d0f",
-   "title": "Gold falls 0.5% on November 3 as dollar and yields rise",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9aM1Z4MEtzV2hXRTFnMmdxS3RES2hUcE94T1RudjREekZhQ2NySHhna0tBV2FMQWd1YkxZNEd1a0ZCcHZaNF9UUldQQU9mQWQxZXdiTkxnTEZSa1RDYWF0RUpiV2l5cy1DMHFKQWM3T3NSNm5yemc?oc=5",
-   "published": "2026-11-04T00:38:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Nation Thailand",
-   "symbols": [],
-   "topics": [
-    "yields"
-   ],
-   "fetched_at": "2026-11-04T11:13:34.692443+00:00",
-   "triage": {
-    "relevance": 0.545,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "commodities",
-    "symbols": [
-     "GLD",
-     "SLV",
-     "TLT",
-     "XLF"
-    ],
-    "named": [],
-    "summary": "Gold falls 0.5% on November 3 as dollar and yields rise",
-    "model": "local",
-    "at": "2026-11-04T11:13:34.692443+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "971957d437f7c2d1",
-   "title": "Why DuPont Stock Trounced the Market on Tuesday",
-   "url": "https://www.fool.com/investing/2026/11/03/why-dupont-stock-rocked-the-market-today/?.tsrc=rss",
-   "published": "2026-11-04T00:36:07+00:00",
-   "source": "yahoo",
-   "summary": "The cyclical slump in the chemical industry didn't affect one of its top names in the third quarter.",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.365,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "Why DuPont Stock Trounced the Market on Tuesday. The cyclical slump in the chemical industry didn't affect one of its top names in the third quarter.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "4d3c2637b5aeab47",
-   "title": "End of Agoa: No doom and gloom",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA5WVJ3VVpxaGRyMXpHYWJmbHhNYUg0ZDYwR05zNlFWQUVWcDJSaklPZlFEc2NyWExKYlRueDNadElwV0dfRnZzdl9NYUI1c3dWRi1GS3d5TmtvMzh4bWZfclRxdTF0LXlEOWllLWVOZi0wUjZBZnc?oc=5",
-   "published": "2026-11-04T00:36:07+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Mail & Guardian",
-   "symbols": [],
-   "topics": [
-    "trade"
-   ],
-   "fetched_at": "2026-11-04T02:28:27.654645+00:00",
-   "triage": {
-    "relevance": 0.0,
-    "sentiment": 0.322,
-    "impact": "low",
-    "category": "other",
-    "symbols": [],
-    "named": [],
-    "summary": "End of Agoa: No doom and gloom",
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "c83f2527178156ef",
-   "title": "The 7,500 BTC That Left Binance\u2019s SAFU Fund Has Moved Again, to an Unlabeled Address",
-   "url": "https://unchainedcrypto.com/the-7500-btc-that-left-binances-safu-fund-has-moved-again-to-an-unlabeled-address/?.tsrc=rss",
-   "published": "2026-11-04T00:35:00+00:00",
-   "source": "yahoo",
-   "summary": "Unchained's onchain pull shows the bitcoin that left Binance's SAFU fund on Oct. 31 moved again on Nov. 3, to a high-volume, unlabeled address. The 7,500 BTC still in the fund is worth about $583 million.",
-   "publisher": "",
-   "symbols": [
-    "BTC-USD"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "crypto",
-    "symbols": [
-     "BTC-USD",
-     "BCH-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD",
-     "ADA-USD"
-    ],
-    "named": [
-     "BTC-USD",
-     "BCH-USD"
-    ],
-    "summary": "The 7,500 BTC That Left Binance\u2019s SAFU Fund Has Moved Again, to an Unlabeled Address. Unchained's onchain pull shows the bitcoin that left Binance's SAFU fund on Oct. 31 moved again on Nov. 3, to a high-volume, unlabeled address. The 7,500 BTC still in the fund is worth about $583 million.",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "139400c450a547bc",
-   "title": "How To Earn $500 A Month From Pfizer Stock Ahead Of Q3 Earnings",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/earn-500-month-pfizer-stock-003007663.html?.tsrc=rss",
-   "published": "2026-11-04T00:30:07+00:00",
-   "source": "yahoo",
-   "summary": "Pfizer Inc investors may be eyeing potential gains from the company\u2019s dividends ahead of its third-quarter report on Tuesday, Nov. 3. Currently, Pfizer has an annual dividend yield of 5.64%, with a quarterly dividend of 43 cents per share ($1.72...",
-   "publisher": "",
-   "symbols": [
-    "PFE"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.725,
-    "sentiment": 0.762,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "PFE",
-     "TLT",
-     "XLF",
-     "QQQ"
-    ],
-    "named": [
-     "PFE"
-    ],
-    "summary": "How To Earn $500 A Month From Pfizer Stock Ahead Of Q3 Earnings. Pfizer Inc investors may be eyeing potential gains from the company\u2019s dividends ahead of its third-quarter report on Tuesday, Nov. 3. Currently, Pfizer has an annual dividend yield of 5.64%, with a quarterly dividend of ",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": {
-    "id": "139400c450a547bc",
-    "headline": "How To Earn $500 A Month From Pfizer Stock Ahead Of Q3 Earnings",
-    "what_happened": "Pfizer Inc investors may be eyeing potential gains from the company\u2019s dividends ahead of its third-quarter report on Tuesday, Nov. 3. Currently, Pfizer has an annual dividend yield of 5.64%, with a quarterly dividend of 43 cents per share ($1.72...",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "PFE",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono positivo en el titular (+0.76)."
-     },
-     {
-      "symbol": "TLT",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "XLF",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-     },
-     {
-      "symbol": "QQQ",
-      "direction": "unclear",
-      "magnitude": "low",
-      "horizon": "days",
-      "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.58,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [
-     "b637e35b366b",
-     "9704db90cb30",
-     "ffce9af0ff14",
-     "d2896facfd3c"
-    ],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   }
-  },
-  {
-   "id": "f2f18165f1099833",
-   "title": "Visa Just Hiked Its Dividend by More Than 16%, But Investors Should Consider Waiting for V to Pull Back Before Buying.",
-   "url": "https://www.barchart.com/story/news/8634165/visa-just-hiked-its-dividend-by-more-than-16-but-investors-should-consider-waiting-for-v-to-pull-back-before-buying?.tsrc=rss",
-   "published": "2026-11-04T00:30:03+00:00",
-   "source": "yahoo",
-   "summary": "Visa raised its quarterly dividend by 16.4% to $0.78 per share after Q4 revenue rose 13% to $12.1 billion.",
-   "publisher": "",
-   "symbols": [
-    "V"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T07:20:40.797419+00:00",
-   "triage": {
-    "relevance": 0.725,
-    "sentiment": 0.87,
-    "impact": "medium",
-    "category": "earnings",
-    "symbols": [
-     "V"
-    ],
-    "named": [
-     "V"
-    ],
-    "summary": "Visa Just Hiked Its Dividend by More Than 16%, But Investors Should Consider Waiting for V to Pull Back Before Buying.. Visa raised its quarterly dividend by 16.4% to $0.78 per share after Q4 revenue rose 13% to $12.1 billion.",
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   },
-   "analysis": {
-    "id": "f2f18165f1099833",
-    "headline": "Visa Just Hiked Its Dividend by More Than 16%, But Investors Should Consider Waiting for V to Pull Back Before Buying.",
-    "what_happened": "Visa raised its quarterly dividend by 16.4% to $0.78 per share after Q4 revenue rose 13% to $12.1 billion.",
-    "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-    "affected": [
-     {
-      "symbol": "V",
-      "direction": "up",
-      "magnitude": "medium",
-      "horizon": "days",
-      "rationale": "Resultados: tono positivo en el titular (+0.87)."
-     }
-    ],
-    "macro_link": "",
-    "priced_in": "unknown",
-    "confidence": 0.6,
-    "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-    "related_events": [],
-    "read_full_article": false,
-    "model": "local",
-    "at": "2026-11-04T07:20:40.797419+00:00"
-   }
-  },
-  {
-   "id": "38756f16bef1228f",
-   "title": "Elon Musk Has A Lot Riding On Texas",
-   "url": "https://finance.yahoo.com/m/7e2b1345-9e6f-32ff-888f-2991befd2557/elon-musk-has-a-lot-riding-on.html?.tsrc=rss",
-   "published": "2026-11-04T00:30:01+00:00",
-   "source": "yahoo",
-   "summary": "Elon Musk wears many hats.",
-   "publisher": "",
-   "symbols": [
-    "TSLA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T02:20:38.187937+00:00",
-   "triage": {
-    "relevance": 0.14,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "other",
-    "symbols": [
-     "TXN"
-    ],
-    "named": [
-     "TXN"
-    ],
-    "summary": "Elon Musk Has A Lot Riding On Texas. Elon Musk wears many hats.",
-    "model": "local",
-    "at": "2026-11-04T02:20:38.187937+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "080e5738f0a1ade2",
-   "title": "The S&P 500 Fell in Both September and October for Only the 17th Time Since 1950. Here's What Usually Followed.",
-   "url": "https://www.fool.com/investing/2026/11/03/the-s-and-p-500-fell-in-both-september-and-october-for-only-the-17th-time-since-1950-here-s-what-usually-followed/?.tsrc=rss",
-   "published": "2026-11-04T00:28:02+00:00",
-   "source": "yahoo",
-   "summary": "It's happened in around one year in five since 1950. How did the next two months usually go?",
-   "publisher": "",
-   "symbols": [
-    "NVDA"
-   ],
-   "topics": [],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.365,
-    "sentiment": -0.322,
-    "impact": "low",
-    "category": "markets",
-    "symbols": [
-     "NVDA"
-    ],
-    "named": [
-     "NVDA"
-    ],
-    "summary": "The S&P 500 Fell in Both September and October for Only the 17th Time Since 1950. Here's What Usually Followed.. It's happened in around one year in five since 1950. How did the next two months usually go?",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "bce73bb84bdc9cd4",
-   "title": "What OnePay's Stablecoin Deposit Means for Crypto Banking",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5d0dwcEZRdy1oeDdqdndtTEFMTjFxdmhYaU9aMk1yQmtOOG5aVWgxMjdrV014NjN3UzNla1E4U243UHl4V2JCOHduRU9UZW1oYXVZcnBzd3FLaWFqdFp2RnlCQjJiYjdwaldLbQ?oc=5",
-   "published": "2026-11-04T00:27:27+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "OneSafe",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-11-04T01:20:44.170153+00:00",
-   "triage": {
-    "relevance": 0.465,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "crypto",
-    "symbols": [
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD"
-    ],
-    "named": [],
-    "summary": "What OnePay's Stablecoin Deposit Means for Crypto Banking",
-    "model": "local",
-    "at": "2026-11-04T01:20:44.170153+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "193d037a8736e70f",
-   "title": "US Has No Immediate Plan To Attack Iran, Trump Tells FT",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaE4tV25ISVhqN183LUdrX2dWZVNwa1VFaFhhZDdMcnRJUVVsdGxZalk1a1JKSU9rTF9tTnphbHhxa3Z0SkVjblRGZmtHck1EbGphTlZoV1hROTZQMEJXMWtmc1JYQUR0cHhkRS00UGtmd0MxODFBS21DWmJHRjd5TDBOUmxJNXc?oc=5",
-   "published": "2026-11-04T00:27:13+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "Sahi",
-   "symbols": [],
-   "topics": [
-    "geopolitics"
-   ],
-   "fetched_at": "2026-11-04T03:20:44.373131+00:00",
-   "triage": {
-    "relevance": 0.42,
-    "sentiment": 0.0,
-    "impact": "low",
-    "category": "geopolitics",
-    "symbols": [],
-    "named": [],
-    "summary": "US Has No Immediate Plan To Attack Iran, Trump Tells FT",
-    "model": "local",
-    "at": "2026-11-04T03:20:44.373131+00:00"
-   },
-   "analysis": null
-  },
-  {
-   "id": "87403ae259aa83c4",
-   "title": "U.S. Midterm Elections: Crypto Stocks Bounce on Voting Day, but Democratic Sweep Fears Still Loom",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE96M0wtdU50ck5oY1FTOEZSSVZFMEhYTF9wMU1CdzdTN3VFR0pLelN4eTYwd0dGdHlhRk04MzVRQ0swQzBZWlhPM3U4Qm9wWldBRTFxaE9yTEhBbHYxYmF4aElUMEplb1FVN29WZGFkZ1Y0NDZ2RkE?oc=5",
-   "published": "2026-11-04T00:26:00+00:00",
-   "source": "google-news",
-   "summary": "",
-   "publisher": "BigGo Finance",
-   "symbols": [],
-   "topics": [
-    "crypto_policy"
-   ],
-   "fetched_at": "2026-11-04T02:28:27.654645+00:00",
-   "triage": {
-    "relevance": 0.505,
-    "sentiment": -0.322,
-    "impact": "medium",
-    "category": "crypto",
-    "symbols": [
-     "BTC-USD",
-     "ETH-USD",
-     "SOL-USD",
-     "XRP-USD"
-    ],
-    "named": [],
-    "summary": "U.S. Midterm Elections: Crypto Stocks Bounce on Voting Day, but Democratic Sweep Fears Still Loom",
-    "model": "local",
-    "at": "2026-11-04T02:28:27.654645+00:00"
    },
    "analysis": null
   }
