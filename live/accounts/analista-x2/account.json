@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "24.92345351318600000000000000000000",
+  "cash": "31.48786468282250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -184,14 +184,14 @@
    },
    {
     "symbol": "UNI-USD",
-    "quantity": "1.01573305",
-    "avg_price": "7.004935314572788331601263793386550",
-    "open_fees": "0.01778786113159207967379295857645433",
-    "opened_at": "2026-11-07T15:42:21.964000+00:00",
-    "realized_pnl": "-0.2437759304002722609382369432889105",
-    "fees_paid": "0.09553819",
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.7780569128875000000000000000000008",
+    "fees_paid": "0.11199035",
     "mark_price": "6.5470500000000005",
-    "entry_order_id": "O00000168"
+    "entry_order_id": null
    },
    {
     "symbol": "TSLA",
@@ -1053,6 +1053,20 @@
     "slippage_cost": "0.00133564",
     "realized_pnl": "0",
     "timestamp": "2026-11-10T15:41:35.540249+00:00"
+   },
+   {
+    "id": "F00000060",
+    "order_id": "O00000189",
+    "symbol": "UNI-USD",
+    "side": "sell",
+    "quantity": "1.01573305",
+    "price": "6.47893",
+    "notional": "6.58086333",
+    "fee": "0.01645216",
+    "liquidity": "taker",
+    "slippage_cost": "0.00212288",
+    "realized_pnl": "-0.534280982487",
+    "timestamp": "2026-11-11T06:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1461,6 +1475,20 @@
     "closed_at": "2026-11-10T15:41:42.469668+00:00",
     "entry_order_id": "O00000140",
     "exit_order_id": "O00000183"
+   },
+   {
+    "symbol": "UNI-USD",
+    "direction": "long",
+    "quantity": "1.01573305",
+    "entry_price": "7.004935314573",
+    "exit_price": "6.47893",
+    "pnl": "-0.568521003619",
+    "fees": "0.034240021132",
+    "return_pct": -0.07990294766756849,
+    "opened_at": "2026-11-07T15:42:21.964000+00:00",
+    "closed_at": "2026-11-11T06:35:00+00:00",
+    "entry_order_id": "O00000168",
+    "exit_order_id": "O00000189"
    }
   ],
   "equity_curve": [
@@ -4928,10 +4956,17 @@
     "24.92345351318600000000000000000000",
     "69.890663781283217561503985",
     "69.890663781283217561503985"
+   ],
+   [
+    "2026-11-11T06:49:28.002156+00:00",
+    "94.72847339910321705363746000000000",
+    "31.48786468282250000000000000000000",
+    "63.24060871628071705363746",
+    "63.24060871628071705363746"
    ]
   ],
-  "total_fees": "0.10199859",
-  "total_slippage": "0.16877956",
+  "total_fees": "0.11845075",
+  "total_slippage": "0.17090244",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
   "max_drawdown": "0.06781442927037464395133398479056528"
@@ -8894,13 +8929,13 @@
    "limit_price": null,
    "stop_price": "6.48102",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "1.01573305",
+   "avg_fill_price": "6.47893",
+   "fees_paid": "0.01645216",
+   "triggered": true,
    "created_at": "2026-11-10T15:42:16.212797+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-11T06:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.08: t\u00e9cnico +0.15 (estrella de la ma\u00f1ana), noticias +0.00 (0 relevantes), tendencia lateral",
    "reduce_only": true,
@@ -8915,14 +8950,14 @@
    "limit_price": "9.07491",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-10T15:42:16.212831+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-11T06:49:28.003983+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.08: t\u00e9cnico +0.15 (estrella de la ma\u00f1ana), noticias +0.00 (0 relevantes), tendencia lateral filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.08: t\u00e9cnico +0.15 (estrella de la ma\u00f1ana), noticias +0.00 (0 relevantes), tendencia lateral",
    "reduce_only": true,
    "oco_group": "exits-UNI-USD-189"
@@ -9139,8 +9174,6 @@
   }
  ],
  "open_order_ids": [
-  "O00000189",
-  "O00000190",
   "O00000191",
   "O00000192",
   "O00000193",
@@ -9153,7 +9186,7 @@
   "O00000200"
  ],
  "order_id_counter": 201,
- "fill_id_counter": 60,
+ "fill_id_counter": 61,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -9163,7 +9196,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-11T06:22:44.862505+00:00",
+ "last_sync": "2026-11-11T06:49:28.002156+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -9178,7 +9211,7 @@
   "MRK": "2026-11-06T19:20:00+00:00",
   "NOW": "2026-11-10T21:00:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
-  "UNI-USD": "2026-11-11T06:20:00+00:00",
+  "UNI-USD": "2026-11-11T06:45:00+00:00",
   "TSLA": "2026-11-10T21:00:00+00:00",
   "TXN": "2026-11-10T21:00:00+00:00",
   "META": "2026-11-10T21:00:00+00:00"
