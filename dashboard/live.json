@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-11T00:16:23.554060+00:00",
+  "generated_at": "2026-11-11T00:21:53.644267+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -340,9 +340,9 @@
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-11-11T00:15:30.066560+00:00",
-  "mode": "mark",
-  "duration_s": 53.49,
+  "started_at": "2026-11-11T00:20:36.783496+00:00",
+  "mode": "research",
+  "duration_s": 76.86,
   "accounts": {
    "aprendiz": {
     "status": "synced",
@@ -365,19 +365,19 @@
    "buy-hold": {
     "status": "synced",
     "message": "",
-    "equity": 97.39609370947989,
+    "equity": 97.39561663167262,
     "fills_on_sync": 0
    },
    "analista": {
     "status": "synced",
     "message": "",
-    "equity": 96.89948384536447,
+    "equity": 96.90287084793697,
     "fills_on_sync": 0
    },
    "inversor": {
     "status": "synced",
     "message": "",
-    "equity": 98.20988289469526,
+    "equity": 98.20809550529526,
     "fills_on_sync": 0
    },
    "aprendiz-x2": {
@@ -401,13 +401,13 @@
    "analista-x2": {
     "status": "synced",
     "message": "",
-    "equity": 94.95525340176671,
+    "equity": 94.96312533290421,
     "fills_on_sync": 0
    },
    "inversor-x2": {
     "status": "synced",
     "message": "",
-    "equity": 96.66332997432556,
+    "equity": 96.66154173782556,
     "fills_on_sync": 0
    },
    "combinador": {
@@ -425,13 +425,22 @@
    "meta": {
     "status": "synced",
     "message": "",
-    "equity": 99.09347950421355,
+    "equity": 99.09583462319355,
     "fills_on_sync": 0
    }
   },
   "data_errors": {
-   "bars:BLK": "yfinance history(BLK, 5m): $BLK: possibly delisted; no price data found  (5m 2026-11-10 21:17:23.296148+00:00 -> 2026-11-11 00:16:11.349560+00:00)",
-   "bars:SBUX": "yfinance history(SBUX, 5m): $SBUX: possibly delisted; no price data found  (5m 2026-11-10 21:17:23.305465+00:00 -> 2026-11-11 00:16:11.349560+00:00)"
+   "bars:GE": "yfinance history(GE, 1h): $GE: possibly delisted; no price data found  (1h 2026-11-10 23:16:11.333233+00:00 -> 2026-11-11 00:21:48.199969+00:00)",
+   "bars:T": "yfinance history(T, 1h): $T: possibly delisted; no price data found  (1h 2026-11-10 23:16:11.334144+00:00 -> 2026-11-11 00:21:48.199969+00:00)",
+   "bars:BLK": "yfinance history(BLK, 5m): $BLK: possibly delisted; no price data found  (5m 2026-11-10 21:17:23.296148+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:SBUX": "yfinance history(SBUX, 5m): $SBUX: possibly delisted; no price data found  (5m 2026-11-10 21:17:23.305465+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:ABBV": "yfinance history(ABBV, 1h): $ABBV: possibly delisted; no price data found  (1h 2026-11-10 23:16:23.492273+00:00 -> 2026-11-11 00:21:53.464629+00:00)",
+   "bars:PLTR": "yfinance history(PLTR, 1h): $PLTR: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.507766+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:PM": "yfinance history(PM, 1h): $PM: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.508609+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:TMO": "yfinance history(TMO, 1h): $TMO: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.509421+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:TSLA": "yfinance history(TSLA, 1h): $TSLA: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.510230+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:IBM": "yfinance history(IBM, 1h): $IBM: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.519113+00:00 -> 2026-11-11 00:21:48.857692+00:00)",
+   "bars:ABT": "yfinance history(ABT, 1h): $ABT: possibly delisted; no price data found  (1h 2026-11-10 23:16:20.524225+00:00 -> 2026-11-11 00:21:48.857692+00:00)"
   }
  },
  "prices": {
@@ -441,7 +450,7 @@
    "ask": 749.9199829101562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:30.921873+00:00",
+   "time": "2026-11-11T00:21:24.139835+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -451,7 +460,7 @@
    "ask": 674.760009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:31.330137+00:00",
+   "time": "2026-11-11T00:21:24.357952+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -461,7 +470,7 @@
    "ask": 280.5799865722656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:31.741006+00:00",
+   "time": "2026-11-11T00:21:24.626513+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -471,7 +480,7 @@
    "ask": 521.72998046875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:32.136063+00:00",
+   "time": "2026-11-11T00:21:24.888797+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -481,7 +490,7 @@
    "ask": 369.3599853515625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:32.522484+00:00",
+   "time": "2026-11-11T00:21:25.140149+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -491,7 +500,7 @@
    "ask": 46.47999954223633,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:32.923545+00:00",
+   "time": "2026-11-11T00:21:25.420396+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -501,7 +510,7 @@
    "ask": 80.87999725341797,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:33.318221+00:00",
+   "time": "2026-11-11T00:21:25.655207+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -511,7 +520,7 @@
    "ask": 60.56999969482422,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:33.697783+00:00",
+   "time": "2026-11-11T00:21:25.900780+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -521,7 +530,7 @@
    "ask": 62.209999084472656,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:34.142596+00:00",
+   "time": "2026-11-11T00:21:26.135735+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -531,7 +540,7 @@
    "ask": 58.290000915527344,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:34.564997+00:00",
+   "time": "2026-11-11T00:21:26.362837+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -541,7 +550,7 @@
    "ask": 91.01000213623047,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:35.094570+00:00",
+   "time": "2026-11-11T00:21:26.639495+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -551,7 +560,7 @@
    "ask": 77.18000030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:35.490193+00:00",
+   "time": "2026-11-11T00:21:26.861462+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -561,7 +570,7 @@
    "ask": 105.29000091552734,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:35.872451+00:00",
+   "time": "2026-11-11T00:21:27.108074+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -571,7 +580,7 @@
    "ask": 104.36000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:36.273903+00:00",
+   "time": "2026-11-11T00:21:27.316976+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -581,7 +590,7 @@
    "ask": 90.38999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:36.661390+00:00",
+   "time": "2026-11-11T00:21:27.551215+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -591,7 +600,7 @@
    "ask": 34.40999984741211,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:37.075308+00:00",
+   "time": "2026-11-11T00:21:27.808543+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -601,7 +610,7 @@
    "ask": 51.720001220703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:37.486104+00:00",
+   "time": "2026-11-11T00:21:28.022743+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -611,7 +620,7 @@
    "ask": 168.91000366210938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:37.858734+00:00",
+   "time": "2026-11-11T00:21:28.277053+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -621,7 +630,7 @@
    "ask": 188.8800048828125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:38.253531+00:00",
+   "time": "2026-11-11T00:21:28.499068+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -631,7 +640,7 @@
    "ask": 43.72999954223633,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:38.670203+00:00",
+   "time": "2026-11-11T00:21:28.756443+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -641,7 +650,7 @@
    "ask": 97.08000183105469,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:39.069428+00:00",
+   "time": "2026-11-11T00:21:29.002009+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -651,7 +660,7 @@
    "ask": 141.4499969482422,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:39.432244+00:00",
+   "time": "2026-11-11T00:21:29.255235+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -661,7 +670,7 @@
    "ask": 348.510009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:39.850922+00:00",
+   "time": "2026-11-11T00:21:29.508989+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -671,7 +680,7 @@
    "ask": 533.1599731445312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:40.260668+00:00",
+   "time": "2026-11-11T00:21:29.816418+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -681,7 +690,7 @@
    "ask": 168.88999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:40.725168+00:00",
+   "time": "2026-11-11T00:21:30.038987+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -691,7 +700,7 @@
    "ask": 270.8699951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:41.103711+00:00",
+   "time": "2026-11-11T00:21:30.284642+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -701,7 +710,7 @@
    "ask": 287.3800048828125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:41.473274+00:00",
+   "time": "2026-11-11T00:21:30.493581+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -711,7 +720,7 @@
    "ask": 641.3900146484375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:41.825348+00:00",
+   "time": "2026-11-11T00:21:30.712385+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -721,7 +730,7 @@
    "ask": 379.7799987792969,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:42.177972+00:00",
+   "time": "2026-11-11T00:21:30.942544+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -731,7 +740,7 @@
    "ask": 331.9800109863281,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:42.559384+00:00",
+   "time": "2026-11-11T00:21:31.156696+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -741,7 +750,7 @@
    "ask": 515.2100219726562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:42.932020+00:00",
+   "time": "2026-11-11T00:21:31.359415+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -751,7 +760,7 @@
    "ask": 63.2599983215332,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:43.317065+00:00",
+   "time": "2026-11-11T00:21:31.647185+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -761,7 +770,7 @@
    "ask": 117.9800033569336,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:43.685033+00:00",
+   "time": "2026-11-11T00:21:31.907411+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -771,7 +780,7 @@
    "ask": 213.47999572753906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:44.100522+00:00",
+   "time": "2026-11-11T00:21:32.120312+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -781,7 +790,7 @@
    "ask": 342.07000732421875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:44.537911+00:00",
+   "time": "2026-11-11T00:21:32.368738+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -791,7 +800,7 @@
    "ask": 50.68000030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:44.936376+00:00",
+   "time": "2026-11-11T00:21:32.605779+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -801,7 +810,7 @@
    "ask": 910.1900024414062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:45.328142+00:00",
+   "time": "2026-11-11T00:21:32.869834+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -811,7 +820,7 @@
    "ask": 423.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:45.747122+00:00",
+   "time": "2026-11-11T00:21:33.103846+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -821,7 +830,7 @@
    "ask": 658.8400268554688,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:46.226520+00:00",
+   "time": "2026-11-11T00:21:33.446508+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -831,7 +840,7 @@
    "ask": 164.47000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:46.827564+00:00",
+   "time": "2026-11-11T00:21:33.692682+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -841,7 +850,7 @@
    "ask": 211.22000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:47.307564+00:00",
+   "time": "2026-11-11T00:21:33.948218+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -851,7 +860,7 @@
    "ask": 280.7799987792969,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:47.793890+00:00",
+   "time": "2026-11-11T00:21:34.179331+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -861,7 +870,7 @@
    "ask": 405.1199951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:48.197638+00:00",
+   "time": "2026-11-11T00:21:34.461850+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -871,7 +880,7 @@
    "ask": 1432.2900390625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:48.646933+00:00",
+   "time": "2026-11-11T00:21:34.718923+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -881,7 +890,7 @@
    "ask": 29.360000610351562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:49.147474+00:00",
+   "time": "2026-11-11T00:21:34.993359+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -891,7 +900,7 @@
    "ask": 168.66000366210938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:49.610451+00:00",
+   "time": "2026-11-11T00:21:35.249502+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -901,7 +910,7 @@
    "ask": 96.91000366210938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:50.076860+00:00",
+   "time": "2026-11-11T00:21:35.532477+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -911,7 +920,7 @@
    "ask": 143.61000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:50.493176+00:00",
+   "time": "2026-11-11T00:21:35.813432+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -921,7 +930,7 @@
    "ask": 125.55000305175781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:50.951414+00:00",
+   "time": "2026-11-11T00:21:36.116843+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -931,7 +940,7 @@
    "ask": 1066.1400146484375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:51.364783+00:00",
+   "time": "2026-11-11T00:21:36.358804+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -941,7 +950,7 @@
    "ask": 351.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:51.772793+00:00",
+   "time": "2026-11-11T00:21:36.606891+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -951,7 +960,7 @@
    "ask": 282.1700134277344,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:52.200227+00:00",
+   "time": "2026-11-11T00:21:36.869657+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -961,7 +970,7 @@
    "ask": 584.5700073242188,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:52.786153+00:00",
+   "time": "2026-11-11T00:21:37.181871+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -971,7 +980,7 @@
    "ask": 173.3800048828125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:53.335298+00:00",
+   "time": "2026-11-11T00:21:37.438847+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -981,7 +990,7 @@
    "ask": 236.6999969482422,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:53.746705+00:00",
+   "time": "2026-11-11T00:21:37.705601+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -991,7 +1000,7 @@
    "ask": 58.130001068115234,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:54.185039+00:00",
+   "time": "2026-11-11T00:21:37.952515+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1001,7 +1010,7 @@
    "ask": 173.52999877929688,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:54.596747+00:00",
+   "time": "2026-11-11T00:21:38.223057+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1011,7 +1020,7 @@
    "ask": 98.1500015258789,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:54.980847+00:00",
+   "time": "2026-11-11T00:21:38.434522+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1021,7 +1030,7 @@
    "ask": 244.52999877929688,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:55.506048+00:00",
+   "time": "2026-11-11T00:21:38.691438+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1031,7 +1040,7 @@
    "ask": 300.5199890136719,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:55.911854+00:00",
+   "time": "2026-11-11T00:21:38.967280+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1041,7 +1050,7 @@
    "ask": 725.1099853515625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:56.342138+00:00",
+   "time": "2026-11-11T00:21:39.252421+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1051,7 +1060,7 @@
    "ask": 99.61000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:56.714657+00:00",
+   "time": "2026-11-11T00:21:39.472104+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1061,7 +1070,7 @@
    "ask": 70.05000305175781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:57.125917+00:00",
+   "time": "2026-11-11T00:21:39.770501+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1071,7 +1080,7 @@
    "ask": 168.82000732421875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:57.488304+00:00",
+   "time": "2026-11-11T00:21:39.971352+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1081,7 +1090,7 @@
    "ask": 119.20999908447266,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:57.957024+00:00",
+   "time": "2026-11-11T00:21:40.236919+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1091,7 +1100,7 @@
    "ask": 38.66999816894531,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:58.392459+00:00",
+   "time": "2026-11-11T00:21:40.473220+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1101,7 +1110,7 @@
    "ask": 109.94999694824219,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:58.818589+00:00",
+   "time": "2026-11-11T00:21:40.736947+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1111,7 +1120,7 @@
    "ask": 231.8699951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:59.224365+00:00",
+   "time": "2026-11-11T00:21:40.961022+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1121,7 +1130,7 @@
    "ask": 85.76000213623047,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:15:59.686468+00:00",
+   "time": "2026-11-11T00:21:41.192755+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1131,7 +1140,7 @@
    "ask": 187.55999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:00.178341+00:00",
+   "time": "2026-11-11T00:21:41.456093+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1141,7 +1150,7 @@
    "ask": 1222.1500244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:00.621243+00:00",
+   "time": "2026-11-11T00:21:41.712927+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1151,7 +1160,7 @@
    "ask": 323.4599914550781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:01.088153+00:00",
+   "time": "2026-11-11T00:21:42.047327+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1161,7 +1170,7 @@
    "ask": 148.0500030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:01.559449+00:00",
+   "time": "2026-11-11T00:21:42.288177+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1171,7 +1180,7 @@
    "ask": 293.8900146484375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:01.958227+00:00",
+   "time": "2026-11-11T00:21:42.547051+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1181,7 +1190,7 @@
    "ask": 718.2000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:02.354377+00:00",
+   "time": "2026-11-11T00:21:42.771500+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1191,7 +1200,7 @@
    "ask": 110.45999908447266,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:02.812517+00:00",
+   "time": "2026-11-11T00:21:43.014489+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1201,7 +1210,7 @@
    "ask": 194.25,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:03.208512+00:00",
+   "time": "2026-11-11T00:21:43.225927+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1211,7 +1220,7 @@
    "ask": 135.58999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:03.622184+00:00",
+   "time": "2026-11-11T00:21:43.473838+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1221,7 +1230,7 @@
    "ask": 49.900001525878906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:04.067476+00:00",
+   "time": "2026-11-11T00:21:43.720746+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1231,7 +1240,7 @@
    "ask": 228.22000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:04.566374+00:00",
+   "time": "2026-11-11T00:21:43.963287+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1241,7 +1250,7 @@
    "ask": 337.9100036621094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:05.007076+00:00",
+   "time": "2026-11-11T00:21:44.202707+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1251,7 +1260,7 @@
    "ask": 687.6400146484375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:05.449529+00:00",
+   "time": "2026-11-11T00:21:44.500881+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1261,7 +1270,7 @@
    "ask": 603.1199951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:05.936015+00:00",
+   "time": "2026-11-11T00:21:44.765095+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1271,7 +1280,7 @@
    "ask": 86.2699966430664,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:06.438197+00:00",
+   "time": "2026-11-11T00:21:45.017348+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1281,7 +1290,7 @@
    "ask": 21.940000534057617,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:06.878127+00:00",
+   "time": "2026-11-11T00:21:45.303217+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1291,152 +1300,158 @@
    "ask": 521.780029296875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-11T00:16:07.295605+00:00",
+   "time": "2026-11-11T00:21:45.548546+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 73582.4,
-   "bid": 73582.4,
-   "ask": 73582.41,
+   "last": 73539.46,
+   "bid": 73539.46,
+   "ask": 73539.47,
    "spread_bps": 0.001,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:08.355000+00:00",
+   "time": "2026-11-11T00:21:45.284000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 2049.3,
-   "bid": 2049.28,
-   "ask": 2049.29,
+   "last": 2049.42,
+   "bid": 2049.41,
+   "ask": 2049.42,
    "spread_bps": 0.049,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:06.813000+00:00",
+   "time": "2026-11-11T00:21:44.352000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 83.34,
-   "bid": 83.33,
-   "ask": 83.34,
+   "last": 83.37,
+   "bid": 83.36,
+   "ask": 83.37,
    "spread_bps": 1.2,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:05.281000+00:00",
+   "time": "2026-11-11T00:21:46.165000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 1.0544,
-   "bid": 1.0543,
-   "ask": 1.0544,
-   "spread_bps": 0.948,
+   "last": 1.0554,
+   "bid": 1.0554,
+   "ask": 1.0556,
+   "spread_bps": 1.895,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:07.334000+00:00",
+   "time": "2026-11-11T00:21:46.138000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.17436,
-   "bid": 0.17437,
-   "ask": 0.1744,
-   "spread_bps": 1.72,
+   "last": 0.1744,
+   "bid": 0.1744,
+   "ask": 0.17442,
+   "spread_bps": 1.147,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:06.198000+00:00",
+   "time": "2026-11-11T00:21:41.389000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.06822,
-   "bid": 0.06823,
-   "ask": 0.06825,
-   "spread_bps": 2.931,
+   "last": 0.06823,
+   "bid": 0.06821,
+   "ask": 0.06823,
+   "spread_bps": 2.932,
    "modelled_spread": false,
-   "time": "2026-11-11T00:15:02.675000+00:00",
+   "time": "2026-11-11T00:21:41.147000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 10.341,
-   "bid": 10.341,
-   "ask": 10.344,
-   "spread_bps": 2.901,
+   "last": 10.34,
+   "bid": 10.342,
+   "ask": 10.343,
+   "spread_bps": 0.967,
    "modelled_spread": false,
-   "time": "2026-11-11T00:15:56.906000+00:00",
+   "time": "2026-11-11T00:21:37.702000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 50.914,
-   "bid": 50.897,
-   "ask": 50.911,
-   "spread_bps": 2.75,
+   "last": 50.855,
+   "bid": 50.852,
+   "ask": 50.863,
+   "spread_bps": 2.163,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:06.791000+00:00",
+   "time": "2026-11-11T00:21:39.205000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AVAX-USD": {
-   "last": 8.423,
-   "bid": 8.424,
-   "ask": 8.426,
-   "spread_bps": 2.374,
+   "last": 8.427,
+   "bid": 8.427,
+   "ask": 8.429,
+   "spread_bps": 2.373,
    "modelled_spread": false,
-   "time": "2026-11-11T00:15:57.253000+00:00",
+   "time": "2026-11-11T00:21:45.983000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOT-USD": {
-   "last": 0.8455,
-   "bid": 0.8456,
-   "ask": 0.8461,
-   "spread_bps": 5.911,
+   "last": 0.8437,
+   "bid": 0.8434,
+   "ask": 0.8438,
+   "spread_bps": 4.742,
    "modelled_spread": false,
-   "time": "2026-11-11T00:15:25.054000+00:00",
+   "time": "2026-11-11T00:21:38.171000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "BCH-USD": {
-   "last": 230.95,
-   "bid": 230.86,
-   "ask": 230.94,
-   "spread_bps": 3.465,
+   "last": 231.06,
+   "bid": 230.98,
+   "ask": 231.06,
+   "spread_bps": 3.463,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:05.909000+00:00",
+   "time": "2026-11-11T00:21:38.643000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "UNI-USD": {
-   "last": 6.6845,
-   "bid": 6.6846,
-   "ask": 6.6874,
-   "spread_bps": 4.188,
+   "last": 6.6864,
+   "bid": 6.6927,
+   "ask": 6.6948,
+   "spread_bps": 3.137,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:07.229000+00:00",
+   "time": "2026-11-11T00:20:56.838000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AAVE-USD": {
-   "last": 123.79,
-   "bid": 123.76,
-   "ask": 123.81,
-   "spread_bps": 4.039,
+   "last": 123.86,
+   "bid": 123.84,
+   "ask": 123.91,
+   "spread_bps": 5.651,
    "modelled_spread": false,
-   "time": "2026-11-11T00:16:04.641000+00:00",
+   "time": "2026-11-11T00:21:43.871000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XLM-USD": {
-   "last": 0.145026,
-   "bid": 0.144975,
-   "ask": 0.145015,
-   "spread_bps": 2.759,
+   "last": 0.145067,
+   "bid": 0.145036,
+   "ask": 0.145067,
+   "spread_bps": 2.137,
    "modelled_spread": false,
-   "time": "2026-11-11T00:15:53.811000+00:00",
+   "time": "2026-11-11T00:21:45.554000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-11-11T00:20:36.783496+00:00",
+   "mode": "research",
+   "duration_s": 76.86,
+   "errors": 11
+  },
   {
    "started_at": "2026-11-11T00:15:30.066560+00:00",
    "mode": "mark",
@@ -1610,12 +1625,6 @@
    "mode": "mark",
    "duration_s": 65.09,
    "errors": 0
-  },
-  {
-   "started_at": "2026-11-09T19:20:39.087702+00:00",
-   "mode": "research",
-   "duration_s": 122.7,
-   "errors": 0
   }
  ],
  "accounts": [
@@ -1636,7 +1645,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-10"
@@ -2155,9 +2164,11 @@
      "2026-11-10T22:22:25.212851+00:00",
      "2026-11-10T23:22:02.406716+00:00",
      "2026-11-10T23:35:15.229245+00:00",
-     "2026-11-11T00:16:09.758143+00:00"
+     "2026-11-11T00:16:09.758143+00:00",
+     "2026-11-11T00:21:48.194140+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -5074,7 +5085,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.77960676317589,
     "last_decision_date": "2026-11-10"
@@ -5608,7 +5619,8 @@
      "2026-11-10T22:22:25.220472+00:00",
      "2026-11-10T23:22:02.414306+00:00",
      "2026-11-10T23:35:15.237289+00:00",
-     "2026-11-11T00:16:09.763156+00:00"
+     "2026-11-11T00:16:09.763156+00:00",
+     "2026-11-11T00:21:48.199969+00:00"
     ],
     "equity": [
      100.0,
@@ -6107,6 +6119,7 @@
      98.767955,
      98.767955,
      98.767955,
+     98.767955,
      98.767955
     ]
    },
@@ -6115,7 +6128,7 @@
      "symbol": "GE",
      "name": "GE Aerospace",
      "opened_at": "2026-10-26T16:01:21.885588+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.034630835",
      "avg_price": 288.77,
      "allocated": 10.000346,
@@ -6134,7 +6147,7 @@
      "symbol": "T",
      "name": "AT&T",
      "opened_at": "2026-10-26T16:01:23.278837+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.474608436",
      "avg_price": 21.08,
      "allocated": 10.004746,
@@ -6153,7 +6166,7 @@
      "symbol": "XLK",
      "name": "Technology Select Sector SPDR",
      "opened_at": "2026-11-05T15:41:51.739734+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.05924669",
      "avg_price": 166.06,
      "allocated": 9.8385053,
@@ -6172,7 +6185,7 @@
      "symbol": "CAT",
      "name": "Caterpillar Inc.",
      "opened_at": "2026-11-10T15:41:40.684746+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3613,
      "quantity": "0.017047659",
      "avg_price": 578.32,
      "allocated": 9.8590022,
@@ -6191,7 +6204,7 @@
      "symbol": "BAC",
      "name": "Bank of America",
      "opened_at": "2026-10-26T16:01:03.111025+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.1965602",
      "avg_price": 50.88,
      "allocated": 10.000983,
@@ -6248,7 +6261,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-10T15:41:35.058951+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.057560548",
      "avg_price": 171.29,
      "allocated": 9.8595463,
@@ -9653,7 +9666,7 @@
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.69,
     "excess_return_ann_pct": 20.84,
-    "days_to_significant_vs_buy_hold": 193
+    "days_to_significant_vs_buy_hold": 192
    }
   },
   {
@@ -9670,7 +9683,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.78620271825592,
     "last_decision_date": "2026-11-10"
@@ -10211,7 +10224,8 @@
      "2026-11-10T22:22:26.130532+00:00",
      "2026-11-10T23:22:03.090616+00:00",
      "2026-11-10T23:35:16.027725+00:00",
-     "2026-11-11T00:16:11.349560+00:00"
+     "2026-11-11T00:16:11.349560+00:00",
+     "2026-11-11T00:21:48.857692+00:00"
     ],
     "equity": [
      100.0,
@@ -10717,6 +10731,7 @@
      99.395849,
      99.395849,
      99.395849,
+     99.395849,
      99.395849
     ]
    },
@@ -10725,7 +10740,7 @@
      "symbol": "IEF",
      "name": "iShares 7-10 Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:32.519114+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3614,
      "quantity": "0.060512492",
      "avg_price": 91.01,
      "allocated": 5.5072419,
@@ -10744,7 +10759,7 @@
      "symbol": "LIN",
      "name": "Linde plc",
      "opened_at": "2026-10-26T16:01:23.573742+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.007406999",
      "avg_price": 510.67,
      "allocated": 3.7825322,
@@ -10763,7 +10778,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:31.737325+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3614,
      "quantity": "0.044826638",
      "avg_price": 80.87,
      "allocated": 3.6251302,
@@ -10801,7 +10816,7 @@
      "symbol": "DIS",
      "name": "Walt Disney Company (The)",
      "opened_at": "2026-10-26T16:01:13.693765+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.025163661",
      "avg_price": 110.16,
      "allocated": 2.7720289,
@@ -10820,7 +10835,7 @@
      "symbol": "XLV",
      "name": "Health Care Select Sector SPDR",
      "opened_at": "2026-10-26T16:00:57.250424+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.015581038",
      "avg_price": 179.07,
      "allocated": 2.7900965,
@@ -10839,7 +10854,7 @@
      "symbol": "INDA",
      "name": "iShares MSCI India",
      "opened_at": "2026-11-10T15:41:33.593298+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.055921853",
      "avg_price": 51.9,
      "allocated": 2.9023442,
@@ -10858,7 +10873,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-10-26T16:01:04.087191+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.006831993",
      "avg_price": 403.17,
      "allocated": 2.7544546,
@@ -10877,7 +10892,7 @@
      "symbol": "NEE",
      "name": "NextEra Energy",
      "opened_at": "2026-11-04T15:42:21.570733+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.030570146",
      "avg_price": 87.38,
      "allocated": 2.6712194,
@@ -10896,7 +10911,7 @@
      "symbol": "KO",
      "name": "Coca-Cola Company (The)",
      "opened_at": "2026-10-26T16:01:07.694128+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.026955097",
      "avg_price": 92.3,
      "allocated": 2.4879555,
@@ -10915,7 +10930,7 @@
      "symbol": "PFE",
      "name": "Pfizer",
      "opened_at": "2026-10-26T16:01:07.037349+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.087167367",
      "avg_price": 29.9,
      "allocated": 2.6063043,
@@ -10934,7 +10949,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-10-26T16:01:19.472222+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.008627256",
      "avg_price": 286.89,
      "allocated": 2.4750735,
@@ -10953,7 +10968,7 @@
      "symbol": "DIA",
      "name": "SPDR Dow Jones Industrial Average",
      "opened_at": "2026-11-05T15:41:46.587247+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.004774057",
      "avg_price": 523.96,
      "allocated": 2.5014149,
@@ -10972,7 +10987,7 @@
      "symbol": "CVX",
      "name": "Chevron Corporation",
      "opened_at": "2026-10-26T16:01:05.359119+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.011491753",
      "avg_price": 232.26,
      "allocated": 2.6690746,
@@ -10991,7 +11006,7 @@
      "symbol": "XLE",
      "name": "Energy Select Sector SPDR",
      "opened_at": "2026-10-26T16:00:54.258576+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.038204241",
      "avg_price": 69.41,
      "allocated": 2.6517564,
@@ -11010,7 +11025,7 @@
      "symbol": "WMT",
      "name": "Walmart",
      "opened_at": "2026-10-26T16:01:08.305641+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.018676802",
      "avg_price": 120.38,
      "allocated": 2.2483134,
@@ -11029,7 +11044,7 @@
      "symbol": "COST",
      "name": "Costco",
      "opened_at": "2026-10-26T16:01:08.736120+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.002152761",
      "avg_price": 1004.81,
      "allocated": 2.1631158,
@@ -11067,7 +11082,7 @@
      "symbol": "AXP",
      "name": "American Express",
      "opened_at": "2026-11-05T15:42:13.015779+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.00661235",
      "avg_price": 329.57,
      "allocated": 2.1792322,
@@ -11086,7 +11101,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-10-26T16:01:20.832245+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.01539745",
      "avg_price": 151.17,
      "allocated": 2.3276325,
@@ -11105,7 +11120,7 @@
      "symbol": "AAPL",
      "name": "Apple Inc.",
      "opened_at": "2026-10-26T16:00:58.749740+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.005965992",
      "avg_price": 344.88445,
      "allocated": 2.0575779,
@@ -11124,7 +11139,7 @@
      "symbol": "NKE",
      "name": "Nike, Inc.",
      "opened_at": "2026-11-04T15:42:14.393855+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.053051235",
      "avg_price": 40.57,
      "allocated": 2.1522886,
@@ -11143,7 +11158,7 @@
      "symbol": "HD",
      "name": "Home Depot (The)",
      "opened_at": "2026-11-03T15:42:10.958719+00:00",
-     "days_held": 7.357,
+     "days_held": 7.361,
      "quantity": "0.005817676",
      "avg_price": 334.21,
      "allocated": 1.9443255,
@@ -11162,7 +11177,7 @@
      "symbol": "PG",
      "name": "Procter & Gamble",
      "opened_at": "2026-10-26T16:01:07.399072+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.012026766",
      "avg_price": 159.88,
      "allocated": 1.9228393,
@@ -11181,7 +11196,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-10-26T16:01:19.852719+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.002743821",
      "avg_price": 677.66,
      "allocated": 1.8593777,
@@ -11200,7 +11215,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-10-26T16:01:06.596551+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.001363557",
      "avg_price": 1278.95,
      "allocated": 1.7439212,
@@ -11219,7 +11234,7 @@
      "symbol": "MA",
      "name": "Mastercard",
      "opened_at": "2026-10-26T16:01:04.515293+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.002928049",
      "avg_price": 613.15,
      "allocated": 1.7953332,
@@ -11238,7 +11253,7 @@
      "symbol": "LOW",
      "name": "Lowe's",
      "opened_at": "2026-11-03T15:42:17.211610+00:00",
-     "days_held": 7.357,
+     "days_held": 7.361,
      "quantity": "0.008172775",
      "avg_price": 214.95,
      "allocated": 1.756738,
@@ -11257,7 +11272,7 @@
      "symbol": "SBUX",
      "name": "Starbucks",
      "opened_at": "2026-11-05T15:42:11.177238+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.017219434",
      "avg_price": 109.2,
      "allocated": 1.8803622,
@@ -11276,7 +11291,7 @@
      "symbol": "UNH",
      "name": "UnitedHealth Group",
      "opened_at": "2026-10-26T16:01:06.234958+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.004567725",
      "avg_price": 411.19,
      "allocated": 1.8782028,
@@ -11295,7 +11310,7 @@
      "symbol": "MCD",
      "name": "McDonald's",
      "opened_at": "2026-11-05T15:42:05.126950+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.006553429",
      "avg_price": 279.92,
      "allocated": 1.8344358,
@@ -11333,7 +11348,7 @@
      "symbol": "PM",
      "name": "Philip Morris International",
      "opened_at": "2026-10-26T16:01:20.467165+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.009177269",
      "avg_price": 202.27,
      "allocated": 1.8562862,
@@ -11352,7 +11367,7 @@
      "symbol": "PEP",
      "name": "PepsiCo",
      "opened_at": "2026-11-05T15:42:03.466728+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.012245632",
      "avg_price": 144.79,
      "allocated": 1.7730451,
@@ -11371,7 +11386,7 @@
      "symbol": "ABT",
      "name": "Abbott Laboratories",
      "opened_at": "2026-11-05T15:42:14.484618+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.015657456",
      "avg_price": 115.42,
      "allocated": 1.8071836,
@@ -11409,7 +11424,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-10-26T16:00:59.071800+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.002915132",
      "avg_price": 529.52,
      "allocated": 1.5436207,
@@ -11428,7 +11443,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-10-26T16:01:04.984806+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.009161027",
      "avg_price": 183.85,
      "allocated": 1.6842548,
@@ -11466,7 +11481,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-10-26T16:01:00.599883+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.003742103",
      "avg_price": 396.14,
      "allocated": 1.4823967,
@@ -11504,7 +11519,7 @@
      "symbol": "USO",
      "name": "United States Oil Fund",
      "opened_at": "2026-10-26T16:00:58.428435+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.009755244",
      "avg_price": 168.36,
      "allocated": 1.6423929,
@@ -11523,7 +11538,7 @@
      "symbol": "PLTR",
      "name": "Palantir Technologies",
      "opened_at": "2026-10-26T16:01:13.320521+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.005959947",
      "avg_price": 197.87,
      "allocated": 1.1792947,
@@ -11542,7 +11557,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-10-26T16:01:12.108893+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.003060252",
      "avg_price": 291.61,
      "allocated": 0.89240009,
@@ -18227,7 +18242,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.59597715597896,
     "last_decision_date": "2026-11-10"
@@ -18235,20 +18250,20 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.657170+00:00",
    "summary": {
-    "equity": 97.396094,
+    "equity": 97.395617,
     "cash": 4.9420476,
-    "invested": 92.454046,
+    "invested": 92.453569,
     "invested_pct": 94.93,
-    "pnl": -2.6039063,
-    "pnl_pct": -2.60391,
-    "day_pnl": 0.0518002,
-    "day_pnl_pct": 0.053213,
+    "pnl": -2.6043834,
+    "pnl_pct": -2.60438,
+    "day_pnl": 0.0513231,
+    "day_pnl_pct": 0.052723,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -2.565934,
+    "unrealized_pnl": -2.5664111,
     "fees": 0.0379723,
     "slippage_cost": 0.0210596,
     "max_drawdown_pct": 4.7718,
-    "current_drawdown_pct": 3.3098,
+    "current_drawdown_pct": 3.3102,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -18747,7 +18762,8 @@
      "2026-11-10T22:22:31.067579+00:00",
      "2026-11-10T23:22:06.798395+00:00",
      "2026-11-10T23:35:20.318673+00:00",
-     "2026-11-11T00:16:20.549170+00:00"
+     "2026-11-11T00:16:20.549170+00:00",
+     "2026-11-11T00:21:52.588904+00:00"
     ],
     "equity": [
      100.0,
@@ -19232,7 +19248,8 @@
      97.382676,
      97.350024,
      97.344294,
-     97.396094
+     97.396094,
+     97.395617
     ]
    },
    "positions": [
@@ -19240,7 +19257,7 @@
      "symbol": "MCD",
      "name": "McDonald's",
      "opened_at": "2026-10-26T16:15:00.227023+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.007597872",
      "avg_price": 250.13,
      "allocated": 1.9004557,
@@ -19259,7 +19276,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-10-26T16:14:55.930117+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.001484369",
      "avg_price": 1280.5,
      "allocated": 1.9007345,
@@ -19278,7 +19295,7 @@
      "symbol": "HD",
      "name": "Home Depot (The)",
      "opened_at": "2026-10-26T16:14:59.649861+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005967242",
      "avg_price": 318.5,
      "allocated": 1.9005666,
@@ -19287,7 +19304,7 @@
      "market_value": 2.0945019,
      "unrealized_pnl": 0.193935,
      "unrealized_pct": 10.204,
-     "weight_pct": 2.15,
+     "weight_pct": 2.151,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -19297,7 +19314,7 @@
      "symbol": "AMZN",
      "name": "Amazon",
      "opened_at": "2026-10-26T16:14:47.334965+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.00764649",
      "avg_price": 248.51,
      "allocated": 1.9002292,
@@ -19316,7 +19333,7 @@
      "symbol": "MA",
      "name": "Mastercard",
      "opened_at": "2026-10-26T16:14:53.263182+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.003097767",
      "avg_price": 613.39,
      "allocated": 1.9001393,
@@ -19325,7 +19342,7 @@
      "market_value": 2.0409329,
      "unrealized_pnl": 0.140794,
      "unrealized_pct": 7.4096,
-     "weight_pct": 2.095,
+     "weight_pct": 2.096,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -19335,7 +19352,7 @@
      "symbol": "COST",
      "name": "Costco",
      "opened_at": "2026-10-26T16:14:59.237900+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.00189545",
      "avg_price": 1004.81,
      "allocated": 1.9045671,
@@ -19354,7 +19371,7 @@
      "symbol": "PEP",
      "name": "PepsiCo",
      "opened_at": "2026-10-26T16:14:58.207546+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.013982411",
      "avg_price": 135.94,
      "allocated": 1.900769,
@@ -19373,7 +19390,7 @@
      "symbol": "JNJ",
      "name": "Johnson & Johnson",
      "opened_at": "2026-10-26T16:14:54.601582+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.007146484",
      "avg_price": 265.92,
      "allocated": 1.900393,
@@ -19392,7 +19409,7 @@
      "symbol": "PG",
      "name": "Procter & Gamble",
      "opened_at": "2026-10-26T16:14:57.058541+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.011883912",
      "avg_price": 159.92,
      "allocated": 1.9004752,
@@ -19411,7 +19428,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-10-26T16:14:52.859537+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.004712126",
      "avg_price": 403.25,
      "allocated": 1.9001648,
@@ -19430,7 +19447,7 @@
      "symbol": "KO",
      "name": "Coca-Cola Company (The)",
      "opened_at": "2026-10-26T16:14:57.597768+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.02056277",
      "avg_price": 92.41,
      "allocated": 1.9002056,
@@ -19449,7 +19466,7 @@
      "symbol": "WMT",
      "name": "Walmart",
      "opened_at": "2026-10-26T16:14:58.804250+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.01576371",
      "avg_price": 120.54,
      "allocated": 1.9001576,
@@ -19468,7 +19485,7 @@
      "symbol": "XLF",
      "name": "Financial Select Sector SPDR",
      "opened_at": "2026-10-26T16:14:39.584200+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.033931601",
      "avg_price": 56.01,
      "allocated": 1.900509,
@@ -19487,7 +19504,7 @@
      "symbol": "JPM",
      "name": "JPMorgan Chase",
      "opened_at": "2026-10-26T16:14:51.760074+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005683262",
      "avg_price": 334.33,
      "allocated": 1.900085,
@@ -19506,7 +19523,7 @@
      "symbol": "GS",
      "name": "Goldman Sachs",
      "opened_at": "2026-10-26T16:14:52.452525+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.002118986",
      "avg_price": 896.72,
      "allocated": 1.9001371,
@@ -19525,7 +19542,7 @@
      "symbol": "AAPL",
      "name": "Apple Inc.",
      "opened_at": "2026-10-26T16:14:45.711824+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005521169",
      "avg_price": 344.15,
      "allocated": 1.9001103,
@@ -19544,7 +19561,7 @@
      "symbol": "IWM",
      "name": "iShares Russell 2000",
      "opened_at": "2026-10-26T16:14:36.661894+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.006843271",
      "avg_price": 277.66,
      "allocated": 1.9001026,
@@ -19563,7 +19580,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-10-26T16:14:46.180565+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.003585243",
      "avg_price": 529.99,
      "allocated": 1.9001429,
@@ -19582,7 +19599,7 @@
      "symbol": "AVGO",
      "name": "Broadcom",
      "opened_at": "2026-10-26T16:14:49.784075+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005754262",
      "avg_price": 330.22,
      "allocated": 1.9001724,
@@ -19601,7 +19618,7 @@
      "symbol": "GLD",
      "name": "SPDR Gold Shares",
      "opened_at": "2026-10-26T16:14:37.393413+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005160519",
      "avg_price": 368.2,
      "allocated": 1.9001031,
@@ -19620,7 +19637,7 @@
      "symbol": "DIA",
      "name": "SPDR Dow Jones Industrial Average",
      "opened_at": "2026-10-26T16:14:36.999805+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.003636676",
      "avg_price": 522.48,
      "allocated": 1.9000905,
@@ -19639,7 +19656,7 @@
      "symbol": "META",
      "name": "Meta Platforms",
      "opened_at": "2026-10-26T16:14:48.817522+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.002958119",
      "avg_price": 642.36,
      "allocated": 1.9001773,
@@ -19658,7 +19675,7 @@
      "symbol": "NFLX",
      "name": "Netflix",
      "opened_at": "2026-10-26T16:14:50.528242+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.029961601",
      "avg_price": 63.42,
      "allocated": 1.9001647,
@@ -19677,7 +19694,7 @@
      "symbol": "BAC",
      "name": "Bank of America",
      "opened_at": "2026-10-26T16:14:52.114483+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.037320762",
      "avg_price": 50.92,
      "allocated": 1.9003732,
@@ -19696,7 +19713,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-10-26T16:14:38.267582+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.023264357",
      "avg_price": 81.68,
      "allocated": 1.9002327,
@@ -19715,7 +19732,7 @@
      "symbol": "UNH",
      "name": "UnitedHealth Group",
      "opened_at": "2026-10-26T16:14:55.322504+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.004619274",
      "avg_price": 411.41,
      "allocated": 1.9004155,
@@ -19734,7 +19751,7 @@
      "symbol": "PFE",
      "name": "Pfizer",
      "opened_at": "2026-10-26T16:14:56.392579+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.063555778",
      "avg_price": 29.91,
      "allocated": 1.9009533,
@@ -19753,7 +19770,7 @@
      "symbol": "SPY",
      "name": "SPDR S&P 500 ETF Trust",
      "opened_at": "2026-10-26T16:14:35.785131+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.002482491",
      "avg_price": 765.45,
      "allocated": 1.9002227,
@@ -19772,7 +19789,7 @@
      "symbol": "EEM",
      "name": "iShares MSCI Emerging Markets",
      "opened_at": "2026-10-26T16:14:38.677033+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.030716999",
      "avg_price": 61.87,
      "allocated": 1.9004607,
@@ -19791,7 +19808,7 @@
      "symbol": "AMD",
      "name": "Advanced Micro Devices",
      "opened_at": "2026-10-26T16:14:50.116757+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.003586665",
      "avg_price": 529.8,
      "allocated": 1.9002151,
@@ -19810,7 +19827,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-10-26T16:14:49.377653+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.00481238",
      "avg_price": 396.14,
      "allocated": 1.9063762,
@@ -19829,7 +19846,7 @@
      "symbol": "SLV",
      "name": "iShares Silver Trust",
      "opened_at": "2026-10-26T16:14:37.777208+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.038870703",
      "avg_price": 48.89,
      "allocated": 1.9003887,
@@ -19848,7 +19865,7 @@
      "symbol": "QQQ",
      "name": "Invesco QQQ Trust",
      "opened_at": "2026-10-26T16:14:36.230234+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.002665245",
      "avg_price": 712.92,
      "allocated": 1.9001065,
@@ -19867,7 +19884,7 @@
      "symbol": "ORCL",
      "name": "Oracle Corporation",
      "opened_at": "2026-10-26T16:14:50.898537+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.015023325",
      "avg_price": 126.49,
      "allocated": 1.9003004,
@@ -19886,7 +19903,7 @@
      "symbol": "BA",
      "name": "Boeing",
      "opened_at": "2026-10-26T16:15:01.503686+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.010095642",
      "avg_price": 188.28,
      "allocated": 1.9008075,
@@ -19905,16 +19922,16 @@
      "symbol": "BTC-USD",
      "name": "Bitcoin",
      "opened_at": "2026-10-26T16:15:32.444000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.00002371",
      "avg_price": 80106.8,
      "allocated": 1.9040806,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 73582.405,
-     "market_value": 1.7446388,
-     "unrealized_pnl": -0.159442,
-     "unrealized_pct": -8.3737,
-     "weight_pct": 1.791,
+     "last_price": 73539.465,
+     "market_value": 1.7436207,
+     "unrealized_pnl": -0.16046,
+     "unrealized_pct": -8.4272,
+     "weight_pct": 1.79,
      "entry_fees": 0.00474833,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -19924,7 +19941,7 @@
      "symbol": "CVX",
      "name": "Chevron Corporation",
      "opened_at": "2026-10-26T16:14:54.206982+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.008172921",
      "avg_price": 232.51,
      "allocated": 1.9002859,
@@ -19943,7 +19960,7 @@
      "symbol": "LINK-USD",
      "name": "Chainlink",
      "opened_at": "2026-10-26T16:15:27.134000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.1654836",
      "avg_price": 11.465,
      "allocated": 1.9020126,
@@ -19962,7 +19979,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-10-26T16:14:48.005628+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.005943629",
      "avg_price": 320.98,
      "allocated": 1.907786,
@@ -19981,16 +19998,16 @@
      "symbol": "LTC-USD",
      "name": "Litecoin",
      "opened_at": "2026-10-26T16:15:28.425000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.03350054",
      "avg_price": 56.654,
      "allocated": 1.9026844,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 50.904,
-     "market_value": 1.7053115,
-     "unrealized_pnl": -0.197373,
-     "unrealized_pct": -10.373,
-     "weight_pct": 1.751,
+     "last_price": 50.8575,
+     "market_value": 1.7037537,
+     "unrealized_pnl": -0.198931,
+     "unrealized_pct": -10.455,
+     "weight_pct": 1.749,
      "entry_fees": 0.00474485,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20000,7 +20017,7 @@
      "symbol": "XLE",
      "name": "Energy Select Sector SPDR",
      "opened_at": "2026-10-26T16:14:39.159767+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.027367662",
      "avg_price": 69.44,
      "allocated": 1.9004104,
@@ -20019,7 +20036,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-10-26T16:14:53.832656+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.010343513",
      "avg_price": 183.74,
      "allocated": 1.9005171,
@@ -20038,15 +20055,15 @@
      "symbol": "ETH-USD",
      "name": "Ethereum",
      "opened_at": "2026-10-26T16:15:32.568000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.00081925",
      "avg_price": 2318.24,
      "allocated": 1.9039662,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 2049.285,
-     "market_value": 1.6788767,
-     "unrealized_pnl": -0.225089,
-     "unrealized_pct": -11.822,
+     "last_price": 2049.415,
+     "market_value": 1.6789832,
+     "unrealized_pnl": -0.224983,
+     "unrealized_pct": -11.817,
      "weight_pct": 1.724,
      "entry_fees": 0.00474805,
      "entry_reason": "rebalance",
@@ -20057,15 +20074,15 @@
      "symbol": "DOGE-USD",
      "name": "Dogecoin",
      "opened_at": "2026-10-26T16:15:26.590000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "24.50822315",
      "avg_price": 0.07745,
      "allocated": 1.9029073,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 0.06824,
-     "market_value": 1.6724411,
-     "unrealized_pnl": -0.230466,
-     "unrealized_pct": -12.111,
+     "last_price": 0.06822,
+     "market_value": 1.671951,
+     "unrealized_pnl": -0.230956,
+     "unrealized_pct": -12.137,
      "weight_pct": 1.717,
      "entry_fees": 0.0047454,
      "entry_reason": "rebalance",
@@ -20076,7 +20093,7 @@
      "symbol": "CRM",
      "name": "Salesforce",
      "opened_at": "2026-10-26T16:14:51.261264+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.007792953",
      "avg_price": 243.83,
      "allocated": 1.9001557,
@@ -20095,15 +20112,15 @@
      "symbol": "ADA-USD",
      "name": "Cardano",
      "opened_at": "2026-10-26T16:15:32.378000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "9.23271295",
      "avg_price": 0.20551,
      "allocated": 1.9021584,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 0.174385,
-     "market_value": 1.6100466,
-     "unrealized_pnl": -0.292112,
-     "unrealized_pct": -15.357,
+     "last_price": 0.17441,
+     "market_value": 1.6102775,
+     "unrealized_pnl": -0.291881,
+     "unrealized_pct": -15.345,
      "weight_pct": 1.653,
      "entry_fees": 0.00474354,
      "entry_reason": "rebalance",
@@ -20114,7 +20131,7 @@
      "symbol": "CAT",
      "name": "Caterpillar Inc.",
      "opened_at": "2026-10-26T16:15:00.838775+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.002740714",
      "avg_price": 693.32,
      "allocated": 1.9001918,
@@ -20133,16 +20150,16 @@
      "symbol": "SOL-USD",
      "name": "Solana",
      "opened_at": "2026-10-26T16:15:32.591000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.01869986",
      "avg_price": 101.59,
      "allocated": 1.9044681,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 83.335,
-     "market_value": 1.5583528,
-     "unrealized_pnl": -0.346115,
-     "unrealized_pct": -18.174,
-     "weight_pct": 1.6,
+     "last_price": 83.365,
+     "market_value": 1.5589138,
+     "unrealized_pnl": -0.345554,
+     "unrealized_pct": -18.144,
+     "weight_pct": 1.601,
      "entry_fees": 0.0047493,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20152,16 +20169,16 @@
      "symbol": "XRP-USD",
      "name": "XRP",
      "opened_at": "2026-10-26T16:15:32.743000+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "1.47013308",
      "avg_price": 1.2923,
      "allocated": 1.9046026,
      "allocated_pct_at_entry": 1.905,
-     "last_price": 1.05435,
-     "market_value": 1.5500348,
-     "unrealized_pnl": -0.354568,
-     "unrealized_pct": -18.616,
-     "weight_pct": 1.591,
+     "last_price": 1.0555,
+     "market_value": 1.5517255,
+     "unrealized_pnl": -0.352877,
+     "unrealized_pct": -18.528,
+     "weight_pct": 1.593,
      "entry_fees": 0.00474963,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20171,7 +20188,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-10-26T16:14:46.826714+00:00",
-     "days_held": 15.33,
+     "days_held": 15.34,
      "quantity": "0.008814046",
      "avg_price": 215.59,
      "allocated": 1.9002202,
@@ -22213,7 +22230,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 101.4776045672673,
     "last_decision_date": "2026-11-10"
@@ -22221,20 +22238,20 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.657897+00:00",
    "summary": {
-    "equity": 96.899484,
+    "equity": 96.902871,
     "cash": 24.578824,
-    "invested": 72.32066,
-    "invested_pct": 74.63,
-    "pnl": -3.1005162,
-    "pnl_pct": -3.10052,
-    "day_pnl": 0.0130891,
-    "day_pnl_pct": 0.01351,
+    "invested": 72.324047,
+    "invested_pct": 74.64,
+    "pnl": -3.0971292,
+    "pnl_pct": -3.09713,
+    "day_pnl": 0.0164761,
+    "day_pnl_pct": 0.017006,
     "realized_pnl": -3.5023079,
-    "unrealized_pnl": 0.50694463,
+    "unrealized_pnl": 0.51033164,
     "fees": 0.105153,
     "slippage_cost": 0.152527,
     "max_drawdown_pct": 5.6233,
-    "current_drawdown_pct": 4.6501,
+    "current_drawdown_pct": 4.6468,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -22747,7 +22764,8 @@
      "2026-11-10T22:22:31.170657+00:00",
      "2026-11-10T23:22:06.903762+00:00",
      "2026-11-10T23:35:20.429658+00:00",
-     "2026-11-11T00:16:22.482877+00:00"
+     "2026-11-11T00:16:22.482877+00:00",
+     "2026-11-11T00:21:52.616204+00:00"
     ],
     "equity": [
      100.0,
@@ -23246,7 +23264,8 @@
      96.914671,
      96.88976,
      96.886395,
-     96.899484
+     96.899484,
+     96.902871
     ]
    },
    "positions": [
@@ -23254,7 +23273,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-10-26T16:01:06.596551+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.007457005",
      "avg_price": 1353.8555,
      "allocated": 10.095707,
@@ -23273,7 +23292,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-11-05T15:41:53.945761+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.014811905",
      "avg_price": 542.14136,
      "allocated": 8.0301463,
@@ -23292,7 +23311,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.017331731",
      "avg_price": 375.62,
      "allocated": 6.5101448,
@@ -23311,7 +23330,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.021181293",
      "avg_price": 295.08,
      "allocated": 6.2501759,
@@ -23330,7 +23349,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-11-10T15:41:45.047287+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.008802417",
      "avg_price": 716.85,
      "allocated": 6.3100126,
@@ -23349,7 +23368,7 @@
      "symbol": "DE",
      "name": "Deere & Company",
      "opened_at": "2026-11-10T15:41:46.468857+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.008988498",
      "avg_price": 676.43,
      "allocated": 6.0800897,
@@ -23358,7 +23377,7 @@
      "market_value": 6.1808509,
      "unrealized_pnl": 0.100761,
      "unrealized_pct": 1.6572,
-     "weight_pct": 6.379,
+     "weight_pct": 6.378,
      "entry_fees": 0.0,
      "entry_reason": "comprar: Puntuaci\u00f3n +0.34: t\u00e9cnico +0.36 (doble suelo), noticias +0.46 (2 relevantes), tendencia lateral. Titular: \u00abCNH Industrial (CNH) Beats Q3 Earnings Estimates\u00bb",
      "stop_loss": 658.24,
@@ -23368,7 +23387,7 @@
      "symbol": "META",
      "name": "Meta Platforms",
      "opened_at": "2026-11-10T15:41:35.540249+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.009578915",
      "avg_price": 643.08,
      "allocated": 6.1600087,
@@ -23387,7 +23406,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-10T15:41:46.061713+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.026662969",
      "avg_price": 226.91,
      "allocated": 6.0500943,
@@ -23406,7 +23425,7 @@
      "symbol": "PLTR",
      "name": "Palantir Technologies",
      "opened_at": "2026-11-10T15:41:42.829791+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.033960468",
      "avg_price": 166.96,
      "allocated": 5.6700397,
@@ -23415,7 +23434,7 @@
      "market_value": 5.7332065,
      "unrealized_pnl": 0.0631667,
      "unrealized_pct": 1.114,
-     "weight_pct": 5.917,
+     "weight_pct": 5.916,
      "entry_fees": 0.0,
      "entry_reason": "comprar: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.41 (estrella de la ma\u00f1ana, harami alcista), noticias +0.30 (18 relevantes), tendencia lateral. Titular: \u00abBigBear.ai Expands Gross Margin by 878 Bps: What Drives the Gains?\u00bb",
      "stop_loss": 147.74,
@@ -23425,7 +23444,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.013295258",
      "avg_price": 420.46,
      "allocated": 5.5901242,
@@ -23444,16 +23463,16 @@
      "symbol": "UNI-USD",
      "name": "Uniswap",
      "opened_at": "2026-11-07T15:42:21.964000+00:00",
-     "days_held": 3.357,
+     "days_held": 3.361,
      "quantity": "0.43703259",
      "avg_price": 7.0051394,
      "allocated": 3.0691279,
      "allocated_pct_at_entry": 3.156,
-     "last_price": 6.686,
-     "market_value": 2.9219999,
-     "unrealized_pnl": -0.147128,
-     "unrealized_pct": -4.7938,
-     "weight_pct": 3.015,
+     "last_price": 6.69375,
+     "market_value": 2.9253869,
+     "unrealized_pnl": -0.143741,
+     "unrealized_pct": -4.6834,
+     "weight_pct": 3.019,
      "entry_fees": 0.00765369,
      "entry_reason": "comprar: Puntuaci\u00f3n +0.40: t\u00e9cnico +0.34 (martillo invertido, harami alcista), noticias +0.70 (1 relevantes), tendencia lateral. Titular: \u00abETHBEAT Launches CROPS Guide With Uniswap, Safe, and Tornado Cash\u00bb",
      "stop_loss": 6.48102,
@@ -23463,7 +23482,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.017916013",
      "avg_price": 111.95,
      "allocated": 2.0056977,
@@ -42024,15 +42043,15 @@
    },
    "significance": {
     "days": 17,
-    "sharpe": -3.779,
+    "sharpe": -3.775,
     "sharpe_ci95": [
-     -9.832,
-     6.121
+     -9.831,
+     6.16
     ],
     "p_sharpe_positive": 0.17,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.417,
-    "excess_return_ann_pct": -8.59,
+    "p_beats_buy_hold": 0.418,
+    "excess_return_ann_pct": -8.54,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -42048,7 +42067,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T20:21:21.118540+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.8868875122072,
     "last_decision_date": "2026-11-10"
@@ -42056,20 +42075,20 @@
    "status": "synced",
    "started_at": "2026-10-25T20:21:21.118519+00:00",
    "summary": {
-    "equity": 98.209883,
+    "equity": 98.208096,
     "cash": 1.9841608,
-    "invested": 96.225722,
+    "invested": 96.223935,
     "invested_pct": 97.98,
-    "pnl": -1.7901171,
-    "pnl_pct": -1.79012,
-    "day_pnl": 0.00117216,
-    "day_pnl_pct": 0.0011935,
+    "pnl": -1.7919045,
+    "pnl_pct": -1.7919,
+    "day_pnl": -0.000615229,
+    "day_pnl_pct": -0.00062645,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -1.7776159,
+    "unrealized_pnl": -1.7794033,
     "fees": 0.0125012,
     "slippage_cost": 0.0158806,
     "max_drawdown_pct": 4.0221,
-    "current_drawdown_pct": 2.6733,
+    "current_drawdown_pct": 2.6751,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -42562,7 +42581,8 @@
      "2026-11-10T22:22:31.842917+00:00",
      "2026-11-10T23:22:07.434285+00:00",
      "2026-11-10T23:35:21.038083+00:00",
-     "2026-11-11T00:16:23.236015+00:00"
+     "2026-11-11T00:16:23.236015+00:00",
+     "2026-11-11T00:21:53.401899+00:00"
     ],
     "equity": [
      100.0,
@@ -43041,7 +43061,8 @@
      98.217288,
      98.213963,
      98.208711,
-     98.209883
+     98.209883,
+     98.208096
     ]
    },
    "positions": [
@@ -43049,7 +43070,7 @@
      "symbol": "SPY",
      "name": "SPDR S&P 500 ETF Trust",
      "opened_at": "2026-10-26T16:00:46.279014+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.032674653",
      "avg_price": 765.12,
      "allocated": 25.000031,
@@ -43068,7 +43089,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-10-26T16:00:48.553179+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.183812269",
      "avg_price": 81.61,
      "allocated": 15.000919,
@@ -43087,7 +43108,7 @@
      "symbol": "QQQ",
      "name": "Invesco QQQ Trust",
      "opened_at": "2026-10-26T16:00:46.637793+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.016840743",
      "avg_price": 712.56,
      "allocated": 12.00004,
@@ -43106,7 +43127,7 @@
      "symbol": "GLD",
      "name": "SPDR Gold Shares",
      "opened_at": "2026-10-26T16:00:47.663780+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.019016571",
      "avg_price": 368.11,
      "allocated": 7.00019,
@@ -43125,7 +43146,7 @@
      "symbol": "EEM",
      "name": "iShares MSCI Emerging Markets",
      "opened_at": "2026-10-26T16:00:53.959400+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.09704027",
      "avg_price": 61.84,
      "allocated": 6.0009703,
@@ -43144,7 +43165,7 @@
      "symbol": "DE",
      "name": "Deere & Company",
      "opened_at": "2026-10-26T16:01:22.221845+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.005501765",
      "avg_price": 636.17,
      "allocated": 3.5000578,
@@ -43163,7 +43184,7 @@
      "symbol": "SBUX",
      "name": "Starbucks",
      "opened_at": "2026-10-26T16:01:14.298413+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.034233472",
      "avg_price": 102.24,
      "allocated": 3.5000302,
@@ -43182,7 +43203,7 @@
      "symbol": "KO",
      "name": "Coca-Cola Company (The)",
      "opened_at": "2026-10-26T16:01:07.694128+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.037921446",
      "avg_price": 92.3,
      "allocated": 3.5001495,
@@ -43201,7 +43222,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-10-26T16:01:04.087191+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.008681291",
      "avg_price": 403.17,
      "allocated": 3.5000361,
@@ -43220,7 +43241,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-10-26T16:01:19.130369+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.024706826",
      "avg_price": 141.67,
      "allocated": 3.500216,
@@ -43239,7 +43260,7 @@
      "symbol": "LIN",
      "name": "Linde plc",
      "opened_at": "2026-10-26T16:01:23.573742+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.006853811",
      "avg_price": 510.67,
      "allocated": 3.5000357,
@@ -43258,16 +43279,16 @@
      "symbol": "BTC-USD",
      "name": "Bitcoin",
      "opened_at": "2026-10-26T16:01:23.067000+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.00004358",
      "avg_price": 80309.5,
      "allocated": 3.5086377,
      "allocated_pct_at_entry": 3.509,
-     "last_price": 73582.405,
-     "market_value": 3.2067212,
-     "unrealized_pnl": -0.301917,
-     "unrealized_pct": -8.6049,
-     "weight_pct": 3.265,
+     "last_price": 73539.465,
+     "market_value": 3.2048499,
+     "unrealized_pnl": -0.303788,
+     "unrealized_pct": -8.6583,
+     "weight_pct": 3.263,
      "entry_fees": 0.00874972,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -43277,7 +43298,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-10-26T16:01:04.984806+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.019038294",
      "avg_price": 183.85,
      "allocated": 3.5001904,
@@ -43296,7 +43317,7 @@
      "symbol": "MU",
      "name": "Micron Technology",
      "opened_at": "2026-10-26T16:01:12.483704+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.003862843",
      "avg_price": 906.07,
      "allocated": 3.5000062,
@@ -43315,15 +43336,15 @@
      "symbol": "ETH-USD",
      "name": "Ethereum",
      "opened_at": "2026-10-26T16:01:20.770000+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.00064566",
      "avg_price": 2324.1,
      "allocated": 1.5043299,
      "allocated_pct_at_entry": 1.504,
-     "last_price": 2049.285,
-     "market_value": 1.3231414,
-     "unrealized_pnl": -0.181189,
-     "unrealized_pct": -12.044,
+     "last_price": 2049.415,
+     "market_value": 1.3232253,
+     "unrealized_pnl": -0.181105,
+     "unrealized_pct": -12.039,
      "weight_pct": 1.347,
      "entry_fees": 0.00375145,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
@@ -44722,16 +44743,16 @@
    "learning": null,
    "significance": {
     "days": 17,
-    "sharpe": -1.439,
+    "sharpe": -1.44,
     "sharpe_ci95": [
      -5.386,
-     4.013
+     4.005
     ],
-    "p_sharpe_positive": 0.259,
+    "p_sharpe_positive": 0.258,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.823,
-    "excess_return_ann_pct": 12.06,
-    "days_to_significant_vs_buy_hold": 136
+    "p_beats_buy_hold": 0.822,
+    "excess_return_ann_pct": 12.04,
+    "days_to_significant_vs_buy_hold": 137
    }
   },
   {
@@ -44752,7 +44773,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.341612+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-10"
@@ -45261,9 +45282,11 @@
      "2026-11-10T22:22:31.859006+00:00",
      "2026-11-10T23:22:07.451531+00:00",
      "2026-11-10T23:35:21.055787+00:00",
-     "2026-11-11T00:16:23.471723+00:00"
+     "2026-11-11T00:16:23.471723+00:00",
+     "2026-11-11T00:21:53.413216+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -48159,7 +48182,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342190+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.65260241811241,
     "last_decision_date": "2026-11-10"
@@ -48683,7 +48706,8 @@
      "2026-11-10T22:22:31.863937+00:00",
      "2026-11-10T23:22:07.456787+00:00",
      "2026-11-10T23:35:21.061159+00:00",
-     "2026-11-11T00:16:23.475047+00:00"
+     "2026-11-11T00:16:23.475047+00:00",
+     "2026-11-11T00:21:53.416745+00:00"
     ],
     "equity": [
      100.0,
@@ -49172,6 +49196,7 @@
      100.00732,
      100.00732,
      100.00732,
+     100.00732,
      100.00732
     ]
    },
@@ -49180,7 +49205,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 8.357,
+     "days_held": 8.361,
      "quantity": "0.069782489",
      "avg_price": 285.7,
      "allocated": 19.936857,
@@ -49199,7 +49224,7 @@
      "symbol": "BAC",
      "name": "Bank of America",
      "opened_at": "2026-10-26T16:03:31.636290+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.392541707",
      "avg_price": 50.96,
      "allocated": 20.003925,
@@ -52014,7 +52039,7 @@
     "p_sharpe_positive": 0.569,
     "days_to_significant_sharpe": 7415,
     "p_beats_buy_hold": 0.9,
-    "excess_return_ann_pct": 39.7,
+    "excess_return_ann_pct": 39.71,
     "days_to_significant_vs_buy_hold": 89
    }
   },
@@ -52034,7 +52059,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342744+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.54028082604681,
     "last_decision_date": "2026-11-10"
@@ -52562,7 +52587,8 @@
      "2026-11-10T22:22:31.876948+00:00",
      "2026-11-10T23:22:07.470778+00:00",
      "2026-11-10T23:35:21.076062+00:00",
-     "2026-11-11T00:16:23.484033+00:00"
+     "2026-11-11T00:16:23.484033+00:00",
+     "2026-11-11T00:21:53.464629+00:00"
     ],
     "equity": [
      100.0,
@@ -53055,6 +53081,7 @@
      95.552172,
      95.552172,
      95.552172,
+     95.552172,
      95.552172
     ]
    },
@@ -53063,7 +53090,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-10-26T16:03:44.699212+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.040712117",
      "avg_price": 286.71,
      "allocated": 11.672571,
@@ -53082,7 +53109,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.026238863",
      "avg_price": 420.46,
      "allocated": 11.032392,
@@ -53120,7 +53147,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-10-26T16:03:44.987954+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.012471543",
      "avg_price": 680.97469,
      "allocated": 8.4928051,
@@ -53139,7 +53166,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-10-26T16:03:27.756271+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.015917887",
      "avg_price": 529.91,
      "allocated": 8.4350475,
@@ -53158,7 +53185,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-11-05T15:42:01.795038+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.005643378",
      "avg_price": 1432.6,
      "allocated": 8.0847033,
@@ -53177,7 +53204,7 @@
      "symbol": "LMT",
      "name": "Lockheed Martin",
      "opened_at": "2026-11-10T15:41:46.724949+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.00995162",
      "avg_price": 594.28,
      "allocated": 5.9140487,
@@ -53196,7 +53223,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-10-26T16:03:40.167726+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.017313818",
      "avg_price": 291.34877,
      "allocated": 5.0443596,
@@ -53215,7 +53242,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-11-05T15:42:00.152163+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.031429346",
      "avg_price": 172.52,
      "allocated": 5.4221908,
@@ -53234,7 +53261,7 @@
      "symbol": "PLTR",
      "name": "Palantir Technologies",
      "opened_at": "2026-10-26T16:03:41.344774+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.027917995",
      "avg_price": 189.41782,
      "allocated": 5.2881658,
@@ -53253,7 +53280,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-05T15:42:15.224210+00:00",
-     "days_held": 5.357,
+     "days_held": 5.361,
      "quantity": "0.033207591",
      "avg_price": 140.21,
      "allocated": 4.6560363,
@@ -53272,7 +53299,7 @@
      "symbol": "USO",
      "name": "United States Oil Fund",
      "opened_at": "2026-10-26T16:03:27.115349+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.024978625",
      "avg_price": 159.37812,
      "allocated": 3.9810464,
@@ -56234,7 +56261,7 @@
     "p_sharpe_positive": 0.161,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.205,
-    "excess_return_ann_pct": -37.0,
+    "excess_return_ann_pct": -36.99,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -56262,7 +56289,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343266+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.88242090937594,
     "last_decision_date": "2026-11-10"
@@ -56270,20 +56297,20 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.343234+00:00",
    "summary": {
-    "equity": 94.955253,
+    "equity": 94.963125,
     "cash": 24.923454,
-    "invested": 70.0318,
+    "invested": 70.039672,
     "invested_pct": 73.75,
-    "pnl": -5.0447466,
-    "pnl_pct": -5.04475,
-    "day_pnl": 0.0304212,
-    "day_pnl_pct": 0.032048,
+    "pnl": -5.0368747,
+    "pnl_pct": -5.03687,
+    "day_pnl": 0.0382931,
+    "day_pnl_pct": 0.04034,
     "realized_pnl": -4.5297039,
-    "unrealized_pnl": -0.41304406,
+    "unrealized_pnl": -0.40517213,
     "fees": 0.101999,
     "slippage_cost": 0.16878,
     "max_drawdown_pct": 6.7814,
-    "current_drawdown_pct": 5.9968,
+    "current_drawdown_pct": 5.989,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -56786,7 +56813,8 @@
      "2026-11-10T22:22:31.921413+00:00",
      "2026-11-10T23:22:07.521126+00:00",
      "2026-11-10T23:35:21.122489+00:00",
-     "2026-11-11T00:16:23.510666+00:00"
+     "2026-11-11T00:16:23.510666+00:00",
+     "2026-11-11T00:21:53.602780+00:00"
     ],
     "equity": [
      100.0,
@@ -57275,7 +57303,8 @@
      94.99055,
      94.932653,
      94.924832,
-     94.955253
+     94.955253,
+     94.963125
     ]
    },
    "positions": [
@@ -57283,7 +57312,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.040307589",
      "avg_price": 375.62,
      "allocated": 15.140337,
@@ -57302,7 +57331,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.049242269",
      "avg_price": 295.08,
      "allocated": 14.530409,
@@ -57321,7 +57350,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-11-10T15:41:45.047287+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.020464573",
      "avg_price": 716.85,
      "allocated": 14.670029,
@@ -57340,7 +57369,7 @@
      "symbol": "META",
      "name": "Meta Platforms",
      "opened_at": "2026-11-10T15:41:35.540249+00:00",
-     "days_held": 0.3575,
+     "days_held": 0.3613,
      "quantity": "0.022267869",
      "avg_price": 643.08,
      "allocated": 14.320021,
@@ -57359,16 +57388,16 @@
      "symbol": "UNI-USD",
      "name": "Uniswap",
      "opened_at": "2026-11-07T15:42:21.964000+00:00",
-     "days_held": 3.357,
+     "days_held": 3.361,
      "quantity": "1.01573305",
      "avg_price": 7.0049353,
      "allocated": 7.1329322,
      "allocated_pct_at_entry": 7.48,
-     "last_price": 6.686,
-     "market_value": 6.7911912,
-     "unrealized_pnl": -0.341741,
-     "unrealized_pct": -4.791,
-     "weight_pct": 7.152,
+     "last_price": 6.69375,
+     "market_value": 6.7990631,
+     "unrealized_pnl": -0.333869,
+     "unrealized_pct": -4.6807,
+     "weight_pct": 7.16,
      "entry_fees": 0.0177879,
      "entry_reason": "comprar: Puntuaci\u00f3n +0.40: t\u00e9cnico +0.34 (martillo invertido, harami alcista), noticias +0.70 (1 relevantes), tendencia lateral. Titular: \u00abETHBEAT Launches CROPS Guide With Uniswap, Safe, and Tornado Cash\u00bb",
      "stop_loss": 6.48102,
@@ -57378,7 +57407,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.041705261",
      "avg_price": 111.95,
      "allocated": 4.668904,
@@ -71646,15 +71675,15 @@
    },
    "significance": {
     "days": 16,
-    "sharpe": -6.234,
+    "sharpe": -6.222,
     "sharpe_ci95": [
      -10.699,
-     1.81
+     1.862
     ],
     "p_sharpe_positive": 0.04,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.171,
-    "excess_return_ann_pct": -48.3,
+    "excess_return_ann_pct": -48.16,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -71672,7 +71701,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343815+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 101.07451587278447,
     "last_decision_date": "2026-11-10"
@@ -71680,20 +71709,20 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.343783+00:00",
    "summary": {
-    "equity": 96.66333,
+    "equity": 96.661542,
     "cash": 1.9826511,
-    "invested": 94.680679,
+    "invested": 94.678891,
     "invested_pct": 97.95,
-    "pnl": -3.33667,
-    "pnl_pct": -3.33667,
-    "day_pnl": 0.00117224,
-    "day_pnl_pct": 0.0012127,
+    "pnl": -3.3384583,
+    "pnl_pct": -3.33846,
+    "day_pnl": -0.000616001,
+    "day_pnl_pct": -0.00063727,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -3.3241643,
+    "unrealized_pnl": -3.3259526,
     "fees": 0.0125057,
     "slippage_cost": 0.0109353,
     "max_drawdown_pct": 5.7795,
-    "current_drawdown_pct": 4.3837,
+    "current_drawdown_pct": 4.3855,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -72181,7 +72210,8 @@
      "2026-11-10T22:22:31.942162+00:00",
      "2026-11-10T23:22:07.543081+00:00",
      "2026-11-10T23:35:21.143955+00:00",
-     "2026-11-11T00:16:23.524261+00:00"
+     "2026-11-11T00:16:23.524261+00:00",
+     "2026-11-11T00:21:53.618553+00:00"
     ],
     "equity": [
      100.0,
@@ -72655,7 +72685,8 @@
      96.670738,
      96.667412,
      96.662158,
-     96.66333
+     96.66333,
+     96.661542
     ]
    },
    "positions": [
@@ -72663,7 +72694,7 @@
      "symbol": "SPY",
      "name": "SPDR S&P 500 ETF Trust",
      "opened_at": "2026-10-26T16:03:20.681411+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.032668677",
      "avg_price": 765.26,
      "allocated": 25.000032,
@@ -72672,7 +72703,7 @@
      "market_value": 24.498894,
      "unrealized_pnl": -0.501138,
      "unrealized_pct": -2.0045,
-     "weight_pct": 25.34,
+     "weight_pct": 25.35,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -72682,7 +72713,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-10-26T16:03:22.576094+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.183744946",
      "avg_price": 81.64,
      "allocated": 15.000937,
@@ -72701,7 +72732,7 @@
      "symbol": "QQQ",
      "name": "Invesco QQQ Trust",
      "opened_at": "2026-10-26T16:03:20.980282+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.016834364",
      "avg_price": 712.83,
      "allocated": 12.00004,
@@ -72720,7 +72751,7 @@
      "symbol": "KO",
      "name": "Coca-Cola Company (The)",
      "opened_at": "2026-10-26T16:03:35.398931+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.075838785",
      "avg_price": 92.31,
      "allocated": 7.0006782,
@@ -72739,7 +72770,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-10-26T16:03:44.427424+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.049438081",
      "avg_price": 141.6,
      "allocated": 7.0004323,
@@ -72758,7 +72789,7 @@
      "symbol": "GLD",
      "name": "SPDR Gold Shares",
      "opened_at": "2026-10-26T16:03:21.937243+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.019005797",
      "avg_price": 368.31,
      "allocated": 7.0000251,
@@ -72777,7 +72808,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-10-26T16:03:33.009833+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.03812406",
      "avg_price": 183.62,
      "allocated": 7.0003399,
@@ -72796,7 +72827,7 @@
      "symbol": "EEM",
      "name": "iShares MSCI Emerging Markets",
      "opened_at": "2026-10-26T16:03:22.931330+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.096993522",
      "avg_price": 61.86,
      "allocated": 6.0000193,
@@ -72815,7 +72846,7 @@
      "symbol": "MU",
      "name": "Micron Technology",
      "opened_at": "2026-10-26T16:03:40.519357+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.007717219",
      "avg_price": 907.07,
      "allocated": 7.0000578,
@@ -72834,16 +72865,16 @@
      "symbol": "BTC-USD",
      "name": "Bitcoin",
      "opened_at": "2026-10-26T16:03:47.613000+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.0000436",
      "avg_price": 80309.5,
      "allocated": 3.5102479,
      "allocated_pct_at_entry": 3.51,
-     "last_price": 73582.405,
-     "market_value": 3.2081929,
-     "unrealized_pnl": -0.302055,
-     "unrealized_pct": -8.605,
-     "weight_pct": 3.319,
+     "last_price": 73539.465,
+     "market_value": 3.2063207,
+     "unrealized_pnl": -0.303927,
+     "unrealized_pct": -8.6583,
+     "weight_pct": 3.317,
      "entry_fees": 0.00875374,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -72853,15 +72884,15 @@
      "symbol": "ETH-USD",
      "name": "Ethereum",
      "opened_at": "2026-10-26T16:03:47.433000+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.00064575",
      "avg_price": 2324.1,
      "allocated": 1.5045395,
      "allocated_pct_at_entry": 1.505,
-     "last_price": 2049.285,
-     "market_value": 1.3233258,
-     "unrealized_pnl": -0.181214,
-     "unrealized_pct": -12.044,
+     "last_price": 2049.415,
+     "market_value": 1.3234097,
+     "unrealized_pnl": -0.18113,
+     "unrealized_pct": -12.039,
      "weight_pct": 1.369,
      "entry_fees": 0.00375197,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
@@ -74068,15 +74099,15 @@
    "learning": null,
    "significance": {
     "days": 16,
-    "sharpe": -2.625,
+    "sharpe": -2.626,
     "sharpe_ci95": [
      -7.428,
-     3.692
+     3.688
     ],
     "p_sharpe_positive": 0.176,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.327,
-    "excess_return_ann_pct": -14.03,
+    "excess_return_ann_pct": -14.05,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -74092,7 +74123,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.251622+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-10"
@@ -74605,9 +74636,11 @@
      "2026-11-10T22:22:31.955326+00:00",
      "2026-11-10T23:22:07.556935+00:00",
      "2026-11-10T23:35:21.158258+00:00",
-     "2026-11-11T00:16:23.532609+00:00"
+     "2026-11-11T00:16:23.532609+00:00",
+     "2026-11-11T00:21:53.627268+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -76361,7 +76394,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.345340+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-10"
@@ -76870,9 +76903,11 @@
      "2026-11-10T22:22:31.959938+00:00",
      "2026-11-10T23:22:07.561887+00:00",
      "2026-11-10T23:35:21.163313+00:00",
-     "2026-11-11T00:16:23.540799+00:00"
+     "2026-11-11T00:16:23.540799+00:00",
+     "2026-11-11T00:21:53.630597+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -78618,7 +78653,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.252268+00:00",
-    "last_run": "2026-11-11T00:15:30.066560+00:00",
+    "last_run": "2026-11-11T00:20:36.783496+00:00",
     "last_status": "synced",
     "risk_peak": 100.08378034356787,
     "last_decision_date": "2026-11-10"
@@ -78626,20 +78661,20 @@
    "status": "synced",
    "started_at": "2026-10-25T21:21:36.252241+00:00",
    "summary": {
-    "equity": 99.09348,
+    "equity": 99.095835,
     "cash": 66.870515,
-    "invested": 32.222964,
+    "invested": 32.225319,
     "invested_pct": 32.52,
-    "pnl": -0.9065205,
-    "pnl_pct": -0.90652,
-    "day_pnl": 0.0091014,
-    "day_pnl_pct": 0.0091855,
+    "pnl": -0.90416538,
+    "pnl_pct": -0.904165,
+    "day_pnl": 0.0114565,
+    "day_pnl_pct": 0.011562,
     "realized_pnl": -0.021243294,
-    "unrealized_pnl": -0.87982117,
+    "unrealized_pnl": -0.87746605,
     "fees": 0.00545603,
     "slippage_cost": 0.0140272,
     "max_drawdown_pct": 1.3995,
-    "current_drawdown_pct": 0.98947,
+    "current_drawdown_pct": 0.98712,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -79133,7 +79168,8 @@
      "2026-11-10T22:22:31.965176+00:00",
      "2026-11-10T23:22:07.567359+00:00",
      "2026-11-10T23:35:21.168737+00:00",
-     "2026-11-11T00:16:23.544603+00:00"
+     "2026-11-11T00:16:23.544603+00:00",
+     "2026-11-11T00:21:53.634079+00:00"
     ],
     "equity": [
      100.0,
@@ -79613,7 +79649,8 @@
      99.10404,
      99.086718,
      99.084378,
-     99.09348
+     99.09348,
+     99.095835
     ]
    },
    "positions": [
@@ -79621,7 +79658,7 @@
      "symbol": "SPY",
      "name": "SPDR S&P 500 ETF Trust",
      "opened_at": "2026-10-26T16:03:20.681411+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.00557981",
      "avg_price": 765.26,
      "allocated": 4.2700054,
@@ -79640,7 +79677,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-10-26T16:03:44.699212+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.009940704",
      "avg_price": 286.71,
      "allocated": 2.8500992,
@@ -79659,7 +79696,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-11-04T15:42:17.245543+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.017352146",
      "avg_price": 147.54,
      "allocated": 2.5601356,
@@ -79678,7 +79715,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 8.357,
+     "days_held": 8.361,
      "quantity": "0.008435445",
      "avg_price": 285.7,
      "allocated": 2.4100066,
@@ -79697,7 +79734,7 @@
      "symbol": "BAC",
      "name": "Bank of America",
      "opened_at": "2026-10-26T16:03:31.636290+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.045338567",
      "avg_price": 50.96,
      "allocated": 2.3104534,
@@ -79716,7 +79753,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-10-26T16:03:22.576094+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.028296721",
      "avg_price": 81.64,
      "allocated": 2.3101443,
@@ -79754,16 +79791,16 @@
      "symbol": "UNI-USD",
      "name": "Uniswap",
      "opened_at": "2026-11-07T15:42:21.964000+00:00",
-     "days_held": 3.357,
+     "days_held": 3.361,
      "quantity": "0.30388632",
      "avg_price": 7.0063,
      "allocated": 2.1344415,
      "allocated_pct_at_entry": 2.159,
-     "last_price": 6.686,
-     "market_value": 2.0317839,
-     "unrealized_pnl": -0.102658,
-     "unrealized_pct": -4.8096,
-     "weight_pct": 2.05,
+     "last_price": 6.69375,
+     "market_value": 2.0341391,
+     "unrealized_pnl": -0.100302,
+     "unrealized_pct": -4.6992,
+     "weight_pct": 2.053,
      "entry_fees": 0.0053228,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
@@ -79773,7 +79810,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 0.3574,
+     "days_held": 0.3612,
      "quantity": "0.006744123",
      "avg_price": 295.08,
      "allocated": 1.9900558,
@@ -79792,7 +79829,7 @@
      "symbol": "QQQ",
      "name": "Invesco QQQ Trust",
      "opened_at": "2026-10-26T16:03:20.980282+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.002903927",
      "avg_price": 712.83,
      "allocated": 2.0700063,
@@ -79811,7 +79848,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-10-26T16:03:33.009833+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.01149168",
      "avg_price": 183.62,
      "allocated": 2.1101023,
@@ -79830,7 +79867,7 @@
      "symbol": "USO",
      "name": "United States Oil Fund",
      "opened_at": "2026-10-26T16:03:27.115349+00:00",
-     "days_held": 15.34,
+     "days_held": 15.35,
      "quantity": "0.013255447",
      "avg_price": 168.24,
      "allocated": 2.2300964,
@@ -79849,7 +79886,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-02T15:42:18.772820+00:00",
-     "days_held": 8.357,
+     "days_held": 8.361,
      "quantity": "0.013683086",
      "avg_price": 149.83,
      "allocated": 2.0501368,
@@ -79887,7 +79924,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-04T15:42:19.969774+00:00",
-     "days_held": 6.357,
+     "days_held": 6.361,
      "quantity": "0.002592371",
      "avg_price": 225.38,
      "allocated": 0.58426858,
@@ -82947,35 +82984,35 @@
    },
    "significance": {
     "days": 17,
-    "sharpe": -2.91,
+    "sharpe": -2.902,
     "sharpe_ci95": [
-     -6.962,
-     3.336
+     -6.952,
+     3.359
     ],
-    "p_sharpe_positive": 0.141,
+    "p_sharpe_positive": 0.142,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.783,
-    "excess_return_ann_pct": 23.96,
-    "days_to_significant_vs_buy_hold": 402
+    "p_beats_buy_hold": 0.784,
+    "excess_return_ann_pct": 24.0,
+    "days_to_significant_vs_buy_hold": 400
    }
   }
  ],
  "research": {
   "status": {
-   "started_at": "2026-11-10T23:33:48.623885+00:00",
-   "duration_s": 57.1,
+   "started_at": "2026-11-11T00:20:36.820729+00:00",
+   "duration_s": 47.0,
    "llm": "local",
    "engines": [
     "local (gratis, sin IA)"
    ],
    "news_engines": {
-    "local": 33
+    "local": 54
    },
    "news": {
-    "fetched": 1731,
-    "new": 8,
-    "stored": 9549,
-    "triaged": 8,
+    "fetched": 1729,
+    "new": 29,
+    "stored": 9541,
+    "triaged": 29,
     "deep_analyses": 25,
     "untriaged_backlog": 0
    },
@@ -84359,7 +84396,7 @@
     "2026-11-03",
     "2026-12-10"
    ],
-   "generated_at": "2026-11-10T23:33:48.623885+00:00",
+   "generated_at": "2026-11-11T00:20:36.820729+00:00",
    "researched_at": null,
    "summary": null,
    "sources": {
@@ -84371,6 +84408,149 @@
   },
   "news": {
    "analyses": [
+    {
+     "id": "4c883e1b78d415f0",
+     "title": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbVZvQmtENHNLbWRiSHdHTEFOSGFEcTZxdDVNQjNJOXZwLXVHNHNnZmxVSUhIQVdPSnQ5aWx4RHdzSUNFUWVvMGJLSFM5LXM1enBlZ2Rub2FicGFrOGs1QmVsQk8yalhYTzl2SFZyMUlkNlhxSHUzcTVwcXNNZFp5d2hwZ25OdkN0bl83MzNZbnM0N3hqM3BYak9XR3JTNTA5emxjVFlwclhvSkRnYS1rRA?oc=5",
+     "publisher": "Bloomberg.com",
+     "published": "2026-11-10T23:35:11+00:00",
+     "triage": {
+      "relevance": 0.605,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     },
+     "analysis": {
+      "id": "4c883e1b78d415f0",
+      "headline": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+      "what_happened": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "a682a6166ebe",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
+     "id": "fab6b303ccfb0c63",
+     "title": "HIMS Stock Faces Dual Blow From Expanded FTC Privacy Lawsuit After Selloff Driven By Q3 Subscriber Loss",
+     "url": "https://stocktwits.com/news-articles/markets/equity/hims-stock-faces-dual-blow-from-expanded-ftc-privacy-lawsuit-after-selloff-driven-by-q3-subscriber-loss/cNGuUbdR9Ji?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T23:10:26+00:00",
+     "triage": {
+      "relevance": 0.62,
+      "sentiment": -0.762,
+      "impact": "medium",
+      "category": "regulation",
+      "symbols": [
+       "META"
+      ],
+      "named": [
+       "META"
+      ],
+      "summary": "HIMS Stock Faces Dual Blow From Expanded FTC Privacy Lawsuit After Selloff Driven By Q3 Subscriber Loss. The Federal Trade Commission on Tuesday filed an amended complaint in the U.S. District Court for the Northern District of California, adding Arizona, Florida, Nebraska, Ohio, and Wisconsin as co-plaintiffs.",
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     },
+     "analysis": {
+      "id": "fab6b303ccfb0c63",
+      "headline": "HIMS Stock Faces Dual Blow From Expanded FTC Privacy Lawsuit After Selloff Driven By Q3 Subscriber Loss",
+      "what_happened": "The Federal Trade Commission on Tuesday filed an amended complaint in the U.S. District Court for the Northern District of California, adding Arizona, Florida, Nebraska, Ohio, and Wisconsin as co-plaintiffs.",
+      "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
+      "affected": [
+       {
+        "symbol": "META",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
+     "id": "3df9ef2aad931866",
+     "title": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTXo5UzFWVEh5WllQOHNxS1Q2cERxOEM0X1QyN1dPX0R4XzdfT1BpajYxdi0xOEltNWh6cE15Z2ZvZ2dXV0Vwb3NkbWZ1VGQ2M2tvVVVSaWd6clhPcS1XUEU2QXE3c0tlLUhPX0c2emRnWVpwOGtoajlnSS1VRXRNZXFaNEpyVlVwcFVIOUdkT18yQ2t6a1psZGVlOFpiZl90QnVhcmxqQzNxNnlNSEdXcWpjcUdzYUNJSi1hcnl6ZEpUSUU?oc=5",
+     "publisher": "Reuters",
+     "published": "2026-11-10T23:07:22+00:00",
+     "triage": {
+      "relevance": 0.795,
+      "sentiment": -0.762,
+      "impact": "high",
+      "category": "central_bank",
+      "symbols": [],
+      "named": [],
+      "summary": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     },
+     "analysis": {
+      "id": "3df9ef2aad931866",
+      "headline": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+      "what_happened": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "a30e49c88ffd",
+       "b84ede22fb83"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
     {
      "id": "6d52e627b16979ca",
      "title": "CoreWeave Earnings Were Strong. Investors Remain Antsy as Stock Edges Up.",
@@ -85156,6 +85336,122 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-10T23:20:48.955777+00:00"
+     }
+    },
+    {
+     "id": "44fdb30f0e2901b1",
+     "title": "Coca-Cola Stock Is Up 36% in a Year. Here\u2019s What That Did to Its Dividend Yield",
+     "url": "https://www.tikr.com/blog/coca-cola-stock-is-up-36-in-a-year-heres-what-that-did-to-its-dividend-yield?ref=yahoofinance&tlnk=yf-261110-2mjr62mq&.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T22:16:03+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "KO",
+       "TLT",
+       "XLF",
+       "QQQ"
+      ],
+      "named": [
+       "KO"
+      ],
+      "summary": "Coca-Cola Stock Is Up 36% in a Year. Here\u2019s What That Did to Its Dividend Yield. Key TakeawaysCoca-Cola (KO) stock gained approximately 36% in the year ended November 9, 2026, pushing its forward dividend yield down to around 2. 2%.",
+      "model": "local",
+      "at": "2026-11-10T23:20:48.955777+00:00"
+     },
+     "analysis": {
+      "id": "44fdb30f0e2901b1",
+      "headline": "Coca-Cola Stock Is Up 36% in a Year. Here\u2019s What That Did to Its Dividend Yield",
+      "what_happened": "Key TakeawaysCoca-Cola (KO) stock gained approximately 36% in the year ended November 9, 2026, pushing its forward dividend yield down to around 2. 2%.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "KO",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.76)."
+       },
+       {
+        "symbol": "TLT",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLF",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "QQQ",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "8f3e00b6ebcf"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
+     "id": "248b93022f34dc76",
+     "title": "Halliburton Announces Dividend",
+     "url": "https://finance.yahoo.com/energy/articles/halliburton-announces-dividend-221500696.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T22:15:00+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "META"
+      ],
+      "named": [
+       "META"
+      ],
+      "summary": "Halliburton Announces Dividend. HOUSTON, November 10, 2026--Halliburton Company (NYSE: HAL) announced today that its board of directors has declared a 2026 fourth quarter dividend of seventeen cents ($0.17) a share on the Company\u2019s common stock payable",
+      "model": "local",
+      "at": "2026-11-10T22:20:40.599609+00:00"
+     },
+     "analysis": {
+      "id": "248b93022f34dc76",
+      "headline": "Halliburton Announces Dividend",
+      "what_happened": "HOUSTON, November 10, 2026--Halliburton Company (NYSE: HAL) announced today that its board of directors has declared a 2026 fourth quarter dividend of seventeen cents ($0.17) a share on the Company\u2019s common stock payable on December 23, 2026, to shareholders of record at the close of business on December 2, 2026.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "META",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
      }
     },
     {
@@ -86200,6 +86496,51 @@
      }
     },
     {
+     "id": "b8515505ff2ddb37",
+     "title": "Costco Wholesale Corporation Declares $30 Special Cash Dividend and Reauthorizes Stock Repurchase Program",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/costco-wholesale-corporation-declares-30-211500905.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T21:15:00+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "COST"
+      ],
+      "named": [
+       "COST"
+      ],
+      "summary": "Costco Wholesale Corporation Declares $30 Special Cash Dividend and Reauthorizes Stock Repurchase Program. ISSAQUAH, Wash., Nov. 10, 2026 (GLOBE NEWSWIRE) -- Costco Wholesale Corporation (\u201cCostco\u201d or the \u201cCompany\u201d) (Nasdaq: COST) today announced that its Board of Directors has declared a special cash dividend of $30 per share",
+      "model": "local",
+      "at": "2026-11-10T21:20:37.793559+00:00"
+     },
+     "analysis": {
+      "id": "b8515505ff2ddb37",
+      "headline": "Costco Wholesale Corporation Declares $30 Special Cash Dividend and Reauthorizes Stock Repurchase Program",
+      "what_happened": "ISSAQUAH, Wash., Nov. 10, 2026 (GLOBE NEWSWIRE) -- Costco Wholesale Corporation (\u201cCostco\u201d or the \u201cCompany\u201d) (Nasdaq: COST) today announced that its Board of Directors has declared a special cash dividend of $30 per share on Costco common stock. It is payable December 4, 2026, to shareholders of record as of the close of business on November 24, 2026. The total amount of the payment will be approximately $13.3 billion. The Company also announced that the Board has reauthorized a common-stock repu",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "COST",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
      "id": "4bd05377823db090",
      "title": "US Equity Markets End Lower as Inflation Tops Expectations",
      "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-end-lower-211356171.html?.tsrc=rss",
@@ -86863,6 +87204,88 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-10T20:20:47.365128+00:00"
+     }
+    },
+    {
+     "id": "ea21ea78284d14ea",
+     "title": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.",
+     "url": "https://finance.yahoo.com/m/b191fb08-44aa-3b9a-8661-c6bbc45c3098/anthropic%E2%80%99s-ipo-price-isn%E2%80%99t.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T20:02:00+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "AAPL",
+       "GOOGL",
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [
+       "AAPL",
+       "GOOGL"
+      ],
+      "summary": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.. Anthropic\u2019s bankers seem to have lowered their IPO expectations following recent turmoil in the tech sector. It\u2019s a potential win for retail investors.",
+      "model": "local",
+      "at": "2026-11-10T22:20:40.599609+00:00"
+     },
+     "analysis": {
+      "id": "ea21ea78284d14ea",
+      "headline": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.",
+      "what_happened": "Anthropic\u2019s bankers seem to have lowered their IPO expectations following recent turmoil in the tech sector. It\u2019s a potential win for retail investors.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "AAPL",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "GOOGL",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "e3839eec3a60",
+       "a682a6166ebe",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
      }
     },
     {
@@ -87530,6 +87953,99 @@
      }
     },
     {
+     "id": "a915480d51feeab0",
+     "title": "NVDA Stock Slides To Fresh 7-Month Low Amid CEO Turmoil: Ross Gerber Calls Selloff A Chance To Buy Shares At \u2018Absurdly Low Price\u2019",
+     "url": "https://stocktwits.com/news-articles/markets/equity/nvda-stock-slides-to-fresh-7-month-low-amid-ceo-turmoil-ross-gerber-calls-selloff-a-chance-to-buy-shares-at-absurdly-low-price/cNGuAzER9Jg?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T19:23:40+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": -0.762,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "MSFT",
+       "NVDA",
+       "LOW",
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [
+       "MSFT",
+       "NVDA",
+       "LOW"
+      ],
+      "summary": "NVDA Stock Slides To Fresh 7-Month Low Amid CEO Turmoil: Ross Gerber Calls Selloff A Chance To Buy Shares At \u2018Absurdly Low Price\u2019. Nvidia shares were trading at lows last seen in March, with Microsoft overtaking the chipmaker\u2019s market capitalization briefly for the first time since June 2025.",
+      "model": "local",
+      "at": "2026-11-10T20:20:47.365128+00:00"
+     },
+     "analysis": {
+      "id": "a915480d51feeab0",
+      "headline": "NVDA Stock Slides To Fresh 7-Month Low Amid CEO Turmoil: Ross Gerber Calls Selloff A Chance To Buy Shares At \u2018Absurdly Low Price\u2019",
+      "what_happened": "Nvidia shares were trading at lows last seen in March, with Microsoft overtaking the chipmaker\u2019s market capitalization briefly for the first time since June 2025.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "MSFT",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.76)."
+       },
+       {
+        "symbol": "NVDA",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.76)."
+       },
+       {
+        "symbol": "LOW",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.76)."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "561a51c2eeb8",
+       "b13d56102984",
+       "5ecabc334671",
+       "29821a4c96ba"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
      "id": "d1a58f9e28a0c5d9",
      "title": "Nvidia Hits 7-Month Lows Amid CEO Scandal, DOJ Probe With Earnings Ahead. Is Nvidia A Sell?",
      "url": "https://finance.yahoo.com/m/eb810ea9-9aea-372d-8f17-1198d748a265/nvidia-hits-7-month-lows-amid.html?.tsrc=rss",
@@ -88037,6 +88553,53 @@
      }
     },
     {
+     "id": "61bea30c7250d8b0",
+     "title": "Kimberly-Clark Has Raised Its Dividend for 55 Straight Years. Here's How Much $10,000 Invested Pays Annually.",
+     "url": "https://www.fool.com/investing/2026/11/10/kimberly-clark-raised-dividend-55-years/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T19:04:00+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.87,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "NVDA"
+      ],
+      "named": [
+       "NVDA"
+      ],
+      "summary": "Kimberly-Clark Has Raised Its Dividend for 55 Straight Years. Here's How Much $10,000 Invested Pays Annually.. Putting $10,000 into Kimberly-Clark today will result in a solid income stream with significant growth potential.",
+      "model": "local",
+      "at": "2026-11-10T19:20:37.083280+00:00"
+     },
+     "analysis": {
+      "id": "61bea30c7250d8b0",
+      "headline": "Kimberly-Clark Has Raised Its Dividend for 55 Straight Years. Here's How Much $10,000 Invested Pays Annually.",
+      "what_happened": "Putting $10,000 into Kimberly-Clark today will result in a solid income stream with significant growth potential.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.6,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "561a51c2eeb8"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-11T00:20:36.820729+00:00"
+     }
+    },
+    {
      "id": "13cb7f522b061395",
      "title": "New iOS exploit could let apps steal crypto keys",
      "url": "https://finance.yahoo.com/video/ios-exploit-could-let-apps-190000953.html?.tsrc=rss",
@@ -88391,16 +88954,16 @@
      }
     },
     {
-     "id": "d27bc60590111f4e",
-     "title": "Nvidia in the hot seat, Anthropic to test the IPO market, hotter-than-expected US inflation",
-     "url": "https://finance.yahoo.com/video/nvidia-in-the-hot-seat-anthropic-to-test-the-ipo-market-hotter-than-expected-us-inflation-184626512.html?.tsrc=rss",
+     "id": "b427263e84aa4d9e",
+     "title": "Jensen Huang\u2019s Affair With a Suspected Spy Could Put Half of His $150B Fortune at Risk",
+     "url": "https://firstformoney.com/jensen-huangs-affair-with-a-suspected-spy-could-put-half-of-his-150b-fortune-at-risk/?.tsrc=rss",
      "publisher": "yahoo",
-     "published": "2026-11-10T18:46:26+00:00",
+     "published": "2026-11-10T18:47:07+00:00",
      "triage": {
-      "relevance": 0.72,
-      "sentiment": -0.583,
+      "relevance": 0.55,
+      "sentiment": -0.322,
       "impact": "medium",
-      "category": "macro",
+      "category": "corporate",
       "symbols": [
        "SPY",
        "NVDA"
@@ -88409,592 +88972,93 @@
        "SPY",
        "NVDA"
       ],
-      "summary": "Nvidia in the hot seat, Anthropic to test the IPO market, hotter-than-expected US inflation. Host Kevin Kelly, Kelly Intelligence Founder, CEO, and CCO, and his panel of experts weigh in on the alleged plot to spy on Nvidia's Jensen Huang, why retail investors should wait for Anthropic's IPO instead of chasing p",
+      "summary": "Jensen Huang\u2019s Affair With a Suspected Spy Could Put Half of His $150B Fortune at Risk. Nvidia CEO Jensen Huang\u2018s affair with a suspected Chinese source has shaken Wall Street. It has also raised other questions, such as how much of his $150 billion fortune his wife could claim if she files for divorce. As ",
       "model": "local",
       "at": "2026-11-10T19:20:37.083280+00:00"
      },
      "analysis": {
-      "id": "d27bc60590111f4e",
-      "headline": "Nvidia in the hot seat, Anthropic to test the IPO market, hotter-than-expected US inflation",
-      "what_happened": "Host Kevin Kelly, Kelly Intelligence Founder, CEO, and CCO, and his panel of experts weigh in on the alleged plot to spy on Nvidia's Jensen Huang, why retail investors should wait for Anthropic's IPO instead of chasing private markets, and what the next moves should be for the Federal Reserve after the latest inflation print. Today's panel includes Drew Pettit, Roundhill Investments' Chief Investment Strategist; Robert Schein, Blanke Schein Wealth Management's chief investment officer; and Christine Short, TMX Wall Street Horizon's Head of Corporate Event Research.",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "id": "b427263e84aa4d9e",
+      "headline": "Jensen Huang\u2019s Affair With a Suspected Spy Could Put Half of His $150B Fortune at Risk",
+      "what_happened": "Nvidia CEO Jensen Huang\u2018s affair with a suspected Chinese source has shaken Wall Street. It has also raised other questions, such as how much of his $150 billion fortune his wife could claim if she files for divorce. As First for Money previously reported, Nvidia shares fell after news of the 63-year-old\u2019s infidelity broke. His [\u2026]",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
       "affected": [
        {
         "symbol": "SPY",
         "direction": "down",
         "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono negativo en el titular (-0.58)."
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
        },
        {
         "symbol": "NVDA",
         "direction": "down",
         "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono negativo en el titular (-0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "51707825bc10",
-       "63599eab1409",
-       "c72a5c9af7cd",
-       "9a35ff9feb1f",
-       "561a51c2eeb8"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     }
-    },
-    {
-     "id": "2bba46b6dc325e26",
-     "title": "Bayer Wins FDA Approval for Sunharbo for Secondary Stroke Risk Reduction",
-     "url": "https://finance.yahoo.com/healthcare/articles/bayer-wins-fda-approval-sunharbo-183900909.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:39:00+00:00",
-     "triage": {
-      "relevance": 0.62,
-      "sentiment": 0.931,
-      "impact": "medium",
-      "category": "regulation",
-      "symbols": [
-       "JNJ"
-      ],
-      "named": [
-       "JNJ"
-      ],
-      "summary": "Bayer Wins FDA Approval for Sunharbo for Secondary Stroke Risk Reduction. Bayer gains FDA approval for Sunharbo, the first Factor XIa inhibitor approved worldwide, opening new growth opportunities in stroke prevention.",
-      "model": "local",
-      "at": "2026-11-10T20:20:47.365128+00:00"
-     },
-     "analysis": {
-      "id": "2bba46b6dc325e26",
-      "headline": "Bayer Wins FDA Approval for Sunharbo for Secondary Stroke Risk Reduction",
-      "what_happened": "Bayer gains FDA approval for Sunharbo, the first Factor XIa inhibitor approved worldwide, opening new growth opportunities in stroke prevention.",
-      "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
-      "affected": [
-       {
-        "symbol": "JNJ",
-        "direction": "up",
-        "magnitude": "medium",
         "horizon": "weeks",
-        "rationale": "Regulaci\u00f3n: tono positivo en el titular (+0.93)."
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
        }
       ],
       "macro_link": "",
       "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T21:24:36.105540+00:00"
-     }
-    },
-    {
-     "id": "1a5680e3b99821a6",
-     "title": "Oil Prices Just Fell to Their Lowest Since August as Trump Says the Iran War Is \u2018Effectively Over\u2019",
-     "url": "https://247wallst.com/investing/2026/11/10/oil-prices-just-fell-to-their-lowest-since-august-as-trump-says-the-iran-war-is-effectively-over/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:34:00+00:00",
-     "triage": {
-      "relevance": 0.62,
-      "sentiment": -0.87,
-      "impact": "medium",
-      "category": "geopolitics",
-      "symbols": [
-       "XOM",
-       "CVX",
-       "XLE"
-      ],
-      "named": [
-       "XOM",
-       "CVX"
-      ],
-      "summary": "Oil Prices Just Fell to Their Lowest Since August as Trump Says the Iran War Is \u2018Effectively Over\u2019. Futures sank on words alone, with no signed deal and Iran denying any talks exist. Why did one oil fund crater while Exxon and Chevron barely flinched, and what number could reverse the slide?",
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     },
-     "analysis": {
-      "id": "1a5680e3b99821a6",
-      "headline": "Oil Prices Just Fell to Their Lowest Since August as Trump Says the Iran War Is \u2018Effectively Over\u2019",
-      "what_happened": "Futures sank on words alone, with no signed deal and Iran denying any talks exist. Why did one oil fund crater while Exxon and Chevron barely flinched, and what number could reverse the slide?",
-      "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "XOM",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Geopol\u00edtica: tono negativo en el titular (-0.87)."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Geopol\u00edtica: tono negativo en el titular (-0.87)."
-       },
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "a682a6166ebe",
-       "5ecabc334671"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T21:24:36.105540+00:00"
-     }
-    },
-    {
-     "id": "f063eba117acef30",
-     "title": "Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/sbux-deliver-18-eps-growth-182600985.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:26:00+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.931,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "COST",
-       "SBUX"
-      ],
-      "named": [
-       "COST",
-       "SBUX"
-      ],
-      "summary": "Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?. Starbucks targets 18% EPS growth in fiscal 2027 despite a 1% revenue decline, backed by margin expansion, cost savings and an additional fiscal week.",
-      "model": "local",
-      "at": "2026-11-10T20:20:47.365128+00:00"
-     },
-     "analysis": {
-      "id": "f063eba117acef30",
-      "headline": "Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?",
-      "what_happened": "Starbucks targets 18% EPS growth in fiscal 2027 despite a 1% revenue decline, backed by margin expansion, cost savings and an additional fiscal week.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "COST",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.93)."
-       },
-       {
-        "symbol": "SBUX",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.93)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "c1296b9a41f5"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T20:20:47.365128+00:00"
-     }
-    },
-    {
-     "id": "9b94e9ce63fed77e",
-     "title": "Trade Desk Q3 Earnings & Revenues Beat Estimates, Down Y/Y",
-     "url": "https://finance.yahoo.com/media-advertising/articles/trade-desk-q3-earnings-revenues-182500776.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:25:00+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.964,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "XLV",
-       "COST"
-      ],
-      "named": [
-       "XLV",
-       "COST"
-      ],
-      "summary": "Trade Desk Q3 Earnings & Revenues Beat Estimates, Down Y/Y. TTD's Q3 2026 earnings beat estimates on strong political and medical health advertising demand, despite revenue declines and rising cost pressures.",
-      "model": "local",
-      "at": "2026-11-10T20:20:47.365128+00:00"
-     },
-     "analysis": {
-      "id": "9b94e9ce63fed77e",
-      "headline": "Trade Desk Q3 Earnings & Revenues Beat Estimates, Down Y/Y",
-      "what_happened": "TTD's Q3 2026 earnings beat estimates on strong political and medical health advertising demand, despite revenue declines and rising cost pressures.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "XLV",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.96)."
-       },
-       {
-        "symbol": "COST",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.96)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T20:20:47.365128+00:00"
-     }
-    },
-    {
-     "id": "730c8de30b8eafe0",
-     "title": "Gold crashes toward $4,000 as hot US inflation sends Treasury yields above 5% | FXStreet",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jTlRVb3RJb0hlcFA3Q1Itd3NQb3l6M0hjMG9Nc0JIR3pfbk5JeTBtUHF6Q3JjVVVNNmZIMGNlWUQtWlVwNnQyWjdTUGIybVE5aTlB?oc=5",
-     "publisher": "\u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
-     "published": "2026-11-10T18:24:00+00:00",
-     "triage": {
-      "relevance": 0.72,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "GLD",
-       "SLV",
-       "TLT",
-       "XLF"
-      ],
-      "named": [],
-      "summary": "Gold crashes toward $4,000 as hot US inflation sends Treasury yields above 5% | FXStreet",
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     },
-     "analysis": {
-      "id": "730c8de30b8eafe0",
-      "headline": "Gold crashes toward $4,000 as hot US inflation sends Treasury yields above 5% | FXStreet",
-      "what_happened": "Gold crashes toward $4,000 as hot US inflation sends Treasury yields above 5% | FXStreet",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "GLD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "SLV",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "TLT",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XLF",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "51707825bc10",
-       "63599eab1409",
-       "c72a5c9af7cd",
-       "9a35ff9feb1f",
-       "8f3e00b6ebcf"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     }
-    },
-    {
-     "id": "e74eadcc56ff0d63",
-     "title": "Nvidia Stock Has Wiped Out $1.7 Trillion in Value Since October. What Could Happen If Jensen Huang Steps Down?",
-     "url": "https://www.fool.com/investing/2026/11/10/nvidia-stock-has-wiped-out-usd1-7-trillion-in-value-since-october-what-could-happen-if-jensen-huang-steps-down/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:23:28+00:00",
-     "triage": {
-      "relevance": 0.58,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "regulation",
-      "symbols": [
-       "NVDA"
-      ],
-      "named": [
-       "NVDA"
-      ],
-      "summary": "Nvidia Stock Has Wiped Out $1.7 Trillion in Value Since October. What Could Happen If Jensen Huang Steps Down?. A board investigation, an FBI review, and a shareholder lawsuit have investors asking a new question about Nvidia: what the company looks like without its founder.",
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     },
-     "analysis": {
-      "id": "e74eadcc56ff0d63",
-      "headline": "Nvidia Stock Has Wiped Out $1.7 Trillion in Value Since October. What Could Happen If Jensen Huang Steps Down?",
-      "what_happened": "A board investigation, an FBI review, and a shareholder lawsuit have investors asking a new question about Nvidia: what the company looks like without its founder.",
-      "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
-      "affected": [
-       {
-        "symbol": "NVDA",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
+      "confidence": 0.36,
       "what_to_watch": "Si otras fuentes confirman la noticia.",
       "related_events": [
        "561a51c2eeb8"
       ],
       "read_full_article": false,
       "model": "local",
-      "at": "2026-11-10T23:33:48.623885+00:00"
-     }
-    },
-    {
-     "id": "03d3c19a7f4743c5",
-     "title": "Microsoft Pushes Trump to Halt a Ban on Chinese Optics. Coherent Is Already \u201cBasically Booked Out\u201d",
-     "url": "https://www.tikr.com/blog/microsoft-pushes-trump-to-halt-a-ban-on-chinese-optics-coherent-is-already-basically-booked-out?ref=yahoofinance&tlnk=yf-261110-6mv25c54&.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T18:22:45+00:00",
-     "triage": {
-      "relevance": 0.58,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "regulation",
-      "symbols": [
-       "MSFT"
-      ],
-      "named": [
-       "MSFT"
-      ],
-      "summary": "Microsoft Pushes Trump to Halt a Ban on Chinese Optics. Coherent Is Already \u201cBasically Booked Out\u201d. Key TakeawaysMicrosoft is lobbying the Trump administration to drop a planned ban on new Chinese optical transceivers, Reuters reported on Nov. 10.",
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     },
-     "analysis": {
-      "id": "03d3c19a7f4743c5",
-      "headline": "Microsoft Pushes Trump to Halt a Ban on Chinese Optics. Coherent Is Already \u201cBasically Booked Out\u201d",
-      "what_happened": "Key TakeawaysMicrosoft is lobbying the Trump administration to drop a planned ban on new Chinese optical transceivers, Reuters reported on Nov. 10.",
-      "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
-      "affected": [
-       {
-        "symbol": "MSFT",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Regulaci\u00f3n: tono negativo en el titular (-0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "29821a4c96ba"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T23:33:48.623885+00:00"
-     }
-    },
-    {
-     "id": "cc65dfc98de0f6e7",
-     "title": "Global Oil Prices Are Dropping Fast and Could Keep Falling. What It Means for Inflation.",
-     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMHdyTEk0SzdjSHY4X0xaNVF6ejB1dXA2V0RNRlFnWjFIeEdhcDlWMmVhMTFIckNKM2R0dTRPckNERlFhTzc3VGlrT3dpMEZNTC01NEZPNTJGalVYRVZEaE9KU2JVeVh1SG9nUklVeXh6Z2UyVVRqZmp0Y0xrSDlGQXl5MA?oc=5",
-     "publisher": "Barron's",
-     "published": "2026-11-10T18:22:00+00:00",
-     "triage": {
-      "relevance": 0.8,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "XLE",
-       "XOM",
-       "CVX"
-      ],
-      "named": [],
-      "summary": "Global Oil Prices Are Dropping Fast and Could Keep Falling. What It Means for Inflation.",
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     },
-     "analysis": {
-      "id": "cc65dfc98de0f6e7",
-      "headline": "Global Oil Prices Are Dropping Fast and Could Keep Falling. What It Means for Inflation.",
-      "what_happened": "Global Oil Prices Are Dropping Fast and Could Keep Falling. What It Means for Inflation.",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XOM",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "51707825bc10",
-       "63599eab1409",
-       "c72a5c9af7cd",
-       "9a35ff9feb1f",
-       "a682a6166ebe"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T19:20:37.083280+00:00"
-     }
-    },
-    {
-     "id": "c1fb7915c3e0b72c",
-     "title": "US Inflation Data Shakes Crypto Market as Bitcoin Breaks Below $73K Support",
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPV1l5YjlOcjY0S29RY1N6TDdTQmdhdEF3Q1NETUVhZ2UteTczbm1wZnJqUGhXdUtwckVDSFJGODJ4MUV5cVpwZEdTQnEtNm5PT0VYdUNZbVJWZDZxdEtTRWRmMUVjMm83dVRKTlgyeVZCc0U2ZkZxTlJReHNxbzJzbUY4ZlR3djNHVnpyam9UY0NaWGNDOEJOZl9ybEJLM245WmRhRWNWem1yQ0x2YktTeA?oc=5",
-     "publisher": "Brave New Coin",
-     "published": "2026-11-10T18:19:37+00:00",
-     "triage": {
-      "relevance": 0.68,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "BTC-USD",
-       "BCH-USD",
-       "ETH-USD",
-       "SOL-USD",
-       "XRP-USD",
-       "ADA-USD"
-      ],
-      "named": [
-       "BTC-USD",
-       "BCH-USD"
-      ],
-      "summary": "US Inflation Data Shakes Crypto Market as Bitcoin Breaks Below $73K Support",
-      "model": "local",
-      "at": "2026-11-10T21:20:37.793559+00:00"
-     },
-     "analysis": {
-      "id": "c1fb7915c3e0b72c",
-      "headline": "US Inflation Data Shakes Crypto Market as Bitcoin Breaks Below $73K Support",
-      "what_happened": "US Inflation Data Shakes Crypto Market as Bitcoin Breaks Below $73K Support",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "BTC-USD",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono negativo en el titular (-0.32)."
-       },
-       {
-        "symbol": "BCH-USD",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono negativo en el titular (-0.32)."
-       },
-       {
-        "symbol": "ETH-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "SOL-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XRP-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "ADA-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (dato macro); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "51707825bc10",
-       "63599eab1409",
-       "c72a5c9af7cd",
-       "9a35ff9feb1f"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-10T21:20:37.793559+00:00"
+      "at": "2026-11-11T00:20:36.820729+00:00"
      }
     }
    ],
    "feed": [
+    {
+     "id": "4c883e1b78d415f0",
+     "title": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbVZvQmtENHNLbWRiSHdHTEFOSGFEcTZxdDVNQjNJOXZwLXVHNHNnZmxVSUhIQVdPSnQ5aWx4RHdzSUNFUWVvMGJLSFM5LXM1enBlZ2Rub2FicGFrOGs1QmVsQk8yalhYTzl2SFZyMUlkNlhxSHUzcTVwcXNNZFp5d2hwZ25OdkN0bl83MzNZbnM0N3hqM3BYak9XR3JTNTA5emxjVFlwclhvSkRnYS1rRA?oc=5",
+     "publisher": "Bloomberg.com",
+     "published": "2026-11-10T23:35:11+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.605,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "Petrobras Earnings Disappoint Despite Oil, Refining Tailwinds",
+     "analysed": true
+    },
+    {
+     "id": "fab6b303ccfb0c63",
+     "title": "HIMS Stock Faces Dual Blow From Expanded FTC Privacy Lawsuit After Selloff Driven By Q3 Subscriber Loss",
+     "url": "https://stocktwits.com/news-articles/markets/equity/hims-stock-faces-dual-blow-from-expanded-ftc-privacy-lawsuit-after-selloff-driven-by-q3-subscriber-loss/cNGuUbdR9Ji?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-10T23:10:26+00:00",
+     "symbols": [
+      "META"
+     ],
+     "relevance": 0.62,
+     "sentiment": -0.762,
+     "impact": "medium",
+     "category": "regulation",
+     "summary": "HIMS Stock Faces Dual Blow From Expanded FTC Privacy Lawsuit After Selloff Driven By Q3 Subscriber Loss. The Federal Trade Commission on Tuesday filed an amended complaint in the U.S. District Court for the Northern District of California, adding Arizona, Florida, Nebraska, Ohio, and Wisconsin as co-plaintiffs.",
+     "analysed": true
+    },
+    {
+     "id": "3df9ef2aad931866",
+     "title": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTXo5UzFWVEh5WllQOHNxS1Q2cERxOEM0X1QyN1dPX0R4XzdfT1BpajYxdi0xOEltNWh6cE15Z2ZvZ2dXV0Vwb3NkbWZ1VGQ2M2tvVVVSaWd6clhPcS1XUEU2QXE3c0tlLUhPX0c2emRnWVpwOGtoajlnSS1VRXRNZXFaNEpyVlVwcFVIOUdkT18yQ2t6a1psZGVlOFpiZl90QnVhcmxqQzNxNnlNSEdXcWpjcUdzYUNJSi1hcnl6ZEpUSUU?oc=5",
+     "publisher": "Reuters",
+     "published": "2026-11-10T23:07:22+00:00",
+     "symbols": [],
+     "relevance": 0.795,
+     "sentiment": -0.762,
+     "impact": "high",
+     "category": "central_bank",
+     "summary": "Fed officials open door to a quicker round of rate hikes as inflation worsens",
+     "analysed": true
+    },
     {
      "id": "6d52e627b16979ca",
      "title": "CoreWeave Earnings Were Strong. Investors Remain Antsy as Stock Edges Up.",
@@ -91984,20 +92048,6 @@
      "analysed": true
     },
     {
-     "id": "58ce673e72bdd8b3",
-     "title": "eThekwini joblessness rises while rural KZN bears brunt of unemployment",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQWFQMklGbXJTTDB3TjhWWklsTjVvcDAtVWNTNUQ2aU11WWdSN3o3NnNwUHl4MGFlLURGWUpWUTZVZzl6NkZJZnE2UlZqZlBZalE2aXNfLVFUN2VOcF9qX2lCcEswd2RnaEJ6UnFicmFIeDVHczJQSW9EMVBQclVmOEZCU1BFRm56eTdVWm5yVElYa3ZNZFNyQ080ZXBhYTh3aUlIWmVVMkxaSlBpc3VWYXpxYnZMaFE?oc=5",
-     "publisher": "Sunday Tribune",
-     "published": "2026-11-10T16:00:24+00:00",
-     "symbols": [],
-     "relevance": 0.6,
-     "sentiment": 0.322,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "eThekwini joblessness rises while rural KZN bears brunt of unemployment",
-     "analysed": false
-    },
-    {
      "id": "3ef45149e8a58260",
      "title": "Nucleus Research Releases 2026 CPQ Commerce Technology Value Matrix",
      "url": "https://finance.yahoo.com/technology/articles/nucleus-research-releases-2026-cpq-160000013.html?.tsrc=rss",
@@ -92058,6 +92108,20 @@
      "category": "macro",
      "summary": "TSX slides as miners drag, sticky US inflation fuels rate concerns",
      "analysed": false
+    },
+    {
+     "id": "f14b7d947cfc5666",
+     "title": "Fed's Logan calls for two more rate hikes, possibly rapidly",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZ0xfUlI5TmlGa3Z4Z0QtTF9FcVRjZ0hwNEFSOVNTX0otSERvdUdrZzBKazRheFd2Vlc3bWZhazZfY2haNFNKVi1WOWNnWWVfTmgyVk9iSXFqRTR3aHcwRV93UkF0ejRGVFdOdVR4N2NWalZkYkFhS3NTLWtsY1FjazJld1JBX0lBRmM4M1RhdHk3UDBjZFFWOUNQVm40bkU?oc=5",
+     "publisher": "Reuters",
+     "published": "2026-11-10T15:55:43+00:00",
+     "symbols": [],
+     "relevance": 0.755,
+     "sentiment": -0.583,
+     "impact": "high",
+     "category": "central_bank",
+     "summary": "Fed's Logan calls for two more rate hikes, possibly rapidly",
+     "analysed": true
     },
     {
      "id": "3c4097ab419eb6d4",
@@ -92231,68 +92295,13 @@
      "category": "earnings",
      "summary": "Why Lucid Stock Keeps Going Up. Investors are buying Lucid after earnings today. That's a huge mistake.",
      "analysed": true
-    },
-    {
-     "id": "fcc20790bacc8db7",
-     "title": "Fed\u2019s Goolsbee Says AI Data Centers Look Like \u2018Old-Fashioned Overheating\u2019",
-     "url": "https://247wallst.com/investing/2026/11/10/feds-goolsbee-says-ai-data-centers-look-like-old-fashioned-overheating/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T15:38:42+00:00",
-     "symbols": [
-      "MSFT",
-      "NVDA",
-      "SPY"
-     ],
-     "relevance": 0.755,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "Fed\u2019s Goolsbee Says AI Data Centers Look Like \u2018Old-Fashioned Overheating\u2019. Stocks surged while short-term bonds quietly flashed the opposite signal. One Fed official's warning about AI spending suggests the market may be reading the same data in two very different ways, and retirement portfolio",
-     "analysed": true
-    },
-    {
-     "id": "3a32fd3c9299daae",
-     "title": "Flawed Triggers: How A New Proposal to Automatically Pay Extended Unemployment Checks in Response to AI Fears Misses the Mark - American Enterprise Institute",
-     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPajVCLWxicGtLMjUtRG5fYlRlbU45RW55cVZTeHBIYk9PbkE1YmpnYzhKQ2NKSDBDckhseTZqTFZhRENfZWJwYmktVkZ0Z3VQdXdDaXhoLUkwSU9wN1JzdTRsREpSV3JHZDBtNDJnU3NaaXNqcmdlTVozVG42Z1d1WEZCenB1T0k4R2hsMkdFOGhjMnJ6VXhDTHFJWS1ic3pSVHdmQzZORnQxeHJRS3IweHkwWFYtdk4tMVFRNkpLYVV5QjhRY1ZjNXJES19yLVZ4MDRHblNKaEt2NVM3dERn?oc=5",
-     "publisher": "American Enterprise Institute - AEI",
-     "published": "2026-11-10T15:36:55+00:00",
-     "symbols": [
-      "AXP"
-     ],
-     "relevance": 0.685,
-     "sentiment": -0.583,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Flawed Triggers: How A New Proposal to Automatically Pay Extended Unemployment Checks in Response to AI Fears Misses the Mark - American Enterprise Institute",
-     "analysed": true
-    },
-    {
-     "id": "b273281e5cfc2c9e",
-     "title": "MARA authorizes $500 million buyback, repays $750 million in bitcoin-backed loans as Q3 revenue falls 35%",
-     "url": "https://blockspace.media/insight/mara-buyback-bitcoin-debt-repayment/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-10T15:33:38+00:00",
-     "symbols": [
-      "BTC-USD",
-      "BCH-USD",
-      "ETH-USD",
-      "SOL-USD",
-      "XRP-USD",
-      "ADA-USD"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.583,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "MARA authorizes $500 million buyback, repays $750 million in bitcoin-backed loans as Q3 revenue falls 35%. MARA's $632.1 million profit came almost entirely from an $885.3 million mark-to-market gain on bitcoin. MARA then sold 13,597 BTC to clear its collateralized debt ahead of the Long Ridge\u2026",
-     "analysed": true
     }
    ],
-   "stored": 9549,
+   "stored": 9541,
    "untriaged": 0
   },
   "macro": {
-   "generated_at": "2026-11-10T23:33:48.623885+00:00",
+   "generated_at": "2026-11-11T00:20:36.820729+00:00",
    "indicators": {
     "fed_funds": {
      "id": "fed_funds",
@@ -92514,7 +92523,7 @@
      "series": "^VIX",
      "change_1m_pct": 27.94,
      "trend": "down",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "ust_10y_live": {
      "id": "ust_10y_live",
@@ -92528,7 +92537,7 @@
      "series": "^TNX",
      "change_1m_pct": -4.9,
      "trend": "up",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "ust_3m_live": {
      "id": "ust_3m_live",
@@ -92542,7 +92551,7 @@
      "series": "^IRX",
      "change_1m_pct": 1.6,
      "trend": "up",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "dxy": {
      "id": "dxy",
@@ -92556,7 +92565,7 @@
      "series": "DX-Y.NYB",
      "change_1m_pct": -0.35,
      "trend": "up",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "wti": {
      "id": "wti",
@@ -92570,35 +92579,35 @@
      "series": "CL=F",
      "change_1m_pct": -8.03,
      "trend": "down",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "gold": {
      "id": "gold",
      "name": "Oro (futuro)",
-     "value": 4043.1001,
+     "value": 4047.8,
      "previous": 4114.5,
-     "change": -71.3999,
+     "change": -66.7,
      "as_of": "2026-11-10",
      "unit": "USD",
      "source": "yahoo",
      "series": "GC=F",
-     "change_1m_pct": -3.52,
+     "change_1m_pct": -3.41,
      "trend": "down",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     },
     "copper": {
      "id": "copper",
      "name": "Cobre (futuro)",
-     "value": 6.2655,
+     "value": 6.2745,
      "previous": 6.3285,
-     "change": -0.063,
+     "change": -0.054,
      "as_of": "2026-11-10",
      "unit": "USD",
      "source": "yahoo",
      "series": "HG=F",
-     "change_1m_pct": -6.46,
+     "change_1m_pct": -6.33,
      "trend": "up",
-     "fetched_at": "2026-11-10T23:33:48.623885+00:00"
+     "fetched_at": "2026-11-11T00:20:36.820729+00:00"
     }
    },
    "relevance": {
@@ -92861,7 +92870,7 @@
    }
   },
   "technicals": {
-   "generated_at": "2026-11-10T23:33:48.623885+00:00",
+   "generated_at": "2026-11-11T00:20:36.820729+00:00",
    "symbols": {
     "SPY": {
      "score": 0.062,
@@ -94113,7 +94122,7 @@
        "name": "volume_spike",
        "kind": "indicator",
        "direction": "bearish",
-       "strength": 0.355,
+       "strength": 0.356,
        "bars_ago": 0,
        "status": "confirmed",
        "levels": {},
@@ -94690,7 +94699,7 @@
      "resistance": {
       "price": 50.818,
       "touches": 4,
-      "bars_since_touch": 137
+      "bars_since_touch": 135
      },
      "rsi": 43.1,
      "atr_pct": 2.57,
@@ -97126,35 +97135,35 @@
      "patterns": []
     },
     "BTC-USD": {
-     "score": -0.273,
-     "close": 75259.0,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.207,
+     "close": 73698.0,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "neutral",
-      "change_pct": -4.5,
-      "r2": 0.109,
+      "change_pct": -5.81,
+      "r2": 0.173,
       "quality": 0.0,
       "ma_alignment": "above SMA200"
      },
      "support": {
       "price": 72030.0,
       "touches": 1,
-      "bars_since_touch": 229
+      "bars_since_touch": 230
      },
      "resistance": {
       "price": 75637.0,
       "touches": 5,
-      "bars_since_touch": 10
+      "bars_since_touch": 11
      },
-     "rsi": 37.9,
-     "atr_pct": 3.04,
+     "rsi": 34.2,
+     "atr_pct": 3.15,
      "patterns": [
       {
        "name": "support_breakdown",
        "kind": "chart",
        "direction": "bearish",
-       "strength": 0.56,
-       "bars_ago": 1,
+       "strength": 0.42,
+       "bars_ago": 2,
        "status": "confirmed",
        "levels": {
         "level": 75637.0
@@ -97165,28 +97174,8 @@
        "name": "inside_bar",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      },
-      {
-       "name": "doji",
-       "kind": "candlestick",
-       "direction": "neutral",
        "strength": 0.15,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {},
-       "note": "open ~ close: indecision"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.1,
-       "bars_ago": 2,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "range inside the previous bar: compression before a move"
@@ -97194,35 +97183,35 @@
      ]
     },
     "ETH-USD": {
-     "score": -0.523,
-     "close": 2132.2,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.373,
+     "close": 2050.6,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "bearish",
-      "change_pct": -16.8,
-      "r2": 0.601,
-      "quality": 0.601,
+      "change_pct": -18.15,
+      "r2": 0.638,
+      "quality": 0.638,
       "ma_alignment": "below SMA200"
      },
      "support": {
       "price": 1953.6,
       "touches": 6,
-      "bars_since_touch": 94
+      "bars_since_touch": 95
      },
      "resistance": {
       "price": 2214.0,
       "touches": 6,
-      "bars_since_touch": 10
+      "bars_since_touch": 11
      },
-     "rsi": 33.8,
-     "atr_pct": 4.51,
+     "rsi": 29.6,
+     "atr_pct": 4.81,
      "patterns": [
       {
        "name": "support_breakdown",
        "kind": "chart",
        "direction": "bearish",
-       "strength": 0.56,
-       "bars_ago": 1,
+       "strength": 0.42,
+       "bars_ago": 2,
        "status": "confirmed",
        "levels": {
         "level": 2214.0
@@ -97230,77 +97219,67 @@
        "note": "closed below a 6-touch support"
       },
       {
-       "name": "doji",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.3,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "open ~ close: indecision"
-      },
-      {
        "name": "macd_bearish_cross",
        "kind": "indicator",
        "direction": "bearish",
        "strength": 0.3,
-       "bars_ago": 1,
+       "bars_ago": 2,
        "status": "confirmed",
        "levels": {},
        "note": "MACD crossed below its signal"
       },
       {
+       "name": "rsi_oversold",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.256,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {},
+       "note": "RSI 30"
+      },
+      {
        "name": "doji",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.15,
-       "bars_ago": 2,
+       "strength": 0.225,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "open ~ close: indecision"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.1,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
       }
      ]
     },
     "SOL-USD": {
-     "score": -0.231,
-     "close": 86.62,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.151,
+     "close": 83.24,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "bearish",
-      "change_pct": -18.72,
-      "r2": 0.404,
-      "quality": 0.404,
+      "change_pct": -20.83,
+      "r2": 0.466,
+      "quality": 0.466,
       "ma_alignment": "below SMA200"
      },
      "support": {
       "price": 81.92,
       "touches": 6,
-      "bars_since_touch": 128
+      "bars_since_touch": 129
      },
      "resistance": {
       "price": 88.3,
       "touches": 6,
-      "bars_since_touch": 172
+      "bars_since_touch": 173
      },
-     "rsi": 27.5,
-     "atr_pct": 5.13,
+     "rsi": 24.1,
+     "atr_pct": 5.43,
      "patterns": [
       {
        "name": "support_breakdown",
        "kind": "chart",
        "direction": "bearish",
-       "strength": 0.56,
-       "bars_ago": 1,
+       "strength": 0.42,
+       "bars_ago": 2,
        "status": "confirmed",
        "levels": {
         "level": 88.3
@@ -97308,31 +97287,31 @@
        "note": "closed below a 6-touch support"
       },
       {
+       "name": "rsi_oversold",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.348,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {},
+       "note": "RSI 24"
+      },
+      {
        "name": "doji",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.3,
-       "bars_ago": 0,
+       "strength": 0.225,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "open ~ close: indecision"
       },
       {
-       "name": "rsi_oversold",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.291,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "RSI 28"
-      },
-      {
        "name": "inside_bar",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
+       "strength": 0.15,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "range inside the previous bar: compression before a move"
@@ -97340,373 +97319,95 @@
      ]
     },
     "XRP-USD": {
-     "score": -0.161,
-     "close": 1.0975,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": 0.041,
+     "close": 1.0551,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "bearish",
-      "change_pct": -18.09,
-      "r2": 0.494,
-      "quality": 0.494,
+      "change_pct": -20.08,
+      "r2": 0.541,
+      "quality": 0.541,
       "ma_alignment": "below SMA200"
      },
      "support": {
       "price": 1.0328,
       "touches": 7,
-      "bars_since_touch": 84
+      "bars_since_touch": 85
      },
      "resistance": {
       "price": 1.1685,
       "touches": 4,
-      "bars_since_touch": 10
+      "bars_since_touch": 11
      },
-     "rsi": 26.6,
-     "atr_pct": 5.3,
+     "rsi": 23.8,
+     "atr_pct": 5.63,
      "patterns": [
-      {
-       "name": "support_breakdown",
-       "kind": "chart",
-       "direction": "bearish",
-       "strength": 0.384,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {
-        "level": 1.1685
-       },
-       "note": "closed below a 4-touch support"
-      },
       {
        "name": "rsi_oversold",
        "kind": "indicator",
        "direction": "bullish",
-       "strength": 0.306,
+       "strength": 0.353,
        "bars_ago": 0,
        "status": "confirmed",
        "levels": {},
-       "note": "RSI 27"
+       "note": "RSI 24"
       }
      ]
     },
     "ADA-USD": {
-     "score": 0.0,
-     "close": 0.17732,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.09,
+     "close": 0.17392,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
-      "direction": "neutral",
-      "change_pct": -19.31,
-      "r2": 0.298,
-      "quality": 0.0,
+      "direction": "bearish",
+      "change_pct": -21.66,
+      "r2": 0.362,
+      "quality": 0.362,
       "ma_alignment": "below SMA200"
      },
      "support": {
       "price": 0.17106,
       "touches": 1,
-      "bars_since_touch": 83
+      "bars_since_touch": 84
      },
      "resistance": {
       "price": 0.18642,
       "touches": 5,
-      "bars_since_touch": 10
+      "bars_since_touch": 11
      },
-     "rsi": 32.6,
-     "atr_pct": 6.73,
+     "rsi": 31.0,
+     "atr_pct": 6.76,
      "patterns": []
     },
     "DOGE-USD": {
-     "score": 0.038,
-     "close": 0.06997,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.423,
+     "close": 0.06794,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "bearish",
-      "change_pct": -21.73,
-      "r2": 0.546,
-      "quality": 0.546,
+      "change_pct": -23.23,
+      "r2": 0.591,
+      "quality": 0.591,
       "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
      },
      "support": null,
      "resistance": {
-      "price": 0.074437,
-      "touches": 4,
-      "bars_since_touch": 16
+      "price": 0.069877,
+      "touches": 10,
+      "bars_since_touch": 11
      },
-     "rsi": 34.1,
-     "atr_pct": 5.26,
+     "rsi": 31.2,
+     "atr_pct": 5.42,
      "patterns": [
       {
-       "name": "bullish_harami",
-       "kind": "candlestick",
-       "direction": "bullish",
-       "strength": 0.35,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "small bullish body inside a large bearish one"
-      }
-     ]
-    },
-    "LINK-USD": {
-     "score": 0.245,
-     "close": 10.652,
-     "as_of": "2026-11-09T00:00:00+00:00",
-     "trend": {
-      "direction": "neutral",
-      "change_pct": -13.91,
-      "r2": 0.212,
-      "quality": 0.0,
-      "ma_alignment": "above SMA200"
-     },
-     "support": {
-      "price": 10.241,
-      "touches": 4,
-      "bars_since_touch": 10
-     },
-     "resistance": {
-      "price": 10.888,
-      "touches": 2,
-      "bars_since_touch": 68
-     },
-     "rsi": 40.2,
-     "atr_pct": 6.35,
-     "patterns": [
-      {
-       "name": "bullish_rsi_divergence",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.5,
-       "bars_ago": 10,
-       "status": "confirmed",
-       "levels": {},
-       "note": "lower low in price, higher low in RSI: selling momentum fading"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.1,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      }
-     ]
-    },
-    "LTC-USD": {
-     "score": 0.245,
-     "close": 51.369,
-     "as_of": "2026-11-09T00:00:00+00:00",
-     "trend": {
-      "direction": "neutral",
-      "change_pct": -11.37,
-      "r2": 0.117,
-      "quality": 0.0,
-      "ma_alignment": "below SMA200"
-     },
-     "support": {
-      "price": 46.957,
-      "touches": 7,
-      "bars_since_touch": 71
-     },
-     "resistance": {
-      "price": 51.863,
-      "touches": 8,
-      "bars_since_touch": 10
-     },
-     "rsi": 37.2,
-     "atr_pct": 5.47,
-     "patterns": [
-      {
-       "name": "bullish_rsi_divergence",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.5,
-       "bars_ago": 10,
-       "status": "confirmed",
-       "levels": {},
-       "note": "lower low in price, higher low in RSI: selling momentum fading"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.1,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      }
-     ]
-    },
-    "AVAX-USD": {
-     "score": 0.625,
-     "close": 8.645,
-     "as_of": "2026-11-09T00:00:00+00:00",
-     "trend": {
-      "direction": "neutral",
-      "change_pct": -7.0,
-      "r2": 0.025,
-      "quality": 0.0,
-      "ma_alignment": "above SMA200"
-     },
-     "support": {
-      "price": 8.3397,
-      "touches": 6,
-      "bars_since_touch": 10
-     },
-     "resistance": {
-      "price": 8.9784,
-      "touches": 7,
-      "bars_since_touch": 5
-     },
-     "rsi": 46.5,
-     "atr_pct": 6.66,
-     "patterns": [
-      {
-       "name": "bullish_engulfing",
-       "kind": "candlestick",
-       "direction": "bullish",
-       "strength": 0.7,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "bullish body engulfs the previous bearish body"
-      },
-      {
-       "name": "macd_bullish_cross",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.4,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "MACD crossed above its signal below zero"
-      },
-      {
-       "name": "volume_spike",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.367,
-       "bars_ago": 0,
-       "status": "confirmed",
-       "levels": {},
-       "note": "volume 3.3x its 20-bar average"
-      }
-     ]
-    },
-    "DOT-USD": {
-     "score": -0.273,
-     "close": 0.8557,
-     "as_of": "2026-11-09T00:00:00+00:00",
-     "trend": {
-      "direction": "neutral",
-      "change_pct": -17.68,
-      "r2": 0.287,
-      "quality": 0.0,
-      "ma_alignment": "below SMA200"
-     },
-     "support": {
-      "price": 0.80607,
-      "touches": 3,
-      "bars_since_touch": 71
-     },
-     "resistance": {
-      "price": 0.88024,
-      "touches": 5,
-      "bars_since_touch": 10
-     },
-     "rsi": 30.1,
-     "atr_pct": 7.43,
-     "patterns": [
-      {
-       "name": "support_breakdown",
+       "name": "new_52w_low",
        "kind": "chart",
        "direction": "bearish",
-       "strength": 0.56,
-       "bars_ago": 1,
-       "status": "confirmed",
-       "levels": {
-        "level": 0.88024
-       },
-       "note": "closed below a 5-touch support"
-      },
-      {
-       "name": "inside_bar",
-       "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.2,
+       "strength": 0.45,
        "bars_ago": 0,
        "status": "confirmed",
        "levels": {},
-       "note": "range inside the previous bar: compression before a move"
-      }
-     ]
-    },
-    "BCH-USD": {
-     "score": -0.239,
-     "close": 238.5,
-     "as_of": "2026-11-09T00:00:00+00:00",
-     "trend": {
-      "direction": "neutral",
-      "change_pct": 2.72,
-      "r2": 0.005,
-      "quality": 0.0,
-      "ma_alignment": "below SMA200"
-     },
-     "support": {
-      "price": 233.04,
-      "touches": 3,
-      "bars_since_touch": 71
-     },
-     "resistance": {
-      "price": 262.15,
-      "touches": 5,
-      "bars_since_touch": 10
-     },
-     "rsi": 32.9,
-     "atr_pct": 6.81,
-     "patterns": [
-      {
-       "name": "head_and_shoulders",
-       "kind": "chart",
-       "direction": "bearish",
-       "strength": 0.8,
-       "bars_ago": 4,
-       "status": "confirmed",
-       "levels": {
-        "neckline": 254.41,
-        "target": 214.32,
-        "invalidation": 304.43
-       },
-       "note": "three peaks with the middle one most extreme; neckline broken"
-      },
-      {
-       "name": "bullish_rsi_divergence",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.5,
-       "bars_ago": 10,
-       "status": "confirmed",
-       "levels": {},
-       "note": "lower low in price, higher low in RSI: selling momentum fading"
+       "note": "lowest close of the last year"
       },
       {
        "name": "support_breakdown",
@@ -97716,16 +97417,294 @@
        "bars_ago": 2,
        "status": "confirmed",
        "levels": {
-        "level": 262.15
+        "level": 0.069877
+       },
+       "note": "closed below a 10-touch support"
+      },
+      {
+       "name": "bullish_harami",
+       "kind": "candlestick",
+       "direction": "bullish",
+       "strength": 0.262,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "small bullish body inside a large bearish one"
+      }
+     ]
+    },
+    "LINK-USD": {
+     "score": 0.245,
+     "close": 10.282,
+     "as_of": "2026-11-10T00:00:00+00:00",
+     "trend": {
+      "direction": "neutral",
+      "change_pct": -15.92,
+      "r2": 0.27,
+      "quality": 0.0,
+      "ma_alignment": "above SMA200"
+     },
+     "support": {
+      "price": 9.4177,
+      "touches": 7,
+      "bars_since_touch": 171
+     },
+     "resistance": {
+      "price": 10.888,
+      "touches": 2,
+      "bars_since_touch": 69
+     },
+     "rsi": 37.0,
+     "atr_pct": 6.52,
+     "patterns": [
+      {
+       "name": "bullish_rsi_divergence",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.5,
+       "bars_ago": 11,
+       "status": "confirmed",
+       "levels": {},
+       "note": "lower low in price, higher low in RSI: selling momentum fading"
+      },
+      {
+       "name": "inside_bar",
+       "kind": "candlestick",
+       "direction": "neutral",
+       "strength": 0.15,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "range inside the previous bar: compression before a move"
+      }
+     ]
+    },
+    "LTC-USD": {
+     "score": 0.245,
+     "close": 50.68,
+     "as_of": "2026-11-10T00:00:00+00:00",
+     "trend": {
+      "direction": "neutral",
+      "change_pct": -13.8,
+      "r2": 0.173,
+      "quality": 0.0,
+      "ma_alignment": "below SMA200"
+     },
+     "support": {
+      "price": 46.957,
+      "touches": 7,
+      "bars_since_touch": 72
+     },
+     "resistance": {
+      "price": 51.863,
+      "touches": 8,
+      "bars_since_touch": 11
+     },
+     "rsi": 35.9,
+     "atr_pct": 5.47,
+     "patterns": [
+      {
+       "name": "bullish_rsi_divergence",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.5,
+       "bars_ago": 11,
+       "status": "confirmed",
+       "levels": {},
+       "note": "lower low in price, higher low in RSI: selling momentum fading"
+      },
+      {
+       "name": "inside_bar",
+       "kind": "candlestick",
+       "direction": "neutral",
+       "strength": 0.15,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "range inside the previous bar: compression before a move"
+      }
+     ]
+    },
+    "AVAX-USD": {
+     "score": 0.432,
+     "close": 8.367,
+     "as_of": "2026-11-10T00:00:00+00:00",
+     "trend": {
+      "direction": "neutral",
+      "change_pct": -10.24,
+      "r2": 0.057,
+      "quality": 0.0,
+      "ma_alignment": "above SMA200"
+     },
+     "support": {
+      "price": 7.0288,
+      "touches": 6,
+      "bars_since_touch": 55
+     },
+     "resistance": {
+      "price": 8.9784,
+      "touches": 7,
+      "bars_since_touch": 6
+     },
+     "rsi": 43.0,
+     "atr_pct": 6.98,
+     "patterns": [
+      {
+       "name": "bullish_engulfing",
+       "kind": "candlestick",
+       "direction": "bullish",
+       "strength": 0.525,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "bullish body engulfs the previous bearish body"
+      },
+      {
+       "name": "macd_bullish_cross",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.4,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "MACD crossed above its signal below zero"
+      },
+      {
+       "name": "inside_bar",
+       "kind": "candlestick",
+       "direction": "neutral",
+       "strength": 0.2,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {},
+       "note": "range inside the previous bar: compression before a move"
+      }
+     ]
+    },
+    "DOT-USD": {
+     "score": -0.076,
+     "close": 0.8422,
+     "as_of": "2026-11-10T00:00:00+00:00",
+     "trend": {
+      "direction": "neutral",
+      "change_pct": -20.0,
+      "r2": 0.346,
+      "quality": 0.0,
+      "ma_alignment": "below SMA200"
+     },
+     "support": {
+      "price": 0.80607,
+      "touches": 3,
+      "bars_since_touch": 72
+     },
+     "resistance": {
+      "price": 0.88024,
+      "touches": 5,
+      "bars_since_touch": 11
+     },
+     "rsi": 28.9,
+     "atr_pct": 7.34,
+     "patterns": [
+      {
+       "name": "support_breakdown",
+       "kind": "chart",
+       "direction": "bearish",
+       "strength": 0.42,
+       "bars_ago": 2,
+       "status": "confirmed",
+       "levels": {
+        "level": 0.88024
        },
        "note": "closed below a 5-touch support"
+      },
+      {
+       "name": "rsi_oversold",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.268,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {},
+       "note": "RSI 29"
+      },
+      {
+       "name": "inside_bar",
+       "kind": "candlestick",
+       "direction": "neutral",
+       "strength": 0.15,
+       "bars_ago": 1,
+       "status": "confirmed",
+       "levels": {},
+       "note": "range inside the previous bar: compression before a move"
+      }
+     ]
+    },
+    "BCH-USD": {
+     "score": -0.327,
+     "close": 230.84,
+     "as_of": "2026-11-10T00:00:00+00:00",
+     "trend": {
+      "direction": "neutral",
+      "change_pct": -1.13,
+      "r2": 0.001,
+      "quality": 0.0,
+      "ma_alignment": "below SMA200"
+     },
+     "support": {
+      "price": 212.94,
+      "touches": 5,
+      "bars_since_touch": 56
+     },
+     "resistance": {
+      "price": 233.04,
+      "touches": 3,
+      "bars_since_touch": 72
+     },
+     "rsi": 30.5,
+     "atr_pct": 6.96,
+     "patterns": [
+      {
+       "name": "head_and_shoulders",
+       "kind": "chart",
+       "direction": "bearish",
+       "strength": 0.8,
+       "bars_ago": 5,
+       "status": "confirmed",
+       "levels": {
+        "neckline": 253.58,
+        "target": 213.49,
+        "invalidation": 304.43
+       },
+       "note": "three peaks with the middle one most extreme; neckline broken"
+      },
+      {
+       "name": "support_breakdown",
+       "kind": "chart",
+       "direction": "bearish",
+       "strength": 0.58,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {
+        "level": 233.04
+       },
+       "note": "closed below a 3-touch support"
+      },
+      {
+       "name": "bullish_rsi_divergence",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.5,
+       "bars_ago": 11,
+       "status": "confirmed",
+       "levels": {},
+       "note": "lower low in price, higher low in RSI: selling momentum fading"
       },
       {
        "name": "doji",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.3,
-       "bars_ago": 0,
+       "strength": 0.225,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "open ~ close: indecision"
@@ -97734,8 +97713,8 @@
        "name": "golden_cross",
        "kind": "indicator",
        "direction": "bullish",
-       "strength": 0.233,
-       "bars_ago": 8,
+       "strength": 0.2,
+       "bars_ago": 9,
        "status": "confirmed",
        "levels": {},
        "note": "SMA50 crossed above SMA200"
@@ -97743,28 +97722,28 @@
      ]
     },
     "UNI-USD": {
-     "score": 0.149,
-     "close": 6.9779,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.149,
+     "close": 6.6618,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "neutral",
-      "change_pct": -15.22,
-      "r2": 0.138,
+      "change_pct": -18.36,
+      "r2": 0.216,
       "quality": 0.0,
       "ma_alignment": "above SMA200"
      },
      "support": {
-      "price": 6.6174,
-      "touches": 3,
-      "bars_since_touch": 4
+      "price": 6.0226,
+      "touches": 2,
+      "bars_since_touch": 12
      },
      "resistance": {
       "price": 7.6525,
       "touches": 4,
-      "bars_since_touch": 4
+      "bars_since_touch": 5
      },
-     "rsi": 47.2,
-     "atr_pct": 8.43,
+     "rsi": 43.5,
+     "atr_pct": 8.78,
      "patterns": [
       {
        "name": "bollinger_squeeze",
@@ -97777,21 +97756,21 @@
        "note": "Bollinger bands at their narrowest in 6 months: a large move often follows"
       },
       {
-       "name": "morning_star",
-       "kind": "candlestick",
-       "direction": "bullish",
+       "name": "macd_bearish_cross",
+       "kind": "indicator",
+       "direction": "bearish",
        "strength": 0.3,
-       "bars_ago": 2,
+       "bars_ago": 0,
        "status": "confirmed",
        "levels": {},
-       "note": "large bearish bar, small pause, strong bullish bar"
+       "note": "MACD crossed below its signal"
       },
       {
        "name": "inside_bar",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
+       "strength": 0.15,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "range inside the previous bar: compression before a move"
@@ -97799,35 +97778,35 @@
      ]
     },
     "AAVE-USD": {
-     "score": 0.28,
-     "close": 131.5,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": -0.161,
+     "close": 123.46,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "neutral",
-      "change_pct": -6.36,
-      "r2": 0.026,
+      "change_pct": -9.23,
+      "r2": 0.057,
       "quality": 0.0,
       "ma_alignment": "above SMA200"
      },
      "support": {
       "price": 118.77,
       "touches": 8,
-      "bars_since_touch": 4
+      "bars_since_touch": 5
      },
      "resistance": {
       "price": 142.03,
       "touches": 3,
-      "bars_since_touch": 8
+      "bars_since_touch": 9
      },
-     "rsi": 44.6,
-     "atr_pct": 7.06,
+     "rsi": 38.8,
+     "atr_pct": 7.67,
      "patterns": [
       {
        "name": "bullish_engulfing",
        "kind": "candlestick",
        "direction": "bullish",
-       "strength": 0.7,
-       "bars_ago": 0,
+       "strength": 0.525,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "bullish body engulfs the previous bearish body"
@@ -97836,74 +97815,74 @@
        "name": "bearish_engulfing",
        "kind": "candlestick",
        "direction": "bearish",
-       "strength": 0.525,
-       "bars_ago": 1,
+       "strength": 0.5,
+       "bars_ago": 0,
        "status": "confirmed",
        "levels": {},
        "note": "bearish body engulfs the previous bullish body"
       },
       {
-       "name": "macd_bullish_cross",
-       "kind": "indicator",
-       "direction": "bullish",
-       "strength": 0.4,
-       "bars_ago": 2,
-       "status": "confirmed",
-       "levels": {},
-       "note": "MACD crossed above its signal below zero"
-      },
-      {
-       "name": "inside_bar",
+       "name": "bearish_engulfing",
        "kind": "candlestick",
-       "direction": "neutral",
-       "strength": 0.1,
+       "direction": "bearish",
+       "strength": 0.35,
        "bars_ago": 2,
        "status": "confirmed",
        "levels": {},
-       "note": "range inside the previous bar: compression before a move"
+       "note": "bearish body engulfs the previous bullish body"
       }
      ]
     },
     "XLM-USD": {
-     "score": 0.127,
-     "close": 0.14743,
-     "as_of": "2026-11-09T00:00:00+00:00",
+     "score": 0.239,
+     "close": 0.14469,
+     "as_of": "2026-11-10T00:00:00+00:00",
      "trend": {
       "direction": "bearish",
-      "change_pct": -24.42,
-      "r2": 0.488,
-      "quality": 0.488,
+      "change_pct": -26.58,
+      "r2": 0.553,
+      "quality": 0.553,
       "ma_alignment": "below SMA200"
      },
      "support": {
       "price": 0.1395,
       "touches": 1,
-      "bars_since_touch": 170
+      "bars_since_touch": 171
      },
      "resistance": {
       "price": 0.15393,
       "touches": 7,
-      "bars_since_touch": 10
+      "bars_since_touch": 11
      },
-     "rsi": 30.7,
-     "atr_pct": 5.82,
+     "rsi": 29.2,
+     "atr_pct": 5.94,
      "patterns": [
       {
        "name": "bullish_rsi_divergence",
        "kind": "indicator",
        "direction": "bullish",
        "strength": 0.5,
-       "bars_ago": 10,
+       "bars_ago": 11,
        "status": "confirmed",
        "levels": {},
        "note": "lower low in price, higher low in RSI: selling momentum fading"
       },
       {
+       "name": "rsi_oversold",
+       "kind": "indicator",
+       "direction": "bullish",
+       "strength": 0.264,
+       "bars_ago": 0,
+       "status": "confirmed",
+       "levels": {},
+       "note": "RSI 29"
+      },
+      {
        "name": "inside_bar",
        "kind": "candlestick",
        "direction": "neutral",
-       "strength": 0.2,
-       "bars_ago": 0,
+       "strength": 0.15,
+       "bars_ago": 1,
        "status": "confirmed",
        "levels": {},
        "note": "range inside the previous bar: compression before a move"
