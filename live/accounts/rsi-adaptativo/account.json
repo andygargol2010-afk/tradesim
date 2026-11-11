@@ -69,7 +69,7 @@
     "opened_at": "2026-10-26T16:01:03.111025+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "50.68000030517578",
+    "mark_price": "50.525001525878906",
     "entry_order_id": "O00000002"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-11-10T15:41:40.684746+00:00",
     "realized_pnl": "-2.01060898857",
     "fees_paid": "0.00049708",
-    "mark_price": "584.5700073242188",
+    "mark_price": "593.3350219726562",
     "entry_order_id": "O00000061"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:01:21.885588+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "337.9100036621094",
+    "mark_price": "340.45001220703125",
     "entry_order_id": "O00000004"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "21.940000534057617",
+    "mark_price": "21.889999389648438",
     "entry_order_id": "O00000005"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-10-29T15:41:45.479132+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "46.47999954223633",
+    "mark_price": "47.185",
     "entry_order_id": "O00000034"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-30T15:44:46.507242+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "287.3800048828125",
+    "mark_price": "290.7300109863281",
     "entry_order_id": "O00000040"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-05T15:41:51.739734+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "168.91000366210938",
+    "mark_price": "173.3699951171875",
     "entry_order_id": "O00000056"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-11-10T15:41:35.058951+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "168.88999938964844",
+    "mark_price": "173.0",
     "entry_order_id": "O00000060"
    }
   ],
@@ -4156,6 +4156,13 @@
     "17.24119349685630000000000000000000",
     "81.526761445984369591771892",
     "81.526761445984369591771892"
+   ],
+   [
+    "2026-11-11T15:22:12.936218+00:00",
+    "99.71685082295478968545991800000000",
+    "17.24119349685630000000000000000000",
+    "82.475657326098489685459918",
+    "82.475657326098489685459918"
    ]
   ],
   "total_fees": "0.14596245",
@@ -5455,14 +5462,14 @@
    "limit_price": null,
    "stop_price": "498.86",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-10T15:41:52.424837+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-11T15:22:13.740687+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-CAT-62"
@@ -5529,6 +5536,27 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-T-65"
+  },
+  {
+   "id": "O00000066",
+   "symbol": "CAT",
+   "side": "sell",
+   "quantity": "0.017047659",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "511.61",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-11T15:22:13.740748+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-CAT-66"
   }
  ],
  "open_order_ids": [
@@ -5536,12 +5564,12 @@
   "O00000051",
   "O00000054",
   "O00000059",
-  "O00000062",
   "O00000063",
   "O00000064",
-  "O00000065"
+  "O00000065",
+  "O00000066"
  ],
- "order_id_counter": 66,
+ "order_id_counter": 67,
  "fill_id_counter": 21,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5552,20 +5580,20 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-11T14:22:00.257733+00:00",
+ "last_sync": "2026-11-11T15:22:12.936218+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
-  "BAC": "2026-11-10T21:00:00+00:00",
-  "CAT": "2026-11-10T21:00:00+00:00",
-  "GE": "2026-11-10T21:00:00+00:00",
-  "T": "2026-11-10T21:00:00+00:00",
+  "BAC": "2026-11-11T15:20:00+00:00",
+  "CAT": "2026-11-11T15:20:00+00:00",
+  "GE": "2026-11-11T15:20:00+00:00",
+  "T": "2026-11-11T15:20:00+00:00",
   "ETH-USD": "2026-11-05T16:30:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-10T21:00:00+00:00",
-  "GOOGL": "2026-11-10T21:00:00+00:00",
-  "XLK": "2026-11-10T21:00:00+00:00",
-  "NVDA": "2026-11-10T21:00:00+00:00"
+  "SLV": "2026-11-11T15:20:00+00:00",
+  "GOOGL": "2026-11-11T15:20:00+00:00",
+  "XLK": "2026-11-11T15:20:00+00:00",
+  "NVDA": "2026-11-11T15:20:00+00:00"
  }
 }
