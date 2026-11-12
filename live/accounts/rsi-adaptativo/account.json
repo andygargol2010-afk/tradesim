@@ -4261,6 +4261,13 @@
     "17.24119349685630000000000000000000",
     "82.981422343548789171262828",
     "82.981422343548789171262828"
+   ],
+   [
+    "2026-11-12T00:22:07.566157+00:00",
+    "100.2226158404050891712628280000000",
+    "17.24119349685630000000000000000000",
+    "82.981422343548789171262828",
+    "82.981422343548789171262828"
    ]
   ],
   "total_fees": "0.14596245",
@@ -5791,17 +5798,38 @@
    "limit_price": null,
    "stop_price": "20.48",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-11T19:46:15.971901+00:00",
+   "updated_at": "2026-11-12T00:22:08.150139+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-T-73"
+  },
+  {
+   "id": "O00000074",
+   "symbol": "T",
+   "side": "sell",
+   "quantity": "0.474608436",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "20.72",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-12T00:22:08.150211+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-T-73"
+   "oco_group": "exits-T-74"
   }
  ],
  "open_order_ids": [
@@ -5812,9 +5840,9 @@
   "O00000070",
   "O00000071",
   "O00000072",
-  "O00000073"
+  "O00000074"
  ],
- "order_id_counter": 74,
+ "order_id_counter": 75,
  "fill_id_counter": 21,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5825,7 +5853,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-11T23:22:00.337975+00:00",
+ "last_sync": "2026-11-12T00:22:07.566157+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
