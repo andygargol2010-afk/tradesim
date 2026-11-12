@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "21.40647946582250000000000000000000",
+  "cash": "35.27251499081250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -124,7 +124,7 @@
     "opened_at": "2026-11-10T15:41:45.047287+00:00",
     "realized_pnl": "-1.183136496900000000000000000000000",
     "fees_paid": "0.00088248",
-    "mark_price": "717.7100219726562",
+    "mark_price": "699.6799926757812",
     "entry_order_id": "O00000186"
    },
    {
@@ -146,7 +146,7 @@
     "opened_at": "2026-11-11T15:41:58.377377+00:00",
     "realized_pnl": "-0.3907698997899999999999999999999960",
     "fees_paid": "0.00064238",
-    "mark_price": "227.63999938964844",
+    "mark_price": "226.00999450683594",
     "entry_order_id": "O00000204"
    },
    {
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "-0.96407594175",
     "fees_paid": "0.00026561",
-    "mark_price": "102.76000213623047",
+    "mark_price": "101.50999999999999",
     "entry_order_id": "O00000140"
    },
    {
@@ -201,7 +201,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "390.8399963378906",
+    "mark_price": "390.75",
     "entry_order_id": "O00000185"
    },
    {
@@ -212,19 +212,19 @@
     "opened_at": "2026-11-10T15:41:42.106424+00:00",
     "realized_pnl": "0.18102259520",
     "fees_paid": "0.00014239",
-    "mark_price": "309.80999755859375",
+    "mark_price": "309.9200134277344",
     "entry_order_id": "O00000187"
    },
    {
     "symbol": "META",
-    "quantity": "0.022267869",
-    "avg_price": "643.08",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:35.540249+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.45359649153",
+    "fees_paid": "0.00038918",
     "mark_price": "628.77001953125",
-    "entry_order_id": "O00000188"
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -1123,6 +1123,20 @@
     "slippage_cost": "0.00311257",
     "realized_pnl": "0",
     "timestamp": "2026-11-11T15:41:58.377377+00:00"
+   },
+   {
+    "id": "F00000065",
+    "order_id": "O00000207",
+    "symbol": "META",
+    "side": "sell",
+    "quantity": "0.022267869",
+    "price": "622.71",
+    "notional": "13.8664247",
+    "fee": "0.00038918",
+    "liquidity": "taker",
+    "slippage_cost": "0.00133607",
+    "realized_pnl": "-0.45359649153",
+    "timestamp": "2026-11-12T14:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1573,6 +1587,20 @@
     "closed_at": "2026-11-11T15:41:52.896618+00:00",
     "entry_order_id": "O00000187",
     "exit_order_id": "O00000202"
+   },
+   {
+    "symbol": "META",
+    "direction": "long",
+    "quantity": "0.022267869",
+    "entry_price": "643.08",
+    "exit_price": "622.71",
+    "pnl": "-0.45398567153",
+    "fees": "0.00038918",
+    "return_pct": -0.03170286309634276,
+    "opened_at": "2026-11-10T15:41:35.540249+00:00",
+    "closed_at": "2026-11-12T14:35:00+00:00",
+    "entry_order_id": "O00000188",
+    "exit_order_id": "O00000207"
    }
   ],
   "equity_curve": [
@@ -5299,10 +5327,17 @@
     "21.40647946582250000000000000000000",
     "73.99442903784745582060141",
     "73.99442903784745582060141"
+   ],
+   [
+    "2026-11-12T15:21:50.770138+00:00",
+    "94.69164268491799757854130000000000",
+    "35.27251499081250000000000000000000",
+    "59.41912769410549757854130",
+    "59.41912769410549757854130"
    ]
   ],
-  "total_fees": "0.11865628",
-  "total_slippage": "0.18369528",
+  "total_fees": "0.11904546",
+  "total_slippage": "0.18503135",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
   "max_drawdown": "0.06781442927037464395133398479056528"
@@ -9643,13 +9678,13 @@
    "limit_price": null,
    "stop_price": "622.77",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.022267869",
+   "avg_fill_price": "622.71",
+   "fees_paid": "0.00038918",
+   "triggered": true,
    "created_at": "2026-11-11T15:42:38.303203+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-12T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.38 (estrella de la ma\u00f1ana, martillo invertido), noticias +0.32 (73 relevantes), tendencia l",
    "reduce_only": true,
@@ -9664,14 +9699,14 @@
    "limit_price": "730.66",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-11T15:42:38.303253+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-12T15:21:50.774913+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.38 (estrella de la ma\u00f1ana, martillo invertido), noticias +0.32 (73 relevantes), tendencia l filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.31: t\u00e9cnico +0.38 (estrella de la ma\u00f1ana, martillo invertido), noticias +0.32 (73 relevantes), tendencia l",
    "reduce_only": true,
    "oco_group": "exits-META-207"
@@ -9848,8 +9883,6 @@
  "open_order_ids": [
   "O00000205",
   "O00000206",
-  "O00000207",
-  "O00000208",
   "O00000209",
   "O00000210",
   "O00000211",
@@ -9860,7 +9893,7 @@
   "O00000216"
  ],
  "order_id_counter": 217,
- "fill_id_counter": 65,
+ "fill_id_counter": 66,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -9870,7 +9903,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-12T12:58:58.791751+00:00",
+ "last_sync": "2026-11-12T15:21:50.770138+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -9879,15 +9912,15 @@
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "TMO": "2026-11-11T21:00:00+00:00",
+  "TMO": "2026-11-12T15:20:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
-  "HON": "2026-11-11T21:00:00+00:00",
+  "HON": "2026-11-12T15:20:00+00:00",
   "MRK": "2026-11-06T19:20:00+00:00",
-  "NOW": "2026-11-11T21:00:00+00:00",
+  "NOW": "2026-11-12T15:20:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
-  "TSLA": "2026-11-11T21:00:00+00:00",
-  "TXN": "2026-11-11T21:00:00+00:00",
-  "META": "2026-11-11T21:00:00+00:00"
+  "TSLA": "2026-11-12T15:20:00+00:00",
+  "TXN": "2026-11-12T15:20:00+00:00",
+  "META": "2026-11-12T15:20:00+00:00"
  }
 }
