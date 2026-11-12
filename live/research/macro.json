@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T03:20:50.702975+00:00",
+ "generated_at": "2026-11-12T03:55:44.688575+00:00",
  "indicators": {
   "fed_funds": {
    "id": "fed_funds",
@@ -221,7 +221,7 @@
    "series": "^VIX",
    "change_1m_pct": 14.54,
    "trend": "down",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "ust_10y_live": {
    "id": "ust_10y_live",
@@ -235,7 +235,7 @@
    "series": "^TNX",
    "change_1m_pct": -4.2,
    "trend": "up",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "ust_3m_live": {
    "id": "ust_3m_live",
@@ -249,63 +249,63 @@
    "series": "^IRX",
    "change_1m_pct": 1.43,
    "trend": "up",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "dxy": {
    "id": "dxy",
    "name": "\u00cdndice d\u00f3lar (DXY)",
-   "value": 103.024,
+   "value": 103.025,
    "previous": 102.23,
-   "change": 0.794,
+   "change": 0.795,
    "as_of": "2026-11-11",
    "unit": "",
    "source": "yahoo",
    "series": "DX-Y.NYB",
    "change_1m_pct": 0.83,
    "trend": "up",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "wti": {
    "id": "wti",
    "name": "Petr\u00f3leo WTI",
-   "value": 85.65,
+   "value": 85.7,
    "previous": 86.04,
-   "change": -0.39,
+   "change": -0.34,
    "as_of": "2026-11-11",
    "unit": "USD",
    "source": "yahoo",
    "series": "CL=F",
-   "change_1m_pct": -9.02,
+   "change_1m_pct": -8.97,
    "trend": "down",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "gold": {
    "id": "gold",
    "name": "Oro (futuro)",
-   "value": 3986.8,
+   "value": 3984.8,
    "previous": 4030.2,
-   "change": -43.3999,
+   "change": -45.3999,
    "as_of": "2026-11-11",
    "unit": "USD",
    "source": "yahoo",
    "series": "GC=F",
-   "change_1m_pct": -4.56,
+   "change_1m_pct": -4.61,
    "trend": "down",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   },
   "copper": {
    "id": "copper",
    "name": "Cobre (futuro)",
-   "value": 6.2535,
+   "value": 6.2405,
    "previous": 6.2195,
-   "change": 0.034,
+   "change": 0.021,
    "as_of": "2026-11-11",
    "unit": "USD",
    "source": "yahoo",
    "series": "HG=F",
-   "change_1m_pct": -6.36,
+   "change_1m_pct": -6.55,
    "trend": "up",
-   "fetched_at": "2026-11-12T03:20:50.702975+00:00"
+   "fetched_at": "2026-11-12T03:55:44.688575+00:00"
   }
  },
  "errors": {}
