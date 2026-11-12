@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "100.0000000000000000000000000000000",
+  "cash": "65.02413514136000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -49,8 +49,60 @@
    "short_borrow_fee_annual": "0.005",
    "cash_interest_annual": "0"
   },
-  "positions": [],
-  "fills": [],
+  "positions": [
+   {
+    "symbol": "LINK-USD",
+    "quantity": "1.51205185",
+    "avg_price": "9.879",
+    "open_fees": "0.03734390",
+    "opened_at": "2026-11-12T15:42:01.894000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.03734390",
+    "mark_price": "9.8735",
+    "entry_order_id": "O00000001"
+   },
+   {
+    "symbol": "NVDA",
+    "quantity": "0.121151861",
+    "avg_price": "165.09",
+    "open_fees": "0",
+    "opened_at": "2026-11-12T15:41:45.831285+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0",
+    "mark_price": "165.06480407714844",
+    "entry_order_id": "O00000002"
+   }
+  ],
+  "fills": [
+   {
+    "id": "F00000001",
+    "order_id": "O00000001",
+    "symbol": "LINK-USD",
+    "side": "buy",
+    "quantity": "1.51205185",
+    "price": "9.879",
+    "notional": "14.93756023",
+    "fee": "0.0373439",
+    "liquidity": "taker",
+    "slippage_cost": "0.00756026",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-12T15:42:01.894000+00:00"
+   },
+   {
+    "id": "F00000002",
+    "order_id": "O00000002",
+    "symbol": "NVDA",
+    "side": "buy",
+    "quantity": "0.121151861",
+    "price": "165.09",
+    "notional": "20.00096073",
+    "fee": "0",
+    "liquidity": "taker",
+    "slippage_cost": "0.00305253",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-12T15:41:45.831285+00:00"
+   }
+  ],
   "closed_trades": [],
   "equity_curve": [
    [
@@ -3741,18 +3793,120 @@
     "100.0000000000000000000000000000000",
     "0",
     "0"
+   ],
+   [
+    "2026-11-12T15:42:04.009771+00:00",
+    "100.0000000000000000000000000000000",
+    "100.0000000000000000000000000000000",
+    "0",
+    "0"
+   ],
+   [
+    "2026-11-12T15:42:06.387922+00:00",
+    "99.95128728188192107924684000000000",
+    "65.02413514136000000000000000000000",
+    "34.92715214052192107924684",
+    "34.92715214052192107924684"
    ]
   ],
-  "total_fees": "0",
-  "total_slippage": "0",
+  "total_fees": "0.03734390",
+  "total_slippage": "0.01061279",
   "total_financing": "0E-44",
   "peak_equity": "100",
-  "max_drawdown": "0"
+  "max_drawdown": "0.00048712718118078920753160000000"
  },
- "orders": [],
- "open_order_ids": [],
- "order_id_counter": 1,
- "fill_id_counter": 1,
+ "orders": [
+  {
+   "id": "O00000001",
+   "symbol": "LINK-USD",
+   "side": "buy",
+   "quantity": "1.51205185",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "1.51205185",
+   "avg_fill_price": "9.879",
+   "fees_paid": "0.0373439",
+   "triggered": false,
+   "created_at": "2026-11-12T15:42:06.387703+00:00",
+   "updated_at": "2026-11-12T15:42:01.894000+00:00",
+   "reject_reason": null,
+   "tag": "pred +0.093\u03c3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000002",
+   "symbol": "NVDA",
+   "side": "buy",
+   "quantity": "0.121151861",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.121151861",
+   "avg_fill_price": "165.09",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-12T15:42:06.387856+00:00",
+   "updated_at": "2026-11-12T15:41:45.831285+00:00",
+   "reject_reason": null,
+   "tag": "pred +0.108\u03c3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000003",
+   "symbol": "LINK-USD",
+   "side": "sell",
+   "quantity": "1.51205185",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "8.06461",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-12T15:42:06.488762+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-LINK-USD-3"
+  },
+  {
+   "id": "O00000004",
+   "symbol": "NVDA",
+   "side": "sell",
+   "quantity": "0.121151861",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "142.19",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-12T15:42:06.489985+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-NVDA-4"
+  }
+ ],
+ "open_order_ids": [
+  "O00000003",
+  "O00000004"
+ ],
+ "order_id_counter": 5,
+ "fill_id_counter": 3,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -3762,7 +3916,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-12T15:21:46.207666+00:00",
+ "last_sync": "2026-11-12T15:42:06.387922+00:00",
  "bankrupt": false,
  "path_checked": {}
 }
