@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-12T02:16:16.258803+00:00",
+  "generated_at": "2026-11-12T02:22:33.437706+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -340,9 +340,9 @@
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-11-12T02:15:41.711801+00:00",
-  "mode": "mark",
-  "duration_s": 34.55,
+  "started_at": "2026-11-12T02:20:43.105425+00:00",
+  "mode": "research",
+  "duration_s": 110.33,
   "accounts": {
    "aprendiz": {
     "status": "synced",
@@ -365,7 +365,7 @@
    "buy-hold": {
     "status": "synced",
     "message": "",
-    "equity": 98.1310388280365,
+    "equity": 98.13430728854824,
     "fills_on_sync": 0
    },
    "analista": {
@@ -377,7 +377,7 @@
    "inversor": {
     "status": "synced",
     "message": "",
-    "equity": 99.33251988735,
+    "equity": 99.33580982555,
     "fills_on_sync": 0
    },
    "aprendiz-x2": {
@@ -407,7 +407,7 @@
    "inversor-x2": {
     "status": "synced",
     "message": "",
-    "equity": 98.08886776666,
+    "equity": 98.09215908266,
     "fills_on_sync": 0
    },
    "combinador": {
@@ -430,33 +430,33 @@
    }
   },
   "data_errors": {
-   "bars:T": "yfinance history(T, 1h): $T: possibly delisted; no price data found  (1h 2026-11-11 23:22:08.150211+00:00 -> 2026-11-12 02:16:06.169312+00:00)",
-   "bars:ABBV": "yfinance history(ABBV, 5m): $ABBV: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.591994+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:COST": "yfinance history(COST, 5m): $COST: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.594884+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:DIS": "yfinance history(DIS, 5m): $DIS: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.597687+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:LIN": "yfinance history(LIN, 5m): $LIN: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.600534+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:LLY": "yfinance history(LLY, 5m): $LLY: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.602015+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:MA": "yfinance history(MA, 5m): $MA: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.603482+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:PEP": "yfinance history(PEP, 5m): $PEP: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.643798+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:SBUX": "yfinance history(SBUX, 5m): $SBUX: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.645293+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:CVX": "yfinance history(CVX, 1h): $CVX: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.667502+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:KO": "yfinance history(KO, 1h): $KO: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.670718+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:PG": "yfinance history(PG, 1h): $PG: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.680123+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:WMT": "yfinance history(WMT, 1h): $WMT: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.695674+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:XLE": "yfinance history(XLE, 1h): $XLE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.698049+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:XOM": "yfinance history(XOM, 1h): $XOM: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.701380+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:HON": "yfinance history(HON, 1h): $HON: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.703087+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:IBM": "yfinance history(IBM, 1h): $IBM: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.707931+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:LMT": "yfinance history(LMT, 1h): $LMT: possibly delisted; no price data found  (1h 2026-11-11 23:22:13.298590+00:00 -> 2026-11-12 02:16:15.994086+00:00)",
-   "bars:XLU": "yfinance history(XLU, 1h): $XLU: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.711308+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:HD": "yfinance history(HD, 1h): $HD: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.712944+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:LOW": "yfinance history(LOW, 1h): $LOW: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.714630+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:NEE": "yfinance history(NEE, 1h): $NEE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.716303+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:NKE": "yfinance history(NKE, 1h): $NKE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.717984+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:IEF": "yfinance history(IEF, 1h): $IEF: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.731498+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:TLT": "yfinance history(TLT, 1h): $TLT: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.735128+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:ADBE": "yfinance history(ADBE, 1h): $ADBE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.736773+00:00 -> 2026-11-12 02:16:07.545416+00:00)",
-   "bars:JNJ": "yfinance history(JNJ, 1h): $JNJ: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.738489+00:00 -> 2026-11-12 02:16:07.545416+00:00)"
+   "bars:T": "yfinance history(T, 1h): $T: possibly delisted; no price data found  (1h 2026-11-11 23:22:08.150211+00:00 -> 2026-11-12 02:22:24.380680+00:00)",
+   "bars:ABBV": "yfinance history(ABBV, 5m): $ABBV: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.591994+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:COST": "yfinance history(COST, 5m): $COST: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.594884+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:DIS": "yfinance history(DIS, 5m): $DIS: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.597687+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:LIN": "yfinance history(LIN, 5m): $LIN: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.600534+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:LLY": "yfinance history(LLY, 5m): $LLY: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.602015+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:MA": "yfinance history(MA, 5m): $MA: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.603482+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:PEP": "yfinance history(PEP, 5m): $PEP: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.643798+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:SBUX": "yfinance history(SBUX, 5m): $SBUX: possibly delisted; no price data found  (5m 2026-11-11 21:23:18.645293+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:CVX": "yfinance history(CVX, 1h): $CVX: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.667502+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:KO": "yfinance history(KO, 1h): $KO: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.670718+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:PG": "yfinance history(PG, 1h): $PG: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.680123+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:WMT": "yfinance history(WMT, 1h): $WMT: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.695674+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:XLE": "yfinance history(XLE, 1h): $XLE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.698049+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:XOM": "yfinance history(XOM, 1h): $XOM: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.701380+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:HON": "yfinance history(HON, 1h): $HON: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.703087+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:IBM": "yfinance history(IBM, 1h): $IBM: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.707931+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:LMT": "yfinance history(LMT, 1h): $LMT: possibly delisted; no price data found  (1h 2026-11-11 23:22:13.298590+00:00 -> 2026-11-12 02:22:33.014599+00:00)",
+   "bars:XLU": "yfinance history(XLU, 1h): $XLU: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.711308+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:HD": "yfinance history(HD, 1h): $HD: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.712944+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:LOW": "yfinance history(LOW, 1h): $LOW: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.714630+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:NEE": "yfinance history(NEE, 1h): $NEE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.716303+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:NKE": "yfinance history(NKE, 1h): $NKE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.717984+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:IEF": "yfinance history(IEF, 1h): $IEF: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.731498+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:TLT": "yfinance history(TLT, 1h): $TLT: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.735128+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:ADBE": "yfinance history(ADBE, 1h): $ADBE: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.736773+00:00 -> 2026-11-12 02:22:25.308904+00:00)",
+   "bars:JNJ": "yfinance history(JNJ, 1h): $JNJ: possibly delisted; no price data found  (1h 2026-11-11 23:22:12.738489+00:00 -> 2026-11-12 02:22:25.308904+00:00)"
   }
  },
  "prices": {
@@ -466,7 +466,7 @@
    "ask": 759.81,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:42.100550+00:00",
+   "time": "2026-11-12T02:21:50.785151+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -476,7 +476,7 @@
    "ask": 690.38,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:42.351380+00:00",
+   "time": "2026-11-12T02:21:51.113222+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -486,7 +486,7 @@
    "ask": 283.09,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:42.576153+00:00",
+   "time": "2026-11-12T02:21:51.502742+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -496,7 +496,7 @@
    "ask": 524.44,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:42.796452+00:00",
+   "time": "2026-11-12T02:21:51.905379+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -506,7 +506,7 @@
    "ask": 365.17,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:42.983525+00:00",
+   "time": "2026-11-12T02:21:52.236748+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -516,7 +516,7 @@
    "ask": 46.65,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:43.176310+00:00",
+   "time": "2026-11-12T02:21:52.605929+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -526,7 +526,7 @@
    "ask": 80.92,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:43.407243+00:00",
+   "time": "2026-11-12T02:21:52.931490+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -536,7 +536,7 @@
    "ask": 62.04,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:43.803945+00:00",
+   "time": "2026-11-12T02:21:53.255995+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -546,7 +546,7 @@
    "ask": 63.37,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:44.214579+00:00",
+   "time": "2026-11-12T02:21:53.581196+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -556,7 +556,7 @@
    "ask": 58.63,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:44.627510+00:00",
+   "time": "2026-11-12T02:21:53.908512+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -566,7 +566,7 @@
    "ask": 90.94,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:44.864267+00:00",
+   "time": "2026-11-12T02:21:54.265135+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -576,7 +576,7 @@
    "ask": 77.35,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:45.079631+00:00",
+   "time": "2026-11-12T02:21:54.581913+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -586,7 +586,7 @@
    "ask": 105.26,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:45.303413+00:00",
+   "time": "2026-11-12T02:21:54.929787+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -596,7 +596,7 @@
    "ask": 104.66,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:45.518055+00:00",
+   "time": "2026-11-12T02:21:55.385153+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -606,7 +606,7 @@
    "ask": 92.12,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:45.750697+00:00",
+   "time": "2026-11-12T02:21:55.728039+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -616,7 +616,7 @@
    "ask": 33.92,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:45.989277+00:00",
+   "time": "2026-11-12T02:21:56.109330+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -626,7 +626,7 @@
    "ask": 51.59,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:46.195363+00:00",
+   "time": "2026-11-12T02:21:56.425388+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -636,7 +636,7 @@
    "ask": 174.36,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:46.432458+00:00",
+   "time": "2026-11-12T02:21:56.752353+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -646,7 +646,7 @@
    "ask": 188.95,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:46.649730+00:00",
+   "time": "2026-11-12T02:21:57.141371+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -656,7 +656,7 @@
    "ask": 43.82,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:46.881861+00:00",
+   "time": "2026-11-12T02:21:57.529323+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -666,7 +666,7 @@
    "ask": 97.02,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:47.102840+00:00",
+   "time": "2026-11-12T02:21:57.915171+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -676,7 +676,7 @@
    "ask": 141.47,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:47.318269+00:00",
+   "time": "2026-11-12T02:21:58.223952+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -686,7 +686,7 @@
    "ask": 355.63,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:47.559823+00:00",
+   "time": "2026-11-12T02:21:58.568597+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -696,7 +696,7 @@
    "ask": 521.125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:47.777456+00:00",
+   "time": "2026-11-12T02:21:58.898097+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -706,7 +706,7 @@
    "ask": 173.73,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:47.981473+00:00",
+   "time": "2026-11-12T02:21:59.288090+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -716,7 +716,7 @@
    "ask": 266.17,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:48.173630+00:00",
+   "time": "2026-11-12T02:21:59.591407+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -726,7 +726,7 @@
    "ask": 293.45,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:48.368215+00:00",
+   "time": "2026-11-12T02:22:00.039914+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -736,7 +736,7 @@
    "ask": 628.77,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:48.593652+00:00",
+   "time": "2026-11-12T02:22:00.422119+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -746,7 +746,7 @@
    "ask": 390.84,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:48.797016+00:00",
+   "time": "2026-11-12T02:22:00.744791+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -756,7 +756,7 @@
    "ask": 345.22,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:49.016043+00:00",
+   "time": "2026-11-12T02:22:01.072487+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -766,7 +766,7 @@
    "ask": 552.9,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:49.226483+00:00",
+   "time": "2026-11-12T02:22:01.514323+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -776,7 +776,7 @@
    "ask": 64.54,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:49.422243+00:00",
+   "time": "2026-11-12T02:22:01.830769+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -786,7 +786,7 @@
    "ask": 128.38,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:49.648533+00:00",
+   "time": "2026-11-12T02:22:02.221990+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -796,7 +796,7 @@
    "ask": 218.01,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:49.838999+00:00",
+   "time": "2026-11-12T02:22:02.531674+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -806,7 +806,7 @@
    "ask": 343.39,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:50.086104+00:00",
+   "time": "2026-11-12T02:22:02.868309+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -816,7 +816,7 @@
    "ask": 50.67,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:50.336800+00:00",
+   "time": "2026-11-12T02:22:03.234124+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -826,7 +826,7 @@
    "ask": 926.81,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:50.560545+00:00",
+   "time": "2026-11-12T02:22:03.568260+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -836,7 +836,7 @@
    "ask": 425.55,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:50.774226+00:00",
+   "time": "2026-11-12T02:22:03.998493+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -846,7 +846,7 @@
    "ask": 660.73,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:50.988475+00:00",
+   "time": "2026-11-12T02:22:04.327580+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -856,7 +856,7 @@
    "ask": 166.71,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:51.266073+00:00",
+   "time": "2026-11-12T02:22:04.744154+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -866,7 +866,7 @@
    "ask": 213.28,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:51.533225+00:00",
+   "time": "2026-11-12T02:22:05.097790+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -876,7 +876,7 @@
    "ask": 280.41,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:51.827883+00:00",
+   "time": "2026-11-12T02:22:05.455285+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -886,7 +886,7 @@
    "ask": 402.94,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:52.068536+00:00",
+   "time": "2026-11-12T02:22:05.855066+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -896,7 +896,7 @@
    "ask": 1437.29,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:52.341498+00:00",
+   "time": "2026-11-12T02:22:06.208046+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -906,7 +906,7 @@
    "ask": 29.45,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:52.601656+00:00",
+   "time": "2026-11-12T02:22:06.640754+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -916,7 +916,7 @@
    "ask": 167.67,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:52.891717+00:00",
+   "time": "2026-11-12T02:22:06.999885+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -926,7 +926,7 @@
    "ask": 97.57,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:53.207761+00:00",
+   "time": "2026-11-12T02:22:07.370524+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -936,7 +936,7 @@
    "ask": 143.94,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:53.480107+00:00",
+   "time": "2026-11-12T02:22:07.795678+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -946,7 +946,7 @@
    "ask": 125.67,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:53.759249+00:00",
+   "time": "2026-11-12T02:22:08.139924+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -956,7 +956,7 @@
    "ask": 1087.61,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:54.084236+00:00",
+   "time": "2026-11-12T02:22:08.524730+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -966,7 +966,7 @@
    "ask": 351.31,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:54.329532+00:00",
+   "time": "2026-11-12T02:22:08.867759+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -976,7 +976,7 @@
    "ask": 274.8,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:54.651175+00:00",
+   "time": "2026-11-12T02:22:09.276266+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -986,7 +986,7 @@
    "ask": 601.61,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:54.926265+00:00",
+   "time": "2026-11-12T02:22:09.691268+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -996,7 +996,7 @@
    "ask": 174.54,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:55.185863+00:00",
+   "time": "2026-11-12T02:22:10.028676+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1006,7 +1006,7 @@
    "ask": 237.6,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:55.393327+00:00",
+   "time": "2026-11-12T02:22:10.357780+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1016,7 +1016,7 @@
    "ask": 62.5,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:55.627026+00:00",
+   "time": "2026-11-12T02:22:10.688819+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1026,7 +1026,7 @@
    "ask": 176.57,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:55.870733+00:00",
+   "time": "2026-11-12T02:22:11.088122+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1036,7 +1036,7 @@
    "ask": 100.76,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:56.112812+00:00",
+   "time": "2026-11-12T02:22:11.413725+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1046,7 +1046,7 @@
    "ask": 248.22,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:56.425384+00:00",
+   "time": "2026-11-12T02:22:11.907114+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1056,7 +1056,7 @@
    "ask": 309.81,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:56.689402+00:00",
+   "time": "2026-11-12T02:22:12.280328+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1066,7 +1066,7 @@
    "ask": 811.3,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:56.940143+00:00",
+   "time": "2026-11-12T02:22:12.674101+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1076,7 +1076,7 @@
    "ask": 102.76,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:57.135078+00:00",
+   "time": "2026-11-12T02:22:13.163669+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1086,7 +1086,7 @@
    "ask": 70.68,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:57.345659+00:00",
+   "time": "2026-11-12T02:22:13.544991+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1096,7 +1096,7 @@
    "ask": 172.4,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:57.530244+00:00",
+   "time": "2026-11-12T02:22:13.860001+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1106,7 +1106,7 @@
    "ask": 119.65,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:57.807534+00:00",
+   "time": "2026-11-12T02:22:14.343274+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1116,7 +1116,7 @@
    "ask": 38.32,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:58.040738+00:00",
+   "time": "2026-11-12T02:22:14.678609+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1126,7 +1126,7 @@
    "ask": 109.89,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:58.272929+00:00",
+   "time": "2026-11-12T02:22:15.077588+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1136,7 +1136,7 @@
    "ask": 231.6,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:58.509362+00:00",
+   "time": "2026-11-12T02:22:15.414507+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1146,7 +1146,7 @@
    "ask": 85.8,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:58.768144+00:00",
+   "time": "2026-11-12T02:22:15.763147+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1156,7 +1156,7 @@
    "ask": 190.61,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:59.044060+00:00",
+   "time": "2026-11-12T02:22:16.152954+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1166,7 +1166,7 @@
    "ask": 1226.31,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:59.280954+00:00",
+   "time": "2026-11-12T02:22:16.483003+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1176,7 +1176,7 @@
    "ask": 323.11,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:59.545338+00:00",
+   "time": "2026-11-12T02:22:16.831836+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1186,7 +1186,7 @@
    "ask": 147.18,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:15:59.829400+00:00",
+   "time": "2026-11-12T02:22:17.194297+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1196,7 +1196,7 @@
    "ask": 294.98,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:00.044747+00:00",
+   "time": "2026-11-12T02:22:17.634986+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1206,7 +1206,7 @@
    "ask": 717.71,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:00.320238+00:00",
+   "time": "2026-11-12T02:22:17.977426+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1216,7 +1216,7 @@
    "ask": 109.29,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:00.594854+00:00",
+   "time": "2026-11-12T02:22:18.443398+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1226,7 +1226,7 @@
    "ask": 196.35,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:00.828569+00:00",
+   "time": "2026-11-12T02:22:18.833420+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1236,7 +1236,7 @@
    "ask": 137.86,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:01.187571+00:00",
+   "time": "2026-11-12T02:22:19.181893+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1246,7 +1246,7 @@
    "ask": 50.96,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:01.457385+00:00",
+   "time": "2026-11-12T02:22:19.519501+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1256,7 +1256,7 @@
    "ask": 227.64,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:01.744315+00:00",
+   "time": "2026-11-12T02:22:19.916208+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1266,7 +1266,7 @@
    "ask": 342.75,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:02.050018+00:00",
+   "time": "2026-11-12T02:22:20.403283+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1276,7 +1276,7 @@
    "ask": 691.75,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:02.303953+00:00",
+   "time": "2026-11-12T02:22:20.789159+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1286,7 +1286,7 @@
    "ask": 610.05,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:02.581981+00:00",
+   "time": "2026-11-12T02:22:21.155859+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1296,7 +1296,7 @@
    "ask": 85.99,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:02.864045+00:00",
+   "time": "2026-11-12T02:22:21.958099+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1306,7 +1306,7 @@
    "ask": 22.26,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:03.121790+00:00",
+   "time": "2026-11-12T02:22:22.294603+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1316,152 +1316,158 @@
    "ask": 526.55,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-12T02:16:03.367998+00:00",
+   "time": "2026-11-12T02:22:22.706512+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 73753.33,
-   "bid": 73753.32,
-   "ask": 73753.33,
+   "last": 73819.33,
+   "bid": 73819.33,
+   "ask": 73819.34,
    "spread_bps": 0.001,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:03.759000+00:00",
+   "time": "2026-11-12T02:22:22.024000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 2055.76,
-   "bid": 2055.66,
-   "ask": 2055.78,
-   "spread_bps": 0.584,
+   "last": 2056.34,
+   "bid": 2056.34,
+   "ask": 2056.38,
+   "spread_bps": 0.195,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:03.225000+00:00",
+   "time": "2026-11-12T02:22:21.788000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 83.43,
-   "bid": 83.42,
-   "ask": 83.43,
-   "spread_bps": 1.199,
+   "last": 83.45,
+   "bid": 83.44,
+   "ask": 83.45,
+   "spread_bps": 1.198,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:03.503000+00:00",
+   "time": "2026-11-12T02:22:21.564000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 1.0518,
-   "bid": 1.0518,
-   "ask": 1.052,
-   "spread_bps": 1.901,
+   "last": 1.0515,
+   "bid": 1.0514,
+   "ask": 1.0515,
+   "spread_bps": 0.951,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:02.300000+00:00",
+   "time": "2026-11-12T02:22:18.685000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.17374,
-   "bid": 0.17369,
-   "ask": 0.17373,
-   "spread_bps": 2.303,
+   "last": 0.17376,
+   "bid": 0.17378,
+   "ask": 0.17383,
+   "spread_bps": 2.877,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:03.785000+00:00",
+   "time": "2026-11-12T02:21:48.521000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.0673,
-   "bid": 0.06733,
-   "ask": 0.06735,
-   "spread_bps": 2.97,
+   "last": 0.06739,
+   "bid": 0.06738,
+   "ask": 0.0674,
+   "spread_bps": 2.968,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:48.751000+00:00",
+   "time": "2026-11-12T02:22:02.777000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 10.149,
-   "bid": 10.145,
-   "ask": 10.148,
-   "spread_bps": 2.957,
+   "last": 10.152,
+   "bid": 10.153,
+   "ask": 10.156,
+   "spread_bps": 2.954,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:02.413000+00:00",
+   "time": "2026-11-12T02:22:00.468000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 50.02,
-   "bid": 50.02,
-   "ask": 50.036,
-   "spread_bps": 3.198,
+   "last": 49.972,
+   "bid": 49.967,
+   "ask": 49.972,
+   "spread_bps": 1.001,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:01.465000+00:00",
+   "time": "2026-11-12T02:22:21.957000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AVAX-USD": {
-   "last": 8.561,
-   "bid": 8.561,
-   "ask": 8.562,
-   "spread_bps": 1.168,
+   "last": 8.606,
+   "bid": 8.606,
+   "ask": 8.608,
+   "spread_bps": 2.324,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:54.374000+00:00",
+   "time": "2026-11-12T02:22:09.141000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOT-USD": {
-   "last": 0.8451,
-   "bid": 0.8452,
-   "ask": 0.8456,
-   "spread_bps": 4.731,
+   "last": 0.8468,
+   "bid": 0.8465,
+   "ask": 0.8469,
+   "spread_bps": 4.724,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:48.146000+00:00",
+   "time": "2026-11-12T02:22:07.805000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "BCH-USD": {
-   "last": 229.39,
-   "bid": 229.36,
-   "ask": 229.49,
-   "spread_bps": 5.666,
+   "last": 229.29,
+   "bid": 229.24,
+   "ask": 229.38,
+   "spread_bps": 6.105,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:59.165000+00:00",
+   "time": "2026-11-12T02:22:15.367000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "UNI-USD": {
-   "last": 6.1729,
-   "bid": 6.1735,
-   "ask": 6.1773,
-   "spread_bps": 6.153,
+   "last": 6.1615,
+   "bid": 6.1615,
+   "ask": 6.1639,
+   "spread_bps": 3.894,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:33.865000+00:00",
+   "time": "2026-11-12T02:22:06.295000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AAVE-USD": {
-   "last": 118.57,
-   "bid": 118.53,
-   "ask": 118.6,
-   "spread_bps": 5.904,
+   "last": 118.28,
+   "bid": 118.22,
+   "ask": 118.28,
+   "spread_bps": 5.074,
    "modelled_spread": false,
-   "time": "2026-11-12T02:15:57.138000+00:00",
+   "time": "2026-11-12T02:22:12.945000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XLM-USD": {
-   "last": 0.147717,
-   "bid": 0.147599,
-   "ask": 0.147718,
-   "spread_bps": 8.059,
+   "last": 0.147694,
+   "bid": 0.147749,
+   "ask": 0.147847,
+   "spread_bps": 6.631,
    "modelled_spread": false,
-   "time": "2026-11-12T02:16:03.417000+00:00",
+   "time": "2026-11-12T02:22:06.743000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-11-12T02:20:43.105425+00:00",
+   "mode": "research",
+   "duration_s": 110.33,
+   "errors": 27
+  },
   {
    "started_at": "2026-11-12T02:15:41.711801+00:00",
    "mode": "mark",
@@ -1635,12 +1641,6 @@
    "mode": "research",
    "duration_s": 113.94,
    "errors": 11
-  },
-  {
-   "started_at": "2026-11-11T04:20:39.346500+00:00",
-   "mode": "research",
-   "duration_s": 84.19,
-   "errors": 11
   }
  ],
  "accounts": [
@@ -1661,7 +1661,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-11"
@@ -2216,9 +2216,11 @@
      "2026-11-12T00:22:07.559357+00:00",
      "2026-11-12T01:21:27.333171+00:00",
      "2026-11-12T01:42:07.306612+00:00",
-     "2026-11-12T02:16:06.038732+00:00"
+     "2026-11-12T02:16:06.038732+00:00",
+     "2026-11-12T02:22:24.374857+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -5315,7 +5317,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.77960676317589,
     "last_decision_date": "2026-11-11"
@@ -5886,7 +5888,8 @@
      "2026-11-12T00:22:07.566157+00:00",
      "2026-11-12T01:21:27.337490+00:00",
      "2026-11-12T01:42:07.312948+00:00",
-     "2026-11-12T02:16:06.169312+00:00"
+     "2026-11-12T02:16:06.169312+00:00",
+     "2026-11-12T02:22:24.380680+00:00"
     ],
     "equity": [
      100.0,
@@ -6422,6 +6425,7 @@
      100.22262,
      100.22262,
      100.22262,
+     100.22262,
      100.22262
     ]
    },
@@ -6468,7 +6472,7 @@
      "symbol": "XLK",
      "name": "Technology Select Sector SPDR",
      "opened_at": "2026-11-05T15:41:51.739734+00:00",
-     "days_held": 6.441,
+     "days_held": 6.445,
      "quantity": "0.05924669",
      "avg_price": 166.06,
      "allocated": 9.8385053,
@@ -6487,7 +6491,7 @@
      "symbol": "CAT",
      "name": "Caterpillar Inc.",
      "opened_at": "2026-11-10T15:41:40.684746+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.017047659",
      "avg_price": 578.32,
      "allocated": 9.8590022,
@@ -6525,7 +6529,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-10T15:41:35.058951+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.057560548",
      "avg_price": 171.29,
      "allocated": 9.8595463,
@@ -10112,7 +10116,7 @@
     "p_sharpe_positive": 0.551,
     "days_to_significant_sharpe": 16069,
     "p_beats_buy_hold": 0.762,
-    "excess_return_ann_pct": 29.74,
+    "excess_return_ann_pct": 29.69,
     "days_to_significant_vs_buy_hold": 87
    }
   },
@@ -10130,7 +10134,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.78620271825592,
     "last_decision_date": "2026-11-11"
@@ -10709,7 +10713,8 @@
      "2026-11-12T00:22:08.174561+00:00",
      "2026-11-12T01:21:27.798143+00:00",
      "2026-11-12T01:42:09.664241+00:00",
-     "2026-11-12T02:16:07.545416+00:00"
+     "2026-11-12T02:16:07.545416+00:00",
+     "2026-11-12T02:22:25.308904+00:00"
     ],
     "equity": [
      100.0,
@@ -11253,6 +11258,7 @@
      99.714992,
      99.714992,
      99.714992,
+     99.714992,
      99.714992
     ]
    },
@@ -11261,7 +11267,7 @@
      "symbol": "IEF",
      "name": "iShares 7-10 Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:32.519114+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.060512492",
      "avg_price": 91.01,
      "allocated": 5.5072419,
@@ -11280,7 +11286,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:31.737325+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.044826638",
      "avg_price": 80.87,
      "allocated": 3.6251302,
@@ -11356,7 +11362,7 @@
      "symbol": "INDA",
      "name": "iShares MSCI India",
      "opened_at": "2026-11-10T15:41:33.593298+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.055921853",
      "avg_price": 51.9,
      "allocated": 2.9023442,
@@ -11413,7 +11419,7 @@
      "symbol": "NEE",
      "name": "NextEra Energy",
      "opened_at": "2026-11-04T15:42:21.570733+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.030570146",
      "avg_price": 87.38,
      "allocated": 2.6712194,
@@ -11470,7 +11476,7 @@
      "symbol": "DIA",
      "name": "SPDR Dow Jones Industrial Average",
      "opened_at": "2026-11-05T15:41:46.587247+00:00",
-     "days_held": 6.441,
+     "days_held": 6.445,
      "quantity": "0.004774057",
      "avg_price": 523.96,
      "allocated": 2.5014149,
@@ -11584,7 +11590,7 @@
      "symbol": "AXP",
      "name": "American Express",
      "opened_at": "2026-11-05T15:42:13.015779+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.00661235",
      "avg_price": 329.57,
      "allocated": 2.1792322,
@@ -11641,7 +11647,7 @@
      "symbol": "HD",
      "name": "Home Depot (The)",
      "opened_at": "2026-11-03T15:42:10.958719+00:00",
-     "days_held": 8.44,
+     "days_held": 8.445,
      "quantity": "0.005817676",
      "avg_price": 334.21,
      "allocated": 1.9443255,
@@ -11660,7 +11666,7 @@
      "symbol": "NKE",
      "name": "Nike, Inc.",
      "opened_at": "2026-11-04T15:42:14.393855+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.053051235",
      "avg_price": 40.57,
      "allocated": 2.1522886,
@@ -11755,7 +11761,7 @@
      "symbol": "JNJ",
      "name": "Johnson & Johnson",
      "opened_at": "2026-11-11T15:41:47.927707+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.445,
      "quantity": "0.006783766",
      "avg_price": 277.6,
      "allocated": 1.8831734,
@@ -11774,7 +11780,7 @@
      "symbol": "LOW",
      "name": "Lowe's",
      "opened_at": "2026-11-03T15:42:17.211610+00:00",
-     "days_held": 8.44,
+     "days_held": 8.445,
      "quantity": "0.008172775",
      "avg_price": 214.95,
      "allocated": 1.756738,
@@ -11793,7 +11799,7 @@
      "symbol": "SBUX",
      "name": "Starbucks",
      "opened_at": "2026-11-05T15:42:11.177238+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.017219434",
      "avg_price": 109.2,
      "allocated": 1.8803622,
@@ -11869,7 +11875,7 @@
      "symbol": "MCD",
      "name": "McDonald's",
      "opened_at": "2026-11-05T15:42:05.126950+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.006553429",
      "avg_price": 279.92,
      "allocated": 1.8344358,
@@ -11907,7 +11913,7 @@
      "symbol": "PEP",
      "name": "PepsiCo",
      "opened_at": "2026-11-05T15:42:03.466728+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.012245632",
      "avg_price": 144.79,
      "allocated": 1.7730451,
@@ -11926,7 +11932,7 @@
      "symbol": "ABT",
      "name": "Abbott Laboratories",
      "opened_at": "2026-11-05T15:42:14.484618+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.015657456",
      "avg_price": 115.42,
      "allocated": 1.8071836,
@@ -12078,7 +12084,7 @@
      "symbol": "ADBE",
      "name": "Adobe Inc.",
      "opened_at": "2026-11-11T15:41:51.530559+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.4449,
      "quantity": "0.005094323",
      "avg_price": 237.21,
      "allocated": 1.2084244,
@@ -19150,9 +19156,9 @@
     ],
     "p_sharpe_positive": 0.472,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.892,
-    "excess_return_ann_pct": 21.71,
-    "days_to_significant_vs_buy_hold": 112
+    "p_beats_buy_hold": 0.891,
+    "excess_return_ann_pct": 21.66,
+    "days_to_significant_vs_buy_hold": 113
    }
   },
   {
@@ -19220,7 +19226,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.59597715597896,
     "last_decision_date": "2026-11-11"
@@ -19228,20 +19234,20 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.657170+00:00",
    "summary": {
-    "equity": 98.131039,
+    "equity": 98.134307,
     "cash": 4.9420476,
-    "invested": 93.188991,
+    "invested": 93.19226,
     "invested_pct": 94.96,
-    "pnl": -1.8689612,
-    "pnl_pct": -1.86896,
-    "day_pnl": 0.0905299,
-    "day_pnl_pct": 0.092339,
+    "pnl": -1.8656927,
+    "pnl_pct": -1.86569,
+    "day_pnl": 0.0937984,
+    "day_pnl_pct": 0.095673,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -1.8309889,
+    "unrealized_pnl": -1.8277204,
     "fees": 0.0379723,
     "slippage_cost": 0.0210596,
     "max_drawdown_pct": 4.7718,
-    "current_drawdown_pct": 2.5801,
+    "current_drawdown_pct": 2.5769,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -19776,7 +19782,8 @@
      "2026-11-12T00:22:12.770009+00:00",
      "2026-11-12T01:21:31.084577+00:00",
      "2026-11-12T01:42:24.819143+00:00",
-     "2026-11-12T02:16:14.319420+00:00"
+     "2026-11-12T02:16:14.319420+00:00",
+     "2026-11-12T02:22:32.351191+00:00"
     ],
     "equity": [
      100.0,
@@ -20297,7 +20304,8 @@
      98.179232,
      98.089347,
      98.109728,
-     98.131039
+     98.131039,
+     98.134307
     ]
    },
    "positions": [
@@ -20447,7 +20455,7 @@
      "market_value": 2.0063095,
      "unrealized_pnl": 0.106104,
      "unrealized_pct": 5.5838,
-     "weight_pct": 2.045,
+     "weight_pct": 2.044,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20504,7 +20512,7 @@
      "market_value": 1.9925755,
      "unrealized_pnl": 0.0921003,
      "unrealized_pct": 4.8462,
-     "weight_pct": 2.031,
+     "weight_pct": 2.03,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20675,7 +20683,7 @@
      "market_value": 1.9337217,
      "unrealized_pnl": 0.033557,
      "unrealized_pct": 1.766,
-     "weight_pct": 1.971,
+     "weight_pct": 1.97,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20713,7 +20721,7 @@
      "market_value": 1.9072184,
      "unrealized_pnl": 0.00712788,
      "unrealized_pct": 0.37513,
-     "weight_pct": 1.944,
+     "weight_pct": 1.943,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -20975,11 +20983,11 @@
      "avg_price": 80106.8,
      "allocated": 1.9040806,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 73753.325,
-     "market_value": 1.7486913,
-     "unrealized_pnl": -0.155389,
-     "unrealized_pct": -8.1609,
-     "weight_pct": 1.782,
+     "last_price": 73819.335,
+     "market_value": 1.7502564,
+     "unrealized_pnl": -0.153824,
+     "unrealized_pct": -8.0787,
+     "weight_pct": 1.784,
      "entry_fees": 0.00474833,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21089,11 +21097,11 @@
      "avg_price": 2318.24,
      "allocated": 1.9039662,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 2055.72,
-     "market_value": 1.6841486,
-     "unrealized_pnl": -0.219818,
-     "unrealized_pct": -11.545,
-     "weight_pct": 1.716,
+     "last_price": 2056.36,
+     "market_value": 1.6846729,
+     "unrealized_pnl": -0.219293,
+     "unrealized_pct": -11.518,
+     "weight_pct": 1.717,
      "entry_fees": 0.00474805,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21108,11 +21116,11 @@
      "avg_price": 11.465,
      "allocated": 1.9020126,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 10.1465,
-     "market_value": 1.6790793,
-     "unrealized_pnl": -0.222933,
-     "unrealized_pct": -11.721,
-     "weight_pct": 1.711,
+     "last_price": 10.1545,
+     "market_value": 1.6804032,
+     "unrealized_pnl": -0.221609,
+     "unrealized_pct": -11.651,
+     "weight_pct": 1.712,
      "entry_fees": 0.00474317,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21127,11 +21135,11 @@
      "avg_price": 56.654,
      "allocated": 1.9026844,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 50.028,
-     "market_value": 1.675965,
-     "unrealized_pnl": -0.226719,
-     "unrealized_pct": -11.916,
-     "weight_pct": 1.708,
+     "last_price": 49.9695,
+     "market_value": 1.6740052,
+     "unrealized_pnl": -0.228679,
+     "unrealized_pct": -12.019,
+     "weight_pct": 1.706,
      "entry_fees": 0.00474485,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21146,11 +21154,11 @@
      "avg_price": 0.07745,
      "allocated": 1.9029073,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 0.06734,
-     "market_value": 1.6503837,
-     "unrealized_pnl": -0.252524,
-     "unrealized_pct": -13.27,
-     "weight_pct": 1.682,
+     "last_price": 0.06739,
+     "market_value": 1.6516092,
+     "unrealized_pnl": -0.251298,
+     "unrealized_pct": -13.206,
+     "weight_pct": 1.683,
      "entry_fees": 0.0047454,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21184,11 +21192,11 @@
      "avg_price": 0.20551,
      "allocated": 1.9021584,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 0.17371,
-     "market_value": 1.6038146,
-     "unrealized_pnl": -0.298344,
-     "unrealized_pct": -15.684,
-     "weight_pct": 1.634,
+     "last_price": 0.173805,
+     "market_value": 1.6046917,
+     "unrealized_pnl": -0.297467,
+     "unrealized_pct": -15.638,
+     "weight_pct": 1.635,
      "entry_fees": 0.00474354,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -21203,10 +21211,10 @@
      "avg_price": 101.59,
      "allocated": 1.9044681,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 83.425,
-     "market_value": 1.5600358,
-     "unrealized_pnl": -0.344432,
-     "unrealized_pct": -18.085,
+     "last_price": 83.445,
+     "market_value": 1.5604098,
+     "unrealized_pnl": -0.344058,
+     "unrealized_pct": -18.066,
      "weight_pct": 1.59,
      "entry_fees": 0.0047493,
      "entry_reason": "rebalance",
@@ -21222,11 +21230,11 @@
      "avg_price": 1.2923,
      "allocated": 1.9046026,
      "allocated_pct_at_entry": 1.905,
-     "last_price": 1.0519,
-     "market_value": 1.546433,
-     "unrealized_pnl": -0.35817,
-     "unrealized_pct": -18.805,
-     "weight_pct": 1.576,
+     "last_price": 1.05145,
+     "market_value": 1.5457714,
+     "unrealized_pnl": -0.358831,
+     "unrealized_pct": -18.84,
+     "weight_pct": 1.575,
      "entry_fees": 0.00474963,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -23278,12 +23286,12 @@
    "learning": null,
    "significance": {
     "days": 18,
-    "sharpe": -1.316,
+    "sharpe": -1.314,
     "sharpe_ci95": [
      -5.222,
-     5.069
+     5.077
     ],
-    "p_sharpe_positive": 0.268,
+    "p_sharpe_positive": 0.269,
     "days_to_significant_sharpe": null
    }
   },
@@ -23311,7 +23319,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 101.4776045672673,
     "last_decision_date": "2026-11-11"
@@ -23882,7 +23890,8 @@
      "2026-11-12T00:22:12.819599+00:00",
      "2026-11-12T01:21:31.109218+00:00",
      "2026-11-12T01:42:26.820728+00:00",
-     "2026-11-12T02:16:15.339825+00:00"
+     "2026-11-12T02:16:15.339825+00:00",
+     "2026-11-12T02:22:32.389212+00:00"
     ],
     "equity": [
      100.0,
@@ -24418,6 +24427,7 @@
      97.169815,
      97.169815,
      97.169815,
+     97.169815,
      97.169815
     ]
    },
@@ -24426,7 +24436,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-11-10T15:41:45.047287+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.014717041",
      "avg_price": 719.57883,
      "allocated": 10.590071,
@@ -24445,7 +24455,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-10T15:41:46.061713+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.036971503",
      "avg_price": 226.93509,
      "allocated": 8.3901315,
@@ -24464,7 +24474,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-11-11T15:41:56.599149+00:00",
-     "days_held": 0.4405,
+     "days_held": 0.4449,
      "quantity": "0.027482909",
      "avg_price": 291.1,
      "allocated": 8.0002748,
@@ -24483,7 +24493,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.017331731",
      "avg_price": 375.62,
      "allocated": 6.5101448,
@@ -24502,7 +24512,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.021181293",
      "avg_price": 295.08,
      "allocated": 6.2501759,
@@ -24521,7 +24531,7 @@
      "symbol": "DE",
      "name": "Deere & Company",
      "opened_at": "2026-11-10T15:41:46.468857+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.008988498",
      "avg_price": 676.43,
      "allocated": 6.0800897,
@@ -24540,7 +24550,7 @@
      "symbol": "META",
      "name": "Meta Platforms",
      "opened_at": "2026-11-10T15:41:35.540249+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.009578915",
      "avg_price": 643.08,
      "allocated": 6.1600087,
@@ -24559,7 +24569,7 @@
      "symbol": "PLTR",
      "name": "Palantir Technologies",
      "opened_at": "2026-11-10T15:41:42.829791+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.033960468",
      "avg_price": 166.96,
      "allocated": 5.6700397,
@@ -24578,7 +24588,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.013295258",
      "avg_price": 420.46,
      "allocated": 5.5901242,
@@ -24616,7 +24626,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.017916013",
      "avg_price": 111.95,
      "allocated": 2.0056977,
@@ -24635,7 +24645,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-11-05T15:41:53.945761+00:00",
-     "days_held": 6.441,
+     "days_held": 6.445,
      "quantity": "0.002375914",
      "avg_price": 542.14136,
      "allocated": 1.2880812,
@@ -44406,7 +44416,7 @@
     "p_sharpe_positive": 0.197,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.359,
-    "excess_return_ann_pct": -14.77,
+    "excess_return_ann_pct": -14.82,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -44422,7 +44432,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T20:21:21.118540+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.8868875122072,
     "last_decision_date": "2026-11-11"
@@ -44430,20 +44440,20 @@
    "status": "synced",
    "started_at": "2026-10-25T20:21:21.118519+00:00",
    "summary": {
-    "equity": 99.33252,
+    "equity": 99.33581,
     "cash": 1.9841608,
-    "invested": 97.348359,
+    "invested": 97.351649,
     "invested_pct": 98.0,
-    "pnl": -0.66748011,
-    "pnl_pct": -0.66748,
-    "day_pnl": 0.0182739,
-    "day_pnl_pct": 0.0184,
+    "pnl": -0.66419017,
+    "pnl_pct": -0.66419,
+    "day_pnl": 0.0215639,
+    "day_pnl_pct": 0.021713,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -0.65497894,
+    "unrealized_pnl": -0.651689,
     "fees": 0.0125012,
     "slippage_cost": 0.0158806,
     "max_drawdown_pct": 4.0221,
-    "current_drawdown_pct": 1.5608,
+    "current_drawdown_pct": 1.5575,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -44972,7 +44982,8 @@
      "2026-11-12T00:22:13.228880+00:00",
      "2026-11-12T01:21:31.436878+00:00",
      "2026-11-12T01:42:27.787013+00:00",
-     "2026-11-12T02:16:15.805727+00:00"
+     "2026-11-12T02:16:15.805727+00:00",
+     "2026-11-12T02:22:32.985858+00:00"
     ],
     "equity": [
      100.0,
@@ -45487,7 +45498,8 @@
      99.341623,
      99.320022,
      99.322909,
-     99.33252
+     99.33252,
+     99.33581
     ]
    },
    "positions": [
@@ -45709,11 +45721,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5086377,
      "allocated_pct_at_entry": 3.509,
-     "last_price": 73753.325,
-     "market_value": 3.2141699,
-     "unrealized_pnl": -0.294468,
-     "unrealized_pct": -8.3927,
-     "weight_pct": 3.236,
+     "last_price": 73819.335,
+     "market_value": 3.2170466,
+     "unrealized_pnl": -0.291591,
+     "unrealized_pct": -8.3107,
+     "weight_pct": 3.239,
      "entry_fees": 0.00874972,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -45766,11 +45778,11 @@
      "avg_price": 2324.1,
      "allocated": 1.5043299,
      "allocated_pct_at_entry": 1.504,
-     "last_price": 2055.72,
-     "market_value": 1.3272962,
-     "unrealized_pnl": -0.177034,
-     "unrealized_pct": -11.768,
-     "weight_pct": 1.336,
+     "last_price": 2056.36,
+     "market_value": 1.3277094,
+     "unrealized_pnl": -0.17662,
+     "unrealized_pct": -11.741,
+     "weight_pct": 1.337,
      "entry_fees": 0.00375145,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -47241,12 +47253,12 @@
    "learning": null,
    "significance": {
     "days": 18,
-    "sharpe": -0.447,
+    "sharpe": -0.444,
     "sharpe_ci95": [
      -4.777,
-     6.669
+     6.683
     ],
-    "p_sharpe_positive": 0.418,
+    "p_sharpe_positive": 0.419,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.895,
     "excess_return_ann_pct": 16.83,
@@ -47271,7 +47283,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.341612+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-11"
@@ -47816,9 +47828,11 @@
      "2026-11-12T00:22:13.246247+00:00",
      "2026-11-12T01:21:31.446898+00:00",
      "2026-11-12T01:42:28.096558+00:00",
-     "2026-11-12T02:16:15.977550+00:00"
+     "2026-11-12T02:16:15.977550+00:00",
+     "2026-11-12T02:22:32.999086+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -50894,7 +50908,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342190+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.65260241811241,
     "last_decision_date": "2026-11-11"
@@ -51455,7 +51469,8 @@
      "2026-11-12T00:22:13.251681+00:00",
      "2026-11-12T01:21:31.453985+00:00",
      "2026-11-12T01:42:28.100507+00:00",
-     "2026-11-12T02:16:15.981971+00:00"
+     "2026-11-12T02:16:15.981971+00:00",
+     "2026-11-12T02:22:33.003482+00:00"
     ],
     "equity": [
      100.0,
@@ -51981,6 +51996,7 @@
      100.42698,
      100.42698,
      100.42698,
+     100.42698,
      100.42698
     ]
    },
@@ -51989,7 +52005,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 9.44,
+     "days_held": 9.445,
      "quantity": "0.069782489",
      "avg_price": 285.7,
      "allocated": 19.936857,
@@ -54968,7 +54984,7 @@
     "p_sharpe_positive": 0.685,
     "days_to_significant_sharpe": 846,
     "p_beats_buy_hold": 0.845,
-    "excess_return_ann_pct": 32.4,
+    "excess_return_ann_pct": 32.35,
     "days_to_significant_vs_buy_hold": 134
    }
   },
@@ -54988,7 +55004,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342744+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.54028082604681,
     "last_decision_date": "2026-11-11"
@@ -55553,7 +55569,8 @@
      "2026-11-12T00:22:13.265866+00:00",
      "2026-11-12T01:21:31.462992+00:00",
      "2026-11-12T01:42:28.110012+00:00",
-     "2026-11-12T02:16:15.994086+00:00"
+     "2026-11-12T02:16:15.994086+00:00",
+     "2026-11-12T02:22:33.014599+00:00"
     ],
     "equity": [
      100.0,
@@ -56083,6 +56100,7 @@
      95.980043,
      95.980042,
      95.980042,
+     95.980042,
      95.980042
     ]
    },
@@ -56110,7 +56128,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.026238863",
      "avg_price": 420.46,
      "allocated": 11.032392,
@@ -56186,7 +56204,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-11-05T15:42:01.795038+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.005643378",
      "avg_price": 1432.6,
      "allocated": 8.0847033,
@@ -56205,7 +56223,7 @@
      "symbol": "LMT",
      "name": "Lockheed Martin",
      "opened_at": "2026-11-10T15:41:46.724949+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.00995162",
      "avg_price": 594.28,
      "allocated": 5.9140487,
@@ -56243,7 +56261,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-11-05T15:42:00.152163+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.031429346",
      "avg_price": 172.52,
      "allocated": 5.4221908,
@@ -56281,7 +56299,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-05T15:42:15.224210+00:00",
-     "days_held": 6.44,
+     "days_held": 6.445,
      "quantity": "0.033207591",
      "avg_price": 140.21,
      "allocated": 4.6560363,
@@ -59328,7 +59346,7 @@
     "p_sharpe_positive": 0.2,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.164,
-    "excess_return_ann_pct": -39.37,
+    "excess_return_ann_pct": -39.41,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -59356,7 +59374,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343266+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.88242090937594,
     "last_decision_date": "2026-11-11"
@@ -59917,7 +59935,8 @@
      "2026-11-12T00:22:13.314198+00:00",
      "2026-11-12T01:21:31.668973+00:00",
      "2026-11-12T01:42:28.620878+00:00",
-     "2026-11-12T02:16:16.213239+00:00"
+     "2026-11-12T02:16:16.213239+00:00",
+     "2026-11-12T02:22:33.386583+00:00"
     ],
     "equity": [
      100.0,
@@ -60443,6 +60462,7 @@
      95.400909,
      95.400908,
      95.400908,
+     95.400908,
      95.400908
     ]
    },
@@ -60451,7 +60471,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-11-10T15:41:45.047287+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.024776168",
      "avg_price": 718.03161,
      "allocated": 17.790072,
@@ -60470,7 +60490,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.040307589",
      "avg_price": 375.62,
      "allocated": 15.140337,
@@ -60489,7 +60509,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-11T15:41:58.377377+00:00",
-     "days_held": 0.4405,
+     "days_held": 0.4449,
      "quantity": "0.062247678",
      "avg_price": 227.0,
      "allocated": 14.130223,
@@ -60508,7 +60528,7 @@
      "symbol": "META",
      "name": "Meta Platforms",
      "opened_at": "2026-11-10T15:41:35.540249+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.022267869",
      "avg_price": 643.08,
      "allocated": 14.320021,
@@ -60527,7 +60547,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.032830429",
      "avg_price": 295.08,
      "allocated": 9.687603,
@@ -60546,7 +60566,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.020590522",
      "avg_price": 111.95,
      "allocated": 2.3051089,
@@ -75764,7 +75784,7 @@
     "p_sharpe_positive": 0.087,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.132,
-    "excess_return_ann_pct": -49.68,
+    "excess_return_ann_pct": -49.73,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -75782,7 +75802,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343815+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 101.07451587278447,
     "last_decision_date": "2026-11-11"
@@ -75790,20 +75810,20 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.343783+00:00",
    "summary": {
-    "equity": 98.088868,
+    "equity": 98.092159,
     "cash": 1.9826511,
-    "invested": 96.106217,
+    "invested": 96.109508,
     "invested_pct": 97.98,
-    "pnl": -1.9111322,
-    "pnl_pct": -1.91113,
-    "day_pnl": 0.0182792,
-    "day_pnl_pct": 0.018639,
+    "pnl": -1.9078409,
+    "pnl_pct": -1.90784,
+    "day_pnl": 0.0215706,
+    "day_pnl_pct": 0.021995,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -1.8986265,
+    "unrealized_pnl": -1.8953352,
     "fees": 0.0125057,
     "slippage_cost": 0.0109353,
     "max_drawdown_pct": 5.7795,
-    "current_drawdown_pct": 2.9736,
+    "current_drawdown_pct": 2.9704,
     "sharpe": null,
     "sortino": null,
     "volatility_annual_pct": null,
@@ -76327,7 +76347,8 @@
      "2026-11-12T00:22:13.335046+00:00",
      "2026-11-12T01:21:31.680753+00:00",
      "2026-11-12T01:42:28.634847+00:00",
-     "2026-11-12T02:16:16.228969+00:00"
+     "2026-11-12T02:16:16.228969+00:00",
+     "2026-11-12T02:22:33.404198+00:00"
     ],
     "equity": [
      100.0,
@@ -76837,7 +76858,8 @@
      98.097975,
      98.076365,
      98.079254,
-     98.088868
+     98.088868,
+     98.092159
     ]
    },
    "positions": [
@@ -76854,7 +76876,7 @@
      "market_value": 24.821987,
      "unrealized_pnl": -0.178044,
      "unrealized_pct": -0.71218,
-     "weight_pct": 25.31,
+     "weight_pct": 25.3,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -76949,7 +76971,7 @@
      "market_value": 6.9403469,
      "unrealized_pnl": -0.0596782,
      "unrealized_pct": -0.85254,
-     "weight_pct": 7.076,
+     "weight_pct": 7.075,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -77021,11 +77043,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5102479,
      "allocated_pct_at_entry": 3.51,
-     "last_price": 73753.325,
-     "market_value": 3.215645,
-     "unrealized_pnl": -0.294603,
-     "unrealized_pct": -8.3927,
-     "weight_pct": 3.278,
+     "last_price": 73819.335,
+     "market_value": 3.218523,
+     "unrealized_pnl": -0.291725,
+     "unrealized_pct": -8.3107,
+     "weight_pct": 3.281,
      "entry_fees": 0.00875374,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -77040,11 +77062,11 @@
      "avg_price": 2324.1,
      "allocated": 1.5045395,
      "allocated_pct_at_entry": 1.505,
-     "last_price": 2055.72,
-     "market_value": 1.3274812,
-     "unrealized_pnl": -0.177058,
-     "unrealized_pct": -11.768,
-     "weight_pct": 1.353,
+     "last_price": 2056.36,
+     "market_value": 1.3278945,
+     "unrealized_pnl": -0.176645,
+     "unrealized_pct": -11.741,
+     "weight_pct": 1.354,
      "entry_fees": 0.00375197,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -78315,10 +78337,10 @@
    "learning": null,
    "significance": {
     "days": 17,
-    "sharpe": -1.305,
+    "sharpe": -1.302,
     "sharpe_ci95": [
-     -6.555,
-     6.628
+     -6.553,
+     6.643
     ],
     "p_sharpe_positive": 0.344,
     "days_to_significant_sharpe": null,
@@ -78339,7 +78361,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.251622+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-11"
@@ -78888,9 +78910,11 @@
      "2026-11-12T00:22:13.348902+00:00",
      "2026-11-12T01:21:31.688277+00:00",
      "2026-11-12T01:42:28.643456+00:00",
-     "2026-11-12T02:16:16.238751+00:00"
+     "2026-11-12T02:16:16.238751+00:00",
+     "2026-11-12T02:22:33.415445+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -80762,7 +80786,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.345340+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-11"
@@ -81307,9 +81331,11 @@
      "2026-11-12T00:22:13.354146+00:00",
      "2026-11-12T01:21:31.691393+00:00",
      "2026-11-12T01:42:28.650036+00:00",
-     "2026-11-12T02:16:16.242757+00:00"
+     "2026-11-12T02:16:16.242757+00:00",
+     "2026-11-12T02:22:33.419696+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -83173,7 +83199,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.252268+00:00",
-    "last_run": "2026-11-12T02:15:41.711801+00:00",
+    "last_run": "2026-11-12T02:20:43.105425+00:00",
     "last_status": "synced",
     "risk_peak": 100.08378034356787,
     "last_decision_date": "2026-11-11"
@@ -83725,7 +83751,8 @@
      "2026-11-12T00:22:13.359867+00:00",
      "2026-11-12T01:21:31.694877+00:00",
      "2026-11-12T01:42:28.654076+00:00",
-     "2026-11-12T02:16:16.247251+00:00"
+     "2026-11-12T02:16:16.247251+00:00",
+     "2026-11-12T02:22:33.424457+00:00"
     ],
     "equity": [
      100.0,
@@ -84242,6 +84269,7 @@
      99.306642,
      99.306642,
      99.306642,
+     99.306642,
      99.306642
     ]
    },
@@ -84288,7 +84316,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-11-04T15:42:17.245543+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.017352146",
      "avg_price": 147.54,
      "allocated": 2.5601356,
@@ -84307,7 +84335,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 9.44,
+     "days_held": 9.445,
      "quantity": "0.008435445",
      "avg_price": 285.7,
      "allocated": 2.4100066,
@@ -84383,7 +84411,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 1.441,
+     "days_held": 1.445,
      "quantity": "0.006744123",
      "avg_price": 295.08,
      "allocated": 1.9900558,
@@ -84440,7 +84468,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-02T15:42:18.772820+00:00",
-     "days_held": 9.44,
+     "days_held": 9.445,
      "quantity": "0.013683086",
      "avg_price": 149.83,
      "allocated": 2.0501368,
@@ -84497,7 +84525,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-04T15:42:19.969774+00:00",
-     "days_held": 7.44,
+     "days_held": 7.445,
      "quantity": "0.002592371",
      "avg_price": 225.38,
      "allocated": 0.58426858,
@@ -87762,27 +87790,27 @@
     "p_sharpe_positive": 0.238,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.688,
-    "excess_return_ann_pct": 15.08,
-    "days_to_significant_vs_buy_hold": 999
+    "excess_return_ann_pct": 15.03,
+    "days_to_significant_vs_buy_hold": 1005
    }
   }
  ],
  "research": {
   "status": {
-   "started_at": "2026-11-12T01:20:33.274382+00:00",
-   "duration_s": 36.7,
+   "started_at": "2026-11-12T02:20:43.149351+00:00",
+   "duration_s": 67.3,
    "llm": "local",
    "engines": [
     "local (gratis, sin IA)"
    ],
    "news_engines": {
-    "local": 69
+    "local": 60
    },
    "news": {
-    "fetched": 1881,
-    "new": 44,
-    "stored": 9270,
-    "triaged": 44,
+    "fetched": 1882,
+    "new": 35,
+    "stored": 9256,
+    "triaged": 35,
     "deep_analyses": 25,
     "untriaged_backlog": 0
    },
@@ -89166,7 +89194,7 @@
     "2026-11-04",
     "2026-12-11"
    ],
-   "generated_at": "2026-11-12T01:20:33.274382+00:00",
+   "generated_at": "2026-11-12T02:20:43.149351+00:00",
    "researched_at": null,
    "summary": null,
    "sources": {
@@ -89178,6 +89206,381 @@
   },
   "news": {
    "analyses": [
+    {
+     "id": "ee457f8fc91ddf40",
+     "title": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONnItclBSaWlsVmVMMlFDVVJkRVRmeWQ5bmt6X0RMTXIwZWFfdVh1TE54eERnZHVxay1TUGNSNTlXTmF6RWYtOWJQejh0bjJTODFtd01ULTI2dEhFRFlnVXhMaXdvcy00ZEZXT1lNREV4RDdWbnNHak00YVNrSTV5eU54TlZ2MDJqQlB1ZXkxVkRpYm84UEt3XzdJQm8wdTdKUDU3Y2QycTJJVEJOWEN1b25OWQ?oc=5",
+     "publisher": "WTVB",
+     "published": "2026-11-12T02:18:15+00:00",
+     "triage": {
+      "relevance": 0.54,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "geopolitics",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "ee457f8fc91ddf40",
+      "headline": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+      "what_happened": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
+      "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "9965072aef6032ec",
+     "title": "Dow Jones Futures Rise, Techs Fall As Nvidia May Oust CEO Huang After CoreWave Leads Rally",
+     "url": "https://finance.yahoo.com/m/672e6ef4-2ba3-319b-b948-a356a7f1fcbe/dow-jones-futures-rise%2C-techs.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T02:15:03+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "NVDA",
+       "AMD",
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [
+       "NVDA",
+       "AMD"
+      ],
+      "summary": "Dow Jones Futures Rise, Techs Fall As Nvidia May Oust CEO Huang After CoreWave Leads Rally. Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will that spoil Wednesday's rally?",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "9965072aef6032ec",
+      "headline": "Dow Jones Futures Rise, Techs Fall As Nvidia May Oust CEO Huang After CoreWave Leads Rally",
+      "what_happened": "Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will that spoil Wednesday's rally?",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "AMD",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "561a51c2eeb8",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "6b67a5c366c37168",
+     "title": "Japan Nears a 37-Year Rate Hike First: Will Bitcoin and Stocks Suffer?",
+     "url": "https://beincrypto.com/japan-rate-hike-37-year-first-bitcoin-us-stocks-risk/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:41:06+00:00",
+     "triage": {
+      "relevance": 0.715,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "BTC-USD",
+       "BCH-USD",
+       "ETH-USD",
+       "SOL-USD",
+       "XRP-USD",
+       "ADA-USD"
+      ],
+      "named": [
+       "BTC-USD",
+       "BCH-USD"
+      ],
+      "summary": "Japan Nears a 37-Year Rate Hike First: Will Bitcoin and Stocks Suffer?. Japan could hike rates three times in 2026 for the first time in 37 years. What does it mean for Bitcoin and US stocks?",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "6b67a5c366c37168",
+      "headline": "Japan Nears a 37-Year Rate Hike First: Will Bitcoin and Stocks Suffer?",
+      "what_happened": "Japan could hike rates three times in 2026 for the first time in 37 years. What does it mean for Bitcoin and US stocks?",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "BTC-USD",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "BCH-USD",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Banco central: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "ETH-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "SOL-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XRP-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "ADA-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "a30e49c88ffd",
+       "b84ede22fb83"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "04f31c463e9bdce1",
+     "title": "These 5 Dividend Aristocrats\u00ae Have Raised Payouts for Decades",
+     "url": "https://www.fool.com/investing/2026/11/11/these-5-dividend-aristocrats-have-raised-payouts-f/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:35:00+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "JNJ",
+       "KO",
+       "NVDA",
+       "PEP",
+       "PG",
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [
+       "JNJ",
+       "KO",
+       "NVDA",
+       "PEP",
+       "PG"
+      ],
+      "summary": "These 5 Dividend Aristocrats\u00ae Have Raised Payouts for Decades. Investors worried about market turmoil may want to look at reliable dividend stocks, and these five stand out.",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "04f31c463e9bdce1",
+      "headline": "These 5 Dividend Aristocrats\u00ae Have Raised Payouts for Decades",
+      "what_happened": "Investors worried about market turmoil may want to look at reliable dividend stocks, and these five stand out.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "JNJ",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "KO",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "NVDA",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "PEP",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "PG",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "561a51c2eeb8",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "d43a89ed9311c43f",
+     "title": "Wall St futures fall as Nvidia slides on report of possible CEO ouster",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-fall-nvidia-011540333.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:15:40+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": -0.931,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "NVDA"
+      ],
+      "named": [
+       "NVDA"
+      ],
+      "summary": "Wall St futures fall as Nvidia slides on report of possible CEO ouster. Investing.com-- U.S. stock futures fell on Wednesday evening as Nvidia shares tumbled in extended trading following a report that the chipmaker's board was preparing to remove Chief Executive Jensen Huang, raising concer",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "d43a89ed9311c43f",
+      "headline": "Wall St futures fall as Nvidia slides on report of possible CEO ouster",
+      "what_happened": "Investing.com-- U.S. stock futures fell on Wednesday evening as Nvidia shares tumbled in extended trading following a report that the chipmaker's board was preparing to remove Chief Executive Jensen Huang, raising concerns about stability at the company at the centre of the AI boom.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.93)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.6,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "561a51c2eeb8"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
     {
      "id": "aa849cc0d2067b67",
      "title": "WTI declines as US, Iran avoids further escalation, rising OPEC+ output",
@@ -89241,6 +89644,170 @@
      }
     },
     {
+     "id": "d134ec596eb3825e",
+     "title": "Applied Digital (APLD) Could Be 71% Undervalued After CoreWeave Lifted AI Sentiment",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/applied-digital-apld-could-71-011156493.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:11:56+00:00",
+     "triage": {
+      "relevance": 0.725,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "META"
+      ],
+      "named": [
+       "META"
+      ],
+      "summary": "Applied Digital (APLD) Could Be 71% Undervalued After CoreWeave Lifted AI Sentiment. Applied Digital (APLD) jumped after CoreWeave reported strong AI hardware demand, raised its revenue outlook and showed pricing power, which lifted sentiment toward data center and AI infrastructure peers. Applied Digita",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "d134ec596eb3825e",
+      "headline": "Applied Digital (APLD) Could Be 71% Undervalued After CoreWeave Lifted AI Sentiment",
+      "what_happened": "Applied Digital (APLD) jumped after CoreWeave reported strong AI hardware demand, raised its revenue outlook and showed pricing power, which lifted sentiment toward data center and AI infrastructure peers. Applied Digital\u2019s sharp 1-day share price return of 7.4% sits against a tougher backdrop, with the 30-day move down 23% and the year-to-date share price return down 36%, even though the 3-year total shareholder return is very large at over 3x. Recent headlines, from financing plans for the...",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "META",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "ef6a76f65c2d8167",
+     "title": "Bank Of America (BAC) Led Debt Financing For A Major Wealth Platform Deal",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/bank-america-bac-led-debt-011046940.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:10:46+00:00",
+     "triage": {
+      "relevance": 0.51,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "XLK",
+       "VNQ",
+       "BAC"
+      ],
+      "named": [
+       "XLK",
+       "VNQ",
+       "BAC"
+      ],
+      "summary": "Bank Of America (BAC) Led Debt Financing For A Major Wealth Platform Deal. Bank of America (NYSE:BAC) acted as a lead arranger for private debt financing backing Vanguard Group's acquisition of Altruist. The financing supports Vanguard's purchase of digital wealth platform Altruist, a fintech p",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "ef6a76f65c2d8167",
+      "headline": "Bank Of America (BAC) Led Debt Financing For A Major Wealth Platform Deal",
+      "what_happened": "Bank of America (NYSE:BAC) acted as a lead arranger for private debt financing backing Vanguard Group's acquisition of Altruist. The financing supports Vanguard's purchase of digital wealth platform Altruist, a fintech provider serving financial advisers and investors. The deal underscores large banks' continued role in funding technology driven wealth management platforms that aim to modernize client service. Bank of America's role in financing Vanguard's acquisition of Altruist deserves to...",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "XLK",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "VNQ",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "BAC",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
+     "id": "6f4bec6b118fec7e",
+     "title": "How Investors May Respond To Shopify (SHOP) Mixed Earnings And AI Push",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-shopify-shop-011010918.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:10:10+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.583,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "META",
+       "LOW"
+      ],
+      "named": [
+       "META",
+       "LOW"
+      ],
+      "summary": "How Investors May Respond To Shopify (SHOP) Mixed Earnings And AI Push. Shopify reported third quarter 2026 revenue of US$3.74b and net income of US$462m, issued guidance for low 30% revenue growth in the fourth quarter, and filed an omnibus shelf registration covering equity, debt, warrants",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "6f4bec6b118fec7e",
+      "headline": "How Investors May Respond To Shopify (SHOP) Mixed Earnings And AI Push",
+      "what_happened": "Shopify reported third quarter 2026 revenue of US$3.74b and net income of US$462m, issued guidance for low 30% revenue growth in the fourth quarter, and filed an omnibus shelf registration covering equity, debt, warrants and units. The quarter highlighted Shopify\u2019s heavier tilt toward merchant solutions and AI driven commerce tools, including a partnership with Meta\u2019s Muse agent that ties Shop Pay more directly to transaction volume on major social platforms. We will look at how Shopify's...",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "META",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       },
+       {
+        "symbol": "LOW",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.58)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "b13d56102984"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
      "id": "2ff8b90a0b92a3bb",
      "title": "MARA Holdings Inc (MARA) (Q3 2026) Earnings Call Highlights: $632 Million Net Income, $1. ...",
      "url": "https://finance.yahoo.com/markets/crypto/articles/mara-holdings-inc-mara-q3-010227107.html?.tsrc=rss",
@@ -89283,6 +89850,67 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-12T01:20:33.274382+00:00"
+     }
+    },
+    {
+     "id": "51ed3c6d69126040",
+     "title": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBCRmY4V0dkXy1pQWU0OHRpbjlHZ0J4WDJpaWhIcjk2VEZ4cl9LSXVDNmFmdEhMRFdOOGtDMFRObE0wUDlRcUFIYlM4a3NIcC1aeS13aHp0QkZfWnY5d0tUNWw4RzJ0YTRReHZvZFRMYmx4UQ?oc=5",
+     "publisher": "\uc544\uc2dc\uc544\uacbd\uc81c",
+     "published": "2026-11-12T00:52:16+00:00",
+     "triage": {
+      "relevance": 0.685,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "TLT",
+       "XLF",
+       "QQQ"
+      ],
+      "named": [],
+      "summary": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "51ed3c6d69126040",
+      "headline": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
+      "what_happened": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "TLT",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XLF",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "QQQ",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (resultados); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "8f3e00b6ebcf"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
      }
     },
     {
@@ -89421,6 +90049,97 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-12T01:20:33.274382+00:00"
+     }
+    },
+    {
+     "id": "d5525da9a559616b",
+     "title": "Nvidia Stock Sinks as Jensen Huang Ouster Report Sends Investors Toward AMD, Broadcom",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-stock-sinks-jensen-huang-002504447.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T00:25:04+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": -0.583,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "NVDA",
+       "AVGO",
+       "AMD",
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [
+       "NVDA",
+       "AVGO",
+       "AMD"
+      ],
+      "summary": "Nvidia Stock Sinks as Jensen Huang Ouster Report Sends Investors Toward AMD, Broadcom. Broadcom Inc. (NASDAQ:AVGO) and Advanced Micro Devices Inc. (NASDAQ:AMD) shares each rose more than 3% in extended trading Wednesday as fresh turmoil surrounding Nvidia Corp. (NASDAQ:NVDA) CEO Jensen Huang sent investors",
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     },
+     "analysis": {
+      "id": "d5525da9a559616b",
+      "headline": "Nvidia Stock Sinks as Jensen Huang Ouster Report Sends Investors Toward AMD, Broadcom",
+      "what_happened": "Broadcom Inc. (NASDAQ:AVGO) and Advanced Micro Devices Inc. (NASDAQ:AMD) shares each rose more than 3% in extended trading Wednesday as fresh turmoil surrounding Nvidia Corp. (NASDAQ:NVDA) CEO Jensen Huang sent investors toward rival chipmakers. Nvidia moved sharply in the other direction. Its shares fell 8.08% after hours to $159.68, according to Benzinga Pro. \u2022 Broadcom stock is moving in positive territory. Why is AVGO stock advancing? Board Reportedly Preparing to Act Nvidia\u2019s board is prepa",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "AVGO",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "AMD",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.58)."
+       },
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.49,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "561a51c2eeb8",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
      }
     },
     {
@@ -89846,57 +90565,6 @@
        "a30e49c88ffd",
        "561a51c2eeb8",
        "b84ede22fb83"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-12T00:20:50.219627+00:00"
-     }
-    },
-    {
-     "id": "00297f7e3ecd9e6c",
-     "title": "Do low jobless claims tell an accurate story anymore?",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2pyWjdMdTRTMnBydTBFTkxIMjFEenRQYzhzVndRdW5qMnUzdEVZS3I1Y0F5dUtYMHBzdzN0R251TnVkQzd0S21CR0U0VVJaWW9GenpDVnVCaU13cTkwdnNZSW9ROHJiMkRFMDMzS2JpSzdFMVJyUmg1X0RHNEdBb2NVZ1hNcGhLOF9oSHZReDVFbHRZWHg3NXI3dkM2dGVGeXZaQnNBbTZTdUNC?oc=5",
-     "publisher": "Marketplace.org",
-     "published": "2026-11-11T23:26:22+00:00",
-     "triage": {
-      "relevance": 0.64,
-      "sentiment": 0.0,
-      "impact": "medium",
-      "category": "macro",
-      "symbols": [
-       "LOW"
-      ],
-      "named": [
-       "LOW"
-      ],
-      "summary": "Do low jobless claims tell an accurate story anymore?",
-      "model": "local",
-      "at": "2026-11-12T00:20:50.219627+00:00"
-     },
-     "analysis": {
-      "id": "00297f7e3ecd9e6c",
-      "headline": "Do low jobless claims tell an accurate story anymore?",
-      "what_happened": "Do low jobless claims tell an accurate story anymore?",
-      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "LOW",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Dato macro: tono neutro en el titular (+0.00)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.2,
-      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
-      "related_events": [
-       "51707825bc10",
-       "63599eab1409",
-       "c72a5c9af7cd",
-       "9a35ff9feb1f",
-       "b13d56102984"
       ],
       "read_full_article": false,
       "model": "local",
@@ -91650,6 +92318,77 @@
      }
     },
     {
+     "id": "bfd0992d0c1456ed",
+     "title": "Falling oil prices are no longer enough to bring down borrowing costs in the world\u2019s most important bond market",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMUZSb1dkVEFCS2ZrMHJPWnFuNTQ0dkxQUjVTYW1OdUpaaW1HT3BqajFKalhlTFZVNDFDcnQzWTJTSXdQZTlkVVYwX2VkQ0NocTM3Vld2Mms2WW5HR0dEVnpkMHA4UVlWdVRYWWc2U0ZPMnAtRFg0QUhWT3JJclo3WG5BbUF6WUlBOGRmMTZJWkl2ZlFZSnhNb014NWtmSDJoM3BGYVhhMjdRVWR2M2VMMm5IcVBlaGY0Z0tiQ2NmaUFMLW11YTAyd25MNUZmcXMzOFNFaU1sdVdHQjhKekdwdUhRb2ZHbVVJ?oc=5",
+     "publisher": "MarketWatch",
+     "published": "2026-11-11T21:42:00+00:00",
+     "triage": {
+      "relevance": 0.585,
+      "sentiment": 0.0,
+      "impact": "low",
+      "category": "commodities",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX",
+       "TLT"
+      ],
+      "named": [],
+      "summary": "Falling oil prices are no longer enough to bring down borrowing costs in the world\u2019s most important bond market",
+      "model": "local",
+      "at": "2026-11-11T22:14:27.270346+00:00"
+     },
+     "analysis": {
+      "id": "bfd0992d0c1456ed",
+      "headline": "Falling oil prices are no longer enough to bring down borrowing costs in the world\u2019s most important bond market",
+      "what_happened": "Falling oil prices are no longer enough to bring down borrowing costs in the world\u2019s most important bond market",
+      "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "TLT",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "5ecabc334671",
+       "8f3e00b6ebcf"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
      "id": "19351dc53712a7b7",
      "title": "Solana Company Swings to $105.2 Million Q3 Profit, Adds 125,000 SOL",
      "url": "https://www.cryptoprowl.com/releases/solana-company-swings-to-1052-million-q3-profit-adds-125000-sol-7860?.tsrc=rss",
@@ -92118,6 +92857,85 @@
      }
     },
     {
+     "id": "6c5adba34af9d41b",
+     "title": "Visa (V) Ties Monad Stablecoin Settlement Move To New Fraud API Rollout",
+     "url": "https://finance.yahoo.com/markets/crypto/articles/visa-v-ties-monad-stablecoin-211600627.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-11T21:16:00+00:00",
+     "triage": {
+      "relevance": 0.585,
+      "sentiment": 0.0,
+      "impact": "low",
+      "category": "crypto",
+      "symbols": [
+       "V",
+       "BTC-USD",
+       "ETH-USD",
+       "SOL-USD",
+       "XRP-USD"
+      ],
+      "named": [
+       "V"
+      ],
+      "summary": "Visa (V) Ties Monad Stablecoin Settlement Move To New Fraud API Rollout. Visa (NYSE: V) has added the Monad blockchain to its stablecoin settlement program as a new multi-chain option. Global Payments is integrating Visa's IDX API into its Adaptive Authentication service to support identity a",
+      "model": "local",
+      "at": "2026-11-11T22:14:27.270346+00:00"
+     },
+     "analysis": {
+      "id": "6c5adba34af9d41b",
+      "headline": "Visa (V) Ties Monad Stablecoin Settlement Move To New Fraud API Rollout",
+      "what_happened": "Visa (NYSE: V) has added the Monad blockchain to its stablecoin settlement program as a new multi-chain option. Global Payments is integrating Visa's IDX API into its Adaptive Authentication service to support identity and fraud checks for clients. Both moves signal Visa's push to expand blockchain-based settlement tools and strengthen digital transaction security for payment partners. Visa's Monad stablecoin expansion and IDX integration with Global Payments matter, but they are only part...",
+      "why_it_matters": "Las noticias de flujos, regulaci\u00f3n o adopci\u00f3n mueven el sentimiento de todo el mercado cripto.",
+      "affected": [
+       {
+        "symbol": "V",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Cripto: tono neutro en el titular (+0.00)."
+       },
+       {
+        "symbol": "BTC-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "ETH-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "SOL-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XRP-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "days",
+        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "Los flujos de los ETF y la reacci\u00f3n de BTC/ETH.",
+      "related_events": [
+       "dc8eb826e18a"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T02:20:43.149351+00:00"
+     }
+    },
+    {
      "id": "e91a78b10fe8f43b",
      "title": "Cathie Wood issues bullish Bitcoin prediction against gold",
      "url": "https://www.thestreet.com/crypto/markets/cathie-wood-issues-bullish-bitcoin-prediction-against-gold?.tsrc=rss",
@@ -92201,6 +93019,57 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-11T21:26:43.089582+00:00"
+     }
+    },
+    {
+     "id": "00297f7e3ecd9e6c",
+     "title": "Do low jobless claims tell an accurate story anymore?",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2pyWjdMdTRTMnBydTBFTkxIMjFEenRQYzhzVndRdW5qMnUzdEVZS3I1Y0F5dUtYMHBzdzN0R251TnVkQzd0S21CR0U0VVJaWW9GenpDVnVCaU13cTkwdnNZSW9ROHJiMkRFMDMzS2JpSzdFMVJyUmg1X0RHNEdBb2NVZ1hNcGhLOF9oSHZReDVFbHRZWHg3NXI3dkM2dGVGeXZaQnNBbTZTdUNC?oc=5",
+     "publisher": "Marketplace.org",
+     "published": "2026-11-11T21:15:00+00:00",
+     "triage": {
+      "relevance": 0.64,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "macro",
+      "symbols": [
+       "LOW"
+      ],
+      "named": [
+       "LOW"
+      ],
+      "summary": "Do low jobless claims tell an accurate story anymore?",
+      "model": "local",
+      "at": "2026-11-12T00:20:50.219627+00:00"
+     },
+     "analysis": {
+      "id": "00297f7e3ecd9e6c",
+      "headline": "Do low jobless claims tell an accurate story anymore?",
+      "what_happened": "Do low jobless claims tell an accurate story anymore?",
+      "why_it_matters": "Los datos macro cambian las expectativas sobre crecimiento, inflaci\u00f3n y tipos de la Fed, y con ellas el apetito por el riesgo.",
+      "affected": [
+       {
+        "symbol": "LOW",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Dato macro: tono neutro en el titular (+0.00)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "La revisi\u00f3n del dato y c\u00f3mo cambian las expectativas de tipos.",
+      "related_events": [
+       "51707825bc10",
+       "63599eab1409",
+       "c72a5c9af7cd",
+       "9a35ff9feb1f",
+       "b13d56102984"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-12T00:20:50.219627+00:00"
      }
     },
     {
@@ -93082,659 +93951,63 @@
       "model": "local",
       "at": "2026-11-11T22:21:55.861584+00:00"
      }
-    },
-    {
-     "id": "b90bd205b2cd71a3",
-     "title": "Marvell Acquires Lumentum in Blockbuster $80 Billion Deal",
-     "url": "https://247wallst.com/videos/marvell-acquires-lumentum-in-blockbuster-80-billion-deal/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:19:34+00:00",
-     "triage": {
-      "relevance": 0.55,
-      "sentiment": 0.87,
-      "impact": "medium",
-      "category": "corporate",
-      "symbols": [
-       "GOOGL",
-       "MU"
-      ],
-      "named": [
-       "GOOGL",
-       "MU"
-      ],
-      "summary": "Marvell Acquires Lumentum in Blockbuster $80 Billion Deal. There has been no shortage of news these last few weeks coming out of the memory and optics sectors in regards to AI investing. Eric Bleeker and Austin Smith are here to break down just a few of them, including Marvell's",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "b90bd205b2cd71a3",
-      "headline": "Marvell Acquires Lumentum in Blockbuster $80 Billion Deal",
-      "what_happened": "There has been no shortage of news these last few weeks coming out of the memory and optics sectors in regards to AI investing. Eric Bleeker and Austin Smith are here to break down just a few of them, including Marvell's purchase of Lumentum in a huge $80 billion deal. Marvell has enjoyed a nice surge since the acquisition - one of the largest in tech history - and the company has a history of needing to reshape its brand and business which could be helpful. The two also shared some updates in regards to companies including Micron, Semtech and Alphabet, as well as what investors can expect fro",
-      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
-      "affected": [
-       {
-        "symbol": "GOOGL",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
-       },
-       {
-        "symbol": "MU",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.87)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "521600c239909e43",
-     "title": "Costco\u2019s Regular Dividend Looks Tiny. Its Special Dividends Tell a Different Story",
-     "url": "https://247wallst.com/investing/2026/11/11/costcos-regular-dividend-looks-tiny-its-special-dividends-tell-a-different-story/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:17:01+00:00",
-     "triage": {
-      "relevance": 0.51,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "corporate",
-      "symbols": [
-       "COST"
-      ],
-      "named": [
-       "COST"
-      ],
-      "summary": "Costco\u2019s Regular Dividend Looks Tiny. Its Special Dividends Tell a Different Story. Costco's quarterly check looks forgettable, yet shareholders have watched giant one-time payouts land without warning. Cash is piling up, store spending is climbing, and the stock carries a price that leaves little room ",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "521600c239909e43",
-      "headline": "Costco\u2019s Regular Dividend Looks Tiny. Its Special Dividends Tell a Different Story",
-      "what_happened": "Costco's quarterly check looks forgettable, yet shareholders have watched giant one-time payouts land without warning. Cash is piling up, store spending is climbing, and the stock carries a price that leaves little room for error.",
-      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
-      "affected": [
-       {
-        "symbol": "COST",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T22:21:55.861584+00:00"
-     }
-    },
-    {
-     "id": "5a6ff88537000741",
-     "title": "Johnson & Johnson Sees a Path to Double-Digit Growth by 2030. Is the Dividend King a Buy?",
-     "url": "https://www.fool.com/investing/2026/11/11/johnson-johnson-sees-a-path-to-double-digit-growth/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:17:00+00:00",
-     "triage": {
-      "relevance": 0.51,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "corporate",
-      "symbols": [
-       "JNJ"
-      ],
-      "named": [
-       "JNJ"
-      ],
-      "summary": "Johnson & Johnson Sees a Path to Double-Digit Growth by 2030. Is the Dividend King a Buy?. The business has undergone major changes in recent years, and these might pay off over the medium term.",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "5a6ff88537000741",
-      "headline": "Johnson & Johnson Sees a Path to Double-Digit Growth by 2030. Is the Dividend King a Buy?",
-      "what_happened": "The business has undergone major changes in recent years, and these might pay off over the medium term.",
-      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
-      "affected": [
-       {
-        "symbol": "JNJ",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono positivo en el titular (+0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T22:21:55.861584+00:00"
-     }
-    },
-    {
-     "id": "7c8202e894d68a5f",
-     "title": "Stock Market Today: Techs Lead AI-Sparked Rally As These Companies Top Entries (Live Coverage)",
-     "url": "https://finance.yahoo.com/m/2199baae-3d36-344b-b4d8-76ff24b7f5e9/stock-market-today%3A-techs.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:15:54+00:00",
-     "triage": {
-      "relevance": 0.685,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "NVDA"
-      ],
-      "named": [
-       "NVDA"
-      ],
-      "summary": "Stock Market Today: Techs Lead AI-Sparked Rally As These Companies Top Entries (Live Coverage). The Nasdaq composite led the stock market with a nearly 3% romp as CoreWeave's bullish earnings report revived the artificial intelligence trade.",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "7c8202e894d68a5f",
-      "headline": "Stock Market Today: Techs Lead AI-Sparked Rally As These Companies Top Entries (Live Coverage)",
-      "what_happened": "The Nasdaq composite led the stock market with a nearly 3% romp as CoreWeave's bullish earnings report revived the artificial intelligence trade.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "NVDA",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "561a51c2eeb8"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "372d276b77dcec81",
-     "title": "Crude Oil Prices Finish Higher as Progress Stalls in US-Iran Peace Talks",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNFNRd3hRQjZ6ODZDYTRyZnlUUVEyYW5QU201ZldhT2IycVEwX19Cd3JjeXJHR1pYSjRZOFlqeWZsaENyU08xM0NyMDBIZUFEQnpGMHN0dm1nR3RrejRORnRPWExqNWRta0Z2bVJYY1ZVTjZxZzU1alJCUWhHcjkzSXdqc3Y0c2xtVGJhQkdsVWlkbE9GMFNmaFpjaU5GVXF5SlhNMi1mQXZxYmF2clZUZkROMDZTQ0U?oc=5",
-     "publisher": "Barchart.com",
-     "published": "2026-11-11T20:13:19+00:00",
-     "triage": {
-      "relevance": 0.54,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "geopolitics",
-      "symbols": [
-       "XLE",
-       "XOM",
-       "CVX"
-      ],
-      "named": [],
-      "summary": "Crude Oil Prices Finish Higher as Progress Stalls in US-Iran Peace Talks",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "372d276b77dcec81",
-      "headline": "Crude Oil Prices Finish Higher as Progress Stalls in US-Iran Peace Talks",
-      "what_happened": "Crude Oil Prices Finish Higher as Progress Stalls in US-Iran Peace Talks",
-      "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XOM",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "a682a6166ebe",
-       "5ecabc334671"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T22:14:27.270346+00:00"
-     }
-    },
-    {
-     "id": "33c041b1b2a44739",
-     "title": "Lowe's (LOW) Expected to Beat Earnings Estimates: Can the Stock Move Higher?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/lowes-low-expected-beat-earnings-200900061.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:09:00+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.762,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "LOW"
-      ],
-      "named": [
-       "LOW"
-      ],
-      "summary": "Lowe's (LOW) Expected to Beat Earnings Estimates: Can the Stock Move Higher?. Lowe's (LOW) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "33c041b1b2a44739",
-      "headline": "Lowe's (LOW) Expected to Beat Earnings Estimates: Can the Stock Move Higher?",
-      "what_happened": "Lowe's (LOW) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "LOW",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.76)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.58,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "b13d56102984"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "efe3f04a1b08ebe0",
-     "title": "Should Value Investors Buy Adobe (ADBE) Stock?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-adobe-adbe-200801175.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:08:01+00:00",
-     "triage": {
-      "relevance": 0.685,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "ADBE"
-      ],
-      "named": [
-       "ADBE"
-      ],
-      "summary": "Should Value Investors Buy Adobe (ADBE) Stock?. Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and ",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "efe3f04a1b08ebe0",
-      "headline": "Should Value Investors Buy Adobe (ADBE) Stock?",
-      "what_happened": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "ADBE",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "6236271afaa6859e",
-     "title": "Anthropic Says Its Revenue Run Rate Jumped to an $81 Billion Run Rate",
-     "url": "https://247wallst.com/investing/2026/11/11/anthropic-says-its-revenue-run-rate-jumped-to-an-81-billion-run-rate/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:03:43+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "AMZN",
-       "GOOGL"
-      ],
-      "named": [
-       "AMZN",
-       "GOOGL"
-      ],
-      "summary": "Anthropic Says Its Revenue Run Rate Jumped to an $81 Billion Run Rate. Anthropic's latest filing shows a startling one-month surge, but buried in the fine print is a warning that growth may slow sharply. Amazon and Alphabet both have billions riding on it, and only one looks well positioned",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "6236271afaa6859e",
-      "headline": "Anthropic Says Its Revenue Run Rate Jumped to an $81 Billion Run Rate",
-      "what_happened": "Anthropic's latest filing shows a startling one-month surge, but buried in the fine print is a warning that growth may slow sharply. Amazon and Alphabet both have billions riding on it, and only one looks well positioned.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "AMZN",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.32)."
-       },
-       {
-        "symbol": "GOOGL",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.32)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "5f9fb64130a036e4",
-     "title": "Coinbase Is Still Down 23% in the Past Month: Did Today Mark the Bottom for COIN Stock?",
-     "url": "https://247wallst.com/investing/2026/11/11/coinbase-is-still-down-23-in-the-past-month-did-today-mark-the-bottom-for-coin-stock/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:02:11+00:00",
-     "triage": {
-      "relevance": 0.515,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "analyst_rating",
-      "symbols": [
-       "GS",
-       "NOW",
-       "MS",
-       "GLD",
-       "SLV"
-      ],
-      "named": [
-       "GS",
-       "NOW",
-       "MS"
-      ],
-      "summary": "Coinbase Is Still Down 23% in the Past Month: Did Today Mark the Bottom for COIN Stock?. A weak quarter, a record Binance hack, and a Morgan Stanley downgrade have battered Coinbase shares. Yet Goldman sees a rival's chaos as an opening, and bulls and bears now disagree sharply on what comes next.",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "5f9fb64130a036e4",
-      "headline": "Coinbase Is Still Down 23% in the Past Month: Did Today Mark the Bottom for COIN Stock?",
-      "what_happened": "A weak quarter, a record Binance hack, and a Morgan Stanley downgrade have battered Coinbase shares. Yet Goldman sees a rival's chaos as an opening, and bulls and bears now disagree sharply on what comes next.",
-      "why_it_matters": "Los cambios de recomendaci\u00f3n mueven flujos a corto plazo; su efecto suele diluirse en d\u00edas.",
-      "affected": [
-       {
-        "symbol": "GS",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Recomendaci\u00f3n de analistas: tono negativo en el titular (-0.58)."
-       },
-       {
-        "symbol": "NOW",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Recomendaci\u00f3n de analistas: tono negativo en el titular (-0.58)."
-       },
-       {
-        "symbol": "MS",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Recomendaci\u00f3n de analistas: tono negativo en el titular (-0.58)."
-       },
-       {
-        "symbol": "GLD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (recomendaci\u00f3n de analistas); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "SLV",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (recomendaci\u00f3n de analistas); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T22:21:55.861584+00:00"
-     }
-    },
-    {
-     "id": "69668481690b23b9",
-     "title": "Snap Is Still Down 34% in 2026: Did Today Mark the Bottom for SNAP Stock?",
-     "url": "https://247wallst.com/investing/2026/11/11/snap-is-still-down-34-in-2026-did-today-mark-the-bottom-for-snap-stock/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T20:02:09+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "META"
-      ],
-      "named": [
-       "META"
-      ],
-      "summary": "Snap Is Still Down 34% in 2026: Did Today Mark the Bottom for SNAP Stock?. Snap finally turned a profit, yet its shares keep sinking while rivals hold up better. Between slow ad growth, swelling share counts, and a wall of teen-safety lawsuits, what would it actually take for investors to trust",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "69668481690b23b9",
-      "headline": "Snap Is Still Down 34% in 2026: Did Today Mark the Bottom for SNAP Stock?",
-      "what_happened": "Snap finally turned a profit, yet its shares keep sinking while rivals hold up better. Between slow ad growth, swelling share counts, and a wall of teen-safety lawsuits, what would it actually take for investors to trust this rebound?",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "META",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "59c43c41a6ec3e6b",
-     "title": "Exxon vs. Chevron: 45 and 39 Straight Years of Raises. Which Oil Dividend Wins the Next Decade?",
-     "url": "https://www.tikr.com/blog/exxon-vs-chevron-45-and-39-straight-years-of-raises-which-oil-dividend-wins-the-next-decade?ref=yahoofinancedividend&tlnk=yf-261111-j7j52h54&.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T19:50:52+00:00",
-     "triage": {
-      "relevance": 0.585,
-      "sentiment": 0.931,
-      "impact": "medium",
-      "category": "commodities",
-      "symbols": [
-       "XOM",
-       "CVX",
-       "XLE"
-      ],
-      "named": [
-       "XOM",
-       "CVX"
-      ],
-      "summary": "Exxon vs. Chevron: 45 and 39 Straight Years of Raises. Which Oil Dividend Wins the Next Decade?. Key TakeawaysExxonMobil raised its quarterly dividend 4% to $1. 07 on Oct.",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "59c43c41a6ec3e6b",
-      "headline": "Exxon vs. Chevron: 45 and 39 Straight Years of Raises. Which Oil Dividend Wins the Next Decade?",
-      "what_happened": "Key TakeawaysExxonMobil raised its quarterly dividend 4% to $1. 07 on Oct.",
-      "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
-      "affected": [
-       {
-        "symbol": "XOM",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Materias primas: tono positivo en el titular (+0.93)."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Materias primas: tono positivo en el titular (+0.93)."
-       },
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.6,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "a682a6166ebe",
-       "5ecabc334671"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     }
-    },
-    {
-     "id": "25c629131a350361",
-     "title": "Heating costs will surge this winter due to Iran war \u2014 with heating oil prices spiking as much as 70%",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMTVLOENoUV9XeG9heHRpbmM1ZXBkOVJXUjlvZVZhWFhTVEhlYXFQR0puWGxmT3NUNUw2VDRSZXdOVFVwUkNZUEM5NHRoMG9OeHRnZ2hqb2ZpOHRWazhYSVkzWkpWOG45MXA5VlFLYlV1ODBYXzM3UGpIM2Z1QVVaU1lfZ3ZCYzV1YXZsNGd0RnZFeUxzcnRMNl9Hc3ZLV2VzT1RZ?oc=5",
-     "publisher": "New York Post",
-     "published": "2026-11-11T19:50:00+00:00",
-     "triage": {
-      "relevance": 0.54,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "geopolitics",
-      "symbols": [
-       "XLE",
-       "XOM",
-       "CVX"
-      ],
-      "named": [],
-      "summary": "Heating costs will surge this winter due to Iran war \u2014 with heating oil prices spiking as much as 70%",
-      "model": "local",
-      "at": "2026-11-11T21:26:43.089582+00:00"
-     },
-     "analysis": {
-      "id": "25c629131a350361",
-      "headline": "Heating costs will surge this winter due to Iran war \u2014 with heating oil prices spiking as much as 70%",
-      "what_happened": "Heating costs will surge this winter due to Iran war \u2014 with heating oil prices spiking as much as 70%",
-      "why_it_matters": "Los riesgos geopol\u00edticos y comerciales afectan a cadenas de suministro, materias primas y apetito por el riesgo.",
-      "affected": [
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XOM",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (geopol\u00edtica); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "a682a6166ebe",
-       "5ecabc334671"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-11T22:14:27.270346+00:00"
-     }
     }
    ],
    "feed": [
+    {
+     "id": "6b67a5c366c37168",
+     "title": "Japan Nears a 37-Year Rate Hike First: Will Bitcoin and Stocks Suffer?",
+     "url": "https://beincrypto.com/japan-rate-hike-37-year-first-bitcoin-us-stocks-risk/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:41:06+00:00",
+     "symbols": [
+      "BTC-USD",
+      "BCH-USD",
+      "ETH-USD",
+      "SOL-USD",
+      "XRP-USD",
+      "ADA-USD"
+     ],
+     "relevance": 0.715,
+     "sentiment": -0.583,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Japan Nears a 37-Year Rate Hike First: Will Bitcoin and Stocks Suffer?. Japan could hike rates three times in 2026 for the first time in 37 years. What does it mean for Bitcoin and US stocks?",
+     "analysed": true
+    },
+    {
+     "id": "d134ec596eb3825e",
+     "title": "Applied Digital (APLD) Could Be 71% Undervalued After CoreWeave Lifted AI Sentiment",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/applied-digital-apld-could-71-011156493.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:11:56+00:00",
+     "symbols": [
+      "META"
+     ],
+     "relevance": 0.725,
+     "sentiment": 0.762,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "Applied Digital (APLD) Could Be 71% Undervalued After CoreWeave Lifted AI Sentiment. Applied Digital (APLD) jumped after CoreWeave reported strong AI hardware demand, raised its revenue outlook and showed pricing power, which lifted sentiment toward data center and AI infrastructure peers. Applied Digita",
+     "analysed": true
+    },
+    {
+     "id": "6f4bec6b118fec7e",
+     "title": "How Investors May Respond To Shopify (SHOP) Mixed Earnings And AI Push",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-shopify-shop-011010918.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-12T01:10:10+00:00",
+     "symbols": [
+      "META",
+      "LOW"
+     ],
+     "relevance": 0.685,
+     "sentiment": 0.583,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "How Investors May Respond To Shopify (SHOP) Mixed Earnings And AI Push. Shopify reported third quarter 2026 revenue of US$3.74b and net income of US$462m, issued guidance for low 30% revenue growth in the fourth quarter, and filed an omnibus shelf registration covering equity, debt, warrants",
+     "analysed": true
+    },
     {
      "id": "2ff8b90a0b92a3bb",
      "title": "MARA Holdings Inc (MARA) (Q3 2026) Earnings Call Highlights: $632 Million Net Income, $1. ...",
@@ -93749,6 +94022,24 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "MARA Holdings Inc (MARA) (Q3 2026) Earnings Call Highlights: $632 Million Net Income, $1. .... MARA Holdings Inc (MARA) posted a $632.1 million quarterly profit on digital asset gains, slashed debt by 37% and authorized a $500 million share repurchase despite a 35% revenue decline.",
+     "analysed": true
+    },
+    {
+     "id": "51ed3c6d69126040",
+     "title": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBCRmY4V0dkXy1pQWU0OHRpbjlHZ0J4WDJpaWhIcjk2VEZ4cl9LSXVDNmFmdEhMRFdOOGtDMFRObE0wUDlRcUFIYlM4a3NIcC1aeS13aHp0QkZfWnY5d0tUNWw4RzJ0YTRReHZvZFRMYmx4UQ?oc=5",
+     "publisher": "\uc544\uc2dc\uc544\uacbd\uc81c",
+     "published": "2026-11-12T00:52:16+00:00",
+     "symbols": [
+      "TLT",
+      "XLF",
+      "QQQ"
+     ],
+     "relevance": 0.685,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "From KRW 273 Billion Profit to KRW 59.1 Billion Loss... Treasury Bond Fines Rock Yeouido",
      "analysed": true
     },
     {
@@ -93851,22 +94142,6 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Nvidia\u2019s Board Is Reportedly Preparing to Oust Jensen Huang. When Intel and McDonald\u2019s Pushed Out CEOs Over Workplace Relationships, Shareholders Got Opposite Results. Nvidia's board is preparing to oust Jensen Huang, the Wall Street Journal reported, after a Times report of his relationship with executive Kimberly Powell; Nvidia fell 7.4% after hours to $160.95. When Intel (2018) and ",
-     "analysed": true
-    },
-    {
-     "id": "00297f7e3ecd9e6c",
-     "title": "Do low jobless claims tell an accurate story anymore?",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2pyWjdMdTRTMnBydTBFTkxIMjFEenRQYzhzVndRdW5qMnUzdEVZS3I1Y0F5dUtYMHBzdzN0R251TnVkQzd0S21CR0U0VVJaWW9GenpDVnVCaU13cTkwdnNZSW9ROHJiMkRFMDMzS2JpSzdFMVJyUmg1X0RHNEdBb2NVZ1hNcGhLOF9oSHZReDVFbHRZWHg3NXI3dkM2dGVGeXZaQnNBbTZTdUNC?oc=5",
-     "publisher": "Marketplace.org",
-     "published": "2026-11-11T23:26:22+00:00",
-     "symbols": [
-      "LOW"
-     ],
-     "relevance": 0.64,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Do low jobless claims tell an accurate story anymore?",
      "analysed": true
     },
     {
@@ -94353,6 +94628,22 @@
      "impact": "high",
      "category": "central_bank",
      "summary": "Fed\u2019s Bowman Says AI Now Drives About a Quarter of America\u2019s Excess Inflation. The chips fueling the AI boom now show up on the Fed's inflation ledger, and rate hikes can't touch them. One stock collects the higher prices while another pays them, and a December decision could split their fortunes.",
+     "analysed": true
+    },
+    {
+     "id": "00297f7e3ecd9e6c",
+     "title": "Do low jobless claims tell an accurate story anymore?",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2pyWjdMdTRTMnBydTBFTkxIMjFEenRQYzhzVndRdW5qMnUzdEVZS3I1Y0F5dUtYMHBzdzN0R251TnVkQzd0S21CR0U0VVJaWW9GenpDVnVCaU13cTkwdnNZSW9ROHJiMkRFMDMzS2JpSzdFMVJyUmg1X0RHNEdBb2NVZ1hNcGhLOF9oSHZReDVFbHRZWHg3NXI3dkM2dGVGeXZaQnNBbTZTdUNC?oc=5",
+     "publisher": "Marketplace.org",
+     "published": "2026-11-11T21:15:00+00:00",
+     "symbols": [
+      "LOW"
+     ],
+     "relevance": 0.64,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Do low jobless claims tell an accurate story anymore?",
      "analysed": true
     },
     {
@@ -96338,6 +96629,24 @@
      "analysed": true
     },
     {
+     "id": "5f69b09dad74ebe3",
+     "title": "OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSDZlTWwtdThPTnp0UjFXeXowU3I2SzZTbDA1Zk9BZUJER0dMV1o3S2oza0sxUmxlT2xhb2k4Ykx1TDlORm5zNVdJSk8wVzZBM2VRV2xFUlpJQTdiTTJJY1ZULXJNbjIyaWVudGx5UUNjZWlMaGRJcXZHVjBmUkUxVmVxZC1FUWk0SUFmZkFQZGhaeFVPdWtkV2xIQ0hRT1ZDWGYySlk3RHdRTDloMDlLdQ?oc=5",
+     "publisher": "Reuters",
+     "published": "2026-11-11T14:14:31+00:00",
+     "symbols": [
+      "XLE",
+      "XOM",
+      "CVX"
+     ],
+     "relevance": 0.62,
+     "sentiment": 0.0,
+     "impact": "low",
+     "category": "geopolitics",
+     "summary": "OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia",
+     "analysed": true
+    },
+    {
      "id": "8cc468388191be32",
      "title": "Epigenetics - Global Strategic Business Report: Capitalize on an 18.2% CAGR to Secure the $5.5 Billion 2030 Market as Illumina, Thermo Fisher Scientific, Qiagen, and Bio-Rad Disrupt Precision Medicine",
      "url": "https://finance.yahoo.com/healthcare/articles/epigenetics-global-strategic-business-report-141200018.html?.tsrc=rss",
@@ -96937,106 +97246,13 @@
      "category": "earnings",
      "summary": "CoreWeave Earnings Top Views. CEO Touts Pricing Power, Sold Out Capacity. CoreWeave stock popped after CEO Intrator touted strong pricing power and sold out data center capacity in Q3 earnings call with analysts.",
      "analysed": true
-    },
-    {
-     "id": "e51e4e229f1a7331",
-     "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise as Nvidia stock recovers, 10-year yield nears 5%",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T12:34:45+00:00",
-     "symbols": [
-      "NVDA",
-      "BTC-USD",
-      "ETH-USD",
-      "SOL-USD",
-      "XRP-USD"
-     ],
-     "relevance": 0.795,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "Stock market today: Dow, S&P 500, Nasdaq futures rise as Nvidia stock recovers, 10-year yield nears 5%. Nvidia and other chip stocks crept higher, investors shifted their bets on a Fed rate hike next month, and cryptocurrencies fell.",
-     "analysed": true
-    },
-    {
-     "id": "75deb7a90459b29b",
-     "title": "BofA says the October CPI report opens the door to a 50bp December hike",
-     "url": "https://finance.yahoo.com/economy/policy/articles/bofa-says-october-cpi-report-123105635.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-11T12:31:05+00:00",
-     "symbols": [
-      "BAC"
-     ],
-     "relevance": 0.715,
-     "sentiment": -0.583,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "BofA says the October CPI report opens the door to a 50bp December hike. Investing.com -- Bank of America told clients in a new note that the hotter-than-expected October consumer price index report all but locks in a December interest rate hike from the Federal Reserve and opens the door to ",
-     "analysed": true
-    },
-    {
-     "id": "f940f02be83dda90",
-     "title": "Live news: Bitcoin remains under pressure as CoreWeave, Nvidia lead AI rebound",
-     "url": "https://www.coindesk.com/tech/2026/11/11/live-news-coreweave-jumps-14-as-earnings-fuel-rebound-across-battered-ai-stocks",
-     "publisher": "coindesk",
-     "published": "2026-11-11T12:21:24+00:00",
-     "symbols": [
-      "NVDA",
-      "BTC-USD",
-      "BCH-USD",
-      "ETH-USD",
-      "SOL-USD",
-      "XRP-USD",
-      "ADA-USD"
-     ],
-     "relevance": 0.705,
-     "sentiment": 0.762,
-     "impact": "medium",
-     "category": "crypto",
-     "summary": "Live news: Bitcoin remains under pressure as CoreWeave, Nvidia lead AI rebound. The DRAM ETF jumps 8% and semiconductor stocks gain more than 4%, while bitcoin continues to test its 200-day moving average.",
-     "analysed": true
-    },
-    {
-     "id": "ffbf442db6b043c0",
-     "title": "Bitcoin barely flinches at hot CPI as ETF selling slows",
-     "url": "https://www.coindesk.com/daybook-us/2026/11/11/bitcoin-barely-flinches-at-hot-cpi-as-etf-selling-slows",
-     "publisher": "coindesk",
-     "published": "2026-11-11T12:19:30+00:00",
-     "symbols": [
-      "BTC-USD",
-      "BCH-USD",
-      "ETH-USD",
-      "SOL-USD",
-      "XRP-USD",
-      "ADA-USD"
-     ],
-     "relevance": 0.76,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Bitcoin barely flinches at hot CPI as ETF selling slows. Your day-ahead look for Nov. 11, 2026",
-     "analysed": true
-    },
-    {
-     "id": "cb4a96995785812f",
-     "title": "With Youth Unemployment at 47%, South Africa Cannot Afford to Delay the Skills Revolution",
-     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcTVKN3VEQ3RIVmVwbjVHREx2OVdrTm5Oek50SkhNRnZBeXpnTzNRVDJIOUZVUUZOSE1oY1B6OHJyODBWZmtiZThSQW9ibDlfWEtNcFlRazRhdUdJTUg1ZjJuTWVBdHp4NlVFRmx5bDZMX0tXNDhyX0ZzQkJ6elM5TXJUdG1tZFdoSnNVVUl2MmlVUlBSeGNCM0ZEZ0k5NzJfanUzaFF4ZnlJSVByeHM4YkpvSlUxVm1JbHV5bDRINHpEYTVqall3amE0dw?oc=5",
-     "publisher": "Mail & Guardian",
-     "published": "2026-11-11T12:15:49+00:00",
-     "symbols": [],
-     "relevance": 0.6,
-     "sentiment": -0.322,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "With Youth Unemployment at 47%, South Africa Cannot Afford to Delay the Skills Revolution",
-     "analysed": false
     }
    ],
-   "stored": 9270,
+   "stored": 9256,
    "untriaged": 0
   },
   "macro": {
-   "generated_at": "2026-11-12T01:20:33.274382+00:00",
+   "generated_at": "2026-11-12T02:20:43.149351+00:00",
    "indicators": {
     "fed_funds": {
      "id": "fed_funds",
@@ -97258,7 +97474,7 @@
      "series": "^VIX",
      "change_1m_pct": 14.54,
      "trend": "down",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "ust_10y_live": {
      "id": "ust_10y_live",
@@ -97272,7 +97488,7 @@
      "series": "^TNX",
      "change_1m_pct": -4.2,
      "trend": "up",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "ust_3m_live": {
      "id": "ust_3m_live",
@@ -97286,63 +97502,63 @@
      "series": "^IRX",
      "change_1m_pct": 1.43,
      "trend": "up",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "dxy": {
      "id": "dxy",
      "name": "\u00cdndice d\u00f3lar (DXY)",
-     "value": 102.844,
+     "value": 102.867,
      "previous": 102.23,
-     "change": 0.614,
+     "change": 0.637,
      "as_of": "2026-11-11",
      "unit": "",
      "source": "yahoo",
      "series": "DX-Y.NYB",
-     "change_1m_pct": 0.65,
+     "change_1m_pct": 0.67,
      "trend": "up",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "wti": {
      "id": "wti",
      "name": "Petr\u00f3leo WTI",
-     "value": 85.92,
+     "value": 86.01,
      "previous": 86.04,
-     "change": -0.12,
+     "change": -0.03,
      "as_of": "2026-11-11",
      "unit": "USD",
      "source": "yahoo",
      "series": "CL=F",
-     "change_1m_pct": -8.73,
+     "change_1m_pct": -8.64,
      "trend": "down",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "gold": {
      "id": "gold",
      "name": "Oro (futuro)",
-     "value": 3998.8999,
+     "value": 3991.3999,
      "previous": 4030.2,
-     "change": -31.3,
+     "change": -38.8,
      "as_of": "2026-11-11",
      "unit": "USD",
      "source": "yahoo",
      "series": "GC=F",
-     "change_1m_pct": -4.27,
+     "change_1m_pct": -4.45,
      "trend": "down",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     },
     "copper": {
      "id": "copper",
      "name": "Cobre (futuro)",
-     "value": 6.253,
+     "value": 6.2675,
      "previous": 6.2195,
-     "change": 0.0335,
+     "change": 0.048,
      "as_of": "2026-11-11",
      "unit": "USD",
      "source": "yahoo",
      "series": "HG=F",
-     "change_1m_pct": -6.36,
+     "change_1m_pct": -6.15,
      "trend": "up",
-     "fetched_at": "2026-11-12T01:20:33.274382+00:00"
+     "fetched_at": "2026-11-12T02:20:43.149351+00:00"
     }
    },
    "relevance": {
@@ -97605,7 +97821,7 @@
    }
   },
   "technicals": {
-   "generated_at": "2026-11-12T01:20:33.274382+00:00",
+   "generated_at": "2026-11-12T02:20:43.149351+00:00",
    "symbols": {
     "SPY": {
      "score": 0.062,
@@ -99434,7 +99650,7 @@
      "resistance": {
       "price": 50.818,
       "touches": 4,
-      "bars_since_touch": 135
+      "bars_since_touch": 137
      },
      "rsi": 43.1,
      "atr_pct": 2.57,
