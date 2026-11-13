@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "26.20623001732250000000000000000000",
+  "cash": "69.02134404646250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -118,14 +118,14 @@
    },
    {
     "symbol": "TMO",
-    "quantity": "0.034023471",
-    "avg_price": "713.6281429175759286875815815499835",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:45.047287+00:00",
-    "realized_pnl": "-1.183136496900000000000000000000000",
-    "fees_paid": "0.00088248",
+    "opened_at": null,
+    "realized_pnl": "-1.835303251579999999999999999999999",
+    "fees_paid": "0.00154498",
     "mark_price": "699.4400024414062",
-    "entry_order_id": "O00000186"
+    "entry_order_id": null
    },
    {
     "symbol": "COP",
@@ -140,14 +140,14 @@
    },
    {
     "symbol": "HON",
-    "quantity": "0.086840988",
-    "avg_price": "226.6261768785956235320583869911752",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-11T15:41:58.377377+00:00",
-    "realized_pnl": "-0.3907698997899999999999999999999960",
-    "fees_paid": "0.00064238",
+    "opened_at": null,
+    "realized_pnl": "-0.8828262981099999999999999999999976",
+    "fees_paid": "0.00119023",
     "mark_price": "223.4499969482422",
-    "entry_order_id": "O00000204"
+    "entry_order_id": null
    },
    {
     "symbol": "MRK",
@@ -168,7 +168,7 @@
     "opened_at": "2026-11-04T15:42:12.876921+00:00",
     "realized_pnl": "-0.96407594175",
     "fees_paid": "0.00026561",
-    "mark_price": "100.66000366210938",
+    "mark_price": "101.5708999633789",
     "entry_order_id": "O00000140"
    },
    {
@@ -201,7 +201,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0.40428560655",
     "fees_paid": "0.00031011",
-    "mark_price": "397.45001220703125",
+    "mark_price": "390.6549987792969",
     "entry_order_id": "O00000185"
    },
    {
@@ -212,7 +212,7 @@
     "opened_at": "2026-11-10T15:41:42.106424+00:00",
     "realized_pnl": "0.29095776883",
     "fees_paid": "0.00019986",
-    "mark_price": "312.4800109863281",
+    "mark_price": "300.760009765625",
     "entry_order_id": "O00000187"
    },
    {
@@ -234,7 +234,7 @@
     "opened_at": "2026-11-12T15:41:59.718877+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "107.25",
+    "mark_price": "108.97999999999999",
     "entry_order_id": "O00000221"
    }
   ],
@@ -1218,6 +1218,34 @@
     "slippage_cost": "0.002775",
     "realized_pnl": "0",
     "timestamp": "2026-11-12T15:41:59.718877+00:00"
+   },
+   {
+    "id": "F00000071",
+    "order_id": "O00000228",
+    "symbol": "TMO",
+    "side": "sell",
+    "quantity": "0.034023471",
+    "price": "694.46",
+    "notional": "23.62793967",
+    "fee": "0.0006625",
+    "liquidity": "taker",
+    "slippage_cost": "0.00204141",
+    "realized_pnl": "-0.65216675468",
+    "timestamp": "2026-11-13T14:45:00+00:00"
+   },
+   {
+    "id": "F00000072",
+    "order_id": "O00000230",
+    "symbol": "HON",
+    "side": "sell",
+    "quantity": "0.086840988",
+    "price": "220.96",
+    "notional": "19.18838471",
+    "fee": "0.00054785",
+    "liquidity": "taker",
+    "slippage_cost": "0.00434205",
+    "realized_pnl": "-0.49205639832",
+    "timestamp": "2026-11-13T15:05:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1710,6 +1738,34 @@
     "closed_at": "2026-11-12T15:41:55.335287+00:00",
     "entry_order_id": "O00000187",
     "exit_order_id": "O00000218"
+   },
+   {
+    "symbol": "TMO",
+    "direction": "long",
+    "quantity": "0.034023471",
+    "entry_price": "713.628142917576",
+    "exit_price": "694.46",
+    "pnl": "-0.65282925468",
+    "fees": "0.0006625",
+    "return_pct": -0.02688741322808507,
+    "opened_at": "2026-11-10T15:41:45.047287+00:00",
+    "closed_at": "2026-11-13T14:45:00+00:00",
+    "entry_order_id": "O00000186",
+    "exit_order_id": "O00000228"
+   },
+   {
+    "symbol": "HON",
+    "direction": "long",
+    "quantity": "0.086840988",
+    "entry_price": "226.626176878596",
+    "exit_price": "220.96",
+    "pnl": "-0.49260424832",
+    "fees": "0.00054785",
+    "return_pct": -0.025030142650095125,
+    "opened_at": "2026-11-11T15:41:58.377377+00:00",
+    "closed_at": "2026-11-13T15:05:00+00:00",
+    "entry_order_id": "O00000204",
+    "exit_order_id": "O00000230"
    }
   ],
   "equity_curve": [
@@ -5625,13 +5681,20 @@
     "26.20623001732250000000000000000000",
     "68.24615094117852666109176",
     "68.24615094117852666109176"
+   ],
+   [
+    "2026-11-13T17:56:07.701778+00:00",
+    "93.85326037822722642245298000000000",
+    "69.02134404646250000000000000000000",
+    "24.83191633176472642245298",
+    "24.83191633176472642245298"
    ]
   ],
-  "total_fees": "0.11941304",
-  "total_slippage": "0.19138203",
+  "total_fees": "0.12062339",
+  "total_slippage": "0.19776549",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
-  "max_drawdown": "0.06781442927037464395133398479056528"
+  "max_drawdown": "0.07087735023432989590174981798196793"
  },
  "orders": [
   {
@@ -10410,13 +10473,13 @@
    "limit_price": null,
    "stop_price": "694.52",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.034023471",
+   "avg_fill_price": "694.46",
+   "fees_paid": "0.0006625",
+   "triggered": true,
    "created_at": "2026-11-12T15:42:34.384718+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-13T14:45:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: ampliar: Puntuaci\u00f3n +0.35: t\u00e9cnico +0.20 (cruce alcista MACD), noticias +0.42 (18 relevantes), tendencia alcista. Titular: \u00abCell Culture Protein Surface Coating - Global Strategic Business Report 2026: Capitalize o\u00bb",
    "reduce_only": true,
@@ -10431,14 +10494,14 @@
    "limit_price": "784.86",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T15:42:34.384754+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-13T17:56:07.718602+00:00",
+   "reject_reason": "OCO: stop-loss: ampliar: Puntuaci\u00f3n +0.35: t\u00e9cnico +0.20 (cruce alcista MACD), noticias +0.42 (18 relevantes), tendencia alcista. Titular: \u00abCell Culture Protein Surface Coating - Global Strategic Business Report 2026: Capitalize o\u00bb filled",
    "tag": "take-profit: ampliar: Puntuaci\u00f3n +0.35: t\u00e9cnico +0.20 (cruce alcista MACD), noticias +0.42 (18 relevantes), tendencia alcista. Titular: \u00abCell Culture Protein Surface Coating - Global Strategic Business Report 2026: Capitalize o\u00bb",
    "reduce_only": true,
    "oco_group": "exits-TMO-228"
@@ -10452,13 +10515,13 @@
    "limit_price": null,
    "stop_price": "221.01",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.086840988",
+   "avg_fill_price": "220.96",
+   "fees_paid": "0.00054785",
+   "triggered": true,
    "created_at": "2026-11-12T15:42:34.385385+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-13T15:05:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: ampliar: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.36 (doble suelo), noticias +0.31 (13 relevantes), tendencia lateral. Titular: \u00abChina Eastern Airlines Signs 23 Procurement Agreements, Unveils Latest Innovations at 9th \u00bb",
    "reduce_only": true,
@@ -10473,14 +10536,14 @@
    "limit_price": "234.85",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T15:42:34.385418+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-13T17:56:07.722207+00:00",
+   "reject_reason": "OCO: stop-loss: ampliar: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.36 (doble suelo), noticias +0.31 (13 relevantes), tendencia lateral. Titular: \u00abChina Eastern Airlines Signs 23 Procurement Agreements, Unveils Latest Innovations at 9th \u00bb filled",
    "tag": "take-profit: ampliar: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.36 (doble suelo), noticias +0.31 (13 relevantes), tendencia lateral. Titular: \u00abChina Eastern Airlines Signs 23 Procurement Agreements, Unveils Latest Innovations at 9th \u00bb",
    "reduce_only": true,
    "oco_group": "exits-HON-230"
@@ -10535,15 +10598,11 @@
   "O00000225",
   "O00000226",
   "O00000227",
-  "O00000228",
-  "O00000229",
-  "O00000230",
-  "O00000231",
   "O00000232",
   "O00000233"
  ],
  "order_id_counter": 234,
- "fill_id_counter": 71,
+ "fill_id_counter": 73,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -10553,7 +10612,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-13T11:22:33.680081+00:00",
+ "last_sync": "2026-11-13T17:56:07.701778+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -10562,16 +10621,16 @@
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
   "CRM": "2026-10-29T14:20:00+00:00",
-  "TMO": "2026-11-12T21:00:00+00:00",
+  "TMO": "2026-11-13T17:55:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
-  "HON": "2026-11-12T21:00:00+00:00",
+  "HON": "2026-11-13T17:55:00+00:00",
   "MRK": "2026-11-06T19:20:00+00:00",
-  "NOW": "2026-11-12T21:00:00+00:00",
+  "NOW": "2026-11-13T17:55:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
-  "TSLA": "2026-11-12T21:00:00+00:00",
-  "TXN": "2026-11-12T21:00:00+00:00",
+  "TSLA": "2026-11-13T17:55:00+00:00",
+  "TXN": "2026-11-13T17:55:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
-  "ABT": "2026-11-12T21:00:00+00:00"
+  "ABT": "2026-11-13T17:55:00+00:00"
  }
 }
