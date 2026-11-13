@@ -58,7 +58,7 @@
     "opened_at": "2026-11-12T15:42:01.894000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.03734390",
-    "mark_price": "10.096499999999999",
+    "mark_price": "10.132",
     "entry_order_id": "O00000001"
    },
    {
@@ -3863,12 +3863,19 @@
     "65.02413514136000000000000000000000",
     "35.40065957889590913247940",
     "35.40065957889590913247940"
+   ],
+   [
+    "2026-11-13T00:22:16.031001+00:00",
+    "100.4784725609309106445312500000000",
+    "65.02413514136000000000000000000000",
+    "35.45433741957091064453125",
+    "35.45433741957091064453125"
    ]
   ],
   "total_fees": "0.03734390",
   "total_slippage": "0.01061279",
   "total_financing": "0E-44",
-  "peak_equity": "100.4247947202559091324794000000000",
+  "peak_equity": "100.4784725609309106445312500000000",
   "max_drawdown": "0.003611884543879882313256491700161294"
  },
  "orders": [
@@ -3965,24 +3972,45 @@
    "limit_price": null,
    "stop_price": "8.25061",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T20:58:22.851350+00:00",
+   "updated_at": "2026-11-13T00:22:16.372784+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-LINK-USD-5"
+  },
+  {
+   "id": "O00000006",
+   "symbol": "LINK-USD",
+   "side": "sell",
+   "quantity": "1.51205185",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "8.50189",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-13T00:22:16.372849+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-LINK-USD-5"
+   "oco_group": "exits-LINK-USD-6"
   }
  ],
  "open_order_ids": [
   "O00000004",
-  "O00000005"
+  "O00000006"
  ],
- "order_id_counter": 6,
+ "order_id_counter": 7,
  "fill_id_counter": 3,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -3993,10 +4021,10 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-12T21:56:13.571671+00:00",
+ "last_sync": "2026-11-13T00:22:16.031001+00:00",
  "bankrupt": false,
  "path_checked": {
-  "LINK-USD": "2026-11-12T21:55:00+00:00",
+  "LINK-USD": "2026-11-13T00:20:00+00:00",
   "NVDA": "2026-11-12T21:00:00+00:00"
  }
 }
