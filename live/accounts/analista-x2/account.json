@@ -5709,6 +5709,27 @@
     "69.02134404646250000000000000000000",
     "24.8728424632344497541880",
     "24.8728424632344497541880"
+   ],
+   [
+    "2026-11-13T21:36:27.448656+00:00",
+    "93.89418650969694975418800000000000",
+    "69.02134404646250000000000000000000",
+    "24.8728424632344497541880",
+    "24.8728424632344497541880"
+   ],
+   [
+    "2026-11-13T21:36:28.282643+00:00",
+    "93.89418650969694975418800000000000",
+    "69.02134404646250000000000000000000",
+    "24.8728424632344497541880",
+    "24.8728424632344497541880"
+   ],
+   [
+    "2026-11-13T21:36:28.284257+00:00",
+    "93.89418650969694975418800000000000",
+    "69.02134404646250000000000000000000",
+    "24.8728424632344497541880",
+    "24.8728424632344497541880"
    ]
   ],
   "total_fees": "0.12062339",
@@ -10368,14 +10389,14 @@
    "limit_price": null,
    "stop_price": "285.88",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T15:42:34.383899+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-13T21:36:28.284088+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.04 (hueco alcista, estrella de la ma\u00f1ana), noticias +0.12 (41 relevantes), tendencia alcist",
    "reduce_only": true,
    "oco_group": "exits-TXN-222"
@@ -10389,14 +10410,14 @@
    "limit_price": "364.33",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T15:42:34.383934+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-13T21:36:28.284148+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.04 (hueco alcista, estrella de la ma\u00f1ana), noticias +0.12 (41 relevantes), tendencia alcist",
    "reduce_only": true,
    "oco_group": "exits-TXN-222"
@@ -10610,19 +10631,61 @@
    "tag": "take-profit: comprar: Puntuaci\u00f3n +0.30: t\u00e9cnico +0.38 (HCH invertido), noticias +0.29 (7 relevantes), tendencia lateral. Titular: \u00abISRG Agrees to $450M Settlement: What Does It Mean for Investors?\u00bb",
    "reduce_only": true,
    "oco_group": "exits-ABT-232"
+  },
+  {
+   "id": "O00000234",
+   "symbol": "TXN",
+   "side": "sell",
+   "quantity": "0.026329236",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "285.88",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-13T21:36:28.284174+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.08: t\u00e9cnico -0.06 (envolvente alcista, cruce alcista MACD), noticias +0.00 (42 relevantes), tendencia alci",
+   "reduce_only": true,
+   "oco_group": "exits-TXN-234"
+  },
+  {
+   "id": "O00000235",
+   "symbol": "TXN",
+   "side": "sell",
+   "quantity": "0.026329236",
+   "order_type": "limit",
+   "limit_price": "353.51",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-13T21:36:28.284229+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.08: t\u00e9cnico -0.06 (envolvente alcista, cruce alcista MACD), noticias +0.00 (42 relevantes), tendencia alci",
+   "reduce_only": true,
+   "oco_group": "exits-TXN-234"
   }
  ],
  "open_order_ids": [
-  "O00000222",
-  "O00000223",
   "O00000224",
   "O00000225",
   "O00000226",
   "O00000227",
   "O00000232",
-  "O00000233"
+  "O00000233",
+  "O00000234",
+  "O00000235"
  ],
- "order_id_counter": 234,
+ "order_id_counter": 236,
  "fill_id_counter": 73,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -10633,7 +10696,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-13T21:21:53.549995+00:00",
+ "last_sync": "2026-11-13T21:36:28.284257+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",

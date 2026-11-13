@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "58.57993669539000000000000000000000",
+  "cash": "61.41040900689000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -91,7 +91,7 @@
     "opened_at": "2026-10-26T16:03:20.681411+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "754.2100219726562",
+    "mark_price": "754.3699951171875",
     "entry_order_id": "O00000004"
    },
    {
@@ -217,13 +217,13 @@
    },
    {
     "symbol": "LINK-USD",
-    "quantity": "0.30078995",
+    "quantity": "0.01271216",
     "avg_price": "9.879",
-    "open_fees": "0.00742876",
+    "open_fees": "0.000313958580469859448429044919885122",
     "opened_at": "2026-11-12T15:42:01.894000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.00742876",
-    "mark_price": "9.873999999999999",
+    "realized_pnl": "-0.00835425591",
+    "fees_paid": "0.01452268",
+    "mark_price": "9.8505",
     "entry_order_id": "O00000019"
    },
    {
@@ -532,6 +532,20 @@
     "slippage_cost": "0.00021109",
     "realized_pnl": "0",
     "timestamp": "2026-11-12T15:41:59.457451+00:00"
+   },
+   {
+    "id": "F00000022",
+    "order_id": "O00000022",
+    "symbol": "LINK-USD",
+    "side": "sell",
+    "quantity": "0.28807779",
+    "price": "9.85",
+    "notional": "2.83756623",
+    "fee": "0.00709392",
+    "liquidity": "taker",
+    "slippage_cost": "0",
+    "realized_pnl": "-0.00835425591",
+    "timestamp": "2026-11-13T21:35:59.037000+00:00"
    }
   ],
   "closed_trades": [
@@ -576,6 +590,20 @@
     "closed_at": "2026-11-11T15:41:58.771000+00:00",
     "entry_order_id": "O00000015",
     "exit_order_id": "O00000018"
+   },
+   {
+    "symbol": "LINK-USD",
+    "direction": "long",
+    "quantity": "0.28807779",
+    "entry_price": "9.879",
+    "exit_price": "9.85",
+    "pnl": "-0.02256297733",
+    "fees": "0.01420872142",
+    "return_pct": -0.007928182614147499,
+    "opened_at": "2026-11-12T15:42:01.894000+00:00",
+    "closed_at": "2026-11-13T21:35:59.037000+00:00",
+    "entry_order_id": "O00000019",
+    "exit_order_id": "O00000022"
    }
   ],
   "equity_curve": [
@@ -4449,9 +4477,30 @@
     "58.57993669539000000000000000000000",
     "40.66143659199599504271343",
     "40.66143659199599504271343"
+   ],
+   [
+    "2026-11-13T21:36:28.895785+00:00",
+    "99.23519734331258253655638000000000",
+    "58.57993669539000000000000000000000",
+    "40.65526064792258253655638",
+    "40.65526064792258253655638"
+   ],
+   [
+    "2026-11-13T21:36:29.026320+00:00",
+    "99.22795938441758253655638000000000",
+    "61.41040900689000000000000000000000",
+    "37.81755037752758253655638",
+    "37.81755037752758253655638"
+   ],
+   [
+    "2026-11-13T21:36:29.027241+00:00",
+    "99.22795938441758253655638000000000",
+    "61.41040900689000000000000000000000",
+    "37.81755037752758253655638",
+    "37.81755037752758253655638"
    ]
   ],
-  "total_fees": "0.01784368",
+  "total_fees": "0.02493760",
   "total_slippage": "0.01428997",
   "total_financing": "0E-48",
   "peak_equity": "100.0837805049300000000000000000000",
@@ -4898,11 +4947,32 @@
    "tag": "Hedge: m\u00e1s peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000022",
+   "symbol": "LINK-USD",
+   "side": "sell",
+   "quantity": "0.28807779",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.28807779",
+   "avg_fill_price": "9.85",
+   "fees_paid": "0.00709392",
+   "triggered": false,
+   "created_at": "2026-11-13T21:36:29.026227+00:00",
+   "updated_at": "2026-11-13T21:35:59.037000+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: menos peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 22,
- "fill_id_counter": 22,
+ "order_id_counter": 23,
+ "fill_id_counter": 23,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4912,7 +4982,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-13T21:21:53.581455+00:00",
+ "last_sync": "2026-11-13T21:36:29.027241+00:00",
  "bankrupt": false,
  "path_checked": {}
 }

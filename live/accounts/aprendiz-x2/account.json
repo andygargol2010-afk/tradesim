@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "49.33571263313000000000000000000000",
+  "cash": "70.13278952713000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -52,14 +52,14 @@
   "positions": [
    {
     "symbol": "LINK-USD",
-    "quantity": "2.11667004",
-    "avg_price": "9.879",
-    "open_fees": "0.05227646",
-    "opened_at": "2026-11-12T15:42:01.894000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.05227646",
-    "mark_price": "9.873999999999999",
-    "entry_order_id": "O00000001"
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.06138343116",
+    "fees_paid": "0.10439946",
+    "mark_price": "9.8505",
+    "entry_order_id": null
    },
    {
     "symbol": "NVDA",
@@ -101,9 +101,38 @@
     "slippage_cost": "0.00453301",
     "realized_pnl": "0",
     "timestamp": "2026-11-12T15:41:45.831285+00:00"
+   },
+   {
+    "id": "F00000003",
+    "order_id": "O00000007",
+    "symbol": "LINK-USD",
+    "side": "sell",
+    "quantity": "2.11667004",
+    "price": "9.85",
+    "notional": "20.84919989",
+    "fee": "0.052123",
+    "liquidity": "taker",
+    "slippage_cost": "0",
+    "realized_pnl": "-0.06138343116",
+    "timestamp": "2026-11-13T21:35:59.037000+00:00"
    }
   ],
-  "closed_trades": [],
+  "closed_trades": [
+   {
+    "symbol": "LINK-USD",
+    "direction": "long",
+    "quantity": "2.11667004",
+    "entry_price": "9.879",
+    "exit_price": "9.85",
+    "pnl": "-0.16578289116",
+    "fees": "0.10439946",
+    "return_pct": -0.007928181083333383,
+    "opened_at": "2026-11-12T15:42:01.894000+00:00",
+    "closed_at": "2026-11-13T21:35:59.037000+00:00",
+    "entry_order_id": "O00000001",
+    "exit_order_id": "O00000007"
+   }
+  ],
   "equity_curve": [
    [
     "2026-10-26T00:21:31.341575+00:00",
@@ -3926,11 +3955,32 @@
     "49.33571263313000000000000000000000",
     "50.19842909219666080213674",
     "50.19842909219666080213674"
+   ],
+   [
+    "2026-11-13T21:36:25.300734+00:00",
+    "99.48439997938666291880678000000000",
+    "49.33571263313000000000000000000000",
+    "50.14868734625666291880678",
+    "50.14868734625666291880678"
+   ],
+   [
+    "2026-11-13T21:36:26.927824+00:00",
+    "99.43121864436666291880678000000000",
+    "70.13278952713000000000000000000000",
+    "29.29842911723666291880678",
+    "29.29842911723666291880678"
+   ],
+   [
+    "2026-11-13T21:36:26.930213+00:00",
+    "99.43121864436666291880678000000000",
+    "70.13278952713000000000000000000000",
+    "29.29842911723666291880678",
+    "29.29842911723666291880678"
    ]
   ],
-  "total_fees": "0.05227646",
+  "total_fees": "0.10439946",
   "total_slippage": "0.01511636",
-  "total_financing": "0E-44",
+  "total_financing": "0E-47",
   "peak_equity": "100.6811430702546655273437500000000",
   "max_drawdown": "0.01360188965644806505184763944690916"
  },
@@ -4049,25 +4099,45 @@
    "limit_price": null,
    "stop_price": "8.50189",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-13T00:22:22.377196+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-13T21:36:26.927669+00:00",
+   "reject_reason": "cancelled by agent",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-LINK-USD-6"
+  },
+  {
+   "id": "O00000007",
+   "symbol": "LINK-USD",
+   "side": "sell",
+   "quantity": "2.11667004",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "2.11667004",
+   "avg_fill_price": "9.85",
+   "fees_paid": "0.052123",
+   "triggered": false,
+   "created_at": "2026-11-13T21:36:26.927748+00:00",
+   "updated_at": "2026-11-13T21:35:59.037000+00:00",
+   "reject_reason": null,
+   "tag": "close_position",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [
-  "O00000004",
-  "O00000006"
+  "O00000004"
  ],
- "order_id_counter": 7,
- "fill_id_counter": 3,
+ "order_id_counter": 8,
+ "fill_id_counter": 4,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4077,10 +4147,10 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-13T21:21:53.493213+00:00",
+ "last_sync": "2026-11-13T21:36:26.930213+00:00",
  "bankrupt": false,
  "path_checked": {
-  "LINK-USD": "2026-11-13T21:20:00+00:00",
+  "LINK-USD": "2026-11-13T21:35:00+00:00",
   "NVDA": "2026-11-13T21:00:00+00:00"
  }
 }
