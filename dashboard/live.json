@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-14T00:21:58.852704+00:00",
+  "generated_at": "2026-11-14T00:30:00.325609+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -340,9 +340,9 @@
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-11-14T00:20:48.704678+00:00",
-  "mode": "research",
-  "duration_s": 70.15,
+  "started_at": "2026-11-14T00:28:50.958589+00:00",
+  "mode": "mark",
+  "duration_s": 69.37,
   "accounts": {
    "aprendiz": {
     "status": "synced",
@@ -365,7 +365,7 @@
    "buy-hold": {
     "status": "synced",
     "message": "",
-    "equity": 97.32672678441057,
+    "equity": 97.30329028079832,
     "fills_on_sync": 0
    },
    "analista": {
@@ -377,7 +377,7 @@
    "inversor": {
     "status": "synced",
     "message": "",
-    "equity": 97.88925470226572,
+    "equity": 97.88633093486571,
     "fills_on_sync": 0
    },
    "aprendiz-x2": {
@@ -407,7 +407,7 @@
    "inversor-x2": {
     "status": "synced",
     "message": "",
-    "equity": 96.89061240040861,
+    "equity": 96.88768773890862,
     "fills_on_sync": 0
    },
    "combinador": {
@@ -425,16 +425,20 @@
    "meta": {
     "status": "synced",
     "message": "",
-    "equity": 99.22814371073758,
+    "equity": 99.22787039929759,
     "fills_on_sync": 0
    }
   },
   "data_errors": {
-   "bars:XLE": "yfinance history(XLE, 5m): $XLE: possibly delisted; no price data found  (5m 2026-11-13 21:16:53.216011+00:00 -> 2026-11-14 00:21:54.656788+00:00)",
-   "bars:PEP": "yfinance history(PEP, 5m): $PEP: possibly delisted; no price data found  (5m 2026-11-13 21:16:53.232602+00:00 -> 2026-11-14 00:21:54.656788+00:00)",
-   "bars:DE": "yfinance history(DE, 5m): $DE: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124237+00:00 -> 2026-11-14 00:21:58.276379+00:00)",
-   "bars:PLTR": "yfinance history(PLTR, 5m): $PLTR: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124522+00:00 -> 2026-11-14 00:21:58.276379+00:00)",
-   "bars:NOW": "yfinance history(NOW, 5m): $NOW: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124595+00:00 -> 2026-11-14 00:21:58.276379+00:00)"
+   "bars:XLE": "yfinance history(XLE, 5m): $XLE: possibly delisted; no price data found  (5m 2026-11-13 21:16:53.216011+00:00 -> 2026-11-14 00:29:43.701285+00:00)",
+   "bars:PEP": "yfinance history(PEP, 5m): $PEP: possibly delisted; no price data found  (5m 2026-11-13 21:16:53.232602+00:00 -> 2026-11-14 00:29:43.701285+00:00)",
+   "bars:CVX": "yfinance history(CVX, 1h): $CVX: possibly delisted; no price data found  (1h 2026-11-13 23:21:58.183504+00:00 -> 2026-11-14 00:29:43.701285+00:00)",
+   "bars:XOM": "yfinance history(XOM, 1h): $XOM: possibly delisted; no price data found  (1h 2026-11-13 23:21:58.734588+00:00 -> 2026-11-14 00:29:59.923286+00:00)",
+   "bars:ADBE": "yfinance history(ADBE, 1h): $ADBE: possibly delisted; no price data found  (1h 2026-11-13 23:21:58.220210+00:00 -> 2026-11-14 00:29:43.701285+00:00)",
+   "bars:MRK": "yfinance history(MRK, 1h): $MRK: possibly delisted; no price data found  (1h 2026-11-13 23:21:58.222199+00:00 -> 2026-11-14 00:29:43.701285+00:00)",
+   "bars:DE": "yfinance history(DE, 5m): $DE: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124237+00:00 -> 2026-11-14 00:29:58.572688+00:00)",
+   "bars:PLTR": "yfinance history(PLTR, 5m): $PLTR: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124522+00:00 -> 2026-11-14 00:29:58.572688+00:00)",
+   "bars:NOW": "yfinance history(NOW, 5m): $NOW: possibly delisted; no price data found  (5m 2026-11-13 21:31:25.124595+00:00 -> 2026-11-14 00:29:58.572688+00:00)"
   }
  },
  "prices": {
@@ -444,7 +448,7 @@
    "ask": 754.3699951171875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:29.623061+00:00",
+   "time": "2026-11-14T00:28:52.111678+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -454,7 +458,7 @@
    "ask": 679.8900146484375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:29.914529+00:00",
+   "time": "2026-11-14T00:28:52.624602+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -464,7 +468,7 @@
    "ask": 277.5400085449219,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:30.156359+00:00",
+   "time": "2026-11-14T00:28:53.132150+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -474,7 +478,7 @@
    "ask": 523.1500244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:30.424465+00:00",
+   "time": "2026-11-14T00:28:53.635445+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -484,7 +488,7 @@
    "ask": 355.45001220703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:30.691006+00:00",
+   "time": "2026-11-14T00:28:54.136099+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -494,7 +498,7 @@
    "ask": 44.130001068115234,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:30.932440+00:00",
+   "time": "2026-11-14T00:28:54.621245+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -504,7 +508,7 @@
    "ask": 79.37999725341797,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:31.201374+00:00",
+   "time": "2026-11-14T00:28:55.122131+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -514,7 +518,7 @@
    "ask": 60.91999816894531,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:31.483772+00:00",
+   "time": "2026-11-14T00:28:55.657916+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -524,7 +528,7 @@
    "ask": 64.95999908447266,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:31.727823+00:00",
+   "time": "2026-11-14T00:28:56.273833+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -534,7 +538,7 @@
    "ask": 58.68000030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:31.988997+00:00",
+   "time": "2026-11-14T00:28:56.779535+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -544,7 +548,7 @@
    "ask": 90.04000091552734,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:32.213886+00:00",
+   "time": "2026-11-14T00:28:57.338833+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -554,7 +558,7 @@
    "ask": 76.94000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:32.477787+00:00",
+   "time": "2026-11-14T00:28:57.869858+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -564,7 +568,7 @@
    "ask": 104.61000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:32.784001+00:00",
+   "time": "2026-11-14T00:28:58.377525+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -574,7 +578,7 @@
    "ask": 104.16999816894531,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:33.009415+00:00",
+   "time": "2026-11-14T00:28:58.882551+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -584,7 +588,7 @@
    "ask": 91.76000213623047,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:33.228110+00:00",
+   "time": "2026-11-14T00:28:59.479888+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -594,7 +598,7 @@
    "ask": 33.47999954223633,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:33.454964+00:00",
+   "time": "2026-11-14T00:29:00.037737+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -604,7 +608,7 @@
    "ask": 51.45000076293945,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:33.673240+00:00",
+   "time": "2026-11-14T00:29:00.603858+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -614,7 +618,7 @@
    "ask": 170.27999877929688,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:33.941258+00:00",
+   "time": "2026-11-14T00:29:01.156582+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -624,7 +628,7 @@
    "ask": 188.85000610351562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:34.160444+00:00",
+   "time": "2026-11-14T00:29:01.744183+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -634,7 +638,7 @@
    "ask": 44.040000915527344,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:34.386395+00:00",
+   "time": "2026-11-14T00:29:02.252086+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -644,7 +648,7 @@
    "ask": 96.47000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:34.710312+00:00",
+   "time": "2026-11-14T00:29:02.805479+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -654,7 +658,7 @@
    "ask": 145.5800018310547,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:34.954298+00:00",
+   "time": "2026-11-14T00:29:03.287417+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -664,7 +668,7 @@
    "ask": 356.2699890136719,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:35.223200+00:00",
+   "time": "2026-11-14T00:29:03.909953+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -674,7 +678,7 @@
    "ask": 523.8800048828125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:35.442121+00:00",
+   "time": "2026-11-14T00:29:04.463102+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -684,7 +688,7 @@
    "ask": 162.85000610351562,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:35.690165+00:00",
+   "time": "2026-11-14T00:29:05.059185+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -694,7 +698,7 @@
    "ask": 266.6600036621094,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:35.926352+00:00",
+   "time": "2026-11-14T00:29:05.628077+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -704,7 +708,7 @@
    "ask": 295.7699890136719,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:36.136684+00:00",
+   "time": "2026-11-14T00:29:06.120538+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -714,7 +718,7 @@
    "ask": 641.6900024414062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:36.464188+00:00",
+   "time": "2026-11-14T00:29:06.612126+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -724,7 +728,7 @@
    "ask": 390.2200012207031,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:36.796469+00:00",
+   "time": "2026-11-14T00:29:07.097066+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -734,7 +738,7 @@
    "ask": 347.010009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:37.068149+00:00",
+   "time": "2026-11-14T00:29:07.619236+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -744,7 +748,7 @@
    "ask": 534.0599975585938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:37.312747+00:00",
+   "time": "2026-11-14T00:29:08.168528+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -754,7 +758,7 @@
    "ask": 62.150001525878906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:37.561049+00:00",
+   "time": "2026-11-14T00:29:08.792889+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -764,7 +768,7 @@
    "ask": 125.3499984741211,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:37.811120+00:00",
+   "time": "2026-11-14T00:29:09.283037+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -774,7 +778,7 @@
    "ask": 217.83999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:38.060132+00:00",
+   "time": "2026-11-14T00:29:09.752026+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -784,7 +788,7 @@
    "ask": 346.19000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:38.397110+00:00",
+   "time": "2026-11-14T00:29:10.375953+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -794,7 +798,7 @@
    "ask": 51.02000045776367,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:38.656689+00:00",
+   "time": "2026-11-14T00:29:10.895096+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -804,7 +808,7 @@
    "ask": 916.5599975585938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:38.885195+00:00",
+   "time": "2026-11-14T00:29:11.585715+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -814,7 +818,7 @@
    "ask": 425.760009765625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:39.142063+00:00",
+   "time": "2026-11-14T00:29:12.083635+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -824,7 +828,7 @@
    "ask": 661.1900024414062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:39.386938+00:00",
+   "time": "2026-11-14T00:29:12.606050+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -834,7 +838,7 @@
    "ask": 170.58999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:39.678999+00:00",
+   "time": "2026-11-14T00:29:13.249445+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -844,7 +848,7 @@
    "ask": 219.88999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:39.931674+00:00",
+   "time": "2026-11-14T00:29:13.891923+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -854,7 +858,7 @@
    "ask": 285.75,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:40.206364+00:00",
+   "time": "2026-11-14T00:29:14.463304+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -864,7 +868,7 @@
    "ask": 407.4599914550781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:40.446253+00:00",
+   "time": "2026-11-14T00:29:15.150645+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -874,7 +878,7 @@
    "ask": 1443.5,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:40.751748+00:00",
+   "time": "2026-11-14T00:29:15.694844+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -884,7 +888,7 @@
    "ask": 28.889999389648438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:40.993164+00:00",
+   "time": "2026-11-14T00:29:16.324195+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -894,7 +898,7 @@
    "ask": 169.8000030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:41.245449+00:00",
+   "time": "2026-11-14T00:29:16.890031+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -904,7 +908,7 @@
    "ask": 99.25,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:41.507117+00:00",
+   "time": "2026-11-14T00:29:17.471974+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -914,7 +918,7 @@
    "ask": 145.44000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:41.789703+00:00",
+   "time": "2026-11-14T00:29:18.191468+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -924,7 +928,7 @@
    "ask": 128.08999633789062,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:42.043028+00:00",
+   "time": "2026-11-14T00:29:18.796105+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -934,7 +938,7 @@
    "ask": 1106.2099609375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:42.282330+00:00",
+   "time": "2026-11-14T00:29:19.373211+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -944,7 +948,7 @@
    "ask": 348.69000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:42.621992+00:00",
+   "time": "2026-11-14T00:29:19.910328+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -954,7 +958,7 @@
    "ask": 271.9700012207031,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:42.902622+00:00",
+   "time": "2026-11-14T00:29:20.466376+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -964,7 +968,7 @@
    "ask": 600.2000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:43.136737+00:00",
+   "time": "2026-11-14T00:29:21.023676+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -974,7 +978,7 @@
    "ask": 171.5,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:43.423749+00:00",
+   "time": "2026-11-14T00:29:21.578886+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -984,7 +988,7 @@
    "ask": 243.0800018310547,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:43.699836+00:00",
+   "time": "2026-11-14T00:29:22.069022+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -994,7 +998,7 @@
    "ask": 59.65999984741211,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:43.949933+00:00",
+   "time": "2026-11-14T00:29:22.579858+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1004,7 +1008,7 @@
    "ask": 172.47000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:44.200110+00:00",
+   "time": "2026-11-14T00:29:23.096618+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1014,7 +1018,7 @@
    "ask": 95.63999938964844,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:44.420024+00:00",
+   "time": "2026-11-14T00:29:23.681674+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1024,7 +1028,7 @@
    "ask": 247.1300048828125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:44.712525+00:00",
+   "time": "2026-11-14T00:29:24.218761+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1034,7 +1038,7 @@
    "ask": 303.6000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:44.961096+00:00",
+   "time": "2026-11-14T00:29:24.771411+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1044,7 +1048,7 @@
    "ask": 778.3099975585938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:45.234176+00:00",
+   "time": "2026-11-14T00:29:25.297960+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1054,7 +1058,7 @@
    "ask": 102.25,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:45.545714+00:00",
+   "time": "2026-11-14T00:29:25.847534+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1064,7 +1068,7 @@
    "ask": 69.69000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:45.813806+00:00",
+   "time": "2026-11-14T00:29:26.325410+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1074,7 +1078,7 @@
    "ask": 167.99000549316406,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:46.079318+00:00",
+   "time": "2026-11-14T00:29:26.812737+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1084,7 +1088,7 @@
    "ask": 118.97000122070312,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:46.383582+00:00",
+   "time": "2026-11-14T00:29:27.387315+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1094,7 +1098,7 @@
    "ask": 37.9900016784668,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:46.694427+00:00",
+   "time": "2026-11-14T00:29:27.911887+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1104,7 +1108,7 @@
    "ask": 106.44000244140625,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:46.967711+00:00",
+   "time": "2026-11-14T00:29:28.441884+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1114,7 +1118,7 @@
    "ask": 227.72999572753906,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:47.225065+00:00",
+   "time": "2026-11-14T00:29:28.966251+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1124,7 +1128,7 @@
    "ask": 86.05000305175781,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:47.475323+00:00",
+   "time": "2026-11-14T00:29:29.516328+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1134,7 +1138,7 @@
    "ask": 190.64999389648438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:47.748281+00:00",
+   "time": "2026-11-14T00:29:30.054642+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1144,7 +1148,7 @@
    "ask": 1222.9100341796875,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:48.012809+00:00",
+   "time": "2026-11-14T00:29:30.685119+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1154,7 +1158,7 @@
    "ask": 320.6000061035156,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:48.287297+00:00",
+   "time": "2026-11-14T00:29:31.251102+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1164,7 +1168,7 @@
    "ask": 147.75999450683594,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:48.531217+00:00",
+   "time": "2026-11-14T00:29:31.819996+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1174,7 +1178,7 @@
    "ask": 295.0299987792969,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:49.040547+00:00",
+   "time": "2026-11-14T00:29:32.388018+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1184,7 +1188,7 @@
    "ask": 700.219970703125,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:49.431171+00:00",
+   "time": "2026-11-14T00:29:32.904048+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1194,7 +1198,7 @@
    "ask": 108.5199966430664,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:49.746791+00:00",
+   "time": "2026-11-14T00:29:33.438471+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1204,7 +1208,7 @@
    "ask": 198.9600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:50.102747+00:00",
+   "time": "2026-11-14T00:29:33.952375+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1214,7 +1218,7 @@
    "ask": 142.27999877929688,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:50.374466+00:00",
+   "time": "2026-11-14T00:29:34.497414+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1224,7 +1228,7 @@
    "ask": 51.66999816894531,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:50.709681+00:00",
+   "time": "2026-11-14T00:29:35.102439+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1234,7 +1238,7 @@
    "ask": 222.4600067138672,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:50.985169+00:00",
+   "time": "2026-11-14T00:29:35.649240+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1244,7 +1248,7 @@
    "ask": 331.80999755859375,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:51.272019+00:00",
+   "time": "2026-11-14T00:29:36.294926+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1254,7 +1258,7 @@
    "ask": 673.5399780273438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:51.571563+00:00",
+   "time": "2026-11-14T00:29:36.849861+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1264,7 +1268,7 @@
    "ask": 596.0399780273438,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:51.858718+00:00",
+   "time": "2026-11-14T00:29:37.403607+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1274,7 +1278,7 @@
    "ask": 85.12000274658203,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:52.133090+00:00",
+   "time": "2026-11-14T00:29:37.951599+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1284,7 +1288,7 @@
    "ask": 22.18000030517578,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:52.375626+00:00",
+   "time": "2026-11-14T00:29:38.586548+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1294,152 +1298,158 @@
    "ask": 526.0599975585938,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-14T00:21:52.649664+00:00",
+   "time": "2026-11-14T00:29:39.123976+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 68293.76,
-   "bid": 68293.76,
-   "ask": 68293.77,
+   "last": 68258.82,
+   "bid": 68258.82,
+   "ask": 68258.83,
    "spread_bps": 0.001,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:51.644000+00:00",
+   "time": "2026-11-14T00:29:39.746000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 1933.41,
-   "bid": 1933.4,
-   "ask": 1933.41,
+   "last": 1931.17,
+   "bid": 1931.23,
+   "ask": 1931.24,
    "spread_bps": 0.052,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:51.346000+00:00",
+   "time": "2026-11-14T00:29:39.996000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 78.41,
-   "bid": 78.4,
-   "ask": 78.42,
-   "spread_bps": 2.551,
+   "last": 78.18,
+   "bid": 78.17,
+   "ask": 78.19,
+   "spread_bps": 2.558,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:51.907000+00:00",
+   "time": "2026-11-14T00:29:40.064000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 1.0118,
-   "bid": 1.0117,
-   "ask": 1.0118,
-   "spread_bps": 0.988,
+   "last": 1.0107,
+   "bid": 1.0105,
+   "ask": 1.0107,
+   "spread_bps": 1.979,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:51.251000+00:00",
+   "time": "2026-11-14T00:29:38.810000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.16849,
-   "bid": 0.16844,
-   "ask": 0.16849,
-   "spread_bps": 2.968,
+   "last": 0.16814,
+   "bid": 0.16814,
+   "ask": 0.16816,
+   "spread_bps": 1.189,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:49.270000+00:00",
+   "time": "2026-11-14T00:29:38.228000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.06459,
-   "bid": 0.06463,
-   "ask": 0.06465,
-   "spread_bps": 3.094,
+   "last": 0.06448,
+   "bid": 0.06449,
+   "ask": 0.06451,
+   "spread_bps": 3.101,
    "modelled_spread": false,
-   "time": "2026-11-14T00:20:59.018000+00:00",
+   "time": "2026-11-14T00:29:04.934000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 9.863,
-   "bid": 9.864,
-   "ask": 9.866,
-   "spread_bps": 2.027,
+   "last": 9.842,
+   "bid": 9.843,
+   "ask": 9.844,
+   "spread_bps": 1.016,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:42.336000+00:00",
+   "time": "2026-11-14T00:29:28.069000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 49.528,
-   "bid": 49.516,
-   "ask": 49.525,
-   "spread_bps": 1.817,
+   "last": 49.378,
+   "bid": 49.368,
+   "ask": 49.378,
+   "spread_bps": 2.025,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:49.012000+00:00",
+   "time": "2026-11-14T00:29:40.511000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AVAX-USD": {
-   "last": 8.263,
-   "bid": 8.257,
-   "ask": 8.26,
-   "spread_bps": 3.633,
+   "last": 8.24,
+   "bid": 8.24,
+   "ask": 8.241,
+   "spread_bps": 1.214,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:39.994000+00:00",
+   "time": "2026-11-14T00:29:30.425000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOT-USD": {
-   "last": 0.819,
-   "bid": 0.8184,
-   "ask": 0.8188,
-   "spread_bps": 4.886,
+   "last": 0.8155,
+   "bid": 0.8154,
+   "ask": 0.8155,
+   "spread_bps": 1.226,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:25.725000+00:00",
+   "time": "2026-11-14T00:29:04.966000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "BCH-USD": {
-   "last": 221.4,
-   "bid": 221.28,
-   "ask": 221.4,
-   "spread_bps": 5.422,
+   "last": 220.97,
+   "bid": 220.9,
+   "ask": 221.03,
+   "spread_bps": 5.883,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:49.906000+00:00",
+   "time": "2026-11-14T00:29:23.058000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "UNI-USD": {
-   "last": 5.771,
-   "bid": 5.7702,
-   "ask": 5.7727,
-   "spread_bps": 4.332,
+   "last": 5.7453,
+   "bid": 5.7447,
+   "ask": 5.7478,
+   "spread_bps": 5.395,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:42.339000+00:00",
+   "time": "2026-11-14T00:28:48.987000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AAVE-USD": {
-   "last": 112.16,
-   "bid": 112.15,
-   "ask": 112.21,
-   "spread_bps": 5.349,
+   "last": 111.84,
+   "bid": 111.76,
+   "ask": 111.81,
+   "spread_bps": 4.473,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:30.450000+00:00",
+   "time": "2026-11-14T00:28:29.228000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XLM-USD": {
-   "last": 0.146391,
-   "bid": 0.14636,
-   "ask": 0.146376,
-   "spread_bps": 1.093,
+   "last": 0.145876,
+   "bid": 0.145885,
+   "ask": 0.145886,
+   "spread_bps": 0.069,
    "modelled_spread": false,
-   "time": "2026-11-14T00:21:36.123000+00:00",
+   "time": "2026-11-14T00:29:28.647000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-11-14T00:28:50.958589+00:00",
+   "mode": "mark",
+   "duration_s": 69.37,
+   "errors": 9
+  },
   {
    "started_at": "2026-11-14T00:20:48.704678+00:00",
    "mode": "research",
@@ -1613,12 +1623,6 @@
    "mode": "research",
    "duration_s": 60.46,
    "errors": 0
-  },
-  {
-   "started_at": "2026-11-12T18:20:47.159828+00:00",
-   "mode": "research",
-   "duration_s": 95.78,
-   "errors": 0
   }
  ],
  "accounts": [
@@ -1639,7 +1643,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.4247947202559,
     "last_decision_date": "2026-11-13"
@@ -2239,7 +2243,8 @@
      "2026-11-13T22:22:23.667002+00:00",
      "2026-11-13T23:22:23.502511+00:00",
      "2026-11-13T23:43:59.648472+00:00",
-     "2026-11-14T00:21:54.053567+00:00"
+     "2026-11-14T00:21:54.053567+00:00",
+     "2026-11-14T00:29:41.659201+00:00"
     ],
     "equity": [
      100.0,
@@ -2804,6 +2809,7 @@
      99.610193,
      99.610193,
      99.610193,
+     99.610193,
      99.610193
     ]
    },
@@ -2812,7 +2818,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.121151861",
      "avg_price": 165.09,
      "allocated": 20.000961,
@@ -5802,9 +5808,9 @@
     ],
     "p_sharpe_positive": 0.144,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.803,
-    "excess_return_ann_pct": 27.72,
-    "days_to_significant_vs_buy_hold": 403,
+    "p_beats_buy_hold": 0.806,
+    "excess_return_ann_pct": 28.03,
+    "days_to_significant_vs_buy_hold": 393,
     "rank_ic": {
      "mean": 0.0293,
      "t": 0.87,
@@ -5825,7 +5831,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.77960676317589,
     "last_decision_date": "2026-11-13"
@@ -6442,7 +6448,8 @@
      "2026-11-13T22:22:23.775983+00:00",
      "2026-11-13T23:22:23.617234+00:00",
      "2026-11-13T23:43:59.732392+00:00",
-     "2026-11-14T00:21:54.162339+00:00"
+     "2026-11-14T00:21:54.162339+00:00",
+     "2026-11-14T00:29:41.898247+00:00"
     ],
     "equity": [
      100.0,
@@ -7024,6 +7031,7 @@
      97.611709,
      97.611709,
      97.611709,
+     97.611709,
      97.611709
     ]
    },
@@ -7070,7 +7078,7 @@
      "symbol": "CAT",
      "name": "Caterpillar Inc.",
      "opened_at": "2026-11-10T15:41:40.684746+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.017047659",
      "avg_price": 578.32,
      "allocated": 9.8590022,
@@ -7108,7 +7116,7 @@
      "symbol": "XLK",
      "name": "Technology Select Sector SPDR",
      "opened_at": "2026-11-05T15:41:51.739734+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.05924669",
      "avg_price": 166.06,
      "allocated": 9.8385053,
@@ -7146,7 +7154,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.059541888",
      "avg_price": 165.09,
      "allocated": 9.8297703,
@@ -7165,7 +7173,7 @@
      "symbol": "SLV",
      "name": "iShares Silver Trust",
      "opened_at": "2026-10-29T15:41:45.479132+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.212035792",
      "avg_price": 47.36,
      "allocated": 10.042015,
@@ -11048,9 +11056,9 @@
     ],
     "p_sharpe_positive": 0.265,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.513,
-    "excess_return_ann_pct": 4.12,
-    "days_to_significant_vs_buy_hold": 7228
+    "p_beats_buy_hold": 0.516,
+    "excess_return_ann_pct": 4.42,
+    "days_to_significant_vs_buy_hold": 6264
    }
   },
   {
@@ -11067,7 +11075,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.78620271825592,
     "last_decision_date": "2026-11-13"
@@ -11693,7 +11701,8 @@
      "2026-11-13T22:22:24.480315+00:00",
      "2026-11-13T23:22:24.397285+00:00",
      "2026-11-13T23:44:00.359262+00:00",
-     "2026-11-14T00:21:54.656788+00:00"
+     "2026-11-14T00:21:54.656788+00:00",
+     "2026-11-14T00:29:43.701285+00:00"
     ],
     "equity": [
      100.0,
@@ -12284,6 +12293,7 @@
      99.742384,
      99.742384,
      99.742384,
+     99.742384,
      99.742384
     ]
    },
@@ -12292,7 +12302,7 @@
      "symbol": "IEF",
      "name": "iShares 7-10 Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:32.519114+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.060512492",
      "avg_price": 91.01,
      "allocated": 5.5072419,
@@ -12311,7 +12321,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:31.737325+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.044826638",
      "avg_price": 80.87,
      "allocated": 3.6251302,
@@ -12387,7 +12397,7 @@
      "symbol": "INDA",
      "name": "iShares MSCI India",
      "opened_at": "2026-11-10T15:41:33.593298+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.055921853",
      "avg_price": 51.9,
      "allocated": 2.9023442,
@@ -12444,7 +12454,7 @@
      "symbol": "NEE",
      "name": "NextEra Energy",
      "opened_at": "2026-11-04T15:42:21.570733+00:00",
-     "days_held": 9.361,
+     "days_held": 9.366,
      "quantity": "0.030570146",
      "avg_price": 87.38,
      "allocated": 2.6712194,
@@ -12520,7 +12530,7 @@
      "symbol": "DIA",
      "name": "SPDR Dow Jones Industrial Average",
      "opened_at": "2026-11-05T15:41:46.587247+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.004774057",
      "avg_price": 523.96,
      "allocated": 2.5014149,
@@ -12615,7 +12625,7 @@
      "symbol": "IBM",
      "name": "IBM",
      "opened_at": "2026-10-29T15:42:07.611912+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.008811176",
      "avg_price": 253.78,
      "allocated": 2.2361002,
@@ -12653,7 +12663,7 @@
      "symbol": "AXP",
      "name": "American Express",
      "opened_at": "2026-11-05T15:42:13.015779+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.00661235",
      "avg_price": 329.57,
      "allocated": 2.1792322,
@@ -12691,7 +12701,7 @@
      "symbol": "HD",
      "name": "Home Depot (The)",
      "opened_at": "2026-11-03T15:42:10.958719+00:00",
-     "days_held": 10.36,
+     "days_held": 10.37,
      "quantity": "0.005817676",
      "avg_price": 334.21,
      "allocated": 1.9443255,
@@ -12710,7 +12720,7 @@
      "symbol": "NKE",
      "name": "Nike, Inc.",
      "opened_at": "2026-11-04T15:42:14.393855+00:00",
-     "days_held": 9.361,
+     "days_held": 9.367,
      "quantity": "0.053051235",
      "avg_price": 40.57,
      "allocated": 2.1522886,
@@ -12748,7 +12758,7 @@
      "symbol": "JNJ",
      "name": "Johnson & Johnson",
      "opened_at": "2026-11-11T15:41:47.927707+00:00",
-     "days_held": 2.361,
+     "days_held": 2.367,
      "quantity": "0.006783766",
      "avg_price": 277.6,
      "allocated": 1.8831734,
@@ -12824,7 +12834,7 @@
      "symbol": "LOW",
      "name": "Lowe's",
      "opened_at": "2026-11-03T15:42:17.211610+00:00",
-     "days_held": 10.36,
+     "days_held": 10.37,
      "quantity": "0.008172775",
      "avg_price": 214.95,
      "allocated": 1.756738,
@@ -12862,7 +12872,7 @@
      "symbol": "SBUX",
      "name": "Starbucks",
      "opened_at": "2026-11-05T15:42:11.177238+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.017219434",
      "avg_price": 109.2,
      "allocated": 1.8803622,
@@ -12900,7 +12910,7 @@
      "symbol": "AMZN",
      "name": "Amazon",
      "opened_at": "2026-10-29T15:41:53.259624+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.006752065",
      "avg_price": 248.8,
      "allocated": 1.6799138,
@@ -12919,7 +12929,7 @@
      "symbol": "MCD",
      "name": "McDonald's",
      "opened_at": "2026-11-05T15:42:05.126950+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.006553429",
      "avg_price": 279.92,
      "allocated": 1.8344358,
@@ -12938,7 +12948,7 @@
      "symbol": "PEP",
      "name": "PepsiCo",
      "opened_at": "2026-11-05T15:42:03.466728+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.012245632",
      "avg_price": 144.79,
      "allocated": 1.7730451,
@@ -12957,7 +12967,7 @@
      "symbol": "ABT",
      "name": "Abbott Laboratories",
      "opened_at": "2026-11-05T15:42:14.484618+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.015657456",
      "avg_price": 115.42,
      "allocated": 1.8071836,
@@ -12976,7 +12986,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-10-27T15:42:05.942495+00:00",
-     "days_held": 17.36,
+     "days_held": 17.37,
      "quantity": "0.007292339",
      "avg_price": 217.25,
      "allocated": 1.5842606,
@@ -13033,7 +13043,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-11-12T15:41:58.962099+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.010085034",
      "avg_price": 148.05,
      "allocated": 1.4930893,
@@ -13071,7 +13081,7 @@
      "symbol": "BLK",
      "name": "BlackRock",
      "opened_at": "2026-10-29T15:42:12.648202+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.001189421",
      "avg_price": 1171.19,
      "allocated": 1.393038,
@@ -13109,7 +13119,7 @@
      "symbol": "LMT",
      "name": "Lockheed Martin",
      "opened_at": "2026-10-29T15:42:17.434509+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.002342448",
      "avg_price": 644.08,
      "allocated": 1.5087239,
@@ -13128,7 +13138,7 @@
      "symbol": "ADBE",
      "name": "Adobe Inc.",
      "opened_at": "2026-11-11T15:41:51.530559+00:00",
-     "days_held": 2.361,
+     "days_held": 2.367,
      "quantity": "0.005094323",
      "avg_price": 237.21,
      "allocated": 1.2084244,
@@ -20721,8 +20731,8 @@
     "p_sharpe_positive": 0.488,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.987,
-    "excess_return_ann_pct": 30.26,
-    "days_to_significant_vs_buy_hold": 53
+    "excess_return_ann_pct": 30.56,
+    "days_to_significant_vs_buy_hold": 51
    }
   },
   {
@@ -20790,7 +20800,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.59597715597896,
     "last_decision_date": "2026-11-13"
@@ -20798,23 +20808,23 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.657170+00:00",
    "summary": {
-    "equity": 97.326727,
+    "equity": 97.30329,
     "cash": 4.9420476,
-    "invested": 92.384679,
+    "invested": 92.361243,
     "invested_pct": 94.92,
-    "pnl": -2.6732732,
-    "pnl_pct": -2.67327,
-    "day_pnl": 0.0726551,
-    "day_pnl_pct": 0.074707,
+    "pnl": -2.6967097,
+    "pnl_pct": -2.69671,
+    "day_pnl": 0.0492186,
+    "day_pnl_pct": 0.050608,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -2.6353009,
+    "unrealized_pnl": -2.6587374,
     "fees": 0.0379723,
     "slippage_cost": 0.0210596,
     "max_drawdown_pct": 4.7718,
-    "current_drawdown_pct": 3.3786,
-    "sharpe": -2.2,
-    "sortino": -2.693,
-    "volatility_annual_pct": 21.46,
+    "current_drawdown_pct": 3.4019,
+    "sharpe": -2.221,
+    "sortino": -2.718,
+    "volatility_annual_pct": 21.45,
     "days_live": 21,
     "num_trades": 0,
     "num_fills": 50,
@@ -21390,7 +21400,8 @@
      "2026-11-13T22:22:29.303590+00:00",
      "2026-11-13T23:22:29.947417+00:00",
      "2026-11-13T23:44:04.302395+00:00",
-     "2026-11-14T00:21:58.244903+00:00"
+     "2026-11-14T00:21:58.244903+00:00",
+     "2026-11-14T00:29:56.667902+00:00"
     ],
     "equity": [
      100.0,
@@ -21955,7 +21966,8 @@
      97.259313,
      97.205789,
      97.254072,
-     97.326727
+     97.326727,
+     97.30329
     ]
    },
    "positions": [
@@ -21991,7 +22003,7 @@
      "market_value": 2.0967657,
      "unrealized_pnl": 0.192199,
      "unrealized_pct": 10.091,
-     "weight_pct": 2.154,
+     "weight_pct": 2.155,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22029,7 +22041,7 @@
      "market_value": 2.0663933,
      "unrealized_pnl": 0.165938,
      "unrealized_pct": 8.7315,
-     "weight_pct": 2.123,
+     "weight_pct": 2.124,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22048,7 +22060,7 @@
      "market_value": 2.0482126,
      "unrealized_pnl": 0.148073,
      "unrealized_pct": 7.7928,
-     "weight_pct": 2.104,
+     "weight_pct": 2.105,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22067,7 +22079,7 @@
      "market_value": 2.0421078,
      "unrealized_pnl": 0.141715,
      "unrealized_pct": 7.4571,
-     "weight_pct": 2.098,
+     "weight_pct": 2.099,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22105,7 +22117,7 @@
      "market_value": 2.0390131,
      "unrealized_pnl": 0.138784,
      "unrealized_pct": 7.3035,
-     "weight_pct": 2.095,
+     "weight_pct": 2.096,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22124,7 +22136,7 @@
      "market_value": 2.0336019,
      "unrealized_pnl": 0.132833,
      "unrealized_pct": 6.9884,
-     "weight_pct": 2.089,
+     "weight_pct": 2.09,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22162,7 +22174,7 @@
      "market_value": 2.0178883,
      "unrealized_pnl": 0.117413,
      "unrealized_pct": 6.1781,
-     "weight_pct": 2.073,
+     "weight_pct": 2.074,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22181,7 +22193,7 @@
      "market_value": 2.0062348,
      "unrealized_pnl": 0.10607,
      "unrealized_pct": 5.5821,
-     "weight_pct": 2.061,
+     "weight_pct": 2.062,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22257,7 +22269,7 @@
      "market_value": 1.9670268,
      "unrealized_pnl": 0.0669165,
      "unrealized_pct": 3.5217,
-     "weight_pct": 2.021,
+     "weight_pct": 2.022,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22295,7 +22307,7 @@
      "market_value": 1.9154943,
      "unrealized_pnl": 0.0152792,
      "unrealized_pct": 0.80408,
-     "weight_pct": 1.968,
+     "weight_pct": 1.969,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22314,7 +22326,7 @@
      "market_value": 1.9041053,
      "unrealized_pnl": 0.00373209,
      "unrealized_pct": 0.19639,
-     "weight_pct": 1.956,
+     "weight_pct": 1.957,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22352,7 +22364,7 @@
      "market_value": 1.8992815,
      "unrealized_pnl": -0.000821134,
      "unrealized_pct": -0.043215,
-     "weight_pct": 1.951,
+     "weight_pct": 1.952,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22371,7 +22383,7 @@
      "market_value": 1.8981954,
      "unrealized_pnl": -0.00198193,
      "unrealized_pct": -0.1043,
-     "weight_pct": 1.95,
+     "weight_pct": 1.951,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22447,7 +22459,7 @@
      "market_value": 1.8778869,
      "unrealized_pnl": -0.0284893,
      "unrealized_pct": -1.4944,
-     "weight_pct": 1.929,
+     "weight_pct": 1.93,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22466,7 +22478,7 @@
      "market_value": 1.8727167,
      "unrealized_pnl": -0.027506,
      "unrealized_pct": -1.4475,
-     "weight_pct": 1.924,
+     "weight_pct": 1.925,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22504,7 +22516,7 @@
      "market_value": 1.8621135,
      "unrealized_pnl": -0.0380512,
      "unrealized_pct": -2.0025,
-     "weight_pct": 1.913,
+     "weight_pct": 1.914,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22523,7 +22535,7 @@
      "market_value": 1.8467246,
      "unrealized_pnl": -0.0535081,
      "unrealized_pct": -2.8159,
-     "weight_pct": 1.897,
+     "weight_pct": 1.898,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22656,7 +22668,7 @@
      "market_value": 1.7579471,
      "unrealized_pnl": -0.149839,
      "unrealized_pct": -7.8541,
-     "weight_pct": 1.806,
+     "weight_pct": 1.807,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22694,7 +22706,7 @@
      "market_value": 1.7153642,
      "unrealized_pnl": -0.185025,
      "unrealized_pct": -9.7361,
-     "weight_pct": 1.762,
+     "weight_pct": 1.763,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22713,7 +22725,7 @@
      "market_value": 1.6976169,
      "unrealized_pnl": -0.202539,
      "unrealized_pct": -10.659,
-     "weight_pct": 1.744,
+     "weight_pct": 1.745,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22728,11 +22740,11 @@
      "avg_price": 56.654,
      "allocated": 1.9026844,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 49.5205,
-     "market_value": 1.6589635,
-     "unrealized_pnl": -0.243721,
-     "unrealized_pct": -12.809,
-     "weight_pct": 1.705,
+     "last_price": 49.373,
+     "market_value": 1.6540222,
+     "unrealized_pnl": -0.248662,
+     "unrealized_pct": -13.069,
+     "weight_pct": 1.7,
      "entry_fees": 0.00474485,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22751,7 +22763,7 @@
      "market_value": 1.6449766,
      "unrealized_pnl": -0.255215,
      "unrealized_pct": -13.431,
-     "weight_pct": 1.69,
+     "weight_pct": 1.691,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22766,11 +22778,11 @@
      "avg_price": 11.465,
      "allocated": 1.9020126,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 9.865,
-     "market_value": 1.6324957,
-     "unrealized_pnl": -0.269517,
-     "unrealized_pct": -14.17,
-     "weight_pct": 1.677,
+     "last_price": 9.8435,
+     "market_value": 1.6289378,
+     "unrealized_pnl": -0.273075,
+     "unrealized_pct": -14.357,
+     "weight_pct": 1.674,
      "entry_fees": 0.00474317,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22785,31 +22797,12 @@
      "avg_price": 80106.8,
      "allocated": 1.9040806,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 68293.765,
-     "market_value": 1.6192452,
-     "unrealized_pnl": -0.284835,
-     "unrealized_pct": -14.959,
-     "weight_pct": 1.664,
+     "last_price": 68258.825,
+     "market_value": 1.6184167,
+     "unrealized_pnl": -0.285664,
+     "unrealized_pct": -15.003,
+     "weight_pct": 1.663,
      "entry_fees": 0.00474833,
-     "entry_reason": "rebalance",
-     "stop_loss": null,
-     "take_profit": null
-    },
-    {
-     "symbol": "DOGE-USD",
-     "name": "Dogecoin",
-     "opened_at": "2026-10-26T16:15:26.590000+00:00",
-     "days_held": 18.34,
-     "quantity": "24.50822315",
-     "avg_price": 0.07745,
-     "allocated": 1.9029073,
-     "allocated_pct_at_entry": 1.903,
-     "last_price": 0.06464,
-     "market_value": 1.5842115,
-     "unrealized_pnl": -0.318696,
-     "unrealized_pct": -16.748,
-     "weight_pct": 1.628,
-     "entry_fees": 0.0047454,
      "entry_reason": "rebalance",
      "stop_loss": null,
      "take_profit": null
@@ -22823,12 +22816,31 @@
      "avg_price": 2318.24,
      "allocated": 1.9039662,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 1933.405,
-     "market_value": 1.583942,
-     "unrealized_pnl": -0.320024,
-     "unrealized_pct": -16.808,
-     "weight_pct": 1.627,
+     "last_price": 1931.235,
+     "market_value": 1.5821643,
+     "unrealized_pnl": -0.321802,
+     "unrealized_pct": -16.902,
+     "weight_pct": 1.626,
      "entry_fees": 0.00474805,
+     "entry_reason": "rebalance",
+     "stop_loss": null,
+     "take_profit": null
+    },
+    {
+     "symbol": "DOGE-USD",
+     "name": "Dogecoin",
+     "opened_at": "2026-10-26T16:15:26.590000+00:00",
+     "days_held": 18.34,
+     "quantity": "24.50822315",
+     "avg_price": 0.07745,
+     "allocated": 1.9029073,
+     "allocated_pct_at_entry": 1.903,
+     "last_price": 0.0645,
+     "market_value": 1.5807804,
+     "unrealized_pnl": -0.322127,
+     "unrealized_pct": -16.928,
+     "weight_pct": 1.625,
+     "entry_fees": 0.0047454,
      "entry_reason": "rebalance",
      "stop_loss": null,
      "take_profit": null
@@ -22842,11 +22854,11 @@
      "avg_price": 0.20551,
      "allocated": 1.9021584,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 0.168465,
-     "market_value": 1.555389,
-     "unrealized_pnl": -0.346769,
-     "unrealized_pct": -18.23,
-     "weight_pct": 1.598,
+     "last_price": 0.16815,
+     "market_value": 1.5524807,
+     "unrealized_pnl": -0.349678,
+     "unrealized_pct": -18.383,
+     "weight_pct": 1.596,
      "entry_fees": 0.00474354,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22861,11 +22873,11 @@
      "avg_price": 1.2923,
      "allocated": 1.9046026,
      "allocated_pct_at_entry": 1.905,
-     "last_price": 1.01175,
-     "market_value": 1.4874071,
-     "unrealized_pnl": -0.417195,
-     "unrealized_pct": -21.905,
-     "weight_pct": 1.528,
+     "last_price": 1.0106,
+     "market_value": 1.4857165,
+     "unrealized_pnl": -0.418886,
+     "unrealized_pct": -21.993,
+     "weight_pct": 1.527,
      "entry_fees": 0.00474963,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -22880,11 +22892,11 @@
      "avg_price": 101.59,
      "allocated": 1.9044681,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 78.41,
-     "market_value": 1.466256,
-     "unrealized_pnl": -0.438212,
-     "unrealized_pct": -23.01,
-     "weight_pct": 1.507,
+     "last_price": 78.18,
+     "market_value": 1.4619551,
+     "unrealized_pnl": -0.442513,
+     "unrealized_pct": -23.236,
+     "weight_pct": 1.502,
      "entry_fees": 0.0047493,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -24997,12 +25009,12 @@
    "learning": null,
    "significance": {
     "days": 20,
-    "sharpe": -1.828,
+    "sharpe": -1.845,
     "sharpe_ci95": [
-     -5.782,
-     2.734
+     -5.866,
+     2.689
     ],
-    "p_sharpe_positive": 0.161,
+    "p_sharpe_positive": 0.157,
     "days_to_significant_sharpe": null
    }
   },
@@ -25030,7 +25042,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 101.4776045672673,
     "last_decision_date": "2026-11-13"
@@ -25647,7 +25659,8 @@
      "2026-11-13T22:22:29.345358+00:00",
      "2026-11-13T23:22:29.992215+00:00",
      "2026-11-13T23:44:04.354228+00:00",
-     "2026-11-14T00:21:58.276379+00:00"
+     "2026-11-14T00:21:58.276379+00:00",
+     "2026-11-14T00:29:58.572688+00:00"
     ],
     "equity": [
      100.0,
@@ -26229,6 +26242,7 @@
      95.874881,
      95.874881,
      95.874881,
+     95.874881,
      95.874881
     ]
    },
@@ -26237,7 +26251,7 @@
      "symbol": "DE",
      "name": "Deere & Company",
      "opened_at": "2026-11-10T15:41:46.468857+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.017216183",
      "avg_price": 683.0872,
      "allocated": 11.760154,
@@ -26256,7 +26270,7 @@
      "symbol": "ABT",
      "name": "Abbott Laboratories",
      "opened_at": "2026-11-12T15:41:59.718877+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.062008989",
      "avg_price": 108.54,
      "allocated": 6.7304557,
@@ -26275,7 +26289,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.021181293",
      "avg_price": 295.08,
      "allocated": 6.2501759,
@@ -26294,7 +26308,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.013295258",
      "avg_price": 420.46,
      "allocated": 5.5901242,
@@ -26332,7 +26346,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.0081225",
      "avg_price": 375.62,
      "allocated": 3.0509734,
@@ -26351,7 +26365,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-11-11T15:41:56.599149+00:00",
-     "days_held": 2.361,
+     "days_held": 2.367,
      "quantity": "0.009019188",
      "avg_price": 291.1,
      "allocated": 2.6254856,
@@ -26370,7 +26384,7 @@
      "symbol": "PLTR",
      "name": "Palantir Technologies",
      "opened_at": "2026-11-10T15:41:42.829791+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.013353611",
      "avg_price": 166.96,
      "allocated": 2.2295189,
@@ -26389,7 +26403,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 9.361,
+     "days_held": 9.367,
      "quantity": "0.017916013",
      "avg_price": 111.95,
      "allocated": 2.0056977,
@@ -26408,7 +26422,7 @@
      "symbol": "MSFT",
      "name": "Microsoft",
      "opened_at": "2026-11-05T15:41:53.945761+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.002375914",
      "avg_price": 542.14136,
      "allocated": 1.2880812,
@@ -48317,8 +48331,8 @@
     ],
     "p_sharpe_positive": 0.103,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.295,
-    "excess_return_ann_pct": -19.79,
+    "p_beats_buy_hold": 0.3,
+    "excess_return_ann_pct": -19.48,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -48334,7 +48348,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T20:21:21.118540+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.8868875122072,
     "last_decision_date": "2026-11-13"
@@ -48342,22 +48356,22 @@
    "status": "synced",
    "started_at": "2026-10-25T20:21:21.118519+00:00",
    "summary": {
-    "equity": 97.889255,
+    "equity": 97.886331,
     "cash": 1.9841608,
-    "invested": 95.905094,
+    "invested": 95.90217,
     "invested_pct": 97.97,
-    "pnl": -2.1107453,
-    "pnl_pct": -2.11075,
-    "day_pnl": 0.0176986,
-    "day_pnl_pct": 0.018084,
+    "pnl": -2.1136691,
+    "pnl_pct": -2.11367,
+    "day_pnl": 0.0147749,
+    "day_pnl_pct": 0.015096,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -2.0982441,
+    "unrealized_pnl": -2.1011679,
     "fees": 0.0125012,
     "slippage_cost": 0.0158806,
     "max_drawdown_pct": 4.0221,
-    "current_drawdown_pct": 2.991,
-    "sharpe": -1.793,
-    "sortino": -2.207,
+    "current_drawdown_pct": 2.9939,
+    "sharpe": -1.795,
+    "sortino": -2.21,
     "volatility_annual_pct": 20.58,
     "days_live": 21,
     "num_trades": 0,
@@ -48928,7 +48942,8 @@
      "2026-11-13T22:22:29.904019+00:00",
      "2026-11-13T23:22:30.698430+00:00",
      "2026-11-13T23:44:04.844200+00:00",
-     "2026-11-14T00:21:58.691299+00:00"
+     "2026-11-14T00:21:58.691299+00:00",
+     "2026-11-14T00:29:59.755156+00:00"
     ],
     "equity": [
      100.0,
@@ -49487,7 +49502,8 @@
      97.880584,
      97.862246,
      97.871556,
-     97.889255
+     97.889255,
+     97.886331
     ]
    },
    "positions": [
@@ -49656,7 +49672,7 @@
      "market_value": 3.6506805,
      "unrealized_pnl": 0.150464,
      "unrealized_pct": 4.2987,
-     "weight_pct": 3.729,
+     "weight_pct": 3.73,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -49747,11 +49763,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5086377,
      "allocated_pct_at_entry": 3.509,
-     "last_price": 68293.765,
-     "market_value": 2.9762423,
-     "unrealized_pnl": -0.532395,
-     "unrealized_pct": -15.174,
-     "weight_pct": 3.04,
+     "last_price": 68258.825,
+     "market_value": 2.9747196,
+     "unrealized_pnl": -0.533918,
+     "unrealized_pct": -15.217,
+     "weight_pct": 3.039,
      "entry_fees": 0.00874972,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -49766,11 +49782,11 @@
      "avg_price": 2324.1,
      "allocated": 1.5043299,
      "allocated_pct_at_entry": 1.504,
-     "last_price": 1933.405,
-     "market_value": 1.2483223,
-     "unrealized_pnl": -0.256008,
-     "unrealized_pct": -17.018,
-     "weight_pct": 1.275,
+     "last_price": 1931.235,
+     "market_value": 1.2469212,
+     "unrealized_pnl": -0.257409,
+     "unrealized_pct": -17.111,
+     "weight_pct": 1.274,
      "entry_fees": 0.00375145,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -51344,16 +51360,16 @@
    "learning": null,
    "significance": {
     "days": 20,
-    "sharpe": -1.489,
+    "sharpe": -1.492,
     "sharpe_ci95": [
-     -5.009,
-     3.141
+     -5.014,
+     3.131
     ],
     "p_sharpe_positive": 0.234,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.692,
-    "excess_return_ann_pct": 7.13,
-    "days_to_significant_vs_buy_hold": 531
+    "p_beats_buy_hold": 0.707,
+    "excess_return_ann_pct": 7.39,
+    "days_to_significant_vs_buy_hold": 491
    }
   },
   {
@@ -51374,7 +51390,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.341612+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.60600128383466,
     "last_decision_date": "2026-11-13"
@@ -51964,7 +51980,8 @@
      "2026-11-13T22:22:29.919822+00:00",
      "2026-11-13T23:22:30.715208+00:00",
      "2026-11-13T23:44:04.862380+00:00",
-     "2026-11-14T00:21:58.703163+00:00"
+     "2026-11-14T00:21:58.703163+00:00",
+     "2026-11-14T00:29:59.899641+00:00"
     ],
     "equity": [
      100.0,
@@ -52519,6 +52536,7 @@
      99.431219,
      99.431219,
      99.431219,
+     99.431219,
      99.431219
     ]
    },
@@ -52527,7 +52545,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.179910519",
      "avg_price": 165.09,
      "allocated": 29.701428,
@@ -55503,9 +55521,9 @@
     ],
     "p_sharpe_positive": 0.155,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.727,
-    "excess_return_ann_pct": 24.18,
-    "days_to_significant_vs_buy_hold": 583,
+    "p_beats_buy_hold": 0.732,
+    "excess_return_ann_pct": 24.5,
+    "days_to_significant_vs_buy_hold": 567,
     "rank_ic": {
      "mean": 0.0293,
      "t": 0.87,
@@ -55529,7 +55547,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342190+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.7305287818188,
     "last_decision_date": "2026-11-13"
@@ -56136,7 +56154,8 @@
      "2026-11-13T22:22:29.928726+00:00",
      "2026-11-13T23:22:30.724599+00:00",
      "2026-11-13T23:44:04.871938+00:00",
-     "2026-11-14T00:21:58.709727+00:00"
+     "2026-11-14T00:21:58.709727+00:00",
+     "2026-11-14T00:29:59.908741+00:00"
     ],
     "equity": [
      100.0,
@@ -56708,6 +56727,7 @@
      100.72626,
      100.72626,
      100.72626,
+     100.72626,
      100.72626
     ]
    },
@@ -56716,7 +56736,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 11.36,
+     "days_held": 11.37,
      "quantity": "0.069782489",
      "avg_price": 285.7,
      "allocated": 19.936857,
@@ -59979,9 +59999,9 @@
     ],
     "p_sharpe_positive": 0.748,
     "days_to_significant_sharpe": 426,
-    "p_beats_buy_hold": 0.97,
-    "excess_return_ann_pct": 43.84,
-    "days_to_significant_vs_buy_hold": 57
+    "p_beats_buy_hold": 0.972,
+    "excess_return_ann_pct": 44.16,
+    "days_to_significant_vs_buy_hold": 56
    }
   },
   {
@@ -60000,7 +60020,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342744+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.54028082604681,
     "last_decision_date": "2026-11-13"
@@ -60612,7 +60632,8 @@
      "2026-11-13T22:22:29.942400+00:00",
      "2026-11-13T23:22:30.739180+00:00",
      "2026-11-13T23:44:04.887236+00:00",
-     "2026-11-14T00:21:58.719683+00:00"
+     "2026-11-14T00:21:58.719683+00:00",
+     "2026-11-14T00:29:59.923286+00:00"
     ],
     "equity": [
      100.0,
@@ -61189,6 +61210,7 @@
      96.083589,
      96.083589,
      96.083589,
+     96.083589,
      96.083589
     ]
    },
@@ -61216,7 +61238,7 @@
      "symbol": "WMT",
      "name": "Walmart",
      "opened_at": "2026-10-29T15:42:02.947999+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.083433475",
      "avg_price": 120.83,
      "allocated": 10.081267,
@@ -61273,7 +61295,7 @@
      "symbol": "LLY",
      "name": "Lilly (Eli)",
      "opened_at": "2026-11-05T15:42:01.795038+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.005643378",
      "avg_price": 1432.6,
      "allocated": 8.0847033,
@@ -61292,7 +61314,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.019042078",
      "avg_price": 420.46,
      "allocated": 8.0064321,
@@ -61311,7 +61333,7 @@
      "symbol": "MA",
      "name": "Mastercard",
      "opened_at": "2026-11-12T15:41:49.549456+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.011130998",
      "avg_price": 661.4,
      "allocated": 7.3620421,
@@ -61330,7 +61352,7 @@
      "symbol": "LMT",
      "name": "Lockheed Martin",
      "opened_at": "2026-11-10T15:41:46.724949+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.00995162",
      "avg_price": 594.28,
      "allocated": 5.9140487,
@@ -61349,7 +61371,7 @@
      "symbol": "XOM",
      "name": "ExxonMobil",
      "opened_at": "2026-11-05T15:42:00.152163+00:00",
-     "days_held": 8.361,
+     "days_held": 8.367,
      "quantity": "0.031429346",
      "avg_price": 172.52,
      "allocated": 5.4221908,
@@ -61387,7 +61409,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-05T15:42:15.224210+00:00",
-     "days_held": 8.361,
+     "days_held": 8.366,
      "quantity": "0.033207591",
      "avg_price": 140.21,
      "allocated": 4.6560363,
@@ -64725,8 +64747,8 @@
     ],
     "p_sharpe_positive": 0.201,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.29,
-    "excess_return_ann_pct": -22.89,
+    "p_beats_buy_hold": 0.294,
+    "excess_return_ann_pct": -22.57,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -64754,7 +64776,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343266+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.88242090937594,
     "last_decision_date": "2026-11-13"
@@ -65361,7 +65383,8 @@
      "2026-11-13T22:22:29.984263+00:00",
      "2026-11-13T23:22:30.783692+00:00",
      "2026-11-13T23:44:04.940823+00:00",
-     "2026-11-14T00:21:58.750798+00:00"
+     "2026-11-14T00:21:58.750798+00:00",
+     "2026-11-14T00:30:00.161251+00:00"
     ],
     "equity": [
      100.0,
@@ -65933,6 +65956,7 @@
      93.894187,
      93.894187,
      93.894187,
+     93.894187,
      93.894187
     ]
    },
@@ -65941,7 +65965,7 @@
      "symbol": "ABT",
      "name": "Abbott Laboratories",
      "opened_at": "2026-11-12T15:41:59.718877+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.092506722",
      "avg_price": 108.54,
      "allocated": 10.04068,
@@ -65960,7 +65984,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.026329236",
      "avg_price": 295.08,
      "allocated": 7.769231,
@@ -65979,7 +66003,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.012134376",
      "avg_price": 375.62,
      "allocated": 4.5579143,
@@ -65998,7 +66022,7 @@
      "symbol": "NOW",
      "name": "ServiceNow",
      "opened_at": "2026-11-04T15:42:12.876921+00:00",
-     "days_held": 9.361,
+     "days_held": 9.367,
      "quantity": "0.020590522",
      "avg_price": 111.95,
      "allocated": 2.3051089,
@@ -82812,7 +82836,7 @@
     "p_sharpe_positive": 0.013,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.093,
-    "excess_return_ann_pct": -54.58,
+    "excess_return_ann_pct": -54.26,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -82830,7 +82854,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343815+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 101.07451587278447,
     "last_decision_date": "2026-11-13"
@@ -82838,22 +82862,22 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.343783+00:00",
    "summary": {
-    "equity": 96.890612,
+    "equity": 96.887688,
     "cash": 1.9826511,
-    "invested": 94.907961,
+    "invested": 94.905037,
     "invested_pct": 97.95,
-    "pnl": -3.1093876,
-    "pnl_pct": -3.10939,
-    "day_pnl": 0.0177044,
-    "day_pnl_pct": 0.018276,
+    "pnl": -3.1123123,
+    "pnl_pct": -3.11231,
+    "day_pnl": 0.0147797,
+    "day_pnl_pct": 0.015257,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -3.0968819,
+    "unrealized_pnl": -3.0998066,
     "fees": 0.0125057,
     "slippage_cost": 0.0109353,
     "max_drawdown_pct": 5.7795,
-    "current_drawdown_pct": 4.1589,
-    "sharpe": -2.517,
-    "sortino": -2.979,
+    "current_drawdown_pct": 4.1618,
+    "sharpe": -2.52,
+    "sortino": -2.982,
     "volatility_annual_pct": 22.59,
     "days_live": 20,
     "num_trades": 0,
@@ -83419,7 +83443,8 @@
      "2026-11-13T22:22:30.095082+00:00",
      "2026-11-13T23:22:30.918093+00:00",
      "2026-11-13T23:44:05.072613+00:00",
-     "2026-11-14T00:21:58.824046+00:00"
+     "2026-11-14T00:21:58.824046+00:00",
+     "2026-11-14T00:30:00.284565+00:00"
     ],
     "equity": [
      100.0,
@@ -83973,7 +83998,8 @@
      96.88194,
      96.863594,
      96.872908,
-     96.890612
+     96.890612,
+     96.887688
     ]
    },
    "positions": [
@@ -84066,7 +84092,7 @@
      "market_value": 7.3049706,
      "unrealized_pnl": 0.304538,
      "unrealized_pct": 4.3503,
-     "weight_pct": 7.539,
+     "weight_pct": 7.54,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -84085,7 +84111,7 @@
      "market_value": 6.7556108,
      "unrealized_pnl": -0.244414,
      "unrealized_pct": -3.4916,
-     "weight_pct": 6.972,
+     "weight_pct": 6.973,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -84142,7 +84168,7 @@
      "market_value": 5.9088452,
      "unrealized_pnl": -0.0911741,
      "unrealized_pct": -1.5196,
-     "weight_pct": 6.098,
+     "weight_pct": 6.099,
      "entry_fees": 0.0,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -84157,11 +84183,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5102479,
      "allocated_pct_at_entry": 3.51,
-     "last_price": 68293.765,
-     "market_value": 2.9776082,
-     "unrealized_pnl": -0.53264,
-     "unrealized_pct": -15.174,
-     "weight_pct": 3.073,
+     "last_price": 68258.825,
+     "market_value": 2.9760848,
+     "unrealized_pnl": -0.534163,
+     "unrealized_pct": -15.217,
+     "weight_pct": 3.072,
      "entry_fees": 0.00875374,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -84176,11 +84202,11 @@
      "avg_price": 2324.1,
      "allocated": 1.5045395,
      "allocated_pct_at_entry": 1.505,
-     "last_price": 1933.405,
-     "market_value": 1.2484963,
-     "unrealized_pnl": -0.256043,
-     "unrealized_pct": -17.018,
-     "weight_pct": 1.289,
+     "last_price": 1931.235,
+     "market_value": 1.247095,
+     "unrealized_pnl": -0.257445,
+     "unrealized_pct": -17.111,
+     "weight_pct": 1.287,
      "entry_fees": 0.00375197,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -85546,15 +85572,15 @@
    "learning": null,
    "significance": {
     "days": 19,
-    "sharpe": -2.091,
+    "sharpe": -2.094,
     "sharpe_ci95": [
-     -6.427,
-     3.54
+     -6.435,
+     3.536
     ],
     "p_sharpe_positive": 0.21,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.399,
-    "excess_return_ann_pct": -7.62,
+    "p_beats_buy_hold": 0.404,
+    "excess_return_ann_pct": -7.34,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -85570,7 +85596,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.251622+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-13"
@@ -86163,9 +86189,11 @@
      "2026-11-13T22:22:30.108429+00:00",
      "2026-11-13T23:22:30.931834+00:00",
      "2026-11-13T23:44:05.087836+00:00",
-     "2026-11-14T00:21:58.833308+00:00"
+     "2026-11-14T00:21:58.833308+00:00",
+     "2026-11-14T00:30:00.297730+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -88227,7 +88255,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.345340+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-13"
@@ -88816,9 +88844,11 @@
      "2026-11-13T22:22:30.113913+00:00",
      "2026-11-13T23:22:30.937423+00:00",
      "2026-11-13T23:44:05.093540+00:00",
-     "2026-11-14T00:21:58.837003+00:00"
+     "2026-11-14T00:21:58.837003+00:00",
+     "2026-11-14T00:30:00.303113+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -90872,7 +90902,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.252268+00:00",
-    "last_run": "2026-11-14T00:20:48.704678+00:00",
+    "last_run": "2026-11-14T00:28:50.958589+00:00",
     "last_status": "synced",
     "risk_peak": 100.08378034356787,
     "last_decision_date": "2026-11-13"
@@ -90880,22 +90910,22 @@
    "status": "synced",
    "started_at": "2026-10-25T21:21:36.252241+00:00",
    "summary": {
-    "equity": 99.228144,
+    "equity": 99.22787,
     "cash": 61.410409,
-    "invested": 37.817735,
+    "invested": 37.817461,
     "invested_pct": 38.11,
-    "pnl": -0.77185629,
-    "pnl_pct": -0.771856,
-    "day_pnl": 0.000788154,
-    "day_pnl_pct": 0.00079429,
+    "pnl": -0.7721296,
+    "pnl_pct": -0.77213,
+    "day_pnl": 0.000514842,
+    "day_pnl_pct": 0.00051885,
     "realized_pnl": -0.1751591,
-    "unrealized_pnl": -0.57175959,
+    "unrealized_pnl": -0.5720329,
     "fees": 0.0249376,
     "slippage_cost": 0.01429,
     "max_drawdown_pct": 1.3995,
-    "current_drawdown_pct": 0.85492,
-    "sharpe": -2.62,
-    "sortino": -3.002,
+    "current_drawdown_pct": 0.85519,
+    "sharpe": -2.621,
+    "sortino": -3.003,
     "volatility_annual_pct": 5.343,
     "days_live": 21,
     "num_trades": 4,
@@ -91469,7 +91499,8 @@
      "2026-11-13T22:22:30.120033+00:00",
      "2026-11-13T23:22:30.943785+00:00",
      "2026-11-13T23:44:05.099814+00:00",
-     "2026-11-14T00:21:58.841174+00:00"
+     "2026-11-14T00:21:58.841174+00:00",
+     "2026-11-14T00:30:00.309128+00:00"
     ],
     "equity": [
      100.0,
@@ -92031,7 +92062,8 @@
      99.226898,
      99.226739,
      99.227356,
-     99.228144
+     99.228144,
+     99.22787
     ]
    },
    "positions": [
@@ -92039,7 +92071,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.029197599",
      "avg_price": 165.09,
      "allocated": 4.8202316,
@@ -92077,7 +92109,7 @@
      "symbol": "TMO",
      "name": "Thermo Fisher Scientific",
      "opened_at": "2026-10-29T15:42:14.231933+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.005183207",
      "avg_price": 703.84268,
      "allocated": 3.6481623,
@@ -92115,7 +92147,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-11-04T15:42:17.245543+00:00",
-     "days_held": 9.361,
+     "days_held": 9.366,
      "quantity": "0.017352146",
      "avg_price": 147.54,
      "allocated": 2.5601356,
@@ -92134,7 +92166,7 @@
      "symbol": "GOOGL",
      "name": "Alphabet Inc. (Class A)",
      "opened_at": "2026-11-02T15:41:59.410441+00:00",
-     "days_held": 11.36,
+     "days_held": 11.37,
      "quantity": "0.008435445",
      "avg_price": 285.7,
      "allocated": 2.4100066,
@@ -92191,7 +92223,7 @@
      "symbol": "XLV",
      "name": "Health Care Select Sector SPDR",
      "opened_at": "2026-10-29T15:41:50.618745+00:00",
-     "days_held": 15.36,
+     "days_held": 15.37,
      "quantity": "0.011185106",
      "avg_price": 183.28,
      "allocated": 2.0500062,
@@ -92210,7 +92242,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 3.361,
+     "days_held": 3.367,
      "quantity": "0.006744123",
      "avg_price": 295.08,
      "allocated": 1.9900558,
@@ -92267,7 +92299,7 @@
      "symbol": "COP",
      "name": "ConocoPhillips",
      "opened_at": "2026-11-02T15:42:18.772820+00:00",
-     "days_held": 11.36,
+     "days_held": 11.37,
      "quantity": "0.013683086",
      "avg_price": 149.83,
      "allocated": 2.0501368,
@@ -92305,7 +92337,7 @@
      "symbol": "HON",
      "name": "Honeywell Technologies",
      "opened_at": "2026-11-04T15:42:19.969774+00:00",
-     "days_held": 9.361,
+     "days_held": 9.366,
      "quantity": "0.002592371",
      "avg_price": 225.38,
      "allocated": 0.58426858,
@@ -92324,16 +92356,16 @@
      "symbol": "LINK-USD",
      "name": "Chainlink",
      "opened_at": "2026-11-12T15:42:01.894000+00:00",
-     "days_held": 1.361,
+     "days_held": 1.367,
      "quantity": "0.01271216",
      "avg_price": 9.879,
      "allocated": 0.12589739,
      "allocated_pct_at_entry": 0.1268,
-     "last_price": 9.865,
-     "market_value": 0.12540546,
-     "unrealized_pnl": -0.000491929,
-     "unrealized_pct": -0.39074,
-     "weight_pct": 0.1264,
+     "last_price": 9.8435,
+     "market_value": 0.12513215,
+     "unrealized_pnl": -0.00076524,
+     "unrealized_pct": -0.60783,
+     "weight_pct": 0.1261,
      "entry_fees": 0.000313959,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
@@ -96010,16 +96042,16 @@
    },
    "significance": {
     "days": 20,
-    "sharpe": -2.177,
+    "sharpe": -2.178,
     "sharpe_ci95": [
      -6.415,
      4.357
     ],
     "p_sharpe_positive": 0.222,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.83,
-    "excess_return_ann_pct": 22.92,
-    "days_to_significant_vs_buy_hold": 378
+    "p_beats_buy_hold": 0.836,
+    "excess_return_ann_pct": 23.22,
+    "days_to_significant_vs_buy_hold": 367
    }
   }
  ],
