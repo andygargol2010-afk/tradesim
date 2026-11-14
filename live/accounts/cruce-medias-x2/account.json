@@ -5279,6 +5279,13 @@
     "6.568893172630000000000000000000000",
     "89.51469610020460563590680",
     "89.51469610020460563590680"
+   ],
+   [
+    "2026-11-14T00:21:58.719683+00:00",
+    "96.08358927283460563590680000000000",
+    "6.568893172630000000000000000000000",
+    "89.51469610020460563590680",
+    "89.51469610020460563590680"
    ]
   ],
   "total_fees": "0.04073390",
@@ -9686,14 +9693,14 @@
    "limit_price": null,
    "stop_price": "147.69",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-12T17:22:36.719122+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-14T00:21:58.734543+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-XOM-210"
@@ -9802,6 +9809,27 @@
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-COP-215"
+  },
+  {
+   "id": "O00000216",
+   "symbol": "XOM",
+   "side": "sell",
+   "quantity": "0.031429346",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "149.06",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-14T00:21:58.734588+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-XOM-216"
   }
  ],
  "open_order_ids": [
@@ -9813,12 +9841,12 @@
   "O00000204",
   "O00000207",
   "O00000208",
-  "O00000210",
   "O00000212",
   "O00000214",
-  "O00000215"
+  "O00000215",
+  "O00000216"
  ],
- "order_id_counter": 216,
+ "order_id_counter": 217,
  "fill_id_counter": 51,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -9829,7 +9857,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-13T23:44:04.887236+00:00",
+ "last_sync": "2026-11-14T00:21:58.719683+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAVE-USD": "2026-10-30T15:45:00+00:00",
