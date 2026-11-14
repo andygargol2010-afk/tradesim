@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "60.05921750398000000000000000000000",
+  "cash": "19.63198950268600000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -71,6 +71,28 @@
     "fees_paid": "0",
     "mark_price": "295.7699890136719",
     "entry_order_id": "O00000004"
+   },
+   {
+    "symbol": "SOL-USD",
+    "quantity": "0.27367548",
+    "avg_price": "73.6500",
+    "open_fees": "0.05039050",
+    "opened_at": "2026-11-14T15:42:17.579000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.05039050",
+    "mark_price": "73.60499999999999",
+    "entry_order_id": "O00000009"
+   },
+   {
+    "symbol": "XRP-USD",
+    "quantity": "20.80046702",
+    "avg_price": "0.969700",
+    "open_fees": "0.05042553",
+    "opened_at": "2026-11-14T15:42:17.865000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.05042553",
+    "mark_price": "0.96845",
+    "entry_order_id": "O00000010"
    }
   ],
   "fills": [
@@ -101,6 +123,34 @@
     "slippage_cost": "0.00209254",
     "realized_pnl": "0",
     "timestamp": "2026-11-02T15:41:59.410441+00:00"
+   },
+   {
+    "id": "F00000003",
+    "order_id": "O00000009",
+    "symbol": "SOL-USD",
+    "side": "buy",
+    "quantity": "0.27367548",
+    "price": "73.65",
+    "notional": "20.1561991",
+    "fee": "0.0503905",
+    "liquidity": "taker",
+    "slippage_cost": "0.01094702",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-14T15:42:17.579000+00:00"
+   },
+   {
+    "id": "F00000004",
+    "order_id": "O00000010",
+    "symbol": "XRP-USD",
+    "side": "buy",
+    "quantity": "20.80046702",
+    "price": "0.9697",
+    "notional": "20.17021287",
+    "fee": "0.05042553",
+    "liquidity": "taker",
+    "slippage_cost": "0.02496056",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-14T15:42:17.865000+00:00"
    }
   ],
   "closed_trades": [],
@@ -4220,10 +4270,31 @@
     "60.05921750398000000000000000000000",
     "40.66704407570801263574379",
     "40.66704407570801263574379"
+   ],
+   [
+    "2026-11-14T15:42:55.237575+00:00",
+    "100.7262615796880126357437900000000",
+    "60.05921750398000000000000000000000",
+    "40.66704407570801263574379",
+    "40.66704407570801263574379"
+   ],
+   [
+    "2026-11-14T15:42:55.392276+00:00",
+    "100.7262615796880126357437900000000",
+    "60.05921750398000000000000000000000",
+    "40.66704407570801263574379",
+    "40.66704407570801263574379"
+   ],
+   [
+    "2026-11-14T15:42:55.395391+00:00",
+    "100.5871295693130098989889900000000",
+    "19.63198950268600000000000000000000",
+    "80.95514006662700989898899",
+    "80.95514006662700989898899"
    ]
   ],
-  "total_fees": "0",
-  "total_slippage": "0.02760757",
+  "total_fees": "0.10081603",
+  "total_slippage": "0.06351515",
   "total_financing": "0E-47",
   "peak_equity": "100.9981026293879760742187500000000",
   "max_drawdown": "0.01376810637232833747732722245117227"
@@ -4396,14 +4467,100 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-GOOGL-8"
+  },
+  {
+   "id": "O00000009",
+   "symbol": "SOL-USD",
+   "side": "buy",
+   "quantity": "0.27367548",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.27367548",
+   "avg_fill_price": "73.65",
+   "fees_paid": "0.0503905",
+   "triggered": false,
+   "created_at": "2026-11-14T15:42:55.395197+00:00",
+   "updated_at": "2026-11-14T15:42:17.579000+00:00",
+   "reject_reason": null,
+   "tag": "RSI 22.7",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000010",
+   "symbol": "XRP-USD",
+   "side": "buy",
+   "quantity": "20.80046702",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "20.80046702",
+   "avg_fill_price": "0.9697",
+   "fees_paid": "0.05042553",
+   "triggered": false,
+   "created_at": "2026-11-14T15:42:55.395328+00:00",
+   "updated_at": "2026-11-14T15:42:17.865000+00:00",
+   "reject_reason": null,
+   "tag": "RSI 24.5",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000011",
+   "symbol": "SOL-USD",
+   "side": "sell",
+   "quantity": "0.27367548",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "62.8089",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-14T15:42:55.623536+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-SOL-USD-11"
+  },
+  {
+   "id": "O00000012",
+   "symbol": "XRP-USD",
+   "side": "sell",
+   "quantity": "20.80046702",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "0.834632",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-14T15:42:55.624627+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-XRP-USD-12"
   }
  ],
  "open_order_ids": [
   "O00000007",
-  "O00000008"
+  "O00000008",
+  "O00000011",
+  "O00000012"
  ],
- "order_id_counter": 9,
- "fill_id_counter": 3,
+ "order_id_counter": 13,
+ "fill_id_counter": 5,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4413,7 +4570,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-14T15:21:40.692630+00:00",
+ "last_sync": "2026-11-14T15:42:55.395391+00:00",
  "bankrupt": false,
  "path_checked": {
   "BAC": "2026-11-13T21:00:00+00:00",
