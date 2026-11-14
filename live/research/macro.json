@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:20:38.807551+00:00",
+ "generated_at": "2026-11-14T09:20:39.368187+00:00",
  "indicators": {
   "fed_funds": {
    "id": "fed_funds",
@@ -7,64 +7,64 @@
    "value": 3.88,
    "previous": 3.88,
    "change": 0.0,
-   "as_of": "2026-11-11",
+   "as_of": "2026-11-12",
    "unit": "%",
    "source": "fred",
    "series": "DFF",
    "trend": "flat",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "ust_2y": {
    "id": "ust_2y",
    "name": "Bono EE. UU. 2 a\u00f1os",
-   "value": 4.73,
-   "previous": 4.56,
-   "change": 0.17,
-   "as_of": "2026-11-10",
+   "value": 4.86,
+   "previous": 4.73,
+   "change": 0.13,
+   "as_of": "2026-11-12",
    "unit": "%",
    "source": "fred",
    "series": "DGS2",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "ust_10y": {
    "id": "ust_10y",
    "name": "Bono EE. UU. 10 a\u00f1os",
-   "value": 4.98,
-   "previous": 4.88,
-   "change": 0.1,
-   "as_of": "2026-11-10",
+   "value": 5.1,
+   "previous": 4.98,
+   "change": 0.12,
+   "as_of": "2026-11-12",
    "unit": "%",
    "source": "fred",
    "series": "DGS10",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "curve_10y_2y": {
    "id": "curve_10y_2y",
    "name": "Curva 10a-2a",
-   "value": 0.24,
-   "previous": 0.25,
-   "change": -0.01,
-   "as_of": "2026-11-12",
+   "value": 0.27,
+   "previous": 0.24,
+   "change": 0.03,
+   "as_of": "2026-11-13",
    "unit": "pp",
    "source": "fred",
    "series": "T10Y2Y",
    "trend": "down",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "real_10y": {
    "id": "real_10y",
    "name": "Tipo real 10 a\u00f1os (TIPS)",
-   "value": 2.78,
-   "previous": 2.66,
-   "change": 0.12,
-   "as_of": "2026-11-10",
+   "value": 2.86,
+   "previous": 2.78,
+   "change": 0.08,
+   "as_of": "2026-11-12",
    "unit": "%",
    "source": "fred",
    "series": "DFII10",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "hy_spread": {
    "id": "hy_spread",
@@ -77,7 +77,7 @@
    "source": "fred",
    "series": "BAMLH0A0HYM2",
    "trend": "down",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "cpi_yoy": {
    "id": "cpi_yoy",
@@ -90,7 +90,7 @@
    "source": "fred",
    "series": "CPIAUCSL",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "core_cpi_yoy": {
    "id": "core_cpi_yoy",
@@ -103,7 +103,7 @@
    "source": "fred",
    "series": "CPILFESL",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "core_pce_yoy": {
    "id": "core_pce_yoy",
@@ -116,7 +116,7 @@
    "source": "fred",
    "series": "PCEPILFE",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "unemployment": {
    "id": "unemployment",
@@ -129,7 +129,7 @@
    "source": "fred",
    "series": "UNRATE",
    "trend": "flat",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "payrolls_change": {
    "id": "payrolls_change",
@@ -142,7 +142,7 @@
    "source": "fred",
    "series": "PAYEMS",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "jobless_claims": {
    "id": "jobless_claims",
@@ -155,7 +155,7 @@
    "source": "fred",
    "series": "ICSA",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "gdp_growth": {
    "id": "gdp_growth",
@@ -168,7 +168,7 @@
    "source": "fred",
    "series": "A191RL1Q225SBEA",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "retail_sales_yoy": {
    "id": "retail_sales_yoy",
@@ -181,7 +181,7 @@
    "source": "fred",
    "series": "RSAFS",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "consumer_sentiment": {
    "id": "consumer_sentiment",
@@ -194,7 +194,7 @@
    "source": "fred",
    "series": "UMCSENT",
    "trend": "down",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "m2_yoy": {
    "id": "m2_yoy",
@@ -207,7 +207,7 @@
    "source": "fred",
    "series": "M2SL",
    "trend": "up",
-   "fetched_at": "2026-11-13T20:20:43.932090+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "vix": {
    "id": "vix",
@@ -221,7 +221,7 @@
    "series": "^VIX",
    "change_1m_pct": 17.25,
    "trend": "down",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "ust_10y_live": {
    "id": "ust_10y_live",
@@ -235,7 +235,7 @@
    "series": "^TNX",
    "change_1m_pct": 1.28,
    "trend": "up",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "ust_3m_live": {
    "id": "ust_3m_live",
@@ -249,7 +249,7 @@
    "series": "^IRX",
    "change_1m_pct": 0.83,
    "trend": "up",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "dxy": {
    "id": "dxy",
@@ -263,7 +263,7 @@
    "series": "DX-Y.NYB",
    "change_1m_pct": 1.38,
    "trend": "up",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "wti": {
    "id": "wti",
@@ -277,7 +277,7 @@
    "series": "CL=F",
    "change_1m_pct": -9.6,
    "trend": "up",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "gold": {
    "id": "gold",
@@ -291,7 +291,7 @@
    "series": "GC=F",
    "change_1m_pct": -6.81,
    "trend": "down",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   },
   "copper": {
    "id": "copper",
@@ -305,7 +305,7 @@
    "series": "HG=F",
    "change_1m_pct": -6.63,
    "trend": "down",
-   "fetched_at": "2026-11-14T08:20:38.807551+00:00"
+   "fetched_at": "2026-11-14T09:20:39.368187+00:00"
   }
  },
  "errors": {}
