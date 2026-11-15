@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-15T03:20:42.052530+00:00",
+ "generated_at": "2026-11-15T06:20:41.913598+00:00",
  "window": [
-  "2026-11-07",
-  "2026-12-14"
+  "2026-11-08",
+  "2026-12-15"
  ],
  "events": [
   {
@@ -259,6 +259,78 @@
   },
   {
    "date": "2026-11-16",
+   "title": "CPI m/m",
+   "category": "inflation",
+   "importance": "high",
+   "country": "CA",
+   "when": "2026-11-16T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "0.3%",
+   "previous": "0.1%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "1bb02f7c6926"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Median CPI y/y",
+   "category": "inflation",
+   "importance": "high",
+   "country": "CA",
+   "when": "2026-11-16T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "2.0%",
+   "previous": "1.9%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "e79a6425b7d2"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Trimmed CPI y/y",
+   "category": "inflation",
+   "importance": "high",
+   "country": "CA",
+   "when": "2026-11-16T13:30:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "1.9%",
+   "previous": "1.8%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "dc0d033063b4"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Fed Chairman Warsh Speaks",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-16T17:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "dd3e18947b89"
+  },
+  {
+   "date": "2026-11-16",
    "title": "XOM ex-dividend date",
    "category": "dividend",
    "importance": "low",
@@ -295,21 +367,39 @@
   },
   {
    "date": "2026-11-17",
-   "title": "Retail sales",
+   "title": "Core Retail Sales m/m",
    "category": "consumer",
-   "importance": "medium",
+   "importance": "high",
    "country": "US",
    "when": "2026-11-17T13:30:00+00:00",
    "symbols": [
-    "*equities"
+    "*all"
    ],
-   "forecast": null,
-   "previous": null,
+   "forecast": "0.4%",
+   "previous": "0.9%",
    "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "135020d1ca93"
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "36124b3a78bc"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "Retail Sales m/m",
+   "category": "consumer",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-17T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "0.2%",
+   "previous": "0.8%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "87ff6c257f61"
   },
   {
    "date": "2026-11-17",
@@ -367,6 +457,60 @@
   },
   {
    "date": "2026-11-18",
+   "title": "CPI y/y",
+   "category": "inflation",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-18T07:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": "3.6%",
+   "previous": "3.5%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "86ea93ff5ec5"
+  },
+  {
+   "date": "2026-11-18",
+   "title": "BOE Gov Bailey Speaks",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "UK",
+   "when": "2026-11-18T15:00:00+00:00",
+   "symbols": [
+    "*equities"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "8226e9b61ce7"
+  },
+  {
+   "date": "2026-11-18",
+   "title": "FOMC Meeting Minutes",
+   "category": "central_bank",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-18T19:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "9299dd53d15e"
+  },
+  {
+   "date": "2026-11-18",
    "title": "FOMC minutes",
    "category": "central_bank",
    "importance": "medium",
@@ -421,22 +565,39 @@
   },
   {
    "date": "2026-11-19",
-   "title": "Initial jobless claims",
-   "category": "employment",
-   "importance": "low",
+   "title": "Philly Fed Manufacturing Index",
+   "category": "central_bank",
+   "importance": "medium",
    "country": "US",
    "when": "2026-11-19T13:30:00+00:00",
    "symbols": [
-    "*equities",
-    "TLT"
+    "*all"
    ],
-   "forecast": null,
-   "previous": null,
+   "forecast": "19.2",
+   "previous": "20.9",
    "actual": null,
    "confirmed": true,
-   "source": "rules",
-   "notes": "published every Thursday",
-   "id": "8f3e00b6ebcf"
+   "source": "forexfactory",
+   "notes": "",
+   "id": "3ecb32118eaf"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Unemployment Claims",
+   "category": "employment",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-19T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "199K",
+   "previous": "200K",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "19f8b6c4febd"
   },
   {
    "date": "2026-11-19",
@@ -473,6 +634,60 @@
    "source": "yahoo",
    "notes": "buyers from this date do not receive the next dividend",
    "id": "29821a4c96ba"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "FOMC Member Waller Speaks",
+   "category": "central_bank",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-20T13:25:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "26270ab41d84"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Revised UoM Consumer Sentiment",
+   "category": "consumer",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-20T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "52.1",
+   "previous": "51.0",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "093f7d6edc7e"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Revised UoM Inflation Expectations",
+   "category": "inflation",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-20T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": null,
+   "previous": "4.3%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "efc678a23457"
   },
   {
    "date": "2026-11-20",
@@ -1051,12 +1266,49 @@
    "source": "yahoo",
    "notes": "consensus estimates from Yahoo",
    "id": "916d3c4ac500"
+  },
+  {
+   "date": "2026-12-15",
+   "title": "PPI (producer prices)",
+   "category": "inflation",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-12-15T13:30:00+00:00",
+   "symbols": [
+    "*equities",
+    "TLT"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": false,
+   "source": "rules",
+   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
+   "id": "dc41109363b2"
+  },
+  {
+   "date": "2026-12-15",
+   "title": "TMO ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "TMO"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "3a0b2e29bdb6"
   }
  ],
  "sources": {
   "fomc": "federalreserve.gov",
-  "forexfactory": "7 events this week",
-  "companies": "35 earnings/dividend events"
+  "forexfactory": "15 events this week",
+  "companies": "36 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
