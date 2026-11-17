@@ -1,8 +1,6 @@
 {
- "started_at": "2026-11-17T05:08:10.703938+00:00",
- "errors": {
-  "news:google:dollar": "https://news.google.com/rss/search?q=%22US+dollar%22+OR+%22dollar+index%22+currency+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=%22US+dollar%22+OR+%2"
- },
+ "started_at": "2026-11-17T08:20:38.141580+00:00",
+ "errors": {},
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -15,13 +13,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 90
+  "local": 160
  },
  "news": {
-  "fetched": 1401,
-  "new": 65,
-  "stored": 8997,
-  "triaged": 65,
+  "fetched": 1449,
+  "new": 135,
+  "stored": 9015,
+  "triaged": 135,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -32,7 +30,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 70.7,
+ "duration_s": 66.5,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
