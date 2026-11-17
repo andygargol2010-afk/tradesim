@@ -80,7 +80,7 @@
     "opened_at": "2026-11-17T15:42:06.100000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02174229",
-    "mark_price": "5.27905",
+    "mark_price": "5.2863",
     "entry_order_id": "O00000009"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-11-17T15:42:04.259000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02880406",
-    "mark_price": "7.247999999999999",
+    "mark_price": "7.2605",
     "entry_order_id": "O00000010"
    }
   ],
@@ -4789,6 +4789,13 @@
     "56.75911188877000000000000000000000",
     "41.33544127203693487148209",
     "41.33544127203693487148209"
+   ],
+   [
+    "2026-11-17T23:22:06.915722+00:00",
+    "98.12676835553193649378880000000000",
+    "56.75911188877000000000000000000000",
+    "41.3676564667619364937888",
+    "41.3676564667619364937888"
    ]
   ],
   "total_fees": "0.15514507",
@@ -5038,25 +5045,46 @@
    "limit_price": null,
    "stop_price": "5.54489",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T15:42:40.122400+00:00",
+   "updated_at": "2026-11-17T23:22:07.410399+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AVAX-USD-12"
+  },
+  {
+   "id": "O00000013",
+   "symbol": "AVAX-USD",
+   "side": "sell",
+   "quantity": "1.62230671",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "5.70589",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-17T23:22:07.410468+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-AVAX-USD-12"
+   "oco_group": "exits-AVAX-USD-13"
   }
  ],
  "open_order_ids": [
   "O00000004",
   "O00000011",
-  "O00000012"
+  "O00000013"
  ],
- "order_id_counter": 13,
+ "order_id_counter": 14,
  "fill_id_counter": 7,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5067,12 +5095,12 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-17T23:08:12.245941+00:00",
+ "last_sync": "2026-11-17T23:22:06.915722+00:00",
  "bankrupt": false,
  "path_checked": {
   "LINK-USD": "2026-11-13T21:35:00+00:00",
   "NVDA": "2026-11-17T21:00:00+00:00",
-  "UNI-USD": "2026-11-17T23:05:00+00:00",
-  "AVAX-USD": "2026-11-17T23:05:00+00:00"
+  "UNI-USD": "2026-11-17T23:20:00+00:00",
+  "AVAX-USD": "2026-11-17T23:20:00+00:00"
  }
 }
