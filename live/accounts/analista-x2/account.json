@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "24.69274672916250000000000000000000",
+  "cash": "34.46024460514250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -69,7 +69,7 @@
     "opened_at": "2026-11-17T15:42:03.232775+00:00",
     "realized_pnl": "-0.0258720489599999999999999999999990",
     "fees_paid": "0.00048971",
-    "mark_price": "49.235",
+    "mark_price": "48.95000076293945",
     "entry_order_id": "O00000247"
    },
    {
@@ -201,7 +201,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0.40428560655",
     "fees_paid": "0.00031011",
-    "mark_price": "379.8550109863281",
+    "mark_price": "380.1099853515625",
     "entry_order_id": "O00000185"
    },
    {
@@ -212,7 +212,7 @@
     "opened_at": "2026-11-10T15:41:42.106424+00:00",
     "realized_pnl": "0.29095776883",
     "fees_paid": "0.00019986",
-    "mark_price": "293.9200134277344",
+    "mark_price": "295.8599853515625",
     "entry_order_id": "O00000187"
    },
    {
@@ -228,14 +228,14 @@
    },
    {
     "symbol": "ABT",
-    "quantity": "0.092506722",
-    "avg_price": "108.54",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-12T15:41:59.718877+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.27289482990",
+    "fees_paid": "0.00028690",
     "mark_price": "105.80000305175781",
-    "entry_order_id": "O00000221"
+    "entry_order_id": null
    },
    {
     "symbol": "XLU",
@@ -245,7 +245,7 @@
     "opened_at": "2026-11-17T15:41:46.922450+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "43.7400016784668",
+    "mark_price": "43.41999816894531",
     "entry_order_id": "O00000248"
    }
   ],
@@ -1327,6 +1327,20 @@
     "slippage_cost": "0.00484075",
     "realized_pnl": "0",
     "timestamp": "2026-11-17T15:41:46.922450+00:00"
+   },
+   {
+    "id": "F00000078",
+    "order_id": "O00000250",
+    "symbol": "ABT",
+    "side": "sell",
+    "quantity": "0.092506722",
+    "price": "105.59",
+    "notional": "9.76778478",
+    "fee": "0.0002869",
+    "liquidity": "taker",
+    "slippage_cost": "0.0027752",
+    "realized_pnl": "-0.2728948299",
+    "timestamp": "2026-11-17T18:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1861,6 +1875,20 @@
     "closed_at": "2026-11-17T14:40:00+00:00",
     "entry_order_id": "O00000140",
     "exit_order_id": "O00000238"
+   },
+   {
+    "symbol": "ABT",
+    "direction": "long",
+    "quantity": "0.092506722",
+    "entry_price": "108.54",
+    "exit_price": "105.59",
+    "pnl": "-0.2731817299",
+    "fees": "0.0002869",
+    "return_pct": -0.027207493976804113,
+    "opened_at": "2026-11-12T15:41:59.718877+00:00",
+    "closed_at": "2026-11-17T18:35:00+00:00",
+    "entry_order_id": "O00000221",
+    "exit_order_id": "O00000250"
    }
   ],
   "equity_curve": [
@@ -6532,13 +6560,20 @@
     "24.69274672916250000000000000000000",
     "68.40971010986077811864512",
     "68.40971010986077811864512"
+   ],
+   [
+    "2026-11-17T21:22:25.526523+00:00",
+    "92.96837252880126972296770000000000",
+    "34.46024460514250000000000000000000",
+    "58.50812792365876972296770",
+    "58.50812792365876972296770"
    ]
   ],
-  "total_fees": "0.12068230",
-  "total_slippage": "0.20990837",
+  "total_fees": "0.12096920",
+  "total_slippage": "0.21268357",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
-  "max_drawdown": "0.07831010825453445962880013635469273"
+  "max_drawdown": "0.07963750774074746853688427095117613"
  },
  "orders": [
   {
@@ -11779,13 +11814,13 @@
    "limit_price": null,
    "stop_price": "105.62",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.092506722",
+   "avg_fill_price": "105.59",
+   "fees_paid": "0.0002869",
+   "triggered": true,
    "created_at": "2026-11-17T15:42:42.724757+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-17T18:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.09: t\u00e9cnico +0.09 (HCH invertido, harami alcista), noticias +0.13 (6 relevantes), tendencia lateral. Titul",
    "reduce_only": true,
@@ -11800,14 +11835,14 @@
    "limit_price": "118.85",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T15:42:42.724807+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-17T21:22:25.528400+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.09: t\u00e9cnico +0.09 (HCH invertido, harami alcista), noticias +0.13 (6 relevantes), tendencia lateral. Titul filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.09: t\u00e9cnico +0.09 (HCH invertido, harami alcista), noticias +0.13 (6 relevantes), tendencia lateral. Titul",
    "reduce_only": true,
    "oco_group": "exits-ABT-250"
@@ -11982,8 +12017,6 @@
   }
  ],
  "open_order_ids": [
-  "O00000250",
-  "O00000251",
   "O00000252",
   "O00000253",
   "O00000254",
@@ -11994,7 +12027,7 @@
   "O00000259"
  ],
  "order_id_counter": 260,
- "fill_id_counter": 78,
+ "fill_id_counter": 79,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -12004,11 +12037,11 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-17T18:21:55.979303+00:00",
+ "last_sync": "2026-11-17T21:22:25.526523+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
-  "SLB": "2026-11-17T18:20:00+00:00",
+  "SLB": "2026-11-17T21:00:00+00:00",
   "XLV": "2026-11-06T19:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
@@ -12020,10 +12053,10 @@
   "NOW": "2026-11-17T14:40:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
-  "TSLA": "2026-11-17T18:20:00+00:00",
-  "TXN": "2026-11-17T18:20:00+00:00",
+  "TSLA": "2026-11-17T21:00:00+00:00",
+  "TXN": "2026-11-17T21:00:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
-  "ABT": "2026-11-17T18:20:00+00:00",
-  "XLU": "2026-11-17T18:20:00+00:00"
+  "ABT": "2026-11-17T21:00:00+00:00",
+  "XLU": "2026-11-17T21:00:00+00:00"
  }
 }
