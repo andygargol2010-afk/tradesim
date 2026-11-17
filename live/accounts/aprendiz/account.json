@@ -80,7 +80,7 @@
     "opened_at": "2026-11-17T15:42:04.371000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.01524789",
-    "mark_price": "73.32499999999999",
+    "mark_price": "73.61",
     "entry_order_id": "O00000009"
    }
   ],
@@ -4813,6 +4813,13 @@
     "84.45981987514000000000000000000000",
     "14.0297167246750943927301",
     "14.0297167246750943927301"
+   ],
+   [
+    "2026-11-17T22:22:14.178615+00:00",
+    "98.51355898476509523562080000000000",
+    "84.45981987514000000000000000000000",
+    "14.0537391096250952356208",
+    "14.0537391096250952356208"
    ]
   ],
   "total_fees": "0.09013509",
@@ -5020,24 +5027,45 @@
    "limit_price": null,
    "stop_price": "59.9618",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T15:42:10.896241+00:00",
+   "updated_at": "2026-11-17T22:22:14.469372+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-SOL-USD-10"
+  },
+  {
+   "id": "O00000011",
+   "symbol": "SOL-USD",
+   "side": "sell",
+   "quantity": "0.08428907",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "61.2018",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-17T22:22:14.469419+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-SOL-USD-10"
+   "oco_group": "exits-SOL-USD-11"
   }
  ],
  "open_order_ids": [
   "O00000004",
-  "O00000010"
+  "O00000011"
  ],
- "order_id_counter": 11,
+ "order_id_counter": 12,
  "fill_id_counter": 6,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -5048,11 +5076,11 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-17T21:22:18.017592+00:00",
+ "last_sync": "2026-11-17T22:22:14.178615+00:00",
  "bankrupt": false,
  "path_checked": {
   "LINK-USD": "2026-11-13T21:35:00+00:00",
   "NVDA": "2026-11-17T21:00:00+00:00",
-  "SOL-USD": "2026-11-17T21:20:00+00:00"
+  "SOL-USD": "2026-11-17T22:20:00+00:00"
  }
 }
