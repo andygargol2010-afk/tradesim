@@ -1,9 +1,6 @@
 {
- "started_at": "2026-11-17T02:20:45.194324+00:00",
- "errors": {
-  "news:google:inflation": "https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+United+States+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+",
-  "news:google:yields": "https://news.google.com/rss/search?q=Treasury+yields+OR+bond+market+OR+%2210-year+yield%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=Treasury+yields+OR+bon"
- },
+ "started_at": "2026-11-17T03:20:47.228246+00:00",
+ "errors": {},
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -16,13 +13,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 74
+  "local": 65
  },
  "news": {
-  "fetched": 1339,
-  "new": 49,
-  "stored": 8979,
-  "triaged": 49,
+  "fetched": 1399,
+  "new": 40,
+  "stored": 8981,
+  "triaged": 40,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -33,7 +30,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 65.7,
+ "duration_s": 43.9,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
