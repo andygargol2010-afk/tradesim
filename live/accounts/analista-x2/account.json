@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "69.02134404646250000000000000000000",
+  "cash": "71.01753624436250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -162,14 +162,14 @@
    },
    {
     "symbol": "NOW",
-    "quantity": "0.020590522",
-    "avg_price": "111.95",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-04T15:42:12.876921+00:00",
-    "realized_pnl": "-0.96407594175",
-    "fees_paid": "0.00026561",
+    "opened_at": null,
+    "realized_pnl": "-1.27293377175",
+    "fees_paid": "0.00032452",
     "mark_price": "99.37000274658203",
-    "entry_order_id": "O00000140"
+    "entry_order_id": null
    },
    {
     "symbol": "PM",
@@ -201,7 +201,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0.40428560655",
     "fees_paid": "0.00031011",
-    "mark_price": "379.739990234375",
+    "mark_price": "381.4849853515625",
     "entry_order_id": "O00000185"
    },
    {
@@ -212,7 +212,7 @@
     "opened_at": "2026-11-10T15:41:42.106424+00:00",
     "realized_pnl": "0.29095776883",
     "fees_paid": "0.00019986",
-    "mark_price": "294.2099914550781",
+    "mark_price": "297.135009765625",
     "entry_order_id": "O00000187"
    },
    {
@@ -234,7 +234,7 @@
     "opened_at": "2026-11-12T15:41:59.718877+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "107.44999694824219",
+    "mark_price": "107.48500061035156",
     "entry_order_id": "O00000221"
    }
   ],
@@ -1246,6 +1246,20 @@
     "slippage_cost": "0.00434205",
     "realized_pnl": "-0.49205639832",
     "timestamp": "2026-11-13T15:05:00+00:00"
+   },
+   {
+    "id": "F00000073",
+    "order_id": "O00000238",
+    "symbol": "NOW",
+    "side": "sell",
+    "quantity": "0.020590522",
+    "price": "96.95",
+    "notional": "1.99625111",
+    "fee": "0.00005891",
+    "liquidity": "taker",
+    "slippage_cost": "0.00041181",
+    "realized_pnl": "-0.30885783",
+    "timestamp": "2026-11-17T14:40:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1766,6 +1780,20 @@
     "closed_at": "2026-11-13T15:05:00+00:00",
     "entry_order_id": "O00000204",
     "exit_order_id": "O00000230"
+   },
+   {
+    "symbol": "NOW",
+    "direction": "long",
+    "quantity": "0.020590522",
+    "entry_price": "111.95",
+    "exit_price": "96.95",
+    "pnl": "-0.30891674",
+    "fees": "0.00005891",
+    "return_pct": -0.13401394394896984,
+    "opened_at": "2026-11-04T15:42:12.876921+00:00",
+    "closed_at": "2026-11-17T14:40:00+00:00",
+    "entry_order_id": "O00000140",
+    "exit_order_id": "O00000238"
    }
   ],
   "equity_curve": [
@@ -6381,10 +6409,17 @@
     "69.02134404646250000000000000000000",
     "24.34015934660441544085244",
     "24.34015934660441544085244"
+   ],
+   [
+    "2026-11-17T14:42:37.061459+00:00",
+    "93.41304136158591895818632000000000",
+    "71.01753624436250000000000000000000",
+    "22.39550511722341895818632",
+    "22.39550511722341895818632"
    ]
   ],
-  "total_fees": "0.12062339",
-  "total_slippage": "0.19776549",
+  "total_fees": "0.12068230",
+  "total_slippage": "0.19817730",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
   "max_drawdown": "0.07574561534575612702385770809877100"
@@ -11376,13 +11411,13 @@
    "limit_price": null,
    "stop_price": "96.97",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.020590522",
+   "avg_fill_price": "96.95",
+   "fees_paid": "0.00005891",
+   "triggered": true,
    "created_at": "2026-11-14T15:42:57.517653+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-17T14:40:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.02: t\u00e9cnico +0.00, noticias +0.06 (142 relevantes), tendencia lateral. Titular: \u00abSharpLink (SBET) Stock Ma",
    "reduce_only": true,
@@ -11397,14 +11432,14 @@
    "limit_price": "112.8",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-14T15:42:57.517691+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-17T14:42:37.062784+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.02: t\u00e9cnico +0.00, noticias +0.06 (142 relevantes), tendencia lateral. Titular: \u00abSharpLink (SBET) Stock Ma filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.02: t\u00e9cnico +0.00, noticias +0.06 (142 relevantes), tendencia lateral. Titular: \u00abSharpLink (SBET) Stock Ma",
    "reduce_only": true,
    "oco_group": "exits-NOW-238"
@@ -11537,8 +11572,6 @@
   }
  ],
  "open_order_ids": [
-  "O00000238",
-  "O00000239",
   "O00000240",
   "O00000241",
   "O00000242",
@@ -11547,7 +11580,7 @@
   "O00000245"
  ],
  "order_id_counter": 246,
- "fill_id_counter": 73,
+ "fill_id_counter": 74,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -11557,7 +11590,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-17T14:21:52.619060+00:00",
+ "last_sync": "2026-11-17T14:42:37.061459+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -11570,12 +11603,12 @@
   "COP": "2026-11-04T15:20:00+00:00",
   "HON": "2026-11-13T17:55:00+00:00",
   "MRK": "2026-11-06T19:20:00+00:00",
-  "NOW": "2026-11-16T21:00:00+00:00",
+  "NOW": "2026-11-17T14:40:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
-  "TSLA": "2026-11-16T21:00:00+00:00",
-  "TXN": "2026-11-16T21:00:00+00:00",
+  "TSLA": "2026-11-17T14:40:00+00:00",
+  "TXN": "2026-11-17T14:40:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
-  "ABT": "2026-11-16T21:00:00+00:00"
+  "ABT": "2026-11-17T14:40:00+00:00"
  }
 }
