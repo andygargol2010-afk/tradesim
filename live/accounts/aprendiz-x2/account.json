@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "70.13278952713000000000000000000000",
+  "cash": "56.75911188877000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -63,14 +63,36 @@
    },
    {
     "symbol": "NVDA",
-    "quantity": "0.179910519",
+    "quantity": "0.134346854",
     "avg_price": "165.09",
     "open_fees": "0",
     "opened_at": "2026-11-12T15:41:45.831285+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
-    "mark_price": "153.76759338378906",
+    "realized_pnl": "-0.62650039375",
+    "fees_paid": "0.00019926",
+    "mark_price": "151.36000061035156",
     "entry_order_id": "O00000002"
+   },
+   {
+    "symbol": "UNI-USD",
+    "quantity": "1.64639460",
+    "avg_price": "5.28240",
+    "open_fees": "0.02174229",
+    "opened_at": "2026-11-17T15:42:06.100000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.02174229",
+    "mark_price": "5.27705",
+    "entry_order_id": "O00000009"
+   },
+   {
+    "symbol": "AVAX-USD",
+    "quantity": "1.62230671",
+    "avg_price": "7.102",
+    "open_fees": "0.02880406",
+    "opened_at": "2026-11-17T15:42:04.259000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.02880406",
+    "mark_price": "7.1",
+    "entry_order_id": "O00000010"
    }
   ],
   "fills": [
@@ -115,6 +137,48 @@
     "slippage_cost": "0",
     "realized_pnl": "-0.06138343116",
     "timestamp": "2026-11-13T21:35:59.037000+00:00"
+   },
+   {
+    "id": "F00000004",
+    "order_id": "O00000008",
+    "symbol": "NVDA",
+    "side": "sell",
+    "quantity": "0.045563665",
+    "price": "151.34",
+    "notional": "6.89560506",
+    "fee": "0.00019926",
+    "liquidity": "taker",
+    "slippage_cost": "0.0009113",
+    "realized_pnl": "-0.62650039375",
+    "timestamp": "2026-11-17T15:41:48.262862+00:00"
+   },
+   {
+    "id": "F00000005",
+    "order_id": "O00000009",
+    "symbol": "UNI-USD",
+    "side": "buy",
+    "quantity": "1.6463946",
+    "price": "5.2824",
+    "notional": "8.69691484",
+    "fee": "0.02174229",
+    "liquidity": "taker",
+    "slippage_cost": "0.00856125",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-17T15:42:06.100000+00:00"
+   },
+   {
+    "id": "F00000006",
+    "order_id": "O00000010",
+    "symbol": "AVAX-USD",
+    "side": "buy",
+    "quantity": "1.62230671",
+    "price": "7.102",
+    "notional": "11.52162225",
+    "fee": "0.02880406",
+    "liquidity": "taker",
+    "slippage_cost": "0.00811153",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-17T15:42:04.259000+00:00"
    }
   ],
   "closed_trades": [
@@ -131,6 +195,20 @@
     "closed_at": "2026-11-13T21:35:59.037000+00:00",
     "entry_order_id": "O00000001",
     "exit_order_id": "O00000007"
+   },
+   {
+    "symbol": "NVDA",
+    "direction": "long",
+    "quantity": "0.045563665",
+    "entry_price": "165.09",
+    "exit_price": "151.34",
+    "pnl": "-0.62669965375",
+    "fees": "0.00019926",
+    "return_pct": -0.08331439349150911,
+    "opened_at": "2026-11-12T15:41:45.831285+00:00",
+    "closed_at": "2026-11-17T15:41:48.262862+00:00",
+    "entry_order_id": "O00000002",
+    "exit_order_id": "O00000008"
    }
   ],
   "equity_curve": [
@@ -4641,13 +4719,34 @@
     "70.13278952713000000000000000000000",
     "27.66440753105845597112214",
     "27.66440753105845597112214"
+   ],
+   [
+    "2026-11-17T15:42:36.583352+00:00",
+    "97.36404579277866593205964000000000",
+    "70.13278952713000000000000000000000",
+    "27.23125626564866593205964",
+    "27.23125626564866593205964"
+   ],
+   [
+    "2026-11-17T15:42:39.845490+00:00",
+    "97.36293523166881191999224000000000",
+    "77.02819532823000000000000000000000",
+    "20.33473990343881191999224",
+    "20.33473990343881191999224"
+   ],
+   [
+    "2026-11-17T15:42:39.848391+00:00",
+    "97.30033605713881191999224000000000",
+    "56.75911188877000000000000000000000",
+    "40.54122416836881191999224",
+    "40.54122416836881191999224"
    ]
   ],
-  "total_fees": "0.10439946",
-  "total_slippage": "0.01511636",
+  "total_fees": "0.15514507",
+  "total_slippage": "0.03270044",
   "total_financing": "0E-47",
   "peak_equity": "100.6811430702546655273437500000000",
-  "max_drawdown": "0.02864435110807006084422730033182949"
+  "max_drawdown": "0.03357934673781710874755829462922348"
  },
  "orders": [
   {
@@ -4796,13 +4895,120 @@
    "tag": "close_position",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000008",
+   "symbol": "NVDA",
+   "side": "sell",
+   "quantity": "0.045563665",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.045563665",
+   "avg_fill_price": "151.34",
+   "fees_paid": "0.00019926",
+   "triggered": false,
+   "created_at": "2026-11-17T15:42:39.845384+00:00",
+   "updated_at": "2026-11-17T15:41:48.262862+00:00",
+   "reject_reason": null,
+   "tag": "trim, pred +0.135\u03c3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000009",
+   "symbol": "UNI-USD",
+   "side": "buy",
+   "quantity": "1.6463946",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "1.6463946",
+   "avg_fill_price": "5.2824",
+   "fees_paid": "0.02174229",
+   "triggered": false,
+   "created_at": "2026-11-17T15:42:39.848219+00:00",
+   "updated_at": "2026-11-17T15:42:06.100000+00:00",
+   "reject_reason": null,
+   "tag": "pred +0.133\u03c3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000010",
+   "symbol": "AVAX-USD",
+   "side": "buy",
+   "quantity": "1.62230671",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "1.62230671",
+   "avg_fill_price": "7.102",
+   "fees_paid": "0.02880406",
+   "triggered": false,
+   "created_at": "2026-11-17T15:42:39.848322+00:00",
+   "updated_at": "2026-11-17T15:42:04.259000+00:00",
+   "reject_reason": null,
+   "tag": "pred +0.129\u03c3",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000011",
+   "symbol": "UNI-USD",
+   "side": "sell",
+   "quantity": "1.6463946",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "3.77763",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-17T15:42:40.120767+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-UNI-USD-11"
+  },
+  {
+   "id": "O00000012",
+   "symbol": "AVAX-USD",
+   "side": "sell",
+   "quantity": "1.62230671",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "5.54489",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-17T15:42:40.122400+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-AVAX-USD-12"
   }
  ],
  "open_order_ids": [
-  "O00000004"
+  "O00000004",
+  "O00000011",
+  "O00000012"
  ],
- "order_id_counter": 8,
- "fill_id_counter": 4,
+ "order_id_counter": 13,
+ "fill_id_counter": 7,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -4812,10 +5018,10 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-17T15:22:07.777858+00:00",
+ "last_sync": "2026-11-17T15:42:39.848391+00:00",
  "bankrupt": false,
  "path_checked": {
   "LINK-USD": "2026-11-13T21:35:00+00:00",
-  "NVDA": "2026-11-17T15:20:00+00:00"
+  "NVDA": "2026-11-17T15:40:00+00:00"
  }
 }
