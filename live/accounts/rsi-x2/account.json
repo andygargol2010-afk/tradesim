@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "19.63198950268600000000000000000000",
+  "cash": "38.88555980103600000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -52,14 +52,14 @@
   "positions": [
    {
     "symbol": "BAC",
-    "quantity": "0.392541707",
-    "avg_price": "50.96",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:03:31.636290+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.74975466037",
+    "fees_paid": "0.00060043",
     "mark_price": "49.439998626708984",
-    "entry_order_id": "O00000001"
+    "entry_order_id": null
    },
    {
     "symbol": "GOOGL",
@@ -69,7 +69,7 @@
     "opened_at": "2026-11-02T15:41:59.410441+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "280.20001220703125",
+    "mark_price": "282.44000244140625",
     "entry_order_id": "O00000004"
    },
    {
@@ -80,7 +80,7 @@
     "opened_at": "2026-11-14T15:42:17.579000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05039050",
-    "mark_price": "74.27000000000001",
+    "mark_price": "73.015",
     "entry_order_id": "O00000009"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-11-14T15:42:17.865000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05042553",
-    "mark_price": "0.9863500000000001",
+    "mark_price": "0.9698",
     "entry_order_id": "O00000010"
    }
   ],
@@ -151,9 +151,38 @@
     "slippage_cost": "0.02496056",
     "realized_pnl": "0",
     "timestamp": "2026-11-14T15:42:17.865000+00:00"
+   },
+   {
+    "id": "F00000005",
+    "order_id": "O00000007",
+    "symbol": "BAC",
+    "side": "sell",
+    "quantity": "0.392541707",
+    "price": "49.05",
+    "notional": "19.25417073",
+    "fee": "0.00060043",
+    "liquidity": "taker",
+    "slippage_cost": "0.00392542",
+    "realized_pnl": "-0.74975466037",
+    "timestamp": "2026-11-18T14:55:00+00:00"
    }
   ],
-  "closed_trades": [],
+  "closed_trades": [
+   {
+    "symbol": "BAC",
+    "direction": "long",
+    "quantity": "0.392541707",
+    "entry_price": "50.96",
+    "exit_price": "49.05",
+    "pnl": "-0.75035509037",
+    "fees": "0.00060043",
+    "return_pct": -0.03751039237494443,
+    "opened_at": "2026-10-26T16:03:31.636290+00:00",
+    "closed_at": "2026-11-18T14:55:00+00:00",
+    "entry_order_id": "O00000001",
+    "exit_order_id": "O00000007"
+   }
+  ],
   "equity_curve": [
    [
     "2026-10-26T00:21:31.342155+00:00",
@@ -4991,10 +5020,17 @@
     "19.63198950268600000000000000000000",
     "79.802734269420029114178440",
     "79.802734269420029114178440"
+   ],
+   [
+    "2026-11-18T21:21:56.415133+00:00",
+    "98.74963425275940478515625000000000",
+    "38.88555980103600000000000000000000",
+    "59.86407445172340478515625",
+    "59.86407445172340478515625"
    ]
   ],
-  "total_fees": "0.10081603",
-  "total_slippage": "0.06351515",
+  "total_fees": "0.10141646",
+  "total_slippage": "0.06744057",
   "total_financing": "0E-47",
   "peak_equity": "100.9981026293879760742187500000000",
   "max_drawdown": "0.02979857431919956675134999868153796"
@@ -5135,13 +5171,13 @@
    "limit_price": null,
    "stop_price": "49.06",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.392541707",
+   "avg_fill_price": "49.05",
+   "fees_paid": "0.00060043",
+   "triggered": true,
    "created_at": "2026-11-04T21:30:18.736792+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-18T14:55:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -5254,13 +5290,12 @@
   }
  ],
  "open_order_ids": [
-  "O00000007",
   "O00000008",
   "O00000011",
   "O00000012"
  ],
  "order_id_counter": 13,
- "fill_id_counter": 5,
+ "fill_id_counter": 6,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -5270,12 +5305,12 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-18T14:20:29.970479+00:00",
+ "last_sync": "2026-11-18T21:21:56.415133+00:00",
  "bankrupt": false,
  "path_checked": {
-  "BAC": "2026-11-17T21:00:00+00:00",
-  "GOOGL": "2026-11-17T21:00:00+00:00",
-  "SOL-USD": "2026-11-18T14:20:00+00:00",
-  "XRP-USD": "2026-11-18T14:20:00+00:00"
+  "BAC": "2026-11-18T21:00:00+00:00",
+  "GOOGL": "2026-11-18T21:00:00+00:00",
+  "SOL-USD": "2026-11-18T21:20:00+00:00",
+  "XRP-USD": "2026-11-18T21:20:00+00:00"
  }
 }

@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "32.38898364692770000000000000000000",
+  "cash": "47.54856064462770000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -52,14 +52,14 @@
   "positions": [
    {
     "symbol": "ABBV",
-    "quantity": "0.040552963",
-    "avg_price": "293.0906428045713946968560595683230",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-11T15:41:56.599149+00:00",
-    "realized_pnl": "0.4819029631400000000000000000000013",
-    "fees_paid": "0.00069370",
+    "opened_at": null,
+    "realized_pnl": "0.3427802324200000000000000000000027",
+    "fees_paid": "0.00102699",
     "mark_price": "292.82000732421875",
-    "entry_order_id": "O00000392"
+    "entry_order_id": null
    },
    {
     "symbol": "SLB",
@@ -69,7 +69,7 @@
     "opened_at": "2026-11-17T15:42:03.232775+00:00",
     "realized_pnl": "0.01977230328",
     "fees_paid": "0.00025472",
-    "mark_price": "48.95000076293945",
+    "mark_price": "48.40999984741211",
     "entry_order_id": "O00000501"
    },
    {
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.5230928397477374176594007502641388",
     "fees_paid": "0.00026974",
-    "mark_price": "1415.550048828125",
+    "mark_price": "1382.75",
     "entry_order_id": "O00000010"
    },
    {
@@ -179,7 +179,7 @@
     "opened_at": "2026-11-10T15:41:42.106424+00:00",
     "realized_pnl": "0.2486034429100000000000000000000004",
     "fees_paid": "0.00019324",
-    "mark_price": "295.8599853515625",
+    "mark_price": "292.42999267578125",
     "entry_order_id": "O00000356"
    },
    {
@@ -333,7 +333,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0.13215246485",
     "fees_paid": "0.00010137",
-    "mark_price": "380.1099853515625",
+    "mark_price": "383.7200012207031",
     "entry_order_id": "O00000354"
    },
    {
@@ -349,14 +349,14 @@
    },
    {
     "symbol": "V",
-    "quantity": "0.008279812",
-    "avg_price": "420.46",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:37.451872+00:00",
-    "realized_pnl": "0.00351081220",
-    "fees_paid": "0.00005955",
+    "opened_at": null,
+    "realized_pnl": "-0.06438364620",
+    "fees_paid": "0.00015582",
     "mark_price": "416.7699890136719",
-    "entry_order_id": "O00000361"
+    "entry_order_id": null
    },
    {
     "symbol": "ABT",
@@ -377,7 +377,7 @@
     "opened_at": "2026-11-17T15:41:46.922450+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "43.41999816894531",
+    "mark_price": "43.540000915527344",
     "entry_order_id": "O00000502"
    }
   ],
@@ -2215,6 +2215,34 @@
     "slippage_cost": "0.00186027",
     "realized_pnl": "-0.18292651755",
     "timestamp": "2026-11-17T18:35:00+00:00"
+   },
+   {
+    "id": "F00000132",
+    "order_id": "O00000508",
+    "symbol": "V",
+    "side": "sell",
+    "quantity": "0.008279812",
+    "price": "412.26",
+    "notional": "3.4134353",
+    "fee": "0.00009627",
+    "liquidity": "taker",
+    "slippage_cost": "0.00033119",
+    "realized_pnl": "-0.0678944584",
+    "timestamp": "2026-11-18T15:10:00+00:00"
+   },
+   {
+    "id": "F00000133",
+    "order_id": "O00000514",
+    "symbol": "ABBV",
+    "side": "sell",
+    "quantity": "0.040552963",
+    "price": "289.66",
+    "notional": "11.74657126",
+    "fee": "0.00033329",
+    "liquidity": "taker",
+    "slippage_cost": "0.00081106",
+    "realized_pnl": "-0.13912273072",
+    "timestamp": "2026-11-18T14:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -3099,6 +3127,34 @@
     "closed_at": "2026-11-17T18:35:00+00:00",
     "entry_order_id": "O00000421",
     "exit_order_id": "O00000505"
+   },
+   {
+    "symbol": "V",
+    "direction": "long",
+    "quantity": "0.008279812",
+    "entry_price": "420.46",
+    "exit_price": "412.26",
+    "pnl": "-0.0679907284",
+    "fees": "0.00009627",
+    "return_pct": -0.01953010292439377,
+    "opened_at": "2026-11-10T15:41:37.451872+00:00",
+    "closed_at": "2026-11-18T15:10:00+00:00",
+    "entry_order_id": "O00000361",
+    "exit_order_id": "O00000508"
+   },
+   {
+    "symbol": "ABBV",
+    "direction": "long",
+    "quantity": "0.040552963",
+    "entry_price": "293.090642804571",
+    "exit_price": "289.66",
+    "pnl": "-0.13945602072",
+    "fees": "0.00033329",
+    "return_pct": -0.01173309869820069,
+    "opened_at": "2026-11-11T15:41:56.599149+00:00",
+    "closed_at": "2026-11-18T14:35:00+00:00",
+    "entry_order_id": "O00000392",
+    "exit_order_id": "O00000514"
    }
   ],
   "equity_curve": [
@@ -8008,13 +8064,20 @@
     "32.38898364692770000000000000000000",
     "62.18308021288994872916976",
     "62.18308021288994872916976"
+   ],
+   [
+    "2026-11-18T21:21:55.981545+00:00",
+    "94.22721487875442736593738400000000",
+    "47.54856064462770000000000000000000",
+    "46.678654234126727365937384",
+    "46.678654234126727365937384"
    ]
   ],
-  "total_fees": "0.11461935",
-  "total_slippage": "0.20135899",
+  "total_fees": "0.11504891",
+  "total_slippage": "0.20250124",
   "total_financing": "0E-47",
   "peak_equity": "101.6251715784182113458884300000000",
-  "max_drawdown": "0.06940315680705238660435028849295790"
+  "max_drawdown": "0.07279649898504931661838028091867719"
  },
  "orders": [
   {
@@ -18673,13 +18736,13 @@
    "limit_price": null,
    "stop_price": "412.3",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.008279812",
+   "avg_fill_price": "412.26",
+   "fees_paid": "0.00009627",
+   "triggered": true,
    "created_at": "2026-11-17T15:42:36.284795+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-18T15:10:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.04: t\u00e9cnico -0.22 (harami alcista), noticias +0.22 (16 relevantes), tendencia alcista. Titular: \u00abVisa, Mas",
    "reduce_only": true,
@@ -18694,14 +18757,14 @@
    "limit_price": "440.55",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T15:42:36.284840+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-18T21:21:55.987310+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.04: t\u00e9cnico -0.22 (harami alcista), noticias +0.22 (16 relevantes), tendencia alcista. Titular: \u00abVisa, Mas filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.04: t\u00e9cnico -0.22 (harami alcista), noticias +0.22 (16 relevantes), tendencia alcista. Titular: \u00abVisa, Mas",
    "reduce_only": true,
    "oco_group": "exits-V-508"
@@ -18799,13 +18862,13 @@
    "limit_price": null,
    "stop_price": "289.68",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.040552963",
+   "avg_fill_price": "289.66",
+   "fees_paid": "0.00033329",
+   "triggered": true,
    "created_at": "2026-11-17T15:42:36.287703+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-18T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: ampliar: Puntuaci\u00f3n +0.17: t\u00e9cnico -0.03, noticias +0.20 (11 relevantes), tendencia alcista. Titular: \u00abMerck Stock's $1.3 Billion China Problem Goes Quiet\u00bb",
    "reduce_only": true,
@@ -18820,14 +18883,14 @@
    "limit_price": "321.12",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T15:42:36.287753+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-18T21:21:55.997408+00:00",
+   "reject_reason": "OCO: stop-loss: ampliar: Puntuaci\u00f3n +0.17: t\u00e9cnico -0.03, noticias +0.20 (11 relevantes), tendencia alcista. Titular: \u00abMerck Stock's $1.3 Billion China Problem Goes Quiet\u00bb filled",
    "tag": "take-profit: ampliar: Puntuaci\u00f3n +0.17: t\u00e9cnico -0.03, noticias +0.20 (11 relevantes), tendencia alcista. Titular: \u00abMerck Stock's $1.3 Billion China Problem Goes Quiet\u00bb",
    "reduce_only": true,
    "oco_group": "exits-ABBV-514"
@@ -18920,21 +18983,17 @@
  "open_order_ids": [
   "O00000503",
   "O00000504",
-  "O00000508",
-  "O00000509",
   "O00000510",
   "O00000511",
   "O00000512",
   "O00000513",
-  "O00000514",
-  "O00000515",
   "O00000516",
   "O00000517",
   "O00000518",
   "O00000519"
  ],
  "order_id_counter": 520,
- "fill_id_counter": 132,
+ "fill_id_counter": 134,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -18944,11 +19003,11 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-18T14:20:29.419934+00:00",
+ "last_sync": "2026-11-18T21:21:55.981545+00:00",
  "bankrupt": false,
  "path_checked": {
-  "ABBV": "2026-11-17T21:00:00+00:00",
-  "SLB": "2026-11-17T21:00:00+00:00",
+  "ABBV": "2026-11-18T21:00:00+00:00",
+  "SLB": "2026-11-18T21:00:00+00:00",
   "XLV": "2026-11-06T19:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
@@ -18956,9 +19015,9 @@
   "PG": "2026-11-06T19:20:00+00:00",
   "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-17T21:00:00+00:00",
+  "LLY": "2026-11-18T21:00:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
-  "TXN": "2026-11-17T21:00:00+00:00",
+  "TXN": "2026-11-18T21:00:00+00:00",
   "TMO": "2026-11-13T17:55:00+00:00",
   "PLTR": "2026-11-16T21:00:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
@@ -18972,10 +19031,10 @@
   "MSFT": "2026-11-17T14:40:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
   "BCH-USD": "2026-11-10T15:20:00+00:00",
-  "TSLA": "2026-11-17T21:00:00+00:00",
+  "TSLA": "2026-11-18T21:00:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
-  "V": "2026-11-17T21:00:00+00:00",
+  "V": "2026-11-18T21:00:00+00:00",
   "ABT": "2026-11-17T21:00:00+00:00",
-  "XLU": "2026-11-17T21:00:00+00:00"
+  "XLU": "2026-11-18T21:00:00+00:00"
  }
 }
