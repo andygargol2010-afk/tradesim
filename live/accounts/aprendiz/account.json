@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "84.45981987514000000000000000000000",
+  "cash": "90.57820120904000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -74,14 +74,14 @@
    },
    {
     "symbol": "SOL-USD",
-    "quantity": "0.08428907",
-    "avg_price": "72.36",
-    "open_fees": "0.01524789",
-    "opened_at": "2026-11-17T15:42:04.371000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.01524789",
-    "mark_price": "72.795",
-    "entry_order_id": "O00000009"
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "0.0345585187",
+    "fees_paid": "0.03058218",
+    "mark_price": "72.77000000000001",
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -154,6 +154,20 @@
     "slippage_cost": "0",
     "realized_pnl": "0",
     "timestamp": "2026-11-17T15:42:04.371000+00:00"
+   },
+   {
+    "id": "F00000006",
+    "order_id": "O00000013",
+    "symbol": "SOL-USD",
+    "side": "sell",
+    "quantity": "0.08428907",
+    "price": "72.77",
+    "notional": "6.13371562",
+    "fee": "0.01533429",
+    "liquidity": "taker",
+    "slippage_cost": "0.00084289",
+    "realized_pnl": "0.0345585187",
+    "timestamp": "2026-11-18T22:42:42.355000+00:00"
    }
   ],
   "closed_trades": [
@@ -184,6 +198,20 @@
     "closed_at": "2026-11-17T15:41:48.262862+00:00",
     "entry_order_id": "O00000002",
     "exit_order_id": "O00000008"
+   },
+   {
+    "symbol": "SOL-USD",
+    "direction": "long",
+    "quantity": "0.08428907",
+    "entry_price": "72.36",
+    "exit_price": "72.77",
+    "pnl": "0.0039763387",
+    "fees": "0.03058218",
+    "return_pct": 0.000651948889234197,
+    "opened_at": "2026-11-17T15:42:04.371000+00:00",
+    "closed_at": "2026-11-18T22:42:42.355000+00:00",
+    "entry_order_id": "O00000009",
+    "exit_order_id": "O00000013"
    }
   ],
   "equity_curve": [
@@ -4995,13 +5023,34 @@
     "84.45981987514000000000000000000000",
     "13.7578372170750952356208",
     "13.7578372170750952356208"
+   ],
+   [
+    "2026-11-18T22:42:45.719463+00:00",
+    "98.21554986546509607851150000000000",
+    "84.45981987514000000000000000000000",
+    "13.7557299903250960785115",
+    "13.7557299903250960785115"
+   ],
+   [
+    "2026-11-18T22:42:49.246712+00:00",
+    "98.20021557546509523562080000000000",
+    "90.57820120904000000000000000000000",
+    "7.6220143664250952356208",
+    "7.6220143664250952356208"
+   ],
+   [
+    "2026-11-18T22:42:49.249736+00:00",
+    "98.20021557546509523562080000000000",
+    "90.57820120904000000000000000000000",
+    "7.6220143664250952356208",
+    "7.6220143664250952356208"
    ]
   ],
-  "total_fees": "0.09013509",
-  "total_slippage": "0.01202606",
+  "total_fees": "0.10546938",
+  "total_slippage": "0.01286895",
   "total_financing": "0E-47",
   "peak_equity": "100.4784725609309106445312500000000",
-  "max_drawdown": "0.02266021669470916277144510467638690"
+  "max_drawdown": "0.02267408060054120577810310887613608"
  },
  "orders": [
   {
@@ -5244,25 +5293,45 @@
    "limit_price": null,
    "stop_price": "62.4618",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-17T23:08:07.670080+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-18T22:42:49.246541+00:00",
+   "reject_reason": "cancelled by agent",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-SOL-USD-12"
+  },
+  {
+   "id": "O00000013",
+   "symbol": "SOL-USD",
+   "side": "sell",
+   "quantity": "0.08428907",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.08428907",
+   "avg_fill_price": "72.77",
+   "fees_paid": "0.01533429",
+   "triggered": false,
+   "created_at": "2026-11-18T22:42:49.246622+00:00",
+   "updated_at": "2026-11-18T22:42:42.355000+00:00",
+   "reject_reason": null,
+   "tag": "close_position",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [
-  "O00000004",
-  "O00000012"
+  "O00000004"
  ],
- "order_id_counter": 13,
- "fill_id_counter": 6,
+ "order_id_counter": 14,
+ "fill_id_counter": 7,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -5272,11 +5341,11 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-18T22:22:00.223277+00:00",
+ "last_sync": "2026-11-18T22:42:49.249736+00:00",
  "bankrupt": false,
  "path_checked": {
   "LINK-USD": "2026-11-13T21:35:00+00:00",
   "NVDA": "2026-11-18T21:00:00+00:00",
-  "SOL-USD": "2026-11-18T22:20:00+00:00"
+  "SOL-USD": "2026-11-18T22:40:00+00:00"
  }
 }
