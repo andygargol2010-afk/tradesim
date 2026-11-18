@@ -1,8 +1,6 @@
 {
- "started_at": "2026-11-18T10:20:43.246030+00:00",
- "errors": {
-  "news:google:fed": "https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+OR+Powell+rates+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+FOMC+"
- },
+ "started_at": "2026-11-18T11:20:44.004752+00:00",
+ "errors": {},
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -11,17 +9,17 @@
   "indicators": 23
  },
  "calendar": {
-  "events": 72,
+  "events": 71,
   "researched_at": null
  },
  "news_engines": {
-  "local": 78
+  "local": 130
  },
  "news": {
-  "fetched": 1679,
-  "new": 53,
-  "stored": 9167,
-  "triaged": 53,
+  "fetched": 1745,
+  "new": 105,
+  "stored": 9160,
+  "triaged": 105,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -32,7 +30,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 44.5,
+ "duration_s": 43.9,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
