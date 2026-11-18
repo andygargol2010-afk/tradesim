@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-18T02:16:35.929371+00:00",
+  "generated_at": "2026-11-18T02:22:01.249396+00:00",
   "symbols": [
    "SPY",
    "QQQ",
@@ -340,20 +340,20 @@
   "stocks_data": "auto"
  },
  "last_run": {
-  "started_at": "2026-11-18T02:15:44.177969+00:00",
-  "mode": "mark",
-  "duration_s": 51.75,
+  "started_at": "2026-11-18T02:20:43.005124+00:00",
+  "mode": "research",
+  "duration_s": 78.24,
   "accounts": {
    "aprendiz": {
     "status": "synced",
     "message": "",
-    "equity": 98.57382533083,
+    "equity": 98.59489759833,
     "fills_on_sync": 0
    },
    "rsi-adaptativo": {
     "status": "synced",
     "message": "",
-    "equity": 94.6737667122363,
+    "equity": 94.6845851586363,
     "fills_on_sync": 0
    },
    "cruce-medias": {
@@ -365,7 +365,7 @@
    "buy-hold": {
     "status": "synced",
     "message": "",
-    "equity": 94.1492973156575,
+    "equity": 94.16263883108775,
     "fills_on_sync": 0
    },
    "analista": {
@@ -377,19 +377,19 @@
    "inversor": {
     "status": "synced",
     "message": "",
-    "equity": 95.54554030533,
+    "equity": 95.54940262203,
     "fills_on_sync": 0
    },
    "aprendiz-x2": {
     "status": "synced",
     "message": "",
-    "equity": 97.819682121405,
+    "equity": 97.837188160235,
     "fills_on_sync": 0
    },
    "rsi-x2": {
     "status": "synced",
     "message": "",
-    "equity": 99.1450487689,
+    "equity": 99.236348152622,
     "fills_on_sync": 0
    },
    "cruce-medias-x2": {
@@ -407,7 +407,7 @@
    "inversor-x2": {
     "status": "synced",
     "message": "",
-    "equity": 94.35363684688,
+    "equity": 94.35750072463,
     "fills_on_sync": 0
    },
    "combinador": {
@@ -425,12 +425,12 @@
    "meta": {
     "status": "synced",
     "message": "",
-    "equity": 98.23667362754,
+    "equity": 98.24428976368,
     "fills_on_sync": 0
    }
   },
   "data_errors": {
-   "bars:LMT": "yfinance history(LMT, 1h): $LMT: possibly delisted; no price data found  (1h 2026-11-17 23:24:26.683519+00:00 -> 2026-11-18 02:16:23.940186+00:00)"
+   "bars:LMT": "yfinance history(LMT, 1h): $LMT: possibly delisted; no price data found  (1h 2026-11-17 23:24:26.683519+00:00 -> 2026-11-18 02:21:56.349068+00:00)"
   }
  },
  "prices": {
@@ -440,7 +440,7 @@
    "ask": 732.44,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:44.770146+00:00",
+   "time": "2026-11-18T02:21:30.184265+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -450,7 +450,7 @@
    "ask": 656.95,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:45.127475+00:00",
+   "time": "2026-11-18T02:21:30.434856+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -460,7 +460,7 @@
    "ask": 269.05,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:45.443160+00:00",
+   "time": "2026-11-18T02:21:30.731140+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -470,7 +470,7 @@
    "ask": 507.31,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:45.954542+00:00",
+   "time": "2026-11-18T02:21:30.976964+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -480,7 +480,7 @@
    "ask": 352.48,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:46.265786+00:00",
+   "time": "2026-11-18T02:21:31.202974+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -490,7 +490,7 @@
    "ask": 42.64,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:46.549734+00:00",
+   "time": "2026-11-18T02:21:31.422033+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -500,7 +500,7 @@
    "ask": 79.55,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:46.968337+00:00",
+   "time": "2026-11-18T02:21:31.667207+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -510,7 +510,7 @@
    "ask": 58.27,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:47.320734+00:00",
+   "time": "2026-11-18T02:21:31.926228+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -520,7 +520,7 @@
    "ask": 63.36,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:47.650927+00:00",
+   "time": "2026-11-18T02:21:32.235993+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -530,7 +530,7 @@
    "ask": 57.07,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:48.081835+00:00",
+   "time": "2026-11-18T02:21:32.515549+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -540,7 +540,7 @@
    "ask": 90.41,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:48.400472+00:00",
+   "time": "2026-11-18T02:21:32.819464+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -550,7 +550,7 @@
    "ask": 76.63,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:48.800015+00:00",
+   "time": "2026-11-18T02:21:33.111129+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -560,7 +560,7 @@
    "ask": 104.83,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:49.185145+00:00",
+   "time": "2026-11-18T02:21:33.419505+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -570,7 +570,7 @@
    "ask": 101.35,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:49.505525+00:00",
+   "time": "2026-11-18T02:21:33.816124+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -580,7 +580,7 @@
    "ask": 88.69,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:49.894153+00:00",
+   "time": "2026-11-18T02:21:34.060309+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -590,7 +590,7 @@
    "ask": 32.88,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:50.246167+00:00",
+   "time": "2026-11-18T02:21:34.308941+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -600,7 +600,7 @@
    "ask": 51.9,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:50.568994+00:00",
+   "time": "2026-11-18T02:21:34.547466+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -610,7 +610,7 @@
    "ask": 163.26,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:51.025604+00:00",
+   "time": "2026-11-18T02:21:34.810405+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -620,7 +620,7 @@
    "ask": 185.24,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:51.470395+00:00",
+   "time": "2026-11-18T02:21:35.083055+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -630,7 +630,7 @@
    "ask": 43.42,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:51.862768+00:00",
+   "time": "2026-11-18T02:21:35.414261+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -640,7 +640,7 @@
    "ask": 94.89,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:52.217247+00:00",
+   "time": "2026-11-18T02:21:35.712789+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -650,7 +650,7 @@
    "ask": 140.24,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:52.527818+00:00",
+   "time": "2026-11-18T02:21:36.030266+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -660,7 +660,7 @@
    "ask": 351.91,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:52.880173+00:00",
+   "time": "2026-11-18T02:21:36.302423+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -670,7 +670,7 @@
    "ask": 506.24,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:53.250061+00:00",
+   "time": "2026-11-18T02:21:36.587519+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -680,7 +680,7 @@
    "ask": 155.46,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:53.570129+00:00",
+   "time": "2026-11-18T02:21:36.922230+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -690,7 +690,7 @@
    "ask": 257.89,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:53.924375+00:00",
+   "time": "2026-11-18T02:21:37.195337+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -700,7 +700,7 @@
    "ask": 280.2,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:54.241986+00:00",
+   "time": "2026-11-18T02:21:37.470243+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -710,7 +710,7 @@
    "ask": 618.87,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:54.611711+00:00",
+   "time": "2026-11-18T02:21:37.725829+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -720,7 +720,7 @@
    "ask": 380.11,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:54.973248+00:00",
+   "time": "2026-11-18T02:21:37.964832+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -730,7 +730,7 @@
    "ask": 341.6,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:55.320648+00:00",
+   "time": "2026-11-18T02:21:38.209763+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -740,7 +740,7 @@
    "ask": 503.41,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:55.914758+00:00",
+   "time": "2026-11-18T02:21:38.444341+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -750,7 +750,7 @@
    "ask": 59.68,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:56.302605+00:00",
+   "time": "2026-11-18T02:21:38.689572+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -760,7 +760,7 @@
    "ask": 115.0,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:56.700311+00:00",
+   "time": "2026-11-18T02:21:38.931316+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -770,7 +770,7 @@
    "ask": 194.52,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:57.037825+00:00",
+   "time": "2026-11-18T02:21:39.162046+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -780,7 +780,7 @@
    "ask": 329.96,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:57.434819+00:00",
+   "time": "2026-11-18T02:21:39.435284+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -790,7 +790,7 @@
    "ask": 49.44,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:57.776791+00:00",
+   "time": "2026-11-18T02:21:39.724132+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -800,7 +800,7 @@
    "ask": 877.52,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:58.098604+00:00",
+   "time": "2026-11-18T02:21:40.046431+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -810,7 +810,7 @@
    "ask": 416.77,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:58.418055+00:00",
+   "time": "2026-11-18T02:21:40.299100+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -820,7 +820,7 @@
    "ask": 645.73,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:58.753344+00:00",
+   "time": "2026-11-18T02:21:40.538761+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -830,7 +830,7 @@
    "ask": 167.21,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:59.178449+00:00",
+   "time": "2026-11-18T02:21:40.851291+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -840,7 +840,7 @@
    "ask": 216.13,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:15:59.579129+00:00",
+   "time": "2026-11-18T02:21:41.139366+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -850,7 +850,7 @@
    "ask": 278.7,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:00.011132+00:00",
+   "time": "2026-11-18T02:21:41.420015+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -860,7 +860,7 @@
    "ask": 389.68,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:00.624544+00:00",
+   "time": "2026-11-18T02:21:41.735536+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -870,7 +870,7 @@
    "ask": 1415.55,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:01.095664+00:00",
+   "time": "2026-11-18T02:21:42.011095+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -880,7 +880,7 @@
    "ask": 28.47,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:01.504292+00:00",
+   "time": "2026-11-18T02:21:42.281434+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -890,7 +890,7 @@
    "ask": 171.72,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:01.911924+00:00",
+   "time": "2026-11-18T02:21:42.560179+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -900,7 +900,7 @@
    "ask": 98.79,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:02.382007+00:00",
+   "time": "2026-11-18T02:21:42.817062+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -910,7 +910,7 @@
    "ask": 142.02,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:02.754767+00:00",
+   "time": "2026-11-18T02:21:43.157231+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -920,7 +920,7 @@
    "ask": 127.52,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:03.163837+00:00",
+   "time": "2026-11-18T02:21:43.451880+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -930,7 +930,7 @@
    "ask": 1110.08,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:03.478010+00:00",
+   "time": "2026-11-18T02:21:43.690546+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -940,7 +940,7 @@
    "ask": 339.01,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:03.820358+00:00",
+   "time": "2026-11-18T02:21:43.984273+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -950,7 +950,7 @@
    "ask": 275.82,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:04.230225+00:00",
+   "time": "2026-11-18T02:21:44.346397+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -960,7 +960,7 @@
    "ask": 570.79,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:04.652738+00:00",
+   "time": "2026-11-18T02:21:44.644320+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -970,7 +970,7 @@
    "ask": 163.91,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:05.007913+00:00",
+   "time": "2026-11-18T02:21:44.910252+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -980,7 +980,7 @@
    "ask": 235.55,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:05.385367+00:00",
+   "time": "2026-11-18T02:21:45.158920+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -990,7 +990,7 @@
    "ask": 55.17,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:05.748764+00:00",
+   "time": "2026-11-18T02:21:45.465519+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1000,7 +1000,7 @@
    "ask": 166.67,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:06.149868+00:00",
+   "time": "2026-11-18T02:21:45.716914+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1010,7 +1010,7 @@
    "ask": 95.11,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:06.455524+00:00",
+   "time": "2026-11-18T02:21:45.988615+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1020,7 +1020,7 @@
    "ask": 231.09,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:06.875157+00:00",
+   "time": "2026-11-18T02:21:46.284571+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1030,7 +1030,7 @@
    "ask": 295.86,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:07.315465+00:00",
+   "time": "2026-11-18T02:21:46.619803+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1040,7 +1040,7 @@
    "ask": 712.42,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:07.715502+00:00",
+   "time": "2026-11-18T02:21:46.863956+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1050,7 +1050,7 @@
    "ask": 92.9,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:08.096780+00:00",
+   "time": "2026-11-18T02:21:47.094068+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1060,7 +1060,7 @@
    "ask": 68.81,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:08.402215+00:00",
+   "time": "2026-11-18T02:21:47.318129+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1070,7 +1070,7 @@
    "ask": 156.56,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:08.752568+00:00",
+   "time": "2026-11-18T02:21:47.626735+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1080,7 +1080,7 @@
    "ask": 116.94,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:09.177846+00:00",
+   "time": "2026-11-18T02:21:47.989398+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1090,7 +1090,7 @@
    "ask": 35.85,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:09.573184+00:00",
+   "time": "2026-11-18T02:21:48.245145+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1100,7 +1100,7 @@
    "ask": 107.49,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:09.965035+00:00",
+   "time": "2026-11-18T02:21:48.500368+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1110,7 +1110,7 @@
    "ask": 220.46,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:10.314895+00:00",
+   "time": "2026-11-18T02:21:48.750863+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1120,7 +1120,7 @@
    "ask": 82.69,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:10.778268+00:00",
+   "time": "2026-11-18T02:21:49.046053+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1130,7 +1130,7 @@
    "ask": 183.53,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:11.183517+00:00",
+   "time": "2026-11-18T02:21:49.378878+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1140,7 +1140,7 @@
    "ask": 1180.67,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:11.524346+00:00",
+   "time": "2026-11-18T02:21:49.659690+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1150,7 +1150,7 @@
    "ask": 315.78,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:11.913140+00:00",
+   "time": "2026-11-18T02:21:49.920573+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1160,7 +1160,7 @@
    "ask": 143.37,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:12.299565+00:00",
+   "time": "2026-11-18T02:21:50.230273+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1170,7 +1170,7 @@
    "ask": 292.82,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:12.762398+00:00",
+   "time": "2026-11-18T02:21:50.465644+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1180,7 +1180,7 @@
    "ask": 686.79,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:13.175134+00:00",
+   "time": "2026-11-18T02:21:50.785247+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1190,7 +1190,7 @@
    "ask": 104.71,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:13.665423+00:00",
+   "time": "2026-11-18T02:21:51.048663+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1200,7 +1200,7 @@
    "ask": 194.38,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:14.107751+00:00",
+   "time": "2026-11-18T02:21:51.298120+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1210,7 +1210,7 @@
    "ask": 139.48,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:14.475166+00:00",
+   "time": "2026-11-18T02:21:51.588719+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1220,7 +1220,7 @@
    "ask": 48.95,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:14.877193+00:00",
+   "time": "2026-11-18T02:21:51.857075+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1230,7 +1230,7 @@
    "ask": 218.96,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:15.312139+00:00",
+   "time": "2026-11-18T02:21:52.180934+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1240,7 +1240,7 @@
    "ask": 326.4,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:15.694305+00:00",
+   "time": "2026-11-18T02:21:52.435527+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1250,7 +1250,7 @@
    "ask": 649.23,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:16.097055+00:00",
+   "time": "2026-11-18T02:21:52.696018+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1260,7 +1260,7 @@
    "ask": 590.34,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:16.559147+00:00",
+   "time": "2026-11-18T02:21:52.992369+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1270,7 +1270,7 @@
    "ask": 84.42,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:16.961535+00:00",
+   "time": "2026-11-18T02:21:53.399210+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1280,7 +1280,7 @@
    "ask": 22.29,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:17.354125+00:00",
+   "time": "2026-11-18T02:21:53.741300+00:00",
    "source": "yfinance",
    "market_open": false
   },
@@ -1290,152 +1290,158 @@
    "ask": 515.11,
    "spread_bps": 0.0,
    "modelled_spread": true,
-   "time": "2026-11-18T02:16:17.720530+00:00",
+   "time": "2026-11-18T02:21:54.056423+00:00",
    "source": "yfinance",
    "market_open": false
   },
   "BTC-USD": {
-   "last": 64237.31,
-   "bid": 64237.3,
-   "ask": 64237.31,
+   "last": 64310.74,
+   "bid": 64310.74,
+   "ask": 64310.75,
    "spread_bps": 0.002,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:17.724000+00:00",
+   "time": "2026-11-18T02:21:52.991000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ETH-USD": {
-   "last": 1800.22,
-   "bid": 1800.22,
-   "ask": 1800.23,
-   "spread_bps": 0.056,
+   "last": 1801.36,
+   "bid": 1801.24,
+   "ask": 1801.26,
+   "spread_bps": 0.111,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:15.830000+00:00",
+   "time": "2026-11-18T02:21:51.670000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "SOL-USD": {
-   "last": 74.32,
-   "bid": 74.32,
-   "ask": 74.33,
-   "spread_bps": 1.345,
+   "last": 74.57,
+   "bid": 74.57,
+   "ask": 74.58,
+   "spread_bps": 1.341,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:16.508000+00:00",
+   "time": "2026-11-18T02:21:53.980000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XRP-USD": {
-   "last": 0.9718,
-   "bid": 0.9716,
-   "ask": 0.9718,
-   "spread_bps": 2.058,
+   "last": 0.9729,
+   "bid": 0.9727,
+   "ask": 0.9729,
+   "spread_bps": 2.056,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:18.093000+00:00",
+   "time": "2026-11-18T02:21:52.745000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "ADA-USD": {
-   "last": 0.15271,
-   "bid": 0.15267,
-   "ask": 0.15272,
-   "spread_bps": 3.275,
+   "last": 0.1528,
+   "bid": 0.15273,
+   "ask": 0.15279,
+   "spread_bps": 3.928,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:12.388000+00:00",
+   "time": "2026-11-18T02:21:53.532000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOGE-USD": {
-   "last": 0.05919,
-   "bid": 0.0592,
-   "ask": 0.05923,
-   "spread_bps": 5.066,
+   "last": 0.05927,
+   "bid": 0.05927,
+   "ask": 0.0593,
+   "spread_bps": 5.06,
    "modelled_spread": false,
-   "time": "2026-11-18T02:15:59.230000+00:00",
+   "time": "2026-11-18T02:21:53.026000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LINK-USD": {
-   "last": 9.163,
-   "bid": 9.164,
-   "ask": 9.166,
-   "spread_bps": 2.182,
+   "last": 9.17,
+   "bid": 9.168,
+   "ask": 9.17,
+   "spread_bps": 2.181,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:09.624000+00:00",
+   "time": "2026-11-18T02:21:49.568000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "LTC-USD": {
-   "last": 44.479,
-   "bid": 44.463,
-   "ask": 44.479,
-   "spread_bps": 3.598,
+   "last": 44.525,
+   "bid": 44.508,
+   "ask": 44.523,
+   "spread_bps": 3.37,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:18.659000+00:00",
+   "time": "2026-11-18T02:21:50.203000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AVAX-USD": {
-   "last": 7.152,
-   "bid": 7.152,
-   "ask": 7.153,
-   "spread_bps": 1.398,
+   "last": 7.167,
+   "bid": 7.16,
+   "ask": 7.161,
+   "spread_bps": 1.397,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:13.595000+00:00",
+   "time": "2026-11-18T02:21:39.216000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "DOT-USD": {
-   "last": 0.7323,
-   "bid": 0.7317,
-   "ask": 0.7324,
-   "spread_bps": 9.562,
+   "last": 0.7341,
+   "bid": 0.7332,
+   "ask": 0.7337,
+   "spread_bps": 6.817,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:10.138000+00:00",
+   "time": "2026-11-18T02:20:49.531000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "BCH-USD": {
-   "last": 208.52,
-   "bid": 208.53,
-   "ask": 208.56,
-   "spread_bps": 1.439,
+   "last": 208.77,
+   "bid": 208.68,
+   "ask": 208.79,
+   "spread_bps": 5.27,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:03.083000+00:00",
+   "time": "2026-11-18T02:21:45.248000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "UNI-USD": {
-   "last": 5.2063,
-   "bid": 5.2051,
-   "ask": 5.2073,
-   "spread_bps": 4.226,
+   "last": 5.2139,
+   "bid": 5.2079,
+   "ask": 5.21,
+   "spread_bps": 4.032,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:18.463000+00:00",
+   "time": "2026-11-18T02:21:39.221000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "AAVE-USD": {
-   "last": 111.2,
-   "bid": 111.13,
-   "ask": 111.19,
-   "spread_bps": 5.398,
+   "last": 111.36,
+   "bid": 111.27,
+   "ask": 111.32,
+   "spread_bps": 4.493,
    "modelled_spread": false,
-   "time": "2026-11-18T02:15:44.144000+00:00",
+   "time": "2026-11-18T02:20:16.636000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   },
   "XLM-USD": {
-   "last": 0.139887,
-   "bid": 0.139977,
-   "ask": 0.140034,
-   "spread_bps": 4.071,
+   "last": 0.140381,
+   "bid": 0.140211,
+   "ask": 0.140273,
+   "spread_bps": 4.421,
    "modelled_spread": false,
-   "time": "2026-11-18T02:16:04.992000+00:00",
+   "time": "2026-11-18T02:21:31.481000+00:00",
    "source": "ccxt:coinbase",
    "market_open": true
   }
  },
  "runs": [
+  {
+   "started_at": "2026-11-18T02:20:43.005124+00:00",
+   "mode": "research",
+   "duration_s": 78.24,
+   "errors": 1
+  },
   {
    "started_at": "2026-11-18T02:15:44.177969+00:00",
    "mode": "mark",
@@ -1609,12 +1615,6 @@
    "mode": "research",
    "duration_s": 73.76,
    "errors": 5
-  },
-  {
-   "started_at": "2026-11-17T00:20:45.345804+00:00",
-   "mode": "research",
-   "duration_s": 70.67,
-   "errors": 5
   }
  ],
  "accounts": [
@@ -1635,7 +1635,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.654484+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.4247947202559,
     "last_decision_date": "2026-11-17"
@@ -1643,23 +1643,23 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.654424+00:00",
    "summary": {
-    "equity": 98.573825,
+    "equity": 98.594898,
     "cash": 84.45982,
-    "invested": 14.114005,
-    "invested_pct": 14.32,
-    "pnl": -1.4261747,
-    "pnl_pct": -1.42617,
-    "day_pnl": -0.0472022,
-    "day_pnl_pct": -0.047862,
+    "invested": 14.135078,
+    "invested_pct": 14.34,
+    "pnl": -1.4051024,
+    "pnl_pct": -1.4051,
+    "day_pnl": -0.02613,
+    "day_pnl_pct": -0.026495,
     "realized_pnl": -1.0154461,
-    "unrealized_pnl": -0.32059346,
+    "unrealized_pnl": -0.29952119,
     "fees": 0.0901351,
     "slippage_cost": 0.0120261,
     "max_drawdown_pct": 2.266,
-    "current_drawdown_pct": 1.8956,
-    "sharpe": -4.524,
-    "sortino": -4.781,
-    "volatility_annual_pct": 4.803,
+    "current_drawdown_pct": 1.8746,
+    "sharpe": -4.455,
+    "sortino": -4.712,
+    "volatility_annual_pct": 4.804,
     "days_live": 25,
     "num_trades": 2,
     "num_fills": 5,
@@ -2341,7 +2341,8 @@
      "2026-11-18T00:24:22.609663+00:00",
      "2026-11-18T01:21:45.228869+00:00",
      "2026-11-18T01:52:50.262968+00:00",
-     "2026-11-18T02:16:21.909350+00:00"
+     "2026-11-18T02:16:21.909350+00:00",
+     "2026-11-18T02:21:55.429253+00:00"
     ],
     "equity": [
      100.0,
@@ -3012,7 +3013,8 @@
      98.637885,
      98.599955,
      98.567925,
-     98.573825
+     98.573825,
+     98.594898
     ]
    },
    "positions": [
@@ -3020,7 +3022,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 5.441,
+     "days_held": 5.445,
      "quantity": "0.050490289",
      "avg_price": 165.09,
      "allocated": 8.3354418,
@@ -3029,7 +3031,7 @@
      "market_value": 7.8492203,
      "unrealized_pnl": -0.486221,
      "unrealized_pct": -5.8332,
-     "weight_pct": 7.963,
+     "weight_pct": 7.961,
      "entry_fees": 0.0,
      "entry_reason": "pred +0.108\u03c3",
      "stop_loss": 142.19,
@@ -3039,16 +3041,16 @@
      "symbol": "SOL-USD",
      "name": "Solana",
      "opened_at": "2026-11-17T15:42:04.371000+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.4444,
      "quantity": "0.08428907",
      "avg_price": 72.36,
      "allocated": 6.114405,
      "allocated_pct_at_entry": 6.207,
-     "last_price": 74.325,
-     "market_value": 6.2647851,
-     "unrealized_pnl": 0.15038,
-     "unrealized_pct": 2.4594,
-     "weight_pct": 6.355,
+     "last_price": 74.575,
+     "market_value": 6.2858574,
+     "unrealized_pnl": 0.171452,
+     "unrealized_pct": 2.8041,
+     "weight_pct": 6.375,
      "entry_fees": 0.0152479,
      "entry_reason": "pred +0.162\u03c3",
      "stop_loss": 62.4618,
@@ -6705,16 +6707,16 @@
    },
    "significance": {
     "days": 24,
-    "sharpe": -3.759,
+    "sharpe": -3.702,
     "sharpe_ci95": [
-     -7.624,
+     -7.528,
      3.24
     ],
-    "p_sharpe_positive": 0.062,
+    "p_sharpe_positive": 0.068,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.932,
-    "excess_return_ann_pct": 46.75,
-    "days_to_significant_vs_buy_hold": 111,
+    "excess_return_ann_pct": 46.83,
+    "days_to_significant_vs_buy_hold": 110,
     "rank_ic": {
      "mean": 0.091,
      "t": 2.7,
@@ -6735,7 +6737,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.655382+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.77960676317589,
     "last_decision_date": "2026-11-17"
@@ -6743,22 +6745,22 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.655339+00:00",
    "summary": {
-    "equity": 94.673767,
+    "equity": 94.684585,
     "cash": 15.589532,
-    "invested": 79.084234,
-    "invested_pct": 83.53,
-    "pnl": -5.3262333,
-    "pnl_pct": -5.32623,
-    "day_pnl": -0.0956619,
-    "day_pnl_pct": -0.10094,
+    "invested": 79.095053,
+    "invested_pct": 83.54,
+    "pnl": -5.3154148,
+    "pnl_pct": -5.31541,
+    "day_pnl": -0.0848435,
+    "day_pnl_pct": -0.089526,
     "realized_pnl": -5.8793396,
-    "unrealized_pnl": 0.72356515,
+    "unrealized_pnl": 0.73438359,
     "fees": 0.170459,
     "slippage_cost": 0.115537,
     "max_drawdown_pct": 6.4251,
-    "current_drawdown_pct": 6.3287,
-    "sharpe": -3.359,
-    "sortino": -4.069,
+    "current_drawdown_pct": 6.318,
+    "sharpe": -3.351,
+    "sortino": -4.061,
     "volatility_annual_pct": 23.94,
     "days_live": 25,
     "num_trades": 9,
@@ -7458,7 +7460,8 @@
      "2026-11-18T00:24:22.839092+00:00",
      "2026-11-18T01:21:45.527375+00:00",
      "2026-11-18T01:52:50.744406+00:00",
-     "2026-11-18T02:16:22.370094+00:00"
+     "2026-11-18T02:16:22.370094+00:00",
+     "2026-11-18T02:21:55.730119+00:00"
     ],
     "equity": [
      100.0,
@@ -8146,7 +8149,8 @@
      94.743627,
      94.719903,
      94.691451,
-     94.673767
+     94.673767,
+     94.684585
     ]
    },
    "positions": [
@@ -8192,7 +8196,7 @@
      "symbol": "CAT",
      "name": "Caterpillar Inc.",
      "opened_at": "2026-11-10T15:41:40.684746+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.017047659",
      "avg_price": 578.32,
      "allocated": 9.8590022,
@@ -8239,7 +8243,7 @@
      "market_value": 9.6529886,
      "unrealized_pnl": -0.0602881,
      "unrealized_pct": -0.62068,
-     "weight_pct": 10.2,
+     "weight_pct": 10.19,
      "entry_fees": 0.0,
      "entry_reason": "RSI 22.8",
      "stop_loss": 272.38,
@@ -8249,16 +8253,16 @@
      "symbol": "BTC-USD",
      "name": "Bitcoin",
      "opened_at": "2026-11-17T15:42:04.905000+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.4444,
      "quantity": "0.00014731",
      "avg_price": 64318.6,
      "allocated": 9.4984599,
      "allocated_pct_at_entry": 9.971,
-     "last_price": 64237.305,
-     "market_value": 9.4627974,
-     "unrealized_pnl": -0.0356625,
-     "unrealized_pct": -0.37546,
-     "weight_pct": 9.995,
+     "last_price": 64310.745,
+     "market_value": 9.4736158,
+     "unrealized_pnl": -0.0248441,
+     "unrealized_pct": -0.26156,
+     "weight_pct": 10.01,
      "entry_fees": 0.0236869,
      "entry_reason": "RSI 21.1",
      "stop_loss": 56784.4,
@@ -8268,7 +8272,7 @@
      "symbol": "SLV",
      "name": "iShares Silver Trust",
      "opened_at": "2026-11-17T15:41:43.060254+00:00",
-     "days_held": 0.4409,
+     "days_held": 0.4447,
      "quantity": "0.220003991",
      "avg_price": 43.08,
      "allocated": 9.4777719,
@@ -8277,7 +8281,7 @@
      "market_value": 9.3809702,
      "unrealized_pnl": -0.0968018,
      "unrealized_pct": -1.0214,
-     "weight_pct": 9.909,
+     "weight_pct": 9.908,
      "entry_fees": 0.0,
      "entry_reason": "RSI 26.9",
      "stop_loss": 38.94,
@@ -8287,7 +8291,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 5.441,
+     "days_held": 5.445,
      "quantity": "0.059541888",
      "avg_price": 165.09,
      "allocated": 9.8297703,
@@ -8296,7 +8300,7 @@
      "market_value": 9.2563819,
      "unrealized_pnl": -0.573388,
      "unrealized_pct": -5.8332,
-     "weight_pct": 9.777,
+     "weight_pct": 9.776,
      "entry_fees": 0.0,
      "entry_reason": "RSI 29.2",
      "stop_loss": 142.19,
@@ -12953,16 +12957,16 @@
    },
    "significance": {
     "days": 24,
-    "sharpe": -2.791,
+    "sharpe": -2.785,
     "sharpe_ci95": [
-     -8.509,
-     2.015
+     -8.494,
+     2.021
     ],
     "p_sharpe_positive": 0.13,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.575,
-    "excess_return_ann_pct": 6.25,
-    "days_to_significant_vs_buy_hold": 3403
+    "excess_return_ann_pct": 6.23,
+    "days_to_significant_vs_buy_hold": 3435
    }
   },
   {
@@ -12979,7 +12983,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.656124+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.78620271825592,
     "last_decision_date": "2026-11-17"
@@ -13712,7 +13716,8 @@
      "2026-11-18T00:24:23.410151+00:00",
      "2026-11-18T01:21:46.162957+00:00",
      "2026-11-18T01:52:52.376427+00:00",
-     "2026-11-18T02:16:23.940186+00:00"
+     "2026-11-18T02:16:23.940186+00:00",
+     "2026-11-18T02:21:56.349068+00:00"
     ],
     "equity": [
      100.0,
@@ -14410,6 +14415,7 @@
      98.070598,
      98.070598,
      98.070598,
+     98.070598,
      98.070598
     ]
    },
@@ -14418,7 +14424,7 @@
      "symbol": "IEF",
      "name": "iShares 7-10 Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:32.519114+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.060512492",
      "avg_price": 91.01,
      "allocated": 5.5072419,
@@ -14437,7 +14443,7 @@
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-11-10T15:41:31.737325+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.044826638",
      "avg_price": 80.87,
      "allocated": 3.6251302,
@@ -14475,7 +14481,7 @@
      "symbol": "INDA",
      "name": "iShares MSCI India",
      "opened_at": "2026-11-10T15:41:33.593298+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.055921853",
      "avg_price": 51.9,
      "allocated": 2.9023442,
@@ -14893,7 +14899,7 @@
      "symbol": "JNJ",
      "name": "Johnson & Johnson",
      "opened_at": "2026-11-11T15:41:47.927707+00:00",
-     "days_held": 6.441,
+     "days_held": 6.445,
      "quantity": "0.006783766",
      "avg_price": 277.6,
      "allocated": 1.8831734,
@@ -15159,7 +15165,7 @@
      "symbol": "MRK",
      "name": "Merck & Co.",
      "opened_at": "2026-11-12T15:41:58.962099+00:00",
-     "days_held": 5.441,
+     "days_held": 5.444,
      "quantity": "0.010085034",
      "avg_price": 148.05,
      "allocated": 1.4930893,
@@ -15254,7 +15260,7 @@
      "symbol": "ADBE",
      "name": "Adobe Inc.",
      "opened_at": "2026-11-11T15:41:51.530559+00:00",
-     "days_held": 6.441,
+     "days_held": 6.445,
      "quantity": "0.005094323",
      "avg_price": 237.21,
      "allocated": 1.2084244,
@@ -15273,7 +15279,7 @@
      "symbol": "SLB",
      "name": "Schlumberger",
      "opened_at": "2026-11-17T15:42:03.232775+00:00",
-     "days_held": 0.4407,
+     "days_held": 0.4444,
      "quantity": "0.02420287",
      "avg_price": 49.49,
      "allocated": 1.1978,
@@ -23925,8 +23931,8 @@
     ],
     "p_sharpe_positive": 0.252,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.99,
-    "excess_return_ann_pct": 42.15,
+    "p_beats_buy_hold": 0.989,
+    "excess_return_ann_pct": 42.0,
     "days_to_significant_vs_buy_hold": 24
    }
   },
@@ -23995,7 +24001,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657211+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.59597715597896,
     "last_decision_date": "2026-11-17"
@@ -24003,22 +24009,22 @@
    "status": "synced",
    "started_at": "2026-10-25T17:25:18.657170+00:00",
    "summary": {
-    "equity": 94.149297,
+    "equity": 94.162639,
     "cash": 4.9420476,
-    "invested": 89.20725,
+    "invested": 89.220591,
     "invested_pct": 94.75,
-    "pnl": -5.8507027,
-    "pnl_pct": -5.8507,
-    "day_pnl": -0.142162,
-    "day_pnl_pct": -0.15077,
+    "pnl": -5.8373612,
+    "pnl_pct": -5.83736,
+    "day_pnl": -0.12882,
+    "day_pnl_pct": -0.13662,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -5.8127304,
+    "unrealized_pnl": -5.7993889,
     "fees": 0.0379723,
     "slippage_cost": 0.0210596,
     "max_drawdown_pct": 6.6102,
-    "current_drawdown_pct": 6.533,
-    "sharpe": -4.266,
-    "sortino": -4.959,
+    "current_drawdown_pct": 6.5198,
+    "sharpe": -4.256,
+    "sortino": -4.948,
     "volatility_annual_pct": 20.97,
     "days_live": 25,
     "num_trades": 0,
@@ -24697,7 +24703,8 @@
      "2026-11-18T00:24:26.721950+00:00",
      "2026-11-18T01:21:49.068094+00:00",
      "2026-11-18T01:53:04.174516+00:00",
-     "2026-11-18T02:16:33.096126+00:00"
+     "2026-11-18T02:16:33.096126+00:00",
+     "2026-11-18T02:22:00.388670+00:00"
     ],
     "equity": [
      100.0,
@@ -25364,7 +25371,8 @@
      94.273425,
      94.204334,
      94.165544,
-     94.149297
+     94.149297,
+     94.162639
     ]
    },
    "positions": [
@@ -25400,7 +25408,7 @@
      "market_value": 2.1011985,
      "unrealized_pnl": 0.200464,
      "unrealized_pct": 10.547,
-     "weight_pct": 2.232,
+     "weight_pct": 2.231,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25438,7 +25446,7 @@
      "market_value": 2.0407054,
      "unrealized_pnl": 0.14023,
      "unrealized_pct": 7.3787,
-     "weight_pct": 2.168,
+     "weight_pct": 2.167,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25457,7 +25465,7 @@
      "market_value": 2.031396,
      "unrealized_pnl": 0.13119,
      "unrealized_pct": 6.904,
-     "weight_pct": 2.158,
+     "weight_pct": 2.157,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25476,7 +25484,7 @@
      "market_value": 2.0229547,
      "unrealized_pnl": 0.122388,
      "unrealized_pct": 6.4396,
-     "weight_pct": 2.149,
+     "weight_pct": 2.148,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25514,7 +25522,7 @@
      "market_value": 2.0003211,
      "unrealized_pnl": 0.100182,
      "unrealized_pct": 5.2723,
-     "weight_pct": 2.125,
+     "weight_pct": 2.124,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25628,7 +25636,7 @@
      "market_value": 1.9429546,
      "unrealized_pnl": 0.0428443,
      "unrealized_pct": 2.2548,
-     "weight_pct": 2.064,
+     "weight_pct": 2.063,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25704,7 +25712,7 @@
      "market_value": 1.8506796,
      "unrealized_pnl": -0.0495531,
      "unrealized_pct": -2.6077,
-     "weight_pct": 1.966,
+     "weight_pct": 1.965,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25742,7 +25750,7 @@
      "market_value": 1.8449221,
      "unrealized_pnl": -0.0551684,
      "unrealized_pct": -2.9035,
-     "weight_pct": 1.96,
+     "weight_pct": 1.959,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25761,7 +25769,7 @@
      "market_value": 1.8411821,
      "unrealized_pnl": -0.0589206,
      "unrealized_pct": -3.1009,
-     "weight_pct": 1.956,
+     "weight_pct": 1.955,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25894,7 +25902,7 @@
      "market_value": 1.805563,
      "unrealized_pnl": -0.0946521,
      "unrealized_pct": -4.9811,
-     "weight_pct": 1.918,
+     "weight_pct": 1.917,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -25989,7 +25997,7 @@
      "market_value": 1.7509327,
      "unrealized_pnl": -0.149174,
      "unrealized_pct": -7.8508,
-     "weight_pct": 1.86,
+     "weight_pct": 1.859,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26103,7 +26111,7 @@
      "market_value": 1.6547767,
      "unrealized_pnl": -0.246031,
      "unrealized_pct": -12.943,
-     "weight_pct": 1.758,
+     "weight_pct": 1.757,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26122,7 +26130,7 @@
      "market_value": 1.5643721,
      "unrealized_pnl": -0.33582,
      "unrealized_pct": -17.673,
-     "weight_pct": 1.662,
+     "weight_pct": 1.661,
      "entry_fees": 0.0,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26137,11 +26145,11 @@
      "avg_price": 80106.8,
      "allocated": 1.9040806,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 64237.305,
-     "market_value": 1.5230665,
-     "unrealized_pnl": -0.381014,
-     "unrealized_pct": -20.01,
-     "weight_pct": 1.618,
+     "last_price": 64310.745,
+     "market_value": 1.5248078,
+     "unrealized_pnl": -0.379273,
+     "unrealized_pct": -19.919,
+     "weight_pct": 1.619,
      "entry_fees": 0.00474833,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26156,10 +26164,10 @@
      "avg_price": 11.465,
      "allocated": 1.9020126,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 9.165,
-     "market_value": 1.5166572,
-     "unrealized_pnl": -0.385355,
-     "unrealized_pct": -20.26,
+     "last_price": 9.169,
+     "market_value": 1.5173191,
+     "unrealized_pnl": -0.384694,
+     "unrealized_pct": -20.226,
      "weight_pct": 1.611,
      "entry_fees": 0.00474317,
      "entry_reason": "rebalance",
@@ -26194,11 +26202,11 @@
      "avg_price": 56.654,
      "allocated": 1.9026844,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 44.471,
-     "market_value": 1.4898025,
-     "unrealized_pnl": -0.412882,
-     "unrealized_pct": -21.7,
-     "weight_pct": 1.582,
+     "last_price": 44.5155,
+     "market_value": 1.4912933,
+     "unrealized_pnl": -0.411391,
+     "unrealized_pct": -21.622,
+     "weight_pct": 1.584,
      "entry_fees": 0.00474485,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26213,11 +26221,11 @@
      "avg_price": 2318.24,
      "allocated": 1.9039662,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 1800.225,
-     "market_value": 1.4748343,
-     "unrealized_pnl": -0.429132,
-     "unrealized_pct": -22.539,
-     "weight_pct": 1.566,
+     "last_price": 1801.25,
+     "market_value": 1.4756741,
+     "unrealized_pnl": -0.428292,
+     "unrealized_pct": -22.495,
+     "weight_pct": 1.567,
      "entry_fees": 0.00474805,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26232,11 +26240,11 @@
      "avg_price": 0.07745,
      "allocated": 1.9029073,
      "allocated_pct_at_entry": 1.903,
-     "last_price": 0.059215,
-     "market_value": 1.4512544,
-     "unrealized_pnl": -0.451653,
-     "unrealized_pct": -23.735,
-     "weight_pct": 1.541,
+     "last_price": 0.059285,
+     "market_value": 1.45297,
+     "unrealized_pnl": -0.449937,
+     "unrealized_pct": -23.645,
+     "weight_pct": 1.543,
      "entry_fees": 0.0047454,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26251,11 +26259,11 @@
      "avg_price": 1.2923,
      "allocated": 1.9046026,
      "allocated_pct_at_entry": 1.905,
-     "last_price": 0.9717,
-     "market_value": 1.4285283,
-     "unrealized_pnl": -0.476074,
-     "unrealized_pct": -24.996,
-     "weight_pct": 1.517,
+     "last_price": 0.9728,
+     "market_value": 1.4301455,
+     "unrealized_pnl": -0.474457,
+     "unrealized_pct": -24.911,
+     "weight_pct": 1.519,
      "entry_fees": 0.00474963,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26270,11 +26278,11 @@
      "avg_price": 0.20551,
      "allocated": 1.9021584,
      "allocated_pct_at_entry": 1.902,
-     "last_price": 0.152695,
-     "market_value": 1.4097891,
-     "unrealized_pnl": -0.492369,
-     "unrealized_pct": -25.885,
-     "weight_pct": 1.497,
+     "last_price": 0.15276,
+     "market_value": 1.4103892,
+     "unrealized_pnl": -0.491769,
+     "unrealized_pct": -25.853,
+     "weight_pct": 1.498,
      "entry_fees": 0.00474354,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -26289,11 +26297,11 @@
      "avg_price": 101.59,
      "allocated": 1.9044681,
      "allocated_pct_at_entry": 1.904,
-     "last_price": 74.325,
-     "market_value": 1.3898671,
-     "unrealized_pnl": -0.514601,
-     "unrealized_pct": -27.021,
-     "weight_pct": 1.476,
+     "last_price": 74.575,
+     "market_value": 1.3945421,
+     "unrealized_pnl": -0.509926,
+     "unrealized_pct": -26.775,
+     "weight_pct": 1.481,
      "entry_fees": 0.0047493,
      "entry_reason": "rebalance",
      "stop_loss": null,
@@ -28530,10 +28538,10 @@
    "learning": null,
    "significance": {
     "days": 24,
-    "sharpe": -3.545,
+    "sharpe": -3.536,
     "sharpe_ci95": [
-     -9.229,
-     0.46
+     -9.196,
+     0.481
     ],
     "p_sharpe_positive": 0.037,
     "days_to_significant_sharpe": null
@@ -28563,7 +28571,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T17:25:18.657939+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 101.4776045672673,
     "last_decision_date": "2026-11-17"
@@ -29286,7 +29294,8 @@
      "2026-11-18T00:24:26.752626+00:00",
      "2026-11-18T01:21:49.114172+00:00",
      "2026-11-18T01:53:06.000308+00:00",
-     "2026-11-18T02:16:34.485904+00:00"
+     "2026-11-18T02:16:34.485904+00:00",
+     "2026-11-18T02:22:00.437476+00:00"
     ],
     "equity": [
      100.0,
@@ -29974,6 +29983,7 @@
      94.572064,
      94.572065,
      94.572065,
+     94.572065,
      94.572065
     ]
    },
@@ -29982,7 +29992,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.035588939",
      "avg_price": 377.11723,
      "allocated": 13.421202,
@@ -30001,7 +30011,7 @@
      "symbol": "ABBV",
      "name": "AbbVie",
      "opened_at": "2026-11-11T15:41:56.599149+00:00",
-     "days_held": 6.441,
+     "days_held": 6.444,
      "quantity": "0.040552963",
      "avg_price": 293.09064,
      "allocated": 11.885694,
@@ -30020,7 +30030,7 @@
      "symbol": "SLB",
      "name": "Schlumberger",
      "opened_at": "2026-11-17T15:42:03.232775+00:00",
-     "days_held": 0.4407,
+     "days_held": 0.4444,
      "quantity": "0.224507451",
      "avg_price": 49.49,
      "allocated": 11.110874,
@@ -30039,7 +30049,7 @@
      "symbol": "XLU",
      "name": "Utilities Select Sector SPDR",
      "opened_at": "2026-11-17T15:41:46.922450+00:00",
-     "days_held": 0.4408,
+     "days_held": 0.4446,
      "quantity": "0.229929496",
      "avg_price": 43.98,
      "allocated": 10.112299,
@@ -30058,7 +30068,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.021181293",
      "avg_price": 295.08,
      "allocated": 6.2501759,
@@ -30096,7 +30106,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.008279812",
      "avg_price": 420.46,
      "allocated": 3.4813298,
@@ -55922,9 +55932,9 @@
     ],
     "p_sharpe_positive": 0.042,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.543,
-    "excess_return_ann_pct": 3.79,
-    "days_to_significant_vs_buy_hold": 13569
+    "p_beats_buy_hold": 0.541,
+    "excess_return_ann_pct": 3.64,
+    "days_to_significant_vs_buy_hold": 14698
    }
   },
   {
@@ -55939,7 +55949,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T20:21:21.118540+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.8868875122072,
     "last_decision_date": "2026-11-17"
@@ -55947,22 +55957,22 @@
    "status": "synced",
    "started_at": "2026-10-25T20:21:21.118519+00:00",
    "summary": {
-    "equity": 95.54554,
+    "equity": 95.549403,
     "cash": 1.9841608,
-    "invested": 93.56138,
+    "invested": 93.565242,
     "invested_pct": 97.92,
-    "pnl": -4.4544597,
-    "pnl_pct": -4.45446,
-    "day_pnl": -0.0418729,
-    "day_pnl_pct": -0.043806,
+    "pnl": -4.4505974,
+    "pnl_pct": -4.4506,
+    "day_pnl": -0.0380106,
+    "day_pnl_pct": -0.039765,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -4.4419585,
+    "unrealized_pnl": -4.4380962,
     "fees": 0.0125012,
     "slippage_cost": 0.0158806,
     "max_drawdown_pct": 5.3174,
-    "current_drawdown_pct": 5.3137,
-    "sharpe": -3.441,
-    "sortino": -4.069,
+    "current_drawdown_pct": 5.3098,
+    "sharpe": -3.438,
+    "sortino": -4.066,
     "volatility_annual_pct": 19.58,
     "days_live": 25,
     "num_trades": 0,
@@ -56635,7 +56645,8 @@
      "2026-11-18T00:24:26.771915+00:00",
      "2026-11-18T01:21:49.141994+00:00",
      "2026-11-18T01:53:06.015783+00:00",
-     "2026-11-18T02:16:34.513019+00:00"
+     "2026-11-18T02:16:34.513019+00:00",
+     "2026-11-18T02:22:00.467369+00:00"
     ],
     "equity": [
      100.0,
@@ -57296,7 +57307,8 @@
      95.577126,
      95.567341,
      95.553497,
-     95.54554
+     95.54554,
+     95.549403
     ]
    },
    "positions": [
@@ -57537,11 +57549,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5086377,
      "allocated_pct_at_entry": 3.509,
-     "last_price": 64237.305,
-     "market_value": 2.7994618,
-     "unrealized_pnl": -0.709176,
-     "unrealized_pct": -20.212,
-     "weight_pct": 2.93,
+     "last_price": 64310.745,
+     "market_value": 2.8026623,
+     "unrealized_pnl": -0.705975,
+     "unrealized_pct": -20.121,
+     "weight_pct": 2.933,
      "entry_fees": 0.00874972,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -57575,10 +57587,10 @@
      "avg_price": 2324.1,
      "allocated": 1.5043299,
      "allocated_pct_at_entry": 1.504,
-     "last_price": 1800.225,
-     "market_value": 1.1623333,
-     "unrealized_pnl": -0.341997,
-     "unrealized_pct": -22.734,
+     "last_price": 1801.25,
+     "market_value": 1.1629951,
+     "unrealized_pnl": -0.341335,
+     "unrealized_pct": -22.69,
      "weight_pct": 1.217,
      "entry_fees": 0.00375145,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
@@ -59323,16 +59335,16 @@
    "learning": null,
    "significance": {
     "days": 24,
-    "sharpe": -2.86,
+    "sharpe": -2.857,
     "sharpe_ci95": [
-     -8.307,
+     -8.295,
      1.453
     ],
     "p_sharpe_positive": 0.088,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.896,
-    "excess_return_ann_pct": 15.23,
-    "days_to_significant_vs_buy_hold": 133
+    "p_beats_buy_hold": 0.895,
+    "excess_return_ann_pct": 15.13,
+    "days_to_significant_vs_buy_hold": 135
    }
   },
   {
@@ -59353,7 +59365,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.341612+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.60600128383466,
     "last_decision_date": "2026-11-17"
@@ -59361,23 +59373,23 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.341575+00:00",
    "summary": {
-    "equity": 97.819682,
+    "equity": 97.837188,
     "cash": 56.759112,
-    "invested": 41.06057,
-    "invested_pct": 41.98,
-    "pnl": -2.1803179,
-    "pnl_pct": -2.18032,
-    "day_pnl": -0.307086,
-    "day_pnl_pct": -0.31295,
+    "invested": 41.078076,
+    "invested_pct": 41.99,
+    "pnl": -2.1628118,
+    "pnl_pct": -2.16281,
+    "day_pnl": -0.28958,
+    "day_pnl_pct": -0.29511,
     "realized_pnl": -0.68788382,
-    "unrealized_pnl": -1.337289,
+    "unrealized_pnl": -1.3197829,
     "fees": 0.155145,
     "slippage_cost": 0.0327004,
     "max_drawdown_pct": 3.3579,
-    "current_drawdown_pct": 2.8421,
-    "sharpe": -4.838,
-    "sortino": -5.078,
-    "volatility_annual_pct": 7.177,
+    "current_drawdown_pct": 2.8247,
+    "sharpe": -4.804,
+    "sortino": -5.046,
+    "volatility_annual_pct": 7.168,
     "days_live": 24,
     "num_trades": 2,
     "num_fills": 6,
@@ -60049,7 +60061,8 @@
      "2026-11-18T00:24:26.783337+00:00",
      "2026-11-18T01:21:49.158866+00:00",
      "2026-11-18T01:53:06.274906+00:00",
-     "2026-11-18T02:16:34.807754+00:00"
+     "2026-11-18T02:16:34.807754+00:00",
+     "2026-11-18T02:22:00.485088+00:00"
     ],
     "equity": [
      100.0,
@@ -60710,7 +60723,8 @@
      98.108176,
      97.934165,
      97.860724,
-     97.819682
+     97.819682,
+     97.837188
     ]
    },
    "positions": [
@@ -60718,7 +60732,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 5.441,
+     "days_held": 5.445,
      "quantity": "0.134346854",
      "avg_price": 165.09,
      "allocated": 22.179322,
@@ -60737,16 +60751,16 @@
      "symbol": "AVAX-USD",
      "name": "Avalanche",
      "opened_at": "2026-11-17T15:42:04.259000+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.4444,
      "quantity": "1.62230671",
      "avg_price": 7.102,
      "allocated": 11.550426,
      "allocated_pct_at_entry": 11.81,
-     "last_price": 7.1525,
-     "market_value": 11.603549,
-     "unrealized_pnl": 0.0531224,
-     "unrealized_pct": 0.45992,
-     "weight_pct": 11.86,
+     "last_price": 7.1605,
+     "market_value": 11.616527,
+     "unrealized_pnl": 0.0661009,
+     "unrealized_pct": 0.57228,
+     "weight_pct": 11.87,
      "entry_fees": 0.0288041,
      "entry_reason": "pred +0.129\u03c3",
      "stop_loss": 5.70589,
@@ -60756,16 +60770,16 @@
      "symbol": "UNI-USD",
      "name": "Uniswap",
      "opened_at": "2026-11-17T15:42:06.100000+00:00",
-     "days_held": 0.4406,
+     "days_held": 0.4444,
      "quantity": "1.6463946",
      "avg_price": 5.2824,
      "allocated": 8.7186571,
      "allocated_pct_at_entry": 8.915,
-     "last_price": 5.2062,
-     "market_value": 8.5714596,
-     "unrealized_pnl": -0.147198,
-     "unrealized_pct": -1.6883,
-     "weight_pct": 8.763,
+     "last_price": 5.20895,
+     "market_value": 8.5759872,
+     "unrealized_pnl": -0.14267,
+     "unrealized_pct": -1.6364,
+     "weight_pct": 8.766,
      "entry_fees": 0.0217423,
      "entry_reason": "pred +0.133\u03c3",
      "stop_loss": 3.77763,
@@ -64446,15 +64460,15 @@
    },
    "significance": {
     "days": 23,
-    "sharpe": -4.02,
+    "sharpe": -3.992,
     "sharpe_ci95": [
-     -7.969,
-     1.397
+     -7.945,
+     1.5
     ],
-    "p_sharpe_positive": 0.056,
+    "p_sharpe_positive": 0.057,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.898,
-    "excess_return_ann_pct": 38.26,
+    "p_beats_buy_hold": 0.899,
+    "excess_return_ann_pct": 38.3,
     "days_to_significant_vs_buy_hold": 192,
     "rank_ic": {
      "mean": 0.091,
@@ -64479,7 +64493,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342190+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.7305287818188,
     "last_decision_date": "2026-11-17"
@@ -64487,23 +64501,23 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.342155+00:00",
    "summary": {
-    "equity": 99.145049,
+    "equity": 99.236348,
     "cash": 19.63199,
-    "invested": 79.513059,
-    "invested_pct": 80.2,
-    "pnl": -0.85495123,
-    "pnl_pct": -0.854951,
-    "day_pnl": -0.384144,
-    "day_pnl_pct": -0.38596,
+    "invested": 79.604359,
+    "invested_pct": 80.22,
+    "pnl": -0.76365185,
+    "pnl_pct": -0.763652,
+    "day_pnl": -0.292844,
+    "day_pnl_pct": -0.29423,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -0.7541352,
+    "unrealized_pnl": -0.66283582,
     "fees": 0.100816,
     "slippage_cost": 0.0635152,
     "max_drawdown_pct": 2.9799,
-    "current_drawdown_pct": 1.8347,
-    "sharpe": -0.5068,
-    "sortino": -0.6785,
-    "volatility_annual_pct": 18.3,
+    "current_drawdown_pct": 1.7443,
+    "sharpe": -0.4279,
+    "sortino": -0.5735,
+    "volatility_annual_pct": 18.27,
     "days_live": 24,
     "num_trades": 0,
     "num_fills": 4,
@@ -65192,7 +65206,8 @@
      "2026-11-18T00:24:27.173647+00:00",
      "2026-11-18T01:21:49.651176+00:00",
      "2026-11-18T01:53:06.924852+00:00",
-     "2026-11-18T02:16:35.455995+00:00"
+     "2026-11-18T02:16:35.455995+00:00",
+     "2026-11-18T02:22:00.852121+00:00"
     ],
     "equity": [
      100.0,
@@ -65870,7 +65885,8 @@
      99.539207,
      99.31413,
      99.173733,
-     99.145049
+     99.145049,
+     99.236348
     ]
    },
    "positions": [
@@ -65878,16 +65894,16 @@
      "symbol": "SOL-USD",
      "name": "Solana",
      "opened_at": "2026-11-14T15:42:17.579000+00:00",
-     "days_held": 3.44,
+     "days_held": 3.444,
      "quantity": "0.27367548",
      "avg_price": 73.65,
      "allocated": 20.20659,
      "allocated_pct_at_entry": 20.06,
-     "last_price": 74.325,
-     "market_value": 20.34093,
-     "unrealized_pnl": 0.13434,
-     "unrealized_pct": 0.66483,
-     "weight_pct": 20.52,
+     "last_price": 74.575,
+     "market_value": 20.409349,
+     "unrealized_pnl": 0.202759,
+     "unrealized_pct": 1.0034,
+     "weight_pct": 20.57,
      "entry_fees": 0.0503905,
      "entry_reason": "RSI 22.7",
      "stop_loss": 62.8089,
@@ -65897,15 +65913,15 @@
      "symbol": "XRP-USD",
      "name": "XRP",
      "opened_at": "2026-11-14T15:42:17.865000+00:00",
-     "days_held": 3.44,
+     "days_held": 3.444,
      "quantity": "20.80046702",
      "avg_price": 0.9697,
      "allocated": 20.220638,
      "allocated_pct_at_entry": 20.07,
-     "last_price": 0.9717,
-     "market_value": 20.211814,
-     "unrealized_pnl": -0.0088246,
-     "unrealized_pct": -0.043642,
+     "last_price": 0.9728,
+     "market_value": 20.234694,
+     "unrealized_pnl": 0.0140559,
+     "unrealized_pct": 0.069513,
      "weight_pct": 20.39,
      "entry_fees": 0.0504255,
      "entry_reason": "RSI 24.5",
@@ -65925,7 +65941,7 @@
      "market_value": 19.553053,
      "unrealized_pnl": -0.383804,
      "unrealized_pct": -1.9251,
-     "weight_pct": 19.72,
+     "weight_pct": 19.7,
      "entry_fees": 0.0,
      "entry_reason": "RSI 22.3",
      "stop_loss": 272.38,
@@ -65944,7 +65960,7 @@
      "market_value": 19.407262,
      "unrealized_pnl": -0.596663,
      "unrealized_pct": -2.9827,
-     "weight_pct": 19.57,
+     "weight_pct": 19.56,
      "entry_fees": 0.0,
      "entry_reason": "RSI 23.5",
      "stop_loss": 49.06,
@@ -69945,16 +69961,16 @@
    },
    "significance": {
     "days": 23,
-    "sharpe": -0.421,
+    "sharpe": -0.356,
     "sharpe_ci95": [
-     -3.206,
-     3.775
+     -3.143,
+     3.898
     ],
-    "p_sharpe_positive": 0.423,
+    "p_sharpe_positive": 0.439,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.992,
-    "excess_return_ann_pct": 55.83,
-    "days_to_significant_vs_buy_hold": 42
+    "excess_return_ann_pct": 56.68,
+    "days_to_significant_vs_buy_hold": 40
    }
   },
   {
@@ -69973,7 +69989,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.342744+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.54028082604681,
     "last_decision_date": "2026-11-17"
@@ -70691,7 +70707,8 @@
      "2026-11-18T00:24:27.448033+00:00",
      "2026-11-18T01:21:49.978062+00:00",
      "2026-11-18T01:53:07.308801+00:00",
-     "2026-11-18T02:16:35.755963+00:00"
+     "2026-11-18T02:16:35.755963+00:00",
+     "2026-11-18T02:22:01.059876+00:00"
     ],
     "equity": [
      100.0,
@@ -71374,6 +71391,7 @@
      94.464294,
      94.464295,
      94.464295,
+     94.464295,
      94.464295
     ]
    },
@@ -71477,7 +71495,7 @@
      "symbol": "V",
      "name": "Visa Inc.",
      "opened_at": "2026-11-10T15:41:37.451872+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.019042078",
      "avg_price": 420.46,
      "allocated": 8.0064321,
@@ -71496,7 +71514,7 @@
      "symbol": "MA",
      "name": "Mastercard",
      "opened_at": "2026-11-12T15:41:49.549456+00:00",
-     "days_held": 5.441,
+     "days_held": 5.445,
      "quantity": "0.011130998",
      "avg_price": 661.4,
      "allocated": 7.3620421,
@@ -71515,7 +71533,7 @@
      "symbol": "LMT",
      "name": "Lockheed Martin",
      "opened_at": "2026-11-10T15:41:46.724949+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.00995162",
      "avg_price": 594.28,
      "allocated": 5.9140487,
@@ -75166,8 +75184,8 @@
     ],
     "p_sharpe_positive": 0.134,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.493,
-    "excess_return_ann_pct": -1.35,
+    "p_beats_buy_hold": 0.492,
+    "excess_return_ann_pct": -1.5,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -75195,7 +75213,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343266+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.88242090937594,
     "last_decision_date": "2026-11-17"
@@ -75908,7 +75926,8 @@
      "2026-11-18T00:24:27.478006+00:00",
      "2026-11-18T01:21:50.085965+00:00",
      "2026-11-18T01:53:07.431829+00:00",
-     "2026-11-18T02:16:35.870324+00:00"
+     "2026-11-18T02:16:35.870324+00:00",
+     "2026-11-18T02:22:01.182655+00:00"
     ],
     "equity": [
      100.0,
@@ -76586,6 +76605,7 @@
      92.968373,
      92.968374,
      92.968374,
+     92.968374,
      92.968374
     ]
    },
@@ -76594,7 +76614,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-10T15:41:35.719762+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.049983499",
      "avg_price": 377.08903,
      "allocated": 18.848229,
@@ -76613,7 +76633,7 @@
      "symbol": "SLB",
      "name": "Schlumberger",
      "opened_at": "2026-11-17T15:42:03.232775+00:00",
-     "days_held": 0.4407,
+     "days_held": 0.4444,
      "quantity": "0.315239933",
      "avg_price": 49.49,
      "allocated": 15.601224,
@@ -76632,7 +76652,7 @@
      "symbol": "XLU",
      "name": "Utilities Select Sector SPDR",
      "opened_at": "2026-11-17T15:41:46.922450+00:00",
-     "days_held": 0.4408,
+     "days_held": 0.4446,
      "quantity": "0.322720035",
      "avg_price": 43.98,
      "allocated": 14.193227,
@@ -76651,7 +76671,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.034020831",
      "avg_price": 294.20957,
      "allocated": 10.009254,
@@ -96545,8 +96565,8 @@
     ],
     "p_sharpe_positive": 0.006,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.32,
-    "excess_return_ann_pct": -19.82,
+    "p_beats_buy_hold": 0.319,
+    "excess_return_ann_pct": -19.98,
     "days_to_significant_vs_buy_hold": null
    }
   },
@@ -96564,7 +96584,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.343815+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 101.07451587278447,
     "last_decision_date": "2026-11-17"
@@ -96572,22 +96592,22 @@
    "status": "synced",
    "started_at": "2026-10-26T00:21:31.343783+00:00",
    "summary": {
-    "equity": 94.353637,
+    "equity": 94.357501,
     "cash": 1.9826511,
-    "invested": 92.370986,
+    "invested": 92.37485,
     "invested_pct": 97.9,
-    "pnl": -5.6463632,
-    "pnl_pct": -5.64636,
-    "day_pnl": -0.0418881,
-    "day_pnl_pct": -0.044375,
+    "pnl": -5.6424993,
+    "pnl_pct": -5.6425,
+    "day_pnl": -0.0380242,
+    "day_pnl_pct": -0.040282,
     "realized_pnl": 0.0,
-    "unrealized_pnl": -5.6338574,
+    "unrealized_pnl": -5.6299936,
     "fees": 0.0125057,
     "slippage_cost": 0.0109353,
     "max_drawdown_pct": 6.843,
-    "current_drawdown_pct": 6.6684,
-    "sharpe": -4.117,
-    "sortino": -4.677,
+    "current_drawdown_pct": 6.6646,
+    "sharpe": -4.114,
+    "sortino": -4.674,
     "volatility_annual_pct": 21.56,
     "days_live": 24,
     "num_trades": 0,
@@ -97255,7 +97275,8 @@
      "2026-11-18T00:24:27.490742+00:00",
      "2026-11-18T01:21:50.104292+00:00",
      "2026-11-18T01:53:07.442216+00:00",
-     "2026-11-18T02:16:35.888791+00:00"
+     "2026-11-18T02:16:35.888791+00:00",
+     "2026-11-18T02:22:01.203447+00:00"
     ],
     "equity": [
      100.0,
@@ -97911,7 +97932,8 @@
      94.385234,
      94.375445,
      94.361596,
-     94.353637
+     94.353637,
+     94.357501
     ]
    },
    "positions": [
@@ -98095,11 +98117,11 @@
      "avg_price": 80309.5,
      "allocated": 3.5102479,
      "allocated_pct_at_entry": 3.51,
-     "last_price": 64237.305,
-     "market_value": 2.8007465,
-     "unrealized_pnl": -0.709501,
-     "unrealized_pct": -20.212,
-     "weight_pct": 2.968,
+     "last_price": 64310.745,
+     "market_value": 2.8039485,
+     "unrealized_pnl": -0.706299,
+     "unrealized_pct": -20.121,
+     "weight_pct": 2.972,
      "entry_fees": 0.00875374,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -98114,11 +98136,11 @@
      "avg_price": 2324.1,
      "allocated": 1.5045395,
      "allocated_pct_at_entry": 1.505,
-     "last_price": 1800.225,
-     "market_value": 1.1624953,
-     "unrealized_pnl": -0.342044,
-     "unrealized_pct": -22.734,
-     "weight_pct": 1.232,
+     "last_price": 1801.25,
+     "market_value": 1.1631572,
+     "unrealized_pnl": -0.341382,
+     "unrealized_pct": -22.69,
+     "weight_pct": 1.233,
      "entry_fees": 0.00375197,
      "entry_reason": "rebalanceo: inversi\u00f3n inicial",
      "stop_loss": null,
@@ -99646,16 +99668,16 @@
    "learning": null,
    "significance": {
     "days": 23,
-    "sharpe": -3.421,
+    "sharpe": -3.418,
     "sharpe_ci95": [
-     -8.468,
-     1.478
+     -8.463,
+     1.482
     ],
-    "p_sharpe_positive": 0.083,
+    "p_sharpe_positive": 0.084,
     "days_to_significant_sharpe": null,
-    "p_beats_buy_hold": 0.527,
-    "excess_return_ann_pct": 0.94,
-    "days_to_significant_vs_buy_hold": 64757
+    "p_beats_buy_hold": 0.525,
+    "excess_return_ann_pct": 0.83,
+    "days_to_significant_vs_buy_hold": 83065
    }
   },
   {
@@ -99670,7 +99692,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.251622+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-17"
@@ -100365,9 +100387,11 @@
      "2026-11-18T00:24:27.499760+00:00",
      "2026-11-18T01:21:50.117225+00:00",
      "2026-11-18T01:53:07.449091+00:00",
-     "2026-11-18T02:16:35.901058+00:00"
+     "2026-11-18T02:16:35.901058+00:00",
+     "2026-11-18T02:22:01.217236+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -102822,7 +102846,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-26T00:21:31.345340+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.0,
     "last_decision_date": "2026-11-17"
@@ -103513,9 +103537,11 @@
      "2026-11-18T00:24:27.503643+00:00",
      "2026-11-18T01:21:50.122454+00:00",
      "2026-11-18T01:53:07.452388+00:00",
-     "2026-11-18T02:16:35.906627+00:00"
+     "2026-11-18T02:16:35.906627+00:00",
+     "2026-11-18T02:22:01.223068+00:00"
     ],
     "equity": [
+     100.0,
      100.0,
      100.0,
      100.0,
@@ -105962,7 +105988,7 @@
    "initial_cash": 100,
    "meta": {
     "created_at": "2026-10-25T21:21:36.252268+00:00",
-    "last_run": "2026-11-18T02:15:44.177969+00:00",
+    "last_run": "2026-11-18T02:20:43.005124+00:00",
     "last_status": "synced",
     "risk_peak": 100.08378034356787,
     "last_decision_date": "2026-11-17"
@@ -105970,23 +105996,23 @@
    "status": "synced",
    "started_at": "2026-10-25T21:21:36.252241+00:00",
    "summary": {
-    "equity": 98.236674,
+    "equity": 98.24429,
     "cash": 55.132399,
-    "invested": 43.104275,
+    "invested": 43.111891,
     "invested_pct": 43.88,
-    "pnl": -1.7633264,
-    "pnl_pct": -1.76333,
-    "day_pnl": -0.0186436,
-    "day_pnl_pct": -0.018975,
+    "pnl": -1.7557102,
+    "pnl_pct": -1.75571,
+    "day_pnl": -0.0110274,
+    "day_pnl_pct": -0.011223,
     "realized_pnl": -0.22835851,
-    "unrealized_pnl": -1.5044784,
+    "unrealized_pnl": -1.4968623,
     "fees": 0.0304895,
     "slippage_cost": 0.0138552,
     "max_drawdown_pct": 1.9197,
-    "current_drawdown_pct": 1.8456,
-    "sharpe": -4.684,
-    "sortino": -5.025,
-    "volatility_annual_pct": 5.74,
+    "current_drawdown_pct": 1.838,
+    "sharpe": -4.663,
+    "sortino": -5.003,
+    "volatility_annual_pct": 5.741,
     "days_live": 25,
     "num_trades": 5,
     "num_fills": 27,
@@ -106662,7 +106688,8 @@
      "2026-11-18T00:24:27.508073+00:00",
      "2026-11-18T01:21:50.128546+00:00",
      "2026-11-18T01:53:07.456132+00:00",
-     "2026-11-18T02:16:35.913196+00:00"
+     "2026-11-18T02:16:35.913196+00:00",
+     "2026-11-18T02:22:01.229641+00:00"
     ],
     "equity": [
      100.0,
@@ -107327,7 +107354,8 @@
      98.260994,
      98.246779,
      98.234625,
-     98.236674
+     98.236674,
+     98.24429
     ]
    },
    "positions": [
@@ -107335,7 +107363,7 @@
      "symbol": "NVDA",
      "name": "Nvidia",
      "opened_at": "2026-11-12T15:41:45.831285+00:00",
-     "days_held": 5.441,
+     "days_held": 5.445,
      "quantity": "0.029197599",
      "avg_price": 165.09,
      "allocated": 4.8202316,
@@ -107344,7 +107372,7 @@
      "market_value": 4.5390587,
      "unrealized_pnl": -0.281173,
      "unrealized_pct": -5.8332,
-     "weight_pct": 4.621,
+     "weight_pct": 4.62,
      "entry_fees": 0.0,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
@@ -107392,7 +107420,7 @@
      "symbol": "TSLA",
      "name": "Tesla, Inc.",
      "opened_at": "2026-11-17T15:41:49.240306+00:00",
-     "days_held": 0.4408,
+     "days_held": 0.4446,
      "quantity": "0.007071879",
      "avg_price": 377.56,
      "allocated": 2.6700586,
@@ -107446,6 +107474,25 @@
      "take_profit": null
     },
     {
+     "symbol": "SOL-USD",
+     "name": "Solana",
+     "opened_at": "2026-11-17T15:42:04.371000+00:00",
+     "days_held": 0.4444,
+     "quantity": "0.03026115",
+     "avg_price": 72.36,
+     "allocated": 2.1951711,
+     "allocated_pct_at_entry": 2.233,
+     "last_price": 74.575,
+     "market_value": 2.2567253,
+     "unrealized_pnl": 0.0615542,
+     "unrealized_pct": 2.8041,
+     "weight_pct": 2.297,
+     "entry_fees": 0.00547424,
+     "entry_reason": "Hedge: m\u00e1s peso",
+     "stop_loss": null,
+     "take_profit": null
+    },
+    {
      "symbol": "TLT",
      "name": "iShares 20+ Year Treasury Bond",
      "opened_at": "2026-10-26T16:03:22.576094+00:00",
@@ -107460,25 +107507,6 @@
      "unrealized_pct": -2.56,
      "weight_pct": 2.291,
      "entry_fees": 0.0,
-     "entry_reason": "Hedge: m\u00e1s peso",
-     "stop_loss": null,
-     "take_profit": null
-    },
-    {
-     "symbol": "SOL-USD",
-     "name": "Solana",
-     "opened_at": "2026-11-17T15:42:04.371000+00:00",
-     "days_held": 0.4406,
-     "quantity": "0.03026115",
-     "avg_price": 72.36,
-     "allocated": 2.1951711,
-     "allocated_pct_at_entry": 2.233,
-     "last_price": 74.325,
-     "market_value": 2.24916,
-     "unrealized_pnl": 0.0539889,
-     "unrealized_pct": 2.4594,
-     "weight_pct": 2.29,
-     "entry_fees": 0.00547424,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
      "take_profit": null
@@ -107506,7 +107534,7 @@
      "symbol": "SLB",
      "name": "Schlumberger",
      "opened_at": "2026-11-17T15:42:03.232775+00:00",
-     "days_held": 0.4407,
+     "days_held": 0.4444,
      "quantity": "0.042436144",
      "avg_price": 49.49,
      "allocated": 2.1001648,
@@ -107515,7 +107543,7 @@
      "market_value": 2.0772492,
      "unrealized_pnl": -0.0229155,
      "unrealized_pct": -1.0911,
-     "weight_pct": 2.115,
+     "weight_pct": 2.114,
      "entry_fees": 0.0,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
@@ -107544,7 +107572,7 @@
      "symbol": "XLU",
      "name": "Utilities Select Sector SPDR",
      "opened_at": "2026-11-17T15:41:46.922450+00:00",
-     "days_held": 0.4408,
+     "days_held": 0.4446,
      "quantity": "0.04730498",
      "avg_price": 43.98,
      "allocated": 2.080473,
@@ -107563,7 +107591,7 @@
      "symbol": "TXN",
      "name": "Texas Instruments",
      "opened_at": "2026-11-10T15:41:42.106424+00:00",
-     "days_held": 7.441,
+     "days_held": 7.445,
      "quantity": "0.006744123",
      "avg_price": 295.08,
      "allocated": 1.9900558,
@@ -107667,7 +107695,7 @@
      "market_value": 0.80699061,
      "unrealized_pnl": -0.0200372,
      "unrealized_pct": -2.4228,
-     "weight_pct": 0.8215,
+     "weight_pct": 0.8214,
      "entry_fees": 0.0,
      "entry_reason": "Hedge: m\u00e1s peso",
      "stop_loss": null,
@@ -107696,15 +107724,15 @@
      "symbol": "LINK-USD",
      "name": "Chainlink",
      "opened_at": "2026-11-12T15:42:01.894000+00:00",
-     "days_held": 5.441,
+     "days_held": 5.444,
      "quantity": "0.01271216",
      "avg_price": 9.879,
      "allocated": 0.12589739,
      "allocated_pct_at_entry": 0.1268,
-     "last_price": 9.165,
-     "market_value": 0.11650695,
-     "unrealized_pnl": -0.00939044,
-     "unrealized_pct": -7.4588,
+     "last_price": 9.169,
+     "market_value": 0.1165578,
+     "unrealized_pnl": -0.00933959,
+     "unrealized_pct": -7.4184,
      "weight_pct": 0.1186,
      "entry_fees": 0.000313959,
      "entry_reason": "Hedge: m\u00e1s peso",
@@ -112136,35 +112164,35 @@
    },
    "significance": {
     "days": 24,
-    "sharpe": -3.892,
+    "sharpe": -3.874,
     "sharpe_ci95": [
-     -8.211,
+     -8.17,
      2.081
     ],
-    "p_sharpe_positive": 0.087,
+    "p_sharpe_positive": 0.088,
     "days_to_significant_sharpe": null,
     "p_beats_buy_hold": 0.942,
-    "excess_return_ann_pct": 43.19,
+    "excess_return_ann_pct": 43.12,
     "days_to_significant_vs_buy_hold": 83
    }
   }
  ],
  "research": {
   "status": {
-   "started_at": "2026-11-18T01:20:40.632111+00:00",
-   "duration_s": 46.2,
+   "started_at": "2026-11-18T02:20:43.054642+00:00",
+   "duration_s": 46.8,
    "llm": "local",
    "engines": [
     "local (gratis, sin IA)"
    ],
    "news_engines": {
-    "local": 81
+    "local": 65
    },
    "news": {
     "fetched": 1709,
-    "new": 56,
-    "stored": 9177,
-    "triaged": 56,
+    "new": 40,
+    "stored": 9161,
+    "triaged": 40,
     "deep_analyses": 25,
     "untriaged_backlog": 0
    },
@@ -113549,7 +113577,7 @@
     "2026-11-10",
     "2026-12-17"
    ],
-   "generated_at": "2026-11-18T01:20:40.632111+00:00",
+   "generated_at": "2026-11-18T02:20:43.054642+00:00",
    "researched_at": null,
    "summary": null,
    "sources": {
@@ -113561,6 +113589,264 @@
   },
   "news": {
    "analyses": [
+    {
+     "id": "8b3c84d1ba2dfa60",
+     "title": "Dow Jones Futures: Techs Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
+     "url": "https://finance.yahoo.com/m/3b22ed8c-00c3-32f8-89f5-91bc21ccb366/dow-jones-futures%3A-techs-rise.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T02:14:19+00:00",
+     "triage": {
+      "relevance": 0.725,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "NVDA"
+      ],
+      "named": [
+       "NVDA"
+      ],
+      "summary": "Dow Jones Futures: Techs Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead. Nvidia earnings beat after the stock market broke below recent lows. Target earnings are on tap, with the Anthropic IPO set to price Wednesday night.",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "8b3c84d1ba2dfa60",
+      "headline": "Dow Jones Futures: Techs Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
+      "what_happened": "Nvidia earnings beat after the stock market broke below recent lows. Target earnings are on tap, with the Anthropic IPO set to price Wednesday night.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "561a51c2eeb8"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     }
+    },
+    {
+     "id": "49241d923b348ef0",
+     "title": "Oil prices fall as higher US crude stocks temper supply risks",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNampNS2V2UlNBaGJFYTZRd1Noa3JteXRPeDNvMnAwRDZrUWIwWkhjcGxjc09kVTJSRklvVThfcWZiOGd2Z0pXR0VMNG9zb05GNmpMaGNkNlBfX0lzbm9LT2RWQ3QtU2JGMExybG5DTkdJOG9oamlBWTBibEpSLUl2SDdBekpJc3FVTVphLXZPUDZzZkRzdl9DOG52N01OYkZMbk9NczRpWm5JUDdfUEpPVllBNA?oc=5",
+     "publisher": "StreetInsider",
+     "published": "2026-11-18T02:10:42+00:00",
+     "triage": {
+      "relevance": 0.585,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "commodities",
+      "symbols": [
+       "XLE",
+       "XOM",
+       "CVX"
+      ],
+      "named": [],
+      "summary": "Oil prices fall as higher US crude stocks temper supply risks",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "49241d923b348ef0",
+      "headline": "Oil prices fall as higher US crude stocks temper supply risks",
+      "what_happened": "Oil prices fall as higher US crude stocks temper supply risks",
+      "why_it_matters": "Los precios de las materias primas afectan a m\u00e1rgenes de productores y a la inflaci\u00f3n.",
+      "affected": [
+       {
+        "symbol": "XLE",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XOM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "CVX",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (materias primas); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [
+       "a682a6166ebe",
+       "5ecabc334671"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     }
+    },
+    {
+     "id": "0438275d10200bb6",
+     "title": "NKE Stock Heads For Worst Week Since June: Analysts Flag Risks In Nike\u2019s $5B Growth Plan\u2014 Retail Questions CEO Elliott Hill\u2019s Leadership",
+     "url": "https://stocktwits.com/news-articles/markets/equity/nke-stock-nike-investors-day-growth-plan-ceo-elliott-hill-analysts-flag-risks/cNbXZP0R9h1?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T01:54:56+00:00",
+     "triage": {
+      "relevance": 0.55,
+      "sentiment": -0.322,
+      "impact": "medium",
+      "category": "corporate",
+      "symbols": [
+       "NKE"
+      ],
+      "named": [
+       "NKE"
+      ],
+      "summary": "NKE Stock Heads For Worst Week Since June: Analysts Flag Risks In Nike\u2019s $5B Growth Plan\u2014 Retail Questions CEO Elliott Hill\u2019s Leadership. Nike stock fell 5.6% this week as analysts questioned its $5 billion growth plan.",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "0438275d10200bb6",
+      "headline": "NKE Stock Heads For Worst Week Since June: Analysts Flag Risks In Nike\u2019s $5B Growth Plan\u2014 Retail Questions CEO Elliott Hill\u2019s Leadership",
+      "what_happened": "Nike stock fell 5.6% this week as analysts questioned its $5 billion growth plan.",
+      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
+      "affected": [
+       {
+        "symbol": "NKE",
+        "direction": "down",
+        "magnitude": "medium",
+        "horizon": "weeks",
+        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.36,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     }
+    },
+    {
+     "id": "a8878e9976193cd6",
+     "title": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa05HclN4OWVzckxHU1JuLTVOcjY5czd1REtRajhnamdDNnRhMkc2MGZXanA4S3N1WWxBSHM1dk5RbkUxZDN5MllJNHcxSVRUczZ5WnAwaV83SWZHME5zUFhpN3E4LVNYN1JHelAzVDRoN0d2Uk04TXQ4ZUI0dVB0clBuUEh6N0xfTmdId0pHZnFDWW5EYWZHV255czFOdGZSdGxtOG9VYTI?oc=5",
+     "publisher": "FXStreet",
+     "published": "2026-11-18T01:48:23+00:00",
+     "triage": {
+      "relevance": 0.755,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "central_bank",
+      "symbols": [
+       "GLD",
+       "EEM"
+      ],
+      "named": [],
+      "summary": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "a8878e9976193cd6",
+      "headline": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+      "what_happened": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+      "why_it_matters": "Los tipos de inter\u00e9s cambian el coste del dinero y el valor presente de los beneficios futuros; afectan a todos los activos, sobre todo a bonos, tecnol\u00f3gicas y cripto.",
+      "affected": [
+       {
+        "symbol": "GLD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "EEM",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (banco central); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "El pr\u00f3ximo comunicado y el discurso de los miembros del banco central.",
+      "related_events": [
+       "dd3e18947b89",
+       "8226e9b61ce7",
+       "9299dd53d15e",
+       "b84ede22fb83",
+       "3ecb32118eaf"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     }
+    },
+    {
+     "id": "60c0699d1df6c829",
+     "title": "SoFi Is Targeting 100 Million Products by 2030. Here\u2019s What $10,000 Invested Today Could Be Worth if It Gets There.",
+     "url": "https://www.fool.com/investing/2026/11/17/sofi-targeting-100-million-products-2030-what-10000-invested-today-could-be-worth-if-it-gets-there/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T01:25:02+00:00",
+     "triage": {
+      "relevance": 0.605,
+      "sentiment": 0.0,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "NVDA"
+      ],
+      "named": [
+       "NVDA"
+      ],
+      "summary": "SoFi Is Targeting 100 Million Products by 2030. Here\u2019s What $10,000 Invested Today Could Be Worth if It Gets There.. Mentioned on the latest earnings call, management\u2019s explicit goal gives investors plenty to cheer about.",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "60c0699d1df6c829",
+      "headline": "SoFi Is Targeting 100 Million Products by 2030. Here\u2019s What $10,000 Invested Today Could Be Worth if It Gets There.",
+      "what_happened": "Mentioned on the latest earnings call, management\u2019s explicit goal gives investors plenty to cheer about.",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "unclear",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono neutro en el titular (+0.00)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "561a51c2eeb8"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     }
+    },
     {
      "id": "19f5864b1d3f7342",
      "title": "Euro slips as hawkish Fed remarks, strong Retail Sales boost US Dollar",
@@ -113678,6 +113964,53 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-18T01:20:40.632111+00:00"
+     }
+    },
+    {
+     "id": "988713c418ed3940",
+     "title": "NVIDIA Q3 Earnings Call Highlights",
+     "url": "https://www.marketbeat.com/instant-alerts/transcript-nvidia-q3-earnings-call-highlights-2026-11-17/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T01:12:55+00:00",
+     "triage": {
+      "relevance": 0.725,
+      "sentiment": 0.762,
+      "impact": "medium",
+      "category": "earnings",
+      "symbols": [
+       "NVDA"
+      ],
+      "named": [
+       "NVDA"
+      ],
+      "summary": "NVIDIA Q3 Earnings Call Highlights. NVIDIA (NASDAQ:NVDA) raised its fiscal 2028 revenue growth forecast and reported record quarterly revenue as its Vera Rubin platform ramped up, even as the company searches for a permanent chief executive following Jense",
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
+     },
+     "analysis": {
+      "id": "988713c418ed3940",
+      "headline": "NVIDIA Q3 Earnings Call Highlights",
+      "what_happened": "NVIDIA (NASDAQ:NVDA) raised its fiscal 2028 revenue growth forecast and reported record quarterly revenue as its Vera Rubin platform ramped up, even as the company searches for a permanent chief executive following Jensen Huang\u2019s resignation. Revenue reached $116 billion in the third quarter of fis",
+      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
+      "affected": [
+       {
+        "symbol": "NVDA",
+        "direction": "up",
+        "magnitude": "medium",
+        "horizon": "days",
+        "rationale": "Resultados: tono positivo en el titular (+0.76)."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.58,
+      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
+      "related_events": [
+       "561a51c2eeb8"
+      ],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
      }
     },
     {
@@ -113911,6 +114244,73 @@
       "read_full_article": false,
       "model": "local",
       "at": "2026-11-18T01:20:40.632111+00:00"
+     }
+    },
+    {
+     "id": "191e5c6c024400d9",
+     "title": "CFTC nominee questions public benefit of prediction markets as legal fight grows",
+     "url": "https://www.coindesk.com/policy/2026/11/17/nominee-says-u-s-cftc-must-think-hard-about-public-benefit-of-prediction-markets",
+     "publisher": "coindesk",
+     "published": "2026-11-18T00:46:25+00:00",
+     "triage": {
+      "relevance": 0.62,
+      "sentiment": 0.0,
+      "impact": "low",
+      "category": "regulation",
+      "symbols": [
+       "BTC-USD",
+       "ETH-USD",
+       "SOL-USD",
+       "XRP-USD"
+      ],
+      "named": [],
+      "summary": "CFTC nominee questions public benefit of prediction markets as legal fight grows. One of the two picks to join the regulatory commission, Democratic nominee Matthew Rowland, said he hopes to have a say in prediction markets rulemaking.",
+      "model": "local",
+      "at": "2026-11-18T01:20:40.632111+00:00"
+     },
+     "analysis": {
+      "id": "191e5c6c024400d9",
+      "headline": "CFTC nominee questions public benefit of prediction markets as legal fight grows",
+      "what_happened": "One of the two picks to join the regulatory commission, Democratic nominee Matthew Rowland, said he hopes to have a say in prediction markets rulemaking.",
+      "why_it_matters": "Las decisiones regulatorias o judiciales pueden alterar el negocio, multar o abrir/cerrar mercados.",
+      "affected": [
+       {
+        "symbol": "BTC-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "ETH-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "SOL-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+       },
+       {
+        "symbol": "XRP-USD",
+        "direction": "unclear",
+        "magnitude": "low",
+        "horizon": "weeks",
+        "rationale": "Afectado por el tema (regulaci\u00f3n); el sentido no se deduce del titular."
+       }
+      ],
+      "macro_link": "",
+      "priced_in": "unknown",
+      "confidence": 0.2,
+      "what_to_watch": "Si otras fuentes confirman la noticia.",
+      "related_events": [],
+      "read_full_article": false,
+      "model": "local",
+      "at": "2026-11-18T02:20:43.054642+00:00"
      }
     },
     {
@@ -117604,437 +118004,58 @@
       "model": "local",
       "at": "2026-11-17T22:59:59.619217+00:00"
      }
-    },
-    {
-     "id": "34906cecc2bcd41a",
-     "title": "Stocks down ahead of Nvidia's post-scandal earnings report",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-sink-scandal-hit-023848163.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:12:03+00:00",
-     "triage": {
-      "relevance": 0.685,
-      "sentiment": -0.583,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "XLK",
-       "NVDA"
-      ],
-      "named": [
-       "XLK",
-       "NVDA"
-      ],
-      "summary": "Stocks down ahead of Nvidia's post-scandal earnings report. Concern over the future of the tech sector dragged down stock markets Tuesday, as traders sold off shares linked to the AI industry ahead of an earnings report from crisis-hit chip giant Nvidia.Traders, meanwhile, sold o",
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     },
-     "analysis": {
-      "id": "34906cecc2bcd41a",
-      "headline": "Stocks down ahead of Nvidia's post-scandal earnings report",
-      "what_happened": "Concern over the future of the tech sector dragged down stock markets Tuesday, as traders sold off shares linked to the AI industry ahead of an earnings report from crisis-hit chip giant Nvidia.Traders, meanwhile, sold off some technology-adjacent stock -- Nvidia's price plunged in morning deals before partly recovering.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "XLK",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono negativo en el titular (-0.58)."
-       },
-       {
-        "symbol": "NVDA",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono negativo en el titular (-0.58)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "561a51c2eeb8"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     }
-    },
-    {
-     "id": "b8185bede8318c7b",
-     "title": "Why Bitcoin-backed lending needs higher standards now",
-     "url": "https://www.thestreet.com/crypto/innovation/why-bitcoin-backed-lending-needs-higher-standards-now?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:11:13+00:00",
-     "triage": {
-      "relevance": 0.545,
-      "sentiment": 0.583,
-      "impact": "medium",
-      "category": "crypto",
-      "symbols": [
-       "NOW",
-       "BTC-USD",
-       "BCH-USD",
-       "ETH-USD",
-       "SOL-USD",
-       "XRP-USD",
-       "ADA-USD"
-      ],
-      "named": [
-       "NOW",
-       "BTC-USD",
-       "BCH-USD"
-      ],
-      "summary": "Why Bitcoin-backed lending needs higher standards now. Ledn\u2019s rebrand leans on custody, monthly public reporting and $11.8 billion in lending history to win over Bitcoin borrowers.",
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     },
-     "analysis": {
-      "id": "b8185bede8318c7b",
-      "headline": "Why Bitcoin-backed lending needs higher standards now",
-      "what_happened": "Ledn\u2019s rebrand leans on custody, monthly public reporting and $11.8 billion in lending history to win over Bitcoin borrowers.",
-      "why_it_matters": "Las noticias de flujos, regulaci\u00f3n o adopci\u00f3n mueven el sentimiento de todo el mercado cripto.",
-      "affected": [
-       {
-        "symbol": "NOW",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Cripto: tono positivo en el titular (+0.58)."
-       },
-       {
-        "symbol": "BTC-USD",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Cripto: tono positivo en el titular (+0.58)."
-       },
-       {
-        "symbol": "BCH-USD",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Cripto: tono positivo en el titular (+0.58)."
-       },
-       {
-        "symbol": "ETH-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "SOL-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XRP-USD",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "days",
-        "rationale": "Afectado por el tema (cripto); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.49,
-      "what_to_watch": "Los flujos de los ETF y la reacci\u00f3n de BTC/ETH.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T23:20:45.691241+00:00"
-     }
-    },
-    {
-     "id": "c500a3daf3a3b8b3",
-     "title": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms",
-     "url": "https://finance.yahoo.com/m/17dca0b9-abeb-3c4b-820e-e165d5a02385/chime-financial%2C-stock-of-the.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:08:15+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.762,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "AAPL"
-      ],
-      "named": [
-       "AAPL"
-      ],
-      "summary": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms. The Chime app maker is poised for first annual profit as growth ramps up and a big debut looms.",
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     },
-     "analysis": {
-      "id": "c500a3daf3a3b8b3",
-      "headline": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms",
-      "what_happened": "The Chime app maker is poised for first annual profit as growth ramps up and a big debut looms.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "AAPL",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.76)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.58,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     }
-    },
-    {
-     "id": "ea21ea78284d14ea",
-     "title": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.",
-     "url": "https://finance.yahoo.com/m/b191fb08-44aa-3b9a-8661-c6bbc45c3098/anthropic%E2%80%99s-ipo-price-isn%E2%80%99t.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:06:00+00:00",
-     "triage": {
-      "relevance": 0.55,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "corporate",
-      "symbols": [
-       "AAPL",
-       "GOOGL",
-       "XLE",
-       "XOM",
-       "CVX"
-      ],
-      "named": [
-       "AAPL",
-       "GOOGL"
-      ],
-      "summary": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.. Anthropic\u2019s bankers seem to have lowered their IPO expectations following recent turmoil in the tech sector. It\u2019s a potential win for retail investors.",
-      "model": "local",
-      "at": "2026-11-17T22:20:30.876569+00:00"
-     },
-     "analysis": {
-      "id": "ea21ea78284d14ea",
-      "headline": "Anthropic\u2019s IPO Price Isn\u2019t So Outlandish. Here\u2019s the Case for the Stock.",
-      "what_happened": "Anthropic\u2019s bankers seem to have lowered their IPO expectations following recent turmoil in the tech sector. It\u2019s a potential win for retail investors.",
-      "why_it_matters": "Las operaciones corporativas (fusiones, recompras, despidos) cambian el valor por acci\u00f3n o la percepci\u00f3n del negocio.",
-      "affected": [
-       {
-        "symbol": "AAPL",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
-       },
-       {
-        "symbol": "GOOGL",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "weeks",
-        "rationale": "Operaci\u00f3n corporativa: tono negativo en el titular (-0.32)."
-       },
-       {
-        "symbol": "XLE",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "XOM",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
-       },
-       {
-        "symbol": "CVX",
-        "direction": "unclear",
-        "magnitude": "low",
-        "horizon": "weeks",
-        "rationale": "Afectado por el tema (operaci\u00f3n corporativa); el sentido no se deduce del titular."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "Si otras fuentes confirman la noticia.",
-      "related_events": [
-       "a682a6166ebe",
-       "5ecabc334671"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T23:06:52.276055+00:00"
-     }
-    },
-    {
-     "id": "132e5fe9bc80ad51",
-     "title": "Nvidia earnings scenarios: numbers, guidance, and leadership in focus",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-earnings-scenarios-numbers-guidance-210457990.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:04:57+00:00",
-     "triage": {
-      "relevance": 0.605,
-      "sentiment": 0.0,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "NVDA",
-       "LOW",
-       "PM"
-      ],
-      "named": [
-       "NVDA",
-       "LOW",
-       "PM"
-      ],
-      "summary": "Nvidia earnings scenarios: numbers, guidance, and leadership in focus. Investing.com -- NVIDIA Corporation (NVDA) reports fiscal Q3 today, Nov 17, after the close. The stock trades at $153.49 (-1.70%) as of Nov 17, 3:29 PM EST. That is just above its 52-week low of $148.80 and about -28% ov",
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     },
-     "analysis": {
-      "id": "132e5fe9bc80ad51",
-      "headline": "Nvidia earnings scenarios: numbers, guidance, and leadership in focus",
-      "what_happened": "Investing.com -- NVIDIA Corporation (NVDA) reports fiscal Q3 today, Nov 17, after the close. The stock trades at $153.49 (-1.70%) as of Nov 17, 3:29 PM EST. That is just above its 52-week low of $148.80 and about -28% over the past month.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "NVDA",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       },
-       {
-        "symbol": "LOW",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       },
-       {
-        "symbol": "PM",
-        "direction": "unclear",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono neutro en el titular (+0.00)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.2,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "561a51c2eeb8",
-       "b13d56102984"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T22:59:59.619217+00:00"
-     }
-    },
-    {
-     "id": "268370da04278c30",
-     "title": "Intel shareholders sue CEO, CFO after stock rout",
-     "url": "https://www.cfodive.com/news/intel-shareholders-sue-ceo-cfo-stock-drop-ai-cpu/874979/?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:01:40+00:00",
-     "triage": {
-      "relevance": 0.645,
-      "sentiment": -0.322,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "INTC"
-      ],
-      "named": [
-       "INTC"
-      ],
-      "summary": "Intel shareholders sue CEO, CFO after stock rout. CEO Lip-Bu Tan and CFO David Zinsner failed to properly disclose the full impact of waning PC demand on company revenue and profitability for the PC maker, shareholders claim.",
-      "model": "local",
-      "at": "2026-11-17T22:20:30.876569+00:00"
-     },
-     "analysis": {
-      "id": "268370da04278c30",
-      "headline": "Intel shareholders sue CEO, CFO after stock rout",
-      "what_happened": "CEO Lip-Bu Tan and CFO David Zinsner failed to properly disclose the full impact of waning PC demand on company revenue and profitability for the PC maker, shareholders claim.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "INTC",
-        "direction": "down",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono negativo en el titular (-0.32)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T22:20:30.876569+00:00"
-     }
-    },
-    {
-     "id": "85ea3d0b1177dbdc",
-     "title": "The Home Depot Inc (HD) (Q3 2026) Earnings Call Highlights: Sales Up 4.9% to $43. ...",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/home-depot-inc-hd-q3-210118237.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T21:01:18+00:00",
-     "triage": {
-      "relevance": 0.725,
-      "sentiment": 0.322,
-      "impact": "medium",
-      "category": "earnings",
-      "symbols": [
-       "HD"
-      ],
-      "named": [
-       "HD"
-      ],
-      "summary": "The Home Depot Inc (HD) (Q3 2026) Earnings Call Highlights: Sales Up 4.9% to $43. .... The Home Depot Inc (HD) posts its highest comp growth in four years despite a frozen housing market, though gross margin pressure and a lowered SRS outlook temper the otherwise strong quarter.",
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     },
-     "analysis": {
-      "id": "85ea3d0b1177dbdc",
-      "headline": "The Home Depot Inc (HD) (Q3 2026) Earnings Call Highlights: Sales Up 4.9% to $43. ...",
-      "what_happened": "The Home Depot Inc (HD) posts its highest comp growth in four years despite a frozen housing market, though gross margin pressure and a lowered SRS outlook temper the otherwise strong quarter.",
-      "why_it_matters": "Los resultados y las previsiones mueven directamente la valoraci\u00f3n: el mercado compara cifras y gu\u00eda con lo esperado.",
-      "affected": [
-       {
-        "symbol": "HD",
-        "direction": "up",
-        "magnitude": "medium",
-        "horizon": "days",
-        "rationale": "Resultados: tono positivo en el titular (+0.32)."
-       }
-      ],
-      "macro_link": "",
-      "priced_in": "unknown",
-      "confidence": 0.36,
-      "what_to_watch": "La reacci\u00f3n del precio en la sesi\u00f3n siguiente y si la previsi\u00f3n cambia.",
-      "related_events": [
-       "cd51d79c1706"
-      ],
-      "read_full_article": false,
-      "model": "local",
-      "at": "2026-11-17T21:20:36.964255+00:00"
-     }
     }
    ],
    "feed": [
+    {
+     "id": "8b3c84d1ba2dfa60",
+     "title": "Dow Jones Futures: Techs Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
+     "url": "https://finance.yahoo.com/m/3b22ed8c-00c3-32f8-89f5-91bc21ccb366/dow-jones-futures%3A-techs-rise.html?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T02:14:19+00:00",
+     "symbols": [
+      "NVDA"
+     ],
+     "relevance": 0.725,
+     "sentiment": 0.762,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "Dow Jones Futures: Techs Rise After Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead. Nvidia earnings beat after the stock market broke below recent lows. Target earnings are on tap, with the Anthropic IPO set to price Wednesday night.",
+     "analysed": true
+    },
+    {
+     "id": "a8878e9976193cd6",
+     "title": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa05HclN4OWVzckxHU1JuLTVOcjY5czd1REtRajhnamdDNnRhMkc2MGZXanA4S3N1WWxBSHM1dk5RbkUxZDN5MllJNHcxSVRUczZ5WnAwaV83SWZHME5zUFhpN3E4LVNYN1JHelAzVDRoN0d2Uk04TXQ4ZUI0dVB0clBuUEh6N0xfTmdId0pHZnFDWW5EYWZHV255czFOdGZSdGxtOG9VYTI?oc=5",
+     "publisher": "FXStreet",
+     "published": "2026-11-18T01:48:23+00:00",
+     "symbols": [
+      "GLD",
+      "EEM"
+     ],
+     "relevance": 0.755,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "Canadian Dollar weakens as US Dollar gains on hawkish Fed tone",
+     "analysed": true
+    },
+    {
+     "id": "60c0699d1df6c829",
+     "title": "SoFi Is Targeting 100 Million Products by 2030. Here\u2019s What $10,000 Invested Today Could Be Worth if It Gets There.",
+     "url": "https://www.fool.com/investing/2026/11/17/sofi-targeting-100-million-products-2030-what-10000-invested-today-could-be-worth-if-it-gets-there/?.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T01:25:02+00:00",
+     "symbols": [
+      "NVDA"
+     ],
+     "relevance": 0.605,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "SoFi Is Targeting 100 Million Products by 2030. Here\u2019s What $10,000 Invested Today Could Be Worth if It Gets There.. Mentioned on the latest earnings call, management\u2019s explicit goal gives investors plenty to cheer about.",
+     "analysed": true
+    },
     {
      "id": "19f5864b1d3f7342",
      "title": "Euro slips as hawkish Fed remarks, strong Retail Sales boost US Dollar",
@@ -118050,6 +118071,22 @@
      "impact": "medium",
      "category": "central_bank",
      "summary": "Euro slips as hawkish Fed remarks, strong Retail Sales boost US Dollar",
+     "analysed": true
+    },
+    {
+     "id": "988713c418ed3940",
+     "title": "NVIDIA Q3 Earnings Call Highlights",
+     "url": "https://www.marketbeat.com/instant-alerts/transcript-nvidia-q3-earnings-call-highlights-2026-11-17/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+     "publisher": "yahoo",
+     "published": "2026-11-18T01:12:55+00:00",
+     "symbols": [
+      "NVDA"
+     ],
+     "relevance": 0.725,
+     "sentiment": 0.762,
+     "impact": "medium",
+     "category": "earnings",
+     "summary": "NVIDIA Q3 Earnings Call Highlights. NVIDIA (NASDAQ:NVDA) raised its fiscal 2028 revenue growth forecast and reported record quarterly revenue as its Vera Rubin platform ramped up, even as the company searches for a permanent chief executive following Jense",
      "analysed": true
     },
     {
@@ -118138,7 +118175,7 @@
      "impact": "low",
      "category": "regulation",
      "summary": "CFTC nominee questions public benefit of prediction markets as legal fight grows. One of the two picks to join the regulatory commission, Democratic nominee Matthew Rowland, said he hopes to have a say in prediction markets rulemaking.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "e4597167896022fe",
@@ -119444,6 +119481,24 @@
      "analysed": true
     },
     {
+     "id": "b9ea2557428449a2",
+     "title": "US 10-Year Yield Set for Historic Run Above 5% on Fed Cycle",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOTJ3VWxtanltWDFIdk5Jc2U5eFdaUFp6aG1PVVkwVVNpNVZxRFRvQllPcjYwVGh1OVlpVG9pQ1QyX283NldTUnBMa0NxRllJd1E3UDVacklIdTh0MmxsQnc2LTRfaGFFR092OHZZNnUwNEFGLVBFaFF5M0paNFo5d0t4YUIyUDNOVnV5UVVyRTlJRmN6azkxTmNjR251eU8yaDVmX2tJdGpFNkdIekVRbndoMEo?oc=5",
+     "publisher": "Bloomberg.com",
+     "published": "2026-11-17T20:14:31+00:00",
+     "symbols": [
+      "TLT",
+      "XLF",
+      "QQQ"
+     ],
+     "relevance": 0.675,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "central_bank",
+     "summary": "US 10-Year Yield Set for Historic Run Above 5% on Fed Cycle",
+     "analysed": true
+    },
+    {
      "id": "c274509d3aedcc33",
      "title": "The Fed changes the game: The dollar finally wipes out Trump's tariff shock",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTmdnN2RhTEViY3pYenpacVVEY210YXA5OW1ucnoyZTN2cGlFc3ZpbHRhSkFEQUhNOFp0b2l3MzVUOFctODlIeG94MDVnQ2JhTktnNldFY01hVjJyaUtVSnBOc2pTSkJXbmd4d1c1MzJrdVFXcm9HbHRVNDJIYWFudVlFZGRJQ2RY?oc=5",
@@ -119504,7 +119559,7 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "Steve Eisman Says the Biggest AI Risk Is Local Governments Slowing Data Center Construction. Steve Eisman says the real threat to AI is not chips but zoning boards, and a full freeze could tip the country into recession overnight. One kind of company could still profit if building slows, and it may surprise you.",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "e1a6fc0f1ff76089",
@@ -119666,6 +119721,24 @@
      "impact": "medium",
      "category": "earnings",
      "summary": "AMD Stocks Decrease 1.62% as New US Rule Requires Licenses for Five Chip Hubs. The rule covers Singapore, which supplied 12.4% of AMD's 2025 revenue, while Appaloosa disclosed a full exit from the chipmaker.",
+     "analysed": true
+    },
+    {
+     "id": "41d65952dab4aec6",
+     "title": "Gold recovers its retail sales drop and holds above Monday's low",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPazhfczA1dVJTMzRFbVd5RXFOcXFKYXlTSm1RZllXNFFMMkVja3R5NXpDMG15ZHZNeUhhTWk1dldvVVdsVVhGdzZNOF8tSlVCMDVUNDVERG1BcktwMzBYbHA3NUtRbUxIS3h2anRKb1U2UlBJN1E2UFljOEcyaEdsUm5BRTlJeGVNZXFKV3Y3bWgyMzRqMURGemVtRENvZW52MWg0Q3c3bmZhQQ?oc=5",
+     "publisher": "FXStreet",
+     "published": "2026-11-17T19:01:49+00:00",
+     "symbols": [
+      "LOW",
+      "GLD",
+      "SLV"
+     ],
+     "relevance": 0.72,
+     "sentiment": 0.0,
+     "impact": "medium",
+     "category": "macro",
+     "summary": "Gold recovers its retail sales drop and holds above Monday's low",
      "analysed": true
     },
     {
@@ -121103,7 +121176,7 @@
      "impact": "medium",
      "category": "macro",
      "summary": "US retail sales increase moderately; import prices rise above expectations",
-     "analysed": false
+     "analysed": true
     },
     {
      "id": "10e16189c6a20bb0",
@@ -121262,110 +121335,13 @@
      "category": "macro",
      "summary": "U.S. Retail Sales Rise 0.2% in October, Slowing From Previous Month",
      "analysed": false
-    },
-    {
-     "id": "d36170224eadb850",
-     "title": "US 10-Year Yield Set for Historic Run Above 5% on Fed Rate Cycle",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOTJ3VWxtanltWDFIdk5Jc2U5eFdaUFp6aG1PVVkwVVNpNVZxRFRvQllPcjYwVGh1OVlpVG9pQ1QyX283NldTUnBMa0NxRllJd1E3UDVacklIdTh0MmxsQnc2LTRfaGFFR092OHZZNnUwNEFGLVBFaFF5M0paNFo5d0t4YUIyUDNOVnV5UVVyRTlJRmN6azkxTmNjR251eU8yaDVmX2tJdGpFNkdIekVRbndoMEo?oc=5",
-     "publisher": "Bloomberg.com",
-     "published": "2026-11-17T15:15:00+00:00",
-     "symbols": [
-      "TLT",
-      "XLF",
-      "QQQ"
-     ],
-     "relevance": 0.675,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "central_bank",
-     "summary": "US 10-Year Yield Set for Historic Run Above 5% on Fed Rate Cycle",
-     "analysed": true
-    },
-    {
-     "id": "06996464dea7a5f4",
-     "title": "RDDT vs. GOOGL: Which Digital Advertising Stock Has an Edge Right Now?",
-     "url": "https://finance.yahoo.com/media-advertising/articles/rddt-vs-googl-digital-advertising-151500470.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T15:15:00+00:00",
-     "symbols": [
-      "GOOGL",
-      "NOW"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.762,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "RDDT vs. GOOGL: Which Digital Advertising Stock Has an Edge Right Now?. Reddit emerges as the stronger digital advertising stock over Alphabet, backed by surging ad revenues, AI-driven growth, cheaper valuation, and upbeat earnings estimates.",
-     "analysed": true
-    },
-    {
-     "id": "42fd19618fbca92b",
-     "title": "Home Depot Names New CEO After Ted Decker Steps Down. Quarterly Sales Hit $43.4 Billion.",
-     "url": "https://www.ibtimes.com/home-depot-names-richard-mcphail-ceo-sales-rise-3809855?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T15:13:58+00:00",
-     "symbols": [
-      "HD"
-     ],
-     "relevance": 0.685,
-     "sentiment": 0.583,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Home Depot Names New CEO After Ted Decker Steps Down. Quarterly Sales Hit $43.4 Billion.. The company reported a 4.9% increase in quarterly sales, while comparable sales rose 2.2% and adjusted earnings exceeded Wall Street expectations.",
-     "analysed": true
-    },
-    {
-     "id": "f29dc12af2104f59",
-     "title": "Bitmine Immersion Technologies (BMNR) Looks Fairly Valued As Earnings Sharpen Ethereum Risk",
-     "url": "https://finance.yahoo.com/markets/crypto/articles/bitmine-immersion-technologies-bmnr-looks-151238457.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T15:12:38+00:00",
-     "symbols": [
-      "ETH-USD"
-     ],
-     "relevance": 0.685,
-     "sentiment": -0.583,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Bitmine Immersion Technologies (BMNR) Looks Fairly Valued As Earnings Sharpen Ethereum Risk. Bitmine Immersion Technologies earnings jolt puts Ethereum exposure in sharper focus Bitmine Immersion Technologies (BMNR) just released full year results to August 31, 2026, reporting sales of US$124.25 million and tota",
-     "analysed": true
-    },
-    {
-     "id": "78662b54d02a6b16",
-     "title": "Dow Falls Over 200 Points; US Retail Sales Rise 0.2% In October",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZG9hNWp5VlJPT1V0dlB2MmNmQkd6a2F4RzNaWExaZVB1NnI3bzZvRjItY0pNbG10RmxvUjNnMVRWY3FaemFycTdHU25HNWgyS3dGb0pXWlkzc0pvbVRyWC1jNzNHdXp6a0wzMnhQenl3RVl5TE9IbzNWaFJSSE8wYXlCNFpDWlJDN1N0RlRsYTNiWHR4RmFqYjBjMWM5NU5SVGxXSTZPaTdJOVQzUkw2cndyeWtURU52QmJZTmtiNUNfZw?oc=5",
-     "publisher": "Benzinga",
-     "published": "2026-11-17T15:11:34+00:00",
-     "symbols": [],
-     "relevance": 0.64,
-     "sentiment": 0.0,
-     "impact": "medium",
-     "category": "macro",
-     "summary": "Dow Falls Over 200 Points; US Retail Sales Rise 0.2% In October",
-     "analysed": false
-    },
-    {
-     "id": "40c36c6b4391ea46",
-     "title": "Disney Stock Can Extend Its Rally After Magical Earnings Under CEO D\u2019Amaro",
-     "url": "https://finance.yahoo.com/m/5038f047-1921-3c36-94c8-6577fa1ad761/disney-stock-can-extend-its.html?.tsrc=rss",
-     "publisher": "yahoo",
-     "published": "2026-11-17T15:10:00+00:00",
-     "symbols": [
-      "DIS"
-     ],
-     "relevance": 0.725,
-     "sentiment": 0.762,
-     "impact": "medium",
-     "category": "earnings",
-     "summary": "Disney Stock Can Extend Its Rally After Magical Earnings Under CEO D\u2019Amaro. The theme park and streaming company beats estimates on fourth-quarter earnings and lays out a plan to cut costs by $3 billion by fiscal 2029.",
-     "analysed": true
     }
    ],
-   "stored": 9177,
+   "stored": 9161,
    "untriaged": 0
   },
   "macro": {
-   "generated_at": "2026-11-18T01:20:40.632111+00:00",
+   "generated_at": "2026-11-18T02:20:43.054642+00:00",
    "indicators": {
     "fed_funds": {
      "id": "fed_funds",
@@ -121587,7 +121563,7 @@
      "series": "^VIX",
      "change_1m_pct": 38.07,
      "trend": "up",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "ust_10y_live": {
      "id": "ust_10y_live",
@@ -121601,7 +121577,7 @@
      "series": "^TNX",
      "change_1m_pct": -0.64,
      "trend": "down",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "ust_3m_live": {
      "id": "ust_3m_live",
@@ -121615,63 +121591,63 @@
      "series": "^IRX",
      "change_1m_pct": 1.55,
      "trend": "up",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "dxy": {
      "id": "dxy",
      "name": "\u00cdndice d\u00f3lar (DXY)",
-     "value": 103.648,
+     "value": 103.619,
      "previous": 103.55,
-     "change": 0.098,
+     "change": 0.069,
      "as_of": "2026-11-17",
      "unit": "",
      "source": "yahoo",
      "series": "DX-Y.NYB",
-     "change_1m_pct": 1.64,
+     "change_1m_pct": 1.61,
      "trend": "up",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "wti": {
      "id": "wti",
      "name": "Petr\u00f3leo WTI",
-     "value": 85.62,
+     "value": 85.18,
      "previous": 85.72,
-     "change": -0.1,
+     "change": -0.54,
      "as_of": "2026-11-17",
      "unit": "USD",
      "source": "yahoo",
      "series": "CL=F",
-     "change_1m_pct": -17.4,
+     "change_1m_pct": -17.83,
      "trend": "down",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "gold": {
      "id": "gold",
      "name": "Oro (futuro)",
-     "value": 3821.8999,
+     "value": 3804.2,
      "previous": 3853.0,
-     "change": -31.1001,
+     "change": -48.8,
      "as_of": "2026-11-17",
      "unit": "USD",
      "source": "yahoo",
      "series": "GC=F",
-     "change_1m_pct": -8.13,
+     "change_1m_pct": -8.56,
      "trend": "down",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     },
     "copper": {
      "id": "copper",
      "name": "Cobre (futuro)",
-     "value": 6.0025,
+     "value": 5.9615,
      "previous": 5.9975,
-     "change": 0.005,
+     "change": -0.036,
      "as_of": "2026-11-17",
      "unit": "USD",
      "source": "yahoo",
      "series": "HG=F",
-     "change_1m_pct": -8.19,
+     "change_1m_pct": -8.82,
      "trend": "down",
-     "fetched_at": "2026-11-18T01:20:40.632111+00:00"
+     "fetched_at": "2026-11-18T02:20:43.054642+00:00"
     }
    },
    "relevance": {
@@ -121934,7 +121910,7 @@
    }
   },
   "technicals": {
-   "generated_at": "2026-11-18T01:20:40.632111+00:00",
+   "generated_at": "2026-11-18T02:20:43.054642+00:00",
    "symbols": {
     "SPY": {
      "score": -0.245,
