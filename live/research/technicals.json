@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T22:10:56.456746+00:00",
+ "generated_at": "2026-11-18T22:20:42.865201+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -923,8 +923,8 @@
      "bars_since_touch": 10
     },
     {
-     "price": 78.143,
-     "touches": 12,
+     "price": 78.132,
+     "touches": 11,
      "bars_since_touch": 42
     },
     {
@@ -993,8 +993,8 @@
      "bars_since_touch": 13
     },
     {
-     "price": 107.82,
-     "touches": 12,
+     "price": 107.79,
+     "touches": 13,
      "bars_since_touch": 60
     }
    ],
@@ -6819,6 +6819,16 @@
      "status": "confirmed",
      "levels": {},
      "note": "MACD crossed below its signal above zero"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.3,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
     }
    ]
   },
