@@ -1,6 +1,8 @@
 {
- "started_at": "2026-11-18T07:20:57.959158+00:00",
- "errors": {},
+ "started_at": "2026-11-18T08:20:43.835272+00:00",
+ "errors": {
+  "news:google:jobs": "https://news.google.com/rss/search?q=%22jobs+report%22+OR+payrolls+OR+unemployment+rate+OR+%22jobless+claims%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=%"
+ },
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -13,13 +15,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 57
+  "local": 74
  },
  "news": {
-  "fetched": 1702,
-  "new": 32,
-  "stored": 9147,
-  "triaged": 32,
+  "fetched": 1633,
+  "new": 49,
+  "stored": 9163,
+  "triaged": 49,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -30,7 +32,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 53.1,
+ "duration_s": 42.3,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
