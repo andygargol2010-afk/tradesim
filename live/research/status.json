@@ -1,8 +1,6 @@
 {
- "started_at": "2026-11-19T07:20:43.970514+00:00",
- "errors": {
-  "news:google:growth": "https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+OR+%22retail+sales%22+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=US+GDP+OR+recession+OR+ISM+"
- },
+ "started_at": "2026-11-19T08:20:37.277927+00:00",
+ "errors": {},
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -15,13 +13,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 156
+  "local": 70
  },
  "news": {
-  "fetched": 1766,
-  "new": 131,
-  "stored": 9323,
-  "triaged": 131,
+  "fetched": 1862,
+  "new": 45,
+  "stored": 9334,
+  "triaged": 45,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -32,7 +30,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 42.2,
+ "duration_s": 56.5,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
