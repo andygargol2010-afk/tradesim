@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-19T03:41:22.733938+00:00",
+ "generated_at": "2026-11-19T07:20:43.970514+00:00",
  "window": [
-  "2026-11-11",
-  "2026-12-18"
+  "2026-11-12",
+  "2026-12-19"
  ],
  "events": [
   {
@@ -1198,6 +1198,24 @@
   },
   {
    "date": "2026-12-15",
+   "title": "MRK ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "MRK"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "eb0639cd5873"
+  },
+  {
+   "date": "2026-12-15",
    "title": "TMO ex-dividend date",
    "category": "dividend",
    "importance": "low",
@@ -1231,6 +1249,24 @@
    "source": "rules",
    "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
    "id": "2ecf2b45250b"
+  },
+  {
+   "date": "2026-12-16",
+   "title": "DIS ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "DIS"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "115f9873da5c"
   },
   {
    "date": "2026-12-17",
@@ -1291,7 +1327,7 @@
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "13 events this week",
-  "companies": "34 earnings/dividend events"
+  "companies": "36 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
