@@ -6966,6 +6966,27 @@
     "73.09590876586250000000000000000000",
     "18.7143220436350415327906",
     "18.7143220436350415327906"
+   ],
+   [
+    "2026-11-19T22:47:23.254822+00:00",
+    "91.81023080949754153279060000000000",
+    "73.09590876586250000000000000000000",
+    "18.7143220436350415327906",
+    "18.7143220436350415327906"
+   ],
+   [
+    "2026-11-19T22:47:24.004118+00:00",
+    "91.81023080949754153279060000000000",
+    "73.09590876586250000000000000000000",
+    "18.7143220436350415327906",
+    "18.7143220436350415327906"
+   ],
+   [
+    "2026-11-19T22:47:24.004862+00:00",
+    "91.81023080949754153279060000000000",
+    "73.09590876586250000000000000000000",
+    "18.7143220436350415327906",
+    "18.7143220436350415327906"
    ]
   ],
   "total_fees": "0.12215486",
@@ -12423,14 +12444,14 @@
    "limit_price": null,
    "stop_price": "361.85",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-18T22:43:16.488190+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-19T22:47:24.004728+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.39, noticias +0.07 (77 relevantes), tendencia alcista. Titular: \u00abApple Is the Only Magnific",
    "reduce_only": true,
    "oco_group": "exits-TSLA-260"
@@ -12444,14 +12465,14 @@
    "limit_price": "427.46",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-18T22:43:16.488254+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-19T22:47:24.004768+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.29: t\u00e9cnico +0.39, noticias +0.07 (77 relevantes), tendencia alcista. Titular: \u00abApple Is the Only Magnific",
    "reduce_only": true,
    "oco_group": "exits-TSLA-260"
@@ -12581,13 +12602,55 @@
    "tag": "take-profit: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.06 (martillo), noticias +0.13 (28 relevantes), tendencia alcista. Titular: \u00abFuelCell Energy",
    "reduce_only": true,
    "oco_group": "exits-TXN-266"
+  },
+  {
+   "id": "O00000268",
+   "symbol": "TSLA",
+   "side": "sell",
+   "quantity": "0.049983499",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "362.08",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-19T22:47:24.004790+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
+   "reduce_only": true,
+   "oco_group": "exits-TSLA-268"
+  },
+  {
+   "id": "O00000269",
+   "symbol": "TSLA",
+   "side": "sell",
+   "quantity": "0.049983499",
+   "order_type": "limit",
+   "limit_price": "399.07",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-19T22:47:24.004837+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
+   "reduce_only": true,
+   "oco_group": "exits-TSLA-268"
   }
  ],
  "open_order_ids": [
-  "O00000260",
-  "O00000261"
+  "O00000268",
+  "O00000269"
  ],
- "order_id_counter": 268,
+ "order_id_counter": 270,
  "fill_id_counter": 82,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -12598,7 +12661,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-19T22:21:45.008794+00:00",
+ "last_sync": "2026-11-19T22:47:24.004862+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
