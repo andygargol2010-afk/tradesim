@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "47.54856064462770000000000000000000",
+  "cash": "74.19703674699770000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -63,14 +63,14 @@
    },
    {
     "symbol": "SLB",
-    "quantity": "0.224507451",
-    "avg_price": "49.49",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-17T15:42:03.232775+00:00",
-    "realized_pnl": "0.01977230328",
-    "fees_paid": "0.00025472",
+    "opened_at": null,
+    "realized_pnl": "-0.33494946930",
+    "fees_paid": "0.00059101",
     "mark_price": "48.40999984741211",
-    "entry_order_id": "O00000501"
+    "entry_order_id": null
    },
    {
     "symbol": "XLV",
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.5230928397477374176594007502641388",
     "fees_paid": "0.00026974",
-    "mark_price": "1382.75",
+    "mark_price": "1351.1199951171875",
     "entry_order_id": "O00000010"
    },
    {
@@ -173,14 +173,14 @@
    },
    {
     "symbol": "TXN",
-    "quantity": "0.021181293",
-    "avg_price": "295.08",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:42.106424+00:00",
-    "realized_pnl": "0.2486034429100000000000000000000004",
-    "fees_paid": "0.00019324",
+    "opened_at": null,
+    "realized_pnl": "0.0528882955900000000000000000000004",
+    "fees_paid": "0.00036507",
     "mark_price": "292.42999267578125",
-    "entry_order_id": "O00000356"
+    "entry_order_id": null
    },
    {
     "symbol": "TMO",
@@ -333,7 +333,7 @@
     "opened_at": "2026-11-10T15:41:35.719762+00:00",
     "realized_pnl": "0.13215246485",
     "fees_paid": "0.00010137",
-    "mark_price": "383.7200012207031",
+    "mark_price": "374.4100036621094",
     "entry_order_id": "O00000354"
    },
    {
@@ -371,14 +371,14 @@
    },
    {
     "symbol": "XLU",
-    "quantity": "0.229929496",
-    "avg_price": "43.98",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-17T15:41:46.922450+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "-0.27361610024",
+    "fees_paid": "0.00031168",
     "mark_price": "43.54999923706055",
-    "entry_order_id": "O00000502"
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -2243,6 +2243,48 @@
     "slippage_cost": "0.00081106",
     "realized_pnl": "-0.13912273072",
     "timestamp": "2026-11-18T14:35:00+00:00"
+   },
+   {
+    "id": "F00000134",
+    "order_id": "O00000522",
+    "symbol": "XLU",
+    "side": "sell",
+    "quantity": "0.229929496",
+    "price": "42.79",
+    "notional": "9.83868313",
+    "fee": "0.00031168",
+    "liquidity": "taker",
+    "slippage_cost": "0.00229929",
+    "realized_pnl": "-0.27361610024",
+    "timestamp": "2026-11-19T17:05:00+00:00"
+   },
+   {
+    "id": "F00000135",
+    "order_id": "O00000524",
+    "symbol": "SLB",
+    "side": "sell",
+    "quantity": "0.224507451",
+    "price": "47.91",
+    "notional": "10.75615198",
+    "fee": "0.00033629",
+    "liquidity": "taker",
+    "slippage_cost": "0.00449015",
+    "realized_pnl": "-0.35472177258",
+    "timestamp": "2026-11-19T17:05:00+00:00"
+   },
+   {
+    "id": "F00000136",
+    "order_id": "O00000526",
+    "symbol": "TXN",
+    "side": "sell",
+    "quantity": "0.021181293",
+    "price": "285.84",
+    "notional": "6.05446079",
+    "fee": "0.00017183",
+    "liquidity": "taker",
+    "slippage_cost": "0.00084725",
+    "realized_pnl": "-0.19571514732",
+    "timestamp": "2026-11-19T17:05:00+00:00"
    }
   ],
   "closed_trades": [
@@ -3155,6 +3197,48 @@
     "closed_at": "2026-11-18T14:35:00+00:00",
     "entry_order_id": "O00000392",
     "exit_order_id": "O00000514"
+   },
+   {
+    "symbol": "XLU",
+    "direction": "long",
+    "quantity": "0.229929496",
+    "entry_price": "43.98",
+    "exit_price": "42.79",
+    "pnl": "-0.27392778024",
+    "fees": "0.00031168",
+    "return_pct": -0.02708857539705919,
+    "opened_at": "2026-11-17T15:41:46.922450+00:00",
+    "closed_at": "2026-11-19T17:05:00+00:00",
+    "entry_order_id": "O00000502",
+    "exit_order_id": "O00000522"
+   },
+   {
+    "symbol": "SLB",
+    "direction": "long",
+    "quantity": "0.224507451",
+    "entry_price": "49.49",
+    "exit_price": "47.91",
+    "pnl": "-0.35505806258",
+    "fees": "0.00033629",
+    "return_pct": -0.031955908290319614,
+    "opened_at": "2026-11-17T15:42:03.232775+00:00",
+    "closed_at": "2026-11-19T17:05:00+00:00",
+    "entry_order_id": "O00000501",
+    "exit_order_id": "O00000524"
+   },
+   {
+    "symbol": "TXN",
+    "direction": "long",
+    "quantity": "0.021181293",
+    "entry_price": "295.08",
+    "exit_price": "285.84",
+    "pnl": "-0.19588697732",
+    "fees": "0.00017183",
+    "return_pct": -0.03134103411637593,
+    "opened_at": "2026-11-10T15:41:42.106424+00:00",
+    "closed_at": "2026-11-19T17:05:00+00:00",
+    "entry_order_id": "O00000356",
+    "exit_order_id": "O00000526"
    }
   ],
   "equity_curve": [
@@ -8197,13 +8281,20 @@
     "47.54856064462770000000000000000000",
     "46.68095314315770336878156",
     "46.68095314315770336878156"
+   ],
+   [
+    "2026-11-19T21:22:10.249893+00:00",
+    "93.33469753587138863386410000000000",
+    "74.19703674699770000000000000000000",
+    "19.1376607888736886338641",
+    "19.1376607888736886338641"
    ]
   ],
-  "total_fees": "0.11504891",
-  "total_slippage": "0.20250124",
+  "total_fees": "0.11586871",
+  "total_slippage": "0.21013793",
   "total_financing": "0E-47",
   "peak_equity": "101.6251715784182113458884300000000",
-  "max_drawdown": "0.07279649898504931661838028091867719"
+  "max_drawdown": "0.08157894263577747514096764319850827"
  },
  "orders": [
   {
@@ -19156,13 +19247,13 @@
    "limit_price": null,
    "stop_price": "42.8",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.229929496",
+   "avg_fill_price": "42.79",
+   "fees_paid": "0.00031168",
+   "triggered": true,
    "created_at": "2026-11-18T22:43:10.210719+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-19T17:05:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.00, noticias +0.47 (8 relevantes), tendencia lateral. Titular: \u00abGlobal Grid Edge Cellular R",
    "reduce_only": true,
@@ -19177,14 +19268,14 @@
    "limit_price": "45.67",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-18T22:43:10.210765+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-19T21:22:10.261768+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.00, noticias +0.47 (8 relevantes), tendencia lateral. Titular: \u00abGlobal Grid Edge Cellular R filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.00, noticias +0.47 (8 relevantes), tendencia lateral. Titular: \u00abGlobal Grid Edge Cellular R",
    "reduce_only": true,
    "oco_group": "exits-XLU-522"
@@ -19198,13 +19289,13 @@
    "limit_price": null,
    "stop_price": "47.93",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.224507451",
+   "avg_fill_price": "47.91",
+   "fees_paid": "0.00033629",
+   "triggered": true,
    "created_at": "2026-11-18T22:43:10.210847+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-19T17:05:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.13: t\u00e9cnico -0.15, noticias +0.70 (2 relevantes), tendencia lateral. Titular: \u00abSLB Expands Norway Footprin",
    "reduce_only": true,
@@ -19219,14 +19310,14 @@
    "limit_price": "54.88",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-18T22:43:10.210888+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-19T21:22:10.267399+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.13: t\u00e9cnico -0.15, noticias +0.70 (2 relevantes), tendencia lateral. Titular: \u00abSLB Expands Norway Footprin filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.13: t\u00e9cnico -0.15, noticias +0.70 (2 relevantes), tendencia lateral. Titular: \u00abSLB Expands Norway Footprin",
    "reduce_only": true,
    "oco_group": "exits-SLB-524"
@@ -19240,13 +19331,13 @@
    "limit_price": null,
    "stop_price": "285.88",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.021181293",
+   "avg_fill_price": "285.84",
+   "fees_paid": "0.00017183",
+   "triggered": true,
    "created_at": "2026-11-18T22:43:10.210987+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-19T17:05:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.06 (martillo), noticias +0.13 (28 relevantes), tendencia alcista. Titular: \u00abFuelCell Energy",
    "reduce_only": true,
@@ -19261,14 +19352,14 @@
    "limit_price": "312.07",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-18T22:43:10.211031+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-19T21:22:10.273012+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.06 (martillo), noticias +0.13 (28 relevantes), tendencia alcista. Titular: \u00abFuelCell Energy filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.12: t\u00e9cnico -0.06 (martillo), noticias +0.13 (28 relevantes), tendencia alcista. Titular: \u00abFuelCell Energy",
    "reduce_only": true,
    "oco_group": "exits-TXN-526"
@@ -19319,17 +19410,11 @@
  "open_order_ids": [
   "O00000520",
   "O00000521",
-  "O00000522",
-  "O00000523",
-  "O00000524",
-  "O00000525",
-  "O00000526",
-  "O00000527",
   "O00000528",
   "O00000529"
  ],
  "order_id_counter": 530,
- "fill_id_counter": 134,
+ "fill_id_counter": 137,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -19339,11 +19424,11 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-19T13:33:19.566513+00:00",
+ "last_sync": "2026-11-19T21:22:10.249893+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-18T21:00:00+00:00",
-  "SLB": "2026-11-18T21:00:00+00:00",
+  "SLB": "2026-11-19T21:00:00+00:00",
   "XLV": "2026-11-06T19:20:00+00:00",
   "AAPL": "2026-11-02T18:20:00+00:00",
   "USO": "2026-11-02T15:20:00+00:00",
@@ -19351,9 +19436,9 @@
   "PG": "2026-11-06T19:20:00+00:00",
   "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-18T21:00:00+00:00",
+  "LLY": "2026-11-19T21:00:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
-  "TXN": "2026-11-18T21:00:00+00:00",
+  "TXN": "2026-11-19T21:00:00+00:00",
   "TMO": "2026-11-13T17:55:00+00:00",
   "PLTR": "2026-11-16T21:00:00+00:00",
   "COP": "2026-11-04T15:20:00+00:00",
@@ -19367,10 +19452,10 @@
   "MSFT": "2026-11-17T14:40:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
   "BCH-USD": "2026-11-10T15:20:00+00:00",
-  "TSLA": "2026-11-18T21:00:00+00:00",
+  "TSLA": "2026-11-19T21:00:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
   "V": "2026-11-18T21:00:00+00:00",
   "ABT": "2026-11-17T21:00:00+00:00",
-  "XLU": "2026-11-18T21:00:00+00:00"
+  "XLU": "2026-11-19T21:00:00+00:00"
  }
 }
