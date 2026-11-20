@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "73.09590876586250000000000000000000",
+  "cash": "91.19092355883250000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -195,14 +195,14 @@
    },
    {
     "symbol": "TSLA",
-    "quantity": "0.049983499",
-    "avg_price": "377.0890307819386553950534755480004",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:35.719762+00:00",
-    "realized_pnl": "0.40428560655",
-    "fees_paid": "0.00031011",
+    "opened_at": null,
+    "realized_pnl": "-0.3484174434800000000000000000000024",
+    "fees_paid": "0.00082146",
     "mark_price": "374.4100036621094",
-    "entry_order_id": "O00000185"
+    "entry_order_id": null
    },
    {
     "symbol": "TXN",
@@ -1383,6 +1383,20 @@
     "slippage_cost": "0.00136083",
     "realized_pnl": "-0.28473983769",
     "timestamp": "2026-11-19T17:05:00+00:00"
+   },
+   {
+    "id": "F00000082",
+    "order_id": "O00000268",
+    "symbol": "TSLA",
+    "side": "sell",
+    "quantity": "0.049983499",
+    "price": "362.03",
+    "notional": "18.09552614",
+    "fee": "0.00051135",
+    "liquidity": "taker",
+    "slippage_cost": "0.00249917",
+    "realized_pnl": "-0.75270305003",
+    "timestamp": "2026-11-20T15:25:00+00:00"
    }
   ],
   "closed_trades": [
@@ -1973,6 +1987,20 @@
     "closed_at": "2026-11-19T17:05:00+00:00",
     "entry_order_id": "O00000187",
     "exit_order_id": "O00000266"
+   },
+   {
+    "symbol": "TSLA",
+    "direction": "long",
+    "quantity": "0.049983499",
+    "entry_price": "377.089030781939",
+    "exit_price": "362.03",
+    "pnl": "-0.75321440003",
+    "fees": "0.00051135",
+    "return_pct": -0.039962077727160414,
+    "opened_at": "2026-11-10T15:41:35.719762+00:00",
+    "closed_at": "2026-11-20T15:25:00+00:00",
+    "entry_order_id": "O00000185",
+    "exit_order_id": "O00000268"
    }
   ],
   "equity_curve": [
@@ -7127,13 +7155,20 @@
     "73.09590876586250000000000000000000",
     "18.7143220436350415327906",
     "18.7143220436350415327906"
+   ],
+   [
+    "2026-11-20T20:21:54.979228+00:00",
+    "91.19092355883250000000000000000000",
+    "91.19092355883250000000000000000000",
+    "0E-16",
+    "0E-16"
    ]
   ],
-  "total_fees": "0.12215486",
-  "total_slippage": "0.22357640",
+  "total_fees": "0.12266621",
+  "total_slippage": "0.22607557",
   "total_financing": "0E-47",
   "peak_equity": "101.0127784549193158540917500000000",
-  "max_drawdown": "0.09110280866666580007398592297290957"
+  "max_drawdown": "0.09723378612410093693901450989681955"
  },
  "orders": [
   {
@@ -12752,13 +12787,13 @@
    "limit_price": null,
    "stop_price": "362.08",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.049983499",
+   "avg_fill_price": "362.03",
+   "fees_paid": "0.00051135",
+   "triggered": true,
    "created_at": "2026-11-19T22:47:24.004790+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T15:25:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
    "reduce_only": true,
@@ -12773,25 +12808,22 @@
    "limit_price": "399.07",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-19T22:47:24.004837+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-20T20:21:54.981020+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk  filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
    "reduce_only": true,
    "oco_group": "exits-TSLA-268"
   }
  ],
- "open_order_ids": [
-  "O00000268",
-  "O00000269"
- ],
+ "open_order_ids": [],
  "order_id_counter": 270,
- "fill_id_counter": 82,
+ "fill_id_counter": 83,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -12801,7 +12833,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-20T13:22:01.629916+00:00",
+ "last_sync": "2026-11-20T20:21:54.979228+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-05T15:20:00+00:00",
@@ -12817,7 +12849,7 @@
   "NOW": "2026-11-17T14:40:00+00:00",
   "PM": "2026-11-06T19:20:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
-  "TSLA": "2026-11-19T21:00:00+00:00",
+  "TSLA": "2026-11-20T20:20:00+00:00",
   "TXN": "2026-11-19T21:00:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
   "ABT": "2026-11-17T21:00:00+00:00",

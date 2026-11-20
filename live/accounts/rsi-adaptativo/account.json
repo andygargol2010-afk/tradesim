@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "34.61279641371630000000000000000000",
+  "cash": "71.18028274019630000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -74,25 +74,25 @@
    },
    {
     "symbol": "CAT",
-    "quantity": "0.017047659",
-    "avg_price": "578.32",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:40.684746+00:00",
-    "realized_pnl": "-2.01060898857",
-    "fees_paid": "0.00049708",
+    "opened_at": null,
+    "realized_pnl": "-2.86861766604",
+    "fees_paid": "0.00075014",
     "mark_price": "537.3699951171875",
-    "entry_order_id": "O00000061"
+    "entry_order_id": null
    },
    {
     "symbol": "GE",
-    "quantity": "0.034630835",
-    "avg_price": "288.77",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-10-26T16:01:21.885588+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0",
+    "opened_at": null,
+    "realized_pnl": "0.75079650280",
+    "fees_paid": "0.00030463",
     "mark_price": "318.8800048828125",
-    "entry_order_id": "O00000004"
+    "entry_order_id": null
    },
    {
     "symbol": "T",
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "21.850000381469727",
+    "mark_price": "22.415000915527344",
     "entry_order_id": "O00000005"
    },
    {
@@ -140,14 +140,14 @@
    },
    {
     "symbol": "SLV",
-    "quantity": "0.220003991",
-    "avg_price": "43.08",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-17T15:41:43.060254+00:00",
-    "realized_pnl": "-1.01353108576",
-    "fees_paid": "0.00028619",
+    "opened_at": null,
+    "realized_pnl": "-2.13995151968",
+    "fees_paid": "0.00055488",
     "mark_price": "39.63999938964844",
-    "entry_order_id": "O00000082"
+    "entry_order_id": null
    },
    {
     "symbol": "GOOGL",
@@ -173,14 +173,14 @@
    },
    {
     "symbol": "NVDA",
-    "quantity": "0.059541888",
-    "avg_price": "165.09",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-12T15:41:45.831285+00:00",
-    "realized_pnl": "-1.26863447792",
-    "fees_paid": "0.00024838",
+    "opened_at": null,
+    "realized_pnl": "-2.63333455088",
+    "fees_paid": "0.00049359",
     "mark_price": "145.97999572753906",
-    "entry_order_id": "O00000075"
+    "entry_order_id": null
    },
    {
     "symbol": "BTC-USD",
@@ -190,7 +190,7 @@
     "opened_at": "2026-11-17T15:42:04.905000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.02368693",
-    "mark_price": "61585.255000000005",
+    "mark_price": "58389.994999999995",
     "entry_order_id": "O00000083"
    }
   ],
@@ -586,6 +586,62 @@
     "slippage_cost": "0.00103351",
     "realized_pnl": "-0.3307233792",
     "timestamp": "2026-11-19T21:00:00+00:00"
+   },
+   {
+    "id": "F00000029",
+    "order_id": "O00000067",
+    "symbol": "GE",
+    "side": "sell",
+    "quantity": "0.034630835",
+    "price": "310.45",
+    "notional": "10.75114273",
+    "fee": "0.00030463",
+    "liquidity": "taker",
+    "slippage_cost": "0.00277047",
+    "realized_pnl": "0.7507965028",
+    "timestamp": "2026-11-20T19:35:00+00:00"
+   },
+   {
+    "id": "F00000030",
+    "order_id": "O00000076",
+    "symbol": "NVDA",
+    "side": "sell",
+    "quantity": "0.059541888",
+    "price": "142.17",
+    "notional": "8.46507022",
+    "fee": "0.00024521",
+    "liquidity": "taker",
+    "slippage_cost": "0.00119084",
+    "realized_pnl": "-1.36470007296",
+    "timestamp": "2026-11-20T14:35:00+00:00"
+   },
+   {
+    "id": "F00000031",
+    "order_id": "O00000077",
+    "symbol": "CAT",
+    "side": "sell",
+    "quantity": "0.017047659",
+    "price": "527.99",
+    "notional": "9.00099348",
+    "fee": "0.00025306",
+    "liquidity": "taker",
+    "slippage_cost": "0.00102265",
+    "realized_pnl": "-0.85800867747",
+    "timestamp": "2026-11-20T14:35:00+00:00"
+   },
+   {
+    "id": "F00000032",
+    "order_id": "O00000084",
+    "symbol": "SLV",
+    "side": "sell",
+    "quantity": "0.220003991",
+    "price": "37.96",
+    "notional": "8.3513515",
+    "fee": "0.00026869",
+    "liquidity": "taker",
+    "slippage_cost": "0.00220031",
+    "realized_pnl": "-1.12642043392",
+    "timestamp": "2026-11-20T14:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -742,6 +798,62 @@
     "closed_at": "2026-11-19T21:00:00+00:00",
     "entry_order_id": "O00000040",
     "exit_order_id": "O00000078"
+   },
+   {
+    "symbol": "GE",
+    "direction": "long",
+    "quantity": "0.034630835",
+    "entry_price": "288.77",
+    "exit_price": "310.45",
+    "pnl": "0.7504918728",
+    "fees": "0.00030463",
+    "return_pct": 0.07504658899485708,
+    "opened_at": "2026-10-26T16:01:21.885588+00:00",
+    "closed_at": "2026-11-20T19:35:00+00:00",
+    "entry_order_id": "O00000004",
+    "exit_order_id": "O00000067"
+   },
+   {
+    "symbol": "NVDA",
+    "direction": "long",
+    "quantity": "0.059541888",
+    "entry_price": "165.09",
+    "exit_price": "142.17",
+    "pnl": "-1.36494528296",
+    "fees": "0.00024521",
+    "return_pct": -0.13885830926890447,
+    "opened_at": "2026-11-12T15:41:45.831285+00:00",
+    "closed_at": "2026-11-20T14:35:00+00:00",
+    "entry_order_id": "O00000075",
+    "exit_order_id": "O00000076"
+   },
+   {
+    "symbol": "CAT",
+    "direction": "long",
+    "quantity": "0.017047659",
+    "entry_price": "578.32",
+    "exit_price": "527.99",
+    "pnl": "-0.85826173747",
+    "fees": "0.00025306",
+    "return_pct": -0.08705361091936527,
+    "opened_at": "2026-11-10T15:41:40.684746+00:00",
+    "closed_at": "2026-11-20T14:35:00+00:00",
+    "entry_order_id": "O00000061",
+    "exit_order_id": "O00000077"
+   },
+   {
+    "symbol": "SLV",
+    "direction": "long",
+    "quantity": "0.220003991",
+    "entry_price": "43.08",
+    "exit_price": "37.96",
+    "pnl": "-1.12668912392",
+    "fees": "0.00026869",
+    "return_pct": -0.11887700315753014,
+    "opened_at": "2026-11-17T15:41:43.060254+00:00",
+    "closed_at": "2026-11-20T14:35:00+00:00",
+    "entry_order_id": "O00000082",
+    "exit_order_id": "O00000084"
    }
   ],
   "equity_curve": [
@@ -5966,13 +6078,20 @@
     "34.61279641371630000000000000000000",
     "57.059182313993932924936292",
     "57.059182313993932924936292"
+   ],
+   [
+    "2026-11-20T20:21:50.662013+00:00",
+    "90.42006143110330011452398400000000",
+    "71.18028274019630000000000000000000",
+    "19.239778690907000114523984",
+    "19.239778690907000114523984"
    ]
   ],
-  "total_fees": "0.17102609",
-  "total_slippage": "0.11853616",
+  "total_fees": "0.17209768",
+  "total_slippage": "0.12572043",
   "total_financing": "0E-46",
   "peak_equity": "101.0701900319420356153856120000000",
-  "max_drawdown": "0.09315955729963532984559644762071051"
+  "max_drawdown": "0.1053735883693588444648870719964912"
  },
  "orders": [
   {
@@ -7370,13 +7489,13 @@
    "limit_price": null,
    "stop_price": "310.53",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.034630835",
+   "avg_fill_price": "310.45",
+   "fees_paid": "0.00030463",
+   "triggered": true,
    "created_at": "2026-11-11T15:28:20.787750+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T19:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -7559,13 +7678,13 @@
    "limit_price": null,
    "stop_price": "142.19",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.059541888",
+   "avg_fill_price": "142.17",
+   "fees_paid": "0.00024521",
+   "triggered": true,
    "created_at": "2026-11-12T15:42:07.523286+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -7580,13 +7699,13 @@
    "limit_price": null,
    "stop_price": "534.66",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.017047659",
+   "avg_fill_price": "527.99",
+   "fees_paid": "0.00025306",
+   "triggered": true,
    "created_at": "2026-11-12T16:22:25.764526+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -7727,13 +7846,13 @@
    "limit_price": null,
    "stop_price": "38.94",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.220003991",
+   "avg_fill_price": "37.96",
+   "fees_paid": "0.00026869",
+   "triggered": true,
    "created_at": "2026-11-17T15:42:11.967034+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T14:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -7762,15 +7881,11 @@
   }
  ],
  "open_order_ids": [
-  "O00000067",
-  "O00000076",
-  "O00000077",
   "O00000081",
-  "O00000084",
   "O00000085"
  ],
  "order_id_counter": 86,
- "fill_id_counter": 29,
+ "fill_id_counter": 33,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -7780,21 +7895,21 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-20T13:21:56.697670+00:00",
+ "last_sync": "2026-11-20T20:21:50.662013+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
   "BAC": "2026-11-18T21:00:00+00:00",
-  "CAT": "2026-11-19T21:00:00+00:00",
-  "GE": "2026-11-19T21:00:00+00:00",
-  "T": "2026-11-19T21:00:00+00:00",
+  "CAT": "2026-11-20T20:20:00+00:00",
+  "GE": "2026-11-20T20:20:00+00:00",
+  "T": "2026-11-20T20:20:00+00:00",
   "ETH-USD": "2026-11-05T16:30:00+00:00",
   "SOL-USD": "2026-10-30T01:20:00+00:00",
   "XRP-USD": "2026-10-30T01:20:00+00:00",
-  "SLV": "2026-11-19T21:00:00+00:00",
+  "SLV": "2026-11-20T20:20:00+00:00",
   "GOOGL": "2026-11-19T21:00:00+00:00",
   "XLK": "2026-11-17T15:40:00+00:00",
-  "NVDA": "2026-11-19T21:00:00+00:00",
-  "BTC-USD": "2026-11-20T13:20:00+00:00"
+  "NVDA": "2026-11-20T20:20:00+00:00",
+  "BTC-USD": "2026-11-20T20:20:00+00:00"
  }
 }

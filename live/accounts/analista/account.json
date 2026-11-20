@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "74.19703674699770000000000000000000",
+  "cash": "87.08093624316770000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -157,7 +157,7 @@
     "opened_at": "2026-10-26T16:01:06.596551+00:00",
     "realized_pnl": "0.5230928397477374176594007502641388",
     "fees_paid": "0.00026974",
-    "mark_price": "1351.1199951171875",
+    "mark_price": "1353.22998046875",
     "entry_order_id": "O00000010"
    },
    {
@@ -327,14 +327,14 @@
    },
    {
     "symbol": "TSLA",
-    "quantity": "0.035588939",
-    "avg_price": "377.1172318129517713354702706928127",
+    "quantity": "0",
+    "avg_price": "0",
     "open_fees": "0",
-    "opened_at": "2026-11-10T15:41:35.719762+00:00",
-    "realized_pnl": "0.13215246485",
-    "fees_paid": "0.00010137",
+    "opened_at": null,
+    "realized_pnl": "-0.4047861078199999999999999999999989",
+    "fees_paid": "0.00046546",
     "mark_price": "374.4100036621094",
-    "entry_order_id": "O00000354"
+    "entry_order_id": null
    },
    {
     "symbol": "META",
@@ -2285,6 +2285,20 @@
     "slippage_cost": "0.00084725",
     "realized_pnl": "-0.19571514732",
     "timestamp": "2026-11-19T17:05:00+00:00"
+   },
+   {
+    "id": "F00000137",
+    "order_id": "O00000532",
+    "symbol": "TSLA",
+    "side": "sell",
+    "quantity": "0.035588939",
+    "price": "362.03",
+    "notional": "12.88426359",
+    "fee": "0.00036409",
+    "liquidity": "taker",
+    "slippage_cost": "0.00177945",
+    "realized_pnl": "-0.53693857267",
+    "timestamp": "2026-11-20T15:25:00+00:00"
    }
   ],
   "closed_trades": [
@@ -3239,6 +3253,20 @@
     "closed_at": "2026-11-19T17:05:00+00:00",
     "entry_order_id": "O00000356",
     "exit_order_id": "O00000526"
+   },
+   {
+    "symbol": "TSLA",
+    "direction": "long",
+    "quantity": "0.035588939",
+    "entry_price": "377.117231812952",
+    "exit_price": "362.03",
+    "pnl": "-0.53730266267",
+    "fees": "0.00036409",
+    "return_pct": -0.04003387001484816,
+    "opened_at": "2026-11-10T15:41:35.719762+00:00",
+    "closed_at": "2026-11-20T15:25:00+00:00",
+    "entry_order_id": "O00000354",
+    "exit_order_id": "O00000532"
    }
   ],
   "equity_curve": [
@@ -8463,13 +8491,20 @@
     "74.19703674699770000000000000000000",
     "19.1376607888736886338641",
     "19.1376607888736886338641"
+   ],
+   [
+    "2026-11-20T20:21:54.217207+00:00",
+    "92.90281985713010234375000000000000",
+    "87.08093624316770000000000000000000",
+    "5.82188361396240234375",
+    "5.82188361396240234375"
    ]
   ],
-  "total_fees": "0.11586871",
-  "total_slippage": "0.21013793",
+  "total_fees": "0.11623280",
+  "total_slippage": "0.21191738",
   "total_financing": "0E-47",
   "peak_equity": "101.6251715784182113458884300000000",
-  "max_drawdown": "0.08157894391824112094507922376213445"
+  "max_drawdown": "0.08582865431678587079571635705900865"
  },
  "orders": [
   {
@@ -19632,13 +19667,13 @@
    "limit_price": null,
    "stop_price": "362.08",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.035588939",
+   "avg_fill_price": "362.03",
+   "fees_paid": "0.00036409",
+   "triggered": true,
    "created_at": "2026-11-19T22:47:20.674861+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-20T15:25:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
    "reduce_only": true,
@@ -19653,14 +19688,14 @@
    "limit_price": "399.07",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-19T22:47:20.674887+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-20T20:21:54.222715+00:00",
+   "reject_reason": "OCO: stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk  filled",
    "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico +0.09, noticias +0.12 (79 relevantes), tendencia alcista. Titular: \u00abTesla Stock Rises as Musk ",
    "reduce_only": true,
    "oco_group": "exits-TSLA-532"
@@ -19668,12 +19703,10 @@
  ],
  "open_order_ids": [
   "O00000530",
-  "O00000531",
-  "O00000532",
-  "O00000533"
+  "O00000531"
  ],
  "order_id_counter": 534,
- "fill_id_counter": 137,
+ "fill_id_counter": 138,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -19683,7 +19716,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-20T13:22:01.143527+00:00",
+ "last_sync": "2026-11-20T20:21:54.217207+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-18T21:00:00+00:00",
@@ -19695,7 +19728,7 @@
   "PG": "2026-11-06T19:20:00+00:00",
   "PFE": "2026-11-05T20:20:00+00:00",
   "QCOM": "2026-10-30T15:20:00+00:00",
-  "LLY": "2026-11-19T21:00:00+00:00",
+  "LLY": "2026-11-20T20:20:00+00:00",
   "IBM": "2026-11-03T15:40:00+00:00",
   "TXN": "2026-11-19T21:00:00+00:00",
   "TMO": "2026-11-13T17:55:00+00:00",
@@ -19711,7 +19744,7 @@
   "MSFT": "2026-11-17T14:40:00+00:00",
   "UNI-USD": "2026-11-11T06:45:00+00:00",
   "BCH-USD": "2026-11-10T15:20:00+00:00",
-  "TSLA": "2026-11-19T21:00:00+00:00",
+  "TSLA": "2026-11-20T20:20:00+00:00",
   "META": "2026-11-12T15:20:00+00:00",
   "V": "2026-11-18T21:00:00+00:00",
   "ABT": "2026-11-17T21:00:00+00:00",
