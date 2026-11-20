@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T05:20:37.199885+00:00",
+ "generated_at": "2026-11-20T06:20:46.238504+00:00",
  "window": [
   "2026-11-13",
   "2026-12-20"
@@ -763,6 +763,24 @@
   },
   {
    "date": "2026-12-02",
+   "title": "NVDA ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "NVDA"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "ae2939172a04"
+  },
+  {
+   "date": "2026-12-02",
    "title": "GS ex-dividend date",
    "category": "dividend",
    "importance": "low",
@@ -905,6 +923,24 @@
    "source": "yahoo",
    "notes": "buyers from this date do not receive the next dividend",
    "id": "b07748ba58be"
+  },
+  {
+   "date": "2026-12-04",
+   "title": "PEP ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "PEP"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "60ffd1bf8108"
   },
   {
    "date": "2026-12-07",
@@ -1273,7 +1309,7 @@
  "sources": {
   "fomc": "federalreserve.gov",
   "forexfactory": "13 events this week",
-  "companies": "36 earnings/dividend events"
+  "companies": "38 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
