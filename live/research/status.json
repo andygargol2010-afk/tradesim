@@ -1,6 +1,8 @@
 {
- "started_at": "2026-11-20T01:20:46.736241+00:00",
- "errors": {},
+ "started_at": "2026-11-20T02:20:41.676342+00:00",
+ "errors": {
+  "news:google:geopolitics": "https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+election+markets+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=geopolitical+risk+markets+OR+e"
+ },
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -13,13 +15,13 @@
   "researched_at": null
  },
  "news_engines": {
-  "local": 65
+  "local": 68
  },
  "news": {
-  "fetched": 1814,
-  "new": 40,
-  "stored": 9170,
-  "triaged": 40,
+  "fetched": 1789,
+  "new": 43,
+  "stored": 9186,
+  "triaged": 43,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -30,7 +32,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 40.6,
+ "duration_s": 77.5,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
