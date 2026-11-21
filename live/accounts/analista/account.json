@@ -8638,6 +8638,27 @@
     "87.08093624316770000000000000000000",
     "5.7955540914093017578125",
     "5.7955540914093017578125"
+   ],
+   [
+    "2026-11-21T21:05:27.838937+00:00",
+    "92.87649033457700175781250000000000",
+    "87.08093624316770000000000000000000",
+    "5.7955540914093017578125",
+    "5.7955540914093017578125"
+   ],
+   [
+    "2026-11-21T21:05:43.929644+00:00",
+    "92.87649033457700175781250000000000",
+    "87.08093624316770000000000000000000",
+    "5.7955540914093017578125",
+    "5.7955540914093017578125"
+   ],
+   [
+    "2026-11-21T21:05:43.930362+00:00",
+    "92.87649033457700175781250000000000",
+    "87.08093624316770000000000000000000",
+    "5.7955540914093017578125",
+    "5.7955540914093017578125"
    ]
   ],
   "total_fees": "0.11623280",
@@ -19849,14 +19870,14 @@
    "limit_price": null,
    "stop_price": "1303.49",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-20T22:22:10.475517+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-21T21:05:43.930174+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.14: t\u00e9cnico -0.05, noticias +0.15 (16 relevantes), tendencia alcista. Titular: \u00ab$1,000 Invested in Eli Lil",
    "reduce_only": true,
    "oco_group": "exits-LLY-534"
@@ -19870,24 +19891,66 @@
    "limit_price": "1446.88",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-20T22:22:10.475593+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-21T21:05:43.930227+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.14: t\u00e9cnico -0.05, noticias +0.15 (16 relevantes), tendencia alcista. Titular: \u00ab$1,000 Invested in Eli Lil",
    "reduce_only": true,
    "oco_group": "exits-LLY-534"
+  },
+  {
+   "id": "O00000536",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "1303.49",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-21T21:05:43.930263+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.30: t\u00e9cnico +0.20, noticias +0.22 (12 relevantes), tendencia alcista. Titular: \u00abEli Lilly Is Near Its High",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-536"
+  },
+  {
+   "id": "O00000537",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "limit",
+   "limit_price": "1458.96",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-21T21:05:43.930324+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.30: t\u00e9cnico +0.20, noticias +0.22 (12 relevantes), tendencia alcista. Titular: \u00abEli Lilly Is Near Its High",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-536"
   }
  ],
  "open_order_ids": [
-  "O00000534",
-  "O00000535"
+  "O00000536",
+  "O00000537"
  ],
- "order_id_counter": 536,
+ "order_id_counter": 538,
  "fill_id_counter": 138,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -19898,7 +19961,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-21T20:22:20.355093+00:00",
+ "last_sync": "2026-11-21T21:05:43.930362+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-18T21:00:00+00:00",
