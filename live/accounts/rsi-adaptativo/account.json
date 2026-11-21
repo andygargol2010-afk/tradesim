@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "71.18028274019630000000000000000000",
+  "cash": "79.52385429519630000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -184,14 +184,14 @@
    },
    {
     "symbol": "BTC-USD",
-    "quantity": "0.00014731",
-    "avg_price": "64318.6",
-    "open_fees": "0.02368693",
-    "opened_at": "2026-11-17T15:42:04.905000+00:00",
-    "realized_pnl": "0",
-    "fees_paid": "0.02368693",
+    "quantity": "0",
+    "avg_price": "0",
+    "open_fees": "0",
+    "opened_at": null,
+    "realized_pnl": "-1.110290201",
+    "fees_paid": "0.04459814",
     "mark_price": "58639.155",
-    "entry_order_id": "O00000083"
+    "entry_order_id": null
    }
   ],
   "fills": [
@@ -642,6 +642,20 @@
     "slippage_cost": "0.00220031",
     "realized_pnl": "-1.12642043392",
     "timestamp": "2026-11-20T14:35:00+00:00"
+   },
+   {
+    "id": "F00000033",
+    "order_id": "O00000085",
+    "symbol": "BTC-USD",
+    "side": "sell",
+    "quantity": "0.00014731",
+    "price": "56781.5",
+    "notional": "8.36448276",
+    "fee": "0.02091121",
+    "liquidity": "taker",
+    "slippage_cost": "0.0004272",
+    "realized_pnl": "-1.110290201",
+    "timestamp": "2026-11-21T03:35:00+00:00"
    }
   ],
   "closed_trades": [
@@ -854,6 +868,20 @@
     "closed_at": "2026-11-20T14:35:00+00:00",
     "entry_order_id": "O00000082",
     "exit_order_id": "O00000084"
+   },
+   {
+    "symbol": "BTC-USD",
+    "direction": "long",
+    "quantity": "0.00014731",
+    "entry_price": "64318.6",
+    "exit_price": "56781.5",
+    "pnl": "-1.154888341",
+    "fees": "0.04459814",
+    "return_pct": -0.12189087222926498,
+    "opened_at": "2026-11-17T15:42:04.905000+00:00",
+    "closed_at": "2026-11-21T03:35:00+00:00",
+    "entry_order_id": "O00000083",
+    "exit_order_id": "O00000085"
    }
   ],
   "equity_curve": [
@@ -6148,13 +6176,20 @@
     "71.18028274019630000000000000000000",
     "19.226647876741749661742988",
     "19.226647876741749661742988"
+   ],
+   [
+    "2026-11-21T07:22:02.066826+00:00",
+    "90.11236824888804966174298800000000",
+    "79.52385429519630000000000000000000",
+    "10.588513953691749661742988",
+    "10.588513953691749661742988"
    ]
   ],
-  "total_fees": "0.17209768",
-  "total_slippage": "0.12572043",
+  "total_fees": "0.19300889",
+  "total_slippage": "0.12614763",
   "total_financing": "0E-46",
   "peak_equity": "101.0701900319420356153856120000000",
-  "max_drawdown": "0.1060969134916540135544390017549296"
+  "max_drawdown": "0.1084179398454766559531714920123629"
  },
  "orders": [
   {
@@ -7930,13 +7965,13 @@
    "limit_price": null,
    "stop_price": "56784.4",
    "time_in_force": "gtc",
-   "status": "new",
-   "filled_quantity": "0",
-   "avg_fill_price": "0",
-   "fees_paid": "0",
-   "triggered": false,
+   "status": "filled",
+   "filled_quantity": "0.00014731",
+   "avg_fill_price": "56781.5",
+   "fees_paid": "0.02091121",
+   "triggered": true,
    "created_at": "2026-11-17T15:42:11.971792+00:00",
-   "updated_at": null,
+   "updated_at": "2026-11-21T03:35:00+00:00",
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
@@ -7944,11 +7979,10 @@
   }
  ],
  "open_order_ids": [
-  "O00000081",
-  "O00000085"
+  "O00000081"
  ],
  "order_id_counter": 86,
- "fill_id_counter": 33,
+ "fill_id_counter": 34,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -7958,7 +7992,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-21T02:38:36.720304+00:00",
+ "last_sync": "2026-11-21T07:22:02.066826+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
@@ -7973,6 +8007,6 @@
   "GOOGL": "2026-11-19T21:00:00+00:00",
   "XLK": "2026-11-17T15:40:00+00:00",
   "NVDA": "2026-11-20T20:20:00+00:00",
-  "BTC-USD": "2026-11-21T02:35:00+00:00"
+  "BTC-USD": "2026-11-21T07:20:00+00:00"
  }
 }
