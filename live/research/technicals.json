@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T23:20:40.998857+00:00",
+ "generated_at": "2026-11-22T00:20:45.015970+00:00",
  "symbols": {
   "SPY": {
    "symbol": "SPY",
@@ -576,13 +576,13 @@
      "bars_since_touch": 21
     },
     {
-     "price": 83.265,
-     "touches": 15,
+     "price": 83.222,
+     "touches": 14,
      "bars_since_touch": 10
     },
     {
-     "price": 84.842,
-     "touches": 9,
+     "price": 84.745,
+     "touches": 10,
      "bars_since_touch": 120
     }
    ],
@@ -965,8 +965,8 @@
      "bars_since_touch": 12
     },
     {
-     "price": 78.143,
-     "touches": 12,
+     "price": 78.132,
+     "touches": 11,
      "bars_since_touch": 44
     },
     {
@@ -7074,172 +7074,150 @@
   },
   "BTC-USD": {
    "symbol": "BTC-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 58815.0,
-   "score": -0.301,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 60086.0,
+   "score": 0.004,
    "trend": {
     "direction": "bearish",
-    "change_pct": -23.63,
-    "r2": 0.732,
-    "quality": 0.732,
+    "change_pct": -24.87,
+    "r2": 0.737,
+    "quality": 0.737,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
      "price": 58264.0,
      "touches": 3,
-     "bars_since_touch": 142
+     "bars_since_touch": 143
     }
    ],
    "resistance": [
     {
      "price": 62279.0,
      "touches": 3,
-     "bars_since_touch": 98
+     "bars_since_touch": 99
     },
     {
      "price": 66143.0,
      "touches": 7,
-     "bars_since_touch": 103
+     "bars_since_touch": 104
     },
     {
      "price": 69286.0,
      "touches": 1,
-     "bars_since_touch": 233
+     "bars_since_touch": 234
     }
    ],
    "indicators": {
-    "rsi_14": 17.4,
-    "atr_pct": 4.79,
-    "sma_20": 71010.0,
-    "sma_50": 77625.0,
-    "sma_200": 72530.0,
-    "dist_sma200_pct": -18.91,
+    "rsi_14": 22.6,
+    "atr_pct": 5.04,
+    "sma_20": 70103.0,
+    "sma_50": 77136.0,
+    "sma_200": 72426.0,
+    "dist_sma200_pct": -17.04,
     "high_52w": 87397.0,
-    "low_52w": 57655.0,
-    "volume_ratio_20": 2.34
+    "low_52w": 55106.0,
+    "volume_ratio_20": 1.53
    },
    "patterns": [
+    {
+     "name": "rsi_oversold",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.374,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "RSI 23"
+    },
+    {
+     "name": "bullish_harami",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bullish body inside a large bearish one"
+    },
     {
      "name": "support_breakdown",
      "kind": "chart",
      "direction": "bearish",
-     "strength": 0.464,
-     "bars_ago": 1,
+     "strength": 0.348,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {
       "level": 62279.0
      },
      "note": "closed below a 3-touch support"
-    },
-    {
-     "name": "rsi_oversold",
-     "kind": "indicator",
-     "direction": "bullish",
-     "strength": 0.459,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {},
-     "note": "RSI 17"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
     }
    ]
   },
   "ETH-USD": {
    "symbol": "ETH-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 1619.3,
-   "score": -0.474,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 1682.3,
+   "score": -0.057,
    "trend": {
     "direction": "bearish",
-    "change_pct": -33.97,
-    "r2": 0.863,
-    "quality": 0.863,
+    "change_pct": -34.96,
+    "r2": 0.864,
+    "quality": 0.864,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
      "price": 1507.5,
      "touches": 2,
-     "bars_since_touch": 147
+     "bars_since_touch": 148
     }
    ],
    "resistance": [
     {
-     "price": 1732.8,
-     "touches": 3,
-     "bars_since_touch": 5
-    },
-    {
-     "price": 1837.9,
-     "touches": 4,
-     "bars_since_touch": 101
+     "price": 1792.8,
+     "touches": 7,
+     "bars_since_touch": 6
     },
     {
      "price": 1962.0,
      "touches": 5,
-     "bars_since_touch": 105
+     "bars_since_touch": 106
+    },
+    {
+     "price": 2214.0,
+     "touches": 6,
+     "bars_since_touch": 22
     }
    ],
    "indicators": {
-    "rsi_14": 19.2,
-    "atr_pct": 6.7,
-    "sma_20": 2031.2,
-    "sma_50": 2285.0,
-    "sma_200": 2128.8,
-    "dist_sma200_pct": -23.93,
+    "rsi_14": 25.9,
+    "atr_pct": 6.74,
+    "sma_20": 2001.7,
+    "sma_50": 2265.2,
+    "sma_200": 2125.4,
+    "dist_sma200_pct": -20.85,
     "high_52w": 2807.1,
     "low_52w": 1505.0,
-    "volume_ratio_20": 2.34
+    "volume_ratio_20": 1.1
    },
    "patterns": [
-    {
-     "name": "support_breakdown",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.78,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {
-      "level": 1732.8
-     },
-     "note": "closed below a 3-touch support on 2.3x volume"
-    },
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.43,
+     "strength": 0.318,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 19"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "RSI 26"
     },
     {
      "name": "inside_bar",
      "kind": "candlestick",
      "direction": "neutral",
-     "strength": 0.15,
-     "bars_ago": 1,
+     "strength": 0.1,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {},
      "note": "range inside the previous bar: compression before a move"
@@ -7248,227 +7226,213 @@
   },
   "SOL-USD": {
    "symbol": "SOL-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 68.72,
-   "score": -0.048,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 70.16,
+   "score": -0.079,
    "trend": {
     "direction": "bearish",
-    "change_pct": -40.99,
-    "r2": 0.904,
-    "quality": 0.904,
+    "change_pct": -41.94,
+    "r2": 0.911,
+    "quality": 0.911,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
-     "price": 66.39,
+     "price": 68.58,
      "touches": 3,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     },
     {
-     "price": 60.11,
-     "touches": 1,
-     "bars_since_touch": 167
+     "price": 62.025,
+     "touches": 2,
+     "bars_since_touch": 149
     }
    ],
    "resistance": [
     {
-     "price": 75.945,
-     "touches": 10,
-     "bars_since_touch": 96
+     "price": 76.549,
+     "touches": 9,
+     "bars_since_touch": 97
     },
     {
      "price": 82.254,
      "touches": 5,
-     "bars_since_touch": 139
+     "bars_since_touch": 140
     },
     {
      "price": 88.3,
      "touches": 6,
-     "bars_since_touch": 183
+     "bars_since_touch": 184
     }
    ],
    "indicators": {
-    "rsi_14": 23.7,
-    "atr_pct": 6.89,
-    "sma_20": 82.374,
-    "sma_50": 97.146,
-    "sma_200": 88.497,
-    "dist_sma200_pct": -22.35,
+    "rsi_14": 27.1,
+    "atr_pct": 6.9,
+    "sma_20": 81.163,
+    "sma_50": 96.177,
+    "sma_200": 88.417,
+    "dist_sma200_pct": -20.65,
     "high_52w": 124.93,
     "low_52w": 60.11,
-    "volume_ratio_20": 1.86
+    "volume_ratio_20": 1.46
    },
    "patterns": [
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.356,
+     "strength": 0.298,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 24"
-    },
-    {
-     "name": "inside_bar",
-     "kind": "candlestick",
-     "direction": "neutral",
-     "strength": 0.1,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "range inside the previous bar: compression before a move"
+     "note": "RSI 27"
     }
    ]
   },
   "XRP-USD": {
    "symbol": "XRP-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 0.9086,
-   "score": -0.277,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 0.9302,
+   "score": -0.067,
    "trend": {
     "direction": "bearish",
-    "change_pct": -38.18,
-    "r2": 0.887,
-    "quality": 0.887,
-    "ma_alignment": "below SMA200"
+    "change_pct": -38.79,
+    "r2": 0.889,
+    "quality": 0.889,
+    "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
    },
    "support": [
     {
      "price": 0.8922,
      "touches": 1,
-     "bars_since_touch": 6
+     "bars_since_touch": 7
     }
    ],
    "resistance": [
     {
      "price": 1.0328,
      "touches": 7,
-     "bars_since_touch": 95
+     "bars_since_touch": 96
     },
     {
      "price": 1.1685,
      "touches": 4,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     },
     {
      "price": 1.2837,
      "touches": 10,
-     "bars_since_touch": 27
+     "bars_since_touch": 28
     }
    ],
    "indicators": {
-    "rsi_14": 25.5,
-    "atr_pct": 6.62,
-    "sma_20": 1.0824,
-    "sma_50": 1.2463,
-    "sma_200": 1.2437,
-    "dist_sma200_pct": -26.94,
+    "rsi_14": 29.4,
+    "atr_pct": 6.6,
+    "sma_20": 1.0664,
+    "sma_50": 1.2352,
+    "sma_200": 1.2413,
+    "dist_sma200_pct": -25.06,
     "high_52w": 1.6996,
-    "low_52w": 0.8824,
-    "volume_ratio_20": 1.76
+    "low_52w": 0.859,
+    "volume_ratio_20": 1.25
    },
    "patterns": [
     {
-     "name": "new_52w_low",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.45,
+     "name": "hammer",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.55,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "lowest close of the last year"
+     "note": "long lower wick after a decline: buyers rejected lower prices"
+    },
+    {
+     "name": "death_cross",
+     "kind": "indicator",
+     "direction": "bearish",
+     "strength": 0.5,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "SMA50 crossed below SMA200"
     },
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.324,
+     "strength": 0.26,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 26"
+     "note": "RSI 29"
     }
    ]
   },
   "ADA-USD": {
    "symbol": "ADA-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 0.14286,
-   "score": -0.39,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 0.14416,
+   "score": -0.075,
    "trend": {
     "direction": "bearish",
-    "change_pct": -43.11,
-    "r2": 0.912,
-    "quality": 0.912,
+    "change_pct": -44.03,
+    "r2": 0.918,
+    "quality": 0.918,
     "ma_alignment": "below SMA200"
    },
-   "support": [],
+   "support": [
+    {
+     "price": 0.14302,
+     "touches": 3,
+     "bars_since_touch": 6
+    }
+   ],
    "resistance": [
     {
      "price": 0.1543,
      "touches": 2,
-     "bars_since_touch": 115
+     "bars_since_touch": 116
     },
     {
      "price": 0.17106,
      "touches": 1,
-     "bars_since_touch": 94
+     "bars_since_touch": 95
     },
     {
      "price": 0.18642,
      "touches": 5,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     }
    ],
    "indicators": {
-    "rsi_14": 25.0,
-    "atr_pct": 7.82,
-    "sma_20": 0.17073,
-    "sma_50": 0.20442,
-    "sma_200": 0.20158,
-    "dist_sma200_pct": -29.13,
+    "rsi_14": 26.5,
+    "atr_pct": 7.83,
+    "sma_20": 0.16829,
+    "sma_50": 0.20241,
+    "sma_200": 0.20099,
+    "dist_sma200_pct": -28.27,
     "high_52w": 0.2953,
-    "low_52w": 0.1378,
-    "volume_ratio_20": 2.31
+    "low_52w": 0.13319,
+    "volume_ratio_20": 1.37
    },
    "patterns": [
-    {
-     "name": "new_52w_low",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.45,
-     "bars_ago": 0,
-     "status": "confirmed",
-     "levels": {},
-     "note": "lowest close of the last year"
-    },
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.333,
+     "strength": 0.309,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 25"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "RSI 26"
     },
     {
      "name": "doji",
      "kind": "candlestick",
      "direction": "neutral",
-     "strength": 0.225,
-     "bars_ago": 1,
+     "strength": 0.15,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {},
      "note": "open ~ close: indecision"
@@ -7477,124 +7441,129 @@
   },
   "DOGE-USD": {
    "symbol": "DOGE-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 0.05426,
-   "score": -0.267,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 0.05517,
+   "score": 0.362,
    "trend": {
     "direction": "bearish",
-    "change_pct": -39.84,
-    "r2": 0.926,
-    "quality": 0.926,
+    "change_pct": -40.43,
+    "r2": 0.924,
+    "quality": 0.924,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
    },
    "support": [],
    "resistance": [
     {
-     "price": 0.05539,
-     "touches": 1,
-     "bars_since_touch": 6
-    },
-    {
      "price": 0.069877,
      "touches": 10,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     },
     {
      "price": 0.074437,
      "touches": 4,
-     "bars_since_touch": 27
+     "bars_since_touch": 28
+    },
+    {
+     "price": 0.079709,
+     "touches": 8,
+     "bars_since_touch": 17
     }
    ],
    "indicators": {
-    "rsi_14": 23.1,
-    "atr_pct": 7.05,
-    "sma_20": 0.06645,
-    "sma_50": 0.076332,
-    "sma_200": 0.082956,
-    "dist_sma200_pct": -34.59,
+    "rsi_14": 25.8,
+    "atr_pct": 7.07,
+    "sma_20": 0.065436,
+    "sma_50": 0.075578,
+    "sma_200": 0.082658,
+    "dist_sma200_pct": -33.25,
     "high_52w": 0.1186,
-    "low_52w": 0.05247,
-    "volume_ratio_20": 2.07
+    "low_52w": 0.05073,
+    "volume_ratio_20": 1.59
    },
    "patterns": [
     {
-     "name": "new_52w_low",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.45,
+     "name": "hammer",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.55,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "lowest close of the last year"
+     "note": "long lower wick after a decline: buyers rejected lower prices"
+    },
+    {
+     "name": "bullish_harami",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bullish body inside a large bearish one"
     },
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.365,
+     "strength": 0.32,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 23"
-    },
-    {
-     "name": "inside_bar",
-     "kind": "candlestick",
-     "direction": "neutral",
-     "strength": 0.1,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "range inside the previous bar: compression before a move"
+     "note": "RSI 26"
     }
    ]
   },
   "LINK-USD": {
    "symbol": "LINK-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 8.525,
-   "score": -0.008,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 8.594,
+   "score": 0.271,
    "trend": {
     "direction": "bearish",
-    "change_pct": -36.6,
-    "r2": 0.883,
-    "quality": 0.883,
+    "change_pct": -37.9,
+    "r2": 0.9,
+    "quality": 0.9,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
+     "price": 8.4963,
+     "touches": 11,
+     "bars_since_touch": 7
+    },
+    {
      "price": 7.1468,
      "touches": 4,
-     "bars_since_touch": 135
+     "bars_since_touch": 136
     }
    ],
    "resistance": [
     {
      "price": 9.3422,
      "touches": 6,
-     "bars_since_touch": 181
+     "bars_since_touch": 182
     },
     {
-     "price": 10.056,
-     "touches": 4,
-     "bars_since_touch": 21
+     "price": 10.048,
+     "touches": 3,
+     "bars_since_touch": 22
     },
     {
      "price": 10.796,
      "touches": 3,
-     "bars_since_touch": 65
+     "bars_since_touch": 66
     }
    ],
    "indicators": {
-    "rsi_14": 28.5,
-    "atr_pct": 7.54,
-    "sma_20": 10.097,
-    "sma_50": 11.516,
-    "sma_200": 10.097,
-    "dist_sma200_pct": -15.57,
+    "rsi_14": 29.7,
+    "atr_pct": 7.56,
+    "sma_20": 9.9578,
+    "sma_50": 11.412,
+    "sma_200": 10.091,
+    "dist_sma200_pct": -14.83,
     "high_52w": 15.769,
     "low_52w": 7.001,
-    "volume_ratio_20": 1.72
+    "volume_ratio_20": 1.08
    },
    "patterns": [
     {
@@ -7605,92 +7574,106 @@
      "bars_ago": 0,
      "status": "forming",
      "levels": {
-      "upper": 9.1126,
-      "lower": 8.0091
+      "upper": 8.9886,
+      "lower": 7.9064
      },
      "note": "price coiling between converging trendlines"
+    },
+    {
+     "name": "bullish_harami",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "small bullish body inside a large bearish one"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.3,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
     },
     {
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.275,
+     "strength": 0.255,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 28"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "RSI 30"
     }
    ]
   },
   "LTC-USD": {
    "symbol": "LTC-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 40.552,
-   "score": -0.503,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 39.723,
+   "score": -0.366,
    "trend": {
     "direction": "bearish",
-    "change_pct": -37.67,
-    "r2": 0.895,
-    "quality": 0.895,
+    "change_pct": -39.4,
+    "r2": 0.912,
+    "quality": 0.912,
     "ma_alignment": "below SMA200"
    },
-   "support": [
+   "support": [],
+   "resistance": [
     {
      "price": 40.267,
      "touches": 3,
-     "bars_since_touch": 142
-    }
-   ],
-   "resistance": [
+     "bars_since_touch": 143
+    },
     {
      "price": 43.174,
      "touches": 5,
-     "bars_since_touch": 98
+     "bars_since_touch": 99
     },
     {
      "price": 46.957,
      "touches": 7,
-     "bars_since_touch": 82
-    },
-    {
-     "price": 51.861,
-     "touches": 7,
-     "bars_since_touch": 21
+     "bars_since_touch": 83
     }
    ],
    "indicators": {
-    "rsi_14": 24.0,
-    "atr_pct": 6.89,
-    "sma_20": 49.214,
-    "sma_50": 56.543,
-    "sma_200": 51.533,
-    "dist_sma200_pct": -21.31,
+    "rsi_14": 22.9,
+    "atr_pct": 7.13,
+    "sma_20": 48.422,
+    "sma_50": 55.94,
+    "sma_200": 51.45,
+    "dist_sma200_pct": -22.79,
     "high_52w": 80.25,
-    "low_52w": 39.21,
-    "volume_ratio_20": 1.84
+    "low_52w": 37.4,
+    "volume_ratio_20": 1.56
    },
    "patterns": [
     {
      "name": "support_breakdown",
      "kind": "chart",
      "direction": "bearish",
-     "strength": 0.56,
-     "bars_ago": 1,
+     "strength": 0.78,
+     "bars_ago": 0,
      "status": "confirmed",
      "levels": {
-      "level": 43.174
+      "level": 40.267
      },
-     "note": "closed below a 5-touch support"
+     "note": "closed below a 3-touch support on 1.7x volume"
+    },
+    {
+     "name": "hammer",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.55,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "long lower wick after a decline: buyers rejected lower prices"
     },
     {
      "name": "new_52w_low",
@@ -7706,22 +7689,22 @@
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.351,
+     "strength": 0.368,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 24"
+     "note": "RSI 23"
     }
    ]
   },
   "AVAX-USD": {
    "symbol": "AVAX-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 6.508,
-   "score": -0.455,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 6.568,
+   "score": -0.13,
    "trend": {
     "direction": "bearish",
-    "change_pct": -37.27,
+    "change_pct": -38.11,
     "r2": 0.887,
     "quality": 0.887,
     "ma_alignment": "below SMA200"
@@ -7730,44 +7713,44 @@
     {
      "price": 6.0613,
      "touches": 7,
-     "bars_since_touch": 101
+     "bars_since_touch": 102
     }
    ],
    "resistance": [
     {
      "price": 6.987,
      "touches": 7,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     },
     {
      "price": 8.1858,
      "touches": 6,
-     "bars_since_touch": 12
+     "bars_since_touch": 13
     },
     {
      "price": 8.9818,
      "touches": 8,
-     "bars_since_touch": 11
+     "bars_since_touch": 12
     }
    ],
    "indicators": {
-    "rsi_14": 28.7,
-    "atr_pct": 8.56,
-    "sma_20": 7.919,
-    "sma_50": 9.0816,
-    "sma_200": 8.021,
-    "dist_sma200_pct": -18.86,
+    "rsi_14": 29.9,
+    "atr_pct": 8.64,
+    "sma_20": 7.8129,
+    "sma_50": 8.9971,
+    "sma_200": 8.0068,
+    "dist_sma200_pct": -17.97,
     "high_52w": 12.002,
     "low_52w": 5.68,
-    "volume_ratio_20": 1.37
+    "volume_ratio_20": 1.16
    },
    "patterns": [
     {
      "name": "support_breakdown",
      "kind": "chart",
      "direction": "bearish",
-     "strength": 0.56,
-     "bars_ago": 1,
+     "strength": 0.42,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {
       "level": 6.987
@@ -7775,31 +7758,41 @@
      "note": "closed below a 7-touch support"
     },
     {
-     "name": "rsi_oversold",
-     "kind": "indicator",
+     "name": "bullish_harami",
+     "kind": "candlestick",
      "direction": "bullish",
-     "strength": 0.271,
+     "strength": 0.35,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 29"
+     "note": "small bullish body inside a large bearish one"
     },
     {
-     "name": "bearish_engulfing",
+     "name": "doji",
      "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
+     "direction": "neutral",
+     "strength": 0.3,
+     "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "open ~ close: indecision"
+    },
+    {
+     "name": "rsi_oversold",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.252,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "RSI 30"
     },
     {
      "name": "inside_bar",
      "kind": "candlestick",
      "direction": "neutral",
-     "strength": 0.15,
-     "bars_ago": 1,
+     "strength": 0.1,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {},
      "note": "range inside the previous bar: compression before a move"
@@ -7808,14 +7801,14 @@
   },
   "DOT-USD": {
    "symbol": "DOT-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 0.6619,
-   "score": -0.233,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 0.653,
+   "score": -0.23,
    "trend": {
     "direction": "bearish",
-    "change_pct": -42.53,
-    "r2": 0.842,
-    "quality": 0.842,
+    "change_pct": -43.97,
+    "r2": 0.848,
+    "quality": 0.848,
     "ma_alignment": "below SMA200"
    },
    "support": [],
@@ -7823,29 +7816,29 @@
     {
      "price": 0.7161,
      "touches": 3,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     },
     {
      "price": 0.80607,
      "touches": 3,
-     "bars_since_touch": 82
+     "bars_since_touch": 83
     },
     {
      "price": 0.88024,
      "touches": 5,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     }
    ],
    "indicators": {
-    "rsi_14": 21.2,
-    "atr_pct": 8.58,
-    "sma_20": 0.82798,
-    "sma_50": 1.0016,
-    "sma_200": 0.99039,
-    "dist_sma200_pct": -33.17,
+    "rsi_14": 20.7,
+    "atr_pct": 8.62,
+    "sma_20": 0.81309,
+    "sma_50": 0.99158,
+    "sma_200": 0.98727,
+    "dist_sma200_pct": -33.86,
     "high_52w": 1.662,
-    "low_52w": 0.6493,
-    "volume_ratio_20": 1.92
+    "low_52w": 0.6179,
+    "volume_ratio_20": 1.83
    },
    "patterns": [
     {
@@ -7862,7 +7855,7 @@
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.396,
+     "strength": 0.405,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
@@ -7872,8 +7865,8 @@
      "name": "inside_bar",
      "kind": "candlestick",
      "direction": "neutral",
-     "strength": 0.15,
-     "bars_ago": 1,
+     "strength": 0.1,
+     "bars_ago": 2,
      "status": "confirmed",
      "levels": {},
      "note": "range inside the previous bar: compression before a move"
@@ -7882,12 +7875,12 @@
   },
   "BCH-USD": {
    "symbol": "BCH-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 194.29,
-   "score": -0.51,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 199.36,
+   "score": -0.02,
    "trend": {
     "direction": "bearish",
-    "change_pct": -35.32,
+    "change_pct": -35.79,
     "r2": 0.794,
     "quality": 0.794,
     "ma_alignment": "below SMA200"
@@ -7896,36 +7889,36 @@
     {
      "price": 191.95,
      "touches": 5,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     }
    ],
    "resistance": [
     {
      "price": 212.94,
      "touches": 5,
-     "bars_since_touch": 66
+     "bars_since_touch": 67
     },
     {
      "price": 233.04,
      "touches": 3,
-     "bars_since_touch": 82
+     "bars_since_touch": 83
     },
     {
      "price": 262.15,
      "touches": 5,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     }
    ],
    "indicators": {
-    "rsi_14": 25.7,
-    "atr_pct": 7.42,
-    "sma_20": 236.24,
-    "sma_50": 266.21,
-    "sma_200": 263.35,
-    "dist_sma200_pct": -26.22,
+    "rsi_14": 29.6,
+    "atr_pct": 7.46,
+    "sma_20": 232.0,
+    "sma_50": 263.97,
+    "sma_200": 262.04,
+    "dist_sma200_pct": -23.92,
     "high_52w": 489.17,
-    "low_52w": 180.15,
-    "volume_ratio_20": 1.77
+    "low_52w": 179.54,
+    "volume_ratio_20": 1.29
    },
    "patterns": [
     {
@@ -7933,158 +7926,173 @@
      "kind": "chart",
      "direction": "bearish",
      "strength": 0.8,
-     "bars_ago": 15,
+     "bars_ago": 16,
      "status": "confirmed",
      "levels": {
-      "neckline": 245.29,
-      "target": 205.21,
+      "neckline": 244.47,
+      "target": 204.38,
       "invalidation": 304.43
      },
      "note": "three peaks with the middle one most extreme; neckline broken"
     },
     {
-     "name": "rsi_oversold",
-     "kind": "indicator",
+     "name": "hammer",
+     "kind": "candlestick",
      "direction": "bullish",
-     "strength": 0.322,
+     "strength": 0.55,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 26"
+     "note": "long lower wick after a decline: buyers rejected lower prices"
     },
     {
-     "name": "bearish_engulfing",
+     "name": "bullish_harami",
      "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
+     "direction": "bullish",
+     "strength": 0.35,
+     "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "small bullish body inside a large bearish one"
+    },
+    {
+     "name": "rsi_oversold",
+     "kind": "indicator",
+     "direction": "bullish",
+     "strength": 0.256,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "RSI 30"
     }
    ]
   },
   "UNI-USD": {
    "symbol": "UNI-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 4.4628,
-   "score": -0.064,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 4.7359,
+   "score": 0.021,
    "trend": {
     "direction": "bearish",
-    "change_pct": -43.14,
-    "r2": 0.815,
-    "quality": 0.815,
+    "change_pct": -43.53,
+    "r2": 0.814,
+    "quality": 0.814,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
+     "price": 4.4511,
+     "touches": 3,
+     "bars_since_touch": 7
+    },
+    {
      "price": 3.7146,
      "touches": 9,
-     "bars_since_touch": 108
+     "bars_since_touch": 109
     },
     {
      "price": 3.0817,
      "touches": 14,
-     "bars_since_touch": 98
+     "bars_since_touch": 99
     }
    ],
    "resistance": [
     {
      "price": 6.0226,
      "touches": 2,
-     "bars_since_touch": 22
+     "bars_since_touch": 23
     },
     {
      "price": 6.6174,
      "touches": 3,
-     "bars_since_touch": 15
+     "bars_since_touch": 16
     },
     {
      "price": 7.6525,
      "touches": 4,
-     "bars_since_touch": 15
+     "bars_since_touch": 16
     }
    ],
    "indicators": {
-    "rsi_14": 28.2,
-    "atr_pct": 12.01,
-    "sma_20": 6.1799,
-    "sma_50": 6.9754,
-    "sma_200": 5.0027,
-    "dist_sma200_pct": -10.79,
+    "rsi_14": 32.9,
+    "atr_pct": 11.42,
+    "sma_20": 6.0563,
+    "sma_50": 6.8912,
+    "sma_200": 5.0096,
+    "dist_sma200_pct": -5.46,
     "high_52w": 10.932,
     "low_52w": 2.316,
-    "volume_ratio_20": 1.2
+    "volume_ratio_20": 1.49
    },
    "patterns": [
     {
-     "name": "rsi_oversold",
-     "kind": "indicator",
+     "name": "piercing_line",
+     "kind": "candlestick",
      "direction": "bullish",
-     "strength": 0.28,
+     "strength": 0.45,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 28"
+     "note": "closes above the midpoint of the prior bearish body"
     }
    ]
   },
   "AAVE-USD": {
    "symbol": "AAVE-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 97.87,
-   "score": -0.721,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 97.45,
+   "score": -0.69,
    "trend": {
     "direction": "bearish",
-    "change_pct": -37.21,
-    "r2": 0.735,
-    "quality": 0.735,
+    "change_pct": -39.13,
+    "r2": 0.77,
+    "quality": 0.77,
     "ma_alignment": "below SMA200"
    },
    "support": [
     {
      "price": 85.195,
      "touches": 13,
-     "bars_since_touch": 98
+     "bars_since_touch": 99
     },
     {
      "price": 70.51,
      "touches": 1,
-     "bars_since_touch": 150
+     "bars_since_touch": 151
     },
     {
      "price": 57.82,
      "touches": 1,
-     "bars_since_touch": 167
+     "bars_since_touch": 168
     }
    ],
    "resistance": [
     {
      "price": 99.803,
      "touches": 8,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     },
     {
-     "price": 118.77,
-     "touches": 8,
-     "bars_since_touch": 15
+     "price": 117.89,
+     "touches": 7,
+     "bars_since_touch": 16
     },
     {
      "price": 140.14,
      "touches": 4,
-     "bars_since_touch": 11
+     "bars_since_touch": 12
     }
    ],
    "indicators": {
-    "rsi_14": 31.2,
-    "atr_pct": 9.34,
-    "sma_20": 119.03,
-    "sma_50": 140.53,
-    "sma_200": 110.24,
-    "dist_sma200_pct": -11.22,
+    "rsi_14": 31.0,
+    "atr_pct": 9.49,
+    "sma_20": 117.16,
+    "sma_50": 138.88,
+    "sma_200": 110.26,
+    "dist_sma200_pct": -11.62,
     "high_52w": 187.65,
     "low_52w": 57.82,
-    "volume_ratio_20": 1.1
+    "volume_ratio_20": 0.72
    },
    "patterns": [
     {
@@ -8092,7 +8100,7 @@
      "kind": "chart",
      "direction": "bearish",
      "strength": 0.75,
-     "bars_ago": 11,
+     "bars_ago": 12,
      "status": "confirmed",
      "levels": {
       "neckline": 122.24,
@@ -8105,26 +8113,36 @@
      "name": "support_breakdown",
      "kind": "chart",
      "direction": "bearish",
-     "strength": 0.7,
-     "bars_ago": 0,
+     "strength": 0.56,
+     "bars_ago": 1,
      "status": "confirmed",
      "levels": {
       "level": 99.803
      },
      "note": "closed below a 8-touch support"
+    },
+    {
+     "name": "doji",
+     "kind": "candlestick",
+     "direction": "neutral",
+     "strength": 0.3,
+     "bars_ago": 0,
+     "status": "confirmed",
+     "levels": {},
+     "note": "open ~ close: indecision"
     }
    ]
   },
   "XLM-USD": {
    "symbol": "XLM-USD",
-   "as_of": "2026-11-20T00:00:00+00:00",
-   "close": 0.12721,
-   "score": -0.376,
+   "as_of": "2026-11-21T00:00:00+00:00",
+   "close": 0.12885,
+   "score": 0.225,
    "trend": {
     "direction": "bearish",
-    "change_pct": -41.36,
-    "r2": 0.95,
-    "quality": 0.95,
+    "change_pct": -41.96,
+    "r2": 0.953,
+    "quality": 0.953,
     "ma_alignment": "bearish stack (price < SMA20 < SMA50 < SMA200)"
    },
    "support": [],
@@ -8132,40 +8150,40 @@
     {
      "price": 0.13032,
      "touches": 1,
-     "bars_since_touch": 5
+     "bars_since_touch": 6
     },
     {
      "price": 0.1395,
      "touches": 1,
-     "bars_since_touch": 181
+     "bars_since_touch": 182
     },
     {
      "price": 0.15512,
      "touches": 6,
-     "bars_since_touch": 21
+     "bars_since_touch": 22
     }
    ],
    "indicators": {
-    "rsi_14": 27.9,
-    "atr_pct": 6.94,
-    "sma_20": 0.14755,
-    "sma_50": 0.17091,
-    "sma_200": 0.18136,
-    "dist_sma200_pct": -29.86,
+    "rsi_14": 30.0,
+    "atr_pct": 6.9,
+    "sma_20": 0.14559,
+    "sma_50": 0.16918,
+    "sma_200": 0.1812,
+    "dist_sma200_pct": -28.89,
     "high_52w": 0.29794,
-    "low_52w": 0.12455,
-    "volume_ratio_20": 1.24
+    "low_52w": 0.12,
+    "volume_ratio_20": 1.02
    },
    "patterns": [
     {
-     "name": "new_52w_low",
-     "kind": "chart",
-     "direction": "bearish",
-     "strength": 0.45,
+     "name": "hammer",
+     "kind": "candlestick",
+     "direction": "bullish",
+     "strength": 0.55,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "lowest close of the last year"
+     "note": "long lower wick after a decline: buyers rejected lower prices"
     },
     {
      "name": "falling_wedge",
@@ -8175,8 +8193,8 @@
      "bars_ago": 0,
      "status": "forming",
      "levels": {
-      "upper": 0.13541,
-      "lower": 0.12274
+      "upper": 0.1351,
+      "lower": 0.12113
      },
      "note": "price coiling between converging trendlines"
     },
@@ -8184,8 +8202,8 @@
      "name": "death_cross",
      "kind": "indicator",
      "direction": "bearish",
-     "strength": 0.3,
-     "bars_ago": 6,
+     "strength": 0.267,
+     "bars_ago": 7,
      "status": "confirmed",
      "levels": {},
      "note": "SMA50 crossed below SMA200"
@@ -8194,21 +8212,11 @@
      "name": "rsi_oversold",
      "kind": "indicator",
      "direction": "bullish",
-     "strength": 0.285,
+     "strength": 0.25,
      "bars_ago": 0,
      "status": "confirmed",
      "levels": {},
-     "note": "RSI 28"
-    },
-    {
-     "name": "bearish_engulfing",
-     "kind": "candlestick",
-     "direction": "bearish",
-     "strength": 0.25,
-     "bars_ago": 2,
-     "status": "confirmed",
-     "levels": {},
-     "note": "bearish body engulfs the previous bullish body"
+     "note": "RSI 30"
     }
    ]
   }
