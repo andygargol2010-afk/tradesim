@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-22T00:28:53.390233+00:00",
+ "generated_at": "2026-11-22T07:20:33.626355+00:00",
  "window": [
-  "2026-11-14",
-  "2026-12-21"
+  "2026-11-15",
+  "2026-12-22"
  ],
  "events": [
   {
@@ -438,6 +438,60 @@
    "id": "8fcbf309a7f9"
   },
   {
+   "date": "2026-11-23",
+   "title": "Flash Manufacturing PMI",
+   "category": "growth",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-23T14:45:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "54.5",
+   "previous": "56.0",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "954099b7f3e2"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Flash Services PMI",
+   "category": "growth",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-23T14:45:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "55.6",
+   "previous": "57.9",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "a521206cf43c"
+  },
+  {
+   "date": "2026-11-24",
+   "title": "CB Consumer Confidence",
+   "category": "consumer",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-24T15:00:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "92.1",
+   "previous": "91.7",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "35fb29c667b5"
+  },
+  {
    "date": "2026-11-24",
    "title": "JNJ ex-dividend date",
    "category": "dividend",
@@ -475,6 +529,78 @@
   },
   {
    "date": "2026-11-25",
+   "title": "Core PCE Price Index m/m",
+   "category": "inflation",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-25T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "0.3%",
+   "previous": "0.3%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "141fe0a3b110"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Prelim GDP q/q",
+   "category": "growth",
+   "importance": "high",
+   "country": "US",
+   "when": "2026-11-25T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "3.5%",
+   "previous": "3.4%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "6bb9fd88a656"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Prelim GDP Price Index q/q",
+   "category": "inflation",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-25T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "2.3%",
+   "previous": "2.3%",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "5475ceabd880"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Unemployment Claims",
+   "category": "employment",
+   "importance": "medium",
+   "country": "US",
+   "when": "2026-11-25T13:30:00+00:00",
+   "symbols": [
+    "*all"
+   ],
+   "forecast": "201K",
+   "previous": "203K",
+   "actual": null,
+   "confirmed": true,
+   "source": "forexfactory",
+   "notes": "",
+   "id": "a2d1494e1b47"
+  },
+  {
+   "date": "2026-11-25",
    "title": "DE quarterly earnings",
    "category": "earnings",
    "importance": "high",
@@ -493,24 +619,6 @@
   },
   {
    "date": "2026-11-26",
-   "title": "GDP (second estimate)",
-   "category": "growth",
-   "importance": "medium",
-   "country": "US",
-   "when": "2026-11-26T13:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "f902904c9a73"
-  },
-  {
-   "date": "2026-11-26",
    "title": "US stock market holiday (NYSE/Nasdaq closed)",
    "category": "holiday",
    "importance": "medium",
@@ -526,24 +634,6 @@
    "source": "exchange",
    "notes": "no stock trading; crypto keeps trading",
    "id": "961481a591b8"
-  },
-  {
-   "date": "2026-11-27",
-   "title": "PCE inflation / personal income and outlays",
-   "category": "inflation",
-   "importance": "high",
-   "country": "US",
-   "when": "2026-11-27T13:30:00+00:00",
-   "symbols": [
-    "*all"
-   ],
-   "forecast": null,
-   "previous": null,
-   "actual": null,
-   "confirmed": false,
-   "source": "rules",
-   "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
-   "id": "bd4083e90a2b"
   },
   {
    "date": "2026-11-27",
@@ -616,6 +706,24 @@
    "source": "yahoo",
    "notes": "buyers from this date do not receive the next dividend",
    "id": "542a99ed83b4"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "NKE ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "NKE"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "2f73d494fbb3"
   },
   {
    "date": "2026-12-01",
@@ -743,6 +851,24 @@
    "source": "rules",
    "notes": "estimated date (BLS/BEA usual schedule); confirmed when the week's calendar lists it",
    "id": "c1cf96a570df"
+  },
+  {
+   "date": "2026-12-03",
+   "title": "HD ex-dividend date",
+   "category": "dividend",
+   "importance": "low",
+   "country": "US",
+   "when": null,
+   "symbols": [
+    "HD"
+   ],
+   "forecast": null,
+   "previous": null,
+   "actual": null,
+   "confirmed": true,
+   "source": "yahoo",
+   "notes": "buyers from this date do not receive the next dividend",
+   "id": "d941f2688ecc"
   },
   {
    "date": "2026-12-03",
@@ -1218,8 +1344,8 @@
  ],
  "sources": {
   "fomc": "federalreserve.gov",
-  "forexfactory": "14 events this week",
-  "companies": "35 earnings/dividend events"
+  "forexfactory": "7 events this week",
+  "companies": "37 earnings/dividend events"
  },
  "errors": {},
  "researched_at": null
