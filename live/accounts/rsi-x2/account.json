@@ -80,7 +80,7 @@
     "opened_at": "2026-11-14T15:42:17.579000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05039050",
-    "mark_price": "72.285",
+    "mark_price": "76.345",
     "entry_order_id": "O00000009"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-11-14T15:42:17.865000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05042553",
-    "mark_price": "0.9384",
+    "mark_price": "0.9908",
     "entry_order_id": "O00000010"
    }
   ],
@@ -5741,6 +5741,13 @@
     "57.89028075018600000000000000000000",
     "39.301790323368000",
     "39.301790323368000"
+   ],
+   [
+    "2026-11-23T14:59:37.154921+00:00",
+    "99.39313799420200000000000000000000",
+    "57.89028075018600000000000000000000",
+    "41.502857244016000",
+    "41.502857244016000"
    ]
   ],
   "total_fees": "0.10195639",
@@ -5969,14 +5976,14 @@
    "limit_price": null,
    "stop_price": "62.8089",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-14T15:42:55.623536+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-23T14:59:37.487634+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-SOL-USD-11"
@@ -6001,13 +6008,34 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-XRP-USD-12"
+  },
+  {
+   "id": "O00000013",
+   "symbol": "SOL-USD",
+   "side": "sell",
+   "quantity": "0.27367548",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "64.3596",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-23T14:59:37.487687+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-SOL-USD-13"
   }
  ],
  "open_order_ids": [
-  "O00000011",
-  "O00000012"
+  "O00000012",
+  "O00000013"
  ],
- "order_id_counter": 13,
+ "order_id_counter": 14,
  "fill_id_counter": 7,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -6018,12 +6046,12 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-23T12:21:58.717443+00:00",
+ "last_sync": "2026-11-23T14:59:37.154921+00:00",
  "bankrupt": false,
  "path_checked": {
   "BAC": "2026-11-18T21:00:00+00:00",
   "GOOGL": "2026-11-19T21:00:00+00:00",
-  "SOL-USD": "2026-11-23T12:20:00+00:00",
-  "XRP-USD": "2026-11-23T12:20:00+00:00"
+  "SOL-USD": "2026-11-23T14:55:00+00:00",
+  "XRP-USD": "2026-11-23T14:55:00+00:00"
  }
 }
