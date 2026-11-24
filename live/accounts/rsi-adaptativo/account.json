@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "79.52385429519630000000000000000000",
+  "cash": "61.47353722413881200000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -102,7 +102,7 @@
     "opened_at": "2026-10-26T16:01:23.278837+00:00",
     "realized_pnl": "0",
     "fees_paid": "0",
-    "mark_price": "22.3",
+    "mark_price": "22.299999237060547",
     "entry_order_id": "O00000005"
    },
    {
@@ -192,6 +192,28 @@
     "fees_paid": "0.04459814",
     "mark_price": "58639.155",
     "entry_order_id": null
+   },
+   {
+    "symbol": "DOGE-USD",
+    "quantity": "159.59550488",
+    "avg_price": "0.0564001",
+    "open_fees": "0.02250301",
+    "opened_at": "2026-11-24T02:33:45.523000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.02250301",
+    "mark_price": "0.05645",
+    "entry_order_id": "O00000086"
+   },
+   {
+    "symbol": "DOT-USD",
+    "quantity": "13.32164725",
+    "avg_price": "0.6759",
+    "open_fees": "0.02251025",
+    "opened_at": "2026-11-24T02:33:50.779000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.02251025",
+    "mark_price": "0.67615",
+    "entry_order_id": "O00000087"
    }
   ],
   "fills": [
@@ -656,6 +678,34 @@
     "slippage_cost": "0.0004272",
     "realized_pnl": "-1.110290201",
     "timestamp": "2026-11-21T03:35:00+00:00"
+   },
+   {
+    "id": "F00000034",
+    "order_id": "O00000086",
+    "symbol": "DOGE-USD",
+    "side": "buy",
+    "quantity": "159.59550488",
+    "price": "0.0564001",
+    "notional": "9.00120243",
+    "fee": "0.02250301",
+    "liquidity": "taker",
+    "slippage_cost": "-0.00158",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-24T02:33:45.523000+00:00"
+   },
+   {
+    "id": "F00000035",
+    "order_id": "O00000087",
+    "symbol": "DOT-USD",
+    "side": "buy",
+    "quantity": "13.32164725",
+    "price": "0.6759",
+    "notional": "9.00410138",
+    "fee": "0.02251025",
+    "liquidity": "taker",
+    "slippage_cost": "-0.00666082",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-24T02:33:50.779000+00:00"
    }
   ],
   "closed_trades": [
@@ -6519,10 +6569,31 @@
     "79.52385429519630000000000000000000",
     "10.5837681228000000",
     "10.5837681228000000"
+   ],
+   [
+    "2026-11-24T02:34:02.350635+00:00",
+    "90.10762205589879944897449200000000",
+    "79.52385429519630000000000000000000",
+    "10.583767760702499448974492",
+    "10.583767760702499448974492"
+   ],
+   [
+    "2026-11-24T02:34:39.671613+00:00",
+    "90.10762205589879944897449200000000",
+    "79.52385429519630000000000000000000",
+    "10.583767760702499448974492",
+    "10.583767760702499448974492"
+   ],
+   [
+    "2026-11-24T02:34:39.673928+00:00",
+    "90.07390302340481144897449200000000",
+    "61.47353722413881200000000000000000",
+    "28.600365799265999448974492",
+    "28.600365799265999448974492"
    ]
   ],
-  "total_fees": "0.19300889",
-  "total_slippage": "0.12614763",
+  "total_fees": "0.23802215",
+  "total_slippage": "0.11790681",
   "total_financing": "0E-47",
   "peak_equity": "101.0701900319420356153856120000000",
   "max_drawdown": "0.1094745033991318110701867132980743"
@@ -8312,13 +8383,99 @@
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-BTC-USD-85"
+  },
+  {
+   "id": "O00000086",
+   "symbol": "DOGE-USD",
+   "side": "buy",
+   "quantity": "159.59550488",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "159.59550488",
+   "avg_fill_price": "0.0564001",
+   "fees_paid": "0.02250301",
+   "triggered": false,
+   "created_at": "2026-11-24T02:34:39.673717+00:00",
+   "updated_at": "2026-11-24T02:33:45.523000+00:00",
+   "reject_reason": null,
+   "tag": "RSI 23.2",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000087",
+   "symbol": "DOT-USD",
+   "side": "buy",
+   "quantity": "13.32164725",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "13.32164725",
+   "avg_fill_price": "0.6759",
+   "fees_paid": "0.02251025",
+   "triggered": false,
+   "created_at": "2026-11-24T02:34:39.673857+00:00",
+   "updated_at": "2026-11-24T02:33:50.779000+00:00",
+   "reject_reason": null,
+   "tag": "RSI 22.1",
+   "reduce_only": false,
+   "oco_group": null
+  },
+  {
+   "id": "O00000088",
+   "symbol": "DOGE-USD",
+   "side": "sell",
+   "quantity": "159.59550488",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "0.0463257",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-24T02:34:39.937614+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-DOGE-USD-88"
+  },
+  {
+   "id": "O00000089",
+   "symbol": "DOT-USD",
+   "side": "sell",
+   "quantity": "13.32164725",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "0.546632",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-24T02:34:39.939062+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-DOT-USD-89"
   }
  ],
  "open_order_ids": [
-  "O00000081"
+  "O00000081",
+  "O00000088",
+  "O00000089"
  ],
- "order_id_counter": 86,
- "fill_id_counter": 34,
+ "order_id_counter": 90,
+ "fill_id_counter": 36,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -8328,7 +8485,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-24T02:21:59.458506+00:00",
+ "last_sync": "2026-11-24T02:34:39.673928+00:00",
  "bankrupt": false,
  "path_checked": {
   "FXI": "2026-11-05T15:40:00+00:00",
