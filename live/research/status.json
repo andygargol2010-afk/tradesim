@@ -1,6 +1,8 @@
 {
- "started_at": "2026-11-24T10:20:47.006955+00:00",
- "errors": {},
+ "started_at": "2026-11-24T11:20:44.104110+00:00",
+ "errors": {
+  "news:google:inflation": "https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+United+States+when%3A2d&hl=en-US&gl=US&ceid=US:en: HTTP 429 for https://news.google.com/rss/search?q=CPI+OR+PCE+OR+inflation+report+"
+ },
  "llm": "local",
  "engines": [
   "local (gratis, sin IA)"
@@ -9,17 +11,17 @@
   "indicators": 23
  },
  "calendar": {
-  "events": 69,
+  "events": 68,
   "researched_at": null
  },
  "news_engines": {
-  "local": 75
+  "local": 105
  },
  "news": {
-  "fetched": 1626,
-  "new": 50,
-  "stored": 9874,
-  "triaged": 50,
+  "fetched": 1621,
+  "new": 80,
+  "stored": 9842,
+  "triaged": 80,
   "deep_analyses": 25,
   "untriaged_backlog": 0
  },
@@ -30,7 +32,7 @@
   "by_model": {},
   "cost_usd_estimate": 0.0
  },
- "duration_s": 47.9,
+ "duration_s": 46.6,
  "llm_usage_total": {
   "by_model": {},
   "cost_usd_estimate": 0.0
