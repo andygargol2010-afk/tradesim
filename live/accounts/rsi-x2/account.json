@@ -80,7 +80,7 @@
     "opened_at": "2026-11-14T15:42:17.579000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05039050",
-    "mark_price": "72.185",
+    "mark_price": "72.28",
     "entry_order_id": "O00000009"
    },
    {
@@ -91,7 +91,7 @@
     "opened_at": "2026-11-14T15:42:17.865000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.05042553",
-    "mark_price": "0.957",
+    "mark_price": "0.95805",
     "entry_order_id": "O00000010"
    },
    {
@@ -102,7 +102,7 @@
     "opened_at": "2026-11-27T00:00:34.987000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.04850026",
-    "mark_price": "61242.465",
+    "mark_price": "61377.255000000005",
     "entry_order_id": "O00000014"
    }
   ],
@@ -6312,6 +6312,13 @@
     "38.44167589818600000000000000000000",
     "59.280947549340000",
     "59.280947549340000"
+   ],
+   [
+    "2026-11-27T02:24:35.854681+00:00",
+    "97.81364443289700160180000000000000",
+    "38.44167589818600000000000000000000",
+    "59.37196853471100160180",
+    "59.37196853471100160180"
    ]
   ],
   "total_fees": "0.15045665",
@@ -6624,25 +6631,46 @@
    "limit_price": null,
    "stop_price": "51945.6",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-27T00:01:11.280036+00:00",
+   "updated_at": "2026-11-27T02:24:36.394246+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-BTC-USD-15"
+  },
+  {
+   "id": "O00000016",
+   "symbol": "BTC-USD",
+   "side": "sell",
+   "quantity": "0.00032036",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "52822.7",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-27T02:24:36.394322+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 2.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-BTC-USD-15"
+   "oco_group": "exits-BTC-USD-16"
   }
  ],
  "open_order_ids": [
   "O00000012",
   "O00000013",
-  "O00000015"
+  "O00000016"
  ],
- "order_id_counter": 16,
+ "order_id_counter": 17,
  "fill_id_counter": 8,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -6653,13 +6681,13 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-27T02:16:25.894119+00:00",
+ "last_sync": "2026-11-27T02:24:35.854681+00:00",
  "bankrupt": false,
  "path_checked": {
   "BAC": "2026-11-18T21:00:00+00:00",
   "GOOGL": "2026-11-19T21:00:00+00:00",
-  "SOL-USD": "2026-11-27T02:15:00+00:00",
-  "XRP-USD": "2026-11-27T02:15:00+00:00",
-  "BTC-USD": "2026-11-27T02:15:00+00:00"
+  "SOL-USD": "2026-11-27T02:20:00+00:00",
+  "XRP-USD": "2026-11-27T02:20:00+00:00",
+  "BTC-USD": "2026-11-27T02:20:00+00:00"
  }
 }
