@@ -9373,6 +9373,27 @@
     "87.08093624316770000000000000000000",
     "5.989626856818603515625",
     "5.989626856818603515625"
+   ],
+   [
+    "2026-11-27T00:00:47.006144+00:00",
+    "93.07056309998630351562500000000000",
+    "87.08093624316770000000000000000000",
+    "5.989626856818603515625",
+    "5.989626856818603515625"
+   ],
+   [
+    "2026-11-27T00:01:07.728110+00:00",
+    "93.07056309998630351562500000000000",
+    "87.08093624316770000000000000000000",
+    "5.989626856818603515625",
+    "5.989626856818603515625"
+   ],
+   [
+    "2026-11-27T00:01:07.729102+00:00",
+    "93.07056309998630351562500000000000",
+    "87.08093624316770000000000000000000",
+    "5.989626856818603515625",
+    "5.989626856818603515625"
    ]
   ],
   "total_fees": "0.11623280",
@@ -20668,14 +20689,14 @@
    "limit_price": null,
    "stop_price": "1303.49",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-22T21:14:55.771820+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-27T00:01:07.728873+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.17: t\u00e9cnico +0.20, noticias -0.22 (5 relevantes), tendencia alcista. Titular: \u00abEli Lilly's Obesity Pipelin",
    "reduce_only": true,
    "oco_group": "exits-LLY-538"
@@ -20689,24 +20710,66 @@
    "limit_price": "1458.96",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-22T21:14:55.771894+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-27T00:01:07.728930+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.17: t\u00e9cnico +0.20, noticias -0.22 (5 relevantes), tendencia alcista. Titular: \u00abEli Lilly's Obesity Pipelin",
    "reduce_only": true,
    "oco_group": "exits-LLY-538"
+  },
+  {
+   "id": "O00000540",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "1310.25",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-27T00:01:07.728982+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.21 (envolvente alcista), noticias -0.05 (22 relevantes), tendencia alcista. Titular: \u00abEli L",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-540"
+  },
+  {
+   "id": "O00000541",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "limit",
+   "limit_price": "1556.16",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-27T00:01:07.729056+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.21 (envolvente alcista), noticias -0.05 (22 relevantes), tendencia alcista. Titular: \u00abEli L",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-540"
   }
  ],
  "open_order_ids": [
-  "O00000538",
-  "O00000539"
+  "O00000540",
+  "O00000541"
  ],
- "order_id_counter": 540,
+ "order_id_counter": 542,
  "fill_id_counter": 138,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -20717,7 +20780,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-26T23:22:11.208624+00:00",
+ "last_sync": "2026-11-27T00:01:07.729102+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-18T21:00:00+00:00",

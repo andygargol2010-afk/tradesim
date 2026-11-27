@@ -40,7 +40,7 @@
  },
  "portfolio": {
   "initial_cash": "100",
-  "cash": "55.13239899842000000000000000000000",
+  "cash": "53.04523757242000000000000000000000",
   "margin": {
    "max_leverage": "1",
    "maintenance_margin": "0.25",
@@ -223,7 +223,7 @@
     "opened_at": "2026-11-12T15:42:01.894000+00:00",
     "realized_pnl": "-0.00835425591",
     "fees_paid": "0.01452268",
-    "mark_price": "9.254000000000001",
+    "mark_price": "9.2675",
     "entry_order_id": "O00000019"
    },
    {
@@ -256,7 +256,7 @@
     "opened_at": "2026-11-17T15:42:04.371000+00:00",
     "realized_pnl": "0",
     "fees_paid": "0.00547424",
-    "mark_price": "70.89",
+    "mark_price": "70.955",
     "entry_order_id": "O00000025"
    },
    {
@@ -280,6 +280,17 @@
     "fees_paid": "0",
     "mark_price": "43.61000061035156",
     "entry_order_id": "O00000027"
+   },
+   {
+    "symbol": "BTC-USD",
+    "quantity": "0.00003438",
+    "avg_price": "60557.2",
+    "open_fees": "0.00520489",
+    "opened_at": "2026-11-27T00:00:34.987000+00:00",
+    "realized_pnl": "0",
+    "fees_paid": "0.00520489",
+    "mark_price": "60500.175",
+    "entry_order_id": "O00000028"
    }
   ],
   "fills": [
@@ -660,6 +671,20 @@
     "slippage_cost": "0.00070957",
     "realized_pnl": "0",
     "timestamp": "2026-11-17T15:41:46.922450+00:00"
+   },
+   {
+    "id": "F00000028",
+    "order_id": "O00000028",
+    "symbol": "BTC-USD",
+    "side": "buy",
+    "quantity": "0.00003438",
+    "price": "60557.2",
+    "notional": "2.08195654",
+    "fee": "0.00520489",
+    "liquidity": "taker",
+    "slippage_cost": "0.00196069",
+    "realized_pnl": "0",
+    "timestamp": "2026-11-27T00:00:34.987000+00:00"
    }
   ],
   "closed_trades": [
@@ -6628,10 +6653,24 @@
     "55.13239899842000000000000000000000",
     "42.249628303353362170874708",
     "42.249628303353362170874708"
+   ],
+   [
+    "2026-11-27T00:01:13.654571+00:00",
+    "97.38416589068336215816254800000000",
+    "55.13239899842000000000000000000000",
+    "42.251766892263362158162548",
+    "42.251766892263362158162548"
+   ],
+   [
+    "2026-11-27T00:01:13.837344+00:00",
+    "97.37700048118336215816254800000000",
+    "53.04523757242000000000000000000000",
+    "44.331762908763362158162548",
+    "44.331762908763362158162548"
    ]
   ],
-  "total_fees": "0.03048945",
-  "total_slippage": "0.01385521",
+  "total_fees": "0.03569434",
+  "total_slippage": "0.01581590",
   "total_financing": "0E-48",
   "peak_equity": "100.0837805049300000000000000000000",
   "max_drawdown": "0.04630965528400328435579245338485134"
@@ -7203,11 +7242,32 @@
    "tag": "Hedge: m\u00e1s peso",
    "reduce_only": false,
    "oco_group": null
+  },
+  {
+   "id": "O00000028",
+   "symbol": "BTC-USD",
+   "side": "buy",
+   "quantity": "0.00003438",
+   "order_type": "market",
+   "limit_price": null,
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "filled",
+   "filled_quantity": "0.00003438",
+   "avg_fill_price": "60557.2",
+   "fees_paid": "0.00520489",
+   "triggered": false,
+   "created_at": "2026-11-27T00:01:13.837214+00:00",
+   "updated_at": "2026-11-27T00:00:34.987000+00:00",
+   "reject_reason": null,
+   "tag": "Hedge: m\u00e1s peso",
+   "reduce_only": false,
+   "oco_group": null
   }
  ],
  "open_order_ids": [],
- "order_id_counter": 28,
- "fill_id_counter": 28,
+ "order_id_counter": 29,
+ "fill_id_counter": 29,
  "rng_exec": {
   "bit_generator": "PCG64",
   "state": {
@@ -7217,7 +7277,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-26T23:22:11.790098+00:00",
+ "last_sync": "2026-11-27T00:01:13.837344+00:00",
  "bankrupt": false,
  "path_checked": {}
 }
