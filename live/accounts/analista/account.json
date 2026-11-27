@@ -9513,6 +9513,27 @@
     "87.08093624316770000000000000000000",
     "5.9903153579468994140625",
     "5.9903153579468994140625"
+   ],
+   [
+    "2026-11-27T23:42:32.073090+00:00",
+    "93.07125160111459941406250000000000",
+    "87.08093624316770000000000000000000",
+    "5.9903153579468994140625",
+    "5.9903153579468994140625"
+   ],
+   [
+    "2026-11-27T23:42:46.072145+00:00",
+    "93.07125160111459941406250000000000",
+    "87.08093624316770000000000000000000",
+    "5.9903153579468994140625",
+    "5.9903153579468994140625"
+   ],
+   [
+    "2026-11-27T23:42:46.072835+00:00",
+    "93.07125160111459941406250000000000",
+    "87.08093624316770000000000000000000",
+    "5.9903153579468994140625",
+    "5.9903153579468994140625"
    ]
   ],
   "total_fees": "0.11623280",
@@ -20850,14 +20871,14 @@
    "limit_price": null,
    "stop_price": "1310.25",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-27T00:01:07.728982+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-27T23:42:46.072660+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.21 (envolvente alcista), noticias -0.05 (22 relevantes), tendencia alcista. Titular: \u00abEli L",
    "reduce_only": true,
    "oco_group": "exits-LLY-540"
@@ -20871,24 +20892,66 @@
    "limit_price": "1556.16",
    "stop_price": null,
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-27T00:01:07.729056+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-27T23:42:46.072720+00:00",
+   "reject_reason": "exits replaced",
    "tag": "take-profit: Puntuaci\u00f3n +0.23: t\u00e9cnico +0.21 (envolvente alcista), noticias -0.05 (22 relevantes), tendencia alcista. Titular: \u00abEli L",
    "reduce_only": true,
    "oco_group": "exits-LLY-540"
+  },
+  {
+   "id": "O00000542",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "1310.25",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-27T23:42:46.072750+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: Puntuaci\u00f3n +0.24: t\u00e9cnico +0.21 (envolvente alcista), noticias +0.01 (20 relevantes), tendencia alcista. Titular: \u00abWhat ",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-542"
+  },
+  {
+   "id": "O00000543",
+   "symbol": "LLY",
+   "side": "sell",
+   "quantity": "0.004302213",
+   "order_type": "limit",
+   "limit_price": "1556.64",
+   "stop_price": null,
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-27T23:42:46.072804+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "take-profit: Puntuaci\u00f3n +0.24: t\u00e9cnico +0.21 (envolvente alcista), noticias +0.01 (20 relevantes), tendencia alcista. Titular: \u00abWhat ",
+   "reduce_only": true,
+   "oco_group": "exits-LLY-542"
   }
  ],
  "open_order_ids": [
-  "O00000540",
-  "O00000541"
+  "O00000542",
+  "O00000543"
  ],
- "order_id_counter": 542,
+ "order_id_counter": 544,
  "fill_id_counter": 138,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -20899,7 +20962,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-27T23:38:46.916171+00:00",
+ "last_sync": "2026-11-27T23:42:46.072835+00:00",
  "bankrupt": false,
  "path_checked": {
   "ABBV": "2026-11-18T21:00:00+00:00",
