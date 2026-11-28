@@ -7519,6 +7519,13 @@
     "10.87021566655000000000000000000000",
     "83.07103954331341484377550",
     "83.07103954331341484377550"
+   ],
+   [
+    "2026-11-28T00:22:41.629720+00:00",
+    "93.94125520986341484377550000000000",
+    "10.87021566655000000000000000000000",
+    "83.07103954331341484377550",
+    "83.07103954331341484377550"
    ]
   ],
   "total_fees": "0.04085635",
@@ -12283,14 +12290,14 @@
    "limit_price": null,
    "stop_price": "600.13",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-27T15:21:28.228352+00:00",
-   "updated_at": null,
-   "reject_reason": null,
+   "updated_at": "2026-11-28T00:22:41.859972+00:00",
+   "reject_reason": "exits replaced",
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
    "oco_group": "exits-MA-227"
@@ -12304,17 +12311,59 @@
    "limit_price": null,
    "stop_price": "120.46",
    "time_in_force": "gtc",
-   "status": "new",
+   "status": "cancelled",
    "filled_quantity": "0",
    "avg_fill_price": "0",
    "fees_paid": "0",
    "triggered": false,
    "created_at": "2026-11-27T21:21:44.873573+00:00",
+   "updated_at": "2026-11-28T00:22:41.853327+00:00",
+   "reject_reason": "exits replaced",
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-WMT-228"
+  },
+  {
+   "id": "O00000229",
+   "symbol": "WMT",
+   "side": "sell",
+   "quantity": "0.083433475",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "121.49",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-28T00:22:41.853386+00:00",
    "updated_at": null,
    "reject_reason": null,
    "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
    "reduce_only": true,
-   "oco_group": "exits-WMT-228"
+   "oco_group": "exits-WMT-229"
+  },
+  {
+   "id": "O00000230",
+   "symbol": "MA",
+   "side": "sell",
+   "quantity": "0.011130998",
+   "order_type": "stop",
+   "limit_price": null,
+   "stop_price": "604.72",
+   "time_in_force": "gtc",
+   "status": "new",
+   "filled_quantity": "0",
+   "avg_fill_price": "0",
+   "fees_paid": "0",
+   "triggered": false,
+   "created_at": "2026-11-28T00:22:41.860039+00:00",
+   "updated_at": null,
+   "reject_reason": null,
+   "tag": "stop-loss: 4.5 ATR, din\u00e1mico, autom\u00e1tico",
+   "reduce_only": true,
+   "oco_group": "exits-MA-230"
   }
  ],
  "open_order_ids": [
@@ -12327,10 +12376,10 @@
   "O00000220",
   "O00000225",
   "O00000226",
-  "O00000227",
-  "O00000228"
+  "O00000229",
+  "O00000230"
  ],
- "order_id_counter": 229,
+ "order_id_counter": 231,
  "fill_id_counter": 52,
  "rng_exec": {
   "bit_generator": "PCG64",
@@ -12341,7 +12390,7 @@
   "has_uint32": 0,
   "uinteger": 0
  },
- "last_sync": "2026-11-27T23:42:48.959106+00:00",
+ "last_sync": "2026-11-28T00:22:41.629720+00:00",
  "bankrupt": false,
  "path_checked": {
   "AAVE-USD": "2026-10-30T15:45:00+00:00",

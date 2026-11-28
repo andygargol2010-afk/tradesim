@@ -1,12 +1,12 @@
 # Diario de la simulación
 
-_Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente primero. Cada agente escribe su propia parte al decidir; la situación del mercado se compila de los datos._
+_Actualizado: 2026-11-28 00:22 UTC. Una entrada por día, la más reciente primero. Cada agente escribe su propia parte al decidir; la situación del mercado se compila de los datos._
 
 ## Patrones acumulados: qué hace cada agente según la situación
 
 | Agente | Situación | Días | Días con operaciones | Compras | Ventas | Resultado medio del día |
 |---|---|---:|---:|---:|---:|---:|
-| Aprendiz lineal | normal · alcista | 5 | 0 | 0 | 0 | +0,00 % |
+| Aprendiz lineal | normal · alcista | 6 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz lineal | normal · bajista | 2 | 0 | 0 | 0 | -0,41 % |
 | Aprendiz lineal | normal · lateral | 7 | 2 | 2 | 1 | -0,06 % |
 | Aprendiz lineal | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -18,7 +18,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Aprendiz lineal | tensión · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz lineal | tensión · bajista | 4 | 1 | 1 | 1 | -0,16 % |
 | Aprendiz lineal | tensión · lateral | 4 | 1 | 0 | 1 | -0,11 % |
-| RSI adaptativo | normal · alcista | 5 | 1 | 8 | 0 | +1,19 % |
+| RSI adaptativo | normal · alcista | 6 | 1 | 8 | 0 | +1,04 % |
 | RSI adaptativo | normal · bajista | 2 | 1 | 2 | 0 | -2,12 % |
 | RSI adaptativo | normal · lateral | 7 | 3 | 4 | 0 | -0,60 % |
 | RSI adaptativo | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,03 % |
@@ -30,7 +30,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | RSI adaptativo | tensión · alcista | 1 | 0 | 0 | 0 | -0,12 % |
 | RSI adaptativo | tensión · bajista | 4 | 2 | 3 | 1 | -1,60 % |
 | RSI adaptativo | tensión · lateral | 4 | 1 | 2 | 0 | -0,26 % |
-| Cruce de medias | normal · alcista | 5 | 4 | 26 | 8 | +0,74 % |
+| Cruce de medias | normal · alcista | 6 | 4 | 26 | 8 | +0,72 % |
 | Cruce de medias | normal · bajista | 2 | 1 | 1 | 1 | -0,56 % |
 | Cruce de medias | normal · lateral | 7 | 6 | 12 | 13 | -0,04 % |
 | Cruce de medias | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -42,7 +42,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Cruce de medias | tensión · alcista | 1 | 0 | 0 | 0 | +0,87 % |
 | Cruce de medias | tensión · bajista | 4 | 2 | 7 | 8 | -1,46 % |
 | Cruce de medias | tensión · lateral | 4 | 0 | 0 | 0 | +0,19 % |
-| Buy & hold | normal · alcista | 5 | 1 | 20 | 0 | +0,89 % |
+| Buy & hold | normal · alcista | 6 | 1 | 20 | 0 | +0,96 % |
 | Buy & hold | normal · bajista | 2 | 0 | 0 | 0 | -1,15 % |
 | Buy & hold | normal · lateral | 7 | 0 | 0 | 0 | -0,32 % |
 | Buy & hold | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,17 % |
@@ -54,7 +54,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Buy & hold | tensión · alcista | 1 | 0 | 0 | 0 | +3,19 % |
 | Buy & hold | tensión · bajista | 4 | 0 | 0 | 0 | -2,33 % |
 | Buy & hold | tensión · lateral | 4 | 0 | 0 | 0 | -0,35 % |
-| Analista discrecional | normal · alcista | 5 | 5 | 20 | 9 | +0,44 % |
+| Analista discrecional | normal · alcista | 6 | 5 | 20 | 9 | +0,37 % |
 | Analista discrecional | normal · bajista | 2 | 1 | 2 | 5 | -0,53 % |
 | Analista discrecional | normal · lateral | 7 | 6 | 32 | 14 | -0,34 % |
 | Analista discrecional | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -66,7 +66,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Analista discrecional | tensión · alcista | 1 | 0 | 0 | 0 | +0,12 % |
 | Analista discrecional | tensión · bajista | 4 | 2 | 10 | 5 | -0,95 % |
 | Analista discrecional | tensión · lateral | 4 | 0 | 0 | 0 | -0,37 % |
-| Inversor tradicional | normal · alcista | 5 | 1 | 15 | 0 | +0,95 % |
+| Inversor tradicional | normal · alcista | 6 | 1 | 15 | 0 | +0,99 % |
 | Inversor tradicional | normal · bajista | 2 | 0 | 0 | 0 | -1,31 % |
 | Inversor tradicional | normal · lateral | 7 | 0 | 0 | 0 | -0,37 % |
 | Inversor tradicional | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,05 % |
@@ -78,7 +78,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Inversor tradicional | tensión · alcista | 1 | 0 | 0 | 0 | +3,40 % |
 | Inversor tradicional | tensión · bajista | 4 | 0 | 0 | 0 | -2,13 % |
 | Inversor tradicional | tensión · lateral | 4 | 0 | 0 | 0 | -0,18 % |
-| Aprendiz ×2 | normal · alcista | 5 | 0 | 0 | 0 | +0,00 % |
+| Aprendiz ×2 | normal · alcista | 6 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz ×2 | normal · bajista | 2 | 0 | 0 | 0 | -0,60 % |
 | Aprendiz ×2 | normal · lateral | 7 | 2 | 2 | 1 | -0,08 % |
 | Aprendiz ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -90,7 +90,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Aprendiz ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Aprendiz ×2 | tensión · bajista | 4 | 1 | 2 | 1 | -0,33 % |
 | Aprendiz ×2 | tensión · lateral | 4 | 1 | 0 | 2 | -0,38 % |
-| RSI adaptativo ×2 | normal · alcista | 5 | 1 | 1 | 0 | +0,48 % |
+| RSI adaptativo ×2 | normal · alcista | 6 | 1 | 1 | 0 | +0,39 % |
 | RSI adaptativo ×2 | normal · bajista | 2 | 0 | 0 | 0 | -1,07 % |
 | RSI adaptativo ×2 | normal · lateral | 7 | 1 | 1 | 0 | -0,01 % |
 | RSI adaptativo ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,72 % |
@@ -102,7 +102,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | RSI adaptativo ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +3,09 % |
 | RSI adaptativo ×2 | tensión · bajista | 4 | 0 | 0 | 0 | -0,78 % |
 | RSI adaptativo ×2 | tensión · lateral | 4 | 0 | 0 | 0 | -0,90 % |
-| Cruce de medias ×2 | normal · alcista | 5 | 1 | 12 | 0 | +0,71 % |
+| Cruce de medias ×2 | normal · alcista | 6 | 1 | 12 | 0 | +0,65 % |
 | Cruce de medias ×2 | normal · bajista | 2 | 1 | 2 | 3 | -0,95 % |
 | Cruce de medias ×2 | normal · lateral | 7 | 3 | 6 | 12 | -0,35 % |
 | Cruce de medias ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -114,7 +114,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Cruce de medias ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +1,47 % |
 | Cruce de medias ×2 | tensión · bajista | 4 | 1 | 8 | 3 | -1,75 % |
 | Cruce de medias ×2 | tensión · lateral | 4 | 0 | 0 | 0 | -0,01 % |
-| Analista ×2 | normal · alcista | 5 | 5 | 12 | 6 | +0,28 % |
+| Analista ×2 | normal · alcista | 6 | 5 | 12 | 6 | +0,24 % |
 | Analista ×2 | normal · bajista | 2 | 1 | 1 | 3 | -0,35 % |
 | Analista ×2 | normal · lateral | 7 | 6 | 18 | 12 | -0,51 % |
 | Analista ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -126,7 +126,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Analista ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Analista ×2 | tensión · bajista | 4 | 2 | 6 | 1 | -1,23 % |
 | Analista ×2 | tensión · lateral | 4 | 0 | 0 | 0 | -0,23 % |
-| Inversor tradicional ×2 | normal · alcista | 5 | 1 | 11 | 0 | +0,86 % |
+| Inversor tradicional ×2 | normal · alcista | 6 | 1 | 11 | 0 | +0,93 % |
 | Inversor tradicional ×2 | normal · bajista | 2 | 0 | 0 | 0 | -1,54 % |
 | Inversor tradicional ×2 | normal · lateral | 7 | 0 | 0 | 0 | -0,41 % |
 | Inversor tradicional ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,05 % |
@@ -138,7 +138,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Inversor tradicional ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +3,54 % |
 | Inversor tradicional ×2 | tensión · bajista | 4 | 0 | 0 | 0 | -2,21 % |
 | Inversor tradicional ×2 | tensión · lateral | 4 | 0 | 0 | 0 | -0,40 % |
-| Combinador de señales | normal · alcista | 5 | 0 | 0 | 0 | +0,00 % |
+| Combinador de señales | normal · alcista | 6 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | normal · bajista | 2 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | normal · lateral | 7 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -150,7 +150,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Combinador de señales | tensión · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | tensión · bajista | 4 | 0 | 0 | 0 | +0,00 % |
 | Combinador de señales | tensión · lateral | 4 | 0 | 0 | 0 | +0,00 % |
-| Combinador ×2 | normal · alcista | 5 | 0 | 0 | 0 | +0,00 % |
+| Combinador ×2 | normal · alcista | 6 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | normal · bajista | 2 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | normal · lateral | 7 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -162,7 +162,7 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Combinador ×2 | tensión · alcista | 1 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | tensión · bajista | 4 | 0 | 0 | 0 | +0,00 % |
 | Combinador ×2 | tensión · lateral | 4 | 0 | 0 | 0 | +0,00 % |
-| Meta-agente (Hedge) | normal · alcista | 5 | 3 | 9 | 1 | +0,15 % |
+| Meta-agente (Hedge) | normal · alcista | 6 | 3 | 9 | 1 | +0,20 % |
 | Meta-agente (Hedge) | normal · bajista | 2 | 0 | 0 | 0 | -0,48 % |
 | Meta-agente (Hedge) | normal · lateral | 7 | 6 | 8 | 3 | -0,09 % |
 | Meta-agente (Hedge) | solo cripto · normal · alcista | 3 | 0 | 0 | 0 | +0,00 % |
@@ -174,6 +174,139 @@ _Actualizado: 2026-11-27 00:01 UTC. Una entrada por día, la más reciente prime
 | Meta-agente (Hedge) | tensión · alcista | 1 | 0 | 0 | 0 | +2,59 % |
 | Meta-agente (Hedge) | tensión · bajista | 4 | 1 | 4 | 1 | -0,82 % |
 | Meta-agente (Hedge) | tensión · lateral | 4 | 0 | 0 | 0 | -0,28 % |
+
+## 2026-11-27 · Viernes: normal · alcista
+
+**Situación (normal · alcista).** Sesión normal. SPY +1,62 %, QQQ +2,69 %, TLT -1,18 %, GLD +2,12 %, BTC-USD -1,05 %, ETH-USD -1,54 %. Bono EE. UU. 10 años 4.85, Diferencial high yield 3.77, VIX (volatilidad S&P 500) 23.81, Rendimiento 10 años (mercado) 4.94, Índice dólar (DXY) 104.01, Petróleo WTI 83.08, Oro (futuro) 3668.5.
+
+**Patrones del mercado**
+
+- **cruce alcista MACD (alcista)** (TLT, TIP, AAPL, META, TSLA, NFLX, BAC, WMT): aparece en 27 activos
+- **doji (neutral)** (EFA, USO, AAPL, AMZN, META, TSLA, AVGO, ORCL): aparece en 25 activos
+- **estrella de la mañana (alcista)** (SPY, IWM, DIA, XLF, EFA, VNQ, USO, AAPL): aparece en 22 activos
+- **barra interior (neutral)** (XLV, XLU, GOOGL, TSLA, XOM, LLY, PFE, PEP): aparece en 18 activos
+- **envolvente alcista (alcista)** (IWM, EWJ, NFLX, BAC, PEP, WMT, COST, WFC): aparece en 17 activos
+- **hueco alcista (alcista)** (QQQ, GLD, SLV, EEM, EWJ, FXI, META, CAT): aparece en 12 activos
+
+**Qué hizo cada agente**
+
+### Aprendiz lineal (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mis modelos (lineal 100%, árboles 0%, pesados por su acierto reciente) predicen qué activos batirán a la media en 5 días; compro los 6 mejores si la ventaja esperada paga 1.5 veces los costes. Hoy los más prometedores: AVGO (+0.10σ), AMD (+0.10σ), MS (+0.10σ).
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista», 31 de 98 activos tienen predicción positiva (media -0.02σ): soy prudente y solo entro en los mejores. Historial en días «normal · alcista»: operó 0 de 6 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 97.76 USD)
+
+### RSI adaptativo (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Compro cuando el RSI(21) baja de 25 (sobreventa) y vendo cuando supera 65 (sobrecompra), con un 10 % del capital por posición.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista» había 0 activos en sobreventa y 6 en sobrecompra (RSI medio 46). En las caídas aparecen más sobreventas, así que compro más. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +1,04 %).
+- **Resultado:** +0,31 % (valor 90.56 USD)
+
+### Cruce de medias (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mantengo a partes iguales los activos cuya media de 20 sesiones está por encima de la de 50: hoy 44 de 100. Entran en tendencia: GE, HYG, NKE, TIP, VNQ, WFC, XLF. Pierden la tendencia: ADBE, DIA, MRK, MSFT, SLB, USO, XLE, XOM.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista», el 44% del universo está en tendencia alcista: tengo una exposición intermedia. Historial en días «normal · alcista»: operó 4 de 6 (resultado medio +0,71 %).
+- **Resultado:** +0,61 % (valor 98.69 USD)
+
+### Buy & hold (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin tocarla.
+- **Por qué:** Compré todos los activos a partes iguales el primer día y los mantengo; nunca vendo.
+- **Según la situación:** La situación «solo cripto · normal · bajista» no cambia nada: soy la referencia pasiva con la que se compara a los demás. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +0,96 %).
+- **Resultado:** +1,32 % (valor 92.96 USD)
+
+### Analista discrecional (escrito por el agente)
+
+- **Qué hizo:** Dejé 2 órdenes esperando a que abra su mercado.
+- **Por qué:** Decisión del motor local (sin IA; pesos técnico/noticias/tendencia 0.55/0.30/0.15, fijos). Régimen neutral (VIX 23.8, diferencial high yield 3.77 pp); exposición máxima 76%. Más fuertes: ABBV +0.51, COST +0.41, HON +0.37, DIS +0.35. Más débiles: BCH-USD -0.51, DOT-USD -0.50, ADA-USD -0.49. Cambios: reducir LLY 6.4% -> 4.3%; comprar ABBV 0.0% -> 9.0%; stop 277.5 (soporte/ATR), objetivo 320.7; comprar COST 0.0% -> 7.2%; stop 1054 (soporte/ATR), objetivo 1186; comprar HON 0.0% -> 6.5%; stop 220.1 (soporte/ATR), objetivo 245.3; comprar DIS 0.0% -> 6.3%; stop 122.6 (soporte/ATR), objetivo 136.6; comprar LIN 0.0% -> 6.2%; stop 517.5 (soporte/ATR), objetivo 562.7; comprar PG 0.0% -> 6.1%; stop 169.
+- **Según la situación:** Leo un régimen neutral con el mercado «solo cripto · normal · bajista»: exposición objetivo 72% del capital. Historial en días «normal · alcista»: operó 5 de 6 (resultado medio +0,37 %).
+- **Resultado:** +0,00 % (valor 93.07 USD)
+
+### Inversor tradicional (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin cambios.
+- **Por qué:** Ninguna clase de activo salió de su banda ni empezó trimestre: no toqué la cartera. Mis acciones de calidad: XOM, MU, MRK, KO, DE, V, LIN, SBUX.
+- **Según la situación:** Con la bolsa cerrada no opero: un inversor no usa las sesiones de fin de semana. No reacciono a la situación «solo cripto · normal · bajista»: solo rebalanceo cada trimestre o si una clase se desvía de su peso. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +0,99 %).
+- **Resultado:** +1,19 % (valor 94.75 USD)
+
+### Aprendiz ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mis modelos (lineal 100%, árboles 0%, pesados por su acierto reciente) predicen qué activos batirán a la media en 5 días; compro los 3 mejores si la ventaja esperada paga 1.5 veces los costes. Hoy los más prometedores: AVGO (+0.10σ), AMD (+0.10σ), MS (+0.10σ).
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista», 31 de 98 activos tienen predicción positiva (media -0.02σ): soy prudente y solo entro en los mejores. Historial en días «normal · alcista»: operó 0 de 6 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 95.47 USD)
+
+### RSI adaptativo ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Compro cuando el RSI(14) baja de 30 (sobreventa) y vendo cuando supera 75 (sobrecompra), con un 20 % del capital por posición.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista» había 5 activos en sobreventa y 0 en sobrecompra (RSI medio 45). En las caídas aparecen más sobreventas, así que compro más. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +0,39 %).
+- **Resultado:** -0,07 % (valor 96.83 USD)
+
+### Cruce de medias ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Mantengo a partes iguales los activos cuya media de 20 sesiones está por encima de la de 50: hoy 12 de 100. Entran en tendencia: COST, HD, LOW, MCD. Pierden la tendencia: MSFT, USO, XOM.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista», el 12% del universo está en tendencia alcista: me quedo con poca exposición hasta que vuelvan las tendencias. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +0,65 %).
+- **Resultado:** +0,33 % (valor 93.94 USD)
+
+### Analista ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Decisión del motor local (sin IA; pesos técnico/noticias/tendencia 0.55/0.30/0.15, fijos). Régimen neutral (VIX 23.8, diferencial high yield 3.77 pp); exposición máxima 76%. Más fuertes: ABBV +0.51, COST +0.41, HON +0.37, DIS +0.35. Más débiles: BCH-USD -0.51, DOT-USD -0.50, ADA-USD -0.49. Cambios: comprar ABBV 0.0% -> 15.4%; stop 277.5 (soporte/ATR), objetivo 320.7; comprar COST 0.0% -> 12.2%; stop 1054 (soporte/ATR), objetivo 1186; comprar HON 0.0% -> 11.0%; stop 220.1 (soporte/ATR), objetivo 245.3; comprar DIS 0.0% -> 10.7%; stop 122.6 (soporte/ATR), objetivo 136.6; comprar LIN 0.0% -> 10.6%; stop 517.5 (soporte/ATR), objetivo 562.7; comprar PG 0.0% -> 10.4%; stop 169.7 (soporte/ATR), obj
+- **Según la situación:** Leo un régimen neutral con el mercado «solo cripto · normal · bajista»: exposición objetivo 70% del capital. Historial en días «normal · alcista»: operó 5 de 6 (resultado medio +0,24 %).
+- **Resultado:** +0,00 % (valor 91.19 USD)
+
+### Inversor tradicional ×2 (escrito por el agente)
+
+- **Qué hizo:** Mantuve la cartera sin cambios.
+- **Por qué:** Ninguna clase de activo salió de su banda ni empezó trimestre: no toqué la cartera. Mis acciones de calidad: XOM, MU, MRK, KO.
+- **Según la situación:** Con la bolsa cerrada no opero: un inversor no usa las sesiones de fin de semana. No reacciono a la situación «solo cripto · normal · bajista»: solo rebalanceo cada trimestre o si una clase se desvía de su peso. Historial en días «normal · alcista»: operó 1 de 6 (resultado medio +0,93 %).
+- **Resultado:** +1,26 % (valor 92.71 USD)
+
+### Combinador de señales (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Combino las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias) con pesos que aprendo de los resultados. Las que más pesan ahora: learner_pred_x_stress +1.41, analyst_trend_x_stress +1.38, analyst_trend -1.13.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista»: cada señal tiene además un peso propio para los regímenes de tensión, así aprendo cuándo conviene cada una. Historial en días «normal · alcista»: operó 0 de 6 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### Combinador ×2 (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Combino las señales de los demás agentes (predicción del aprendiz, técnico/noticias/tendencia del analista, RSI y medias) con pesos que aprendo de los resultados. Las que más pesan ahora: learner_pred_x_stress +1.41, analyst_trend_x_stress +1.38, analyst_trend -1.13.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista»: cada señal tiene además un peso propio para los regímenes de tensión, así aprendo cuándo conviene cada una. Historial en días «normal · alcista»: operó 0 de 6 (resultado medio +0,00 %).
+- **Resultado:** +0,00 % (valor 100.00 USD)
+
+### Meta-agente (Hedge) (escrito por el agente)
+
+- **Qué hizo:** No hice ninguna operación.
+- **Por qué:** Reparto mi capital entre los agentes con pesos multiplicativos (Hedge): cada día gana peso quien más rinde. Pesos hoy: Combinador de señales 9%, Combinador ×2 9%, Cruce de medias 8%, Aprendiz lineal 8%. Ayer rindió más Buy & hold.
+- **Según la situación:** Con el mercado «solo cripto · normal · bajista» no elijo activos: copio la cartera combinada de los agentes, así que me adapto a la situación a través de los que mejor la están leyendo. Historial en días «normal · alcista»: operó 3 de 6 (resultado medio +0,20 %).
+- **Resultado:** +0,45 % (valor 97.82 USD)
+
+**Comparativa.** Mejor: Buy & hold (+1,32 %); peor: RSI adaptativo ×2 (-0,07 %).
+
+**Patrones recurrentes**
+
+- Aprendiz lineal: opera en 4 de 34 días; donde más opera es en «normal · lateral»; le va mejor en «normal · alcista» (+0,00 % de media).
+- RSI adaptativo: opera en 8 de 34 días; donde más opera es en «normal · bajista»; le va mejor en «normal · alcista» (+1,04 % de media).
+- Cruce de medias: opera en 14 de 34 días; donde más opera es en «solo cripto · normal · lateral»; le va mejor en «tensión · alcista» (+0,87 % de media).
+- Buy & hold: opera en 1 de 34 días; donde más opera es en «normal · alcista»; le va mejor en «tensión · alcista» (+3,19 % de media).
+- Analista discrecional: opera en 16 de 34 días; donde más opera es en «solo cripto · tensión · lateral»; le va mejor en «normal · alcista» (+0,37 % de media).
+- Inversor tradicional: opera en 1 de 34 días; donde más opera es en «normal · alcista»; le va mejor en «tensión · alcista» (+3,40 % de media).
+- Aprendiz ×2: opera en 4 de 34 días; donde más opera es en «normal · lateral»; le va mejor en «normal · alcista» (+0,00 % de media).
+- RSI adaptativo ×2: opera en 4 de 34 días; donde más opera es en «solo cripto · normal · bajista»; le va mejor en «tensión · alcista» (+3,09 % de media).
+- Cruce de medias ×2: opera en 6 de 34 días; donde más opera es en «normal · bajista»; le va mejor en «tensión · alcista» (+1,47 % de media).
+- Analista ×2: opera en 16 de 34 días; donde más opera es en «solo cripto · tensión · lateral»; le va mejor en «solo cripto · tensión · lateral» (+0,30 % de media).
+- Inversor tradicional ×2: opera en 1 de 34 días; donde más opera es en «normal · alcista»; le va mejor en «tensión · alcista» (+3,54 % de media).
+- Combinador de señales: opera en 0 de 34 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- Combinador ×2: opera en 0 de 34 días; donde más opera es en «normal · alcista»; le va mejor en «normal · alcista» (+0,00 % de media).
+- Meta-agente (Hedge): opera en 12 de 34 días; donde más opera es en «solo cripto · tensión · lateral»; le va mejor en «tensión · alcista» (+2,59 % de media).
+
 
 ## 2026-11-26 · Jueves: solo cripto · tensión · bajista
 
